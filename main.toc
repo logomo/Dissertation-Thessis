@@ -65,7 +65,7 @@
 \contentsline {paragraph}{SAA systems}{35}{section*.24}
 \contentsline {subsection}{\numberline {4.4.1}Energy efficiency}{35}{subsection.4.4.1}
 \contentsline {paragraph}{Energy efficiency}{35}{section*.25}
-\contentsline {paragraph}{Cost of flew trajectory}{36}{section*.26}
+\contentsline {paragraph}{Cost of flown trajectory}{36}{section*.26}
 \contentsline {paragraph}{Expected reach cost}{36}{section*.27}
 \contentsline {subsection}{\numberline {4.4.2}Trajectory tracking}{36}{subsection.4.4.2}
 \contentsline {paragraph}{Trajectory Tracking}{36}{section*.28}
@@ -269,8 +269,8 @@
 \contentsline {paragraph}{Acceptance criteria:}{117}{section*.207}
 \contentsline {paragraph}{Testing Setup:}{117}{section*.208}
 \contentsline {paragraph}{Simulation Run:}{118}{section*.209}
-\contentsline {paragraph}{Safety Margin Performance:}{118}{section*.211}
-\contentsline {paragraph}{Safety Margin Distances:}{119}{section*.213}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{118}{section*.211}
+\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{119}{section*.213}
 \contentsline {paragraph}{Path Tracking Performance:}{119}{section*.215}
 \contentsline {paragraph}{Path Tracking Deviations:}{120}{section*.217}
 \contentsline {subsection}{\numberline {7.3.2}Slalom}{120}{subsection.7.3.2}
@@ -280,8 +280,8 @@
 \contentsline {paragraph}{Acceptance Criteria}{121}{section*.224}
 \contentsline {paragraph}{Testing setup:}{121}{section*.225}
 \contentsline {paragraph}{Simulation run:}{121}{section*.226}
-\contentsline {paragraph}{Safety Margin Performance:}{122}{section*.228}
-\contentsline {paragraph}{Safety Margin Distance:}{123}{section*.230}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{122}{section*.228}
+\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{123}{section*.230}
 \contentsline {paragraph}{Path tracking performance:}{123}{section*.232}
 \contentsline {paragraph}{Path Tracking Deviations:}{123}{section*.234}
 \contentsline {subsection}{\numberline {7.3.3}Maze}{124}{subsection.7.3.3}
@@ -291,8 +291,8 @@
 \contentsline {paragraph}{Acceptance Criteria:}{125}{section*.241}
 \contentsline {paragraph}{Testing Setup:}{125}{section*.242}
 \contentsline {paragraph}{Simulation Run:}{125}{section*.243}
-\contentsline {paragraph}{Safety Margin Performance:}{126}{section*.245}
-\contentsline {paragraph}{Safety Margin distances:}{127}{section*.247}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{126}{section*.245}
+\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{127}{section*.247}
 \contentsline {paragraph}{Path Tracking Performance:}{127}{section*.249}
 \contentsline {paragraph}{Path Tracking Deviations:}{128}{section*.251}
 \contentsline {subsection}{\numberline {7.3.4}Storm}{128}{subsection.7.3.4}
@@ -303,8 +303,8 @@
 \contentsline {paragraph}{Acceptance criteria:}{129}{section*.259}
 \contentsline {paragraph}{Testing setup:}{129}{section*.260}
 \contentsline {paragraph}{Simulation run:}{129}{section*.261}
-\contentsline {paragraph}{Safety Margin Performance:}{130}{section*.263}
-\contentsline {paragraph}{Safety Margin Distance}{130}{section*.265}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{130}{section*.263}
+\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{130}{section*.265}
 \contentsline {paragraph}{Path Tracking Performance:}{131}{section*.267}
 \contentsline {paragraph}{Path Tracking Deviations:}{131}{section*.269}
 \contentsline {subsection}{\numberline {7.3.5}Emergency Converging}{131}{subsection.7.3.5}
@@ -313,8 +313,8 @@
 \contentsline {paragraph}{Acceptance criteria:}{132}{section*.274}
 \contentsline {paragraph}{Testing setup:}{132}{section*.275}
 \contentsline {paragraph}{Simulation Run:}{133}{section*.277}
-\contentsline {paragraph}{Safety Margin Performance:}{134}{section*.279}
-\contentsline {paragraph}{Safety Margin Distance:}{135}{section*.281}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{134}{section*.279}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{135}{section*.281}
 \contentsline {paragraph}{Path Tracking Performance:}{135}{section*.283}
 \contentsline {paragraph}{Path Following Deviations:}{136}{section*.285}
 \contentsline {subsection}{\numberline {7.3.6}Emergency Head on}{136}{subsection.7.3.6}
@@ -323,8 +323,8 @@
 \contentsline {paragraph}{Acceptance criteria:}{137}{section*.290}
 \contentsline {paragraph}{Testing setup:}{137}{section*.291}
 \contentsline {paragraph}{Simulation Run:}{137}{section*.293}
-\contentsline {paragraph}{Safety Margin Performance:}{139}{section*.295}
-\contentsline {paragraph}{Safety Margin Distance:}{140}{section*.297}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{139}{section*.295}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{140}{section*.297}
 \contentsline {paragraph}{Path Tracking Performance}{140}{section*.299}
 \contentsline {paragraph}{Path Following Deviations:}{141}{section*.301}
 \contentsline {subsection}{\numberline {7.3.7}Emergency Mixed Head on with Converging}{141}{subsection.7.3.7}
@@ -333,8 +333,8 @@
 \contentsline {paragraph}{Acceptance criteria:}{142}{section*.306}
 \contentsline {paragraph}{Testing setup:}{142}{section*.307}
 \contentsline {paragraph}{Simulation Run:}{142}{section*.309}
-\contentsline {paragraph}{Safety Margin Performance:}{143}{section*.311}
-\contentsline {paragraph}{Safety Margin Distances:}{144}{section*.313}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{143}{section*.311}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{144}{section*.313}
 \contentsline {paragraph}{Path Tracking Performance:}{144}{section*.315}
 \contentsline {paragraph}{Path Tracking Deviations:}{145}{section*.317}
 \contentsline {section}{\numberline {7.4}Cooperative test cases}{146}{section.7.4}
@@ -346,8 +346,8 @@
 \contentsline {paragraph}{Testing Setup:}{147}{section*.324}
 \contentsline {paragraph}{Simulation Run:}{148}{section*.325}
 \contentsline {paragraph}{Collision Case Calculation:}{149}{section*.327}
-\contentsline {paragraph}{Safety Margin Performance:}{150}{section*.329}
-\contentsline {paragraph}{Safety Margin Distance:}{150}{section*.331}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{150}{section*.329}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{150}{section*.331}
 \contentsline {paragraph}{Path Tracking Performance:}{150}{section*.333}
 \contentsline {paragraph}{Path Tracking Deviations:}{151}{section*.335}
 \contentsline {subsection}{\numberline {7.4.2}Rule based Head on}{151}{subsection.7.4.2}
@@ -358,8 +358,8 @@
 \contentsline {paragraph}{Testing Setup:}{152}{section*.342}
 \contentsline {paragraph}{Simulation Run:}{153}{section*.343}
 \contentsline {paragraph}{Collision Case Calculation: }{154}{section*.345}
-\contentsline {paragraph}{Safety Margin Performance:}{155}{section*.347}
-\contentsline {paragraph}{Safety Margin Distance}{155}{section*.349}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{155}{section*.347}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{155}{section*.349}
 \contentsline {paragraph}{Path Tracking Performance:}{156}{section*.351}
 \contentsline {paragraph}{Path Tracking Deviations:}{156}{section*.353}
 \contentsline {subsection}{\numberline {7.4.3}Rule based Mixed Head on with Converging}{156}{subsection.7.4.3}
@@ -370,8 +370,8 @@
 \contentsline {paragraph}{Testing Setup:}{158}{section*.360}
 \contentsline {paragraph}{Simulation Run:}{158}{section*.361}
 \contentsline {paragraph}{Collision Cases Calculation:}{159}{section*.363}
-\contentsline {paragraph}{Safety Margin Performance:}{160}{section*.365}
-\contentsline {paragraph}{Safety Margin Distance:}{161}{section*.367}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{160}{section*.365}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{161}{section*.367}
 \contentsline {paragraph}{Path Tracking Performance:}{161}{section*.369}
 \contentsline {paragraph}{Path Tracking Deviations:}{162}{section*.371}
 \contentsline {subsection}{\numberline {7.4.4}Rule based Overtake}{162}{subsection.7.4.4}
@@ -384,10 +384,10 @@
 \contentsline {paragraph}{Collision Case Calculation:}{165}{section*.381}
 \contentsline {paragraph}{Overtake Speed: Divergence/Convergence Waypoints}{166}{section*.383}
 \contentsline {paragraph}{Overtake Speed: Impact on Trajectory}{166}{section*.385}
-\contentsline {paragraph}{Overtake Speed: Impact on Safety Margin Performance}{167}{section*.387}
-\contentsline {paragraph}{Overtake Speed: Impact on Safety Margin Distance}{167}{section*.389}
+\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Evolution}{167}{section*.387}
+\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Peaks}{167}{section*.389}
 \contentsline {paragraph}{Path Tracking Performance: 2x Speed}{168}{section*.391}
-\contentsline {paragraph}{Path Tracking Deviations: 2x Speed}{168}{section*.393}
+\contentsline {paragraph}{Path Tracking Deviations: 2x Speed}{169}{section*.393}
 \contentsline {section}{\numberline {7.5}Reduced Reach Sets Performance}{169}{section.7.5}
 \contentsline {paragraph}{Approach:}{169}{section*.395}
 \contentsline {paragraph}{Testing Avoidance Grid}{170}{section*.396}
