@@ -122,21 +122,21 @@ Both UAS are using  body (sec. \ref{s:bodyvolumeIntersection}) intersection mode
 \end{figure}
 
 
-\paragraph{Safety Margin Performance:} There is need to compare mutual distance between both UAS (y-axis [m]) and its evolution over synchronized \emph{UTM time} (x-axis [s].) The \emph{mutual distance} between bodies of \emph{UAS 1}, \emph{UAS 2} (blue line) compared to \emph{Safety Margin} (red line) is given in (fig. \ref{fig:testCaseHeadOnAvoidancePerformance}). The \emph{Safety Margin} value was constant for all time at value $1.2m$ which is double of \emph{Near Miss Margin for UAS 1 UAS 2}.
+\paragraph{Distance to Safety Margin Evolution:} There is need to compare mutual distance between both UAS (y-axis [m]) and its evolution over synchronized \emph{UTM time} (x-axis [s].) The \emph{mutual distance} between bodies of \emph{UAS 1}, \emph{UAS 2} (blue line) compared to \emph{Safety Margin} (red line) is given in (fig. \ref{fig:testCaseHeadOnAvoidancePerformance}). The \emph{Safety Margin} value was constant for all time at value $1.2$ $m$ which is double of \emph{Near Miss Margin for UAS 1 UAS 2}.
 
 The proper \emph{Avoidance Invocation} is shown when \emph{UAS} systems are getting closer to each other and they starts their \emph{separation phase} (Emergency Avoidance Mode switch). The mutual distance (blue line) does not cross \emph{safety margin} (red line).
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.55\linewidth]{\FIGDIR/NS036UtmEmergencyHeadOnPerformance} 
-    \caption{\emph{Emergency head on} safety margin performance.}
+    \caption{Distance to safety margin evolution for \emph{emergency head on scenario}.}
     \label{fig:testCaseHeadOnAvoidancePerformance}
 \end{figure}
 
 
-\paragraph{Safety Margin Distance:} Minimal and Maximal mutual distance to safety margin is summarized in (tab. \ref{tab:testCaseEmergencyHeadOnSafetyMarginDistances}). The closest to collision are UAS systems  when \emph{distance to safety margin} is $0.3824 m$.
+\paragraph{Distance to Safety Margin Peaks:} Minimal and Maximal mutual distance to safety margin is summarized in (tab. \ref{tab:testCaseEmergencyHeadOnSafetyMarginDistances}). The closest to collision are UAS systems  when \emph{distance to safety margin} is $0.3824 m$.
 
-The \emph{minimal safety margin distance} $\ge$ $0$ which means that the \emph{safety acceptance criterion} is full filled.
+The \emph{minimal distance to safety margin} $\ge$ $0$ which means that the \emph{safety acceptance criterion} is full filled.
 
 
 \begin{table}[H]
@@ -146,7 +146,7 @@ The \emph{minimal safety margin distance} $\ge$ $0$ which means that the \emph{s
     \multirow{2}{*}{safety margin distance} & min & 0.3824 \\\cline{2-3}
                                             & max & 38.8000 \\
     \end{tabular}
-    \caption{\emph{Emergency head on} safety margin distances.}
+    \caption{Distance to safety margin peaks for \emph{Emergency head on scenario}.}
     \label{tab:testCaseEmergencyHeadOnSafetyMarginDistances}
 \end{table}
 

@@ -108,20 +108,20 @@
 \end{figure}
 
 
-\paragraph{Safety Margin Performance:} There is need to compare mutual distance between both UAS (y-axis [m]) and its evolution over UTM time (x-axis [s]). The \emph{mutual} distance of \emph{UAS 1} to \emph{UAS 2} is given by \emph{blue line}. The \emph{Safety margin} value is denoted by red line at \emph{constant value} of $1.2m$.
+\paragraph{Distance to Safety Margin Evolution:} There is need to compare mutual distance between both UAS (y-axis [m]) and its evolution over UTM time (x-axis [s]). The \emph{mutual} distance of \emph{UAS 1} to \emph{UAS 2} is given by \emph{blue line}. The \emph{Safety margin} value is denoted by red line at \emph{constant value} of $1.2$ $m$.
 
-The \emph{Proper avoidance Invocation} is shown when UAS systems are getting closer to each other and they start their separation phase (Emergency Avoidance Mode). The \emph{Mutual distance} (blue line) does not cross \emph{safety margin} (red line).
+The \emph{Proper avoidance Invocation} is shown when UAS systems are getting closer to each other and they enter (Emergency Avoidance Mode) to provide \emph{active separation}. The \emph{Mutual distance evolution} (blue line) does not cross \emph{safety margin} (red line).
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.55\linewidth]{\FIGDIR/NS029UtmEmergencyConvergingPerformance} 
-    \caption{\emph{Emergency converging} safety margin performance.}
+    \caption{Distance to safety margin evolution for \emph{emergency converging scenario}.}
     \label{fig:testCaseEmergencyConvergingAvoidancePerformance}
 \end{figure}
 
-\paragraph{Safety Margin Distance:} Minimal and Maximal mutual distance to safety margi is summarized in (tab. \ref{tab:testCaseEmergencyConvergingSafetyMarginDistances}). The closest to collision are UAS systems when distance to safety margin is $1.6676m$.
+\paragraph{Distance to Safety Margin Peaks:} Minimal and Maximal mutual distance to safety margin is summarized in (tab. \ref{tab:testCaseEmergencyConvergingSafetyMarginDistances}). The closest to collision are UAS systems when the distance to safety margin is $1.6676m$.
 
-The \emph{minimal safety margin distance $\ge$ 0} which means that the \emph{safety acceptance criterion} is full filled. 
+The \emph{minimal distance to safety margin  $\ge$ 0} which means that the \emph{safety acceptance criterion} is fullfilled. 
 
 \begin{table}[H]
     \centering
@@ -130,7 +130,7 @@ The \emph{minimal safety margin distance $\ge$ 0} which means that the \emph{saf
     \multirow{2}{*}{safety margin distance} & min & 1.6676 \\\cline{2-3}
                                             & max & 27.0843 \\
     \end{tabular}
-    \caption{\emph{Emergency converging} safety margin distances.}
+    \caption{Distance to safety margin peaks for \emph{emergency converging scenario}.}
     \label{tab:testCaseEmergencyConvergingSafetyMarginDistances}
 \end{table}
 
