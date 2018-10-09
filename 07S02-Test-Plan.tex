@@ -38,29 +38,32 @@ The \emph{Tests} are designed to focus on particular functionality in specific \
     \end{enumerate}
 \end{enumerate}
 
-\paragraph{Static obstacles:}  Static obstacles with various features detectable by main \emph{LiDAR} sensor. The main purpose is to show avoidance capabilities combined with heavy restrictions imposed by \emph{soft} and \emph{hard} constraints. The original purpose of our approach was to provide robust framework for static obstacle avoidance. Three tests with increasing obstacle density and navigation complexity are delivered.
+\emph{Static obstacles:}  Static obstacles with various features detectable by main \emph{LiDAR} sensor. The main purpose is to show avoidance capabilities combined with heavy restrictions imposed by \emph{soft} and \emph{hard} constraints. The original purpose of our approach was to provide robust framework for static obstacle avoidance. Three tests with increasing obstacle density and navigation complexity are delivered.
+
+\emph{Operational space constraints} depends mainly on \emph{operational environment}.  The standard set of constraints were taken into account for our test cases:
+\begin{enumerate}
+    \item \emph{Rural, Urban environment (low altitude)} are: geo-fencing zones, ground (hard constraints), non-controlled airspace altitudes (soft constraints).
+    
+    \item \emph{Non-controlled airspace constraints (open air)} are: geo-fencing zones (hard constraints), restricted airspace (hard constraint), weather (soft/hard constraint), controlled airspace (hard constraint), very low altitude border (soft constraints).
+    
+    \item \emph{Controlled airspace constraints (open air)} are: restricted airspace (hard constraint), weather (soft/hard constraint), non-controlled airspace boundary (hard constraints), UTM Directives (hard constraints).
+\end{enumerate}
+
+\paragraph{Air Traffic Attendants:} 
+\begin{enumerate}
+    \item \emph{Non-cooperative UAS} (Intruder) -  there are some intruders with some degree of authority, size and \emph{severity}. There were three test cases for non-cooperative intrudes. Non-cooperative Intruders can be categorized as follow based on behaviour:
+    \begin{enumerate}[a.]
+        \item\emph{Chaotic} intruders usually have tendency to behave unpredictable, for example bird or \emph{UAS in distress}, for this type of intruders \emph{Maneuver Uncertainty  Intersection Model} is used (sec. \ref{s:uncertaintyIntersection}).
+        
+        \item\emph{Harmonic} intruder usually follow long straight paths, for example UAS converging to waypoint, for this type of intruder \emph{Body Volume Intersection Model} is used. (sec. \ref{s:bodyvolumeIntersection}).
+    \end{enumerate}
+
+    \emph{Cooperative UAS} (Intruder) -  there are cooperative intruders which are obeying authority (UTM) or follow \emph{common consensus}. The work focus on \emph{UTM} authority implementation in four test cases. These test cases are reflecting the traffic management situations essential for successful UTM collision management
+\end{enumerate}
     
 \paragraph{Weather} impose  \emph{soft} and \emph{hard} space constraint, which can be moving or static. The \emph{soft constraint avoidance} is covered by \emph{hard constraint avoidance}. The \emph{static constrained area} is covered by \emph{static obstacle avoidance} capability due the \emph{Data fusion procedure} \cite{gomola2017probabilistic}. The only case which is not covered is \emph{Moving constrained area}, small constraints can be covered by intruder models. The ideal candidate is \emph{storm}, because it covers quite large area, the clouds are constantly moving and severity is changing with time.
-    
-\paragraph{Non-cooperative Intruders:} There are some intruders with some degree of authority, size and \emph{severity}. There were three test cases for non-cooperative intrudes. Non-cooperative Intruders can be categorized as follow based on behaviour:
-\begin{enumerate}
-    \item\emph{Chaotic} intruders usually have tendency to behave unpredictable, for example bird or \emph{UAS in distress}, for this type of intruders \emph{Maneuver Uncertainty  Intersection Model} is used (sec. \ref{s:uncertaintyIntersection}).
-    
-    \item\emph{Harmonic} intruder usually follow long straight paths, for example UAS converging to waypoint, for this type of intruder \emph{Body Volume Intersection Model} is used. (sec. \ref{s:bodyvolumeIntersection}).
-\end{enumerate}
-
-\paragraph{Cooperative Intruders:} There are cooperative intruders which are obeying authority (UTM) or follow \emph{common consensus}. The work focus on \emph{UTM} authority implementation in four test cases. These test cases are reflecting the traffic management situations essential for successful UTM collision management
 
 
-
-\paragraph{Constraints:} Constraints depends mainly on \emph{operational environment}. There is special type of \emph{constraints} which has not been evaluated in previous works - \emph{UTM Constraints}. The standard set of constraints were taken into account for our test cases:
-\begin{enumerate}
-    \item \emph{Very low altitude constraints} (Rural, Urban environment) are: geo-fencing zones, ground (hard constraints), non-controlled airspace altitudes (soft constraints).
-    
-    \item \emph{Non-controlled airspace constraints} are: geo-fencing zones (hard constraints), restricted airspace (hard constraint), weather (soft/hard constraint), controlled airspace (hard constraint), very low altitude border (soft constraints).
-    
-    \item \emph{Controlled airspace constraints} are: restricted airspace (hard constraint), weather (soft/hard constraint), non-controlled airspace boundary (hard constraints), UTM Directives (hard constraints).
-\end{enumerate}
 
 \paragraph{UTM:} The \emph{UAS Traffic Management} service should be implemented in \emph{controlled airspace} by 2035. It is necessary to study impact of UTM services on the \emph{Detect and Avoid} systems like ours. 
 
