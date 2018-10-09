@@ -145,27 +145,27 @@ The \emph{safety margin} for \emph{Well Clear} was determined as $5m$ for UAS 1 
     \label{tab:collisionCasesRuleBasedHeadon}
 \end{table}
 
-\paragraph{Safety Margin Performance:} The safety margin(well clear) (fig. \ref{fig:testCaseRuleBasedHeadOnAvoidancePerformance}) in controlled airspace are much rather than in non-controlled airspace (near miss) (fig. \ref{fig:testCaseHeadOnAvoidancePerformance}).
+\paragraph{Distance to Safety Margin Evolution:} The safety margin values (well clear) (fig. \ref{fig:testCaseRuleBasedHeadOnAvoidancePerformance}) in controlled airspace are much larger than in non-controlled airspace (near miss) (fig. \ref{fig:testCaseHeadOnAvoidancePerformance}).
 
-The enforced rule war (rule \ref{tab:ruleHeadonApproach}) with parameters: Collision Point $[20,20,0]^T$ and \emph{Safety Margin} $10m$ as given by Collision Case (tab. \ref{tab:collisionCasesRuleBasedHeadon}).
+The enforced rule was (rule \ref{tab:ruleHeadonApproach}) with parameters: Collision Point $[20,20,0]^T$ and \emph{Safety Margin} $10$ $m$ as given by Collision Case (tab. \ref{tab:collisionCasesRuleBasedHeadon}).
 
-The mutual \emph{UAS} distance (blue line) does not go over \emph{Safety Margin} (red line) which means  both UAS well clear margins are not broken by any means (fig. \ref{fig:testCaseRuleBasedHeadOnApproach}).
+The mutual \emph{UAS distance} (blue line) does not go over \emph{Safety Margin} (red line) which means  both UAS well clear margins are not broken by any means (fig. \ref{fig:testCaseRuleBasedHeadOnApproach}).
 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.55\linewidth]{\FIGDIR/NS059UtmCooperativeHeadOnPerformance} 
-    \caption{\emph{Rule based head on} safety margin performance.}
+    \caption{Distance to safety margin evolution for \emph{rule based head on scenario}.}
     \label{fig:testCaseRuleBasedHeadOnAvoidancePerformance}
 \end{figure}
 
 
-\paragraph{Safety Margin Distance} (tab. \ref{tab:testCaseRuleBasedHeadOnSafetyMarginDistances}) represents the proximity on UAS mutual distance to breach \emph{well clear condition}. The \emph{well clear breach condition} was achieved. The \emph{minimal safety margin distance} was $0.2084 m$. The \emph{maximal safety margin distance} was $36.3253 m$ which represents distance at \emph{Collision Case} closing. 
+\paragraph{Distance to Safety Margin Peaks:} Given by (tab. \ref{tab:testCaseRuleBasedHeadOnSafetyMarginDistances}) represents the proximity on UAS mutual distance to \emph{well clear condition} breach. The breach of \emph{well clear condition} was not achieved. The \emph{minimal distance to safety margin} was $0.2084$ $m$. The \emph{maximal distance to safety margin} was $36.3253 m$ which represents distance at \emph{Collision Case} closing. 
 
 \begin{table}[H]
     \centering
     \begin{tabular}{c||c|c|c}
-        \multirow{2}{*}{UAS:} & \multicolumn{3}{c}{Safety margin distance} \\ \cline{2-4} 
+        \multirow{2}{*}{UAS:} & \multicolumn{3}{c}{Distance to Safety Margin} \\ \cline{2-4} 
                   & min          & max         & breach         \\ \hline\hline
             1-2   & 0.2084       & 36.3253     & false          \\ 
     \end{tabular}

@@ -156,30 +156,30 @@ The \emph{safety margin} for \emph{Well Clear} was determined as $3m$ for UAS 1 
 \end{table}
 
 
-\paragraph{Safety Margin Performance:} The safety margins (well clear) (fig. \ref{fig:testCaseRuleBasedConvergingAvoidancePerformance}) in controlled airspace are much greater than in non-controlled airspace (near miss) (fig. \ref{fig:testCaseEmergencyConvergingAvoidancePerformance}) 
+\paragraph{Distance to Safety Margin Evolution:} The safety margin values (well clear) (fig. \ref{fig:testCaseRuleBasedConvergingAvoidancePerformance}) in controlled airspace are much greater than in non-controlled airspace (near miss) (fig. \ref{fig:testCaseEmergencyConvergingAvoidancePerformance}) 
 
-The enforced rule was (rule \ref{tab:ruleConvergingManuever}) with parameters: Collision Point $[20,20,0]^T$ and \emph{Safety Margin} $8m$ as given by Collision Case (tab. \ref{tab:collisionCasesRuleBasedConverging}).
+The enforced rule was (rule \ref{tab:ruleConvergingManuever}) with parameters: Collision Point $[20,20,0]^T$ and \emph{Safety Margin} $8$ $m$ as given by Collision Case (tab. \ref{tab:collisionCasesRuleBasedConverging}).
 
-The mutual \emph{UAS distance} (blue line) does not go over \emph{Safety Margin} (red line), which means UAS 1 well clear margin of $3m$ and UAS 2 well clear margin of $5m$ are not broken by any means (fig. \ref{fig:testCaseRuleBasedConvergingAvoidancePerformance}).
+The mutual \emph{UAS distance} (blue line) does not go over \emph{Safety Margin} (red line), which means UAS 1 well clear margin of $3$ $m$ and UAS 2 well clear margin of $5$ $m$ are not broken (fig. \ref{fig:testCaseRuleBasedConvergingAvoidancePerformance}).
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.55\linewidth]{\FIGDIR/NS052UtmCooperativeConvergingPerformance} 
-    \caption{\emph{Rule based converging} safety margin performance.}
+    \caption{Distance to safety margin evolution for \emph{rule based converging scenario}.}
     \label{fig:testCaseRuleBasedConvergingAvoidancePerformance}
 \end{figure}
 
 
-\paragraph{Safety Margin Distance:} \emph{Safety margin distance} (tab. \ref{tab:testCaseRuleBasedConvergingSafetyMarginDistances}) represent the proximity on UAS mutual distance to \emph{breach of well clear condition}. The \emph{well clear breach condition} was not achieved. The \emph{minimal safety margin distance} was $1.2240 m$. The \emph{maximal safety margin distance} was $20.2843m$ which represents distance in time of \emph{Collision Case Creation}.
+\paragraph{Distance to Safety Margin Peaks:} \emph{Distance to safety margin peaks} (tab. \ref{tab:testCaseRuleBasedConvergingSafetyMarginDistances}) represent the proximity on UAS mutual distance to \emph{breach of well clear condition} (safety margin). The \emph{breach of well clear condition} was not achieved. The \emph{minimal distance to safety margin} was $1.2240$ $m$. The \emph{maximal distance to safety margin} was $20.2843$ $m$ which represents distance in time of \emph{Collision Case Creation}.
 
 \begin{table}[H]
     \centering
     \begin{tabular}{c||c|c|c}
-        \multirow{2}{*}{UAS:} & \multicolumn{3}{c}{Safety margin distance} \\ \cline{2-4} 
+        \multirow{2}{*}{UAS:} & \multicolumn{3}{c}{Distance to Safety Margin} \\ \cline{2-4} 
                   & min          & max         & breach         \\ \hline\hline
             1-2   & 1.2240       & 20.2843     & false          \\ 
     \end{tabular}
-    \caption{\emph{Rule based converging} safety margin distances.}
+    \caption{Distance to safety margin peaks for \emph{Rule based converging scenario}.}
     \label{tab:testCaseRuleBasedConvergingSafetyMarginDistances}
 \end{table}
 

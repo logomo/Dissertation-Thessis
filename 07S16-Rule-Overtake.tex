@@ -171,16 +171,16 @@
         \label{fig:testCaseRuleBasedOvertakeDifferentSpeedTrajectoriesPerformance}
     \end{figure}
     
-    \paragraph{Overtake Speed: Impact on Safety Margin Performance} \emph{Safety margin} (red line) is set to \emph{5 m}. It is obvious that \emph{Faster UAS} will take down \emph{Slower UAS} if there was not for an \emph{Overtake maneuver}.  The distance of \emph{Faster UAS} to \emph{Slower UAS} evolution is depending on \emph{Speed difference}. \emph{Inflection point} (closest point of two UAS) is reached sooner with \emph{Higher speed}. \emph{Safety margin performance} was measured for the \emph{UTM performance time} in interval $[0,35]$ $s$ and \emph{Speed difference} of 2x (blue), 3x (green), 4x (black).
+    \paragraph{Overtake Speed: Impact on Distance to Safety Margin Evolution} \emph{Safety margin} (red line) is set to \emph{5 m}. It is obvious that \emph{Faster UAS} will take down \emph{Slower UAS} if there was not for an \emph{Overtake maneuver}.  The distance of \emph{Faster UAS} to \emph{Slower UAS} evolution is depending on \emph{Speed difference}. \emph{Inflection point} (closest point of two UAS) is reached sooner with \emph{Higher speed}. \emph{Safety margin performance} was measured for the \emph{UTM performance time} in interval $[0,35]$ $s$ and \emph{Speed difference} of 2x (blue), 3x (green), 4x (black).
     
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\linewidth]{\FIGDIR/NS079UtmCooperativeOvertakeMultiplePerformance}
-        \caption{\emph{Rule based overtake} safety margin performance for different speed.}
+        \caption{Overtake speed dependent distance to safety margin evolution for \emph{rule based overtake scenario}.}
         \label{fig:testRuleBasedOvertakeSafetyMarginForDifferentSpeedPerformance}
     \end{figure}
     
-    \paragraph{Overtake Speed: Impact on Safety Margin Distance} There is summary table (tab. \ref{tab:testCaseRuleBasedOvertakeSafetyMarginDistancesTimes}) for  measurement of minimal and maximal values for \emph{Safety Margin Performance} over \emph{UTM time} (fig.\ref{fig:testRuleBasedOvertakeSafetyMarginForDifferentSpeedPerformance}). The minimal \emph{Overtake Distance to Safety Margin} in $0.7991$ $m$ for 2x \emph{Speed Difference}. The minimal \emph{Overtake closest point reach time} is $7$ $s$ for 4x \emph{Speed Difference}.
+    \paragraph{Overtake Speed: Impact on Distance to Safety Margin Peaks} There is summary table (tab. \ref{tab:testCaseRuleBasedOvertakeSafetyMarginDistancesTimes}) for  measurement of minimal and maximal values for \emph{Distance to Safety Margin} over \emph{UTM time} (fig.\ref{fig:testRuleBasedOvertakeSafetyMarginForDifferentSpeedPerformance}). The minimal \emph{Overtake Distance to Safety Margin} in $0.7991$ $m$ for 2x \emph{Speed Difference}. The minimal \emph{Overtake closest point reach time} is $7$ $s$ for 4x \emph{Speed Difference}.
     
     For each \emph{Speed difference} (2x, 3x, 4x), the \emph{Well Clear Margin} (Safety Margin) was not reached by the \emph{Faster UAS Body boundary}.  
     
@@ -198,7 +198,7 @@
         % speed 4x
         4x & 2.2154 & 7 & 84.0721 & 38 & false \\ 
         \end{tabular}
-        \caption{\emph{Rule based overtake} safety margin distances and times.}
+        \caption{Distance to safety margin peaks for various overtake speed in \emph{Rule based overtake scenario}.}
         \label{tab:testCaseRuleBasedOvertakeSafetyMarginDistancesTimes}
     \end{table}
     
