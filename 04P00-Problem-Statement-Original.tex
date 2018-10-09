@@ -1,0 +1,165 @@
+\chapter{Problem Statement}
+
+
+\section{Basic Definitions}\label{s:basicDefinitions}
+    \begin{definition}{\emph{Obstacle} $o$} is given as any inaccessible set of points $o\subset\R^3$ it can be represented as polygon, space boundary, thick point-cloud, separation plane.
+    \end{definition}
+    
+    \begin{definition}{Information source $s$}\label{def:informationSource} is source of obstacle information to relative vehicle position and orientation $\vec{p}\in\R^6$ with time $t$ mapping capability. The information source can be sensory reading, obstacle map,weather forecast zones, and, \emph{Air Traffic Management} restrictions.
+    
+    Information sources are aggregated in \emph{information source set} $\mathscr{S}$.
+    
+    \emph{Information source} $s\in\mathscr{S}$ provides \emph{obstacle feed} $\mathscr{O}_s$ depending on vehicle position and orientation $\vec{p}$ and time $t$. Overall obstacle set is aggregation of obstacle feeds from \emph{information source set}
+    \begin{equation}\label{eq:obstacleSet}
+        \mathscr{O}(\vec{p},t)=\bigcup_{s\in\mathscr{S}} \mathscr{O}_s(\vec{p},t), \quad \mathscr{O}_s(\vec{p},t)=s(\vec{p},t)
+    \end{equation}
+    \end{definition}
+    
+    \begin{definition}{\emph{Field of vision}}\label{def:} (FOV) of vehicle or sensor is given as subset $\mathscr{F}\subset\R^3$ with position and orientation $\vec{p}\in\R^6$, for time $t$. Field of the vision is denoted $\mathscr{F}(\vec{p},t,s)$, where $s\in\mathscr{S}$ is sensor from sensory field, or $\mathscr{F}(t)$, in case $\vec{p}$ is implicit from vehicle position $\vec{p}=\vec{x}(t)\to\R^6$ and sensor is implicit.
+    \end{definition}
+    
+    \begin{note} Field of the vision for vehicle is combination of all field of the visions from information sources $\mathscr{S}$:
+    \begin{equation}\label{eq:fieldOfVisonFixedTime}
+        \mathscr{F}(t)=\bigcap_{s\in\mathscr{S}} \mathscr{F}(\vec{p},t,s)
+    \end{equation}
+    \end{note}
+    
+    \begin{definition}{Space segmentation}\label{def:spaceSegmentation} of any space $\mathscr{A}=\R^k, k\in\N^+$ is given as separation of space to exclusive sets $c_\mathbb{I}\subset\mathscr{A}$ called cells, with index vector $\mathbb{I}\subset\mathbb{Z}^l$ serving as unique identifier.The segmentation holds following properties:
+    \begin{enumerate}
+        \item Cells are covering segmented space $\bigcup_{\forall i\in \mathbb{I}\subset\mathbb{Z}^l} c_i = \mathscr{A}$
+        \item Each cell $c_\mathbb{I}\in\mathscr{A}$ is nonempty set.
+        \item Each point $\vec{p}\in\R^k$ in one cell $\vec{p}\in c_i$ shares same property value $P(\vec{p},\dots)$ with any point $\vec{r}\neq\vec{p}$ 
+    \end{enumerate}
+    
+    \end{definition}
+    
+    \begin{definition}{Obstacle space $\mathscr{O}$} is segmentation (def. \ref{def:spaceSegmentation}) of obstacle set $\mathscr{O}(\vec{p},t)$ (\ref{eq:obstacleSet}).
+    \end{definition}
+    
+    \begin{definition}{Free space $\mathscr{F}$} is space where exists direct visibility between observation point $\vec{p}\in\R^m$ and points in segmented space (def. \ref{def:spaceSegmentation}).
+    \end{definition}
+    
+    \begin{definition}{Uncertain space $\mathscr{U}$} contains space segments (def. \ref{def:spaceSegmentation}) which are not in obstacle or free space.
+    \begin{equation}
+        \mathscr{U}=(\mathscr{A}-\mathscr{F})-\mathscr{O}
+    \end{equation}
+    \end{definition}
+    
+    \begin{definition}{\emph{Intruder}(moving obstacle) $i$} is identified via information source $s\in\mathscr{S}$ with minimal set of properties bounded to time of detection $t$:
+    \begin{enumerate}
+        \item position $\vec{p}\in\R^k$,
+        \item velocity $\vec{v}\in\R^k$,
+        \item intruder body radius (vehicle class) $r\in\R^+$,
+        \item uncertainty spread $\Theta\in\R^{k-1}$.
+    \end{enumerate}
+    
+    \end{definition}
+
+\section{Avoidance set}\label{s:AvoidanceSet}
+    \begin{definition}{Avoidance set $\mathscr{A}(t,\vec{x}_0,\vec{u}_0,\mathscr{S})$} is defined for vehicle system:
+    \begin{equation}
+        \dot{\vec{x}}(t)=\vec{f}(t,\vec{x},\vec{u})
+    \end{equation}
+    With system state $\vec{x}(t)\in\R^n$, control signal $\vec{u}(t)\in\R^k$. Regardless of system class the system entry point is given as $\vec{e}$:
+    \begin{equation}
+        \vec{e}= [\vec{x}_0,\vec{u}_0,t_0,d_0]\in\R^{n+k+1+1}
+    \end{equation}
+    Initial state $x_0$ at time $t_0$ is accompanied with initial input signal $u(t)$, initial time $t_0$, and initial decision $d_0\in\N$. Note that structure can store multiple system trajectories due the discrete decision dimension $d\in\N$.
+    
+    For time period $\tau\in[t_0,t]$ vehicle fly along the trajectory $\vec{x}(\tau)$ based on taken decisions $D=\{d_0,d_1,\dots,d_i\},i\in\N$ in decision times $T_D=\{t_{d1},t_{d2},\dots,t_{di}\}, t_{di}\le t$. Field of the vision $\mathscr{F}(\tau)$ along trajectory $\vec{x}(\tau)$ is given as:
+    \begin{equation}
+        \mathscr{F}(\tau) = \bigcup_{t_d\in T_D} \mathscr{F}(\vec{x}(t_d)\to\vec{p},t_d,\forall s\in\mathscr{S}) \quad (\ref{eq:fieldOfVisonFixedTime})
+    \end{equation}
+    \end{definition}
+    Aggregated field of the vision $\mathscr{F}(\tau)$ is separated into obstacle space $\mathscr{O}(\tau)$ uncertain space $\mathscr{U}(\tau)$ and free space $\mathscr{F}(\tau)$. Then for any fixed time $t_{fix}\in[t_0,\infty)$ all system trajectories $x(t)$ starting within entry point $\vec{e}$ holds following conditions:
+    \begin{enumerate}
+        \item Each projected point $\vec{p}=\vec{x}(t_{fix})\to\mathscr{F}(\tau)$ belongs to free space $\mathscr{F}(\tau)$.
+        \item Each projected point $\vec{p}$ has minimal distance from obstacle space $\mathscr{O}(t_{fix})$ or $\mathscr{U}(t_{fix})$ greater than safety margin $s_m$.
+    \end{enumerate}
+    
+    \begin{note} Note following attributes of avoidance set ($\mathscr{A}(t,\vec{x}_0,\vec{u}_0,\mathscr{S})$):
+    \begin{enumerate}
+        \item \emph{Avoidance set respects vehicle dynamics} - avoidance set contains trajectories which are feasible for vehicle dynamics and control.
+        \item \emph{Avoidance set stores multiple system trajectories} due the added decision dimension.
+        \item \emph{Avoidance set respects all sources of obstacles} due the incorporation of information source set $\mathscr{S}$ which is depending on vehicle position, orientation and time.
+        \item \emph{Avoidance set definition} is not giving away construction method it only defines relationship to free obstacle and uncertain spaces within aggregated field of vision.
+        \item \emph{Avoidance set contains all previously executed trajectory segments and future possible to execute trajectories}
+    \end{enumerate}
+    \end{note}
+    
+    \begin{definition}{Safety of Avoidance set $\mathscr{A}(t,\vec{x}_0,\vec{u}_0,\mathscr{S})$} is guaranteed by its property where each projected point $\vec{p}$ has minimal distance from obstacle space $\mathscr{O}(t_{fix})$ or $\mathscr{U}(t_{fix})$ greater than safety margin $s_m$.
+    \end{definition}
+    
+    \begin{definition}{Reachibility of Avoidance set $\mathscr{A}(t,\vec{x}_0,\vec{u}_0,\mathscr{S})$} is given by respect to the vehicle dynamics. The reach set for time period $\tau\in[t_0,t]$ and control strategy $u(\tau)\in U(\tau)$ is given as:
+    \begin{equation}\label{eq:ReachibilityofAvoidanceSet}
+        \mathscr{R}(\vec{x_0}:t_0,\tau)=\left\{\vec{x}(\tau):\vec{x}(\tau)=\vec{f}(\vec{x}(\tau),\vec{u}(\tau)),u(\tau)\in U(\tau)\right\}
+    \end{equation}
+    Each trajectory $\vec{x}(t)$ extracted from avoidance set $\mathscr{A}(t,\vec{x}_0,\vec{u}_0,\mathscr{S})$ based on decision chain $D$ is then included in reach set $\mathscr{R}$ (\ref{eq:ReachibilityofAvoidanceSet}).
+    \end{definition}
+    
+    \begin{definition}{Weak invariance of Avoidance set $\mathscr{A}(t,\vec{x}_0,\vec{u}_0,\mathscr{S})$} is invariant for Each trajectory $\vec{x}(t)$ based on decision chain $D$.
+    \end{definition}
+    
+    \begin{definition}{Obstacle collision time} is depending on vehicle position and vehicle velocity. Obstacle collision time can be infinite in case the vehicle is avoiding an obstacle at current path. Only obstacles where collision time is finite are possessing threat of collision with vehicle. 
+    \end{definition}
+    
+    \begin{definition}{Avoidance execution time period} is given by subsequent decision times from avoidance set $\mathscr{A}(t,\vec{x}_0,\vec{u}_0,\mathscr{S})$ as:
+    \begin{equation}
+        \tau = (t_{d,k},t{d,k+1}]
+    \end{equation}
+    The duration of avoidance execution time period is bounded by field of the vision range $r(\mathscr{F}(t))$ and mean vehicle velocity until it reach Field of vision boundary. 
+    \end{definition}
+    
+    \begin{definition}{Decision time $t_d \in T_D$} is given by avoidance execution time boundary at maximum and by control signal granularity $u$(t) at minimum, decision time can be forced by event related to information source, rule application or other type of event. 
+    \end{definition}
+    
+\section{Efficient Avoidance}\label{s:efficienctAvoidance}
+    \emph{To be done in addition of textual description from meeting:}
+    \begin{itemize}
+        \item Definition - pragmatic and formally corectt definition of the weather:
+	    \item wind
+	    \item disability
+	    \item placeholder definition
+	    \item rewrite  definition
+	    \item Rules will be encoded in hybrid automaton
+    \end{itemize}
+    
+
+\section{Task Oriented Avoidance}\label{s:taskOrientedAvoidance}
+    \noindent text from text file
+
+\section{Problem Statement}
+    \paragraph{Situation:} A vehicle equipped with LiDAR and ADS-B receiver is flying close to the surface, with the mission given as ordered set of reachable waypoints. Obstacle map, containing prior knowledge of the vehicle is precise to some extent. 
+
+    \paragraph{Sensing}: The vehicle is sensing static obstacles in Field of Vision (FOV) with bounded distance, horizontal range, and vertical range. Intruders are discovered and accounted in detection space bounded by ADS-B receiver range. 
+
+    \paragraph{Space representation}
+        Avoidance grid is partitioning combined sensing spaces into cells with defined boundaries. The cell can achieve following states depending on contained features:
+        \begin{itemize}
+            \item{Obstacle} – contains the feature of terrain or intruder intersection which intersects projected vehicle trajectory.
+            \item{Occupied} – contains the feature of terrain or intruder intersection not leading to the collision.
+            \item{Free} – does not contain any feature of terrain or intersection
+        \end{itemize}
+    \paragraph{Trajectories:}
+        The set emergency maneuvers are represented as the set of trajectories originating in actual vehicle position, the trajectories can be in relation to Avoidance Grid:
+        \begin{itemize}
+            \item Unbounded – assume that some trajectories will leave FOV, there are no guarantees that emergency maneuver will lead to safe escape from obstacle. 
+            \item Contained – assume that all trajectories are contained within FOV and there exist decision point when the vehicle can decide return to the safe area, with the implementation of conservative avoidance strategy it is possible to guarantee safe movement of the vehicle. 
+        \end{itemize}
+
+    \paragraph{Problems to be addressed}
+    If emergency maneuvers are contained avoidance strategy can be defined to solve following problems:
+    \begin{itemize}
+        \item Safe exploration of uncharted area – guarantee vehicle safety during uncharted area exploration. 
+        \item Terrain following – low altitude flight safely following terrain  to hide vehicles presence
+    \end{itemize}
+    
+    \emph{To be done here:}
+    \begin{itemize}
+        \item Formal requirements
+        \item Definitions
+        \item Sub-problems
+    \end{itemize}
+    
+
+

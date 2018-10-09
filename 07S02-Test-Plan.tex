@@ -1,0 +1,119 @@
+\section{Test Plan} \label{s:testPlan}
+
+\noindent The \emph{Avoidance requirements} are given in (sec. \ref{s:AvoidanceRequirements}), namely:
+\begin{enumerate}
+    \item\emph{Safety Margin Enforcement} (sec. \ref{s:Safety}) - keep UAS safe depending on situation.
+    \item\emph{Path Tracking} (sec. \ref{s:trajectoryTracking}) - track mission given by set of \emph{waypoints} in the manner of\emph{Energy Efficiency} (sec. \ref{s:EnergyEfficiency}).
+\end{enumerate}
+
+These are given as nominal behaviour (sec. \ref{s:aviudabceGridRun}),further enhanced by rule-based behaviour (sec. \ref{sec:ruleImplementation}).
+
+The \emph{Navigation requirements}, out of this scope, are given in (sec. \ref{s:navigationRequirements}). These are satisfied by \emph{Mission Control Run} (sec. \ref{s:missionControlRun}).
+
+\paragraph{Testing Scope} covers following major functional areas, incorporated into \emph{Avoidance Framework}:
+
+\begin{enumerate}
+    \item \emph{Static obstacle and Ground Avoidance} - avoid direct collision with static objects.
+    
+    \item \emph{Constrained Area Avoidance} - avoid areas which are constrained by authority, contains geo-fencing, airspace restrictions. 
+    \item \emph{Non cooperative intruder avoidance} - avoid intruders which are not cooperating. This is useful against birds, piloted UAS and other flying objects.
+    
+    \item \emph{Cooperative intruder avoidance} - avoid intruders according to coordinated and agreed procedures, mainly enforced by UTM.
+    
+    \item \emph{Navigation} - navigate through complicated environment.
+\end{enumerate}
+
+\subsection{Testing approach}\label{s:testingApproach}
+
+\noindent The purpose of this section is to show complex scenarios, not unit testing of framework functionality. The focus is on \emph{border line} cases for typical situations in \emph{expected environment}. The \emph{mode switch} between \emph{Navigation} and \emph{Emergency Avoidance}.
+
+The \emph{Tests} are designed to focus on particular functionality in specific \emph{operational environment} with main \emph{obstacle/weather/intruder feature} with environment induced \emph{constraints}. There is also \emph{UTM} factor and \emph{Navigation penalty}.
+
+\paragraph{Operational Environment} is classified according to:
+
+\begin{enumerate}
+    \item \emph{Operation space} - important for \emph{Low Altitude Operations}, the difficulty of \emph{Avoidance Maneuvers} is proportionally increasing with \emph{Obstacle density}. There are following main categories
+    \begin{enumerate}[a.]
+        \item \emph{Rural environment} - the relief and man-made structures are sparsely spread around the \emph{operation space}, the UAS is operating on \emph{very low altitude} ($\le 50$ feet).
+        
+        \item \emph{Urban environment} - the concentration of the man made structures is much higher and they are more incorporated info land relief pattern, the UAS is operating on \emph{very low altitude}.
+        
+        \item \emph{Open air} - the concentration of ground structures is very low, the concentration of \emph{cooperative} and \emph{non-cooperative intruders} is increased, the UAS is operating in altitude ranging from \emph{50 feet} to \emph{space border}. This bring us to:
+    \end{enumerate}
+    
+    \item \emph{Airspace category} -  when \emph{Operation Space} pattern is categorized as \emph{Open air} and depending on \emph{altitude above mean sea level}. The UTM  is \emph{designed authority} for controlled airspace in current \emph{F/G class airspace}.
+    \begin{enumerate}[a.]
+        \item \emph{Controlled} - Open air where authority is present. The cases when \emph{Authority} is not enforced due the UTM malfunction, $C2$ link loss or other cause are not considered.
+        
+        \item \emph{Non-Controlled} - Open air operation space where is no central arbiter to determine or enforce traffic attendants behaviour.
+        
+    \end{enumerate}
+\end{enumerate}
+
+\paragraph{Static obstacles:}  Static obstacles with various features detectable by main \emph{LiDAR} sensor. The main purpose is to show avoidance capabilities combined with heavy restrictions imposed by \emph{soft} and \emph{hard} constraints. The original purpose of our approach was to provide robust framework for static obstacle avoidance. Three tests with increasing obstacle density and navigation complexity are delivered.
+    
+\paragraph{Weather} impose  \emph{soft} and \emph{hard} space constraint, which can be moving or static. The \emph{soft constraint avoidance} is covered by \emph{hard constraint avoidance}. The \emph{static constrained area} is covered by \emph{static obstacle avoidance} capability due the \emph{Data fusion procedure} \cite{gomola2017probabilistic}. The only case which is not covered is \emph{Moving constrained area}, small constraints can be covered by intruder models. The ideal candidate is \emph{storm}, because it covers quite large area, the clouds are constantly moving and severity is changing with time.
+    
+\paragraph{Non-cooperative Intruders:} There are some intruders with some degree of authority, size and \emph{severity}. There were three test cases for non-cooperative intrudes. Non-cooperative Intruders can be categorized as follow based on behaviour:
+\begin{enumerate}
+    \item\emph{Chaotic} intruders usually have tendency to behave unpredictable, for example bird or \emph{UAS in distress}, for this type of intruders \emph{Maneuver Uncertainty  Intersection Model} is used (sec. \ref{s:uncertaintyIntersection}).
+    
+    \item\emph{Harmonic} intruder usually follow long straight paths, for example UAS converging to waypoint, for this type of intruder \emph{Body Volume Intersection Model} is used. (sec. \ref{s:bodyvolumeIntersection}).
+\end{enumerate}
+
+\paragraph{Cooperative Intruders:} There are cooperative intruders which are obeying authority (UTM) or follow \emph{common consensus}. The work focus on \emph{UTM} authority implementation in four test cases. These test cases are reflecting the traffic management situations essential for successful UTM collision management
+
+
+
+\paragraph{Constraints:} Constraints depends mainly on \emph{operational environment}. There is special type of \emph{constraints} which has not been evaluated in previous works - \emph{UTM Constraints}. The standard set of constraints were taken into account for our test cases:
+\begin{enumerate}
+    \item \emph{Very low altitude constraints} (Rural, Urban environment) are: geo-fencing zones, ground (hard constraints), non-controlled airspace altitudes (soft constraints).
+    
+    \item \emph{Non-controlled airspace constraints} are: geo-fencing zones (hard constraints), restricted airspace (hard constraint), weather (soft/hard constraint), controlled airspace (hard constraint), very low altitude border (soft constraints).
+    
+    \item \emph{Controlled airspace constraints} are: restricted airspace (hard constraint), weather (soft/hard constraint), non-controlled airspace boundary (hard constraints), UTM Directives (hard constraints).
+\end{enumerate}
+
+\paragraph{UTM:} The \emph{UAS Traffic Management} service should be implemented in \emph{controlled airspace} by 2035. It is necessary to study impact of UTM services on the \emph{Detect and Avoid} systems like ours. 
+
+The most basic service is \emph{Identity provider} which should be implemented by 2020. 
+
+Then there is \emph{location services}, which are necessary for coordinated collision avoidance, these were implemented in our solution up to necessary level for \emph{Rules Of the Air} implementation.
+
+\emph{Mission tracking} is service tracking deviations from \emph{declared mission plan} and \emph{actual execution}. This statistics were used in all tests to track deviations from reference trajectory.
+
+\emph{Directives} for \emph{Traffic management} and \emph{Collision prevention} are implemented  as functional life cycle of  \emph{Position notification} (sec. \ref{sec:positionNotification}), \emph{Collision Case} (sec. \ref{sec:collisionCase}) for UTM. The directive handling is implemented as \emph{Rule engine} (sec. \ref{sec:ruleImplementation}) on UAS side.
+
+\paragraph{Navigation:} Navigation algorithm is depending on \emph{Navigation mode}. UAS is usually in \emph{Navigation mode} most of the time, despite this fact, UAS was forced into \emph{Emergency Avoidance Mode} most of time in test cases. The navigation complexity have been divined into following categories:
+
+\begin{enumerate}
+    \item \emph{Open space} - UAS has visibility to goal waypoint most of the time, there are no traps.
+    \item \emph{Hidden waypoint} - UAS does not have visibility to goal waypoint, most of the time, there irregular traps sometime.
+    \item \emph{Maze solving} - UAS line of sight for goal waypoint is hindered by multiple obstacles, there are irregular traps often.
+    \item \emph{Rule following} - UAS navigation capabilities are constrained by rule enforcement.
+\end{enumerate}
+
+\subsection{Test Cases Summary}\label{s:testCaseSummary}
+
+\noindent \emph{Test cases} are summarized in (tab. \ref{tab:testCasesSummary}).
+
+\begin{table}[H]
+\scriptsize
+\begin{tabular}{c||c|c|c|c|c|c}
+\textit{\begin{tabular}[c]{@{}c@{}}Test Case\\ Name\end{tabular}}                                               & \textit{\begin{tabular}[c]{@{}c@{}}Operational\\ Environment\end{tabular}}                                               & \textit{\begin{tabular}[c]{@{}c@{}}Air Traffic\\Attendants\end{tabular}} & \textit{Weather}                                           & \textit{\begin{tabular}[c]{@{}c@{}}UTM\end{tabular}} & \textit{Navigation}                                        & \textit{Scenario}                                                                     \\\hline\hline
+\begin{tabular}[c]{@{}c@{}}Building \\ Avoidance\end{tabular}                                                              & \begin{tabular}[c]{@{}c@{}}Rural: \\ $\begin{gathered}4 \times buildings \\ 4 \times types\end{gathered}$\end{tabular} & \begin{tabular}[c]{@{}c@{}}-\end{tabular}                      & -                                                        & -                                                                & \begin{tabular}[c]{@{}c@{}}Open \\ space\end{tabular}      & \begin{tabular}[c]{@{}c@{}}Fly mission around \\ four buildings\end{tabular}          \\\hline
+Slalom                                                                                                                      & \begin{tabular}[c]{@{}c@{}}Rural: \\ $\begin{gathered}14 \times buildings \\ 3 \times types\end{gathered}$\end{tabular}                                                             & \begin{tabular}[c]{@{}c@{}}-\end{tabular}                     & -                                                        & -                                                                & \begin{tabular}[c]{@{}c@{}}Hidden \\ waypoint\end{tabular} & \begin{tabular}[c]{@{}c@{}}Navigate to hidden\\ waypoint\end{tabular}                 \\\hline
+Maze                                                                                                                       & \begin{tabular}[c]{@{}c@{}}Urban: \\ $\begin{gathered}30 \times buildings \\ 4 \times types\end{gathered}$\end{tabular}         & \begin{tabular}[c]{@{}c@{}}-\end{tabular}                      & -                                                        & -                                                                & \begin{tabular}[c]{@{}c@{}}Maze \\ structure\end{tabular}  & \begin{tabular}[c]{@{}c@{}}Solve maze with\\ multiple curves\end{tabular}             \\\hline
+Storm                                                                                                                       & \begin{tabular}[c]{@{}c@{}}Rural:\\ $0 \times buildings$\end{tabular} & -                                                                              & Storm                                                        & -                                                                & \begin{tabular}[c]{@{}c@{}}Open\\ Space\end{tabular}       & \begin{tabular}[c]{@{}c@{}}Avoid Approaching\\ Storm\end{tabular}                     \\\hline
+\begin{tabular}[c]{@{}c@{}}Emergency\\ Converging\end{tabular}                                                              & \begin{tabular}[c]{@{}c@{}}Non-controlled\\ Airspace\end{tabular} & \begin{tabular}[c]{@{}c@{}}Non-cooperative\\ UAS (1x)\end{tabular}                                & \begin{tabular}[c]{@{}c@{}}-\end{tabular} & -                                                       & \begin{tabular}[c]{@{}c@{}}Open\\ Space\end{tabular}       & \begin{tabular}[c]{@{}c@{}}Converging situation\\ resolution w. o. UTM\end{tabular} \\\hline
+\begin{tabular}[c]{@{}c@{}}Emergency\\ Head on\end{tabular}                                                               & \begin{tabular}[c]{@{}c@{}}Non-controlled\\ Airspace\end{tabular} & \begin{tabular}[c]{@{}c@{}}Non-cooperative\\ UAS (1x)\end{tabular}                                & \begin{tabular}[c]{@{}c@{}}-\end{tabular} & -                                                       & \begin{tabular}[c]{@{}c@{}}Open\\ Space\end{tabular}       & \begin{tabular}[c]{@{}c@{}}Head on situation\\ resolution w. o.  UTM\end{tabular}    \\\hline
+\begin{tabular}[c]{@{}c@{}}Emergency\\ Multiple\end{tabular}                                                              & \begin{tabular}[c]{@{}c@{}}Non-controlled\\ Airspace\end{tabular} & \begin{tabular}[c]{@{}c@{}}Non-cooperative\\ UAS (3x)\end{tabular}                          & \begin{tabular}[c]{@{}c@{}}-\end{tabular} & -                                                       & \begin{tabular}[c]{@{}c@{}}Open\\ Space\end{tabular}       & \begin{tabular}[c]{@{}c@{}}Multi collision case\\ resolution w. o.  UTM\end{tabular} \\\hline
+\begin{tabular}[c]{@{}c@{}}Rule-based\\ Converging\end{tabular}                                                             & \begin{tabular}[c]{@{}c@{}}Controlled \\ Airspace\end{tabular}    & \begin{tabular}[c]{@{}c@{}}Cooperative\\ UAS(1x)\end{tabular}                                & \begin{tabular}[c]{@{}c@{}}-\end{tabular}        & Full                                                              & \begin{tabular}[c]{@{}c@{}}Follow\\ Rules\end{tabular}     & \begin{tabular}[c]{@{}c@{}}Converging situation\\ resolution with UTM\end{tabular}    \\\hline
+\begin{tabular}[c]{@{}c@{}}Rule-based\\ Head on\end{tabular}                                                                & \begin{tabular}[c]{@{}c@{}}Controlled \\ Airspace\end{tabular}    & \begin{tabular}[c]{@{}c@{}}Cooperative\\UAS(1x)\end{tabular}                                & \begin{tabular}[c]{@{}c@{}}-\end{tabular}        & Full                                                              & \begin{tabular}[c]{@{}c@{}}Follow\\ Rules\end{tabular}     & \begin{tabular}[c]{@{}c@{}}Head on situation\\ resolution with UTM\end{tabular}       \\\hline
+\begin{tabular}[c]{@{}c@{}}Rule-based\\ Multiple\end{tabular}                                                              & \begin{tabular}[c]{@{}c@{}}Controlled \\ Airspace\end{tabular}    & \begin{tabular}[c]{@{}c@{}}Cooperative\\UAS(3x)\end{tabular}                                & \begin{tabular}[c]{@{}c@{}}-\end{tabular}        & Full                                                              & \begin{tabular}[c]{@{}c@{}}Follow\\ Rules\end{tabular}     & \begin{tabular}[c]{@{}c@{}}Multi collision case \\ resolution with UTM\end{tabular}   \\\hline
+\begin{tabular}[c]{@{}c@{}}Rule-based\\ Overtake\end{tabular}                                                              & \begin{tabular}[c]{@{}c@{}}Controlled \\ Airspace\end{tabular}    & \begin{tabular}[c]{@{}c@{}}Cooperative\\ UAS (1x)\end{tabular}                                & \begin{tabular}[c]{@{}c@{}}-\end{tabular}        & Full                                                              & \begin{tabular}[c]{@{}c@{}}Follow\\ Rules\end{tabular}     & \begin{tabular}[c]{@{}c@{}}Overtake by UAS\\ different speed ratio\end{tabular}      
+\end{tabular}
+\normalsize
+\caption{Test Cases Summary.}
+\label{tab:testCasesSummary}
+\end{table}

@@ -1,0 +1,115 @@
+\chapter{Approach}
+
+\section{Avoidance Framework}\label{s:AvoidanceFramework}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item Avoidance framework introduction, containing main advantages of avoidance framework:
+        \item Control layer interface - via movement automaton.
+        \item Sensor layer interface  - via custom made data fusion block and rules.
+        \item Concept of virtual obstacles to accommodate various restrictions.
+        \item Incorporation of rules of the air (This must be developed).
+    \end{itemize}
+        
+\subsection{Framework overview}\label{s:FrameworkOverview}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item Enhanced picture from \emph{Optimal control report} with valid and proper markings and nomenclature established in \emph{02ProblemStatement} and \emph{03StateOfArt}.
+        \item Event base layer components description + references to proper definitions overall text
+        \item Discrete layer components description + references to proper definitions in overall text
+        \item Continious layer components description + reference to proper defitintions in overall text
+        \item all previously mentioned definitions in compact from can be taken from \emph{Article}.
+    \end{itemize}
+    
+\section{Avoidance Grid}\label{s:AvoidanceGrid}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item define cell $c_{i,j,k}$ segmentation,
+        \item define trajectory representation for system,
+        \item define membership function,
+        \item define rating binding to cell and trajectory segment.
+    \end{itemize}
+    
+\subsection{Data Fusion}\label{s:DataFusion}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item Introduce concept of data fusion in terms of general algorithm \emph{Probabilistic approach report} (sec. 5).
+        \item Define \emph{obstacle, visibility, reachability} ratings for cell/trajectory just as concepts.
+        \item Define general fusion formula for deterministic approach.
+    \end{itemize}
+    
+\subsection{Detected Obstacle}\label{s:DetectedObstacle}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item LiDAR tresholding to determine obstacle in cell
+        \item Visibility principle to mark hindered space.
+    \end{itemize}
+
+\subsection{Map Obstacle}\label{s:Map Obstacle}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item Map obstacle data fusion.
+        \item Different modes of fusion for charted obstacles and virtual obstacles.
+    \end{itemize}
+
+\subsection{Intruder Intersection Model}\label{s:IntruderIntersectionModel}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item define intruder parameters to be considered in model: position, velocity, class size (vehicle body radius).
+        \item define various intersection models: a. Linear intersection model, b. Tubular intersection model (To be implmemented), c. Body intersection model, d. Uncertaininty spread intersection model.
+        \item Introduce timed/untimed intersection model
+        \item Compare intruder intersection model with virtual obstacle intersection model. 
+    \end{itemize}
+    
+\section{Decision Making}\label{s:Decision making}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item Emphatize the reason of decision time existence.
+        \item Define formal rule structure which will be later used in subchapters (TODO)
+        \item Elaborate on feasibility of rule appliance (indirect via virtual obstacles) direct via forced movement set constraints.
+    \end{itemize}
+
+\subsection{Rules of the Air and Right of the Way}\label{s:RulesofTheAir}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item Define aerial vehicle classes (up to UAVS)
+        \item Elaborate on need to introduce autonomous and piloted UAV classes.
+        \item Introduce rules of the air emphatize the manned aviation as adversary
+        \item introduce \emph{Right of the way}: collision, clash and overtake
+        \item Propose movement set restrictions or other means to implement these simple rules.
+        \item Discuss the under-performance of these rules in terms of manned aviation safety and try to modify them to fit needs of obstacle avoidance systems.
+    \end{itemize}
+    
+\subsection{Air Traffic Management Restrictions}\label{s:AirTrafficManagementRestrictions}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item Define reference altitudes, emphatize different altitudes measurements in terms of flight levels
+        \item introduce rules of different flight levels , focusing on, B, C F, G zones 
+        \item propose mechanism of restricted flight areas as virtual obstacles implementation
+        \item discuss the mechanism how to address breaching into such airspaces (if NASA UTM will mandate some at time of dissertation).
+    \end{itemize}
+    
+\subsection{Weather Forecast Restrictions}\label{s:WeatherForecastRestrictions}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item introduce weather conditions varying with time 
+        \item introduce concept of moving dynamic obstacles 
+        \item emphatize necessity of weather avoidance (manned aviation viewpoint modification)
+    \end{itemize}
+    
+\section{Vehicle Model}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item just model of plant description
+    \end{itemize}
+    
+\section{Movement Automaton Control}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item  Movement automaton definition and justification of such movement set
+    \end{itemize}
+
+\section{Platform Specific Rules}
+    \emph{To be done here:}
+    \begin{itemize}
+        \item Identification, Elaboration and discussion of platform specific rules.
+    \end{itemize}

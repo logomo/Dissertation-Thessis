@@ -1,0 +1,258 @@
+\section{(R/W) Movement Automaton}
+
+    \noindent\emph{Movement Automaton} is basic interface approach for discretization of \emph{trajectory evolution}  or \emph{control input} for any \emph{continuous or discrete system model}.
+    
+    \emph{Main function} of \emph{Movement Automaton is} for system given by equation $\dot{state}=f(time,state,input)$ with initial state $state_0$ to generate \emph{reference trajectory} $\hat{state}(t)$ or \emph{control signal} $input(t)$.
+    
+    Using \emph{Movement Automaton} as \emph{Control Proxy} will provide us with \emph{discrete command chain} interface. This will reduce the \emph{non deterministic} element from \emph{Evasive trajectory} generation, by reducing infinite maneuver set to finite \emph{movement set}.
+    
+    \emph{Non determinism} of \emph{Avoidance Maneuver} have been discussed as an issue in following works:
+    \begin{enumerate}
+        \item Newton gradient method for evasive car maneuvers \cite{vsantin2011combined}.
+        \item Non-holistic methods for trajectory generation \cite{pin1990autonomous}.
+        \item Stochastic approach to elliptic trajectories generation \cite{andrzejak2001epileptic}.
+    \end{enumerate}
+    
+    \emph{Examples} of \emph{Movement Automaton Implementation} as \emph{Control Element} can be mentioned as follows:
+    \begin{enumerate}
+        \item Control of traffic flow \cite{kuwata2009real}.
+        \item Complex air traffic collision situation resolution system  \cite{frazzoli2001robust,frazzoli2000trajectory}.
+        \item SAA/DAA capable avoidance system \cite{gomola2017obstacle}.
+    \end{enumerate}
+
+
+    \subsection{Hybrid Automaton}\label{s:HybridAutomaton}
+    \noindent First the notion of  \emph{hybrid} automaton  \cite{lazar2006model,borrelli2006mpc,daws1996tool} needs to be introduced:
+
+    \begin{definition}{Hybrid automaton} (\ref{eq:hybridAutomaton}) is given as structure:
+        \begin{equation}\label{eq:hybridAutomaton}
+        \begin{aligned}
+            HybridAutomaton(&States,SystemState,VectorField,\\
+                            &DiscreteTransition,ResetMap)
+        \end{aligned}
+        \end{equation}
+    
+        \emph{States} ($Q$) is given as set of discrete states, for every time $t\in Domain$ hybrid automaton stays in exactly one of \emph{states}.
+    
+        \emph{SystemState} ($x$), is given in domain $x\in\R^n,n\in\N^+$, representing the trajectory evolution.
+        
+        \emph{VectorField} ($f$) (\ref{eq:vectorField}) is bounded to single $State\in States$ and represents local SystemState evolution, when given automaton State is Active.
+        
+        \begin{equation}\label{eq:vectorField}
+            VectorField: State\times SystemState \to SystemState
+        \end{equation}
+        
+        \emph{DiscreteTransition} ($\varphi$) (eq. \ref{eq:discreteTransition}) indicates changes of states in automaton, the changes are triggered by satisfying specific condition given by State and SystemState. 
+        
+        \begin{equation}\label{eq:discreteTransition}
+            DiscreteTransition:State\times SystemState \to State
+        \end{equation}
+        
+        \emph{ResetMap} ($\rho$) (eq. \ref{eq:resetMap}) defines changes of State to some default value, this change is triggered by specific automaton State and SystemState.
+        
+        \begin{equation}\label{eq:resetMap}
+            ResetMap:State\times SystemState \to SystemState
+        \end{equation}
+    
+    \end{definition}
+
+\subsection{Building Blocks}\label{s:MovementAutomatonBuidlingBlocks}
+    \begin{definition}{Movement Primitive:}\label{def:MovementPrimitive}\\\emph{States} from \emph{Hybrid automaton} can be taken as \emph{Movements} in \emph{Movement Automaton}. \emph{MovementPrimitive} (eq. \ref{eq:movementPrimitive}) is describing the \emph{Movement} behaviour as transfer function \emph{VectorField} enriched with parameters. 
+
+    \begin{equation}\label{eq:movementPrimitive}
+        \begin{aligned}
+            &MovementPrimitive(vectorField,minimalDuration,parameters)\\
+            &VectorField:SystemState\times parameters \to SystemState
+        \end{aligned}
+    \end{equation}
+    \end{definition}
+
+
+
+    \paragraph{Example: }Let say that \emph{UAS} system is given as $\dot{position}=velocity$, then let us have two \emph{MovementPrimitives}:
+    
+    \begin{enumerate}
+        \item \textit{Stay} - $minimalTime=1s$, $parameters=\{\}$, $VectorField:\dot{position}=0$.
+        \item \textit{Move} - $minimalTime=1s$, $parameters=\{velocity\}$, $VectorField:\dot{position}=velocity$.
+    \end{enumerate}
+    
+    \paragraph{Trajectory from Movement Primitives:} The \emph{UAS} should \emph{Move} for $5s$ with velocity $10 m/s$, then \emph{Stay} for $10s$, then move for $7s$ with velocity $4 m/s$, with initial position $position_0=0$ and initial time $t_0=1$ The standard approach is to derive transfer function $position = \Theta(\dots)$
+    \begin{equation}\label{eq:trajectoryExample}
+        position(t)=\Theta(\dots)
+        \begin{cases}
+            t \in [0,5] &: 10\times t + position(0)\\
+            t \in (5,15] &: 0\times (t-5) + position(5)\\
+            t \in (15,22]&: 4\times (t-15) + position(15)
+        \end{cases}
+    \end{equation}
+
+    The \emph{example} given by (eq. \ref{eq:trajectoryExample}) is fairly primitive, but imagine UAS system given by nonlinear dynamics $\dot{x}=f(x,u,t)$ \cite{fossen2011mathematical}. Then defining transfer function for given command chain can be impossible.
+
+    \begin{definition}{Movement Transition:}\label{def:movementTransition}\\
+        \emph{System state} can be different than intended movement application, the notion of \emph{Transition} is therefore introduced as stabilizing element in movement chaining (eq. \ref{eq:movementTransition}).
+        \begin{equation}\label{eq:movementTransition}
+            Transition:MovementPrimitive\times SystemState \to MovementPrimitive    
+        \end{equation}
+    \end{definition}
+
+    \paragraph{Trajectory with Transitions:} Introducing two transitions $Transition(Move,Stay)$ and $Transition(Stay,Move)$ reflecting periods when vehicle stop moving or speed-up to desired velocity. The transfer function (eq. \ref{eq:trajectoryExample}) can be rewritten as combination of \emph{MovementPrimitives} (eq. \ref{eq:movementPrimitive}) and \emph{Transitions} (eq. \ref{eq:movementTransition}):
+    
+    \begin{multline}
+        Transition(Stay,Move), Move(5s,10m/s),\\
+        Transition(Move,Stay), Stay(10s),\\ 
+        Transition(Stay,Move), Move(7s,4m/s)
+    \end{multline}.
+
+    \begin{note} There are two types of \emph{MovementPrimitives}:
+    \begin{enumerate}
+        \item \emph{Stationary} - when system state is considered neutral and they are considered as entry point for automaton.
+        \item \emph{Dynamic} - when the system state is considered evolving and they needs to be terminated with \emph{stationary} transition.
+    \end{enumerate}
+    \end{note}
+
+    \paragraph{Movement Mapping Example:} Transition/MovementPrimitive pairs (eq. \ref{eq:movementTransition}) can be mapped into movements (eq. \ref{eq:movementMappingExample}).
+    
+    \begin{equation}\label{eq:movementMappingExample}
+    \begin{aligned}
+        Move(5s,10m/s) &:Transition(Stay,Move), Move(5s,10m/s),\\
+        Stay(10s) &: Transition(Move,Stay), Stay(10s),\\ 
+        Move(7s,4m/s) &: Transition(Stay,Move), Move(7s,4m/s)
+    \end{aligned}    
+    \end{equation}
+
+    \begin{definition}{Movement:}\label{def:Movement}\\
+        Movement can consist from multiple \emph{Transitions} (eq. \ref{eq:movementTransition}) and one \emph{MovementPrimitive} (eq. \ref{eq:movementPrimitive}), the duration of \emph{MovementPrimitive} can be shortened by \emph{Transitions} duration. \emph{Movement} is defined as follows:
+        
+        \begin{equation}
+            \small Movement \left(
+                \begin{gathered}
+                    \scriptstyle initialState,\\
+                    \scriptstyle initialTime[0..1],\\ 
+                    \scriptstyle duration,\\ 
+                    \scriptstyle parameters[0..1]
+                \end{gathered}\right)
+            = \small Chain \left(
+            \begin{gathered}
+            \small InitialTransition(\dots)[0..*],\\
+            \small MovementPrimitive\left(
+            \begin{gathered}
+                \scriptstyle transitionState,\\
+                \scriptstyle remainingDuration,\\
+                \scriptstyle parameters
+            \end{gathered}\right)\\
+            \small LeaveTransition(\dots)[0..*],\\
+            \end{gathered}
+            \right)
+        \end{equation}
+        
+        \emph{Chain function} connects multiple \emph{initial Transitions} which are appliead at \emph{initialState} at \emph{initialTime}. Then own \emph{MovementPrimitive} (eq. \ref{eq:movementPrimitive}) is invoked with \emph{transitionnsState}. \emph{Transitions state} is state changed by \emph{Initial Transitions}. After \emph{Movement Primitive} there can be \emph{Leave Transitions Movement}
+    \end{definition}
+
+    \paragraph{Minimal Movement Time:} Given by (eq. \ref{eq:minimalMovementTime}) for \emph{movement} is given as sum of \emph{MovementPrimitive} (eq. \ref{eq:movementPrimitive}) minimal time, and \emph{Transition} (eq. \ref{eq:movementTransition}) in/out combined minimal time.
+    
+    \begin{equation}\label{eq:minimalMovementTime}
+        minimalTime(Movement)=
+        \begin{aligned}
+        &minimalTime(MovementPrimitive) +\\ &\text{max}_{in/out}\left\{time(Transition)\right\}
+        \end{aligned}
+    \end{equation}
+
+    \paragraph{Movement Chaining:}\emph{Movements} can be \emph{chained} and applied to initial \emph{system state} to generate \emph{system trajectory}. Example of trajectory is given by (eq. \ref{eq:trajectoryExample}). Movements are reversibly obtained by participation such \emph{trajectory} into \emph{Movement primitives} and \emph{Transitions}. Then sample \emph{Trajectory} for $n\in \N^+$ movements looks like (eq. \ref{eq:movementChaining}).
+    \begin{equation}\label{eq:movementChaining}
+        \begin{aligned}
+        &Trajectory(t_0)=State(t_0)\\
+        &Trajectory(t_0,t_1]=Movement_1(Trajectory(t_0),t_0,duration_1,parameters_1)\\
+        &Trajectory(t_1,t_2]=Movement_2(Trajectory(t_1),t_1,duration_2,parameters_2)\\
+        &Trajectory(t_2,t_3]=Movement_3(Trajectory(t_2),t_2,duration_3,parameters_3)\\
+        &\vdots\\
+        &Trajectory(t_{n-1},t_n]=Movement_n(Trajectory(t_{n-1}),t_{n-1},duration_n,parameters_n)\\
+        \end{aligned}
+    \end{equation}
+
+    Given \emph{Trajectory} at time $t_0$ is given as initial \emph{State} of \emph{System}. For time interval $(t_0,t_1)$, which length is equal to $duration_1$, the \emph{State} is given by $Movement_1$ with $parameters_1$ and base time $t_0$. This behaviour continues for movements $2,\dots,n$. 
+
+    \begin{definition}{Movement Buffer:}\label{def:MovementBuffer}\\
+        \noindent\emph{Movements} can be chained into \emph{Buffer} with assumption of \emph{continuous movement execution}. \emph{Continuous movement executions} each movement in chain (eq. \ref{eq:movementChaining}) is executed in time interval $\tau_i=(t_{i-1},t_{i}]$ where $i$ is movement order and $\forall$ $Movement_i$ starting time is $t_0$ or $t_{i-1}$ from previous movement. With given assumption \emph{Buffer} is given as (eq. \ref{eq:movementBuffer}) with parameters $t_{i-1},t_{i}$ omitted, due $t_0$ and $duration_i$ dependency.
+        
+        \begin{equation}\label{eq:movementBuffer}
+            Buffer = \left\{Movement_i(duration_i,parameters_i)\right\}i\in\N^+
+        \end{equation}
+    \end{definition}
+    
+    \begin{definition}{Movement Automaton Trajectory:}\label{def:MovementAutomatonTrajectory}\\
+        Let say system \emph{State}$\in\R^n$ which \emph{Trajectory} is defined by movement chaining (eq. \ref{eq:movementChaining}), applied on some \emph{initial time} $t_0\in\R^+$ and final time $t_f=t_0+\sum_{i=1}^{I}duration_i$, with movements contained in \emph{Buffer} (eq. \ref{eq:movementBuffer}) is given as \emph{Trajectory} (eq. \ref{eq:TrajectoryDefinition}).
+        
+        \begin{equation}\label{eq:TrajectoryDefinition}
+            Trajectory(t_0,State(t_0),Buffer)\text{ or } Trajectory(State_0,Buffer) \text{ if } t_0=0
+        \end{equation}
+    \end{definition}
+
+
+    \begin{note}
+        The space dimension of \emph{Trajectories} is $\R^{n+1}$ if the space dimension of state \emph{Space} is $R^n$, because \emph{Trajectory space} contains evolution of \emph{Space} in time interval $T[t_0,t_f]$.
+        
+        The transformation from \emph{transfer function} (eq. \ref{eq:trajectoryExample}) to \emph{trajectory} (eq. \ref{eq:TrajectoryDefinition}) is natural, only set of \emph{Movement primitives} (eq. \ref{eq:movementPrimitive}) and set of \emph{Transitions} (eq. \ref{eq:movementTransition}) is required.
+    \end{note}
+
+    \paragraph{State Projection:} \emph{Trajectory} (eq. \ref{eq:TrajectoryDefinition})is naturally evolution of space over time, then there exists \emph{StateProjection} function (eq. \ref{eq:stateprojection}) which returns \emph{State} for specific \emph{Time}.
+    
+    \begin{equation}\label{eq:stateprojection}
+        StateProjection:Trajectory\times Time \to State(Time)
+    \end{equation}
+    
+\subsection{(W) Definition and Properties}\label{s:MovementAutomatonDefinitionAndProperties}
+
+    \begin{definition}\label{def:movementAutomaton}Movement Automaton is given as follow:
+    
+    \begin{align}   
+        \label{eq:madInitialState}
+        InitialState&: \in \R^h, h\in \N^+\\
+        \label{eq:madSystemdefinition}
+        System&: \dot{State}=f(Time,State,Input)\text{ or } vectorField\\
+        \label{eq:madMovementPrimitive}
+        Primitives &= \left\{MovementPrimitive_i\left(
+                                \begin{aligned}
+                                &vectorField,\\
+                                &minimalDuration,\\
+                                &parameters
+                                \end{aligned}\right)
+                            \right\} i \in \N^+\\
+        \label{eq:madTransitions}
+        Transitions&= \left\{Transition_j\left(
+                                \begin{aligned}
+                                    &MovementPrimitive_l,\\
+                                    &MovementPrimitive_k
+                                \end{aligned}\right)_{k\neq l}\right\} j\in N^+\\
+        \label{eq:madMovements}
+        Movements&= \left\{Movement_m\left[
+                                \begin{aligned}
+                                    &Transition_o[0..*],\\
+                                    &MovementPrimitive_p\\
+                                    &Transition_r[0..*],\\
+                                \end{aligned}\right]_{o \neq r}\right\}  m\in N^+\\
+        \label{eq:madBuffer}
+        Buffer&= \left\{Movement_s(duration_s,parameters_s)\right\} s\in \N^+\\
+        \label{eq:madExecuted}
+        Executed&= \left\{Movement_s(duration_s,parameters_t)\right\} t\in \N^+\\
+        \label{eq:madBuilder}
+        Builder&:Movement \times MovementPrimitive \to Movement\\
+        \label{eq:madTrajectory}
+        Trajectory&:InitialState\times Movement^u \to State \times Time, u\in N^+\\
+        \label{eq:madStateProjection}
+        StateProjection&:Trajectory\times Time \to State(Time)  
+    \end{align}
+    
+    \noindent \emph{System} (eq. \ref{eq:madSystemdefinition}) is given in form of \emph{differential equations} $\dot{x} = f(t,x,u)$ or \emph{other transformable equivalent}, with \emph{initial state} (eq. \ref{eq:madInitialState}).
+    
+    \emph{Movements} (eq. \ref{eq:movementChaining}) are defined as sequence of necessary \emph{initial transitions} (eq. \ref{eq:madTransitions}), \emph{movement primitive} (eq. \ref{eq:madMovementPrimitive}), and, \emph{leave transitions} (\ref{eq:madTransitions}).
+    
+    \emph{Buffer} contains a set of \emph{movement primitives} (eq. \ref{eq:madMovementPrimitive}) to be executed in order to achieve desired goal. \emph{Builder} (eq. \ref{eq:madBuilder}) assures that first \emph{movement primitive} (eq. \ref{eq:movementPrimitive})from \emph{Buffer} (eq. \ref{eq:madBuffer}) is transformed into \emph{next movement} (eq. \ref{eq:madMovements}) based on \emph{current movement} (eq.\ref{eq:madMovements}).
+    
+    System \emph{trajectory} (eq. \ref{eq:madTrajectory}) is defined in (eq. \ref{eq:TrajectoryDefinition}). \emph{State projection} (eqs. \ref{eq:stateprojection},\ref{eq:madStateProjection}) is giving \emph{State} variable for time $t\in[t_0,t_{max}]$ where $t_max$ is given by:
+    \begin{equation}
+    t_{max}=t_0+\sum_{i=1,u}Buffer.Movement(i).movementDuration    
+    \end{equation}
+    \end{definition}
+    
+    %Important properties of movement automaton
+    TODO important properties of movement automaton, 

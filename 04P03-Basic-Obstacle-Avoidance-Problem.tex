@@ -1,0 +1,26 @@
+\section{Basic obstacle avoidance problem}\label{s:BasicProblemDefinition}
+    \noindent Given:
+
+    \begin{enumerate}
+        \item Initial system state $x_0$, for UAV model (\ref{eq:vehicleModelAbstract}).
+        
+        \item Mission (\ref{eq:missionAbstractSet}) to be executed.
+        
+        \item Space (\ref{eq:SpaceDefinition}), with existing objects (\ref{eq:ObjectDefinition}).
+        
+        \item Sensor system $\{sensor_1, sensor_2,\dots,sensor_k\}$ with existing sensor fusion function (\ref{eq:SensorFusionFunction}).
+        
+        \item Weather information (\ref{eq:weatherProjection}) during the flight is available.
+        
+        \item Information sources $informationSource_1, informationSource_2, \dots, informationSource_l$ containing hard (\ref{eq:hardSpaceConstraints}) and soft space constraints (\ref{eq:softSpaceConstraints}),with existing data fusion function (\ref{eq:DataFusionFunction}).
+        
+        \item \emph{Hard} (\ref{eq:HFlightConstraints}) and \emph{Soft} \ref{eq:SFlightConstraints} flight constraints given by ATM and rules of the air. 
+    \end{enumerate}
+
+    \noindent Generate \emph{Control input signal} $u(t)$ to complete mission (\ref{eq:missionAbstractSet}) with satisfaction of following conditions:
+    
+    \begin{enumerate}
+        \item Waypoint passing function condition (\ref{eq:waypointPassingFunction}).
+        
+        \item Set safety margin $s_m$ to $Occupied$  space in $KnownWorld(time)$ (\ref{eq:knownWorldSet}) is not breached at any time (\ref{eq:safetyMarginAbstract}).
+    \end{enumerate}

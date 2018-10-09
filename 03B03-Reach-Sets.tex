@@ -1,0 +1,101 @@
+\section{Reach Sets}\label{s:ReachSets}
+    \noindent Informally, the \emph{Reach Set} of a UAS system described by a differential equation is the \emph{set of all states that can be reached from an initial state within a given time interval}.
+
+    \paragraph{For following definitions} consider \emph{nonlinear UAS system} described in (sec. \ref{s:uavMotionModel}).
+    
+    \begin{definition}[Reach set starting at a given point]\label{def:reachset01}
+        Suppose the initial position
+        and time $(state_0, time_0)$ are given. The reach set $ReachSet[\tau, time_0, state_0]$ of \emph{nonlinear system} at time $\tau \ge time_0$, starting at $(state_0, time_0)$ is given by:
+        \begin{equation}
+            ReachSet[\tau, time_0, state_0] = \bigcup \{state(\tau):input(s)\in Inputs(s),s \in (time_0,\tau]\}
+        \end{equation}
+    \end{definition}
+    
+    \paragraph{Reach set starting at given set} can be used to determine reach set in case of \emph{hybrid system} input control switch and it is defined as follow:
+    \begin{definition}\label{def:ReachSetBasic} set starting at a given set]
+        The reach set at time $\tau > t_0$ starting from set $States_0$ is defined as:
+        \begin{equation}
+            ReachSet[\tau, time_0, States_0] = \bigcup \{ReachSet[\tau, time_0, state_0]: state_0 \in States_0\}
+        \end{equation}
+    \end{definition}
+
+    \paragraph{Reach set for adversarial behavior} can be used to calculate possible escape routes from pursuer and it is defined as follow:
+
+    \begin{definition}[Reach set under adversarial behavior]
+        Consider now the case of adversarial behavior(\cite{game1987,game1988}).
+        where $input(t)$ is our control and $adversary(t)$ is adversary control which is independent of $input(t)$, let $differentialControl(t)=input(t)-$ $\sup_{{state} \in state(t)}$\\ $adversary(t)$, which represents worst possible input change in given state and time, then \emph{reach set for system} is represented as:
+        \begin{equation}
+            ReachSet\left[\begin{gathered}\tau,\\ time_0,\\ state_0\end{gathered}\right] = \bigcup \left\{state(\tau): 
+                \begin{aligned}
+                    differentialControl(s)\in\\  DifferentialControlSet(s)
+                \end{aligned}
+            ,s \in (time_0,\tau]\right\}
+        \end{equation}
+    \end{definition}
+
+    \paragraph{Reach set under constraints} are usable to define state constrained systems in terms of dynamics and technical capabilities.
+    
+    \begin{definition}[Reach set under state constraints]
+        Suppose the initial position and time $(state_0, time_0)$ and $state$ constraints are given $state(t) \in \mathbb{A} \subset \R^n, \dot{x}(t) \in \mathbb{B} \subset \R^n$. The reach set $ReachSet[\tau, time_0, \vec{state}_0]$ of \emph{nonlinear UAS system} at time $\tau \ge time_0$, starting at position and time $(state_0, time_0)$ is given by:
+        
+        \begin{equation}
+            ReachSet\left[\begin{gathered}\tau,\\ time_0,\\ state_0\end{gathered}\right] = \bigcup 
+            \left\{
+                state(\tau):
+                \begin{gathered}
+                    \forall s\in (time_0,\tau], state(s) \in \mathbb{A},\\ 
+                    \dot{state}(s) \in \mathbb{B},\\ 
+                    \exists input(s) \in Inputs(s)
+                \end{gathered}
+            \right\}
+        \end{equation}
+        
+    \end{definition}
+
+
+    \subsection{Computation of Reach Sets}
+    \noindent   Several techniques for reachability analysis of systems have been proposed. They can be (roughly) classified into two kinds:
+    
+    \begin{enumerate}
+    \item Purely symbolic methods based on: 
+        \begin{enumerate}[a.]
+        \item the existence of analytic solutions of the differential equations and 
+    
+        \item the representation of the state space in a decidable theory of the real numbers.
+        \end{enumerate}
+    \item Methods that combine 
+    \begin{enumerate}[a.]
+        \item numeric integration of the differential equations
+    
+        \item symbolic representations of approximations of state space typically using (unions of) polyhedra or ellipsoids.
+        \end{enumerate}
+    \end{enumerate}
+    These techniques provide the algorithmic foundations for the tools that are available for computer-aided verification of hybrid systems (\cite{daws1996tool}, \cite{henzinger1994symbolic}, \cite{henzinger1995hytech}).
+
+    The set-valued Lebesgue integral provides a conceptual tool for the direct computation of the reach set. In what follows we describe techniques from dynamic optimization which are used to compute reach sets for dynamic systems.
+
+    The relation between dynamic optimization and reachability was first observed in \cite{leitmann1982optimality}. A typical problem of optimal control can be formulated as follows:
+
+    \begin{equation}
+        \max \left(
+        \begin{gathered}
+            \int_{initialTime}^{finalTime} cost(time,state(time),contro(time)) \textnormal{d}time + \dots \\ \dots +FinalCost(state(finalTime))\end{gathered}
+        \right)
+    \end{equation}
+    
+    \noindent For nonlinear system:
+    \begin{equation}
+        \dot{state}(t) = f(t,state(t),control(t)), control(t) \in ControlSet(t) \subset \R^p
+    \end{equation}
+    
+    Where $cost$ is given as cost function of time,state and input and $FinalCost$ represents cost functional.
+    There are two main techniques to solve this problem: 
+    
+    \begin{enumerate}
+        \item The maximum principle
+        
+        \item Dynamic programming. The maximum principle gives necessary conditions of optimality. Dynamic programming may be used to derive sufficientconditions of optimality.
+    \end{enumerate}
+
+    A good reference on the maximum principle is \cite{pontryagin1962ef}. A less known reference with detailed geometric interpretations is \cite{girsanov2012lectures}. A good reference on dynamic programming is \cite{bardi2008optimal}.
+    

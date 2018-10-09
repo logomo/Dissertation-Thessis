@@ -1,0 +1,26 @@
+\subsection{(W) Weather Case}\label{sec:weatherCase}
+    \noindent Introduce the weather constraint structure given in table \ref{tab:weatherConstraint}, discuss following topics:
+    \begin{itemize}
+        \item The convex polygon boundary - most of navigation uses S curve algorithm 
+        \item The difference between static/dynamic (moving) boundary 
+        \item Elaborate weather rules system - very easy, reuse divergence/convergence waypoint system from overtake, other solutions are not quite deterministic.
+    \end{itemize}
+    \begin{tabularx}{\textwidth}{S{0.25}|X}
+         \multicolumn{2}{c}{\textbf{Constrained area}}\\\hline
+         center position & is given as geometrical \emph{center point of boundary}.  \\
+         boundary & is represented as \emph{convex polygon} on latitude-longitude plane.\\
+         start altitude & is lover boundary barometric altitude given at above mean sea level, where given weather factor have significant impact.\\
+         end altitude & is upper boundary barometric altitude given at above mean sea level, where given weather factor have significant impact.\\
+         \multicolumn{2}{c}{\textbf{Dynamic parameters}}\\\hline
+         type(s) & lists weather events occurring in \emph{constrained area}.\\
+         severity list & is recorded for each plane \emph{category}\\
+         start & indicates when weather constraint was established. \\
+         expected end & of weather constraint.\\
+         velocity & indicates if weather phenomenon is moving.\\
+         \multicolumn{2}{c}{\textbf{Miscellaneous}}\\\hline
+         previous & reference to \emph{weather constraint} decision time-frame data.\\
+         impacted & list of possibly impacted attendees (planes whom obtained divergence order or warning from UTM).\\
+        \caption{Static/Dynamic weather constraint for given decision time-frame.}
+        \label{tab:weatherConstraint} 
+    \end{tabularx}
+    

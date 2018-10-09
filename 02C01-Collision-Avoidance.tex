@@ -1,0 +1,38 @@
+\chapter{(W) Collision avoidance}\label{ch:CollisionAvoidance}
+    \noindent The context of Collision Avoidance is introduced in table \ref{tab:CASContext}, the structure was taken from Gardi \cite{gardi2015automated}and modified to reflect actual state of art.
+    \begin{tabularx}{\textwidth}{S{0.20}|S{0.55}} 
+        \centering \emph{Function} & \emph{Equipment/Task}\\ \hline\hline
+        \centering Communication & Telecommunication datalinks,\newline Controller Pilot Data Link-Control (CPDLC), \newline Voice Communication\\\hline
+        \centering Navigation & Navigation sensors including GNSS, INS, etc. providing 3D/4D navigation capabilities.\\\hline
+        \centering Surveillance & Cooperative Systems (TCAS, ACAS, etc.)\newline Non-cooperative Sensors (LiDAR,Cameras, etc.)\\\hline
+        \centering Situation\newline Awareness& Early Warning Systems, \newline CDTI Display\\\hline
+        \centering Autonomous\newline Decision\newline Making & Strategic, Tactical, Emergency Flight Planning,\newline Intelligent Collision Detection,\newline Conflict Resolution and Prevention,\newline Weather/Terrain/Constraints Avoidance\\
+        \caption{Collision Avoidance Systems Context Overview \cite{gardi2015automated}.}
+        \label{tab:CASContext}
+    \end{tabularx}
+    
+    \emph{Communication} overview elaboration on capability, reliability, security, architecture have been summarized  by Johansen et. al. in \cite{johansenetal2018surveyCommunicaiton}.
+    
+    \emph{Navigation} overview is given by Nex \cite{nex2014uav} \emph{Waypoint planning in 3D enviroment} is elaborated in \cite{bodin2007navigating}. \emph{Waypoint Tracking and Test Environments} are thoughtfully discussed in \cite{how2008real,girard2004border,andrade2017autonomous,klausen2017nonlinear}.
+    
+    \emph{Surveillance} cooperative surveillance is covered by TCAS and ACAS systems, interesting aspect of these systems are \emph{Resolution Advisories} \cite{kennedy1995resolution} for TCAS \cite{marston2015acas}. For ACAS. The visualization of surroundings has been introduced in \cite{blaskovich2007declutter}. \emph{LiDAR} based \emph{SAA} system have been introduced by Sabatini \cite{sabatini2014lidar} further enhanced by Ramasay \cite{ramasamy2016lidar}. Other \emph{Non-Cooperative} sensors and their feasibility have been outlined in Ramasay work \cite{ramasamy2014avionics}.
+    
+    \emph{Situation awareness} is implemented mainly as \emph{human-based} systems, \emph{Early Warning System} has been proposed by Lee \cite{lee2002collision} and adaptive version by Miller \cite{miller2002adaptive}. Effects of \emph{CDTI Display} visualization and human decision impact have been examined by Thomas \cite{thomas2005effects}. \emph{Self Separation} aspect have been examined by Williams \cite{williams1983self}.
+    
+    \emph{Autonomous Decision Making} \TBD{This will be added later, because its main part...}
+    
+    \begin{note}
+        The purpose following sections is to introduce current state in:
+        \begin{enumerate}
+            \item Introduce \emph{Airspace Classification} in \ref{sec:AirspaceClassification}, from current ICAO/FAA/EASA viewpoint, emphasizing common viewpoint among regulations.
+            \item Provide background for \emph{manned aircraft operation rules} in \ref{sec:AircraftOperationRules},restriction imposed by Visual(\ref{sec:VisualFlightRules})/Instrumental(\ref{sec:InstrumentalFlightRules}) Flight rules.
+            \item Define \emph{"Well Clear"} (sec.\ref{sec:WellClear}) state of aircraft in airspace. Introducing the roles of \emph{Air Traffic Control} (\ref{sec:AirTrafficControl}) and current CAS systems TCAS (\ref{sec:TCAS}) and ACAS-X (\ref{sec:ACASX}).
+        \end{enumerate}
+        
+        \noindent The purpose of following sections is to introduce ATM extension for UAS systems:
+        \begin{enumerate}
+            \item \emph{UAS Traffic Management} functionality is analysed in \ref{sec:UTM}, two major movements EU USPACE (\ref{sec:USpace}) and US NASA UTM (\ref{sec:NASAUtm}).
+            \item \emph{Event Based Avoidance} (\ref{sec:EventBasedAvoidance}) defines basic event based control invoked by \emph{UTM}, two major categories are analyzed in \emph{MACP} (\ref{sec:MidairCollisionPrevention}) section and \emph{Weather Impact} (\ref{sec:WeatherImpact})
+            \item \emph{UTM Functional decomposition} is given in section \ref{sec:UTMFunctionaalDecomposition}.
+        \end{enumerate}
+    \end{note}

@@ -1,0 +1,31 @@
+\subsection{(W) Position Notification}\label{sec:positionNotification}
+    \noindent Process of creation for data structure from table \ref{tab:positionNotification}.
+    \begin{tabularx}{\textwidth}{S{0.25}|X}
+         \multicolumn{2}{c}{\textbf{Position}}  \\\hline
+         latitude & based on GPS/IMU sensor fusion.\\
+         longitude & based on GPS/IMU sensor fusion.\\
+         altitude & barometric altitude \emph{Above Mean Sea Level} (AMSL). \\         
+         \multicolumn{2}{c}{\textbf{Heading}}  \\\hline
+         orientation & orientation in standard North-East coordinate frame.\\
+         velocity & relative UAS velocity.\\
+         \multicolumn{2}{c}{\textbf{Flight Levels}}\\\hline
+         main & flight level, where UAS mass center belongs\\
+         passing & flight level, during climb/ascend, or when distance of UAS mass center to flight level boundary $\le 250 ft.$ .\\
+         \multicolumn{2}{c}{\textbf{Registration}}\\\hline
+         registration ID& is unique registration number \emph{to be issued} by local aviation authority for UTM communications purposes.\\
+         flight code& or mission code is unique identification number for approved mission plan which is going to be flown by UAS.\\
+         UAS name & optional UAS identifier to increase human recognition. \\
+         \multicolumn{2}{c}{\textbf{Categorization}}\\\hline
+         craft category & ICAO main category, based on vehicle type.\\
+         maneuverability& secondary categorization specifying size class, horizontal/vertical turning radius, minimal and maximal cruising speed.\\
+         \multicolumn{2}{c}{\textbf{Safety margins}}\\\hline
+         universal & minimal safety margin for any avoidance situation\\
+         head on & minimal distance from other similar maneuverability class aircraft in case of head on approach.\\
+         converging & minimal distance from other similar maneuverability class aircraft in case of head of converging maneuver.\\
+         overtake & minimal distance from other similar maneuverability class aircraft in case of overtake maneuver.\\
+         wake angle & for wake turbulence cone.\\
+         wake radius & for wake turbulence cone.\\
+        \caption{Time-stamped \emph{position notification} structure.}
+        \label{tab:positionNotification}
+    \end{tabularx}
+
