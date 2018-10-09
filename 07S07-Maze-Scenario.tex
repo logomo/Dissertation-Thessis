@@ -108,7 +108,7 @@ The purpose of these \emph{Obstacles} except \emph{Square building} type is to c
     \label{fig:testCaseMazeSolver}
 \end{figure}
 
-\paragraph{Safety Margin Performance:}  The \emph{safety margin performance} over time (x-axis, sec) given in  meters distance (y-axis, m) is given in (fig. \ref{fig:testCaseMazeAvoidancePerformance}).
+\paragraph{Distance to Body/Safety Margin Evolution:}  The evolution of \emph{body and safety margin} over time (x-axis, sec) given in  meters distance (y-axis, m) is given in (fig. \ref{fig:testCaseMazeAvoidancePerformance}).
 
 The \emph{UAS} center distance to nearest obstacle (blue line) does not break any \emph{Safety Margin} (yellow line) of closest obstacle. \emph{Body Margin} of closest obstacle (red line) has not been break, because it always lies below of \emph{Safety Margin} (yellow).
 
@@ -122,15 +122,15 @@ The \emph{body} and \emph{safety margin} are changing  depending on \emph{UAS po
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{\FIGDIR/NS017ConstraintsPolynomialMazePerformance} 
-    \caption{\emph{Maze} safety margin performance.}
+    \caption{Distance to Body/Safety Margin Evolution for \emph{Maze scenario}.}
     \label{fig:testCaseMazeAvoidancePerformance}
 \end{figure}
 
-\paragraph{Safety Margin distances:} The minimal and maximal values for \emph{UAS body closest point} to \emph{safety margin} distance based on performance (fig. \ref{fig:testCaseMazeAvoidancePerformance}) is summarized in (tab. \ref{tab:testCaseMazeSafetyAndBodyMarginDistances}).
+\paragraph{Distance to Body/Safety Margin Peaks:} The minimal and maximal values for \emph{UAS distance} to \emph{safety margin} based on performance (fig. \ref{fig:testCaseMazeAvoidancePerformance}) is summarized in (tab. \ref{tab:testCaseMazeSafetyAndBodyMarginDistances}).
 
 The \emph{minimal distance to safety margin} is $0.0131 m$ which can be taken as $\sim 0m$ due the numerical error. The \emph{maximal distance to safety margin} is $2.9513 m$ which is $5 \times$ \emph{UAS radius}. The safety margin distance is $\le 3 m$ which means the scenario is tightly packed with obstacles. The \emph{UAS} never left \emph{Emergency Avoidance Mode} because condition: $safety Margin Distance \ge avoidance Grid Length$ was never satisfied. 
 
-The \emph{minimal body} distance is $5.0131 m$, while the \emph{maximal body} distance is $8.7117 m$. The difference between minimal and maximal body distance is $\sim 4 m$ which also indicates obstacle packed scenario. 
+The \emph{minimal body} distance is $5.0131 m$, while the \emph{maximal body} distance is $8.7117 m$. The difference between minimal and maximal body distance is $\sim 4 m$ which also indicates scenario packed with obstacles. 
 
 \begin{table}[H]
     \centering
@@ -141,7 +141,7 @@ The \emph{minimal body} distance is $5.0131 m$, while the \emph{maximal body} di
     \multirow{2}{*}{body margin distance}   & min & 5.0131 \\\cline{2-3}
                                             & max & 8.7117 
     \end{tabular}
-    \caption{\emph{Maze} safety and body margin distances.}
+    \caption{Distance to Body/Safety Margin Peaks for \emph{Maze scenario}.}
     \label{tab:testCaseMazeSafetyAndBodyMarginDistances}
 \end{table}
 

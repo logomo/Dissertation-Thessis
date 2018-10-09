@@ -96,18 +96,18 @@ The \emph{vertical separation} was disabled, because \emph{UAS} will just increa
 \end{figure}
 
 
-\paragraph{Distance to Safety Margin Evolution:} The \emph{UAS} (blue fill) does not break a \emph{safety margin} (yellow fill) nor \emph{body margin} (red fill) as you can seen in (fig. \ref{fig:testCaseSlalomAvoidancePerformance}). Hindered space is accounted into decision making, because the distance to closest obstacle will never breach \emph{safety margin} (yellow fill). If it was not, the UAS will break \emph{safety} or \emph{body} margin. 
+\paragraph{Distance to Body/Safety Margin Evolution:} The \emph{UAS} (blue fill) does not break a \emph{safety margin} (yellow fill) nor \emph{body margin} (red fill) as you can seen in (fig. \ref{fig:testCaseSlalomAvoidancePerformance}). Hindered space is accounted into decision making, because the distance to closest obstacle will never breach \emph{safety margin} (yellow fill). If it was not, the UAS will break \emph{safety} or \emph{body} margin. 
 
 \emph{Body} and \emph{Safety margin} are changing values depending on the \emph{nearest obstacle} and \emph{mutual position of obstacle and UAS}. The ranges of \emph{body} and \emph{safety margins} are reflected in (tab. \ref{tab:obstacleSetSlalom}). 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{\FIGDIR/NS011ConstraintsPolynomialSlalomPerformance} 
-    \caption{Distance to Safety Margin Evolution for \emph{Slalom scenario}.}
+    \caption{Distance to Body/Safety Margin Evolution for \emph{Slalom scenario}.}
     \label{fig:testCaseSlalomAvoidancePerformance}
 \end{figure}
 
-\paragraph{Distance to Safety Margin Peaks:} The boundary of \emph{safety} and  \emph{body} margin is given in (tab. \ref{tab:testCaseSlalomSafetyAndBodyMarginDistances}). The minimal distance of \emph{UAS border}(blue line) to \emph{safety margin boundary} (yellow line fig. \ref{fig:testCaseSlalomAvoidancePerformance}) is $0.0856$ $m$ which can be considered as marginal $0$. The minimal \emph{body margin} distance is $2.5856$ $m$ which is reflects \emph{safety margin} $2.5$ $m$ at that moment. The condition $safety Margin Distance \ge 0$ holds.
+\paragraph{Distance to Body/Safety Margin Peaks:} The \emph{UAS} distance to boundary of \emph{safety} and  \emph{body} margin is given in (tab. \ref{tab:testCaseSlalomSafetyAndBodyMarginDistances}). The minimal distance of \emph{UAS border}(blue line) to \emph{safety margin boundary} (yellow line fig. \ref{fig:testCaseSlalomAvoidancePerformance}) is $0.0856$ $m$ which can be considered as marginal $0$. The minimal \emph{body margin} distance is $2.5856$ $m$ which is reflects \emph{safety margin} $2.5$ $m$ at that moment. The condition $safety Margin Distance \ge 0$ holds.
     
     
 The difference between minimal and maximal \emph{safety margin distance} is $\sim 3$ $m$ which indicates that mission environment is  tightly packed with obstacles.
@@ -121,7 +121,7 @@ The difference between minimal and maximal \emph{safety margin distance} is $\si
     \multirow{2}{*}{body margin distance}   & min & 2.5856  \\\cline{2-3}
                                             & max & 6.2391 
     \end{tabular}
-    \caption{\emph{Slalom} safety and body margin distances.}
+    \caption{Distance to Body/Safety Margin Peaks for \emph{Slalom scenario}.}
     \label{tab:testCaseSlalomSafetyAndBodyMarginDistances}
 \end{table}
 
