@@ -1,4 +1,57 @@
 \subsection{Performance Evaluation}\label{s:performanceEvaluation}
+\paragraph{Evaluation method:} \emph{Test cases} were evaluated according to performance requirements defined in (sec. \ref{s:AvoidanceRequirements}). The method was tracking critical parameter for \emph{Safety} (sec . \ref{s:Safety}) (primary) and \emph{Trajectory Tracking} (sec. \ref{s:trajectoryTracking}) (secondary) including \emph{Energy Efficiency} (sec. \ref{s:EnergyEfficiency}).
+
+\paragraph{Safety Margin Performance Evaluation:} The \emph{safety of UAS} is main concern of \emph{DAA system}. The common concept of \emph{safety margin} is evaluated. 
+
+\begin{multline}
+    crashDistance(t) =  distance(UAScenter(t),threat) \\\text{  where \emph{selection criterion} is:  }\\ \min \left\{\begin{gathered}\left( \begin{gathered} distance(UAScenter(t),threat)-\dots\\\dots-threat.SafetyMargin\end{gathered}\right)\\:\forall threat \in KnownWorld (t)\end{gathered}\right\}
+\end{multline}
+
+
+\begin{multline}
+    safety Margin(t) =  threat.SafetyMargin\\\text{  where \emph{selection criterion} is:  }\\ \min \left\{\begin{gathered}\left( \begin{gathered} distance(UAScenter(t),threat)-\dots\\\dots-threat.SafetyMargin\end{gathered}\right)\\:\forall threat \in KnownWorld (t)\end{gathered}\right\}
+\end{multline}
+
+
+\begin{equation}
+    distanceToSafetyMargin(t) = safetyMargin(t) - crashDistance(t) \ge 0
+\end{equation}
+
+\paragraph{Minimal/Maximal distance to Safety Margin:}
+\begin{enumerate}
+    \item \emph{Crash distance value}
+    \item \emph{UAS (UAS pair)}
+\end{enumerate}
+
+\paragraph{Breach Indicator:} 
+\begin{enumerate}
+    \item \emph{Yes/No}
+    \item \emph{Distance to Safety Margin Reference}
+\end{enumerate}
+
+\paragraph{Trajectory Tracking Evaluation:}
+
+\begin{enumerate}
+    \item \emph{Waypoint reach:}
+    \begin{enumerate}[a.]
+        \item \emph{Yes/No}
+        \item \emph{UAS ID}
+        \item \emph{Trajectory tracking figure reference}
+    \end{enumerate}
+    \item \emph{Reference deviation:}
+    \begin{enumerate}[a.]
+        \item \emph{Waypoint ID}
+        \item \emph{Peak deviation value}
+    \end{enumerate}
+    \item \emph{Acceptable deviation:}
+    \begin{enumerate}[a.]
+        \item \emph{Yes/No}
+        \item \emph{Trajectory tracking performance table reference}
+    \end{enumerate}
+\end{enumerate}
+
+\paragraph{Test Acceptance:} TODO
+
 \begin{table}[H]
     \scriptsize
     \centering
@@ -128,3 +181,6 @@
     \caption{Test cases \emph{performance evaluation}.}
     \label{tab:testCasesPerformacneEvaluation}
 \end{table}
+
+
+\paragraph{Performance Conclusion:}
