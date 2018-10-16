@@ -259,3 +259,15 @@
         \label{tab:pathTrackingParametersForRuleBasedOvertake2x}
     \end{table}
 
+
+% 11 Rule Based Overtake
+\paragraph{Computation Load:} The \emph{computation load} for \emph{scenario} (fig.\ref{fig:ruleBasedOvertakeComputationTime}) shows used time (y-axis) over decision frame (x-axis).
+
+The load is minimal on both UAS, because the rule calculates only divergence (eq. \ref{eq:overtakedDivergenceGlobal}) and convergence (eq. \ref{eq:overtakeConvergenceGlobal}) waypoints.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{\FIGDIR/NS102RuleBasedOvertakeComputationTime} 
+    \caption{Computation time for \emph{Rule based overtake} scenario.}
+    \label{fig:ruleBasedOvertakeComputationTime}
+\end{figure}
