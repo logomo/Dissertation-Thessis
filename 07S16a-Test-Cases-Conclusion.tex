@@ -291,11 +291,58 @@ Let us take \emph{Rule-based Head on} test case (sec. \ref{s:testRuleHeadOn}), c
     \end{enumerate}
 \end{note}
 
-\subsection{(W) Conclusion}\label{s:TestingConclusion}
+\subsection{(R) Computation Footprint}\label{s:ComputaitonFootprint}
 
-\begin{itemize}
-    \item The tests covers early UTM functionality
-    \item Avoidance covers weather static obstacles intruder in cooperative non cooperative mode
-    \item There are some shorcommoings
-    \item other topics TBD - what should go to Chapter 8, what should go to chapter 7.5.2
-\end{itemize}
+\noindent The \emph{computation footprint} is summarized in computation  load (tab. \ref{tab:computationLoadStatistics}). The \emph{computation load} (eq. \ref{eq:computationLoad}) was calculated for each \emph{time-frame} in scenarios. There is summary of \emph{minimal, maximal, average} and \emph{median} values.
+
+The \emph{computational load} never exceed more than $55.95\%$ in case of  \emph{emergency Head On} (eq. \ref{eq:computationFeasibilityCriterion}), which means that \emph{every path} was calculated on time.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r||r|r|r|r}
+    
+    \multirow{2}{*}{Scenario} & \multicolumn{4}{c}{Computation load} \\ \cline{2-5} 
+    & min. & max. & avg. & med. \\ \hline\hline
+    Building avoidance (fig. \ref{fig:buildingAvoidanceComputationTime})		
+                            &   2.20\% &  27.40\% &  12.11\%  & 13.20\% \\\hline
+    Slalom (fig. \ref{fig:slalomComputationTime})				    
+                            &  12.20\% &  30.50\% &  21.42\%  & 21.50\% \\\hline
+    Maze (fig. \ref{fig:mazeComputationTime})					
+                            &  24.90\% &  46.10\% &  31.51\%  & 30.80\% \\\hline
+    Storm (fig. \ref{fig:stormComputationTime})					
+                            &   2.60\% &  26.90\% &  11.57\%  & 13.90\% \\\hline\hline
+    
+    Emergency Converging (fig. \ref{fig:emergencyConvergingComputationTime})    
+                            &   2.75\% &  16.50\% &   5.84\%  &  4.95\% \\\hline
+    Emergency Head On (fig. \ref{fig:emergencyHeadOnComputationTime})	 	
+                            &	3.90\% &  55.95\% &  13.19\%  &  6.90\% \\\hline
+    Emergency Multiple (fig. \ref{fig:emergencyHeadOnMultipleComputationTime})	 	
+                            &	5.90\% &  52.35\% &  12.77\%  &  8.56\% \\\hline\hline
+    
+    Rule-based Converging (fig. \ref{fig:ruleBasedCConvergingComputationTime})	
+                            &   3.60\% &  13.50\% &   7.32\%  &  5.97\% \\\hline
+    Rule-based Head on (fig. \ref{fig:ruleBasedHeadOnComputationTime})		
+                            &   4.65\% &  41.60\% &  13.64\%  &  9.30\% \\\hline
+    Rule-based Multiple	(fig. \ref{fig:ruleBasedMultipleComputationTime})	
+                            &   4.37\% &  23.30\% &  11.96\%  & 10.93\% \\\hline
+    Rule-based Overtake	(fig. \ref{fig:ruleBasedOvertakeComputationTime})	
+                            &   3.85\% &  13.40\% &   7.62\%  &  6.70\% 
+    
+    \end{tabular}
+    \caption{\emph{Computation load statistics} for all test cases.}
+    \label{tab:computationLoadStatistics}
+\end{table}
+
+\noindent \emph{Following observations can be made:}
+
+\begin{enumerate}
+    \item \emph{Building avoidance}, \emph{Slalom}, and \emph{Maze} scenarios - the computation load is increasing with the \emph{amount of static obstacles}. The \emph{average load} for \emph{Emergency avoidance mode} in \emph{clustered environment} is $31.51\%$ (Maze).
+    
+    \item \emph{Storm scenario} - the overall \emph{computation load} is very low due the \emph{moving constraint implementation} (sec. \ref{eq:s:MovingVirtualConstraints}).
+    
+    \item\emph{Emergency Converging/Head On/Multiple} scenarios - the \emph{overall computation load} is quite high due the ineffective \emph{body volume intersection} (sec. \ref{s:bodyvolumeIntersection}) implementation.
+    
+    \item \emph{Rule-based Converging/Head On/Multiple} scenarios - the \emph{median computational} load is low, because of the linear \emph{rule implementation} (sec. \ref{sec:ruleImplementation})
+    
+    \item \emph{Rule-based Overtake} - the \emph{average computation load} is very low, because only \emph{divergence/convergence} (rule. \ref{tab:ruleOvertakeDefinition}) waypoints are calculated and UAS stays in \emph{navigation mode}.
+\end{enumerate}
