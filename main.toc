@@ -1,415 +1,427 @@
-\contentsline {chapter}{\numberline {1}(W) Introduction}{13}{chapter.1}
-\contentsline {section}{\numberline {1.1}(W) Related Work}{13}{section.1.1}
-\contentsline {section}{\numberline {1.2}(W) Goals}{13}{section.1.2}
-\contentsline {section}{\numberline {1.3}(W) Assumptions}{13}{section.1.3}
-\contentsline {section}{\numberline {1.4}(W) Overview}{14}{section.1.4}
-\contentsline {section}{\numberline {1.5}(W) Contributions}{14}{section.1.5}
-\contentsline {chapter}{\numberline {2}(W) Collision avoidance}{15}{chapter.2}
-\contentsline {section}{\numberline {2.1}(W) Airspace classification}{16}{section.2.1}
-\contentsline {section}{\numberline {2.2}(W) Aircraft operational rules}{16}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}(W) Visual Flight Rules (VFR)}{16}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}(W) Instrumental Flight Rules (IFR)}{16}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}(W) Remaining "Well Clear"}{17}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}(W) Air Traffic Control(ATC)}{17}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}(W) Traffic Collision Avoidance System (TCAS)}{18}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}(W) Airborne Collision Avoidance System X (ACAS-X)}{18}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}(W) UAS Traffic Management (UTM)}{18}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}(W) U-Space (EU)}{18}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}(W) NASA UTM (US)}{18}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}(W) Event Based Avoidance}{18}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}(W) Mid-Air Collision Prevention}{19}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}(W) Weather Impact}{19}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}(W) UTM Functional Decomposition}{20}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}(W) Information Exchange Principles}{20}{subsection.2.6.1}
-\contentsline {subsubsection}{ Collision Case}{20}{section*.9}
-\contentsline {subsubsection}{ Weather Case}{20}{section*.10}
-\contentsline {subsection}{\numberline {2.6.2}(W) Resolution Advisories}{21}{subsection.2.6.2}
-\contentsline {subsubsection}{Movement Restriction}{21}{section*.11}
-\contentsline {subsubsection}{Convergence/Divergence}{21}{section*.12}
-\contentsline {chapter}{\numberline {3}(W) Background Theory}{22}{chapter.3}
-\contentsline {section}{\numberline {3.1}(W) UAS Motion Model}{22}{section.3.1}
-\contentsline {section}{\numberline {3.2}Reach Sets}{22}{section.3.2}
-\contentsline {paragraph}{For following definitions}{22}{section*.13}
-\contentsline {paragraph}{Reach set starting at given set}{22}{section*.14}
-\contentsline {paragraph}{Reach set for adversarial behavior}{23}{section*.15}
-\contentsline {paragraph}{Reach set under constraints}{23}{section*.16}
-\contentsline {subsection}{\numberline {3.2.1}Computation of Reach Sets}{23}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}(W) Space Segmentation}{24}{section.3.3}
-\contentsline {section}{\numberline {3.4}(R/W) Movement Automaton}{24}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Hybrid Automaton}{25}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Building Blocks}{25}{subsection.3.4.2}
-\contentsline {paragraph}{Example: }{25}{section*.17}
-\contentsline {paragraph}{Trajectory from Movement Primitives:}{26}{section*.18}
-\contentsline {paragraph}{Trajectory with Transitions:}{26}{section*.19}
-\contentsline {paragraph}{Movement Mapping Example:}{26}{section*.20}
-\contentsline {paragraph}{Minimal Movement Time:}{27}{section*.21}
-\contentsline {paragraph}{Movement Chaining:}{27}{section*.22}
-\contentsline {paragraph}{State Projection:}{28}{section*.23}
-\contentsline {subsection}{\numberline {3.4.3}(W) Definition and Properties}{28}{subsection.3.4.3}
-\contentsline {chapter}{\numberline {4}(R) Problem Statement}{30}{chapter.4}
-\contentsline {section}{\numberline {4.1}Basic Definitions}{30}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}World}{30}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Mission}{31}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Flight constraints}{31}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Partition of Space}{32}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Information source}{32}{subsection.4.1.5}
-\contentsline {subsection}{\numberline {4.1.6}Single Observation by single sensor classification}{32}{subsection.4.1.6}
-\contentsline {subsection}{\numberline {4.1.7}Multiple observations by single sensor classification}{33}{subsection.4.1.7}
-\contentsline {subsection}{\numberline {4.1.8}Sensor fusion}{33}{subsection.4.1.8}
-\contentsline {subsection}{\numberline {4.1.9}Data fusion}{34}{subsection.4.1.9}
-\contentsline {subsection}{\numberline {4.1.10}Known world}{34}{subsection.4.1.10}
-\contentsline {subsection}{\numberline {4.1.11}Safety margin}{35}{subsection.4.1.11}
-\contentsline {section}{\numberline {4.2}Basic obstacle avoidance problem}{35}{section.4.2}
-\contentsline {section}{\numberline {4.3}Initial assumptions}{35}{section.4.3}
-\contentsline {section}{\numberline {4.4}Avoidance requirements}{36}{section.4.4}
-\contentsline {paragraph}{SAA systems}{36}{section*.24}
-\contentsline {subsection}{\numberline {4.4.1}Energy efficiency}{36}{subsection.4.4.1}
-\contentsline {paragraph}{Energy efficiency}{36}{section*.25}
-\contentsline {paragraph}{Cost of flown trajectory}{37}{section*.26}
-\contentsline {paragraph}{Expected reach cost}{37}{section*.27}
-\contentsline {subsection}{\numberline {4.4.2}Trajectory tracking}{37}{subsection.4.4.2}
-\contentsline {paragraph}{Trajectory Tracking}{37}{section*.28}
-\contentsline {paragraph}{Motivation:}{38}{section*.29}
-\contentsline {paragraph}{Movement Automaton trajectory tracking:}{38}{section*.30}
-\contentsline {paragraph}{Reference Trajectory Deviation}{39}{section*.31}
-\contentsline {paragraph}{Trajectory tracking}{39}{section*.32}
-\contentsline {paragraph}{Feasible Trajectory}{39}{section*.33}
-\contentsline {subsection}{\numberline {4.4.3}Safety}{40}{subsection.4.4.3}
-\contentsline {subsubsection}{Controlled airspace safety}{40}{section*.34}
-\contentsline {subsubsection}{Uncontrolled airspace safety}{40}{section*.35}
-\contentsline {section}{\numberline {4.5}(W) Navigation requirements}{42}{section.4.5}
-\contentsline {section}{\numberline {4.6}(W) Incremental problem definition}{43}{section.4.6}
-\contentsline {chapter}{\numberline {5}(R) State of art}{47}{chapter.5}
-\contentsline {paragraph}{Conceptual scheme:}{47}{section*.36}
-\contentsline {section}{\numberline {5.1}(R) Movement Automaton}{48}{section.5.1}
-\contentsline {paragraph}{Idea:}{48}{section*.38}
-\contentsline {paragraph}{Architecture:}{48}{section*.39}
-\contentsline {paragraph}{Optimal Path Generation:}{48}{section*.40}
-\contentsline {paragraph}{Controllability:}{49}{section*.41}
-\contentsline {paragraph}{Other Properties:}{49}{section*.42}
-\contentsline {paragraph}{Example:}{49}{section*.43}
-\contentsline {paragraph}{Used concepts:}{49}{section*.45}
-\contentsline {section}{\numberline {5.2}(R) Sensor (Data) Fusion - Input Interface}{49}{section.5.2}
-\contentsline {paragraph}{Idea:}{49}{section*.46}
-\contentsline {paragraph}{Key Concept:}{50}{section*.47}
-\contentsline {paragraph}{Related work:}{50}{section*.48}
-\contentsline {paragraph}{Shortcomings:}{50}{section*.49}
-\contentsline {paragraph}{Improvements in Our Work:}{51}{section*.50}
-\contentsline {section}{\numberline {5.3}(R) Navigation Algorithms}{51}{section.5.3}
-\contentsline {paragraph}{Idea:}{51}{section*.51}
-\contentsline {paragraph}{Standard Navigation:}{51}{section*.52}
-\contentsline {paragraph}{Maze Solving Capabilities:}{51}{section*.53}
-\contentsline {paragraph}{Hybrid Automaton Path Planning:}{51}{section*.54}
-\contentsline {paragraph}{Mode Switch:}{51}{section*.55}
-\contentsline {paragraph}{Used concepts:}{51}{section*.56}
-\contentsline {section}{\numberline {5.4}(R) Reach Set Estimation}{52}{section.5.4}
-\contentsline {paragraph}{Idea:}{52}{section*.57}
-\contentsline {paragraph}{Example:}{52}{section*.58}
-\contentsline {paragraph}{Benefits:}{52}{section*.60}
-\contentsline {paragraph}{Shortcomings:}{52}{section*.61}
-\contentsline {paragraph}{Improvements in Our Work:}{53}{section*.62}
-\contentsline {section}{\numberline {5.5}(R) Testing Framework}{53}{section.5.5}
-\contentsline {paragraph}{Idea:}{53}{section*.63}
-\contentsline {paragraph}{LSTS Toolchain:}{53}{section*.64}
-\contentsline {paragraph}{Movement Automaton Control}{55}{section*.66}
-\contentsline {paragraph}{Used concepts:}{55}{section*.67}
-\contentsline {section}{\numberline {5.6}(R) UTM Services}{55}{section.5.6}
-\contentsline {paragraph}{Idea:}{55}{section*.68}
-\contentsline {paragraph}{UTM Operation Modes:}{55}{section*.69}
-\contentsline {paragraph}{Used Concepts:}{56}{section*.71}
-\contentsline {chapter}{\numberline {6}(W) Approach}{57}{chapter.6}
-\contentsline {section}{\numberline {6.1}(W) Overview}{57}{section.6.1}
-\contentsline {section}{\numberline {6.2}(W) Space Discretization - Avoidance Grid}{57}{section.6.2}
-\contentsline {section}{\numberline {6.3}(W) UAS Model and Control}{58}{section.6.3}
-\contentsline {section}{\numberline {6.4}(W) Static Obstacles and Constraints}{58}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}(W) Detected obstacles}{59}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}(W) Map obstacles}{59}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}(W) Virtual constraints}{59}{subsection.6.4.3}
-\contentsline {section}{\numberline {6.5}(W) Moving obstacles and intruders}{60}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}(W) Intruder behaviour prediction}{60}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}(W) Linear intersection model}{60}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}(W) Body-volume intersection}{60}{subsection.6.5.3}
-\contentsline {subsection}{\numberline {6.5.4}(W) Maneuverability uncertainty intersection}{60}{subsection.6.5.4}
-\contentsline {section}{\numberline {6.6}(R) Reach Set Approximation}{61}{section.6.6}
-\contentsline {paragraph}{Motivation:}{61}{section*.79}
-\contentsline {paragraph}{Proposed Solution Features:}{61}{section*.80}
-\contentsline {paragraph}{Discretization of Reach set:}{62}{section*.81}
-\contentsline {paragraph}{The Complete Reach Set}{62}{section*.82}
-\contentsline {paragraph}{The Reach Set Approximation by Movement Automaton}{62}{section*.83}
-\contentsline {paragraph}{Approximated Reach Set Containment:}{62}{section*.84}
-\contentsline {paragraph}{Properties:}{63}{section*.85}
-\contentsline {paragraph}{Passing cell:}{63}{section*.86}
-\contentsline {paragraph}{Reach Set Pruning:}{63}{section*.87}
-\contentsline {paragraph}{Reach Set Trajectory Tree:}{63}{section*.88}
-\contentsline {subsection}{\numberline {6.6.1}(R) Reach Set Performance Criteria}{64}{subsection.6.6.1}
-\contentsline {paragraph}{Motivation:}{64}{section*.89}
-\contentsline {paragraph}{Core Performance Criteria:}{64}{section*.90}
-\contentsline {paragraph}{Trajectory footprint:}{64}{section*.91}
-\contentsline {paragraph}{Coverage set:}{65}{section*.92}
-\contentsline {paragraph}{Coverage set properties:}{65}{section*.93}
-\contentsline {paragraph}{Trajectory smoothness:}{65}{section*.94}
-\contentsline {subsection}{\numberline {6.6.2}(R) Constrained Trajectory Expansion}{66}{subsection.6.6.2}
-\contentsline {paragraph}{Motivation:}{66}{section*.95}
-\contentsline {paragraph}{Rapid Exploration Tree}{66}{section*.96}
-\contentsline {paragraph}{The example}{67}{section*.98}
-\contentsline {paragraph}{Rapid Exploration Tree Node}{67}{section*.99}
-\contentsline {paragraph}{Wave-front propagation of Rapid Exploration Tree}{67}{section*.100}
-\contentsline {paragraph}{Step: Initialization}{68}{section*.101}
-\contentsline {paragraph}{Step: Wave-front Propagation}{68}{section*.102}
-\contentsline {paragraph}{Step: After Layer Propagation Purge}{68}{section*.103}
-\contentsline {subsection}{\numberline {6.6.3}(W) Avoidance Grid scaling}{69}{subsection.6.6.3}
-\contentsline {subsection}{\numberline {6.6.4}(R) Chaotic Reach set}{69}{subsection.6.6.4}
-\contentsline {paragraph}{Motivation:}{69}{section*.104}
-\contentsline {paragraph}{Background:}{69}{section*.105}
-\contentsline {paragraph}{Expansion Constraint Function Implementation}{70}{section*.106}
-\contentsline {paragraph}{Tuning Parameters}{70}{section*.107}
-\contentsline {paragraph}{Step: Initialization}{70}{section*.108}
-\contentsline {paragraph}{Step: Evaluate best trajectories with unique Footprints}{70}{section*.109}
-\contentsline {paragraph}{Step: Select candidates}{70}{section*.110}
-\contentsline {paragraph}{Example:}{71}{section*.111}
-\contentsline {paragraph}{Pros and Cons:}{72}{section*.113}
-\contentsline {subsection}{\numberline {6.6.5}(R) Harmonic Reach set}{72}{subsection.6.6.5}
-\contentsline {paragraph}{Motivation:}{72}{section*.114}
-\contentsline {paragraph}{Background:}{72}{section*.115}
-\contentsline {paragraph}{Expansion Constraint Function Implementation}{73}{section*.116}
-\contentsline {paragraph}{Tuning Parameter:}{73}{section*.117}
-\contentsline {paragraph}{Step: Initialization}{73}{section*.118}
-\contentsline {paragraph}{Step: Evaluate smoothest trajectories with unique Footprints}{73}{section*.119}
-\contentsline {paragraph}{Step: Select candidates}{74}{section*.120}
-\contentsline {paragraph}{Example:}{74}{section*.121}
-\contentsline {paragraph}{Pros and Cons:}{75}{section*.123}
-\contentsline {subsection}{\numberline {6.6.6}(R) Combined Reach set}{75}{subsection.6.6.6}
-\contentsline {paragraph}{Motivation:}{75}{section*.124}
-\contentsline {paragraph}{Background:}{76}{section*.125}
-\contentsline {paragraph}{Combined Reach Set Calculation Function}{76}{section*.126}
-\contentsline {paragraph}{Merge Tree Function}{77}{section*.127}
-\contentsline {paragraph}{Example:}{77}{section*.128}
-\contentsline {paragraph}{Pros and Cons:}{78}{section*.130}
-\contentsline {subsection}{\numberline {6.6.7}(R) ACAS-X like Reach set}{78}{subsection.6.6.7}
-\contentsline {paragraph}{Motivation:}{78}{section*.131}
-\contentsline {paragraph}{Background:}{78}{section*.132}
-\contentsline {paragraph}{Expansion Constraint Function Implementation}{79}{section*.133}
-\contentsline {paragraph}{Step: Initialization}{79}{section*.134}
-\contentsline {paragraph}{Step: Candidate Selection Process}{80}{section*.135}
-\contentsline {paragraph}{Example:}{80}{section*.136}
-\contentsline {paragraph}{Pros and Cons:}{81}{section*.138}
-\contentsline {section}{\numberline {6.7}(W) Avoidance concept}{81}{section.6.7}
-\contentsline {subsection}{\numberline {6.7.1}(W) Overview}{81}{subsection.6.7.1}
-\contentsline {subsection}{\numberline {6.7.2}(W) UAS model and control}{82}{subsection.6.7.2}
-\contentsline {subsubsection}{Used model}{82}{section*.139}
-\contentsline {subsubsection}{Movement automaton predictor}{82}{section*.140}
-\contentsline {subsection}{\numberline {6.7.3}(W) Avoidance grid run}{82}{subsection.6.7.3}
-\contentsline {subsection}{\numberline {6.7.4}(W) Mission control run}{83}{subsection.6.7.4}
-\contentsline {subsection}{\numberline {6.7.5}(W) Safety margin calculation}{84}{subsection.6.7.5}
-\contentsline {section}{\numberline {6.8}(W) UAS Traffic Management}{85}{section.6.8}
-\contentsline {subsection}{\numberline {6.8.1}(R) Architecture}{85}{subsection.6.8.1}
-\contentsline {paragraph}{UTM concept}{85}{section*.144}
-\contentsline {paragraph}{Decision frame}{85}{section*.145}
-\contentsline {paragraph}{Event based airspace control}{86}{section*.146}
-\contentsline {paragraph}{Architecture:}{86}{section*.148}
-\contentsline {subsection}{\numberline {6.8.2}(R) Cooperative Conflict Resolution}{86}{subsection.6.8.2}
-\contentsline {paragraph}{Idea:}{86}{section*.149}
-\contentsline {paragraph}{Goal:}{86}{section*.150}
-\contentsline {paragraph}{Cooperative conflict resolution}{87}{section*.152}
-\contentsline {subsection}{\numberline {6.8.3}(R) Non-Cooperative Conflict Resolution}{87}{subsection.6.8.3}
-\contentsline {paragraph}{Idea:}{87}{section*.153}
-\contentsline {paragraph}{Goal:}{88}{section*.154}
-\contentsline {paragraph}{Conflict resolution:}{88}{section*.155}
-\contentsline {paragraph}{Special cases in manned aviation:}{88}{section*.156}
-\contentsline {paragraph}{Response mode scenario example:}{89}{section*.158}
-\contentsline {subsection}{\numberline {6.8.4}(W) Handling Head on Approach}{89}{subsection.6.8.4}
-\contentsline {subsection}{\numberline {6.8.5}(W) Handling Converging Maneuver}{90}{subsection.6.8.5}
-\contentsline {subsection}{\numberline {6.8.6}(W) Handling Overtake Maneuver}{90}{subsection.6.8.6}
-\contentsline {subsection}{\numberline {6.8.7}(W) Position Notification}{91}{subsection.6.8.7}
-\contentsline {subsection}{\numberline {6.8.8}(R) Collision Case}{92}{subsection.6.8.8}
-\contentsline {paragraph}{Collision Case Purpose:}{92}{section*.162}
-\contentsline {paragraph}{Resolution/Mandate Enforcement:}{92}{section*.163}
-\contentsline {paragraph}{Threat Severity Evaluation:}{92}{section*.164}
-\contentsline {paragraph}{Calculation procedure:}{92}{section*.165}
-\contentsline {paragraph}{1\textsuperscript {st}}{92}{section*.166}
-\contentsline {paragraph}{2\textsuperscript {nd}}{93}{section*.167}
-\contentsline {paragraph}{3\textsuperscript {rd}}{93}{section*.168}
-\contentsline {paragraph}{4\textsuperscript {th}}{93}{section*.169}
-\contentsline {paragraph}{5\textsuperscript {th}}{94}{section*.170}
-\contentsline {paragraph}{6\textsuperscript {th}}{95}{section*.171}
-\contentsline {paragraph}{7\textsuperscript {th}}{95}{section*.172}
-\contentsline {paragraph}{Collision Case Chaining}{96}{section*.173}
-\contentsline {paragraph}{Collision Cases Merge}{96}{section*.174}
-\contentsline {subsection}{\numberline {6.8.9}(W) Weather Case}{98}{subsection.6.8.9}
-\contentsline {section}{\numberline {6.9}(W) Rule Engine}{99}{section.6.9}
-\contentsline {subsection}{\numberline {6.9.1}(W) Architecture}{99}{subsection.6.9.1}
-\contentsline {subsection}{\numberline {6.9.2}(W/R) Rule Implementation}{100}{subsection.6.9.2}
-\contentsline {subsubsection}{Rule: Detect Collision Cases}{100}{section*.177}
-\contentsline {subsubsection}{Rule: Resolve Collision Case}{102}{section*.178}
-\contentsline {subsubsection}{Rule: Close Collision Cases}{103}{section*.179}
-\contentsline {subsubsection}{Rule: Head on Approach}{104}{section*.180}
-\contentsline {subsubsection}{Rule: Converging Maneuver}{105}{section*.181}
-\contentsline {subsubsection}{Rule: Overtake}{106}{section*.182}
-\contentsline {subsubsection}{Rule: Right plane heading}{108}{section*.183}
-\contentsline {subsubsection}{Rule: Enforce safety margin}{109}{section*.185}
-\contentsline {chapter}{\numberline {7}Simulations}{112}{chapter.7}
-\contentsline {section}{\numberline {7.1}Test Plan}{112}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Testing approach}{112}{subsection.7.1.1}
-\contentsline {paragraph}{Operational Environment}{113}{section*.187}
-\contentsline {paragraph}{Air Traffic Attendants:}{113}{section*.188}
-\contentsline {paragraph}{Weather}{114}{section*.189}
-\contentsline {paragraph}{UTM:}{114}{section*.190}
-\contentsline {paragraph}{Navigation:}{114}{section*.191}
-\contentsline {subsection}{\numberline {7.1.2}Test Cases Summary}{115}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}(W) Performance Evaluation}{115}{subsection.7.1.3}
-\contentsline {paragraph}{Evaluation method:}{115}{section*.193}
-\contentsline {paragraph}{Safety Margin Performance Evaluation:}{115}{section*.194}
-\contentsline {paragraph}{Distance to Safety Margin:}{116}{section*.195}
-\contentsline {paragraph}{Breach Indicator:}{116}{section*.196}
-\contentsline {paragraph}{Trajectory Tracking Evaluation:}{116}{section*.197}
-\contentsline {section}{\numberline {7.2}Testing configuration}{117}{section.7.2}
-\contentsline {section}{\numberline {7.3}Non-cooperative test cases}{118}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Building avoidance}{119}{subsection.7.3.1}
-\contentsline {paragraph}{Scenario:}{119}{section*.203}
-\contentsline {paragraph}{Obstacle set:}{119}{section*.205}
-\contentsline {paragraph}{Main Goal:}{119}{section*.207}
-\contentsline {paragraph}{Acceptance criteria:}{120}{section*.208}
-\contentsline {paragraph}{Testing Setup:}{120}{section*.209}
-\contentsline {paragraph}{Simulation Run:}{120}{section*.210}
-\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{121}{section*.212}
-\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{122}{section*.214}
-\contentsline {paragraph}{Path Tracking Performance:}{122}{section*.216}
-\contentsline {paragraph}{Path Tracking Deviations:}{122}{section*.218}
-\contentsline {subsection}{\numberline {7.3.2}Slalom}{123}{subsection.7.3.2}
-\contentsline {paragraph}{Scenario:}{123}{section*.220}
-\contentsline {paragraph}{Obstacle set:}{123}{section*.222}
-\contentsline {paragraph}{Main goal:}{123}{section*.224}
-\contentsline {paragraph}{Acceptance Criteria}{123}{section*.225}
-\contentsline {paragraph}{Testing setup:}{123}{section*.226}
-\contentsline {paragraph}{Simulation run:}{124}{section*.227}
-\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{124}{section*.229}
-\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{125}{section*.231}
-\contentsline {paragraph}{Path tracking performance:}{125}{section*.233}
-\contentsline {paragraph}{Path Tracking Deviations:}{126}{section*.235}
-\contentsline {subsection}{\numberline {7.3.3}Maze}{126}{subsection.7.3.3}
-\contentsline {paragraph}{Scenario:}{126}{section*.237}
-\contentsline {paragraph}{Obstacle set:}{126}{section*.239}
-\contentsline {paragraph}{Main Goal:}{127}{section*.241}
-\contentsline {paragraph}{Acceptance Criteria:}{127}{section*.242}
-\contentsline {paragraph}{Testing Setup:}{127}{section*.243}
-\contentsline {paragraph}{Simulation Run:}{128}{section*.244}
-\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{128}{section*.246}
-\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{129}{section*.248}
-\contentsline {paragraph}{Path Tracking Performance:}{129}{section*.250}
-\contentsline {paragraph}{Path Tracking Deviations:}{130}{section*.252}
-\contentsline {subsection}{\numberline {7.3.4}Storm}{130}{subsection.7.3.4}
-\contentsline {paragraph}{Scenario:}{130}{section*.254}
-\contentsline {paragraph}{Constraints:}{131}{section*.256}
-\contentsline {paragraph}{Assumption:}{131}{section*.258}
-\contentsline {paragraph}{Main Goal:}{131}{section*.259}
-\contentsline {paragraph}{Acceptance criteria:}{131}{section*.260}
-\contentsline {paragraph}{Testing setup:}{131}{section*.261}
-\contentsline {paragraph}{Simulation run:}{131}{section*.262}
-\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{132}{section*.264}
-\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{132}{section*.266}
-\contentsline {paragraph}{Path Tracking Performance:}{133}{section*.268}
-\contentsline {paragraph}{Path Tracking Deviations:}{133}{section*.270}
-\contentsline {subsection}{\numberline {7.3.5}Emergency Converging}{134}{subsection.7.3.5}
-\contentsline {paragraph}{Scenario:}{134}{section*.272}
-\contentsline {paragraph}{Main Goal:}{134}{section*.274}
-\contentsline {paragraph}{Acceptance criteria:}{134}{section*.275}
-\contentsline {paragraph}{Testing setup:}{134}{section*.276}
-\contentsline {paragraph}{Simulation Run:}{135}{section*.278}
-\contentsline {paragraph}{Distance to Safety Margin Evolution:}{136}{section*.280}
-\contentsline {paragraph}{Distance to Safety Margin Peaks:}{137}{section*.282}
-\contentsline {paragraph}{Path Tracking Performance:}{137}{section*.284}
-\contentsline {paragraph}{Path Following Deviations:}{138}{section*.286}
-\contentsline {subsection}{\numberline {7.3.6}Emergency Head on}{138}{subsection.7.3.6}
-\contentsline {paragraph}{Scenario:}{138}{section*.288}
-\contentsline {paragraph}{Main Goal:}{138}{section*.290}
-\contentsline {paragraph}{Acceptance criteria:}{139}{section*.291}
-\contentsline {paragraph}{Testing setup:}{139}{section*.292}
-\contentsline {paragraph}{Simulation Run:}{139}{section*.294}
-\contentsline {paragraph}{Distance to Safety Margin Evolution:}{141}{section*.296}
-\contentsline {paragraph}{Distance to Safety Margin Peaks:}{142}{section*.298}
-\contentsline {paragraph}{Path Tracking Performance}{142}{section*.300}
-\contentsline {paragraph}{Path Following Deviations:}{143}{section*.302}
-\contentsline {subsection}{\numberline {7.3.7}Emergency Mixed Head on with Converging}{143}{subsection.7.3.7}
-\contentsline {paragraph}{Scenario:}{143}{section*.304}
-\contentsline {paragraph}{Main Goal:}{143}{section*.306}
-\contentsline {paragraph}{Acceptance criteria:}{144}{section*.307}
-\contentsline {paragraph}{Testing setup:}{144}{section*.308}
-\contentsline {paragraph}{Simulation Run:}{144}{section*.310}
-\contentsline {paragraph}{Distance to Safety Margin Evolution:}{145}{section*.312}
-\contentsline {paragraph}{Distance to Safety Margin Peaks:}{146}{section*.314}
-\contentsline {paragraph}{Path Tracking Performance:}{146}{section*.316}
-\contentsline {paragraph}{Path Tracking Deviations:}{147}{section*.318}
-\contentsline {section}{\numberline {7.4}Cooperative test cases}{148}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Rule based Converging}{148}{subsection.7.4.1}
-\contentsline {paragraph}{Scenario:}{148}{section*.320}
-\contentsline {paragraph}{Assumptions:}{149}{section*.322}
-\contentsline {paragraph}{Main Goal:}{149}{section*.323}
-\contentsline {paragraph}{Acceptance Criteria:}{149}{section*.324}
-\contentsline {paragraph}{Testing Setup:}{149}{section*.325}
-\contentsline {paragraph}{Simulation Run:}{150}{section*.326}
-\contentsline {paragraph}{Collision Case Calculation:}{151}{section*.328}
-\contentsline {paragraph}{Distance to Safety Margin Evolution:}{152}{section*.330}
-\contentsline {paragraph}{Distance to Safety Margin Peaks:}{152}{section*.332}
-\contentsline {paragraph}{Path Tracking Performance:}{152}{section*.334}
-\contentsline {paragraph}{Path Tracking Deviations:}{153}{section*.336}
-\contentsline {subsection}{\numberline {7.4.2}Rule based Head on}{153}{subsection.7.4.2}
-\contentsline {paragraph}{Scenario:}{153}{section*.338}
-\contentsline {paragraph}{Assumptions:}{154}{section*.340}
-\contentsline {paragraph}{Main Goal:}{154}{section*.341}
-\contentsline {paragraph}{Acceptance Criteria:}{154}{section*.342}
-\contentsline {paragraph}{Testing Setup:}{154}{section*.343}
-\contentsline {paragraph}{Simulation Run:}{155}{section*.344}
-\contentsline {paragraph}{Collision Case Calculation: }{156}{section*.346}
-\contentsline {paragraph}{Distance to Safety Margin Evolution:}{157}{section*.348}
-\contentsline {paragraph}{Distance to Safety Margin Peaks:}{157}{section*.350}
-\contentsline {paragraph}{Path Tracking Performance:}{158}{section*.352}
-\contentsline {paragraph}{Path Tracking Deviations:}{158}{section*.354}
-\contentsline {subsection}{\numberline {7.4.3}Rule based Mixed Head on with Converging}{158}{subsection.7.4.3}
-\contentsline {paragraph}{Scenario:}{158}{section*.356}
-\contentsline {paragraph}{Assumptions:}{159}{section*.358}
-\contentsline {paragraph}{Main Goal:}{159}{section*.359}
-\contentsline {paragraph}{Acceptance Criteria:}{160}{section*.360}
-\contentsline {paragraph}{Testing Setup:}{160}{section*.361}
-\contentsline {paragraph}{Simulation Run:}{160}{section*.362}
-\contentsline {paragraph}{Collision Cases Calculation:}{161}{section*.364}
-\contentsline {paragraph}{Distance to Safety Margin Evolution:}{162}{section*.366}
-\contentsline {paragraph}{Distance to Safety Margin Peaks:}{163}{section*.368}
-\contentsline {paragraph}{Path Tracking Performance:}{163}{section*.370}
-\contentsline {paragraph}{Path Tracking Deviations:}{164}{section*.372}
-\contentsline {subsection}{\numberline {7.4.4}Rule based Overtake}{164}{subsection.7.4.4}
-\contentsline {paragraph}{Scenario:}{164}{section*.374}
-\contentsline {paragraph}{Assumptions:}{165}{section*.376}
-\contentsline {paragraph}{Main Goal:}{165}{section*.377}
-\contentsline {paragraph}{Acceptance Criteria:}{165}{section*.378}
+\contentsline {chapter}{\numberline {1}(W) Introduction}{14}{chapter.1}
+\contentsline {section}{\numberline {1.1}(W) Related Work}{14}{section.1.1}
+\contentsline {section}{\numberline {1.2}(W) Goals}{14}{section.1.2}
+\contentsline {section}{\numberline {1.3}(W) Assumptions}{14}{section.1.3}
+\contentsline {section}{\numberline {1.4}(W) Overview}{15}{section.1.4}
+\contentsline {section}{\numberline {1.5}(W) Contributions}{15}{section.1.5}
+\contentsline {chapter}{\numberline {2}(W) Collision avoidance}{16}{chapter.2}
+\contentsline {section}{\numberline {2.1}(W) Airspace classification}{17}{section.2.1}
+\contentsline {section}{\numberline {2.2}(W) Aircraft operational rules}{17}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}(W) Visual Flight Rules (VFR)}{17}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}(W) Instrumental Flight Rules (IFR)}{17}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}(W) Remaining "Well Clear"}{18}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}(W) Air Traffic Control(ATC)}{18}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}(W) Traffic Collision Avoidance System (TCAS)}{19}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}(W) Airborne Collision Avoidance System X (ACAS-X)}{19}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}(W) UAS Traffic Management (UTM)}{19}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}(W) U-Space (EU)}{19}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}(W) NASA UTM (US)}{19}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}(W) Event Based Avoidance}{19}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}(W) Mid-Air Collision Prevention}{20}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}(W) Weather Impact}{20}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}(W) UTM Functional Decomposition}{21}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}(W) Information Exchange Principles}{21}{subsection.2.6.1}
+\contentsline {subsubsection}{ Collision Case}{21}{section*.9}
+\contentsline {subsubsection}{ Weather Case}{21}{section*.10}
+\contentsline {subsection}{\numberline {2.6.2}(W) Resolution Advisories}{22}{subsection.2.6.2}
+\contentsline {subsubsection}{Movement Restriction}{22}{section*.11}
+\contentsline {subsubsection}{Convergence/Divergence}{22}{section*.12}
+\contentsline {chapter}{\numberline {3}(W) Background Theory}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}(W) UAS Motion Model}{23}{section.3.1}
+\contentsline {section}{\numberline {3.2}Reach Sets}{23}{section.3.2}
+\contentsline {paragraph}{For following definitions}{23}{section*.13}
+\contentsline {paragraph}{Reach set starting at given set}{23}{section*.14}
+\contentsline {paragraph}{Reach set for adversarial behavior}{24}{section*.15}
+\contentsline {paragraph}{Reach set under constraints}{24}{section*.16}
+\contentsline {subsection}{\numberline {3.2.1}Computation of Reach Sets}{24}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}(W) Space Segmentation}{25}{section.3.3}
+\contentsline {section}{\numberline {3.4}(R/W) Movement Automaton}{25}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Hybrid Automaton}{26}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Building Blocks}{26}{subsection.3.4.2}
+\contentsline {paragraph}{Example: }{26}{section*.17}
+\contentsline {paragraph}{Trajectory from Movement Primitives:}{27}{section*.18}
+\contentsline {paragraph}{Trajectory with Transitions:}{27}{section*.19}
+\contentsline {paragraph}{Movement Mapping Example:}{27}{section*.20}
+\contentsline {paragraph}{Minimal Movement Time:}{28}{section*.21}
+\contentsline {paragraph}{Movement Chaining:}{28}{section*.22}
+\contentsline {paragraph}{State Projection:}{29}{section*.23}
+\contentsline {subsection}{\numberline {3.4.3}(W) Definition and Properties}{29}{subsection.3.4.3}
+\contentsline {chapter}{\numberline {4}(R) Problem Statement}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Basic Definitions}{31}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}World}{31}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Mission}{32}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Flight constraints}{32}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Partition of Space}{33}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Information source}{33}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.6}Single Observation by single sensor classification}{33}{subsection.4.1.6}
+\contentsline {subsection}{\numberline {4.1.7}Multiple observations by single sensor classification}{34}{subsection.4.1.7}
+\contentsline {subsection}{\numberline {4.1.8}Sensor fusion}{34}{subsection.4.1.8}
+\contentsline {subsection}{\numberline {4.1.9}Data fusion}{35}{subsection.4.1.9}
+\contentsline {subsection}{\numberline {4.1.10}Known world}{35}{subsection.4.1.10}
+\contentsline {subsection}{\numberline {4.1.11}Safety margin}{36}{subsection.4.1.11}
+\contentsline {section}{\numberline {4.2}Basic obstacle avoidance problem}{36}{section.4.2}
+\contentsline {section}{\numberline {4.3}Initial assumptions}{36}{section.4.3}
+\contentsline {section}{\numberline {4.4}Avoidance requirements}{37}{section.4.4}
+\contentsline {paragraph}{SAA systems}{37}{section*.24}
+\contentsline {subsection}{\numberline {4.4.1}Energy efficiency}{37}{subsection.4.4.1}
+\contentsline {paragraph}{Energy efficiency}{37}{section*.25}
+\contentsline {paragraph}{Cost of flown trajectory}{38}{section*.26}
+\contentsline {paragraph}{Expected reach cost}{38}{section*.27}
+\contentsline {subsection}{\numberline {4.4.2}Trajectory tracking}{38}{subsection.4.4.2}
+\contentsline {paragraph}{Trajectory Tracking}{38}{section*.28}
+\contentsline {paragraph}{Motivation:}{39}{section*.29}
+\contentsline {paragraph}{Movement Automaton trajectory tracking:}{39}{section*.30}
+\contentsline {paragraph}{Reference Trajectory Deviation}{40}{section*.31}
+\contentsline {paragraph}{Trajectory tracking}{40}{section*.32}
+\contentsline {paragraph}{Feasible Trajectory}{40}{section*.33}
+\contentsline {subsection}{\numberline {4.4.3}Safety}{41}{subsection.4.4.3}
+\contentsline {subsubsection}{Controlled airspace safety}{41}{section*.34}
+\contentsline {subsubsection}{Uncontrolled airspace safety}{41}{section*.35}
+\contentsline {section}{\numberline {4.5}(W) Navigation requirements}{43}{section.4.5}
+\contentsline {section}{\numberline {4.6}(W) Incremental problem definition}{44}{section.4.6}
+\contentsline {chapter}{\numberline {5}(R) State of art}{48}{chapter.5}
+\contentsline {paragraph}{Conceptual scheme:}{48}{section*.36}
+\contentsline {section}{\numberline {5.1}(R) Movement Automaton}{49}{section.5.1}
+\contentsline {paragraph}{Idea:}{49}{section*.38}
+\contentsline {paragraph}{Architecture:}{49}{section*.39}
+\contentsline {paragraph}{Optimal Path Generation:}{49}{section*.40}
+\contentsline {paragraph}{Controllability:}{50}{section*.41}
+\contentsline {paragraph}{Other Properties:}{50}{section*.42}
+\contentsline {paragraph}{Example:}{50}{section*.43}
+\contentsline {paragraph}{Used concepts:}{50}{section*.45}
+\contentsline {section}{\numberline {5.2}(R) Sensor (Data) Fusion - Input Interface}{50}{section.5.2}
+\contentsline {paragraph}{Idea:}{50}{section*.46}
+\contentsline {paragraph}{Key Concept:}{51}{section*.47}
+\contentsline {paragraph}{Related work:}{51}{section*.48}
+\contentsline {paragraph}{Shortcomings:}{51}{section*.49}
+\contentsline {paragraph}{Improvements in Our Work:}{52}{section*.50}
+\contentsline {section}{\numberline {5.3}(R) Navigation Algorithms}{52}{section.5.3}
+\contentsline {paragraph}{Idea:}{52}{section*.51}
+\contentsline {paragraph}{Standard Navigation:}{52}{section*.52}
+\contentsline {paragraph}{Maze Solving Capabilities:}{52}{section*.53}
+\contentsline {paragraph}{Hybrid Automaton Path Planning:}{52}{section*.54}
+\contentsline {paragraph}{Mode Switch:}{52}{section*.55}
+\contentsline {paragraph}{Used concepts:}{52}{section*.56}
+\contentsline {section}{\numberline {5.4}(R) Reach Set Estimation}{53}{section.5.4}
+\contentsline {paragraph}{Idea:}{53}{section*.57}
+\contentsline {paragraph}{Example:}{53}{section*.58}
+\contentsline {paragraph}{Benefits:}{53}{section*.60}
+\contentsline {paragraph}{Shortcomings:}{53}{section*.61}
+\contentsline {paragraph}{Improvements in Our Work:}{54}{section*.62}
+\contentsline {section}{\numberline {5.5}(R) Testing Framework}{54}{section.5.5}
+\contentsline {paragraph}{Idea:}{54}{section*.63}
+\contentsline {paragraph}{LSTS Toolchain:}{54}{section*.64}
+\contentsline {paragraph}{Movement Automaton Control}{56}{section*.66}
+\contentsline {paragraph}{Used concepts:}{56}{section*.67}
+\contentsline {section}{\numberline {5.6}(R) UTM Services}{56}{section.5.6}
+\contentsline {paragraph}{Idea:}{56}{section*.68}
+\contentsline {paragraph}{UTM Operation Modes:}{56}{section*.69}
+\contentsline {paragraph}{Used Concepts:}{57}{section*.71}
+\contentsline {chapter}{\numberline {6}(W) Approach}{58}{chapter.6}
+\contentsline {section}{\numberline {6.1}(W) Overview}{58}{section.6.1}
+\contentsline {section}{\numberline {6.2}(W) Space Discretization - Avoidance Grid}{58}{section.6.2}
+\contentsline {section}{\numberline {6.3}(W) UAS Model and Control}{59}{section.6.3}
+\contentsline {section}{\numberline {6.4}(W) Static Obstacles and Constraints}{59}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}(W) Detected obstacles}{60}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}(W) Map obstacles}{60}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}(W) Static constraints}{60}{subsection.6.4.3}
+\contentsline {section}{\numberline {6.5}(W) Moving obstacles, intruders, and constraints}{61}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}(W) Intruder behaviour prediction}{61}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}(W) Linear intersection model}{61}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}(W) Body-volume intersection}{61}{subsection.6.5.3}
+\contentsline {subsection}{\numberline {6.5.4}(W) Maneuverability uncertainty intersection}{61}{subsection.6.5.4}
+\contentsline {subsection}{\numberline {6.5.5}(W) Moving Constraints}{62}{subsection.6.5.5}
+\contentsline {section}{\numberline {6.6}(R) Reach Set Approximation}{62}{section.6.6}
+\contentsline {paragraph}{Motivation:}{62}{section*.79}
+\contentsline {paragraph}{Proposed Solution Features:}{63}{section*.80}
+\contentsline {paragraph}{Discretization of Reach set:}{63}{section*.81}
+\contentsline {paragraph}{The Complete Reach Set}{63}{section*.82}
+\contentsline {paragraph}{The Reach Set Approximation by Movement Automaton}{63}{section*.83}
+\contentsline {paragraph}{Approximated Reach Set Containment:}{63}{section*.84}
+\contentsline {paragraph}{Properties:}{64}{section*.85}
+\contentsline {paragraph}{Passing cell:}{64}{section*.86}
+\contentsline {paragraph}{Reach Set Pruning:}{64}{section*.87}
+\contentsline {paragraph}{Reach Set Trajectory Tree:}{64}{section*.88}
+\contentsline {subsection}{\numberline {6.6.1}(R) Reach Set Performance Criteria}{65}{subsection.6.6.1}
+\contentsline {paragraph}{Motivation:}{65}{section*.89}
+\contentsline {paragraph}{Core Performance Criteria:}{65}{section*.90}
+\contentsline {paragraph}{Trajectory footprint:}{65}{section*.91}
+\contentsline {paragraph}{Coverage set:}{66}{section*.92}
+\contentsline {paragraph}{Coverage set properties:}{66}{section*.93}
+\contentsline {paragraph}{Trajectory smoothness:}{66}{section*.94}
+\contentsline {subsection}{\numberline {6.6.2}(R) Constrained Trajectory Expansion}{67}{subsection.6.6.2}
+\contentsline {paragraph}{Motivation:}{67}{section*.95}
+\contentsline {paragraph}{Rapid Exploration Tree}{67}{section*.96}
+\contentsline {paragraph}{The example}{68}{section*.98}
+\contentsline {paragraph}{Rapid Exploration Tree Node}{68}{section*.99}
+\contentsline {paragraph}{Wave-front propagation of Rapid Exploration Tree}{68}{section*.100}
+\contentsline {paragraph}{Step: Initialization}{69}{section*.101}
+\contentsline {paragraph}{Step: Wave-front Propagation}{69}{section*.102}
+\contentsline {paragraph}{Step: After Layer Propagation Purge}{69}{section*.103}
+\contentsline {subsection}{\numberline {6.6.3}(W) Avoidance Grid scaling}{70}{subsection.6.6.3}
+\contentsline {subsection}{\numberline {6.6.4}(R) Chaotic Reach set}{70}{subsection.6.6.4}
+\contentsline {paragraph}{Motivation:}{70}{section*.104}
+\contentsline {paragraph}{Background:}{70}{section*.105}
+\contentsline {paragraph}{Expansion Constraint Function Implementation}{71}{section*.106}
+\contentsline {paragraph}{Tuning Parameters}{71}{section*.107}
+\contentsline {paragraph}{Step: Initialization}{71}{section*.108}
+\contentsline {paragraph}{Step: Evaluate best trajectories with unique Footprints}{71}{section*.109}
+\contentsline {paragraph}{Step: Select candidates}{71}{section*.110}
+\contentsline {paragraph}{Example:}{72}{section*.111}
+\contentsline {paragraph}{Pros and Cons:}{73}{section*.113}
+\contentsline {subsection}{\numberline {6.6.5}(R) Harmonic Reach set}{73}{subsection.6.6.5}
+\contentsline {paragraph}{Motivation:}{73}{section*.114}
+\contentsline {paragraph}{Background:}{73}{section*.115}
+\contentsline {paragraph}{Expansion Constraint Function Implementation}{74}{section*.116}
+\contentsline {paragraph}{Tuning Parameter:}{74}{section*.117}
+\contentsline {paragraph}{Step: Initialization}{74}{section*.118}
+\contentsline {paragraph}{Step: Evaluate smoothest trajectories with unique Footprints}{74}{section*.119}
+\contentsline {paragraph}{Step: Select candidates}{75}{section*.120}
+\contentsline {paragraph}{Example:}{75}{section*.121}
+\contentsline {paragraph}{Pros and Cons:}{76}{section*.123}
+\contentsline {subsection}{\numberline {6.6.6}(R) Combined Reach set}{76}{subsection.6.6.6}
+\contentsline {paragraph}{Motivation:}{76}{section*.124}
+\contentsline {paragraph}{Background:}{77}{section*.125}
+\contentsline {paragraph}{Combined Reach Set Calculation Function}{77}{section*.126}
+\contentsline {paragraph}{Merge Tree Function}{78}{section*.127}
+\contentsline {paragraph}{Example:}{78}{section*.128}
+\contentsline {paragraph}{Pros and Cons:}{79}{section*.130}
+\contentsline {subsection}{\numberline {6.6.7}(R) ACAS-X like Reach set}{79}{subsection.6.6.7}
+\contentsline {paragraph}{Motivation:}{79}{section*.131}
+\contentsline {paragraph}{Background:}{79}{section*.132}
+\contentsline {paragraph}{Expansion Constraint Function Implementation}{80}{section*.133}
+\contentsline {paragraph}{Step: Initialization}{80}{section*.134}
+\contentsline {paragraph}{Step: Candidate Selection Process}{81}{section*.135}
+\contentsline {paragraph}{Example:}{81}{section*.136}
+\contentsline {paragraph}{Pros and Cons:}{82}{section*.138}
+\contentsline {section}{\numberline {6.7}(W) Avoidance concept}{82}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}(W) Overview}{82}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}(W) UAS model and control}{83}{subsection.6.7.2}
+\contentsline {subsubsection}{Used model}{83}{section*.139}
+\contentsline {subsubsection}{Movement automaton predictor}{83}{section*.140}
+\contentsline {subsection}{\numberline {6.7.3}(W) Avoidance grid run}{83}{subsection.6.7.3}
+\contentsline {subsection}{\numberline {6.7.4}(W) Mission control run}{84}{subsection.6.7.4}
+\contentsline {subsection}{\numberline {6.7.5}(W) Safety margin calculation}{85}{subsection.6.7.5}
+\contentsline {section}{\numberline {6.8}(W) UAS Traffic Management}{86}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}(R) Architecture}{86}{subsection.6.8.1}
+\contentsline {paragraph}{UTM concept}{86}{section*.144}
+\contentsline {paragraph}{Decision frame}{86}{section*.145}
+\contentsline {paragraph}{Event based airspace control}{87}{section*.146}
+\contentsline {paragraph}{Architecture:}{87}{section*.148}
+\contentsline {subsection}{\numberline {6.8.2}(R) Cooperative Conflict Resolution}{87}{subsection.6.8.2}
+\contentsline {paragraph}{Idea:}{87}{section*.149}
+\contentsline {paragraph}{Goal:}{87}{section*.150}
+\contentsline {paragraph}{Cooperative conflict resolution}{88}{section*.152}
+\contentsline {subsection}{\numberline {6.8.3}(R) Non-Cooperative Conflict Resolution}{88}{subsection.6.8.3}
+\contentsline {paragraph}{Idea:}{88}{section*.153}
+\contentsline {paragraph}{Goal:}{89}{section*.154}
+\contentsline {paragraph}{Conflict resolution:}{89}{section*.155}
+\contentsline {paragraph}{Special cases in manned aviation:}{89}{section*.156}
+\contentsline {paragraph}{Response mode scenario example:}{90}{section*.158}
+\contentsline {subsection}{\numberline {6.8.4}(W) Handling Head on Approach}{90}{subsection.6.8.4}
+\contentsline {subsection}{\numberline {6.8.5}(W) Handling Converging Maneuver}{91}{subsection.6.8.5}
+\contentsline {subsection}{\numberline {6.8.6}(W) Handling Overtake Maneuver}{91}{subsection.6.8.6}
+\contentsline {subsection}{\numberline {6.8.7}(W) Position Notification}{92}{subsection.6.8.7}
+\contentsline {subsection}{\numberline {6.8.8}(R) Collision Case}{93}{subsection.6.8.8}
+\contentsline {paragraph}{Collision Case Purpose:}{93}{section*.162}
+\contentsline {paragraph}{Resolution/Mandate Enforcement:}{93}{section*.163}
+\contentsline {paragraph}{Threat Severity Evaluation:}{93}{section*.164}
+\contentsline {paragraph}{Calculation procedure:}{93}{section*.165}
+\contentsline {paragraph}{1\textsuperscript {st}}{93}{section*.166}
+\contentsline {paragraph}{2\textsuperscript {nd}}{94}{section*.167}
+\contentsline {paragraph}{3\textsuperscript {rd}}{94}{section*.168}
+\contentsline {paragraph}{4\textsuperscript {th}}{94}{section*.169}
+\contentsline {paragraph}{5\textsuperscript {th}}{95}{section*.170}
+\contentsline {paragraph}{6\textsuperscript {th}}{96}{section*.171}
+\contentsline {paragraph}{7\textsuperscript {th}}{96}{section*.172}
+\contentsline {paragraph}{Collision Case Chaining}{97}{section*.173}
+\contentsline {paragraph}{Collision Cases Merge}{97}{section*.174}
+\contentsline {subsection}{\numberline {6.8.9}(W) Weather Case}{99}{subsection.6.8.9}
+\contentsline {section}{\numberline {6.9}(W) Rule Engine}{100}{section.6.9}
+\contentsline {subsection}{\numberline {6.9.1}(W) Architecture}{100}{subsection.6.9.1}
+\contentsline {subsection}{\numberline {6.9.2}(W/R) Rule Implementation}{101}{subsection.6.9.2}
+\contentsline {subsubsection}{Rule: Detect Collision Cases}{101}{section*.177}
+\contentsline {subsubsection}{Rule: Resolve Collision Case}{103}{section*.178}
+\contentsline {subsubsection}{Rule: Close Collision Cases}{104}{section*.179}
+\contentsline {subsubsection}{Rule: Head on Approach}{105}{section*.180}
+\contentsline {subsubsection}{Rule: Converging Maneuver}{106}{section*.181}
+\contentsline {subsubsection}{Rule: Overtake}{107}{section*.182}
+\contentsline {subsubsection}{Rule: Right plane heading}{109}{section*.183}
+\contentsline {subsubsection}{Rule: Enforce safety margin}{110}{section*.185}
+\contentsline {chapter}{\numberline {7}Simulations}{113}{chapter.7}
+\contentsline {section}{\numberline {7.1}Test Plan}{113}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Testing approach}{113}{subsection.7.1.1}
+\contentsline {paragraph}{Operational Environment}{114}{section*.187}
+\contentsline {paragraph}{Air Traffic Attendants:}{114}{section*.188}
+\contentsline {paragraph}{Weather}{115}{section*.189}
+\contentsline {paragraph}{UTM:}{115}{section*.190}
+\contentsline {paragraph}{Navigation:}{115}{section*.191}
+\contentsline {subsection}{\numberline {7.1.2}Test Cases Summary}{116}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}(R) Performance Evaluation}{116}{subsection.7.1.3}
+\contentsline {paragraph}{Evaluation method:}{116}{section*.193}
+\contentsline {paragraph}{Safety Margin Performance Evaluation:}{116}{section*.194}
+\contentsline {paragraph}{Distance to Safety Margin}{117}{section*.195}
+\contentsline {paragraph}{Trajectory Tracking Evaluation}{117}{section*.196}
+\contentsline {paragraph}{Computation Load:}{118}{section*.197}
+\contentsline {section}{\numberline {7.2}Testing configuration}{118}{section.7.2}
+\contentsline {section}{\numberline {7.3}Non-cooperative test cases}{120}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Building avoidance}{120}{subsection.7.3.1}
+\contentsline {paragraph}{Scenario:}{120}{section*.203}
+\contentsline {paragraph}{Obstacle set:}{121}{section*.205}
+\contentsline {paragraph}{Main Goal:}{121}{section*.207}
+\contentsline {paragraph}{Acceptance criteria:}{121}{section*.208}
+\contentsline {paragraph}{Testing Setup:}{121}{section*.209}
+\contentsline {paragraph}{Simulation Run:}{122}{section*.210}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{122}{section*.212}
+\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{123}{section*.214}
+\contentsline {paragraph}{Path Tracking Performance:}{123}{section*.216}
+\contentsline {paragraph}{Path Tracking Deviations:}{124}{section*.218}
+\contentsline {paragraph}{Computation Load:}{124}{section*.220}
+\contentsline {subsection}{\numberline {7.3.2}Slalom}{124}{subsection.7.3.2}
+\contentsline {paragraph}{Scenario:}{124}{section*.222}
+\contentsline {paragraph}{Obstacle set:}{125}{section*.224}
+\contentsline {paragraph}{Main goal:}{125}{section*.226}
+\contentsline {paragraph}{Acceptance Criteria}{125}{section*.227}
+\contentsline {paragraph}{Testing setup:}{125}{section*.228}
+\contentsline {paragraph}{Simulation run:}{125}{section*.229}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{126}{section*.231}
+\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{127}{section*.233}
+\contentsline {paragraph}{Path tracking performance:}{127}{section*.235}
+\contentsline {paragraph}{Path Tracking Deviations:}{128}{section*.237}
+\contentsline {paragraph}{Computation Load:}{128}{section*.239}
+\contentsline {subsection}{\numberline {7.3.3}Maze}{129}{subsection.7.3.3}
+\contentsline {paragraph}{Scenario:}{129}{section*.241}
+\contentsline {paragraph}{Obstacle set:}{129}{section*.243}
+\contentsline {paragraph}{Main Goal:}{130}{section*.245}
+\contentsline {paragraph}{Acceptance Criteria:}{130}{section*.246}
+\contentsline {paragraph}{Testing Setup:}{130}{section*.247}
+\contentsline {paragraph}{Simulation Run:}{130}{section*.248}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{131}{section*.250}
+\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{132}{section*.252}
+\contentsline {paragraph}{Path Tracking Performance:}{132}{section*.254}
+\contentsline {paragraph}{Path Tracking Deviations:}{133}{section*.256}
+\contentsline {paragraph}{Computation Load:}{133}{section*.258}
+\contentsline {subsection}{\numberline {7.3.4}Storm}{133}{subsection.7.3.4}
+\contentsline {paragraph}{Scenario:}{133}{section*.260}
+\contentsline {paragraph}{Constraints:}{134}{section*.262}
+\contentsline {paragraph}{Assumption:}{134}{section*.264}
+\contentsline {paragraph}{Main Goal:}{134}{section*.265}
+\contentsline {paragraph}{Acceptance criteria:}{134}{section*.266}
+\contentsline {paragraph}{Testing setup:}{134}{section*.267}
+\contentsline {paragraph}{Simulation run:}{135}{section*.268}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{135}{section*.270}
+\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{136}{section*.272}
+\contentsline {paragraph}{Path Tracking Performance:}{136}{section*.274}
+\contentsline {paragraph}{Path Tracking Deviations:}{137}{section*.276}
+\contentsline {paragraph}{Computation Load:}{137}{section*.278}
+\contentsline {subsection}{\numberline {7.3.5}Emergency Converging}{137}{subsection.7.3.5}
+\contentsline {paragraph}{Scenario:}{137}{section*.280}
+\contentsline {paragraph}{Main Goal:}{138}{section*.282}
+\contentsline {paragraph}{Acceptance criteria:}{138}{section*.283}
+\contentsline {paragraph}{Testing setup:}{138}{section*.284}
+\contentsline {paragraph}{Simulation Run:}{139}{section*.286}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{140}{section*.288}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{141}{section*.290}
+\contentsline {paragraph}{Path Tracking Performance:}{141}{section*.292}
+\contentsline {paragraph}{Path Following Deviations:}{142}{section*.294}
+\contentsline {paragraph}{Computation Load:}{142}{section*.296}
+\contentsline {subsection}{\numberline {7.3.6}Emergency Head on}{143}{subsection.7.3.6}
+\contentsline {paragraph}{Scenario:}{143}{section*.298}
+\contentsline {paragraph}{Main Goal:}{143}{section*.300}
+\contentsline {paragraph}{Acceptance criteria:}{143}{section*.301}
+\contentsline {paragraph}{Testing setup:}{144}{section*.302}
+\contentsline {paragraph}{Simulation Run:}{144}{section*.304}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{145}{section*.306}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{146}{section*.308}
+\contentsline {paragraph}{Path Tracking Performance}{146}{section*.310}
+\contentsline {paragraph}{Path Following Deviations:}{147}{section*.312}
+\contentsline {paragraph}{Computation Load:}{147}{section*.314}
+\contentsline {subsection}{\numberline {7.3.7}Emergency Mixed Head on with Converging}{148}{subsection.7.3.7}
+\contentsline {paragraph}{Scenario:}{148}{section*.316}
+\contentsline {paragraph}{Main Goal:}{148}{section*.318}
+\contentsline {paragraph}{Acceptance criteria:}{148}{section*.319}
+\contentsline {paragraph}{Testing setup:}{149}{section*.320}
+\contentsline {paragraph}{Simulation Run:}{149}{section*.322}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{150}{section*.324}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{151}{section*.326}
+\contentsline {paragraph}{Path Tracking Performance:}{151}{section*.328}
+\contentsline {paragraph}{Path Tracking Deviations:}{152}{section*.330}
+\contentsline {paragraph}{Computation Load:}{153}{section*.332}
+\contentsline {section}{\numberline {7.4}Cooperative test cases}{153}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Rule based Converging}{153}{subsection.7.4.1}
+\contentsline {paragraph}{Scenario:}{153}{section*.334}
+\contentsline {paragraph}{Assumptions:}{154}{section*.336}
+\contentsline {paragraph}{Main Goal:}{154}{section*.337}
+\contentsline {paragraph}{Acceptance Criteria:}{155}{section*.338}
+\contentsline {paragraph}{Testing Setup:}{155}{section*.339}
+\contentsline {paragraph}{Simulation Run:}{155}{section*.340}
+\contentsline {paragraph}{Collision Case Calculation:}{156}{section*.342}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{157}{section*.344}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{157}{section*.346}
+\contentsline {paragraph}{Path Tracking Performance:}{157}{section*.348}
+\contentsline {paragraph}{Path Tracking Deviations:}{158}{section*.350}
+\contentsline {paragraph}{Computation Load:}{158}{section*.352}
+\contentsline {subsection}{\numberline {7.4.2}Rule based Head on}{159}{subsection.7.4.2}
+\contentsline {paragraph}{Scenario:}{159}{section*.354}
+\contentsline {paragraph}{Assumptions:}{160}{section*.356}
+\contentsline {paragraph}{Main Goal:}{160}{section*.357}
+\contentsline {paragraph}{Acceptance Criteria:}{160}{section*.358}
+\contentsline {paragraph}{Testing Setup:}{160}{section*.359}
+\contentsline {paragraph}{Simulation Run:}{160}{section*.360}
+\contentsline {paragraph}{Collision Case Calculation: }{162}{section*.362}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{163}{section*.364}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{163}{section*.366}
+\contentsline {paragraph}{Path Tracking Performance:}{164}{section*.368}
+\contentsline {paragraph}{Path Tracking Deviations:}{164}{section*.370}
+\contentsline {paragraph}{Computation Load:}{164}{section*.372}
+\contentsline {subsection}{\numberline {7.4.3}Rule based Mixed Head on with Converging}{165}{subsection.7.4.3}
+\contentsline {paragraph}{Scenario:}{165}{section*.374}
+\contentsline {paragraph}{Assumptions:}{166}{section*.376}
+\contentsline {paragraph}{Main Goal:}{166}{section*.377}
+\contentsline {paragraph}{Acceptance Criteria:}{166}{section*.378}
 \contentsline {paragraph}{Testing Setup:}{166}{section*.379}
-\contentsline {paragraph}{Simulation Run:}{166}{section*.380}
-\contentsline {paragraph}{Collision Case Calculation:}{167}{section*.382}
-\contentsline {paragraph}{Overtake Speed: Divergence/Convergence Waypoints}{168}{section*.384}
-\contentsline {paragraph}{Overtake Speed: Impact on Trajectory}{168}{section*.386}
-\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Evolution}{169}{section*.388}
-\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Peaks}{169}{section*.390}
-\contentsline {paragraph}{Path Tracking Performance: 2x Speed}{170}{section*.392}
-\contentsline {paragraph}{Path Tracking Deviations: 2x Speed}{171}{section*.394}
-\contentsline {section}{\numberline {7.5}(R) Test Cases Conclusion}{171}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}(R) Performance Evaluation}{171}{subsection.7.5.1}
-\contentsline {paragraph}{Highlights:}{172}{section*.397}
-\contentsline {subsection}{\numberline {7.5.2}(R)Adversary Behaviour Impact}{173}{subsection.7.5.2}
-\contentsline {paragraph}{Simulation:}{173}{section*.398}
-\contentsline {paragraph}{Performance Parameters Evaluation:}{175}{section*.400}
-\contentsline {subsection}{\numberline {7.5.3}(W) Conclusion}{176}{subsection.7.5.3}
-\contentsline {section}{\numberline {7.6}Reduced Reach Sets Performance}{177}{section.7.6}
-\contentsline {paragraph}{Approach:}{177}{section*.402}
-\contentsline {paragraph}{Testing Avoidance Grid}{177}{section*.403}
-\contentsline {paragraph}{Chaotic Reach Set}{178}{section*.404}
-\contentsline {paragraph}{Harmonic Reach Set}{178}{section*.406}
-\contentsline {paragraph}{Combined Reach Set}{178}{section*.408}
-\contentsline {paragraph}{ACAS-like Reach Set}{178}{section*.409}
-\contentsline {paragraph}{Computation Methods Performance Comparison}{179}{section*.411}
-\contentsline {paragraph}{Node count:}{179}{section*.412}
-\contentsline {paragraph}{Trajectories count:}{180}{section*.413}
-\contentsline {paragraph}{Coverage ratio:}{180}{section*.415}
-\contentsline {chapter}{\numberline {8}(W) Conclusion and Future Work}{182}{chapter.8}
-\contentsline {section}{\numberline {8.1}(W) Simulation Highlights}{182}{section.8.1}
-\contentsline {section}{\numberline {8.2}(W) Other Methods Comparison}{182}{section.8.2}
-\contentsline {section}{\numberline {8.3}(W) Lessons learned}{182}{section.8.3}
-\contentsline {chapter}{Bibliography}{183}{chapter*.416}
+\contentsline {paragraph}{Simulation Run:}{167}{section*.380}
+\contentsline {paragraph}{Collision Cases Calculation:}{168}{section*.382}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{169}{section*.384}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{170}{section*.386}
+\contentsline {paragraph}{Path Tracking Performance:}{170}{section*.388}
+\contentsline {paragraph}{Path Tracking Deviations:}{171}{section*.390}
+\contentsline {paragraph}{Computation Load:}{171}{section*.392}
+\contentsline {subsection}{\numberline {7.4.4}Rule based Overtake}{172}{subsection.7.4.4}
+\contentsline {paragraph}{Scenario:}{172}{section*.394}
+\contentsline {paragraph}{Assumptions:}{173}{section*.396}
+\contentsline {paragraph}{Main Goal:}{173}{section*.397}
+\contentsline {paragraph}{Acceptance Criteria:}{173}{section*.398}
+\contentsline {paragraph}{Testing Setup:}{173}{section*.399}
+\contentsline {paragraph}{Simulation Run:}{173}{section*.400}
+\contentsline {paragraph}{Collision Case Calculation:}{175}{section*.402}
+\contentsline {paragraph}{Overtake Speed: Divergence/Convergence Waypoints}{176}{section*.404}
+\contentsline {paragraph}{Overtake Speed: Impact on Trajectory}{176}{section*.406}
+\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Evolution}{177}{section*.408}
+\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Peaks}{177}{section*.410}
+\contentsline {paragraph}{Path Tracking Performance: 2x Speed}{178}{section*.412}
+\contentsline {paragraph}{Path Tracking Deviations: 2x Speed}{179}{section*.414}
+\contentsline {paragraph}{Computation Load:}{179}{section*.416}
+\contentsline {section}{\numberline {7.5}(R) Test Cases Conclusion}{179}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}(R) Performance Evaluation}{180}{subsection.7.5.1}
+\contentsline {paragraph}{Highlights:}{180}{section*.419}
+\contentsline {subsection}{\numberline {7.5.2}(R)Adversary Behaviour Impact}{181}{subsection.7.5.2}
+\contentsline {paragraph}{Simulation:}{181}{section*.420}
+\contentsline {paragraph}{Performance Parameters Evaluation:}{183}{section*.422}
+\contentsline {subsection}{\numberline {7.5.3}(R) Computation Footprint}{184}{subsection.7.5.3}
+\contentsline {section}{\numberline {7.6}Reduced Reach Sets Performance}{185}{section.7.6}
+\contentsline {paragraph}{Approach:}{186}{section*.425}
+\contentsline {paragraph}{Testing Avoidance Grid}{186}{section*.426}
+\contentsline {paragraph}{Chaotic Reach Set}{186}{section*.427}
+\contentsline {paragraph}{Harmonic Reach Set}{187}{section*.429}
+\contentsline {paragraph}{Combined Reach Set}{187}{section*.431}
+\contentsline {paragraph}{ACAS-like Reach Set}{187}{section*.432}
+\contentsline {paragraph}{Computation Methods Performance Comparison}{188}{section*.434}
+\contentsline {paragraph}{Node count:}{188}{section*.435}
+\contentsline {paragraph}{Trajectories count:}{189}{section*.436}
+\contentsline {paragraph}{Coverage ratio:}{189}{section*.438}
+\contentsline {chapter}{\numberline {8}(W) Conclusion and Future Work}{191}{chapter.8}
+\contentsline {section}{\numberline {8.1}(W) Simulation Highlights}{191}{section.8.1}
+\contentsline {section}{\numberline {8.2}(W) Other Methods Comparison}{191}{section.8.2}
+\contentsline {section}{\numberline {8.3}(W) Lessons learned}{191}{section.8.3}
+\contentsline {chapter}{Bibliography}{192}{chapter*.439}
