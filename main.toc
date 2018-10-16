@@ -256,162 +256,160 @@
 \contentsline {paragraph}{UTM:}{114}{section*.190}
 \contentsline {paragraph}{Navigation:}{114}{section*.191}
 \contentsline {subsection}{\numberline {7.1.2}Test Cases Summary}{115}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}Performance Evaluation}{115}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.3}(W) Performance Evaluation}{115}{subsection.7.1.3}
 \contentsline {paragraph}{Evaluation method:}{115}{section*.193}
 \contentsline {paragraph}{Safety Margin Performance Evaluation:}{115}{section*.194}
-\contentsline {paragraph}{Minimal/Maximal distance to Safety Margin:}{116}{section*.195}
+\contentsline {paragraph}{Distance to Safety Margin:}{116}{section*.195}
 \contentsline {paragraph}{Breach Indicator:}{116}{section*.196}
 \contentsline {paragraph}{Trajectory Tracking Evaluation:}{116}{section*.197}
-\contentsline {paragraph}{Test Acceptance:}{117}{section*.198}
-\contentsline {paragraph}{Performance Conclusion:}{117}{section*.200}
 \contentsline {section}{\numberline {7.2}Testing configuration}{117}{section.7.2}
-\contentsline {section}{\numberline {7.3}Non-cooperative test cases}{119}{section.7.3}
+\contentsline {section}{\numberline {7.3}Non-cooperative test cases}{118}{section.7.3}
 \contentsline {subsection}{\numberline {7.3.1}Building avoidance}{119}{subsection.7.3.1}
-\contentsline {paragraph}{Scenario:}{119}{section*.206}
-\contentsline {paragraph}{Obstacle set:}{120}{section*.208}
-\contentsline {paragraph}{Main Goal:}{120}{section*.210}
-\contentsline {paragraph}{Acceptance criteria:}{120}{section*.211}
-\contentsline {paragraph}{Testing Setup:}{120}{section*.212}
-\contentsline {paragraph}{Simulation Run:}{121}{section*.213}
-\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{121}{section*.215}
-\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{122}{section*.217}
-\contentsline {paragraph}{Path Tracking Performance:}{122}{section*.219}
-\contentsline {paragraph}{Path Tracking Deviations:}{123}{section*.221}
+\contentsline {paragraph}{Scenario:}{119}{section*.203}
+\contentsline {paragraph}{Obstacle set:}{119}{section*.205}
+\contentsline {paragraph}{Main Goal:}{119}{section*.207}
+\contentsline {paragraph}{Acceptance criteria:}{120}{section*.208}
+\contentsline {paragraph}{Testing Setup:}{120}{section*.209}
+\contentsline {paragraph}{Simulation Run:}{120}{section*.210}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{121}{section*.212}
+\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{122}{section*.214}
+\contentsline {paragraph}{Path Tracking Performance:}{122}{section*.216}
+\contentsline {paragraph}{Path Tracking Deviations:}{122}{section*.218}
 \contentsline {subsection}{\numberline {7.3.2}Slalom}{123}{subsection.7.3.2}
-\contentsline {paragraph}{Scenario:}{123}{section*.223}
-\contentsline {paragraph}{Obstacle set:}{123}{section*.225}
-\contentsline {paragraph}{Main goal:}{124}{section*.227}
-\contentsline {paragraph}{Acceptance Criteria}{124}{section*.228}
-\contentsline {paragraph}{Testing setup:}{124}{section*.229}
-\contentsline {paragraph}{Simulation run:}{124}{section*.230}
-\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{125}{section*.232}
-\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{126}{section*.234}
-\contentsline {paragraph}{Path tracking performance:}{126}{section*.236}
-\contentsline {paragraph}{Path Tracking Deviations:}{126}{section*.238}
-\contentsline {subsection}{\numberline {7.3.3}Maze}{127}{subsection.7.3.3}
-\contentsline {paragraph}{Scenario:}{127}{section*.240}
-\contentsline {paragraph}{Obstacle set:}{127}{section*.242}
-\contentsline {paragraph}{Main Goal:}{128}{section*.244}
-\contentsline {paragraph}{Acceptance Criteria:}{128}{section*.245}
-\contentsline {paragraph}{Testing Setup:}{128}{section*.246}
-\contentsline {paragraph}{Simulation Run:}{128}{section*.247}
-\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{129}{section*.249}
-\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{130}{section*.251}
-\contentsline {paragraph}{Path Tracking Performance:}{130}{section*.253}
-\contentsline {paragraph}{Path Tracking Deviations:}{131}{section*.255}
-\contentsline {subsection}{\numberline {7.3.4}Storm}{131}{subsection.7.3.4}
-\contentsline {paragraph}{Scenario:}{131}{section*.257}
-\contentsline {paragraph}{Constraints:}{131}{section*.259}
-\contentsline {paragraph}{Assumption:}{132}{section*.261}
-\contentsline {paragraph}{Main Goal:}{132}{section*.262}
-\contentsline {paragraph}{Acceptance criteria:}{132}{section*.263}
-\contentsline {paragraph}{Testing setup:}{132}{section*.264}
-\contentsline {paragraph}{Simulation run:}{132}{section*.265}
-\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{133}{section*.267}
-\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{133}{section*.269}
-\contentsline {paragraph}{Path Tracking Performance:}{134}{section*.271}
-\contentsline {paragraph}{Path Tracking Deviations:}{134}{section*.273}
+\contentsline {paragraph}{Scenario:}{123}{section*.220}
+\contentsline {paragraph}{Obstacle set:}{123}{section*.222}
+\contentsline {paragraph}{Main goal:}{123}{section*.224}
+\contentsline {paragraph}{Acceptance Criteria}{123}{section*.225}
+\contentsline {paragraph}{Testing setup:}{123}{section*.226}
+\contentsline {paragraph}{Simulation run:}{124}{section*.227}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{124}{section*.229}
+\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{125}{section*.231}
+\contentsline {paragraph}{Path tracking performance:}{125}{section*.233}
+\contentsline {paragraph}{Path Tracking Deviations:}{126}{section*.235}
+\contentsline {subsection}{\numberline {7.3.3}Maze}{126}{subsection.7.3.3}
+\contentsline {paragraph}{Scenario:}{126}{section*.237}
+\contentsline {paragraph}{Obstacle set:}{126}{section*.239}
+\contentsline {paragraph}{Main Goal:}{127}{section*.241}
+\contentsline {paragraph}{Acceptance Criteria:}{127}{section*.242}
+\contentsline {paragraph}{Testing Setup:}{127}{section*.243}
+\contentsline {paragraph}{Simulation Run:}{128}{section*.244}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{128}{section*.246}
+\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{129}{section*.248}
+\contentsline {paragraph}{Path Tracking Performance:}{129}{section*.250}
+\contentsline {paragraph}{Path Tracking Deviations:}{130}{section*.252}
+\contentsline {subsection}{\numberline {7.3.4}Storm}{130}{subsection.7.3.4}
+\contentsline {paragraph}{Scenario:}{130}{section*.254}
+\contentsline {paragraph}{Constraints:}{131}{section*.256}
+\contentsline {paragraph}{Assumption:}{131}{section*.258}
+\contentsline {paragraph}{Main Goal:}{131}{section*.259}
+\contentsline {paragraph}{Acceptance criteria:}{131}{section*.260}
+\contentsline {paragraph}{Testing setup:}{131}{section*.261}
+\contentsline {paragraph}{Simulation run:}{131}{section*.262}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{132}{section*.264}
+\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{132}{section*.266}
+\contentsline {paragraph}{Path Tracking Performance:}{133}{section*.268}
+\contentsline {paragraph}{Path Tracking Deviations:}{133}{section*.270}
 \contentsline {subsection}{\numberline {7.3.5}Emergency Converging}{134}{subsection.7.3.5}
-\contentsline {paragraph}{Scenario:}{134}{section*.275}
-\contentsline {paragraph}{Main Goal:}{135}{section*.277}
-\contentsline {paragraph}{Acceptance criteria:}{135}{section*.278}
-\contentsline {paragraph}{Testing setup:}{135}{section*.279}
-\contentsline {paragraph}{Simulation Run:}{136}{section*.281}
-\contentsline {paragraph}{Distance to Safety Margin Evolution:}{137}{section*.283}
-\contentsline {paragraph}{Distance to Safety Margin Peaks:}{138}{section*.285}
-\contentsline {paragraph}{Path Tracking Performance:}{138}{section*.287}
-\contentsline {paragraph}{Path Following Deviations:}{139}{section*.289}
-\contentsline {subsection}{\numberline {7.3.6}Emergency Head on}{139}{subsection.7.3.6}
-\contentsline {paragraph}{Scenario:}{139}{section*.291}
-\contentsline {paragraph}{Main Goal:}{139}{section*.293}
-\contentsline {paragraph}{Acceptance criteria:}{140}{section*.294}
-\contentsline {paragraph}{Testing setup:}{140}{section*.295}
-\contentsline {paragraph}{Simulation Run:}{140}{section*.297}
-\contentsline {paragraph}{Distance to Safety Margin Evolution:}{142}{section*.299}
-\contentsline {paragraph}{Distance to Safety Margin Peaks:}{143}{section*.301}
-\contentsline {paragraph}{Path Tracking Performance}{143}{section*.303}
-\contentsline {paragraph}{Path Following Deviations:}{144}{section*.305}
-\contentsline {subsection}{\numberline {7.3.7}Emergency Mixed Head on with Converging}{144}{subsection.7.3.7}
-\contentsline {paragraph}{Scenario:}{144}{section*.307}
-\contentsline {paragraph}{Main Goal:}{144}{section*.309}
-\contentsline {paragraph}{Acceptance criteria:}{145}{section*.310}
-\contentsline {paragraph}{Testing setup:}{145}{section*.311}
-\contentsline {paragraph}{Simulation Run:}{145}{section*.313}
-\contentsline {paragraph}{Distance to Safety Margin Evolution:}{146}{section*.315}
-\contentsline {paragraph}{Distance to Safety Margin Peaks:}{147}{section*.317}
-\contentsline {paragraph}{Path Tracking Performance:}{147}{section*.319}
-\contentsline {paragraph}{Path Tracking Deviations:}{148}{section*.321}
-\contentsline {section}{\numberline {7.4}Cooperative test cases}{149}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Rule based Converging}{149}{subsection.7.4.1}
-\contentsline {paragraph}{Scenario:}{149}{section*.323}
-\contentsline {paragraph}{Assumptions:}{150}{section*.325}
-\contentsline {paragraph}{Main Goal:}{150}{section*.326}
-\contentsline {paragraph}{Acceptance Criteria:}{150}{section*.327}
-\contentsline {paragraph}{Testing Setup:}{150}{section*.328}
-\contentsline {paragraph}{Simulation Run:}{151}{section*.329}
-\contentsline {paragraph}{Collision Case Calculation:}{152}{section*.331}
-\contentsline {paragraph}{Distance to Safety Margin Evolution:}{153}{section*.333}
-\contentsline {paragraph}{Distance to Safety Margin Peaks:}{153}{section*.335}
-\contentsline {paragraph}{Path Tracking Performance:}{153}{section*.337}
-\contentsline {paragraph}{Path Tracking Deviations:}{154}{section*.339}
-\contentsline {subsection}{\numberline {7.4.2}Rule based Head on}{154}{subsection.7.4.2}
-\contentsline {paragraph}{Scenario:}{154}{section*.341}
-\contentsline {paragraph}{Assumptions:}{155}{section*.343}
-\contentsline {paragraph}{Main Goal:}{155}{section*.344}
-\contentsline {paragraph}{Acceptance Criteria:}{155}{section*.345}
-\contentsline {paragraph}{Testing Setup:}{155}{section*.346}
-\contentsline {paragraph}{Simulation Run:}{156}{section*.347}
-\contentsline {paragraph}{Collision Case Calculation: }{157}{section*.349}
-\contentsline {paragraph}{Distance to Safety Margin Evolution:}{158}{section*.351}
-\contentsline {paragraph}{Distance to Safety Margin Peaks:}{158}{section*.353}
-\contentsline {paragraph}{Path Tracking Performance:}{159}{section*.355}
-\contentsline {paragraph}{Path Tracking Deviations:}{159}{section*.357}
-\contentsline {subsection}{\numberline {7.4.3}Rule based Mixed Head on with Converging}{159}{subsection.7.4.3}
-\contentsline {paragraph}{Scenario:}{159}{section*.359}
-\contentsline {paragraph}{Assumptions:}{160}{section*.361}
-\contentsline {paragraph}{Main Goal:}{160}{section*.362}
-\contentsline {paragraph}{Acceptance Criteria:}{161}{section*.363}
-\contentsline {paragraph}{Testing Setup:}{161}{section*.364}
-\contentsline {paragraph}{Simulation Run:}{161}{section*.365}
-\contentsline {paragraph}{Collision Cases Calculation:}{162}{section*.367}
-\contentsline {paragraph}{Distance to Safety Margin Evolution:}{163}{section*.369}
-\contentsline {paragraph}{Distance to Safety Margin Peaks:}{164}{section*.371}
-\contentsline {paragraph}{Path Tracking Performance:}{164}{section*.373}
-\contentsline {paragraph}{Path Tracking Deviations:}{165}{section*.375}
-\contentsline {subsection}{\numberline {7.4.4}Rule based Overtake}{165}{subsection.7.4.4}
-\contentsline {paragraph}{Scenario:}{165}{section*.377}
-\contentsline {paragraph}{Assumptions:}{166}{section*.379}
-\contentsline {paragraph}{Main Goal:}{166}{section*.380}
-\contentsline {paragraph}{Acceptance Criteria:}{166}{section*.381}
-\contentsline {paragraph}{Testing Setup:}{167}{section*.382}
-\contentsline {paragraph}{Simulation Run:}{167}{section*.383}
-\contentsline {paragraph}{Collision Case Calculation:}{168}{section*.385}
-\contentsline {paragraph}{Overtake Speed: Divergence/Convergence Waypoints}{169}{section*.387}
-\contentsline {paragraph}{Overtake Speed: Impact on Trajectory}{169}{section*.389}
-\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Evolution}{170}{section*.391}
-\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Peaks}{170}{section*.393}
-\contentsline {paragraph}{Path Tracking Performance: 2x Speed}{171}{section*.395}
-\contentsline {paragraph}{Path Tracking Deviations: 2x Speed}{172}{section*.397}
-\contentsline {section}{\numberline {7.5}(R) Test Cases Conclusion}{172}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}(R) Performance Evaluation}{172}{subsection.7.5.1}
-\contentsline {paragraph}{Highlights:}{173}{section*.400}
-\contentsline {subsection}{\numberline {7.5.2}(R)Adversary Behaviour Impact}{174}{subsection.7.5.2}
-\contentsline {paragraph}{Simulation:}{174}{section*.401}
-\contentsline {paragraph}{Performance Parameters Evaluation:}{176}{section*.403}
-\contentsline {subsection}{\numberline {7.5.3}(W) Conclusion}{177}{subsection.7.5.3}
-\contentsline {section}{\numberline {7.6}Reduced Reach Sets Performance}{178}{section.7.6}
-\contentsline {paragraph}{Approach:}{178}{section*.405}
-\contentsline {paragraph}{Testing Avoidance Grid}{178}{section*.406}
-\contentsline {paragraph}{Chaotic Reach Set}{179}{section*.407}
-\contentsline {paragraph}{Harmonic Reach Set}{179}{section*.409}
-\contentsline {paragraph}{Combined Reach Set}{179}{section*.411}
-\contentsline {paragraph}{ACAS-like Reach Set}{179}{section*.412}
-\contentsline {paragraph}{Computation Methods Performance Comparison}{180}{section*.414}
-\contentsline {paragraph}{Node count:}{180}{section*.415}
-\contentsline {paragraph}{Trajectories count:}{181}{section*.416}
-\contentsline {paragraph}{Coverage ratio:}{181}{section*.418}
-\contentsline {chapter}{\numberline {8}(W) Conclusion and Future Work}{183}{chapter.8}
-\contentsline {section}{\numberline {8.1}(W) Simulation Highlights}{183}{section.8.1}
-\contentsline {section}{\numberline {8.2}(W) Other Methods Comparison}{183}{section.8.2}
-\contentsline {section}{\numberline {8.3}(W) Lessons learned}{183}{section.8.3}
-\contentsline {chapter}{Bibliography}{184}{chapter*.419}
+\contentsline {paragraph}{Scenario:}{134}{section*.272}
+\contentsline {paragraph}{Main Goal:}{134}{section*.274}
+\contentsline {paragraph}{Acceptance criteria:}{134}{section*.275}
+\contentsline {paragraph}{Testing setup:}{134}{section*.276}
+\contentsline {paragraph}{Simulation Run:}{135}{section*.278}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{136}{section*.280}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{137}{section*.282}
+\contentsline {paragraph}{Path Tracking Performance:}{137}{section*.284}
+\contentsline {paragraph}{Path Following Deviations:}{138}{section*.286}
+\contentsline {subsection}{\numberline {7.3.6}Emergency Head on}{138}{subsection.7.3.6}
+\contentsline {paragraph}{Scenario:}{138}{section*.288}
+\contentsline {paragraph}{Main Goal:}{138}{section*.290}
+\contentsline {paragraph}{Acceptance criteria:}{139}{section*.291}
+\contentsline {paragraph}{Testing setup:}{139}{section*.292}
+\contentsline {paragraph}{Simulation Run:}{139}{section*.294}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{141}{section*.296}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{142}{section*.298}
+\contentsline {paragraph}{Path Tracking Performance}{142}{section*.300}
+\contentsline {paragraph}{Path Following Deviations:}{143}{section*.302}
+\contentsline {subsection}{\numberline {7.3.7}Emergency Mixed Head on with Converging}{143}{subsection.7.3.7}
+\contentsline {paragraph}{Scenario:}{143}{section*.304}
+\contentsline {paragraph}{Main Goal:}{143}{section*.306}
+\contentsline {paragraph}{Acceptance criteria:}{144}{section*.307}
+\contentsline {paragraph}{Testing setup:}{144}{section*.308}
+\contentsline {paragraph}{Simulation Run:}{144}{section*.310}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{145}{section*.312}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{146}{section*.314}
+\contentsline {paragraph}{Path Tracking Performance:}{146}{section*.316}
+\contentsline {paragraph}{Path Tracking Deviations:}{147}{section*.318}
+\contentsline {section}{\numberline {7.4}Cooperative test cases}{148}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Rule based Converging}{148}{subsection.7.4.1}
+\contentsline {paragraph}{Scenario:}{148}{section*.320}
+\contentsline {paragraph}{Assumptions:}{149}{section*.322}
+\contentsline {paragraph}{Main Goal:}{149}{section*.323}
+\contentsline {paragraph}{Acceptance Criteria:}{149}{section*.324}
+\contentsline {paragraph}{Testing Setup:}{149}{section*.325}
+\contentsline {paragraph}{Simulation Run:}{150}{section*.326}
+\contentsline {paragraph}{Collision Case Calculation:}{151}{section*.328}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{152}{section*.330}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{152}{section*.332}
+\contentsline {paragraph}{Path Tracking Performance:}{152}{section*.334}
+\contentsline {paragraph}{Path Tracking Deviations:}{153}{section*.336}
+\contentsline {subsection}{\numberline {7.4.2}Rule based Head on}{153}{subsection.7.4.2}
+\contentsline {paragraph}{Scenario:}{153}{section*.338}
+\contentsline {paragraph}{Assumptions:}{154}{section*.340}
+\contentsline {paragraph}{Main Goal:}{154}{section*.341}
+\contentsline {paragraph}{Acceptance Criteria:}{154}{section*.342}
+\contentsline {paragraph}{Testing Setup:}{154}{section*.343}
+\contentsline {paragraph}{Simulation Run:}{155}{section*.344}
+\contentsline {paragraph}{Collision Case Calculation: }{156}{section*.346}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{157}{section*.348}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{157}{section*.350}
+\contentsline {paragraph}{Path Tracking Performance:}{158}{section*.352}
+\contentsline {paragraph}{Path Tracking Deviations:}{158}{section*.354}
+\contentsline {subsection}{\numberline {7.4.3}Rule based Mixed Head on with Converging}{158}{subsection.7.4.3}
+\contentsline {paragraph}{Scenario:}{158}{section*.356}
+\contentsline {paragraph}{Assumptions:}{159}{section*.358}
+\contentsline {paragraph}{Main Goal:}{159}{section*.359}
+\contentsline {paragraph}{Acceptance Criteria:}{160}{section*.360}
+\contentsline {paragraph}{Testing Setup:}{160}{section*.361}
+\contentsline {paragraph}{Simulation Run:}{160}{section*.362}
+\contentsline {paragraph}{Collision Cases Calculation:}{161}{section*.364}
+\contentsline {paragraph}{Distance to Safety Margin Evolution:}{162}{section*.366}
+\contentsline {paragraph}{Distance to Safety Margin Peaks:}{163}{section*.368}
+\contentsline {paragraph}{Path Tracking Performance:}{163}{section*.370}
+\contentsline {paragraph}{Path Tracking Deviations:}{164}{section*.372}
+\contentsline {subsection}{\numberline {7.4.4}Rule based Overtake}{164}{subsection.7.4.4}
+\contentsline {paragraph}{Scenario:}{164}{section*.374}
+\contentsline {paragraph}{Assumptions:}{165}{section*.376}
+\contentsline {paragraph}{Main Goal:}{165}{section*.377}
+\contentsline {paragraph}{Acceptance Criteria:}{165}{section*.378}
+\contentsline {paragraph}{Testing Setup:}{166}{section*.379}
+\contentsline {paragraph}{Simulation Run:}{166}{section*.380}
+\contentsline {paragraph}{Collision Case Calculation:}{167}{section*.382}
+\contentsline {paragraph}{Overtake Speed: Divergence/Convergence Waypoints}{168}{section*.384}
+\contentsline {paragraph}{Overtake Speed: Impact on Trajectory}{168}{section*.386}
+\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Evolution}{169}{section*.388}
+\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Peaks}{169}{section*.390}
+\contentsline {paragraph}{Path Tracking Performance: 2x Speed}{170}{section*.392}
+\contentsline {paragraph}{Path Tracking Deviations: 2x Speed}{171}{section*.394}
+\contentsline {section}{\numberline {7.5}(R) Test Cases Conclusion}{171}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}(R) Performance Evaluation}{171}{subsection.7.5.1}
+\contentsline {paragraph}{Highlights:}{172}{section*.397}
+\contentsline {subsection}{\numberline {7.5.2}(R)Adversary Behaviour Impact}{173}{subsection.7.5.2}
+\contentsline {paragraph}{Simulation:}{173}{section*.398}
+\contentsline {paragraph}{Performance Parameters Evaluation:}{175}{section*.400}
+\contentsline {subsection}{\numberline {7.5.3}(W) Conclusion}{176}{subsection.7.5.3}
+\contentsline {section}{\numberline {7.6}Reduced Reach Sets Performance}{177}{section.7.6}
+\contentsline {paragraph}{Approach:}{177}{section*.402}
+\contentsline {paragraph}{Testing Avoidance Grid}{177}{section*.403}
+\contentsline {paragraph}{Chaotic Reach Set}{178}{section*.404}
+\contentsline {paragraph}{Harmonic Reach Set}{178}{section*.406}
+\contentsline {paragraph}{Combined Reach Set}{178}{section*.408}
+\contentsline {paragraph}{ACAS-like Reach Set}{178}{section*.409}
+\contentsline {paragraph}{Computation Methods Performance Comparison}{179}{section*.411}
+\contentsline {paragraph}{Node count:}{179}{section*.412}
+\contentsline {paragraph}{Trajectories count:}{180}{section*.413}
+\contentsline {paragraph}{Coverage ratio:}{180}{section*.415}
+\contentsline {chapter}{\numberline {8}(W) Conclusion and Future Work}{182}{chapter.8}
+\contentsline {section}{\numberline {8.1}(W) Simulation Highlights}{182}{section.8.1}
+\contentsline {section}{\numberline {8.2}(W) Other Methods Comparison}{182}{section.8.2}
+\contentsline {section}{\numberline {8.3}(W) Lessons learned}{182}{section.8.3}
+\contentsline {chapter}{Bibliography}{183}{chapter*.416}
