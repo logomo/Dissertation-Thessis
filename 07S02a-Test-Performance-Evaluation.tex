@@ -1,4 +1,4 @@
-\subsection{(W) Performance Evaluation}\label{s:performanceEvaluation}
+\subsection{(R) Performance Evaluation}\label{s:performanceEvaluation}
 \paragraph{Evaluation method:} \emph{Test cases} were evaluated according to performance requirements defined in (sec. \ref{s:AvoidanceRequirements}). The method was tracking critical parameter for \emph{Safety} (sec . \ref{s:Safety}) (primary) and \emph{Trajectory Tracking} (sec. \ref{s:trajectoryTracking}) (secondary) including \emph{Energy Efficiency} (sec. \ref{s:EnergyEfficiency}).
 
 \paragraph{Safety Margin Performance Evaluation:} The \emph{safety of UAS} is main concern of \emph{DAA system}. The common concept of \emph{safety margin} is evaluated. 
@@ -24,35 +24,50 @@ The \emph{distance to safety margin} (eq. \ref{eq:distanceToSafetyMargin}) is ca
     distanceToSafetyMargin(t) =  crashDistance(t) - safetyMargin(t) \ge 0
 \end{equation}
 
-\paragraph{Distance to Safety Margin:}
+\paragraph{Distance to Safety Margin} peaks are measured:
 \begin{enumerate}
-    \item \emph{Minimal}
-    \item \emph{Maximal}
+    \item \emph{Minimal} distance to safety margin indicates if \emph{acceptance criterion} (eq. \ref{eq:distanceToSafetyMargin} is met).
+    \item \emph{Maximal} distance to safety margin indicates the future \emph{minimal detection range}. All scenarios were considered as borderline cases.
 \end{enumerate}
 
-\paragraph{Breach Indicator:} 
-\begin{enumerate}
-    \item \emph{Yes/No}
-    \item \emph{Distance to Safety Margin Reference}
-\end{enumerate}
-
-\paragraph{Trajectory Tracking Evaluation:}
+\paragraph{Trajectory Tracking Evaluation} is secondary priority after safety, following parameters were checked:
 
 \begin{enumerate}
-    \item \emph{Waypoint reach:}
-    \begin{enumerate}[a.]
-        \item \emph{Yes/No}
-        \item \emph{UAS ID}
-        \item \emph{Trajectory tracking figure reference}
-    \end{enumerate}
-    \item \emph{Reference deviation:}
-    \begin{enumerate}[a.]
-        \item \emph{Waypoint ID}
-        \item \emph{Peak deviation value}
-    \end{enumerate}
-    \item \emph{Acceptable deviation:}
-    \begin{enumerate}[a.]
-        \item \emph{Yes/No}
-        \item \emph{Trajectory tracking performance table reference}
-    \end{enumerate}
+    \item \emph{Waypoint reach} - the \emph{Mission} (\ref{eq:missionAbstractSet}) is considered as successfully completed if and only if $\forall$ waypoints are reached and in given order (check output of \ref{eq:waypointPassingFunction}). Moreover if there is multiple UAS, each must met condition.
+    
+    \item \emph{Acceptable deviation} - for \emph{tracking problem} (eq. \ref{eq:trajectoryTrackingOptimalizaitonProblem}) is a trajectory which in addition to \emph{basic obstacle problem} (sec. \ref{s:BasicProblemDefinition}) keeps deviation from \emph{reference trajectory} under certain threshold (eq. \ref{feasibleTrajectoryCondition}). 
 \end{enumerate}
+
+\noindent\emph{Trajectory tracking deviation threshold} (eq. \ref{eq:trajectoryTrackingDeviationTreshold}) is defined as double of maximal distance between \emph{goal waypoint} and \emph{previous waypoint}. 
+
+\begin{equation}\label{eq:trajectoryTrackingDeviationTreshold}
+        trackingDeviationTreshold =  2 \times distance (goalWaypoint,previousWaypoint)
+\end{equation}
+
+\begin{note}
+    If \emph{goal waypoint} is first in \emph{mission}, the \emph{UAS initial condition} is considered as a \emph{previous waypoint}.
+\end{note}
+
+\paragraph{Computation Load:} There is theoretical definition of \emph{intersection models} for \emph{static obstacles and constraints} (sec. \ref{s:staticObstacles}), \emph{moving obstacles and constraints} (sec. \ref{s:intruders}), \emph{avoidance run} (sec. \ref{s:aviudabceGridRun}), \emph{mission control} (sec. \ref{s:missionControlRun}) computation complexity.
+
+The practical application requires to measure \emph{computation load} in constrained environment. Let say that \emph{avoidance framework} is running on stand alone embedded computer with 1.2 Ghz processor and 1GB of dedicated RAM. This is simulated by \emph{virtual machine}.
+
+The \emph{simulations} were executed in \emph{Matlab/Simulink} environment\footnote{Prototype framework implementation: \url{https://github.com/logomo/Feature-based-ACAS/}} using: \emph{UTM}\footnote{UTM  class: \url{.../UavTraficManagement/UTMControl.m}}, \emph{Navigation loop} \footnote{Navigation Loop main class: \url{.../MissionControl/MissionControl.m}}, \emph{Avoidance grid}\footnote{Avoidance Grid class: \url{.../AvoidanceGrid/AvoidanceGrid.m}} and \emph{Reach set}\footnote{Reach set tree class: \url{.../AvoidanceGrid/PredictorNode.m}} implementations. 
+
+The \emph{decision frame} length is set to $1 s$ which gives \emph{computation load} (eq. \ref{eq:computationLoad}). The \emph{computation load} represents the portion of \emph{previous decision frame} used to current decision frame calculation.
+
+\begin{equation}\label{eq:computationLoad}
+    computationLoad=\frac{computationTime(frame)}{decisionFrameDuration}\times 100, \quad [\%;s,s]
+\end{equation}
+
+\begin{note}
+    \emph{computation load} is depending on actual situation, when the UAS is in \emph{navigation mode} it should be low, when the UAS is in \emph{clustered environment} it should be high.
+    
+    Matlab implementation is quite ineffective, the Python/C++ implementation can give better results.
+    
+    For \emph{computational feasibility} there is \emph{implicit} acceptance criterion (eq. \ref{eq:computationFeasibilityCriterion}): the computation of feasible path for \emph{this time-frame} must end in \emph{previous time-frame}.
+    
+    \begin{equation}\label{eq:computationFeasibilityCriterion}
+        \forall time \in Mission:\quad computation Load < 100\%
+    \end{equation}    
+\end{note}
