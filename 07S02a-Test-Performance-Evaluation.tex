@@ -24,6 +24,15 @@ The \emph{distance to safety margin} (eq. \ref{eq:distanceToSafetyMargin}) is ca
     distanceToSafetyMargin(t) =  crashDistance(t) - safetyMargin(t) \ge 0
 \end{equation}
 
+\begin{note}
+\emph{On Signed Distance:} The most works are using \emph{unsigned distance}. This work considers the \emph{signed distance} with following intervals:
+\begin{enumerate}
+	\item + (away from margin).
+	\item 0 (touching margin with UAS edge).
+	\item - (inside margin - crash/collision/broken boundary).
+\end{enumerate}
+\end{note}
+
 \paragraph{Distance to Safety Margin} peaks are measured:
 \begin{enumerate}
     \item \emph{Minimal} distance to safety margin indicates if \emph{acceptance criterion} (eq. \ref{eq:distanceToSafetyMargin} is met).
