@@ -1,2 +1,375 @@
-\section{(W) UAS Model and Control}\label{s:modelMAImplementation}
-    \noindent Model and Movement Automaton initialization there.
+\section{(R) UAS Model and Control}\label{s:modelMAImplementation}
+
+\noindent The key feature of \emph{Movement Automaton} is to interface \emph{continuous-control signal} as the \emph{discrete command chain}. Following topics are introduced in this section:
+
+\begin{enumerate}
+    \item \emph{UAS Nonlinear Model} (sec. \ref{s:UASNonlinearModel}) - simple plane model used in this work as \emph{controlled plant}.
+    
+    \item \emph{Movement Automaton} (sec. \ref{s:movementAutomatonDefinition}) - movement automaton for \emph{UAS Nonlinear Model} constructed from scratch.
+    
+    \item \emph{Segmented Movement Automaton} (sec. \ref{s:segmentedMovementAutomaton}) - for more complex systems the \emph{State Space} can be \emph{separated into Segments} and \emph{segment movement automaton} is used to generate \emph{thick reference trajectory}.
+    
+    \item \emph{Reference Trajectory Generator} (sec. \ref{s:referenceTrajectoryGenerator}) - other use of \emph{Movement Automaton} as predictor for \emph{reference trajectory calculation}.
+\end{enumerate}
+
+
+\subsection{(R) UAS Nonlinear Model}\label{s:UASNonlinearModel}
+\paragraph{Motivation:} Simplified rigid body kinematic model will be used. This model have decoupled roll, yaw and pitch angles. The focus is on \emph{reach set approximation methods}, therefore \emph{UAS model} is simplified.
+
+\paragraph{State Vector} (eq. \ref{eq:simple3dStatevector}) defined as positional state in euclidean position in right-hand euclidean space, where \emph{x, y, z} can be abstracted as latitude, longitude, altitude.
+\begin{equation}\label{eq:simple3dStatevector}
+    state = \left [ x,y,z, roll, pitch, yaw \right]^T
+\end{equation}
+
+
+\paragraph{Input Vector} (eq. \ref{eq:simple3dInputVector}) is defined as linear velocity of UAS $v$ and angular speed of rigid body $\omega_{roll}, \omega_{pitch},\omega_{yaw}$.
+
+\begin{equation}\label{eq:simple3dInputVector}
+    input = \left [ v, \omega_{roll}, \omega_{pitch},\omega_{yaw}\right ]^T
+\end{equation}
+
+
+\noindent Velocity distribution function (eq. \ref{eq:simple3dvelocityDistribution})  is is defined trough standard rotation matrix  and linear velocity $v$, oriented velocity [$v_x$, $v_y$, $v_z$] given by (eq. \ref{eq:UASNonlinearModelSimple}).
+
+\begin{equation}\label{eq:simple3dvelocityDistribution}
+    \begin{bmatrix}
+    v_x\\
+    v_y\\
+    v_z\
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+         v\cos(pitch)\cos(yaw)\\
+         v\cos(pitch)\sin(yaw)\\
+         -v\sin(pitch)\\
+    \end{bmatrix}
+\end{equation}
+
+\paragraph{UAS Nonlinear Model} (eq. \ref{eq:UASNonlinearModelSimple}) is given by \emph{first order equations:}
+
+\begin{equation}\label{eq:UASNonlinearModelSimple}
+    \begin{aligned}
+        \frac{\partial x}{\partial time} &= v\cos(pitch)\cos(yaw);\\
+        \frac{\partial y}{\partial time} &= v\cos(pitch)\sin(yaw);\\
+        \frac{\partial z}{\partial time} &= -v\sin(pitch);\\
+    \end{aligned}\\\quad\quad
+    \begin{aligned}
+        \frac{\partial roll}{\partial time} &= \omega_{roll};\\
+        \frac{\partial pitch}{\partial time} &= \omega_{pitch};\\
+        \frac{\partial yaw}{\partial time} &= \omega_{yaw};\\
+    \end{aligned}
+\end{equation}
+
+\subsection{(R) Movement Automaton Definition}\label{s:movementAutomatonDefinition}
+
+\paragraph{Motivation:} An \emph{UAS Nonlinear Model} (eq. \ref{eq:UASNonlinearModelSimple}) can be modeled by \emph{Movement Automaton} (def. \ref{def:movementAutomaton}). 
+
+\paragraph{Movement Primitives} by (def. \ref{def:MovementPrimitive})  are given as (eq. \ref{eq:movementPrimitive}). To define primitives the \emph{minimal time} is $1 s$. The \emph{maximal duration} is also $1s$. 
+
+\begin{assumption}\label{ass:transitionTime}
+    Let assume that \emph{transition time} of \emph{roll, pitch, yaw, linear velocity} is $0 s$.
+\end{assumption}
+
+Under the assumption (as. \ref{ass:transitionTime}) the \emph{movement transitions} (def. \ref{def:movementTransition}) have $0$ duration.
+
+\begin{note}
+    The assumption (as. \ref{ass:transitionTime}) can be relaxed under condition that \emph{path tracking controller exists}.
+\end{note}
+
+\paragraph{Movements} (def. \ref{def:Movement}) for \emph{fixed step} $k$ we start with discretization of the input variables.
+
+The \emph{linear velocity} in text step is given:
+\begin{equation}\label{eq:applyMovement}
+    v(k+1) = v(k) +\delta v(k)
+\end{equation}
+
+The \emph{roll, pitch, yaw} for next step are given 
+
+\begin{equation}\label{eq:applyMovement1}
+    \begin{aligned}
+        roll(k+1)  &= roll(k) + \delta roll(k)\\
+        pitch(k+1) & = pitch(k) + \delta pitch(k)\\
+        yaw(k+1) & = yaw(k) + \delta yaw(k)\\
+    \end{aligned}    
+\end{equation}
+
+The $\delta v(k)$ is \emph{velocity change}, $\delta roll(k)$, $\delta pitch(k)$, $\delta yaw(k)$, are \emph{orientation changes} for current discrete step $k$. If the duration of \emph{transition} is $0 s$ (as. \ref{ass:transitionTime}) then 3D trajectory evolution in discrete time is given as: 
+
+\begin{equation}\label{eq:applyMovement2}
+    \begin{aligned}
+        x(k+1)&= x(k) + v(k+1) \cos(pitch(k+1)) \cos(yaw(k+1)) & = \delta x(k)\\
+        y(k+1)&= y(k) + v(k+1) \cos(pitch(k+1)) \sin(yaw(k+1)) & = \delta y(k)\\
+        z(k+1)&= z(k) - v(k+1) \sin(pitch(k+1))                & = \delta z(k)\\
+        time(k+1)& = time(k)+1                                & = \delta time(k)
+    \end{aligned}    
+\end{equation}
+
+The $\delta x(k)$, $\delta y(k)$, $\delta z(k)$ are positional differences depending on \emph{input vector} for given discrete time $k$:
+\begin{equation}\label{eq:ourImput}
+    input(k) = \left[
+                    \begin{gathered}
+                    \delta x(k), \delta y(k), \delta z(k), \delta v (k),\\
+                    \delta roll (k), \delta pitch(k), \delta yaw(k),\delta time (k)
+                    \end{gathered} 
+                \right]^T
+\end{equation}
+
+The \emph{state vector} for discrete time is given:
+\begin{equation}\label{eq:ourState}
+    state(k) = \left[
+                    \begin{gathered}
+                     x(k),  y(k),  z(k),  v (k),\\
+                     roll (k),  pitch(k),  yaw(k), time (k)
+                    \end{gathered} 
+                \right]^T
+\end{equation}
+
+The nonlinear model (eq. \ref{eq:UASNonlinearModelSimple}) is then reduced to \emph{linear discrete model} (eq. \ref{eq:uasLinearDiscreteModel}) given by \emph{apply movements} function (eq. \ref{eq:applyMovement}, \ref{eq:applyMovement1}, \ref{eq:applyMovement2}).
+
+\begin{equation}\label{eq:uasLinearDiscreteModel}
+    state(k+1) = applyMovement(state(k), input(k)) 
+\end{equation}
+
+\paragraph{Movement Set} for linear discrete model (eq. \ref{eq:uasLinearDiscreteModel}) is defined as set of extreme unitary movements on main axes (tab. \ref{tab:movements1}) and diagonal axes (tab. \ref{tab:movements2}).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r||r|r|r|r|r}
+    
+        $input(movement)$           &    Straight  & Down & Up & Left  & Right   \\\hline\hline
+        $\delta     x(k)[m]$           &    1.00	  & 0.98  & 0.98  & 0.98 & 0.98  \\\hline
+        $\delta     y(k)[m]$           &    0	      & 0	  & 0	  & 0.13 & -0.13 \\\hline
+        $\delta     z(k)[m]$           &    0	      & -0.13 & 0.13  &	0	 & 0     \\\hline
+        $\delta  roll(k) [^\circ]$	   &    0	      & 0	  & 0	  & 0    & 0     \\\hline
+        $\delta pitch(k) [^\circ]$     &    0	      & $15^\circ$  & -$15^\circ$ & 0	 & 0     \\\hline
+        $\delta   yaw(k) [^\circ]$     &    0	      & 0	  & 0	  & $15^\circ$ & -$15^\circ$ \\
+    \end{tabular}
+    \caption{Input values for main axes movements.}
+    \label{tab:movements1}
+\end{table}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r||r|r|r|r}
+        $input(movement)$             & Down-Left & Down-Right & Up-Left  & Up-Right   \\\hline\hline
+        $\delta     x(k)[m]$           & 0.76  & 0.76  & 0.76 & 0.76  \\\hline
+        $\delta     y(k)[m]$           & -0.13	& 0.13	& 0.13 & -0.13 \\\hline
+        $\delta     z(k)[m]$           & -0.13 & -0.13 & 0.13 & 0.13  \\\hline
+        $\delta  roll(k) [^\circ]$	& 0	    & 0	    & 0    & 0     \\\hline
+        $\delta pitch(k) [^\circ]$     & -$15^\circ$ & -$15^\circ$ & $15^\circ$ & $15^\circ$     \\\hline
+        $\delta   yaw(k) [^\circ]$    & $15^\circ$	& -$15^\circ$	& $15^\circ$ & -$15^\circ$ \\
+    \end{tabular}
+    \caption{Input values for diagonal axes movements.}
+    \label{tab:movements2}
+\end{table}
+
+\begin{note}
+    \emph{Movement set} in shorten form is given as
+    \begin{equation}\label{eq:OurMovementSet}
+        Movement Set= \left\{
+        \begin{gathered}
+            Straight, Left,Right, Up, Down,\\
+            Down Left, Down Right,  Up Left,   Up Right
+        \end{gathered}
+        \right\}
+    \end{equation}
+\end{note}
+
+\paragraph{Trajectory} by (def. \ref{def:MovementAutomatonTrajectory}) for initial time $time = 0$ , initial state $state(0)$ and \emph{Movement Buffer} (from def. \ref{def:MovementBuffer}):
+\begin{equation}\label{eq:ourBuffer}
+    Buffer \in Movement Set^* (eq. \ref{eq:OurMovementSet}), \quad  |Buffer| \in \N
+\end{equation}
+
+Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is then given as the time-series of discrete states:
+\begin{equation}\label{eq:ourTrajectoryImplementation}
+    Trajectory(state(0),Buffer)= \left\{\begin{gathered}state(0)+\sum_{j=0}^{i-1} input(movement(j)):\\i \in\left\{1\dots |Buffer|+1\right\}, \\movement(\cdot) \in Buffer\end{gathered}\right\}
+\end{equation}
+
+Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states bounded to discrete time $0\dots n$ , where $n$ is member count of \emph{Buffer}. Trajectory set has $n+1$ members:
+
+\begin{equation}
+    \begin{aligned}
+    T&rajectory(state(0),Buffer)=\\
+        &\left\{
+        \begin{aligned}
+            state(0) &= state(0) + \{\}\\
+            state(1) &= state(0) + input(movement(1))\\
+            state(2) &= state(0) + input(movement(1)) +input(movement(2))\\
+             \vdots  &= \vdots\\
+            state(n) &= state(0) + input(movement(1))+\dots+input(movement(n))\\
+        \end{aligned}
+        \right\}
+    \end{aligned}
+\end{equation}
+
+\paragraph{State Projection} (eq. \ref{eq:ourStateProjection}) for the \emph{Trajectory} (eq. \ref{eq:ourTrajectoryImplementation}) is given as follow:
+\begin{equation}\label{eq:ourStateProjection}
+    StateProjection(Trajectory,time) = Trajectory.getMemberByIndex(time+1)
+\end{equation}
+
+\begin{note}
+    \emph{Movement Automaton} for system (eq. \ref{eq:UASNonlinearModelSimple}) with given (as. \ref{ass:transitionTime}) is established with all related properties (sec. \ref{def:movementAutomaton}).
+\end{note}
+
+\subsection{(R) Segmented Movement Automaton}\label{s:segmentedMovementAutomaton}
+\paragraph{Motivation:} Constructing \emph{Movement Automaton} for more complex system can be tedious. Used \emph{Movement Automaton} for \emph{UAS system} (\ref{eq:UASNonlinearModelSimple}) has decoupled control which is not true for most of the copters/planes \cite{fossen2011mathematical}.
+
+\paragraph{Partitioning UAS State Space:} Proposed movement automaton is defined by its Movement set (tab. \ref{tab:movements1},\ref{tab:movements2}). Those can be scaled depending on maneuverability in the  \emph{Initial state} $state(0)$:
+\begin{enumerate}
+    \item \emph{Climb/Descent Rate} $\delta pitch_{max}(k)$ - the maximal climb or descent rate for Up/Down movements.
+    \item \emph{Turn Rate} $\delta yaw_{max}(k)$ - the maximal turn rate for Left/Right movement.
+    \item \emph{Acceleration} $\delta v_{max}(k)$ - the maximal acceleration in cruising speed range.
+\end{enumerate}
+
+\begin{definition}{State Space partition}\label{def:stateSpacePartition}
+    \emph{Maneuverability} is depending on \emph{Initial State}. There can not be the infinite count of \emph{Movement Automatons}.
+    
+    The state space $State Space \in \R^n$ can be separated into two exclusive subsets:
+    \begin{equation}
+        StateSpace = [ImpactStates, NonImpactingStates]
+    \end{equation}
+    
+    The \emph{Impacting states} are states which bounds the \emph{Maneuverability}: $\delta pitch_{max}(k)$, $\delta yaw_{max}(k)$, $\delta v_{max}(k)$. For each \emph{impact state} is possible to define upper and lower boundary:
+    \begin{multline}
+        \forall impactState\in ImpactStates, \exists:\\ lower(impactState) \le value(impactState) \le upper(impactState) 
+    \end{multline}
+    
+    The bounded interval of impact state can be separated into distinctive \emph{impact state segments} like follow:
+    \begin{multline}
+        impactState\in [lower,upper]:\\ \{[lower,separator_1[\dots\cup\dots[separator_i,separator_{i+1}[\dots\cup\dots\\\dots\cup\dots[separator_n,upper]\}=\\
+        = impactStateIntervals(impactState)
+    \end{multline}
+    \begin{note}
+        The interval length depends on model dynamics. The rule of thumb is to keep maximal climb/descend/turn/acceleration rates near constant value. 
+    \end{note}
+        
+    When partitioning of \emph{all impact States} finishes, the count of partitions is given as product of \emph{count of partitions} for each member of \emph{Impact States}:
+    
+    \begin{equation}
+        partition Count = \prod_{impactState \in}^{ImpactStates} |impactStateIntervals(impactState)| 
+    \end{equation}
+    
+    \begin{note}
+        Try to keep the count of partitions to minimum, each new interval increases the count of partitions geometrically. 
+    \end{note}
+    
+    There is finite number $n$ of \emph{Impacting States}, these are separated into $impactState-$ $Intervals_i$ with respective index $i \in 1\dots n$. The \emph{segment} with index defining position used \emph{impacting state} intervals is given as \emph{constrained space}:
+    
+    \begin{equation}
+        Segment(index) = \left[
+            \begin{gathered}
+                impactState_1 \in impactStateIntervals_1[index_1],\\
+                \vdots\\
+                impactState_n \in impactStateIntervals_n[index_n],\\
+                \vdots\\
+                NonImpactingStates    
+                \end{gathered}\right]
+    \end{equation}
+    
+    Each \emph{Segment} covers one of impacting state intervals combination, because the original intervals are exclusive, also \emph{Segments} are exclusive. The \emph{union} of all segments covers \emph{State Space}:
+    
+    \begin{equation}\label{eq:segmentedStateSpace}
+        StateSpace = \bigcup_{\forall\quad index \in |impactStateIntervals|^n} Segment(index)
+    \end{equation}
+\end{definition}
+
+\paragraph{Segmented Movement Automaton:} The segmentation of \emph{state space} is done  in (def. \ref{def:stateSpacePartition}) any \emph{state} belongs exactly to \emph{Segment} of \emph{State Space}. For each \emph{Segment} in \emph{State Space}it is possible to assess: \emph{Climb/Descent Rate} $\delta pitch_{max}(k)$, \emph{Turn Rate} $\delta yaw_{max}(k)$, and, \emph{Acceleration} $\delta v_{max}(k)$.
+
+\begin{definition}{Movement Automaton for Segment(index)}\label{def:segmentMovementAutomaton}
+    
+
+For for Model(eq. \ref{eq:uasLinearDiscreteModel}) with State (eq. \ref{eq:ourState}) the input vector (eq. \ref{eq:ourImput}) is for position $[x,y,z]$ and velocity defined like: 
+
+\begin{equation}
+    \begin{aligned}
+        \delta x(k)& = \left(v(k)+\delta v(k)\right) \cos(\delta pitch(k)) \cos(\delta yaw(k))\\
+        \delta y(k)& = \left(v(k)+\delta v(k)\right) \cos(\delta pitch(k)) \sin(\delta yaw(k))\\
+        \delta z(k)& = -\left(v(k)+\delta v(k)\right)\cos(\delta pitch(k))\\
+        \delta v(k)&\in [-\delta v(k)_{max},\delta v(k)_{max}]
+    \end{aligned}
+\end{equation}
+\end{definition}
+
+The acceleration $\delta v(k)$ is in interval $[-\delta v(k)_{max},\delta v(k)_{max}]$, usually set to 0 $ms^{-1}$. The change of the orientation angles for \emph{Movement Set} (eq. \ref{eq:OurMovementSet}) is given in (tab. \ref{tab:movements3},\ref{tab:movements4}).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r||r|r|r|r|r}
+    
+        $input(movement)$           &    Straight  & Down & Up & Left  & Right   \\\hline\hline
+        $\delta  roll(k) [^\circ]$	   &    0	      & 0	  & 0	  & 0    & 0     \\\hline
+        $\delta pitch(k) [^\circ]$     &    0	      & $\delta pitch_{max}$  & -$\delta pitch_{max}$ & 0	 & 0     \\\hline
+        $\delta   yaw(k) [^\circ]$     &    0	      & 0	  & 0	  & $\delta yaw_{max}$ & -$\delta yaw_{max}$ \\
+    \end{tabular}
+    \caption{Orientation input values for main axes movements.}
+    \label{tab:movements3}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r||r|r|r|r}
+        $input(movement)$             & Down-Left & Down-Right & Up-Left  & Up-Right   \\\hline\hline
+
+        $\delta  roll(k) [^\circ]$	& 0	    & 0	    & 0    & 0     \\\hline
+        $\delta pitch(k) [^\circ]$     & -$\delta pitch_{max}$ & -$\delta pitch_{max}$ & $\delta pitch_{max}$ & $\delta pitch_{max}$     \\\hline
+        $\delta   yaw(k) [^\circ]$    & $\delta yaw_{max}$	& -$\delta yaw_{max}$	& $\delta yaw_{max}$ & -$\delta yaw_{max}$ \\
+    \end{tabular}
+    \caption{Orientation input values for diagonal axes movements.}
+    \label{tab:movements4}
+\end{table}
+
+\begin{note}
+    The \emph{Trajectory} is calculated same as in (eq. \ref{eq:ourTrajectoryImplementation}). The \emph{State Projection} is given as in (eq. \ref{eq:ourStateProjection}).
+\end{note}
+
+Then the \emph{Movement Automaton} for \emph{Segment} $\in$ \emph{State Space} is defined.
+
+\begin{definition}{Segmented Movement Automaton}\label{def:segmentedMovementAutomaton}
+    For system with segmented state space (eq. \ref{eq:segmentedStateSpace}) there is for each $state(k)$ in $StateSpace$ injection function:
+    \begin{equation} \label{eq:activeMovementAutomaton}
+        ActiveMovementAutomaton:StateSpace\to MovementAutomaton
+    \end{equation}
+    
+    Selecting appropriate \emph{movement automaton} implementation (def. \ref{def:segmentMovementAutomaton}) for \emph{state(k)} $\in$ \emph{Segment} $\subset$ \emph{State Space}. The mapping function (eq. \ref{eq:activeMovementAutomaton}) is injection mapping every state(k) to Segment then \emph{Movement Automaton Implementation}. The trajectory generated is then given:
+    
+    \begin{equation}\label{eq:ourTrajectoryImplementationSegmented}
+        Trajectory\left(\begin{gathered}state(0),\\Buffer\end{gathered}\right)= 
+        \left\{
+            \begin{gathered}
+                state(0)+\dots\\\sum_{j=0}^{i-1} 
+                    \begin{aligned} 
+                        &ActiveMovementAutomaton(state(j-1)).\\
+                        &\quad.input(movement(j))
+                    \end{aligned}:\\
+                i \in\left\{1\dots |Buffer|+1\right\}, \\
+                movement(\cdot) \in Buffer
+            \end{gathered}
+        \right\}
+    \end{equation}
+    
+\end{definition}
+
+\subsection{(R) Reference Trajectory Generator}\label{s:referenceTrajectoryGenerator}
+
+\paragraph{Reference Trajectory Generator:} Segmented Movement Automaton (def.  \ref{def:segmentedMovementAutomaton}) with \emph{trajectory function} (eq. \ref{eq:ourTrajectoryImplementationSegmented}) is used as \emph{reference trajectory generator} for \emph{complex systems}. 
+
+There is assumption that precise \emph{path tracking} implementation exist for such system which with \emph{thick reference trajectory} gives similar results to \emph{plain movement automaton control}.
+
+The \emph{Reference trajectory} (eq. \ref{eq:generatedReferenceTrajectory}) for \emph{Planned} movement set is given as projection  of \emph{Trajectory} time series to position time series $[x,y,z,t]$:
+
+\begin{equation}\label{eq:generatedReferenceTrajectory}
+    Reference Trajectory:Trajectory\left(\begin{gathered}state(now),\\Planned\end{gathered}\right) 
+    \to 
+    \begin{bmatrix}
+        x_{ref} \in \R^{|Planned|}\\
+        y_{ref} \in \R^{|Planned|}\\
+        z_{ref} \in \R^{|Planned|}\\
+        t_{ref} \in \R^{|Planned|}
+    \end{bmatrix}
+\end{equation}
+
+\paragraph{Predictor:} The \emph{Reference Trajectory Generator} (eq. \ref{eq:generatedReferenceTrajectory}) can be also used as predictor. 
+
+\begin{note}
+    The \emph{Segmented Movement Automaton} (def. \ref{def:segmentedMovementAutomaton}) is used in this work with one Segment equal to State space with input function given by (\ref{tab:movements1}, \ref{tab:movements2}). The predictor used in \emph{Reach set computation} is given by (eq. \ref{eq:generatedReferenceTrajectory}).
+\end{note}
