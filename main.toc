@@ -45,7 +45,7 @@
 \contentsline {paragraph}{Minimal Movement Time:}{28}{section*.21}
 \contentsline {paragraph}{Movement Chaining:}{28}{section*.22}
 \contentsline {paragraph}{State Projection:}{29}{section*.23}
-\contentsline {subsection}{\numberline {3.4.3}(W) Definition and Properties}{29}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.3}Definition}{29}{subsection.3.4.3}
 \contentsline {chapter}{\numberline {4}(R) Problem Statement}{31}{chapter.4}
 \contentsline {section}{\numberline {4.1}Basic Definitions}{31}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}World}{31}{subsection.4.1.1}
@@ -440,7 +440,14 @@
 \contentsline {paragraph}{Trajectories count:}{194}{section*.455}
 \contentsline {paragraph}{Coverage ratio:}{194}{section*.457}
 \contentsline {chapter}{\numberline {8}(W) Conclusion and Future Work}{196}{chapter.8}
-\contentsline {section}{\numberline {8.1}(W) Simulation Highlights}{196}{section.8.1}
+\contentsline {section}{\numberline {8.1}Framework Summary}{196}{section.8.1}
 \contentsline {section}{\numberline {8.2}(W) Other Methods Comparison}{196}{section.8.2}
-\contentsline {section}{\numberline {8.3}(W) Lessons learned}{196}{section.8.3}
-\contentsline {chapter}{Bibliography}{197}{chapter*.458}
+\contentsline {section}{\numberline {8.3}(R) Approach Reusability}{196}{section.8.3}
+\contentsline {paragraph}{UTM Services:}{196}{section*.458}
+\contentsline {paragraph}{Emergency Avoidance Functionality:}{196}{section*.459}
+\contentsline {paragraph}{Event Based Avoidance Functionality:}{197}{section*.460}
+\contentsline {paragraph}{Reusability for More Complex Systems:}{197}{section*.461}
+\contentsline {paragraph}{Reach Set Approximations:}{197}{section*.462}
+\contentsline {section}{\numberline {8.4}(W) Lessons learned}{198}{section.8.4}
+\contentsline {section}{\numberline {8.5}(W) Future Work}{198}{section.8.5}
+\contentsline {chapter}{Bibliography}{199}{chapter*.463}

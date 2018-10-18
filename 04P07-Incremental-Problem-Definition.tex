@@ -1,66 +1,31 @@
-\section{(W) Incremental problem definition}
+\section{(R) Incremental problem definition}\label{s:IncrementalProblemDefinition}
 
-\noindent\emph{UAV system} defined by model (??) is executing \emph{Mission} (??) in \emph{KnownWordl} (??) $\subset$ (??) \emph{Space}. Solving avoidance problem defined in section ??.
+\noindent This section contains \emph{incremental problem definition} as increments of (sec. \ref{s:BasicProblemDefinition}). Each problem contains definition and references to addressed issues.
 
-\begin{constraints}{for all problems:}
-    % General criteria of Feasibility/Stability/Scalability/Determinism/Guarantees
-    %\begin{enumerate}
-    %    \itemit{Calculation complexity}
-    %    \itemit{Estimation precision}
-    %\end{enumerate}
-    %kron kron
-    Bla bla
-\end{constraints}
+\begin{problem}{Basic Avoidance}\label{pro:knownWorldEvolution} (sec. \ref{s:BasicProblemDefinition}) is to navigate trough \emph{KnownWorld} under assumption that every \emph{waypoint} in \emph{Mission} is reachable.The \emph{KnownWorld} is fed trough \emph{SensorFusion} function which is joining \emph{LiDAR} scanning into \emph{Free(t), Occupied(t),} and, \emph{Unknown(t)} sets in \emph{discrete scan times} $t$. 
 
-\begin{equation}
-    \forall \, Trajectory(initialState,Buffer), \forall \, HFlightConstraints:
-\end{equation}
-
-\begin{problem}{Basic problem}\label{pro:basicProblem}
-    is to navigate trough \emph{KnownWorld} under assumption that every \emph{waypoint} in \emph{Mission} is reachable.
     \begin{equation}\label{eq:basicProblemDefinition}
-        \begin{aligned}
-            KnownWorld:&= Space, \forall point\in KnownWorld=Free \cup Occupied\\
-            Mission:&= \forall waypoint\in Mission \text{ are reachable}\\
-            HFlightConstraints:&=\{\text{vehicle dynamic}\}\\
-        \end{aligned}
-    \end{equation}
-    \ifproblemchallenge
-    \noindent \emph{Challenges for problem  \ref{pro:basicProblem}. :}
-    \begin{enumerate}
-        \item \emph{Control concept} -  method for vehicle control using \emph{abstract control} representaiton.
-        \item \emph{Navigation framework} - techniques and constraints to execute mission with emphasis on \emph{SafetyMargin}(??) to \emph{Occupied} (??) set.
-    \end{enumerate}
-    \fi
-\end{problem}
-
-
-
-\begin{problem}{Known world evolution,}\label{pro:knownWorldEvolution}
-    in addition to \emph{Basic problem} (pr. \ref{pro:basicProblem}) The \emph{KnownWorld} is fed trough \emph{SensorFusion} function which is joining \emph{LiDAR} scanning into \emph{Free(t), Occupied(t),} and, \emph{Unknown(t)} sets in \emph{real time} $t$. 
-
-    \begin{equation}\label{eq:knownworldEvolutionProblemDefinition}
         \begin{aligned}
             KnownWorld:&= SensorFusion(t)\forall point\in KnownWorld(t)\\
                        &=Free(t) \cup Occupied(t) \cup Unknown(t)\\
             Mission:&= \forall waypoint\in Mission \text{ are reachable}\\
             Sensors:&= \{LiDAR\}\\
-            SensorFusion:&= \{\text{Simple joint sets (??)}\}\\
+            SensorFusion:&= \{\text{Clasificaiton function}\}\\
             HFlightConstraints:&=\{\text{vehicle dynamic}\}\\
         \end{aligned}
     \end{equation}
     
-    \ifproblemchallenge
+    
     \noindent \emph{Challenges for problem  \ref{pro:knownWorldEvolution}. :}
     \begin{enumerate}
-        \item \emph{Evolving sets representation} - continuous LiDAR scanning are imposing problem of abstract data representation requiring introduction of some sort of \emph{Grid} representation.
-        \item \emph{Evolving navigation} - imposes problem of path re-planning including \emph{Decision point determination}, such as point when next decision should be made to guarantee return path in \emph{Known world}.
-    \end{enumerate}
-    \fi
+        \item \emph{Navigation Loop Implementation} (sec. \ref{s:missionControlRun}).
+        
+        \item \emph{Avoidance Loop Implementation}  (sec. \ref{s:aviudabceGridRun:}).
+    \end{enumerate}   
 \end{problem}
 
 
-\begin{problem}{Intruder detection}\label{pro:intruderDetection}
+\begin{problem}{Intruder Problem}\label{pro:intruderDetection}
     in addition to \emph{Known world evolution} (pr.\ref{pro:knownWorldEvolution}) the \emph{ADS-B} sensor is introduced into \emph{Sensors} array, this imposes \emph{HardConstraint} of \emph{Flight corridor} for detected intruders impacting the evolution of \emph{Free}(t) and \emph{Occupied}(t) sets significantly.
     
     \begin{equation}\label{eq:intruderDetectionProblemdefinition}
@@ -75,46 +40,29 @@
         \end{aligned}
     \end{equation}
     
-    \ifproblemchallenge
+
     \noindent \emph{Challenges for problem  \ref{pro:intruderDetection}. :}
     \begin{enumerate}
-        \item \emph{Moving obstacles} - continuous ADS-B updates reveals adversaries which can significantly impact the situation along planned path.
-        \item \emph{Advanced joint sets} - the \emph{Known world} is impacted two sources of information, therefore \emph{SensorFusion} needs to be adapted to feed existing unified grid with relevant data. The information priority sensor fusion needs to be introduced. 
+        \item \emph{Intruder Intersection Models} (minimal operation requirements achieved):
+        \begin{enumerate}[a.]
+            \item \emph{Linear Intersection Model} (sec. \ref{s:linearIntersectionModel}).
+            \item \emph{Body-volume intersection} (sec. \ref{s:bodyvolumeIntersection}).
+            \item \emph{Maneuverability uncertainty intersection} (sec. \ref{s:uncertaintyIntersection}).
+        \end{enumerate}
+        
+        \item \emph{Flight Corridors} (sec. \ref{s:virtualConstraints}).
     \end{enumerate}
-    \fi
+    
 \end{problem}
 
-\begin{problem}{Terrain map}\label{pro:terrainMap},
-    in addition to \emph{Intruder Detection} (pr. \ref{pro:intruderDetection}) \emph{TerrainMap} information source is introduced. This change impacts \emph{KnowWord} by changing the final set distribution to \emph{DatFusion}. For \emph{DataFusion} simple data fusion from one information source is used. The \emph{terrain} from \emph{TerrainMap} extends \emph{HardConstraints}. 
-    \begin{equation}\label{eq:terainMapProblemDefinition}
-        \begin{aligned}
-            KnownWorld:&= DataFusion(t)\forall point\in KnownWorld(t)\\
-                       &=Free(t) \cup Occupied(t) \cup Unknown(t)\\
-            Mission:&= \forall waypoint\in Mission \text{ are reachable}\\
-            Sensors:&= \{LiDAR,ADS-B\}\\
-            SensorFusion:&= \{\text{Advanced joint sets}\}\\
-            InformationSources:&=\{Terrain Map\}\\
-            DataFusion:&= \{\text{Simple data fusion}\}\\
-            HFlightConstraints:&=\{\text{vehicle dynamic}\}\\
-            HardConstraints:&=\{\text{intruder corridors,terrain}\}\\
-        \end{aligned}
-    \end{equation}
-    
-    \ifproblemchallenge
-    \noindent \emph{Challenges for problem  \ref{pro:terrainMap}. :}
-    \begin{enumerate}
-        \item \emph{Data fusion} - introduce \emph{post-SensorFusion} processing \emph{Free(t), Occupied(t),  Unknown(t)} sets.
-        \item \emph{Terrain map clustering} - fetching only relevant \emph{TerrainMap} space portion to \emph{KnownWorld}.
-    \end{enumerate}
-    \fi
-\end{problem}
+
 
 
 \begin{problem}{Static restrictions}\label{pro:staticRestrictions},
-    in addition to \emph{TerrainMap} problem (pr. \ref{pro:terrainMap}) the \emph{InformationSources} are expanded by \emph{static restriction} sources: 
+    in addition to \emph{Intruder} problem (pr. \ref{pro:intruderDetection}) the \emph{InformationSources} are expanded by \emph{static restriction} sources: 
     \begin{enumerate}
-        \item \emph{ObstacleDatabase} - database containing notable landmarks, buildings, structures, with well defined \emph{protection zones}.
-        \item \emph{FlightRestrictions} - database containing ATM flight restrictions in non-segregated airspace for UAV relevan airspace categories. 
+        \item \emph{ObstacleMap} - database containing notable landmarks, buildings, structures, with well defined \emph{protection zones}.
+        \item \emph{FlightRestrictions} - database containing ATM flight restrictions in non-segregated airspace for UAV relevant airspace categories. 
     \end{enumerate}
     \noindent This change impacts \emph{DataFusion} by splitting \emph{Free(t)} set into \emph{Free(t)} and \emph{Restricted(t)} disjoint sets. In addition \emph{SoftConstraints} are introduced which contain restricted areas from relevant information sources.  
     
@@ -125,7 +73,7 @@
             Mission:&= \forall waypoint\in Mission \text{ are reachable}\\
             Sensors:&= \{LiDAR,ADS-B\}\\
             SensorFusion:&= \{\text{Advanced joint sets}\}\\
-            InformationSources:&=\{Terrain Map,Obstacle Database,Flight Restriction\}\\
+            InformationSources:&=\{Terrain Map,Obstacle Map,Flight Restriction\}\\
             DataFusion:&= \{\text{Advanced data fusion}\}\\
             HFlightConstraints:&=\{\text{vehicle dynamic}\}\\
             HardConstraints:&=\{\text{intruder corridors,terrain,obstacles}\}\\
@@ -133,13 +81,14 @@
         \end{aligned}
     \end{equation}
     
-    \ifproblemchallenge
+
     \noindent \emph{Challenges for problem  \ref{pro:staticRestrictions}. :}
     \begin{enumerate}
-        \item \emph{Restricted zones} - \emph{Obstacle map} introduces protection zones around notable landmarks, there is hierarchy given by law, other source of restrictions is \emph{Flight restrictions}, which also has hierarchy. 
-        \item \emph{Navigation improvement} - Extension to problem is given by virtual obstacles form \emph{Restricted zones}. These \emph{restrictions} can be broken under certain condition, the rule engine must consider implementation of legal measurements to allow such navigation. 
+        \item \emph{Obstacle Map} (sec. \ref{s:mapObstacles}).
+        \item \emph{Visibility Rating Concept} (fig. \ref{fig:hindranceImpactOnVisibility}).
+        \item \emph{Static Constraints} (sec. \ref{s:virtualConstraints}).
     \end{enumerate}
-    \fi
+
 \end{problem}
 
 \begin{problem}{Dynamic restrictions}\label{pro:dynamicRestrictions}
@@ -161,14 +110,11 @@
         \end{aligned}
     \end{equation}
     
-    \ifproblemchallenge
     \noindent \emph{Challenges for problem  \ref{pro:dynamicRestrictions}. :}
     \begin{enumerate}
-        \item \emph{Changing Restricted zones} -  Weather is changing with time, that means the weather restriction zones are changing their position, shape and \emph{severity} over time. 
-        \item \emph{Sensor impact} - \emph{Weather} severely impacts functionality of some sensor, at this point scalable avoidance method to address this fact needs to be introduced
-        \item \emph{Navigation algorithm} - \emph{Restricted areas} from \emph{Weather} are changing their \emph{severity}. This imposes dynamic changes to maneuverability and virtual obstacles priority. 
+        \item\emph{Moving Constraints including Weather} (sec. \ref{s:MovingVirtualConstraints}).
+        \item\emph{Weather Avoidance Case} (sec. \ref{sec:weatherCase}).
     \end{enumerate}
-    \fi
 \end{problem}
 
 \begin{problem}{Rules of the air}\label{pro:rulesOfTheAir}, 
@@ -190,10 +136,10 @@
         \end{aligned}
     \end{equation}
     
-    \ifproblemchallenge
     \noindent \emph{Challenges for problem  \ref{pro:rulesOfTheAir}. :}
     \begin{enumerate}
-        \item \emph{Soft constraints on control} - Control mechanism which follows constraints on control to execute maneuvers is biased by implementation of situation based maneuvers. 
+        \item UTM Implementation (sec. \ref{sec:UASTrafficManagement}).
+        \item Rule Engine for UAS (sec. \ref{s:RuleEngineArchitecture}).
+        \item Rule Implementation (sec. \ref{sec:ruleImplementation}).
     \end{enumerate}
-    \fi
 \end{problem}

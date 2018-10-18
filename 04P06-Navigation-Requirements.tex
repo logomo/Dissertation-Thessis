@@ -1,32 +1,25 @@
-\section{(W) Navigation requirements}\label{s:navigationRequirements}
-    \noindent \emph{Navigation requirements} are not main part of this work, they are used to show variability of the approach for \emph{DAA} requirements:
-    \begin{enumerate}
-        \item \emph{Constrained space navigation} - support dynamic constraint environment including: 
-        \begin{enumerate}[a.]
-            \item \emph{Static obstacles}, 
-            \item \emph{Moving obstacles}, 
-            \item \emph{Hard constraints},
-            \item \emph{Soft constraints}
-        \end{enumerate}
-        
-        \item \emph{Contextual behaviour} - change navigation and decision behaviour based on context:
-        \begin{enumerate}[a.]
-            \item \emph{Airspace type} - controlled/uncontrolled, 
-            \item \emph{Navigation mode} - Cooperative/Emergency Avoidance 
-        \end{enumerate}    
-        
-        \item \emph{Determinism} - same result for same dataset in finite time.
-        \emph{Threat prioritization} - threats prioritization based on \emph{context}, (tab. \ref{tab:controlledAirspaceViolations}) and (tab. \ref{tab:uncontrolledAirspaceViolations}).
-        
-        \item \emph{Rule compliance} - compliance with given set of rules based on context (focus on rules of the air).
-    \end{enumerate}
+\section{(R) Navigation requirements}\label{s:navigationRequirements}
+\noindent \emph{Navigation requirements} are not main part of this work, they are used to show variability of the approach for \emph{DAA} requirements:
+\begin{enumerate}
+    \item \emph{Contextual behaviour} - change navigation and decision behaviour based on context:
+    \begin{enumerate}[a.]
+        \item \emph{Airspace type} - Controlled/Uncontrolled, 
+        \item \emph{Navigation mode} - Cooperative/Emergency. 
+    \end{enumerate}    
     
-    \begin{tabularx}{\textwidth}{S{0.25}||S{0.65}}
-        Requirement & Evaluation metrics \\ \hline\hline
-        Constrained space navigation & Mission scenario does not have direct path between waypoints, additional borderline cases.\\\hline
-        Contextual behaviour & Avoidance system changes behaviour based on the mission and vehicle context.\\\hline
-        Determinism & Multiple runs of same non-borderline scenario returns same avoidance paths.\\\hline
-        Rule compliance & Rules applied are in compliance with aviation standardization.\\
-        \caption{Navigation requirements evaluation metrics.}
-        \label{tab:navigationRequirementsEvaluationMetrics}
-    \end{tabularx}
+    \item \emph{Determinism} - same result for same dataset in finite time.
+    
+    \item  \emph{Threat prioritization} - threats prioritization based on \emph{context}, (tab. \ref{tab:controlledAirspaceViolations}) and (tab. \ref{tab:uncontrolledAirspaceViolations}).
+    
+    \item \emph{Rule compliance} - compliance with given set of rules based on context (focus on rules of the air).
+\end{enumerate}
+
+\begin{tabularx}{\textwidth}{S{0.25}||S{0.65}}
+    Requirement & Evaluation metrics \\ \hline\hline
+    Constrained space navigation & Mission scenario does not have direct path between waypoints, additional borderline cases.\\\hline
+    Contextual behaviour & Avoidance system changes behaviour based on the mission and vehicle context.\\\hline
+    Determinism & Multiple runs of same non-borderline scenario returns same avoidance paths.\\\hline
+    Rule compliance & Rules applied are in compliance with aviation standardization.\\
+    \caption{Navigation requirements evaluation metrics.}
+    \label{tab:navigationRequirementsEvaluationMetrics}
+\end{tabularx}
