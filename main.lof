@@ -27,67 +27,71 @@
 \contentsline {figure}{\numberline {6.12}{\ignorespaces \emph {Combined \emph {reach set} approximation}.\relax }}{86}{figure.caption.152}
 \contentsline {figure}{\numberline {6.13}{\ignorespaces ACAS-X imitation \emph {reach set} approximation for various \emph {separation modes}. \relax }}{89}{figure.caption.160}
 \contentsline {figure}{\numberline {6.14}{\ignorespaces Significant steps of \emph {Avoidance grid run} (inner loop).\relax }}{90}{figure.caption.162}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Definitions for \emph {Mission Control Run} (outer loop).\relax }}{91}{figure.caption.163}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Mission control run activity diagram.\relax }}{92}{figure.caption.164}
-\contentsline {figure}{\numberline {6.17}{\ignorespaces UAS Traffic Management (UTM) architecture overview.\relax }}{93}{figure.caption.168}
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Cooperative conflict resolution via UTM authority.\relax }}{94}{figure.caption.172}
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Non-cooperative conflict resolution via UAS claims.\relax }}{96}{figure.caption.178}
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Head on approach detection/resolution/Closure\relax }}{97}{figure.caption.180}
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Converging maneuver detection/resolution/Closure\relax }}{97}{figure.caption.181}
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Overtake maneuver detection/resolution/Closure\relax }}{98}{figure.caption.182}
-\contentsline {figure}{\numberline {6.23}{\ignorespaces Rule engine components overview.\relax }}{107}{figure.caption.196}
-\contentsline {figure}{\numberline {6.24}{\ignorespaces Rule engine initialization with Rules of the air.\relax }}{107}{figure.caption.197}
-\contentsline {figure}{\numberline {6.25}{\ignorespaces Right plane heading rule evaluation for various angles of approach $\alpha $.\relax }}{115}{figure.caption.205}
-\contentsline {figure}{\numberline {6.26}{\ignorespaces Enforce safety margin rule evaluation for various angles of approach $\alpha $.\relax }}{116}{figure.caption.207}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Example: The situation to be evaluated by \emph {Avoidance Run}.\relax }}{91}{figure.caption.164}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Example: The \emph {Obstacle Rating} evaluation by \emph {Avoidance Run}.\relax }}{91}{figure.caption.165}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Example: The \emph {Visibility} evaluation by \emph {Avoidance Run}.\relax }}{92}{figure.caption.166}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Example: The \emph {Reachibility} evaluation by \emph {Avoidance Run}.\relax }}{93}{figure.caption.167}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Definitions for \emph {Mission Control Run} (outer loop).\relax }}{94}{figure.caption.168}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Mission control run activity diagram.\relax }}{94}{figure.caption.169}
+\contentsline {figure}{\numberline {6.21}{\ignorespaces UAS Traffic Management (UTM) architecture overview.\relax }}{96}{figure.caption.173}
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Cooperative conflict resolution via UTM authority.\relax }}{97}{figure.caption.177}
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Non-cooperative conflict resolution via UAS claims.\relax }}{99}{figure.caption.183}
+\contentsline {figure}{\numberline {6.24}{\ignorespaces Head on approach detection/resolution/Closure\relax }}{100}{figure.caption.185}
+\contentsline {figure}{\numberline {6.25}{\ignorespaces Converging maneuver detection/resolution/Closure\relax }}{100}{figure.caption.186}
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Overtake maneuver detection/resolution/Closure\relax }}{101}{figure.caption.187}
+\contentsline {figure}{\numberline {6.27}{\ignorespaces Rule engine components overview.\relax }}{109}{figure.caption.201}
+\contentsline {figure}{\numberline {6.28}{\ignorespaces Rule engine initialization with Rules of the air.\relax }}{110}{figure.caption.202}
+\contentsline {figure}{\numberline {6.29}{\ignorespaces Right plane heading rule evaluation for various angles of approach $\alpha $.\relax }}{119}{figure.caption.210}
+\contentsline {figure}{\numberline {6.30}{\ignorespaces Enforce safety margin rule evaluation for various angles of approach $\alpha $.\relax }}{120}{figure.caption.212}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Test scenario for \emph {Building avoidance} (static ground obstacles). \relax }}{127}{figure.caption.232}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Distance to body/safety margin evolution for \emph {Building avoidance scenario}.\relax }}{128}{figure.caption.234}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces \emph {Building avoidance} path tracking.\relax }}{129}{figure.caption.238}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Computation time for \emph {Building avoidance} scenario.\relax }}{129}{figure.caption.242}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Test scenario for \emph {Slalom} with \emph {hidden waypoint}. \relax }}{131}{figure.caption.251}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Distance to body/safety margin evolution for \emph {Slalom scenario}.\relax }}{132}{figure.caption.253}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces \emph {Slalom} path tracking.\relax }}{133}{figure.caption.257}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Computation time for \emph {Slalom} scenario.\relax }}{133}{figure.caption.261}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Test scenario for \emph {Maze}. \relax }}{136}{figure.caption.270}
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Distance to body/safety margin evolution for \emph {Maze scenario}.\relax }}{137}{figure.caption.272}
-\contentsline {figure}{\numberline {7.11}{\ignorespaces \emph {Maze} path tracking.\relax }}{138}{figure.caption.276}
-\contentsline {figure}{\numberline {7.12}{\ignorespaces Computation time for \emph {Maze} scenario.\relax }}{138}{figure.caption.280}
-\contentsline {figure}{\numberline {7.13}{\ignorespaces Test scenario for \emph {Storm} (Dynamic hard constraint). \relax }}{140}{figure.caption.290}
-\contentsline {figure}{\numberline {7.14}{\ignorespaces Distance to body/safety margin evolution for \emph {Storm scenario}.\relax }}{141}{figure.caption.292}
-\contentsline {figure}{\numberline {7.15}{\ignorespaces \emph {Storm} path tracking.\relax }}{142}{figure.caption.296}
-\contentsline {figure}{\numberline {7.16}{\ignorespaces Computation time for \emph {Maze} scenario.\relax }}{142}{figure.caption.300}
-\contentsline {figure}{\numberline {7.17}{\ignorespaces Test scenario for \emph {Emergency converging} (Intruder avoidance). \relax }}{145}{figure.caption.308}
-\contentsline {figure}{\numberline {7.18}{\ignorespaces Distance to safety margin evolution for \emph {emergency converging scenario}.\relax }}{146}{figure.caption.310}
-\contentsline {figure}{\numberline {7.19}{\ignorespaces \emph {Trajectory tracking} for \emph {Emergency converging} test case. \relax }}{147}{figure.caption.314}
-\contentsline {figure}{\numberline {7.20}{\ignorespaces Computation time for \emph {Emergency converging} scenario.\relax }}{148}{figure.caption.318}
-\contentsline {figure}{\numberline {7.21}{\ignorespaces Test scenario for \emph {Emergency head on approach} (Intruder avoidance). \relax }}{150}{figure.caption.326}
-\contentsline {figure}{\numberline {7.22}{\ignorespaces Distance to safety margin evolution for \emph {emergency head on scenario}.\relax }}{151}{figure.caption.328}
-\contentsline {figure}{\numberline {7.23}{\ignorespaces \emph {Trajectory tracking} for \emph {Emergency head on} test case. \relax }}{152}{figure.caption.332}
-\contentsline {figure}{\numberline {7.24}{\ignorespaces Computation time for \emph {Emergency head on} scenario.\relax }}{153}{figure.caption.336}
-\contentsline {figure}{\numberline {7.25}{\ignorespaces Test scenario for \emph {Emergency mixed} situation with \emph {self-separation mode}.\relax }}{155}{figure.caption.344}
-\contentsline {figure}{\numberline {7.26}{\ignorespaces Distance to safety margin evolution for \emph {emergency mixed scenario}.\relax }}{156}{figure.caption.346}
-\contentsline {figure}{\numberline {7.27}{\ignorespaces Trajectory tracking for \emph {Emergency mixed} situation test case.\relax }}{157}{figure.caption.350}
-\contentsline {figure}{\numberline {7.28}{\ignorespaces Computation time for \emph {Emergency multiple} scenario.\relax }}{158}{figure.caption.354}
-\contentsline {figure}{\numberline {7.29}{\ignorespaces Test scenario for \emph {Rule based converging}. \relax }}{161}{figure.caption.362}
-\contentsline {figure}{\numberline {7.30}{\ignorespaces Distance to safety margin evolution for \emph {rule based converging scenario}.\relax }}{162}{figure.caption.366}
-\contentsline {figure}{\numberline {7.31}{\ignorespaces \emph {Trajectory tracking} for \emph {Rule based converging} test case. \relax }}{163}{figure.caption.370}
-\contentsline {figure}{\numberline {7.32}{\ignorespaces Computation time for \emph {Rule-based converging} scenario.\relax }}{164}{figure.caption.374}
-\contentsline {figure}{\numberline {7.33}{\ignorespaces Test scenario for \emph {Rule based head on approach} (virtual roundabout). \relax }}{167}{figure.caption.382}
-\contentsline {figure}{\numberline {7.34}{\ignorespaces Distance to safety margin evolution for \emph {rule based head on scenario}.\relax }}{168}{figure.caption.386}
-\contentsline {figure}{\numberline {7.35}{\ignorespaces \emph {Trajectory tracking} for \emph {Rule based head on} test case. \relax }}{169}{figure.caption.390}
-\contentsline {figure}{\numberline {7.36}{\ignorespaces Computation time for \emph {Rule-based head on} scenario.\relax }}{170}{figure.caption.394}
-\contentsline {figure}{\numberline {7.37}{\ignorespaces Test scenario for \emph {Rule based mixed} situation with \emph {self-separation mode}.\relax }}{173}{figure.caption.402}
-\contentsline {figure}{\numberline {7.38}{\ignorespaces Distance to safety margin evolution for \emph {rule based mixed scenario}.\relax }}{175}{figure.caption.406}
-\contentsline {figure}{\numberline {7.39}{\ignorespaces Trajectory tracking for \emph {Rule based mixed} situation test case.\relax }}{176}{figure.caption.410}
-\contentsline {figure}{\numberline {7.40}{\ignorespaces Computation time for \emph {Rule-based multiple} scenario.\relax }}{177}{figure.caption.414}
-\contentsline {figure}{\numberline {7.41}{\ignorespaces Test scenario for \emph {Rule based Overtake} (double speed of overtaking aircraft). \relax }}{180}{figure.caption.422}
-\contentsline {figure}{\numberline {7.42}{\ignorespaces \emph {Rule based overtake} trajectories for different speed.\relax }}{182}{figure.caption.428}
-\contentsline {figure}{\numberline {7.43}{\ignorespaces Overtake speed dependent distance to safety margin evolution for \emph {rule based overtake scenario}.\relax }}{182}{figure.caption.430}
-\contentsline {figure}{\numberline {7.44}{\ignorespaces Trajectory tracking for \emph {Rule based overtake double speed} situation test case.\relax }}{183}{figure.caption.434}
-\contentsline {figure}{\numberline {7.45}{\ignorespaces Computation time for \emph {Rule based overtake} scenario.\relax }}{184}{figure.caption.438}
-\contentsline {figure}{\numberline {7.46}{\ignorespaces Adversarial behaviour of \emph {UAS 2} (magenta) to compliant \emph {UAS 1} (blue)\relax }}{188}{figure.caption.442}
-\contentsline {figure}{\numberline {7.47}{\ignorespaces Expected/Real Distance to body/safety margin evolution for \emph {adversarial behaviour} of UAS 2.\relax }}{189}{figure.caption.444}
-\contentsline {figure}{\numberline {7.48}{\ignorespaces Chaotic reach set computation example.\relax }}{192}{figure.caption.449}
-\contentsline {figure}{\numberline {7.49}{\ignorespaces Harmonic reach set computation example.\relax }}{192}{figure.caption.451}
-\contentsline {figure}{\numberline {7.50}{\ignorespaces ACAS-like reach set computation example.\relax }}{193}{figure.caption.454}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Test scenario for \emph {Building avoidance} (static ground obstacles). \relax }}{131}{figure.caption.237}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Distance to body/safety margin evolution for \emph {Building avoidance scenario}.\relax }}{132}{figure.caption.239}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces \emph {Building avoidance} path tracking.\relax }}{133}{figure.caption.243}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Computation time for \emph {Building avoidance} scenario.\relax }}{133}{figure.caption.247}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Test scenario for \emph {Slalom} with \emph {hidden waypoint}. \relax }}{135}{figure.caption.256}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Distance to body/safety margin evolution for \emph {Slalom scenario}.\relax }}{136}{figure.caption.258}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces \emph {Slalom} path tracking.\relax }}{137}{figure.caption.262}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Computation time for \emph {Slalom} scenario.\relax }}{137}{figure.caption.266}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Test scenario for \emph {Maze}. \relax }}{140}{figure.caption.275}
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Distance to body/safety margin evolution for \emph {Maze scenario}.\relax }}{141}{figure.caption.277}
+\contentsline {figure}{\numberline {7.11}{\ignorespaces \emph {Maze} path tracking.\relax }}{142}{figure.caption.281}
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Computation time for \emph {Maze} scenario.\relax }}{142}{figure.caption.285}
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Test scenario for \emph {Storm} (Dynamic hard constraint). \relax }}{144}{figure.caption.295}
+\contentsline {figure}{\numberline {7.14}{\ignorespaces Distance to body/safety margin evolution for \emph {Storm scenario}.\relax }}{145}{figure.caption.297}
+\contentsline {figure}{\numberline {7.15}{\ignorespaces \emph {Storm} path tracking.\relax }}{146}{figure.caption.301}
+\contentsline {figure}{\numberline {7.16}{\ignorespaces Computation time for \emph {Maze} scenario.\relax }}{146}{figure.caption.305}
+\contentsline {figure}{\numberline {7.17}{\ignorespaces Test scenario for \emph {Emergency converging} (Intruder avoidance). \relax }}{149}{figure.caption.313}
+\contentsline {figure}{\numberline {7.18}{\ignorespaces Distance to safety margin evolution for \emph {emergency converging scenario}.\relax }}{150}{figure.caption.315}
+\contentsline {figure}{\numberline {7.19}{\ignorespaces \emph {Trajectory tracking} for \emph {Emergency converging} test case. \relax }}{151}{figure.caption.319}
+\contentsline {figure}{\numberline {7.20}{\ignorespaces Computation time for \emph {Emergency converging} scenario.\relax }}{152}{figure.caption.323}
+\contentsline {figure}{\numberline {7.21}{\ignorespaces Test scenario for \emph {Emergency head on approach} (Intruder avoidance). \relax }}{154}{figure.caption.331}
+\contentsline {figure}{\numberline {7.22}{\ignorespaces Distance to safety margin evolution for \emph {emergency head on scenario}.\relax }}{155}{figure.caption.333}
+\contentsline {figure}{\numberline {7.23}{\ignorespaces \emph {Trajectory tracking} for \emph {Emergency head on} test case. \relax }}{156}{figure.caption.337}
+\contentsline {figure}{\numberline {7.24}{\ignorespaces Computation time for \emph {Emergency head on} scenario.\relax }}{157}{figure.caption.341}
+\contentsline {figure}{\numberline {7.25}{\ignorespaces Test scenario for \emph {Emergency mixed} situation with \emph {self-separation mode}.\relax }}{159}{figure.caption.349}
+\contentsline {figure}{\numberline {7.26}{\ignorespaces Distance to safety margin evolution for \emph {emergency mixed scenario}.\relax }}{160}{figure.caption.351}
+\contentsline {figure}{\numberline {7.27}{\ignorespaces Trajectory tracking for \emph {Emergency mixed} situation test case.\relax }}{161}{figure.caption.355}
+\contentsline {figure}{\numberline {7.28}{\ignorespaces Computation time for \emph {Emergency multiple} scenario.\relax }}{162}{figure.caption.359}
+\contentsline {figure}{\numberline {7.29}{\ignorespaces Test scenario for \emph {Rule based converging}. \relax }}{165}{figure.caption.367}
+\contentsline {figure}{\numberline {7.30}{\ignorespaces Distance to safety margin evolution for \emph {rule based converging scenario}.\relax }}{166}{figure.caption.371}
+\contentsline {figure}{\numberline {7.31}{\ignorespaces \emph {Trajectory tracking} for \emph {Rule based converging} test case. \relax }}{167}{figure.caption.375}
+\contentsline {figure}{\numberline {7.32}{\ignorespaces Computation time for \emph {Rule-based converging} scenario.\relax }}{168}{figure.caption.379}
+\contentsline {figure}{\numberline {7.33}{\ignorespaces Test scenario for \emph {Rule based head on approach} (virtual roundabout). \relax }}{171}{figure.caption.387}
+\contentsline {figure}{\numberline {7.34}{\ignorespaces Distance to safety margin evolution for \emph {rule based head on scenario}.\relax }}{172}{figure.caption.391}
+\contentsline {figure}{\numberline {7.35}{\ignorespaces \emph {Trajectory tracking} for \emph {Rule based head on} test case. \relax }}{173}{figure.caption.395}
+\contentsline {figure}{\numberline {7.36}{\ignorespaces Computation time for \emph {Rule-based head on} scenario.\relax }}{174}{figure.caption.399}
+\contentsline {figure}{\numberline {7.37}{\ignorespaces Test scenario for \emph {Rule based mixed} situation with \emph {self-separation mode}.\relax }}{177}{figure.caption.407}
+\contentsline {figure}{\numberline {7.38}{\ignorespaces Distance to safety margin evolution for \emph {rule based mixed scenario}.\relax }}{179}{figure.caption.411}
+\contentsline {figure}{\numberline {7.39}{\ignorespaces Trajectory tracking for \emph {Rule based mixed} situation test case.\relax }}{180}{figure.caption.415}
+\contentsline {figure}{\numberline {7.40}{\ignorespaces Computation time for \emph {Rule-based multiple} scenario.\relax }}{181}{figure.caption.419}
+\contentsline {figure}{\numberline {7.41}{\ignorespaces Test scenario for \emph {Rule based Overtake} (double speed of overtaking aircraft). \relax }}{184}{figure.caption.427}
+\contentsline {figure}{\numberline {7.42}{\ignorespaces \emph {Rule based overtake} trajectories for different speed.\relax }}{186}{figure.caption.433}
+\contentsline {figure}{\numberline {7.43}{\ignorespaces Overtake speed dependent distance to safety margin evolution for \emph {rule based overtake scenario}.\relax }}{186}{figure.caption.435}
+\contentsline {figure}{\numberline {7.44}{\ignorespaces Trajectory tracking for \emph {Rule based overtake double speed} situation test case.\relax }}{187}{figure.caption.439}
+\contentsline {figure}{\numberline {7.45}{\ignorespaces Computation time for \emph {Rule based overtake} scenario.\relax }}{188}{figure.caption.443}
+\contentsline {figure}{\numberline {7.46}{\ignorespaces Adversarial behaviour of \emph {UAS 2} (magenta) to compliant \emph {UAS 1} (blue)\relax }}{192}{figure.caption.447}
+\contentsline {figure}{\numberline {7.47}{\ignorespaces Expected/Real Distance to body/safety margin evolution for \emph {adversarial behaviour} of UAS 2.\relax }}{193}{figure.caption.449}
+\contentsline {figure}{\numberline {7.48}{\ignorespaces Chaotic reach set computation example.\relax }}{196}{figure.caption.454}
+\contentsline {figure}{\numberline {7.49}{\ignorespaces Harmonic reach set computation example.\relax }}{196}{figure.caption.456}
+\contentsline {figure}{\numberline {7.50}{\ignorespaces ACAS-like reach set computation example.\relax }}{197}{figure.caption.459}
 \addvspace {10\p@ }
