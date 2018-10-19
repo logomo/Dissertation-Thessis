@@ -32,6 +32,11 @@ Glenn~K Rutledge, Jordan Alpert, and Wesley Ebisuzaki.
 \newblock {\em Bulletin of the American Meteorological Society},
   87(3):327--341, 2006.
 
+\bibitem{gomola2017obstacle}
+Alojz Gomola, Jo{\~a}o~Borges de~Sousa, Fernando~Lobo Pereira, and Pavel Klang.
+\newblock Obstacle avoidance framework based on reach sets.
+\newblock In {\em Iberian Robotics conference}, pages 768--779. Springer, 2017.
+
 \bibitem{frazzoli2001robust}
 Emilio Frazzoli.
 \newblock {\em Robust hybrid control for autonomous vehicle motion planning}.
@@ -297,11 +302,6 @@ Emilio Frazzoli, Munther~A Dahleh, and Eric Feron.
   backstepping algorithm.
 \newblock In {\em American Control Conference, 2000. Proceedings of the 2000},
   volume~6, pages 4102--4107. IEEE, 2000.
-
-\bibitem{gomola2017obstacle}
-Alojz Gomola, Jo{\~a}o~Borges de~Sousa, Fernando~Lobo Pereira, and Pavel Klang.
-\newblock Obstacle avoidance framework based on reach sets.
-\newblock In {\em Iberian Robotics conference}, pages 768--779. Springer, 2017.
 
 \bibitem{lazar2006model}
 Mircea Lazar.
