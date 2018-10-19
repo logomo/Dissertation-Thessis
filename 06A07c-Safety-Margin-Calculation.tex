@@ -1,0 +1,15 @@
+\subsection{(W) Safety margin calculation}\label{s:safetyMarginCalculation}
+    How to assess safety margin and what impacts it:
+    \begin{itemize}
+        \item Own uncertainity 
+        \item Intruder uncertainity 
+        \item Weather
+        \item Airspace
+        \item UTM corrections
+    \end{itemize}
+    
+    Note \emph{Both UAS} decision times were \emph{synchronized}, this is not an assumption, but it shows critical performance. Usually safety margin is bloated for:
+            \begin{equation}\label{safetyMarginBloat}
+                safetyMarginBloat = \left( \begin{aligned}
+                &intruderVelocity \times\dots \\ &intruderDecisionFrame \end{aligned}\right)[m,ms^{-1},s]
+            \end{equation}
