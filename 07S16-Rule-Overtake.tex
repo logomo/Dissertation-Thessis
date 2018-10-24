@@ -1,3 +1,4 @@
+\newpage
 \subsection{Rule based Overtake}\label{s:testRuleOvertake}
     \paragraph{Scenario:} Two UAS are flying in the \emph{controlled airspace} (over 500 feet Above Ground Level) on the \emph{airway} (in same direction). \emph{Slower UAS} is in front of \emph{Faster UAS}. There is possibility of a \emph{collision} or a \emph{near miss incident} or a \emph{well clear breach}. The \emph{Faster UAS} (Overtaking) must contact \emph{UTM} service and ask for \emph{overtake permission}. Scenario steps:
     
@@ -170,7 +171,7 @@
         \caption{\emph{Rule based overtake} trajectories for different speed.}
         \label{fig:testCaseRuleBasedOvertakeDifferentSpeedTrajectoriesPerformance}
     \end{figure}
-    
+    \newpage
     \paragraph{Overtake Speed: Impact on Distance to Safety Margin Evolution} \emph{Safety margin} (red line) is set to \emph{5 m}. It is obvious that \emph{Faster UAS} will take down \emph{Slower UAS} if there was not for an \emph{Overtake maneuver}.  The distance of \emph{Faster UAS} to \emph{Slower UAS} evolution is depending on \emph{Speed difference}. \emph{Inflection point} (closest point of two UAS) is reached sooner with \emph{Higher speed}. \emph{Safety margin performance} was measured for the \emph{UTM performance time} in interval $[0,35]$ $s$ and \emph{Speed difference} of 2x (blue), 3x (green), 4x (black).
     
     \begin{figure}[H]
@@ -236,6 +237,7 @@
         \label{fig:testCaseRuleBasedOvertake2xTrajectoryTracking}
     \end{figure}
     
+	\newpage
     \paragraph{Path Tracking Deviations: 2x Speed} Path tracking deviations (tab. \ref{tab:pathTrackingParametersForRuleBasedOvertake2x}) are interesting for an \emph{Overtake Maneuver} performance. 
     
     \emph{Maximal deviation distance} is for important waypoints: Divergence ($\mathscr{WP}$ 2.), Convergence ($\mathscr{WP}$ 3.) and Original Goal Waypoint ($\mathscr{WP}$ 4.), equal to $0$ $m$. This is \emph{desired effect} for \emph{Overtake maneuver}.

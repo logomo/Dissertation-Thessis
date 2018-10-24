@@ -1,3 +1,4 @@
+\newpage
 \subsection{Emergency Converging}\label{s:testEmergencyConverging}
 
 \paragraph{Scenario:} Two \emph{UAS} are flying in an \emph{uncontrolled airspace} (altitude $\le$ 500 ft. Above the Ground Level) with missions defined in (tab. \ref{tab:missionSetupEmergencyConvergingScenario}). Both \emph{UAS} are in the \emph{Navigation mode} with active \emph{ADSB-In/Out}, receiving position notification from each other. Cruising altitude is sufficient for horizontal separation (50-100 ft. Above the Ground Level). \emph{Horizontal separation} is preferred separation type for both \emph{UAS}.
@@ -108,6 +109,8 @@
 \end{figure}
 
 
+
+\newpage
 \paragraph{Distance to Safety Margin Evolution:} There is need to compare mutual distance between both UAS (y-axis [m]) and its evolution over UTM time (x-axis [s]). The \emph{mutual} distance of \emph{UAS 1} to \emph{UAS 2} is given by \emph{blue line}. The \emph{Safety margin} value is denoted by red line at \emph{constant value} of $1.2$ $m$.
 
 The \emph{Proper avoidance Invocation} is shown when UAS systems are getting closer to each other and they enter (Emergency Avoidance Mode) to provide \emph{active separation}. The \emph{Mutual distance evolution} (blue line) does not cross \emph{safety margin} (red line).
@@ -134,6 +137,7 @@ The \emph{minimal distance to safety margin  $\ge$ 0} which means that the \emph
     \label{tab:testCaseEmergencyConvergingSafetyMarginDistances}
 \end{table}
 
+\newpage
 \paragraph{Path Tracking Performance:} All waypoints (green numbered squares) for both  UAS have been reached (fig. \ref{fig:emergencyConvergingTrajectoryTrackingPerformance}). \emph{Reference trajectories} (green dashed lines), between initial position (green square marked S) and goal waypoint (green square marked 1) are split into three XYZ values with respective figures. The tracked value is on y-axis [m] and time on x-axis [s]. The blue lines represents real parameter evolution over time.
 
 Following observations can be made from path tracking (fig. \ref{fig:emergencyConvergingTrajectoryTrackingPerformance}) and preferred separations (tab. \ref{tab:aboidanceParametersForEmergencyConvergingScenario}):
@@ -177,6 +181,7 @@ Following observations can be made from path tracking (fig. \ref{fig:emergencyCo
     \label{tab:pathTrackingParametersForEmergencyConverging}
 \end{table}
 
+\newpage
 % 05 Emergency Converging
 \paragraph{Computation Load:} The \emph{computation load} for \emph{scenario} (fig.\ref{fig:emergencyConvergingComputationTime}) shows used time (y-axis) over decision frame (x-axis).
 
