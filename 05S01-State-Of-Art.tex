@@ -2,13 +2,21 @@
 
 \noindent This  chapter is introducing notable works and concepts of fellow \emph{researchers} i the field of \emph{control theory}, \emph{software engineering} and other essential fields used in \emph{Detect and Avoid} systems.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{\FIGDIR/TE001BlockSchemeOfControlConcept} 
+    \caption{Obstacle avoidance based on Reach sets concept \cite{gomola2017obstacle}.}
+    \label{fig:avoidanceConcept}
+\end{figure}
+
 \paragraph{Conceptual scheme:} The overall concept of \emph{Detect and Avoid Framework} (fig. \ref{fig:avoidanceConcept}) is taking architecture from LSTS tool chain \cite{pinto2013lsts,pinto2012implementation}. The UAS part is based on \emph{LSTS Dune} and it can be easily integrated in future. 
 
 \begin{enumerate}
     \item \emph{Continuous control} - is not solved in this work, its kept in scheme for reference. 
     
     \item \emph{Discrete control} - it bridges event based \emph{Detect and Avoid} core functionality with \emph{Continuous control}. Its covered by \emph{Movement Automaton} (sec. \ref{s:movementAutomatonTheory}).
-    
+
+	\newpage    
     \item \emph{Event based control} - covers major functionalists:    
     \begin{enumerate}[a.]
         \item \emph{Sensor (Data) fusion} - the main feed of information, implementation of \emph{sensor fusion} (sec. \ref{s:SensorFusionDefinition}) and \emph{data fusion} (sec. \ref{s:dataFusionDefinition}) contributing the avoidance events, introduced in (sec. \ref{s:dataFusionProbabilisticModelTheory}).
@@ -21,13 +29,6 @@
     \end{enumerate}
     
 \end{enumerate}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{\FIGDIR/TE001BlockSchemeOfControlConcept} 
-    \caption{Obstacle avoidance based on Reach sets concept \cite{gomola2017obstacle}.}
-    \label{fig:avoidanceConcept}
-\end{figure}
 
 \section{(R) Movement Automaton}\label{s:movementAutomatonTheory}
 
@@ -236,7 +237,7 @@ Example of software architecture implementation is shown in figure \ref{fig:lsts
 
 The \textit{Inter-Module Communication} \cite{martins2009imc} (IMC) protocol was developed by LSTS to provide reliable communication between the systems.  The protocol is message-oriented, such that messages can be sent and received from a bus which connects independently run threads or systems.  Thus it functions as a method of communication between tasks internally in Dune, and can also be passed to and from other vehicles or computers running Dune or Neptus.  IMC is platform independent at multiple messages have been already developed and supported by both DUNE and Neptus (around 400 status/command messages).
 
-\textit{HUB} is communication hub for data dissemination and situation awareness. This module is responsible for complex mission execution, when cooperation of multiple pilots/vehicles is required. This module can be imagined as airport tower center, which is monitoring all flights in airport (operation site) area. This tool implements REST API for communication between various ground stations and operating vehicles.
+\textit{HUB} is communication hub for data dissemination and situation awareness. This module is responsible for complex mission execution, when cooperation of multiple pilots/vehicles is required. This module can be imagined as airport tower center, which is monitoring all flights in airport (operation site) area.
 
 \paragraph{Movement Automaton Control} Marconi used \emph{hybrid automaton} with forced \emph{State Switch} via buffer \cite{marconi2009control}. The key concept is that \emph{Automata} state switch is forced as \emph{external source command}. Our \emph{Movement Automaton} implementation know only \emph{forced state switch} like in \cite{frazzoli2000trajectory}. 
 
