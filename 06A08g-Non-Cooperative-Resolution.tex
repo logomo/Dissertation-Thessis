@@ -51,8 +51,12 @@ There is no \emph{final decision maker} nor \emph{supervising authority}, all co
 \paragraph{Response mode scenario example:} The \emph{main UAS(1)} is going to collide with other \emph{UAS}(2-4):
 \begin{enumerate}
     \item $UAS(1) \to UAS(2-4)$ sends position and heading notification.
-    \item $\circlearrowright UAS(2-4)$ calculates possible collision.
+    \item $\circlearrowright UAS(2-4)$ calculates possible collisions.
     \item $UAS(2-4) \to UAS(1)$ sends response to the \emph{main UAS(1)} with claimed separation mode. 
     \item $\circlearrowright UAS(1)$ acknowledges proposed \emph{separation modes}.
     \item $\circlearrowright UAS(1-4)$ avoids each other using claimed separation mode, because every \emph{UAS} achieved \emph{consensus}.
 \end{enumerate}
+
+\begin{note}
+	The mutual consensus is not usually achieved via C2 communication. The most common case is \emph{assuming separation mode}. This case is shown in (sec. \ref{s:testEmergencyMixed})
+\end{note}
