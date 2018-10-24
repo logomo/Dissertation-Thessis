@@ -764,6 +764,11 @@ Kyle~D Julian, Jessica Lopez, Jeffrey~S Brush, Michael~P Owen, and Mykel~J
 \newblock In {\em Digital Avionics Systems Conference (DASC), 2016 IEEE/AIAA
   35th}, pages 1--10. IEEE, 2016.
 
+\bibitem{icao4444}
+ICAO.
+\newblock 4444: Procedures for air navigation services.
+\newblock Technical report, ICAO, 2018.
+
 \bibitem{sabatini2013low}
 Roberto Sabatini, Subramanian Ramasamy, Alessandro Gardi, and
   Leopoldo~Rodriguez Salazar.
@@ -831,11 +836,6 @@ Subramanian Ramasamy, Roberto Sabatini, A~Gardi, and Yifang Liu.
   based operations.
 \newblock In {\em proceedings of AIAA Guidance, Navigation, and Control
   Conference}, 2013.
-
-\bibitem{icao4444}
-ICAO.
-\newblock 4444: Procedures for air navigation services.
-\newblock Technical report, ICAO, 2018.
 
 \bibitem{subotic2007recovery}
 Branka Subotic, Arnab Majumdar, and Washington~Y Ochieng.

@@ -734,165 +734,194 @@
 \newlabel{s:avoidanceConcept}{{6.7}{89}{(W) Avoidance concept}{section.6.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.7.1}(W) Overview}{89}{subsection.6.7.1}}
 \newlabel{s:avoidanceAlgorithmOverView}{{6.7.1}{89}{(W) Overview}{subsection.6.7.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.2}(R) Data fusion}{90}{subsection.6.7.2}}
+\newlabel{s:sensorFusion}{{6.7.2}{90}{(R) Data fusion}{subsection.6.7.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Visibility:}{90}{section*.162}}
+\newlabel{eq:visibilityForCell}{{6.52}{90}{Visibility:}{equation.6.7.52}{}}
+\@writefile{toc}{\contentsline {paragraph}{Detected Obstacle:}{90}{section*.163}}
+\newlabel{eq:detectedObstacleRatingForCell}{{6.53}{90}{Detected Obstacle:}{equation.6.7.53}{}}
+\@writefile{toc}{\contentsline {paragraph}{Map Obstacle:}{90}{section*.164}}
+\newlabel{eq:mapObstacleRatingForCell}{{6.54}{91}{Map Obstacle:}{equation.6.7.54}{}}
+\@writefile{toc}{\contentsline {paragraph}{Intruder:}{91}{section*.165}}
+\newlabel{eq:intruderRatingForCell}{{6.55}{91}{Intruder:}{equation.6.7.55}{}}
+\@writefile{toc}{\contentsline {paragraph}{Constraint:}{91}{section*.166}}
+\newlabel{eq:constraintRatingForCell}{{6.56}{91}{Constraint:}{equation.6.7.56}{}}
+\@writefile{toc}{\contentsline {paragraph}{Threat:}{91}{section*.167}}
+\newlabel{def:threat}{{24}{91}{}{definition.24}{}}
+\newlabel{eq:threatRatingForCell}{{6.57}{91}{}{equation.6.7.57}{}}
+\citation{icao4444}
+\@writefile{toc}{\contentsline {paragraph}{Reachibility:}{92}{section*.168}}
+\newlabel{eq:trajectoryReachibility}{{6.58}{92}{Reachibility:}{equation.6.7.58}{}}
+\newlabel{eq:cellReachibility}{{6.59}{92}{Reachibility:}{equation.6.7.59}{}}
+\@writefile{toc}{\contentsline {paragraph}{Discretization:}{92}{section*.169}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces Changing ratings from fuzzy to Boolean parameters.\relax }}{92}{table.caption.170}}
+\newlabel{tab:defuzificationRatings}{{6.5}{92}{Changing ratings from fuzzy to Boolean parameters.\relax }{table.caption.170}{}}
+\@writefile{toc}{\contentsline {paragraph}{Space Classification:}{93}{section*.171}}
+\newlabel{eq:UncertainDataFusion}{{6.60}{93}{Space Classification:}{equation.6.7.60}{}}
+\newlabel{eq:ocuupiedDataFusion}{{6.61}{93}{Space Classification:}{equation.6.7.61}{}}
+\newlabel{eq:constrainedDataFusion}{{6.62}{93}{Space Classification:}{equation.6.7.62}{}}
+\newlabel{eq:freeDataFusion}{{6.63}{93}{Space Classification:}{equation.6.7.63}{}}
+\newlabel{eq:ReachableDataFusion}{{6.64}{93}{Space Classification:}{equation.6.7.64}{}}
+\newlabel{eq:reachableDataFusionConstraints}{{6.65}{93}{}{equation.6.7.65}{}}
 \citation{sabatini2013low}
 \citation{shaw1998using}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.2}(W) Avoidance grid run}{90}{subsection.6.7.2}}
-\newlabel{s:aviudabceGridRun}{{6.7.2}{90}{(W) Avoidance grid run}{subsection.6.7.2}{}}
-\newlabel{fig:obstacleDetectionAvoidanceGrid}{{6.14a}{90}{Obstacle detection.\relax }{figure.caption.162}{}}
-\newlabel{sub@fig:obstacleDetectionAvoidanceGrid}{{a}{90}{Obstacle detection.\relax }{figure.caption.162}{}}
-\newlabel{fig:uncertainityAssesmentAvoidanceGrid}{{6.14b}{90}{Uncertainty assessment.\relax }{figure.caption.162}{}}
-\newlabel{sub@fig:uncertainityAssesmentAvoidanceGrid}{{b}{90}{Uncertainty assessment.\relax }{figure.caption.162}{}}
-\newlabel{fig:trajectoriesSafetyEvaluationAvoidanceGrid}{{6.14c}{90}{Trajectories safety evaluation.\relax }{figure.caption.162}{}}
-\newlabel{sub@fig:trajectoriesSafetyEvaluationAvoidanceGrid}{{c}{90}{Trajectories safety evaluation.\relax }{figure.caption.162}{}}
-\newlabel{fig:reachibilityAssessmentAvoidanceGrid}{{6.14d}{90}{Reachibility evaluation.\relax }{figure.caption.162}{}}
-\newlabel{sub@fig:reachibilityAssessmentAvoidanceGrid}{{d}{90}{Reachibility evaluation.\relax }{figure.caption.162}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Significant steps of \emph  {Avoidance grid run} (inner loop).\relax }}{90}{figure.caption.162}}
-\newlabel{fig:significantStepsofAvoidanceGridRun}{{6.14}{90}{Significant steps of \emph {Avoidance grid run} (inner loop).\relax }{figure.caption.162}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.15}{\ignorespaces Example: The situation to be evaluated by \emph  {Avoidance Run}.\relax }}{91}{figure.caption.164}}
-\newlabel{fig:exampleSituationAvoidanceRun}{{6.15}{91}{Example: The situation to be evaluated by \emph {Avoidance Run}.\relax }{figure.caption.164}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.16}{\ignorespaces Example: The \emph  {Obstacle Rating} evaluation by \emph  {Avoidance Run}.\relax }}{91}{figure.caption.165}}
-\newlabel{fig:exampleObstacleRatingEvaluation}{{6.16}{91}{Example: The \emph {Obstacle Rating} evaluation by \emph {Avoidance Run}.\relax }{figure.caption.165}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.17}{\ignorespaces Example: The \emph  {Visibility} evaluation by \emph  {Avoidance Run}.\relax }}{92}{figure.caption.166}}
-\newlabel{fig:exampleVisibilityEvaluation}{{6.17}{92}{Example: The \emph {Visibility} evaluation by \emph {Avoidance Run}.\relax }{figure.caption.166}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.3}(W) Avoidance grid run}{94}{subsection.6.7.3}}
+\newlabel{s:aviudabceGridRun}{{6.7.3}{94}{(W) Avoidance grid run}{subsection.6.7.3}{}}
+\newlabel{fig:obstacleDetectionAvoidanceGrid}{{6.14a}{94}{Obstacle detection.\relax }{figure.caption.172}{}}
+\newlabel{sub@fig:obstacleDetectionAvoidanceGrid}{{a}{94}{Obstacle detection.\relax }{figure.caption.172}{}}
+\newlabel{fig:uncertainityAssesmentAvoidanceGrid}{{6.14b}{94}{Uncertainty assessment.\relax }{figure.caption.172}{}}
+\newlabel{sub@fig:uncertainityAssesmentAvoidanceGrid}{{b}{94}{Uncertainty assessment.\relax }{figure.caption.172}{}}
+\newlabel{fig:trajectoriesSafetyEvaluationAvoidanceGrid}{{6.14c}{94}{Trajectories safety evaluation.\relax }{figure.caption.172}{}}
+\newlabel{sub@fig:trajectoriesSafetyEvaluationAvoidanceGrid}{{c}{94}{Trajectories safety evaluation.\relax }{figure.caption.172}{}}
+\newlabel{fig:reachibilityAssessmentAvoidanceGrid}{{6.14d}{94}{Reachibility evaluation.\relax }{figure.caption.172}{}}
+\newlabel{sub@fig:reachibilityAssessmentAvoidanceGrid}{{d}{94}{Reachibility evaluation.\relax }{figure.caption.172}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Significant steps of \emph  {Avoidance grid run} (inner loop).\relax }}{94}{figure.caption.172}}
+\newlabel{fig:significantStepsofAvoidanceGridRun}{{6.14}{94}{Significant steps of \emph {Avoidance grid run} (inner loop).\relax }{figure.caption.172}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.15}{\ignorespaces Example: The situation to be evaluated by \emph  {Avoidance Run}.\relax }}{95}{figure.caption.174}}
+\newlabel{fig:exampleSituationAvoidanceRun}{{6.15}{95}{Example: The situation to be evaluated by \emph {Avoidance Run}.\relax }{figure.caption.174}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.16}{\ignorespaces Example: The \emph  {Obstacle Rating} evaluation by \emph  {Avoidance Run}.\relax }}{95}{figure.caption.175}}
+\newlabel{fig:exampleObstacleRatingEvaluation}{{6.16}{95}{Example: The \emph {Obstacle Rating} evaluation by \emph {Avoidance Run}.\relax }{figure.caption.175}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.17}{\ignorespaces Example: The \emph  {Visibility} evaluation by \emph  {Avoidance Run}.\relax }}{96}{figure.caption.176}}
+\newlabel{fig:exampleVisibilityEvaluation}{{6.17}{96}{Example: The \emph {Visibility} evaluation by \emph {Avoidance Run}.\relax }{figure.caption.176}{}}
 \citation{sabatini2014navigation,Sabatini2014}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.18}{\ignorespaces Example: The \emph  {Reachibility} evaluation by \emph  {Avoidance Run}.\relax }}{93}{figure.caption.167}}
-\newlabel{fig:exampleReachibilityEvaluation}{{6.18}{93}{Example: The \emph {Reachibility} evaluation by \emph {Avoidance Run}.\relax }{figure.caption.167}{}}
-\@writefile{toc}{\contentsline {paragraph}{Avoidance Run Evaluation}{93}{figure.caption.167}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.3}(W) Mission control run}{93}{subsection.6.7.3}}
-\newlabel{s:missionControlRun}{{6.7.3}{93}{(W) Mission control run}{subsection.6.7.3}{}}
-\newlabel{fig:missionControlRunExample}{{6.19a}{94}{Mission control run example.\relax }{figure.caption.168}{}}
-\newlabel{sub@fig:missionControlRunExample}{{a}{94}{Mission control run example.\relax }{figure.caption.168}{}}
-\newlabel{fig:gridZonesMissionControl}{{6.19b}{94}{Grid zones.\relax }{figure.caption.168}{}}
-\newlabel{sub@fig:gridZonesMissionControl}{{b}{94}{Grid zones.\relax }{figure.caption.168}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.19}{\ignorespaces Definitions for \emph  {Mission Control Run} (outer loop).\relax }}{94}{figure.caption.168}}
-\newlabel{fig:definitionsForMissionControlRun}{{6.19}{94}{Definitions for \emph {Mission Control Run} (outer loop).\relax }{figure.caption.168}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.20}{\ignorespaces Mission control run activity diagram.\relax }}{94}{figure.caption.169}}
-\newlabel{fig:missionControlRunActivityDiagram}{{6.20}{94}{Mission control run activity diagram.\relax }{figure.caption.169}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.4}(W) Safety margin calculation}{94}{subsection.6.7.4}}
-\newlabel{s:safetyMarginCalculation}{{6.7.4}{94}{(W) Safety margin calculation}{subsection.6.7.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.18}{\ignorespaces Example: The \emph  {Reachibility} evaluation by \emph  {Avoidance Run}.\relax }}{97}{figure.caption.177}}
+\newlabel{fig:exampleReachibilityEvaluation}{{6.18}{97}{Example: The \emph {Reachibility} evaluation by \emph {Avoidance Run}.\relax }{figure.caption.177}{}}
+\@writefile{toc}{\contentsline {paragraph}{Avoidance Run Evaluation}{97}{figure.caption.177}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.4}(W) Mission control run}{97}{subsection.6.7.4}}
+\newlabel{s:missionControlRun}{{6.7.4}{97}{(W) Mission control run}{subsection.6.7.4}{}}
+\newlabel{fig:missionControlRunExample}{{6.19a}{98}{Mission control run example.\relax }{figure.caption.178}{}}
+\newlabel{sub@fig:missionControlRunExample}{{a}{98}{Mission control run example.\relax }{figure.caption.178}{}}
+\newlabel{fig:gridZonesMissionControl}{{6.19b}{98}{Grid zones.\relax }{figure.caption.178}{}}
+\newlabel{sub@fig:gridZonesMissionControl}{{b}{98}{Grid zones.\relax }{figure.caption.178}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.19}{\ignorespaces Definitions for \emph  {Mission Control Run} (outer loop).\relax }}{98}{figure.caption.178}}
+\newlabel{fig:definitionsForMissionControlRun}{{6.19}{98}{Definitions for \emph {Mission Control Run} (outer loop).\relax }{figure.caption.178}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.20}{\ignorespaces Mission control run activity diagram.\relax }}{98}{figure.caption.179}}
+\newlabel{fig:missionControlRunActivityDiagram}{{6.20}{98}{Mission control run activity diagram.\relax }{figure.caption.179}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.5}(W) Safety margin calculation}{98}{subsection.6.7.5}}
+\newlabel{s:safetyMarginCalculation}{{6.7.5}{98}{(W) Safety margin calculation}{subsection.6.7.5}{}}
 \citation{spriesterbach2013unmanned}
 \citation{zimmer2011rule}
 \citation{prevot2016uas}
 \citation{zimmer2014selective}
-\newlabel{safetyMarginBloat}{{6.52}{95}{(W) Safety margin calculation}{equation.6.7.52}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.8}(W) UAS Traffic Management}{95}{section.6.8}}
-\newlabel{sec:UASTrafficManagement}{{6.8}{95}{(W) UAS Traffic Management}{section.6.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.1}(R) Architecture}{95}{subsection.6.8.1}}
-\@writefile{toc}{\contentsline {paragraph}{UTM concept}{95}{section*.170}}
-\@writefile{toc}{\contentsline {paragraph}{Decision frame}{95}{section*.171}}
-\newlabel{eq:decisionFrameDefinition}{{6.53}{95}{Decision frame}{equation.6.8.53}{}}
+\newlabel{safetyMarginBloat}{{6.66}{99}{(W) Safety margin calculation}{equation.6.7.66}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.8}(W) UAS Traffic Management}{99}{section.6.8}}
+\newlabel{sec:UASTrafficManagement}{{6.8}{99}{(W) UAS Traffic Management}{section.6.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.1}(R) Architecture}{99}{subsection.6.8.1}}
+\@writefile{toc}{\contentsline {paragraph}{UTM concept}{99}{section*.180}}
+\@writefile{toc}{\contentsline {paragraph}{Decision frame}{99}{section*.181}}
+\newlabel{eq:decisionFrameDefinition}{{6.67}{99}{Decision frame}{equation.6.8.67}{}}
 \citation{ramasamy2014towards}
 \citation{ramasamy2013novel}
 \citation{ramasamy2014towards}
 \citation{icao4444}
-\@writefile{toc}{\contentsline {paragraph}{Event based airspace control}{96}{section*.172}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.21}{\ignorespaces UAS Traffic Management (UTM) architecture overview.\relax }}{96}{figure.caption.173}}
-\newlabel{fig:UTMArchitectureOverview}{{6.21}{96}{UAS Traffic Management (UTM) architecture overview.\relax }{figure.caption.173}{}}
-\@writefile{toc}{\contentsline {paragraph}{Architecture:}{96}{section*.174}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.2}(R) Cooperative Conflict Resolution}{96}{subsection.6.8.2}}
-\newlabel{sec:cooperativeConflictResolution}{{6.8.2}{96}{(R) Cooperative Conflict Resolution}{subsection.6.8.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Idea:}{96}{section*.175}}
-\@writefile{toc}{\contentsline {paragraph}{Goal:}{96}{section*.176}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.22}{\ignorespaces Cooperative conflict resolution via UTM authority.\relax }}{97}{figure.caption.177}}
-\newlabel{fig:CooperativeConflictResolutionUTM}{{6.22}{97}{Cooperative conflict resolution via UTM authority.\relax }{figure.caption.177}{}}
-\@writefile{toc}{\contentsline {paragraph}{Cooperative conflict resolution}{97}{section*.178}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.3}(R) Non-Cooperative Conflict Resolution}{97}{subsection.6.8.3}}
-\newlabel{sec:nonCooperativeConflictResolution}{{6.8.3}{97}{(R) Non-Cooperative Conflict Resolution}{subsection.6.8.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Idea:}{97}{section*.179}}
+\@writefile{toc}{\contentsline {paragraph}{Event based airspace control}{100}{section*.182}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.21}{\ignorespaces UAS Traffic Management (UTM) architecture overview.\relax }}{100}{figure.caption.183}}
+\newlabel{fig:UTMArchitectureOverview}{{6.21}{100}{UAS Traffic Management (UTM) architecture overview.\relax }{figure.caption.183}{}}
+\@writefile{toc}{\contentsline {paragraph}{Architecture:}{100}{section*.184}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.2}(R) Cooperative Conflict Resolution}{100}{subsection.6.8.2}}
+\newlabel{sec:cooperativeConflictResolution}{{6.8.2}{100}{(R) Cooperative Conflict Resolution}{subsection.6.8.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Idea:}{100}{section*.185}}
+\@writefile{toc}{\contentsline {paragraph}{Goal:}{100}{section*.186}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.22}{\ignorespaces Cooperative conflict resolution via UTM authority.\relax }}{101}{figure.caption.187}}
+\newlabel{fig:CooperativeConflictResolutionUTM}{{6.22}{101}{Cooperative conflict resolution via UTM authority.\relax }{figure.caption.187}{}}
+\@writefile{toc}{\contentsline {paragraph}{Cooperative conflict resolution}{101}{section*.188}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.3}(R) Non-Cooperative Conflict Resolution}{101}{subsection.6.8.3}}
+\newlabel{sec:nonCooperativeConflictResolution}{{6.8.3}{101}{(R) Non-Cooperative Conflict Resolution}{subsection.6.8.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Idea:}{101}{section*.189}}
 \citation{subotic2007recovery}
-\@writefile{toc}{\contentsline {paragraph}{Goal:}{98}{section*.180}}
-\@writefile{toc}{\contentsline {paragraph}{Conflict resolution:}{98}{section*.181}}
-\@writefile{toc}{\contentsline {paragraph}{Special cases in manned aviation:}{98}{section*.182}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.23}{\ignorespaces Non-cooperative conflict resolution via UAS claims.\relax }}{99}{figure.caption.183}}
-\newlabel{fig:NonCooperativeConflictResolutionUTM}{{6.23}{99}{Non-cooperative conflict resolution via UAS claims.\relax }{figure.caption.183}{}}
-\@writefile{toc}{\contentsline {paragraph}{Response mode scenario example:}{99}{section*.184}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.4}(W) Handling Head on Approach}{99}{subsection.6.8.4}}
-\newlabel{sec:handlingHeadOnApproach}{{6.8.4}{99}{(W) Handling Head on Approach}{subsection.6.8.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Goal:}{102}{section*.190}}
+\@writefile{toc}{\contentsline {paragraph}{Conflict resolution:}{102}{section*.191}}
+\@writefile{toc}{\contentsline {paragraph}{Special cases in manned aviation:}{102}{section*.192}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.23}{\ignorespaces Non-cooperative conflict resolution via UAS claims.\relax }}{103}{figure.caption.193}}
+\newlabel{fig:NonCooperativeConflictResolutionUTM}{{6.23}{103}{Non-cooperative conflict resolution via UAS claims.\relax }{figure.caption.193}{}}
+\@writefile{toc}{\contentsline {paragraph}{Response mode scenario example:}{103}{section*.194}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.4}(W) Handling Head on Approach}{103}{subsection.6.8.4}}
+\newlabel{sec:handlingHeadOnApproach}{{6.8.4}{103}{(W) Handling Head on Approach}{subsection.6.8.4}{}}
 \citation{bayen2005langrangian,kopardekar2002dynamic,helme1992optimization}
-\newlabel{fig:HeadOnApproachTheoreticalDetection}{{6.24a}{100}{Detection\relax }{figure.caption.185}{}}
-\newlabel{sub@fig:HeadOnApproachTheoreticalDetection}{{a}{100}{Detection\relax }{figure.caption.185}{}}
-\newlabel{fig:HeadOnApproachTheoreticalResolution}{{6.24b}{100}{Resolution/Closure\relax }{figure.caption.185}{}}
-\newlabel{sub@fig:HeadOnApproachTheoreticalResolution}{{b}{100}{Resolution/Closure\relax }{figure.caption.185}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.24}{\ignorespaces Head on approach detection/resolution/Closure\relax }}{100}{figure.caption.185}}
-\newlabel{fig:HeadOnApproachTheoretical}{{6.24}{100}{Head on approach detection/resolution/Closure\relax }{figure.caption.185}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.5}(W) Handling Converging Maneuver}{100}{subsection.6.8.5}}
-\newlabel{sec:handlingConvergingManuever}{{6.8.5}{100}{(W) Handling Converging Maneuver}{subsection.6.8.5}{}}
-\newlabel{fig:ConvergingManeuverTheoreticalDetection}{{6.25a}{100}{Detection\relax }{figure.caption.186}{}}
-\newlabel{sub@fig:ConvergingManeuverTheoreticalDetection}{{a}{100}{Detection\relax }{figure.caption.186}{}}
-\newlabel{fig:ConvergingManeuverTheoreticalResolution}{{6.25b}{100}{Resolution\relax }{figure.caption.186}{}}
-\newlabel{sub@fig:ConvergingManeuverTheoreticalResolution}{{b}{100}{Resolution\relax }{figure.caption.186}{}}
-\newlabel{fig:ConvergingManeuverTheoreticalClosure}{{6.25c}{100}{Closure\relax }{figure.caption.186}{}}
-\newlabel{sub@fig:ConvergingManeuverTheoreticalClosure}{{c}{100}{Closure\relax }{figure.caption.186}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.25}{\ignorespaces Converging maneuver detection/resolution/Closure\relax }}{100}{figure.caption.186}}
-\newlabel{fig:ConvergingManeuverTheoretical}{{6.25}{100}{Converging maneuver detection/resolution/Closure\relax }{figure.caption.186}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.6}(W) Handling Overtake Maneuver}{100}{subsection.6.8.6}}
-\newlabel{sec:handlingOvertakeManuever}{{6.8.6}{100}{(W) Handling Overtake Maneuver}{subsection.6.8.6}{}}
+\newlabel{fig:HeadOnApproachTheoreticalDetection}{{6.24a}{104}{Detection\relax }{figure.caption.195}{}}
+\newlabel{sub@fig:HeadOnApproachTheoreticalDetection}{{a}{104}{Detection\relax }{figure.caption.195}{}}
+\newlabel{fig:HeadOnApproachTheoreticalResolution}{{6.24b}{104}{Resolution/Closure\relax }{figure.caption.195}{}}
+\newlabel{sub@fig:HeadOnApproachTheoreticalResolution}{{b}{104}{Resolution/Closure\relax }{figure.caption.195}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.24}{\ignorespaces Head on approach detection/resolution/Closure\relax }}{104}{figure.caption.195}}
+\newlabel{fig:HeadOnApproachTheoretical}{{6.24}{104}{Head on approach detection/resolution/Closure\relax }{figure.caption.195}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.5}(W) Handling Converging Maneuver}{104}{subsection.6.8.5}}
+\newlabel{sec:handlingConvergingManuever}{{6.8.5}{104}{(W) Handling Converging Maneuver}{subsection.6.8.5}{}}
+\newlabel{fig:ConvergingManeuverTheoreticalDetection}{{6.25a}{104}{Detection\relax }{figure.caption.196}{}}
+\newlabel{sub@fig:ConvergingManeuverTheoreticalDetection}{{a}{104}{Detection\relax }{figure.caption.196}{}}
+\newlabel{fig:ConvergingManeuverTheoreticalResolution}{{6.25b}{104}{Resolution\relax }{figure.caption.196}{}}
+\newlabel{sub@fig:ConvergingManeuverTheoreticalResolution}{{b}{104}{Resolution\relax }{figure.caption.196}{}}
+\newlabel{fig:ConvergingManeuverTheoreticalClosure}{{6.25c}{104}{Closure\relax }{figure.caption.196}{}}
+\newlabel{sub@fig:ConvergingManeuverTheoreticalClosure}{{c}{104}{Closure\relax }{figure.caption.196}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.25}{\ignorespaces Converging maneuver detection/resolution/Closure\relax }}{104}{figure.caption.196}}
+\newlabel{fig:ConvergingManeuverTheoretical}{{6.25}{104}{Converging maneuver detection/resolution/Closure\relax }{figure.caption.196}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.6}(W) Handling Overtake Maneuver}{104}{subsection.6.8.6}}
+\newlabel{sec:handlingOvertakeManuever}{{6.8.6}{104}{(W) Handling Overtake Maneuver}{subsection.6.8.6}{}}
 \gdef \LT@ix {\LT@entry 
     {1}{126.21101pt}\LT@entry 
     {1}{329.03307pt}}
-\newlabel{fig:OvertakeManeuverTheoreticalDetection}{{6.26a}{101}{Detection\relax }{figure.caption.187}{}}
-\newlabel{sub@fig:OvertakeManeuverTheoreticalDetection}{{a}{101}{Detection\relax }{figure.caption.187}{}}
-\newlabel{fig:OvertakeManeuverTheoreticalResolution}{{6.26b}{101}{Resolution\relax }{figure.caption.187}{}}
-\newlabel{sub@fig:OvertakeManeuverTheoreticalResolution}{{b}{101}{Resolution\relax }{figure.caption.187}{}}
-\newlabel{fig:OvertakeManeuverTheoreticalClosure}{{6.26c}{101}{Closure\relax }{figure.caption.187}{}}
-\newlabel{sub@fig:OvertakeManeuverTheoreticalClosure}{{c}{101}{Closure\relax }{figure.caption.187}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.26}{\ignorespaces Overtake maneuver detection/resolution/Closure\relax }}{101}{figure.caption.187}}
-\newlabel{fig:OvertakeManeuverTheoretical}{{6.26}{101}{Overtake maneuver detection/resolution/Closure\relax }{figure.caption.187}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.7}(W) Position Notification}{101}{subsection.6.8.7}}
-\newlabel{sec:positionNotification}{{6.8.7}{101}{(W) Position Notification}{subsection.6.8.7}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces Time-stamped \emph  {position notification} structure.\relax }}{102}{table.6.5}}
-\newlabel{tab:positionNotification}{{6.5}{102}{Time-stamped \emph {position notification} structure.\relax }{table.6.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.8}(R) Collision Case}{102}{subsection.6.8.8}}
-\newlabel{sec:collisionCase}{{6.8.8}{102}{(R) Collision Case}{subsection.6.8.8}{}}
-\@writefile{toc}{\contentsline {paragraph}{Collision Case Purpose:}{102}{section*.188}}
-\@writefile{toc}{\contentsline {paragraph}{Resolution/Mandate Enforcement:}{102}{section*.189}}
-\@writefile{toc}{\contentsline {paragraph}{Threat Severity Evaluation:}{102}{section*.190}}
-\@writefile{toc}{\contentsline {paragraph}{Calculation procedure:}{102}{section*.191}}
-\@writefile{toc}{\contentsline {paragraph}{1\textsuperscript  {st}}{102}{section*.192}}
-\@writefile{toc}{\contentsline {paragraph}{2\textsuperscript  {nd}}{103}{section*.193}}
-\@writefile{toc}{\contentsline {paragraph}{3\textsuperscript  {rd}}{103}{section*.194}}
-\@writefile{toc}{\contentsline {paragraph}{4\textsuperscript  {th}}{103}{section*.195}}
-\@writefile{toc}{\contentsline {paragraph}{5\textsuperscript  {th}}{104}{section*.196}}
-\newlabel{eq:statePredictionCollisionCase}{{6.59}{104}{5\textsuperscript {th}}{equation.6.8.59}{}}
-\newlabel{eq:TrajectoryPredictionMinimalDistance}{{6.60}{104}{5\textsuperscript {th}}{equation.6.8.60}{}}
-\newlabel{eq:collisionPointTrajectoryPrediction}{{6.61}{104}{5\textsuperscript {th}}{equation.6.8.61}{}}
-\@writefile{toc}{\contentsline {paragraph}{6\textsuperscript  {th}}{105}{section*.197}}
-\@writefile{toc}{\contentsline {paragraph}{7\textsuperscript  {th}}{105}{section*.198}}
+\newlabel{fig:OvertakeManeuverTheoreticalDetection}{{6.26a}{105}{Detection\relax }{figure.caption.197}{}}
+\newlabel{sub@fig:OvertakeManeuverTheoreticalDetection}{{a}{105}{Detection\relax }{figure.caption.197}{}}
+\newlabel{fig:OvertakeManeuverTheoreticalResolution}{{6.26b}{105}{Resolution\relax }{figure.caption.197}{}}
+\newlabel{sub@fig:OvertakeManeuverTheoreticalResolution}{{b}{105}{Resolution\relax }{figure.caption.197}{}}
+\newlabel{fig:OvertakeManeuverTheoreticalClosure}{{6.26c}{105}{Closure\relax }{figure.caption.197}{}}
+\newlabel{sub@fig:OvertakeManeuverTheoreticalClosure}{{c}{105}{Closure\relax }{figure.caption.197}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.26}{\ignorespaces Overtake maneuver detection/resolution/Closure\relax }}{105}{figure.caption.197}}
+\newlabel{fig:OvertakeManeuverTheoretical}{{6.26}{105}{Overtake maneuver detection/resolution/Closure\relax }{figure.caption.197}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.7}(W) Position Notification}{105}{subsection.6.8.7}}
+\newlabel{sec:positionNotification}{{6.8.7}{105}{(W) Position Notification}{subsection.6.8.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces Time-stamped \emph  {position notification} structure.\relax }}{106}{table.6.6}}
+\newlabel{tab:positionNotification}{{6.6}{106}{Time-stamped \emph {position notification} structure.\relax }{table.6.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.8}(R) Collision Case}{106}{subsection.6.8.8}}
+\newlabel{sec:collisionCase}{{6.8.8}{106}{(R) Collision Case}{subsection.6.8.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Collision Case Purpose:}{106}{section*.198}}
+\@writefile{toc}{\contentsline {paragraph}{Resolution/Mandate Enforcement:}{106}{section*.199}}
+\@writefile{toc}{\contentsline {paragraph}{Threat Severity Evaluation:}{106}{section*.200}}
+\@writefile{toc}{\contentsline {paragraph}{Calculation procedure:}{106}{section*.201}}
+\@writefile{toc}{\contentsline {paragraph}{1\textsuperscript  {st}}{106}{section*.202}}
+\@writefile{toc}{\contentsline {paragraph}{2\textsuperscript  {nd}}{107}{section*.203}}
+\@writefile{toc}{\contentsline {paragraph}{3\textsuperscript  {rd}}{107}{section*.204}}
+\@writefile{toc}{\contentsline {paragraph}{4\textsuperscript  {th}}{107}{section*.205}}
+\@writefile{toc}{\contentsline {paragraph}{5\textsuperscript  {th}}{108}{section*.206}}
+\newlabel{eq:statePredictionCollisionCase}{{6.73}{108}{5\textsuperscript {th}}{equation.6.8.73}{}}
+\newlabel{eq:TrajectoryPredictionMinimalDistance}{{6.74}{108}{5\textsuperscript {th}}{equation.6.8.74}{}}
+\newlabel{eq:collisionPointTrajectoryPrediction}{{6.75}{108}{5\textsuperscript {th}}{equation.6.8.75}{}}
+\@writefile{toc}{\contentsline {paragraph}{6\textsuperscript  {th}}{109}{section*.207}}
+\@writefile{toc}{\contentsline {paragraph}{7\textsuperscript  {th}}{109}{section*.208}}
 \citation{bilimoria2005analysis}
 \citation{brinton2008airspace}
 \citation{fouladvand2004characteristics}
 \citation{mauro2010potential}
 \citation{ritter1990efficient,welzl1991smallest}
-\@writefile{toc}{\contentsline {paragraph}{Collision Case Chaining}{106}{section*.199}}
-\@writefile{toc}{\contentsline {paragraph}{Collision Cases Merge}{106}{section*.200}}
-\newlabel{eq:aggregatedCollisionCaseCenter}{{6.67}{106}{Collision Cases Merge}{equation.6.8.67}{}}
+\@writefile{toc}{\contentsline {paragraph}{Collision Case Chaining}{110}{section*.209}}
+\@writefile{toc}{\contentsline {paragraph}{Collision Cases Merge}{110}{section*.210}}
+\newlabel{eq:aggregatedCollisionCaseCenter}{{6.81}{110}{Collision Cases Merge}{equation.6.8.81}{}}
 \gdef \LT@x {\LT@entry 
     {1}{126.21101pt}\LT@entry 
     {1}{329.03307pt}}
-\newlabel{eq:naiveSafetyMarginAgregation}{{6.68}{107}{Collision Cases Merge}{equation.6.8.68}{}}
+\newlabel{eq:naiveSafetyMarginAgregation}{{6.82}{111}{Collision Cases Merge}{equation.6.8.82}{}}
 \gdef \LT@xi {\LT@entry 
     {1}{126.21101pt}\LT@entry 
     {1}{329.03307pt}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces Collision case structure for given decision time-frame.\relax }}{108}{table.6.6}}
-\newlabel{tab:collisionCase}{{6.6}{108}{Collision case structure for given decision time-frame.\relax }{table.6.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.9}(W) Weather Case}{108}{subsection.6.8.9}}
-\newlabel{sec:weatherCase}{{6.8.9}{108}{(W) Weather Case}{subsection.6.8.9}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.7}{\ignorespaces Static/Dynamic weather constraint for given decision time-frame.\relax }}{108}{table.6.7}}
-\newlabel{tab:weatherConstraint}{{6.7}{108}{Static/Dynamic weather constraint for given decision time-frame.\relax }{table.6.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.7}{\ignorespaces Collision case structure for given decision time-frame.\relax }}{112}{table.6.7}}
+\newlabel{tab:collisionCase}{{6.7}{112}{Collision case structure for given decision time-frame.\relax }{table.6.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8.9}(W) Weather Case}{112}{subsection.6.8.9}}
+\newlabel{sec:weatherCase}{{6.8.9}{112}{(W) Weather Case}{subsection.6.8.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.8}{\ignorespaces Static/Dynamic weather constraint for given decision time-frame.\relax }}{112}{table.6.8}}
+\newlabel{tab:weatherConstraint}{{6.8}{112}{Static/Dynamic weather constraint for given decision time-frame.\relax }{table.6.8}{}}
 \citation{benjamin2006navigation}
-\@writefile{toc}{\contentsline {section}{\numberline {6.9}(W) Rule Engine}{109}{section.6.9}}
-\newlabel{sec:ruleEngine}{{6.9}{109}{(W) Rule Engine}{section.6.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.9.1}(W) Architecture}{109}{subsection.6.9.1}}
-\newlabel{s:RuleEngineArchitecture}{{6.9.1}{109}{(W) Architecture}{subsection.6.9.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.27}{\ignorespaces Rule engine components overview.\relax }}{109}{figure.caption.201}}
-\newlabel{fig:RuleEngineBasicArchitecture}{{6.27}{109}{Rule engine components overview.\relax }{figure.caption.201}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.9.2}(W/R) Rule Implementation}{110}{subsection.6.9.2}}
-\newlabel{sec:ruleImplementation}{{6.9.2}{110}{(W/R) Rule Implementation}{subsection.6.9.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.28}{\ignorespaces Rule engine initialization with Rules of the air.\relax }}{110}{figure.caption.202}}
-\newlabel{fig:RuleEngineInstanceLevels}{{6.28}{110}{Rule engine initialization with Rules of the air.\relax }{figure.caption.202}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Rule: Detect Collision Cases}{110}{section*.203}}
-\newlabel{eq:fetchCollisionCases}{{6.69}{110}{Rule: Detect Collision Cases}{equation.6.9.69}{}}
-\newlabel{eq:createUASCollisionCases}{{6.70}{110}{Rule: Detect Collision Cases}{equation.6.9.70}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.9}(W) Rule Engine}{113}{section.6.9}}
+\newlabel{sec:ruleEngine}{{6.9}{113}{(W) Rule Engine}{section.6.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.9.1}(W) Architecture}{113}{subsection.6.9.1}}
+\newlabel{s:RuleEngineArchitecture}{{6.9.1}{113}{(W) Architecture}{subsection.6.9.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.27}{\ignorespaces Rule engine components overview.\relax }}{113}{figure.caption.211}}
+\newlabel{fig:RuleEngineBasicArchitecture}{{6.27}{113}{Rule engine components overview.\relax }{figure.caption.211}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.9.2}(W/R) Rule Implementation}{114}{subsection.6.9.2}}
+\newlabel{sec:ruleImplementation}{{6.9.2}{114}{(W/R) Rule Implementation}{subsection.6.9.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.28}{\ignorespaces Rule engine initialization with Rules of the air.\relax }}{114}{figure.caption.212}}
+\newlabel{fig:RuleEngineInstanceLevels}{{6.28}{114}{Rule engine initialization with Rules of the air.\relax }{figure.caption.212}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Rule: Detect Collision Cases}{114}{section*.213}}
+\newlabel{eq:fetchCollisionCases}{{6.83}{114}{Rule: Detect Collision Cases}{equation.6.9.83}{}}
+\newlabel{eq:createUASCollisionCases}{{6.84}{114}{Rule: Detect Collision Cases}{equation.6.9.84}{}}
 \gdef \LT@xii {\LT@entry 
     {1}{149.3746pt}\LT@entry 
     {1}{148.97461pt}\LT@entry 
@@ -901,20 +930,20 @@
     {1}{149.3746pt}\LT@entry 
     {1}{148.97461pt}\LT@entry 
     {1}{148.97461pt}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.8}{\ignorespaces Detect collision cases rule definition.\relax }}{112}{Item.274}}
-\newlabel{tab:ruleDetectCollisionCases}{{6.8}{112}{Detect collision cases rule definition.\relax }{Item.274}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Rule: Resolve Collision Case}{112}{section*.204}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.9}{\ignorespaces Resolve collision case rule definition.\relax }}{113}{Item.278}}
-\newlabel{tab:ruleResolveCollisionCase}{{6.9}{113}{Resolve collision case rule definition.\relax }{Item.278}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Rule: Close Collision Cases}{113}{section*.205}}
-\newlabel{eq:collectFromContextClosingCollisionCases}{{6.72}{113}{Rule: Close Collision Cases}{equation.6.9.72}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.9}{\ignorespaces Detect collision cases rule definition.\relax }}{116}{Item.274}}
+\newlabel{tab:ruleDetectCollisionCases}{{6.9}{116}{Detect collision cases rule definition.\relax }{Item.274}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Rule: Resolve Collision Case}{116}{section*.214}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.10}{\ignorespaces Resolve collision case rule definition.\relax }}{117}{Item.278}}
+\newlabel{tab:ruleResolveCollisionCase}{{6.10}{117}{Resolve collision case rule definition.\relax }{Item.278}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Rule: Close Collision Cases}{117}{section*.215}}
+\newlabel{eq:collectFromContextClosingCollisionCases}{{6.86}{117}{Rule: Close Collision Cases}{equation.6.9.86}{}}
 \gdef \LT@xiv {\LT@entry 
     {1}{149.3746pt}\LT@entry 
     {1}{148.97461pt}\LT@entry 
     {1}{148.97461pt}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.10}{\ignorespaces Close collision case rule definition.\relax }}{114}{Item.288}}
-\newlabel{tab:ruleCloseCollisionCase}{{6.10}{114}{Close collision case rule definition.\relax }{Item.288}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Rule: Head on Approach}{114}{section*.206}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.11}{\ignorespaces Close collision case rule definition.\relax }}{118}{Item.288}}
+\newlabel{tab:ruleCloseCollisionCase}{{6.11}{118}{Close collision case rule definition.\relax }{Item.288}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Rule: Head on Approach}{118}{section*.216}}
 \gdef \LT@xv {\LT@entry 
     {1}{149.3746pt}\LT@entry 
     {1}{148.97461pt}\LT@entry 
@@ -923,646 +952,646 @@
     {1}{149.3746pt}\LT@entry 
     {1}{148.97461pt}\LT@entry 
     {1}{148.97461pt}}
-\newlabel{eq:roundaboundCorrectedMedian}{{6.73}{115}{Rule: Head on Approach}{equation.6.9.73}{}}
-\newlabel{eq:correctedSafetyMargins}{{6.74}{115}{Rule: Head on Approach}{equation.6.9.74}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.11}{\ignorespaces Head on Approach rule definition.\relax }}{115}{Item.296}}
-\newlabel{tab:ruleHeadonApproach}{{6.11}{115}{Head on Approach rule definition.\relax }{Item.296}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Rule: Converging Maneuver}{115}{section*.207}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.12}{\ignorespaces Converging maneuver rule definition.\relax }}{116}{Item.300}}
-\newlabel{tab:ruleConvergingManuever}{{6.12}{116}{Converging maneuver rule definition.\relax }{Item.300}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Rule: Overtake}{116}{section*.208}}
-\newlabel{eq:overtakeManeuverSafetyCondition}{{6.75}{116}{Rule: Overtake}{equation.6.9.75}{}}
-\newlabel{eq:overtakeVelocityDifference}{{6.76}{116}{Rule: Overtake}{equation.6.9.76}{}}
-\newlabel{eq:overtakeUASDecisionDistance}{{6.77}{116}{Rule: Overtake}{equation.6.9.77}{}}
-\newlabel{eq:overtakeMiddleDistance}{{6.78}{116}{Rule: Overtake}{equation.6.9.78}{}}
+\newlabel{eq:roundaboundCorrectedMedian}{{6.87}{119}{Rule: Head on Approach}{equation.6.9.87}{}}
+\newlabel{eq:correctedSafetyMargins}{{6.88}{119}{Rule: Head on Approach}{equation.6.9.88}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.12}{\ignorespaces Head on Approach rule definition.\relax }}{119}{Item.296}}
+\newlabel{tab:ruleHeadonApproach}{{6.12}{119}{Head on Approach rule definition.\relax }{Item.296}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Rule: Converging Maneuver}{119}{section*.217}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.13}{\ignorespaces Converging maneuver rule definition.\relax }}{120}{Item.300}}
+\newlabel{tab:ruleConvergingManuever}{{6.13}{120}{Converging maneuver rule definition.\relax }{Item.300}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Rule: Overtake}{120}{section*.218}}
+\newlabel{eq:overtakeManeuverSafetyCondition}{{6.89}{120}{Rule: Overtake}{equation.6.9.89}{}}
+\newlabel{eq:overtakeVelocityDifference}{{6.90}{120}{Rule: Overtake}{equation.6.9.90}{}}
+\newlabel{eq:overtakeUASDecisionDistance}{{6.91}{120}{Rule: Overtake}{equation.6.9.91}{}}
+\newlabel{eq:overtakeMiddleDistance}{{6.92}{120}{Rule: Overtake}{equation.6.9.92}{}}
 \gdef \LT@xvii {\LT@entry 
     {1}{149.3746pt}\LT@entry 
     {1}{148.97461pt}\LT@entry 
     {1}{148.97461pt}}
-\newlabel{eq:overtakeSafeOffset}{{6.79}{117}{Rule: Overtake}{equation.6.9.79}{}}
-\newlabel{eq:overtakeDivergenceLocal}{{6.80}{117}{Rule: Overtake}{equation.6.9.80}{}}
-\newlabel{eq:overtakeConvergenceLocal}{{6.81}{117}{Rule: Overtake}{equation.6.9.81}{}}
-\newlabel{eq:overtakedDivergenceGlobal}{{6.82}{117}{Rule: Overtake}{equation.6.9.82}{}}
-\newlabel{eq:overtakeConvergenceGlobal}{{6.83}{117}{Rule: Overtake}{equation.6.9.83}{}}
+\newlabel{eq:overtakeSafeOffset}{{6.93}{121}{Rule: Overtake}{equation.6.9.93}{}}
+\newlabel{eq:overtakeDivergenceLocal}{{6.94}{121}{Rule: Overtake}{equation.6.9.94}{}}
+\newlabel{eq:overtakeConvergenceLocal}{{6.95}{121}{Rule: Overtake}{equation.6.9.95}{}}
+\newlabel{eq:overtakedDivergenceGlobal}{{6.96}{121}{Rule: Overtake}{equation.6.9.96}{}}
+\newlabel{eq:overtakeConvergenceGlobal}{{6.97}{121}{Rule: Overtake}{equation.6.9.97}{}}
 \citation{samelson1958partition}
-\@writefile{lot}{\contentsline {table}{\numberline {6.13}{\ignorespaces Overtake rule definition.\relax }}{118}{Item.302}}
-\newlabel{tab:ruleOvertakeDefinition}{{6.13}{118}{Overtake rule definition.\relax }{Item.302}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Rule: Right plane heading}{118}{section*.209}}
-\newlabel{eq:ruleSeparationPlaneDefinition}{{6.84}{118}{Rule: Right plane heading}{equation.6.9.84}{}}
-\newlabel{eq:ruleTrajectoryPositionCondition}{{6.85}{118}{Rule: Right plane heading}{equation.6.9.85}{}}
-\newlabel{eq:ruleTrajectoryDecisionHeading}{{6.86}{118}{Rule: Right plane heading}{equation.6.9.86}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.14}{\ignorespaces Overtake rule definition.\relax }}{122}{Item.302}}
+\newlabel{tab:ruleOvertakeDefinition}{{6.14}{122}{Overtake rule definition.\relax }{Item.302}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Rule: Right plane heading}{122}{section*.219}}
+\newlabel{eq:ruleSeparationPlaneDefinition}{{6.98}{122}{Rule: Right plane heading}{equation.6.9.98}{}}
+\newlabel{eq:ruleTrajectoryPositionCondition}{{6.99}{122}{Rule: Right plane heading}{equation.6.9.99}{}}
+\newlabel{eq:ruleTrajectoryDecisionHeading}{{6.100}{122}{Rule: Right plane heading}{equation.6.9.100}{}}
 \gdef \LT@xviii {\LT@entry 
     {1}{149.3746pt}\LT@entry 
     {1}{148.97461pt}\LT@entry 
     {1}{148.97461pt}}
-\newlabel{fig:ruleRightPlaneHeading01}{{6.29a}{119}{$\alpha =-38.25^\circ $\relax }{figure.caption.210}{}}
-\newlabel{sub@fig:ruleRightPlaneHeading01}{{a}{119}{$\alpha =-38.25^\circ $\relax }{figure.caption.210}{}}
-\newlabel{fig:ruleRightPlaneHeading02}{{6.29b}{119}{$\alpha =-25.5^\circ $\relax }{figure.caption.210}{}}
-\newlabel{sub@fig:ruleRightPlaneHeading02}{{b}{119}{$\alpha =-25.5^\circ $\relax }{figure.caption.210}{}}
-\newlabel{fig:ruleRightPlaneHeading03}{{6.29c}{119}{$\alpha =-12.75^\circ $\relax }{figure.caption.210}{}}
-\newlabel{sub@fig:ruleRightPlaneHeading03}{{c}{119}{$\alpha =-12.75^\circ $\relax }{figure.caption.210}{}}
-\newlabel{fig:ruleRightPlaneHeading04}{{6.29d}{119}{$\alpha =0^\circ $\relax }{figure.caption.210}{}}
-\newlabel{sub@fig:ruleRightPlaneHeading04}{{d}{119}{$\alpha =0^\circ $\relax }{figure.caption.210}{}}
-\newlabel{fig:ruleRightPlaneHeading05}{{6.29e}{119}{$\alpha =12,75^\circ $\relax }{figure.caption.210}{}}
-\newlabel{sub@fig:ruleRightPlaneHeading05}{{e}{119}{$\alpha =12,75^\circ $\relax }{figure.caption.210}{}}
-\newlabel{fig:ruleRightPlaneHeading06}{{6.29f}{119}{$\alpha =25.5^\circ $\relax }{figure.caption.210}{}}
-\newlabel{sub@fig:ruleRightPlaneHeading06}{{f}{119}{$\alpha =25.5^\circ $\relax }{figure.caption.210}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.29}{\ignorespaces Right plane heading rule evaluation for various angles of approach $\alpha $.\relax }}{119}{figure.caption.210}}
-\newlabel{fig:ruleRightPlaneHeadingGeneral}{{6.29}{119}{Right plane heading rule evaluation for various angles of approach $\alpha $.\relax }{figure.caption.210}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.14}{\ignorespaces Right plane heading rule definition.\relax }}{119}{Item.307}}
-\newlabel{tab:ruleRightPlaneHeading}{{6.14}{119}{Right plane heading rule definition.\relax }{Item.307}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Rule: Enforce safety margin}{119}{section*.211}}
+\newlabel{fig:ruleRightPlaneHeading01}{{6.29a}{123}{$\alpha =-38.25^\circ $\relax }{figure.caption.220}{}}
+\newlabel{sub@fig:ruleRightPlaneHeading01}{{a}{123}{$\alpha =-38.25^\circ $\relax }{figure.caption.220}{}}
+\newlabel{fig:ruleRightPlaneHeading02}{{6.29b}{123}{$\alpha =-25.5^\circ $\relax }{figure.caption.220}{}}
+\newlabel{sub@fig:ruleRightPlaneHeading02}{{b}{123}{$\alpha =-25.5^\circ $\relax }{figure.caption.220}{}}
+\newlabel{fig:ruleRightPlaneHeading03}{{6.29c}{123}{$\alpha =-12.75^\circ $\relax }{figure.caption.220}{}}
+\newlabel{sub@fig:ruleRightPlaneHeading03}{{c}{123}{$\alpha =-12.75^\circ $\relax }{figure.caption.220}{}}
+\newlabel{fig:ruleRightPlaneHeading04}{{6.29d}{123}{$\alpha =0^\circ $\relax }{figure.caption.220}{}}
+\newlabel{sub@fig:ruleRightPlaneHeading04}{{d}{123}{$\alpha =0^\circ $\relax }{figure.caption.220}{}}
+\newlabel{fig:ruleRightPlaneHeading05}{{6.29e}{123}{$\alpha =12,75^\circ $\relax }{figure.caption.220}{}}
+\newlabel{sub@fig:ruleRightPlaneHeading05}{{e}{123}{$\alpha =12,75^\circ $\relax }{figure.caption.220}{}}
+\newlabel{fig:ruleRightPlaneHeading06}{{6.29f}{123}{$\alpha =25.5^\circ $\relax }{figure.caption.220}{}}
+\newlabel{sub@fig:ruleRightPlaneHeading06}{{f}{123}{$\alpha =25.5^\circ $\relax }{figure.caption.220}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.29}{\ignorespaces Right plane heading rule evaluation for various angles of approach $\alpha $.\relax }}{123}{figure.caption.220}}
+\newlabel{fig:ruleRightPlaneHeadingGeneral}{{6.29}{123}{Right plane heading rule evaluation for various angles of approach $\alpha $.\relax }{figure.caption.220}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.15}{\ignorespaces Right plane heading rule definition.\relax }}{123}{Item.307}}
+\newlabel{tab:ruleRightPlaneHeading}{{6.15}{123}{Right plane heading rule definition.\relax }{Item.307}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Rule: Enforce safety margin}{123}{section*.221}}
 \gdef \LT@xix {\LT@entry 
     {1}{149.3746pt}\LT@entry 
     {1}{148.97461pt}\LT@entry 
     {1}{148.97461pt}}
-\newlabel{eq:ruleSafetyMarginCondition}{{6.87}{120}{Rule: Enforce safety margin}{equation.6.9.87}{}}
-\newlabel{eq:ruleSafetyMarginConditionControlled}{{6.88}{120}{Rule: Enforce safety margin}{equation.6.9.88}{}}
-\newlabel{fig:ruleEnforceSafetyMargin01}{{6.30a}{120}{$\alpha =-38.25^\circ $\relax }{figure.caption.212}{}}
-\newlabel{sub@fig:ruleEnforceSafetyMargin01}{{a}{120}{$\alpha =-38.25^\circ $\relax }{figure.caption.212}{}}
-\newlabel{fig:ruleEnforceSafetyMargin02}{{6.30b}{120}{$\alpha =-25.5^\circ $\relax }{figure.caption.212}{}}
-\newlabel{sub@fig:ruleEnforceSafetyMargin02}{{b}{120}{$\alpha =-25.5^\circ $\relax }{figure.caption.212}{}}
-\newlabel{fig:ruleEnforceSafetyMargin03}{{6.30c}{120}{$\alpha =-12.75^\circ $\relax }{figure.caption.212}{}}
-\newlabel{sub@fig:ruleEnforceSafetyMargin03}{{c}{120}{$\alpha =-12.75^\circ $\relax }{figure.caption.212}{}}
-\newlabel{fig:ruleEnforceSafetyMargin04}{{6.30d}{120}{$\alpha =0^\circ $\relax }{figure.caption.212}{}}
-\newlabel{sub@fig:ruleEnforceSafetyMargin04}{{d}{120}{$\alpha =0^\circ $\relax }{figure.caption.212}{}}
-\newlabel{fig:ruleEnforceSafetyMargin05}{{6.30e}{120}{$\alpha =12,75^\circ $\relax }{figure.caption.212}{}}
-\newlabel{sub@fig:ruleEnforceSafetyMargin05}{{e}{120}{$\alpha =12,75^\circ $\relax }{figure.caption.212}{}}
-\newlabel{fig:ruleEnforceSafetyMargin06}{{6.30f}{120}{$\alpha =25.5^\circ $\relax }{figure.caption.212}{}}
-\newlabel{sub@fig:ruleEnforceSafetyMargin06}{{f}{120}{$\alpha =25.5^\circ $\relax }{figure.caption.212}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.30}{\ignorespaces Enforce safety margin rule evaluation for various angles of approach $\alpha $.\relax }}{120}{figure.caption.212}}
-\newlabel{fig:ruleEnforceSafetyMarginGeneral}{{6.30}{120}{Enforce safety margin rule evaluation for various angles of approach $\alpha $.\relax }{figure.caption.212}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.15}{\ignorespaces Enforce safety margin rule definition.\relax }}{121}{Item.309}}
-\newlabel{tab:ruleEnforceSafetyMargin}{{6.15}{121}{Enforce safety margin rule definition.\relax }{Item.309}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Simulations}{122}{chapter.7}}
+\newlabel{eq:ruleSafetyMarginCondition}{{6.101}{124}{Rule: Enforce safety margin}{equation.6.9.101}{}}
+\newlabel{eq:ruleSafetyMarginConditionControlled}{{6.102}{124}{Rule: Enforce safety margin}{equation.6.9.102}{}}
+\newlabel{fig:ruleEnforceSafetyMargin01}{{6.30a}{124}{$\alpha =-38.25^\circ $\relax }{figure.caption.222}{}}
+\newlabel{sub@fig:ruleEnforceSafetyMargin01}{{a}{124}{$\alpha =-38.25^\circ $\relax }{figure.caption.222}{}}
+\newlabel{fig:ruleEnforceSafetyMargin02}{{6.30b}{124}{$\alpha =-25.5^\circ $\relax }{figure.caption.222}{}}
+\newlabel{sub@fig:ruleEnforceSafetyMargin02}{{b}{124}{$\alpha =-25.5^\circ $\relax }{figure.caption.222}{}}
+\newlabel{fig:ruleEnforceSafetyMargin03}{{6.30c}{124}{$\alpha =-12.75^\circ $\relax }{figure.caption.222}{}}
+\newlabel{sub@fig:ruleEnforceSafetyMargin03}{{c}{124}{$\alpha =-12.75^\circ $\relax }{figure.caption.222}{}}
+\newlabel{fig:ruleEnforceSafetyMargin04}{{6.30d}{124}{$\alpha =0^\circ $\relax }{figure.caption.222}{}}
+\newlabel{sub@fig:ruleEnforceSafetyMargin04}{{d}{124}{$\alpha =0^\circ $\relax }{figure.caption.222}{}}
+\newlabel{fig:ruleEnforceSafetyMargin05}{{6.30e}{124}{$\alpha =12,75^\circ $\relax }{figure.caption.222}{}}
+\newlabel{sub@fig:ruleEnforceSafetyMargin05}{{e}{124}{$\alpha =12,75^\circ $\relax }{figure.caption.222}{}}
+\newlabel{fig:ruleEnforceSafetyMargin06}{{6.30f}{124}{$\alpha =25.5^\circ $\relax }{figure.caption.222}{}}
+\newlabel{sub@fig:ruleEnforceSafetyMargin06}{{f}{124}{$\alpha =25.5^\circ $\relax }{figure.caption.222}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.30}{\ignorespaces Enforce safety margin rule evaluation for various angles of approach $\alpha $.\relax }}{124}{figure.caption.222}}
+\newlabel{fig:ruleEnforceSafetyMarginGeneral}{{6.30}{124}{Enforce safety margin rule evaluation for various angles of approach $\alpha $.\relax }{figure.caption.222}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.16}{\ignorespaces Enforce safety margin rule definition.\relax }}{125}{Item.309}}
+\newlabel{tab:ruleEnforceSafetyMargin}{{6.16}{125}{Enforce safety margin rule definition.\relax }{Item.309}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Simulations}{126}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{Simulations}{{7}{122}{Simulations}{chapter.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Test Plan}{122}{section.7.1}}
-\newlabel{s:testPlan}{{7.1}{122}{Test Plan}{section.7.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.1}Testing approach}{122}{subsection.7.1.1}}
-\newlabel{s:testingApproach}{{7.1.1}{122}{Testing approach}{subsection.7.1.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Operational Environment}{123}{section*.213}}
-\@writefile{toc}{\contentsline {paragraph}{Air Traffic Attendants:}{123}{section*.214}}
+\newlabel{Simulations}{{7}{126}{Simulations}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Test Plan}{126}{section.7.1}}
+\newlabel{s:testPlan}{{7.1}{126}{Test Plan}{section.7.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.1}Testing approach}{126}{subsection.7.1.1}}
+\newlabel{s:testingApproach}{{7.1.1}{126}{Testing approach}{subsection.7.1.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Operational Environment}{127}{section*.223}}
+\@writefile{toc}{\contentsline {paragraph}{Air Traffic Attendants:}{127}{section*.224}}
 \citation{gomola2017probabilistic}
-\@writefile{toc}{\contentsline {paragraph}{Weather}{124}{section*.215}}
-\@writefile{toc}{\contentsline {paragraph}{UTM:}{124}{section*.216}}
-\@writefile{toc}{\contentsline {paragraph}{Navigation:}{124}{section*.217}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.2}Test Cases Summary}{125}{subsection.7.1.2}}
-\newlabel{s:testCaseSummary}{{7.1.2}{125}{Test Cases Summary}{subsection.7.1.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces Test Cases Summary.\relax }}{125}{table.caption.218}}
-\newlabel{tab:testCasesSummary}{{7.1}{125}{Test Cases Summary.\relax }{table.caption.218}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.3}(R) Performance Evaluation}{125}{subsection.7.1.3}}
-\newlabel{s:performanceEvaluation}{{7.1.3}{125}{(R) Performance Evaluation}{subsection.7.1.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Evaluation method:}{125}{section*.219}}
-\@writefile{toc}{\contentsline {paragraph}{Safety Margin Performance Evaluation:}{125}{section*.220}}
-\newlabel{eq:crashDistance}{{7.1}{125}{Safety Margin Performance Evaluation:}{equation.7.1.1}{}}
-\newlabel{eq:safetyMarginOverTimeEvolution}{{7.2}{126}{Safety Margin Performance Evaluation:}{equation.7.1.2}{}}
-\newlabel{eq:distanceToSafetyMargin}{{7.3}{126}{Safety Margin Performance Evaluation:}{equation.7.1.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin}{126}{section*.221}}
-\@writefile{toc}{\contentsline {paragraph}{Trajectory Tracking Evaluation}{126}{section*.222}}
-\newlabel{eq:trajectoryTrackingDeviationTreshold}{{7.4}{126}{Trajectory Tracking Evaluation}{equation.7.1.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{127}{section*.223}}
-\newlabel{eq:computationLoad}{{7.5}{127}{Computation Load:}{equation.7.1.5}{}}
-\newlabel{eq:computationFeasibilityCriterion}{{7.6}{127}{}{equation.7.1.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Testing configuration}{127}{section.7.2}}
-\newlabel{sec:testingConfiguration}{{7.2}{127}{Testing configuration}{section.7.2}{}}
-\newlabel{eq:marginsBoundary}{{7.7}{127}{Testing configuration}{equation.7.2.7}{}}
-\newlabel{eq:decisionTimeBoundary}{{7.8}{128}{Testing configuration}{equation.7.2.8}{}}
-\newlabel{eq:speedBoundary}{{7.9}{128}{Testing configuration}{equation.7.2.9}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.2}{\ignorespaces Movement orientations.\relax }}{128}{table.caption.224}}
-\newlabel{tab:testMovementOrientations}{{7.2}{128}{Movement orientations.\relax }{table.caption.224}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.3}{\ignorespaces \emph  {UAS} parameters.\relax }}{128}{table.caption.225}}
-\newlabel{tab:testUASBasicParameters}{{7.3}{128}{\emph {UAS} parameters.\relax }{table.caption.225}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.4}{\ignorespaces \emph  {Navigation Space} parameters.\relax }}{128}{table.caption.226}}
-\newlabel{tab:testNavigationGridBasic}{{7.4}{128}{\emph {Navigation Space} parameters.\relax }{table.caption.226}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.5}{\ignorespaces \emph  {Avoidance Space} parameters.\relax }}{128}{table.caption.227}}
-\newlabel{tab:testAvoidanceGridBasic}{{7.5}{128}{\emph {Avoidance Space} parameters.\relax }{table.caption.227}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.6}{\ignorespaces \emph  {UAS} coloring.\relax }}{129}{table.caption.228}}
-\newlabel{tab:testUASColoring}{{7.6}{129}{\emph {UAS} coloring.\relax }{table.caption.228}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}Non-cooperative test cases}{129}{section.7.3}}
-\newlabel{s:noncooperativeTestCases}{{7.3}{129}{Non-cooperative test cases}{section.7.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}Building avoidance}{129}{subsection.7.3.1}}
-\newlabel{s:testBuildingAvoidance}{{7.3.1}{129}{Building avoidance}{subsection.7.3.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scenario:}{129}{section*.229}}
+\@writefile{toc}{\contentsline {paragraph}{Weather}{128}{section*.225}}
+\@writefile{toc}{\contentsline {paragraph}{UTM:}{128}{section*.226}}
+\@writefile{toc}{\contentsline {paragraph}{Navigation:}{128}{section*.227}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.2}Test Cases Summary}{129}{subsection.7.1.2}}
+\newlabel{s:testCaseSummary}{{7.1.2}{129}{Test Cases Summary}{subsection.7.1.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces Test Cases Summary.\relax }}{129}{table.caption.228}}
+\newlabel{tab:testCasesSummary}{{7.1}{129}{Test Cases Summary.\relax }{table.caption.228}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.3}(R) Performance Evaluation}{129}{subsection.7.1.3}}
+\newlabel{s:performanceEvaluation}{{7.1.3}{129}{(R) Performance Evaluation}{subsection.7.1.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Evaluation method:}{129}{section*.229}}
+\@writefile{toc}{\contentsline {paragraph}{Safety Margin Performance Evaluation:}{129}{section*.230}}
+\newlabel{eq:crashDistance}{{7.1}{129}{Safety Margin Performance Evaluation:}{equation.7.1.1}{}}
+\newlabel{eq:safetyMarginOverTimeEvolution}{{7.2}{130}{Safety Margin Performance Evaluation:}{equation.7.1.2}{}}
+\newlabel{eq:distanceToSafetyMargin}{{7.3}{130}{Safety Margin Performance Evaluation:}{equation.7.1.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin}{130}{section*.231}}
+\@writefile{toc}{\contentsline {paragraph}{Trajectory Tracking Evaluation}{130}{section*.232}}
+\newlabel{eq:trajectoryTrackingDeviationTreshold}{{7.4}{130}{Trajectory Tracking Evaluation}{equation.7.1.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{131}{section*.233}}
+\newlabel{eq:computationLoad}{{7.5}{131}{Computation Load:}{equation.7.1.5}{}}
+\newlabel{eq:computationFeasibilityCriterion}{{7.6}{131}{}{equation.7.1.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Testing configuration}{131}{section.7.2}}
+\newlabel{sec:testingConfiguration}{{7.2}{131}{Testing configuration}{section.7.2}{}}
+\newlabel{eq:marginsBoundary}{{7.7}{131}{Testing configuration}{equation.7.2.7}{}}
+\newlabel{eq:decisionTimeBoundary}{{7.8}{132}{Testing configuration}{equation.7.2.8}{}}
+\newlabel{eq:speedBoundary}{{7.9}{132}{Testing configuration}{equation.7.2.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.2}{\ignorespaces Movement orientations.\relax }}{132}{table.caption.234}}
+\newlabel{tab:testMovementOrientations}{{7.2}{132}{Movement orientations.\relax }{table.caption.234}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.3}{\ignorespaces \emph  {UAS} parameters.\relax }}{132}{table.caption.235}}
+\newlabel{tab:testUASBasicParameters}{{7.3}{132}{\emph {UAS} parameters.\relax }{table.caption.235}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.4}{\ignorespaces \emph  {Navigation Space} parameters.\relax }}{132}{table.caption.236}}
+\newlabel{tab:testNavigationGridBasic}{{7.4}{132}{\emph {Navigation Space} parameters.\relax }{table.caption.236}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.5}{\ignorespaces \emph  {Avoidance Space} parameters.\relax }}{132}{table.caption.237}}
+\newlabel{tab:testAvoidanceGridBasic}{{7.5}{132}{\emph {Avoidance Space} parameters.\relax }{table.caption.237}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.6}{\ignorespaces \emph  {UAS} coloring.\relax }}{133}{table.caption.238}}
+\newlabel{tab:testUASColoring}{{7.6}{133}{\emph {UAS} coloring.\relax }{table.caption.238}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Non-cooperative test cases}{133}{section.7.3}}
+\newlabel{s:noncooperativeTestCases}{{7.3}{133}{Non-cooperative test cases}{section.7.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}Building avoidance}{133}{subsection.7.3.1}}
+\newlabel{s:testBuildingAvoidance}{{7.3.1}{133}{Building avoidance}{subsection.7.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scenario:}{133}{section*.239}}
 \citation{gomola2017probabilistic}
-\@writefile{lot}{\contentsline {table}{\numberline {7.7}{\ignorespaces Mission setup for \emph  {Building avoidance} scenario.\relax }}{130}{table.caption.230}}
-\newlabel{tab:missionSetupForBuildingAvoidanceScenario}{{7.7}{130}{Mission setup for \emph {Building avoidance} scenario.\relax }{table.caption.230}{}}
-\@writefile{toc}{\contentsline {paragraph}{Obstacle set:}{130}{section*.231}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.8}{\ignorespaces \emph  {Obstacle set} for \emph  {Building avoidance} scenario.\relax }}{130}{table.caption.232}}
-\newlabel{tab:obstacleSetBuildingAvoidance}{{7.8}{130}{\emph {Obstacle set} for \emph {Building avoidance} scenario.\relax }{table.caption.232}{}}
-\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{130}{section*.233}}
-\@writefile{toc}{\contentsline {paragraph}{Acceptance criteria:}{130}{section*.234}}
-\@writefile{toc}{\contentsline {paragraph}{Testing Setup:}{130}{section*.235}}
-\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{131}{section*.236}}
-\newlabel{fig:firstBuildingAvoidance}{{7.1a}{131}{$1^{st}$ building avoidance.\relax }{figure.caption.237}{}}
-\newlabel{sub@fig:firstBuildingAvoidance}{{a}{131}{$1^{st}$ building avoidance.\relax }{figure.caption.237}{}}
-\newlabel{fig:secondBuildingAvoidance}{{7.1b}{131}{$1^{nd}$ building avoidance.\relax }{figure.caption.237}{}}
-\newlabel{sub@fig:secondBuildingAvoidance}{{b}{131}{$1^{nd}$ building avoidance.\relax }{figure.caption.237}{}}
-\newlabel{fig:thirdBuidlingAvoidance}{{7.1c}{131}{$3^{rd}$ building avoidance.\relax }{figure.caption.237}{}}
-\newlabel{sub@fig:thirdBuidlingAvoidance}{{c}{131}{$3^{rd}$ building avoidance.\relax }{figure.caption.237}{}}
-\newlabel{fig:fourthBuildingAvoidance}{{7.1d}{131}{$4^{th}$ building avoidance.\relax }{figure.caption.237}{}}
-\newlabel{sub@fig:fourthBuildingAvoidance}{{d}{131}{$4^{th}$ building avoidance.\relax }{figure.caption.237}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Test scenario for \emph  {Building avoidance} (static ground obstacles). \relax }}{131}{figure.caption.237}}
-\newlabel{fig:testCaseBuildingAvoidanceSituation}{{7.1}{131}{Test scenario for \emph {Building avoidance} (static ground obstacles). \relax }{figure.caption.237}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{131}{section*.238}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces Distance to body/safety margin evolution for \emph  {Building avoidance scenario}.\relax }}{132}{figure.caption.239}}
-\newlabel{fig:testCaseBuildingAvoidancePerformance}{{7.2}{132}{Distance to body/safety margin evolution for \emph {Building avoidance scenario}.\relax }{figure.caption.239}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{132}{section*.240}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.9}{\ignorespaces Distance to Body/Satety Margin Peaks for \emph  {Building avoidance scenario}.\relax }}{132}{table.caption.241}}
-\newlabel{tab:testCaseBuildingAvoidanceSafetyAndBodyMarginDistances}{{7.9}{132}{Distance to Body/Satety Margin Peaks for \emph {Building avoidance scenario}.\relax }{table.caption.241}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{132}{section*.242}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces \emph  {Building avoidance} path tracking.\relax }}{133}{figure.caption.243}}
-\newlabel{fig:testCaseBuildingAvoidancePathTracking}{{7.3}{133}{\emph {Building avoidance} path tracking.\relax }{figure.caption.243}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{133}{section*.244}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.10}{\ignorespaces Path tracking for properties \emph  {Building avoidance}.\relax }}{133}{table.caption.245}}
-\newlabel{tab:pathTrackingParametersForBuildingAvoidance}{{7.10}{133}{Path tracking for properties \emph {Building avoidance}.\relax }{table.caption.245}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{133}{section*.246}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces Computation time for \emph  {Building avoidance} scenario.\relax }}{133}{figure.caption.247}}
-\newlabel{fig:buildingAvoidanceComputationTime}{{7.4}{133}{Computation time for \emph {Building avoidance} scenario.\relax }{figure.caption.247}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}Slalom}{133}{subsection.7.3.2}}
-\newlabel{s:testSlalom}{{7.3.2}{133}{Slalom}{subsection.7.3.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scenario:}{133}{section*.248}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.11}{\ignorespaces Mission setup for \emph  {Slalom} scenario.\relax }}{134}{table.caption.249}}
-\newlabel{tab:missionSetupSlalomScenario}{{7.11}{134}{Mission setup for \emph {Slalom} scenario.\relax }{table.caption.249}{}}
-\@writefile{toc}{\contentsline {paragraph}{Obstacle set:}{134}{section*.250}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.12}{\ignorespaces \emph  {Obstacle set} for \emph  {Slalom} scenario.\relax }}{134}{table.caption.251}}
-\newlabel{tab:obstacleSetSlalom}{{7.12}{134}{\emph {Obstacle set} for \emph {Slalom} scenario.\relax }{table.caption.251}{}}
-\@writefile{toc}{\contentsline {paragraph}{Main goal:}{134}{section*.252}}
-\@writefile{toc}{\contentsline {paragraph}{Acceptance Criteria}{134}{section*.253}}
-\@writefile{toc}{\contentsline {paragraph}{Testing setup:}{134}{section*.254}}
-\@writefile{toc}{\contentsline {paragraph}{Simulation run:}{134}{section*.255}}
-\newlabel{fig:slalomOpenSpaceObstacle}{{7.5a}{135}{Open space obstacle.\relax }{figure.caption.256}{}}
-\newlabel{sub@fig:slalomOpenSpaceObstacle}{{a}{135}{Open space obstacle.\relax }{figure.caption.256}{}}
-\newlabel{fig:slalomHiddenWaypointStart}{{7.5b}{135}{Hidden waypoint start.\relax }{figure.caption.256}{}}
-\newlabel{sub@fig:slalomHiddenWaypointStart}{{b}{135}{Hidden waypoint start.\relax }{figure.caption.256}{}}
-\newlabel{fig:slalomHiddenWaypointMiddle}{{7.5c}{135}{Hidden waypoint middle.\relax }{figure.caption.256}{}}
-\newlabel{sub@fig:slalomHiddenWaypointMiddle}{{c}{135}{Hidden waypoint middle.\relax }{figure.caption.256}{}}
-\newlabel{fig:slalomHiddenWaypointEnd}{{7.5d}{135}{Hidden waypoint end.\relax }{figure.caption.256}{}}
-\newlabel{sub@fig:slalomHiddenWaypointEnd}{{d}{135}{Hidden waypoint end.\relax }{figure.caption.256}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces Test scenario for \emph  {Slalom} with \emph  {hidden waypoint}. \relax }}{135}{figure.caption.256}}
-\newlabel{fig:testCaseSlalomwithHiddenWaypoint}{{7.5}{135}{Test scenario for \emph {Slalom} with \emph {hidden waypoint}. \relax }{figure.caption.256}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{135}{section*.257}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.6}{\ignorespaces Distance to body/safety margin evolution for \emph  {Slalom scenario}.\relax }}{136}{figure.caption.258}}
-\newlabel{fig:testCaseSlalomAvoidancePerformance}{{7.6}{136}{Distance to body/safety margin evolution for \emph {Slalom scenario}.\relax }{figure.caption.258}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{136}{section*.259}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.13}{\ignorespaces Distance to body/safety margin peaks for \emph  {Slalom scenario}.\relax }}{136}{table.caption.260}}
-\newlabel{tab:testCaseSlalomSafetyAndBodyMarginDistances}{{7.13}{136}{Distance to body/safety margin peaks for \emph {Slalom scenario}.\relax }{table.caption.260}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path tracking performance:}{136}{section*.261}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.7}{\ignorespaces \emph  {Slalom} path tracking.\relax }}{137}{figure.caption.262}}
-\newlabel{fig:testCaseSlalomPathTracking}{{7.7}{137}{\emph {Slalom} path tracking.\relax }{figure.caption.262}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{137}{section*.263}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.14}{\ignorespaces Path tracking properties for \emph  {Slalom} scenario.\relax }}{137}{table.caption.264}}
-\newlabel{tab:pathTrackingParametersForSlalomAvoidance}{{7.14}{137}{Path tracking properties for \emph {Slalom} scenario.\relax }{table.caption.264}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{137}{section*.265}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.8}{\ignorespaces Computation time for \emph  {Slalom} scenario.\relax }}{137}{figure.caption.266}}
-\newlabel{fig:slalomComputationTime}{{7.8}{137}{Computation time for \emph {Slalom} scenario.\relax }{figure.caption.266}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.3}Maze}{138}{subsection.7.3.3}}
-\newlabel{s:testMaze}{{7.3.3}{138}{Maze}{subsection.7.3.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scenario:}{138}{section*.267}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.15}{\ignorespaces Mission setup for \emph  {Maze} scenario.\relax }}{138}{table.caption.268}}
-\newlabel{tab:missionSetupMazeScenario}{{7.15}{138}{Mission setup for \emph {Maze} scenario.\relax }{table.caption.268}{}}
-\@writefile{toc}{\contentsline {paragraph}{Obstacle set:}{138}{section*.269}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.16}{\ignorespaces \emph  {Obstacle set} for \emph  {Maze} scenario.\relax }}{138}{table.caption.270}}
-\newlabel{tab:obstacleSetMaze}{{7.16}{138}{\emph {Obstacle set} for \emph {Maze} scenario.\relax }{table.caption.270}{}}
-\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{139}{section*.271}}
-\@writefile{toc}{\contentsline {paragraph}{Acceptance Criteria:}{139}{section*.272}}
-\@writefile{toc}{\contentsline {paragraph}{Testing Setup:}{139}{section*.273}}
-\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{139}{section*.274}}
-\newlabel{fig:mazeFirstTurn}{{7.9a}{140}{$1^{st}$ turn.\relax }{figure.caption.275}{}}
-\newlabel{sub@fig:mazeFirstTurn}{{a}{140}{$1^{st}$ turn.\relax }{figure.caption.275}{}}
-\newlabel{fig:mazeSecondTurn}{{7.9b}{140}{$2^{nd}$ turn.\relax }{figure.caption.275}{}}
-\newlabel{sub@fig:mazeSecondTurn}{{b}{140}{$2^{nd}$ turn.\relax }{figure.caption.275}{}}
-\newlabel{fig:mazeThirdTurn}{{7.9c}{140}{$3^{rd}$ turn.\relax }{figure.caption.275}{}}
-\newlabel{sub@fig:mazeThirdTurn}{{c}{140}{$3^{rd}$ turn.\relax }{figure.caption.275}{}}
-\newlabel{fig:mazeWaypointReach}{{7.9d}{140}{Waypoint reach.\relax }{figure.caption.275}{}}
-\newlabel{sub@fig:mazeWaypointReach}{{d}{140}{Waypoint reach.\relax }{figure.caption.275}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.9}{\ignorespaces Test scenario for \emph  {Maze}. \relax }}{140}{figure.caption.275}}
-\newlabel{fig:testCaseMazeSolver}{{7.9}{140}{Test scenario for \emph {Maze}. \relax }{figure.caption.275}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{140}{section*.276}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.10}{\ignorespaces Distance to body/safety margin evolution for \emph  {Maze scenario}.\relax }}{141}{figure.caption.277}}
-\newlabel{fig:testCaseMazeAvoidancePerformance}{{7.10}{141}{Distance to body/safety margin evolution for \emph {Maze scenario}.\relax }{figure.caption.277}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{141}{section*.278}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.17}{\ignorespaces Distance to body/safety margin peaks for \emph  {Maze scenario}.\relax }}{141}{table.caption.279}}
-\newlabel{tab:testCaseMazeSafetyAndBodyMarginDistances}{{7.17}{141}{Distance to body/safety margin peaks for \emph {Maze scenario}.\relax }{table.caption.279}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{141}{section*.280}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.11}{\ignorespaces \emph  {Maze} path tracking.\relax }}{142}{figure.caption.281}}
-\newlabel{fig:testCaseMazePathTracking}{{7.11}{142}{\emph {Maze} path tracking.\relax }{figure.caption.281}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{142}{section*.282}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.18}{\ignorespaces Path tracking properties for \emph  {Maze} scenario.\relax }}{142}{table.caption.283}}
-\newlabel{tab:pathTrackingParametersForMazeAvoidance}{{7.18}{142}{Path tracking properties for \emph {Maze} scenario.\relax }{table.caption.283}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{142}{section*.284}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.12}{\ignorespaces Computation time for \emph  {Maze} scenario.\relax }}{142}{figure.caption.285}}
-\newlabel{fig:mazeComputationTime}{{7.12}{142}{Computation time for \emph {Maze} scenario.\relax }{figure.caption.285}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.4}Storm}{142}{subsection.7.3.4}}
-\newlabel{s:testStorm}{{7.3.4}{142}{Storm}{subsection.7.3.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scenario:}{142}{section*.286}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.19}{\ignorespaces Mission setup for \emph  {Storm} scenario.\relax }}{143}{table.caption.287}}
-\newlabel{tab:missionSetupStormScenario}{{7.19}{143}{Mission setup for \emph {Storm} scenario.\relax }{table.caption.287}{}}
-\@writefile{toc}{\contentsline {paragraph}{Constraints:}{143}{section*.288}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.20}{\ignorespaces \emph  {Constraint set} for \emph  {Storm} scenario.\relax }}{143}{table.caption.289}}
-\newlabel{tab:obstacleSetStorm}{{7.20}{143}{\emph {Constraint set} for \emph {Storm} scenario.\relax }{table.caption.289}{}}
-\@writefile{toc}{\contentsline {paragraph}{Assumption:}{143}{section*.290}}
-\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{143}{section*.291}}
-\@writefile{toc}{\contentsline {paragraph}{Acceptance criteria:}{143}{section*.292}}
-\@writefile{toc}{\contentsline {paragraph}{Testing setup:}{143}{section*.293}}
-\@writefile{toc}{\contentsline {paragraph}{Simulation run:}{144}{section*.294}}
-\newlabel{fig:stromSituationDetection}{{7.13a}{144}{Situation detection.\relax }{figure.caption.295}{}}
-\newlabel{sub@fig:stromSituationDetection}{{a}{144}{Situation detection.\relax }{figure.caption.295}{}}
-\newlabel{fig:stormAvoidanceStart}{{7.13b}{144}{Storm avoidance start.\relax }{figure.caption.295}{}}
-\newlabel{sub@fig:stormAvoidanceStart}{{b}{144}{Storm avoidance start.\relax }{figure.caption.295}{}}
-\newlabel{fig:stormAvoidanceEnd}{{7.13c}{144}{Storm avoidance end.\relax }{figure.caption.295}{}}
-\newlabel{sub@fig:stormAvoidanceEnd}{{c}{144}{Storm avoidance end.\relax }{figure.caption.295}{}}
-\newlabel{fig:stormWaypointReach}{{7.13d}{144}{Waypoint reach.\relax }{figure.caption.295}{}}
-\newlabel{sub@fig:stormWaypointReach}{{d}{144}{Waypoint reach.\relax }{figure.caption.295}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.13}{\ignorespaces Test scenario for \emph  {Storm} (Dynamic hard constraint). \relax }}{144}{figure.caption.295}}
-\newlabel{fig:testCaseStormAvoidance}{{7.13}{144}{Test scenario for \emph {Storm} (Dynamic hard constraint). \relax }{figure.caption.295}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{144}{section*.296}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.14}{\ignorespaces Distance to body/safety margin evolution for \emph  {Storm scenario}.\relax }}{145}{figure.caption.297}}
-\newlabel{fig:testCaseStormAvoidancePerformance}{{7.14}{145}{Distance to body/safety margin evolution for \emph {Storm scenario}.\relax }{figure.caption.297}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{145}{section*.298}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.21}{\ignorespaces Distance to body/safety margin peaks for \emph  {Storm scenario}.\relax }}{145}{table.caption.299}}
-\newlabel{tab:testCaseStormSafetyAndBodyMarginDistances}{{7.21}{145}{Distance to body/safety margin peaks for \emph {Storm scenario}.\relax }{table.caption.299}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{145}{section*.300}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.15}{\ignorespaces \emph  {Storm} path tracking.\relax }}{146}{figure.caption.301}}
-\newlabel{fig:testCaseStormPathTracking}{{7.15}{146}{\emph {Storm} path tracking.\relax }{figure.caption.301}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{146}{section*.302}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.22}{\ignorespaces Path tracking properties for \emph  {Storm} scenario.\relax }}{146}{table.caption.303}}
-\newlabel{tab:pathTrackingParametersForStormAvoidance}{{7.22}{146}{Path tracking properties for \emph {Storm} scenario.\relax }{table.caption.303}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{146}{section*.304}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.16}{\ignorespaces Computation time for \emph  {Maze} scenario.\relax }}{146}{figure.caption.305}}
-\newlabel{fig:stormComputationTime}{{7.16}{146}{Computation time for \emph {Maze} scenario.\relax }{figure.caption.305}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.5}Emergency Converging}{146}{subsection.7.3.5}}
-\newlabel{s:testEmergencyConverging}{{7.3.5}{146}{Emergency Converging}{subsection.7.3.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scenario:}{146}{section*.306}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.23}{\ignorespaces Mission setup for \emph  {Emergency converging} scenario.\relax }}{147}{table.caption.307}}
-\newlabel{tab:missionSetupEmergencyConvergingScenario}{{7.23}{147}{Mission setup for \emph {Emergency converging} scenario.\relax }{table.caption.307}{}}
-\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{147}{section*.308}}
-\@writefile{toc}{\contentsline {paragraph}{Acceptance criteria:}{147}{section*.309}}
-\@writefile{toc}{\contentsline {paragraph}{Testing setup:}{147}{section*.310}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.24}{\ignorespaces Avoidance parameters for \emph  {Emergency converging} scenario.\relax }}{147}{table.caption.311}}
-\newlabel{tab:aboidanceParametersForEmergencyConvergingScenario}{{7.24}{147}{Avoidance parameters for \emph {Emergency converging} scenario.\relax }{table.caption.311}{}}
-\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{148}{section*.312}}
-\newlabel{fig:emergencyConvergingSituationDetection}{{7.17a}{149}{Situation detection.\relax }{figure.caption.313}{}}
-\newlabel{sub@fig:emergencyConvergingSituationDetection}{{a}{149}{Situation detection.\relax }{figure.caption.313}{}}
-\newlabel{fig:emergencyConvergingStart}{{7.17b}{149}{Start converging.\relax }{figure.caption.313}{}}
-\newlabel{sub@fig:emergencyConvergingStart}{{b}{149}{Start converging.\relax }{figure.caption.313}{}}
-\newlabel{fig:emergencyConvergingEnd}{{7.17c}{149}{Near miss case.\relax }{figure.caption.313}{}}
-\newlabel{sub@fig:emergencyConvergingEnd}{{c}{149}{Near miss case.\relax }{figure.caption.313}{}}
-\newlabel{fig:emergencyConvergingWaypointReach}{{7.17d}{149}{Waypoints reach.\relax }{figure.caption.313}{}}
-\newlabel{sub@fig:emergencyConvergingWaypointReach}{{d}{149}{Waypoints reach.\relax }{figure.caption.313}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.17}{\ignorespaces Test scenario for \emph  {Emergency converging} (Intruder avoidance). \relax }}{149}{figure.caption.313}}
-\newlabel{fig:testCaseEmergencyConverging}{{7.17}{149}{Test scenario for \emph {Emergency converging} (Intruder avoidance). \relax }{figure.caption.313}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Evolution:}{149}{section*.314}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.18}{\ignorespaces Distance to safety margin evolution for \emph  {emergency converging scenario}.\relax }}{150}{figure.caption.315}}
-\newlabel{fig:testCaseEmergencyConvergingAvoidancePerformance}{{7.18}{150}{Distance to safety margin evolution for \emph {emergency converging scenario}.\relax }{figure.caption.315}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Peaks:}{150}{section*.316}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.25}{\ignorespaces Distance to safety margin peaks for \emph  {emergency converging scenario}.\relax }}{150}{table.caption.317}}
-\newlabel{tab:testCaseEmergencyConvergingSafetyMarginDistances}{{7.25}{150}{Distance to safety margin peaks for \emph {emergency converging scenario}.\relax }{table.caption.317}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{150}{section*.318}}
-\newlabel{fig:emergencyConvergingUAS1PathTracking}{{7.19a}{151}{UAS 1.\relax }{figure.caption.319}{}}
-\newlabel{sub@fig:emergencyConvergingUAS1PathTracking}{{a}{151}{UAS 1.\relax }{figure.caption.319}{}}
-\newlabel{fig:emergencyCovnergingUAS2PathTracking}{{7.19b}{151}{UAS 2.\relax }{figure.caption.319}{}}
-\newlabel{sub@fig:emergencyCovnergingUAS2PathTracking}{{b}{151}{UAS 2.\relax }{figure.caption.319}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.19}{\ignorespaces \emph  {Trajectory tracking} for \emph  {Emergency converging} test case. \relax }}{151}{figure.caption.319}}
-\newlabel{fig:emergencyConvergingTrajectoryTrackingPerformance}{{7.19}{151}{\emph {Trajectory tracking} for \emph {Emergency converging} test case. \relax }{figure.caption.319}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Following Deviations:}{151}{section*.320}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.26}{\ignorespaces Path tracking properties for \emph  {Emergency converging} scenario.\relax }}{151}{table.caption.321}}
-\newlabel{tab:pathTrackingParametersForEmergencyConverging}{{7.26}{151}{Path tracking properties for \emph {Emergency converging} scenario.\relax }{table.caption.321}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{151}{section*.322}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.20}{\ignorespaces Computation time for \emph  {Emergency converging} scenario.\relax }}{152}{figure.caption.323}}
-\newlabel{fig:emergencyConvergingComputationTime}{{7.20}{152}{Computation time for \emph {Emergency converging} scenario.\relax }{figure.caption.323}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.6}Emergency Head on}{152}{subsection.7.3.6}}
-\newlabel{s:testEmergencyHeadOn}{{7.3.6}{152}{Emergency Head on}{subsection.7.3.6}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scenario:}{152}{section*.324}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.27}{\ignorespaces Mission setup for \emph  {Emergency head on} scenario.\relax }}{152}{table.caption.325}}
-\newlabel{tab:missionSetupEmergencyHeadOnScenario}{{7.27}{152}{Mission setup for \emph {Emergency head on} scenario.\relax }{table.caption.325}{}}
-\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{152}{section*.326}}
-\@writefile{toc}{\contentsline {paragraph}{Acceptance criteria:}{152}{section*.327}}
-\@writefile{toc}{\contentsline {paragraph}{Testing setup:}{153}{section*.328}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.28}{\ignorespaces Avoidance parameters for \emph  {Emergency head on} scenario.\relax }}{153}{table.caption.329}}
-\newlabel{tab:aboidanceParametersForEmergencyHeadOnScenario}{{7.28}{153}{Avoidance parameters for \emph {Emergency head on} scenario.\relax }{table.caption.329}{}}
-\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{153}{section*.330}}
-\newlabel{fig:emergencyHeadOnSituationDetection}{{7.21a}{154}{Situation detection.\relax }{figure.caption.331}{}}
-\newlabel{sub@fig:emergencyHeadOnSituationDetection}{{a}{154}{Situation detection.\relax }{figure.caption.331}{}}
-\newlabel{fig:emergencyHeadOnBeforeNearMiss}{{7.21b}{154}{Before near miss.\relax }{figure.caption.331}{}}
-\newlabel{sub@fig:emergencyHeadOnBeforeNearMiss}{{b}{154}{Before near miss.\relax }{figure.caption.331}{}}
-\newlabel{fig:emergencyHeadOnNearMiss}{{7.21c}{154}{Near miss.\relax }{figure.caption.331}{}}
-\newlabel{sub@fig:emergencyHeadOnNearMiss}{{c}{154}{Near miss.\relax }{figure.caption.331}{}}
-\newlabel{fig:emergencyHeadOnAfterNearMiss}{{7.21d}{154}{After near miss.\relax }{figure.caption.331}{}}
-\newlabel{sub@fig:emergencyHeadOnAfterNearMiss}{{d}{154}{After near miss.\relax }{figure.caption.331}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.21}{\ignorespaces Test scenario for \emph  {Emergency head on approach} (Intruder avoidance). \relax }}{154}{figure.caption.331}}
-\newlabel{fig:testCaseEmergencyHeadOnApproach}{{7.21}{154}{Test scenario for \emph {Emergency head on approach} (Intruder avoidance). \relax }{figure.caption.331}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Evolution:}{154}{section*.332}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.22}{\ignorespaces Distance to safety margin evolution for \emph  {emergency head on scenario}.\relax }}{155}{figure.caption.333}}
-\newlabel{fig:testCaseHeadOnAvoidancePerformance}{{7.22}{155}{Distance to safety margin evolution for \emph {emergency head on scenario}.\relax }{figure.caption.333}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Peaks:}{155}{section*.334}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.29}{\ignorespaces Distance to safety margin peaks for \emph  {Emergency head on scenario}.\relax }}{155}{table.caption.335}}
-\newlabel{tab:testCaseEmergencyHeadOnSafetyMarginDistances}{{7.29}{155}{Distance to safety margin peaks for \emph {Emergency head on scenario}.\relax }{table.caption.335}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance}{155}{section*.336}}
-\newlabel{fig:emergencyHeadOnUAS1PathTracking}{{7.23a}{156}{UAS 1.\relax }{figure.caption.337}{}}
-\newlabel{sub@fig:emergencyHeadOnUAS1PathTracking}{{a}{156}{UAS 1.\relax }{figure.caption.337}{}}
-\newlabel{fig:emergencyHeadOnUAS2PathTracking}{{7.23b}{156}{UAS 2.\relax }{figure.caption.337}{}}
-\newlabel{sub@fig:emergencyHeadOnUAS2PathTracking}{{b}{156}{UAS 2.\relax }{figure.caption.337}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.23}{\ignorespaces \emph  {Trajectory tracking} for \emph  {Emergency head on} test case. \relax }}{156}{figure.caption.337}}
-\newlabel{fig:emergencyHeadOnTrajectoryTrackingPerformance}{{7.23}{156}{\emph {Trajectory tracking} for \emph {Emergency head on} test case. \relax }{figure.caption.337}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Following Deviations:}{156}{section*.338}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.30}{\ignorespaces Path tracking properties for \emph  {Emergency head on} scenario.\relax }}{156}{table.caption.339}}
-\newlabel{tab:pathTrackingParametersForEmergencyHeadOn}{{7.30}{156}{Path tracking properties for \emph {Emergency head on} scenario.\relax }{table.caption.339}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{156}{section*.340}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.24}{\ignorespaces Computation time for \emph  {Emergency head on} scenario.\relax }}{157}{figure.caption.341}}
-\newlabel{fig:emergencyHeadOnComputationTime}{{7.24}{157}{Computation time for \emph {Emergency head on} scenario.\relax }{figure.caption.341}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.7}Emergency Mixed Head on with Converging}{157}{subsection.7.3.7}}
-\newlabel{s:testEmergencyMixed}{{7.3.7}{157}{Emergency Mixed Head on with Converging}{subsection.7.3.7}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scenario:}{157}{section*.342}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.31}{\ignorespaces Mission setup for \emph  {Emergency mixed} scenario.\relax }}{157}{table.caption.343}}
-\newlabel{tab:missionSetupEmergencyMixedScenario}{{7.31}{157}{Mission setup for \emph {Emergency mixed} scenario.\relax }{table.caption.343}{}}
-\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{157}{section*.344}}
-\@writefile{toc}{\contentsline {paragraph}{Acceptance criteria:}{157}{section*.345}}
-\@writefile{toc}{\contentsline {paragraph}{Testing setup:}{158}{section*.346}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.32}{\ignorespaces Avoidance parameters for \emph  {Emergency mixed} scenario.\relax }}{158}{table.caption.347}}
-\newlabel{tab:aboidanceParametersForEmergencyMixedScenario}{{7.32}{158}{Avoidance parameters for \emph {Emergency mixed} scenario.\relax }{table.caption.347}{}}
-\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{158}{section*.348}}
-\newlabel{fig:emergencyMultipleSituationDetection}{{7.25a}{159}{Situation detection.\relax }{figure.caption.349}{}}
-\newlabel{sub@fig:emergencyMultipleSituationDetection}{{a}{159}{Situation detection.\relax }{figure.caption.349}{}}
-\newlabel{fig:emergencyMultipleBeforeNearMiss}{{7.25b}{159}{Before near miss.\relax }{figure.caption.349}{}}
-\newlabel{sub@fig:emergencyMultipleBeforeNearMiss}{{b}{159}{Before near miss.\relax }{figure.caption.349}{}}
-\newlabel{fig:emergencyMultipleAfterNearMiss}{{7.25c}{159}{After near miss.\relax }{figure.caption.349}{}}
-\newlabel{sub@fig:emergencyMultipleAfterNearMiss}{{c}{159}{After near miss.\relax }{figure.caption.349}{}}
-\newlabel{fig:emergencyMultipleSituationReslution}{{7.25d}{159}{Situation resolution.\relax }{figure.caption.349}{}}
-\newlabel{sub@fig:emergencyMultipleSituationReslution}{{d}{159}{Situation resolution.\relax }{figure.caption.349}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.25}{\ignorespaces Test scenario for \emph  {Emergency mixed} situation with \emph  {self-separation mode}.\relax }}{159}{figure.caption.349}}
-\newlabel{fig:testCaseEmergencyMixed}{{7.25}{159}{Test scenario for \emph {Emergency mixed} situation with \emph {self-separation mode}.\relax }{figure.caption.349}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Evolution:}{159}{section*.350}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.26}{\ignorespaces Distance to safety margin evolution for \emph  {emergency mixed scenario}.\relax }}{160}{figure.caption.351}}
-\newlabel{fig:testCaseMultipleAvoidancePerformance}{{7.26}{160}{Distance to safety margin evolution for \emph {emergency mixed scenario}.\relax }{figure.caption.351}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Peaks:}{160}{section*.352}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.33}{\ignorespaces Distance to safety margin peaks for \emph  {emergency mixed scenario}.\relax }}{160}{table.caption.353}}
-\newlabel{tab:testCaseEmergencyMixedSafetyMarginDistances}{{7.33}{160}{Distance to safety margin peaks for \emph {emergency mixed scenario}.\relax }{table.caption.353}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{160}{section*.354}}
-\newlabel{fig:emergencyMixedPathTrackingUAS1}{{7.27a}{161}{UAS 1.\relax }{figure.caption.355}{}}
-\newlabel{sub@fig:emergencyMixedPathTrackingUAS1}{{a}{161}{UAS 1.\relax }{figure.caption.355}{}}
-\newlabel{fig:emergencyMixedPathTrackingUAS2}{{7.27b}{161}{UAS 2.\relax }{figure.caption.355}{}}
-\newlabel{sub@fig:emergencyMixedPathTrackingUAS2}{{b}{161}{UAS 2.\relax }{figure.caption.355}{}}
-\newlabel{fig:emergencyMixedPathTrackingUAS4}{{7.27c}{161}{UAS 3.\relax }{figure.caption.355}{}}
-\newlabel{sub@fig:emergencyMixedPathTrackingUAS4}{{c}{161}{UAS 3.\relax }{figure.caption.355}{}}
-\newlabel{fig:emergencyMixedPathTrackingUAS3}{{7.27d}{161}{UAS 4.\relax }{figure.caption.355}{}}
-\newlabel{sub@fig:emergencyMixedPathTrackingUAS3}{{d}{161}{UAS 4.\relax }{figure.caption.355}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.27}{\ignorespaces Trajectory tracking for \emph  {Emergency mixed} situation test case.\relax }}{161}{figure.caption.355}}
-\newlabel{fig:testCaseEmergencyMixedTrajectoryTracking}{{7.27}{161}{Trajectory tracking for \emph {Emergency mixed} situation test case.\relax }{figure.caption.355}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{161}{section*.356}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.34}{\ignorespaces Path tracking properties for \emph  {Emergency mixed} scenario.\relax }}{161}{table.caption.357}}
-\newlabel{tab:pathTrackingParametersForEmergencyMixed}{{7.34}{161}{Path tracking properties for \emph {Emergency mixed} scenario.\relax }{table.caption.357}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{162}{section*.358}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.28}{\ignorespaces Computation time for \emph  {Emergency multiple} scenario.\relax }}{162}{figure.caption.359}}
-\newlabel{fig:emergencyHeadOnMultipleComputationTime}{{7.28}{162}{Computation time for \emph {Emergency multiple} scenario.\relax }{figure.caption.359}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.4}Cooperative test cases}{162}{section.7.4}}
-\newlabel{s:cooperativeTestCases}{{7.4}{162}{Cooperative test cases}{section.7.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.1}Rule based Converging}{162}{subsection.7.4.1}}
-\newlabel{s:testRuleConverging}{{7.4.1}{162}{Rule based Converging}{subsection.7.4.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scenario:}{162}{section*.360}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.35}{\ignorespaces Mission setup for \emph  {Rule based converging} scenario.\relax }}{163}{table.caption.361}}
-\newlabel{tab:missionSetupRuleBasedConvergingScenario}{{7.35}{163}{Mission setup for \emph {Rule based converging} scenario.\relax }{table.caption.361}{}}
-\@writefile{toc}{\contentsline {paragraph}{Assumptions:}{163}{section*.362}}
-\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{163}{section*.363}}
-\@writefile{toc}{\contentsline {paragraph}{Acceptance Criteria:}{164}{section*.364}}
-\@writefile{toc}{\contentsline {paragraph}{Testing Setup:}{164}{section*.365}}
-\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{164}{section*.366}}
-\newlabel{fig:ruleBasedConvergingCollisionCaseCreation}{{7.29a}{165}{Collision case creation.\relax }{figure.caption.367}{}}
-\newlabel{sub@fig:ruleBasedConvergingCollisionCaseCreation}{{a}{165}{Collision case creation.\relax }{figure.caption.367}{}}
-\newlabel{fig:ruleBasedConvergingWellClearBefore}{{7.29b}{165}{Well clear before.\relax }{figure.caption.367}{}}
-\newlabel{sub@fig:ruleBasedConvergingWellClearBefore}{{b}{165}{Well clear before.\relax }{figure.caption.367}{}}
-\newlabel{fig:ruleBasedConvergingWellClearAfter}{{7.29c}{165}{Well clear after.\relax }{figure.caption.367}{}}
-\newlabel{sub@fig:ruleBasedConvergingWellClearAfter}{{c}{165}{Well clear after.\relax }{figure.caption.367}{}}
-\newlabel{fig:ruleBasedConvergingWaypointsReach}{{7.29d}{165}{Waypoints reach.\relax }{figure.caption.367}{}}
-\newlabel{sub@fig:ruleBasedConvergingWaypointsReach}{{d}{165}{Waypoints reach.\relax }{figure.caption.367}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.29}{\ignorespaces Test scenario for \emph  {Rule based converging}. \relax }}{165}{figure.caption.367}}
-\newlabel{fig:testCaseRuleBasedConverging}{{7.29}{165}{Test scenario for \emph {Rule based converging}. \relax }{figure.caption.367}{}}
-\@writefile{toc}{\contentsline {paragraph}{Collision Case Calculation:}{165}{section*.368}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.36}{\ignorespaces Collision case for \emph  {Rule-based converging} scenario.\relax }}{165}{table.caption.369}}
-\newlabel{tab:collisionCasesRuleBasedConverging}{{7.36}{165}{Collision case for \emph {Rule-based converging} scenario.\relax }{table.caption.369}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Evolution:}{166}{section*.370}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.30}{\ignorespaces Distance to safety margin evolution for \emph  {rule based converging scenario}.\relax }}{166}{figure.caption.371}}
-\newlabel{fig:testCaseRuleBasedConvergingAvoidancePerformance}{{7.30}{166}{Distance to safety margin evolution for \emph {rule based converging scenario}.\relax }{figure.caption.371}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Peaks:}{166}{section*.372}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.37}{\ignorespaces Distance to safety margin peaks for \emph  {Rule based converging scenario}.\relax }}{166}{table.caption.373}}
-\newlabel{tab:testCaseRuleBasedConvergingSafetyMarginDistances}{{7.37}{166}{Distance to safety margin peaks for \emph {Rule based converging scenario}.\relax }{table.caption.373}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{166}{section*.374}}
-\newlabel{fig:ruleBasedConvergingUAS1PathTracking}{{7.31a}{167}{UAS 1.\relax }{figure.caption.375}{}}
-\newlabel{sub@fig:ruleBasedConvergingUAS1PathTracking}{{a}{167}{UAS 1.\relax }{figure.caption.375}{}}
-\newlabel{fig:ruleBasedCovnergingUAS2PathTracking}{{7.31b}{167}{UAS 2.\relax }{figure.caption.375}{}}
-\newlabel{sub@fig:ruleBasedCovnergingUAS2PathTracking}{{b}{167}{UAS 2.\relax }{figure.caption.375}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.31}{\ignorespaces \emph  {Trajectory tracking} for \emph  {Rule based converging} test case. \relax }}{167}{figure.caption.375}}
-\newlabel{fig:ruleBasedConvergingTrajectoryTrackingPerformance}{{7.31}{167}{\emph {Trajectory tracking} for \emph {Rule based converging} test case. \relax }{figure.caption.375}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{167}{section*.376}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.38}{\ignorespaces Path tracking properties for \emph  {Rule based converging} scenario.\relax }}{167}{table.caption.377}}
-\newlabel{tab:pathTrackingParametersForRuleBasedConverging}{{7.38}{167}{Path tracking properties for \emph {Rule based converging} scenario.\relax }{table.caption.377}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{167}{section*.378}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.32}{\ignorespaces Computation time for \emph  {Rule-based converging} scenario.\relax }}{168}{figure.caption.379}}
-\newlabel{fig:ruleBasedCConvergingComputationTime}{{7.32}{168}{Computation time for \emph {Rule-based converging} scenario.\relax }{figure.caption.379}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.2}Rule based Head on}{168}{subsection.7.4.2}}
-\newlabel{s:testRuleHeadOn}{{7.4.2}{168}{Rule based Head on}{subsection.7.4.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scenario:}{168}{section*.380}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.39}{\ignorespaces Mission setup for \emph  {Rule based head on} scenario.\relax }}{168}{table.caption.381}}
-\newlabel{tab:missionSetupRuleBasedHeadOnScenario}{{7.39}{168}{Mission setup for \emph {Rule based head on} scenario.\relax }{table.caption.381}{}}
-\@writefile{toc}{\contentsline {paragraph}{Assumptions:}{169}{section*.382}}
-\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{169}{section*.383}}
-\@writefile{toc}{\contentsline {paragraph}{Acceptance Criteria:}{169}{section*.384}}
-\@writefile{toc}{\contentsline {paragraph}{Testing Setup:}{169}{section*.385}}
-\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{169}{section*.386}}
-\newlabel{fig:ruleBasedHeadOnSituationCollisionCaseCreation}{{7.33a}{171}{Collision case creation.\relax }{figure.caption.387}{}}
-\newlabel{sub@fig:ruleBasedHeadOnSituationCollisionCaseCreation}{{a}{171}{Collision case creation.\relax }{figure.caption.387}{}}
-\newlabel{fig:ruleBasedHeadOnWellClearBefore}{{7.33b}{171}{Well clear before.\relax }{figure.caption.387}{}}
-\newlabel{sub@fig:ruleBasedHeadOnWellClearBefore}{{b}{171}{Well clear before.\relax }{figure.caption.387}{}}
-\newlabel{fig:ruleBasedHeadOnWellClearAfter}{{7.33c}{171}{Well clear after.\relax }{figure.caption.387}{}}
-\newlabel{sub@fig:ruleBasedHeadOnWellClearAfter}{{c}{171}{Well clear after.\relax }{figure.caption.387}{}}
-\newlabel{fig:ruleBasedHeadOnWaypointsReach}{{7.33d}{171}{Waypoints reach.\relax }{figure.caption.387}{}}
-\newlabel{sub@fig:ruleBasedHeadOnWaypointsReach}{{d}{171}{Waypoints reach.\relax }{figure.caption.387}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.33}{\ignorespaces Test scenario for \emph  {Rule based head on approach} (virtual roundabout). \relax }}{171}{figure.caption.387}}
-\newlabel{fig:testCaseRuleBasedHeadOnApproach}{{7.33}{171}{Test scenario for \emph {Rule based head on approach} (virtual roundabout). \relax }{figure.caption.387}{}}
-\@writefile{toc}{\contentsline {paragraph}{Collision Case Calculation: }{171}{section*.388}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.40}{\ignorespaces Collision case for \emph  {Rule-based head on} scenario.\relax }}{172}{table.caption.389}}
-\newlabel{tab:collisionCasesRuleBasedHeadon}{{7.40}{172}{Collision case for \emph {Rule-based head on} scenario.\relax }{table.caption.389}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Evolution:}{172}{section*.390}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.34}{\ignorespaces Distance to safety margin evolution for \emph  {rule based head on scenario}.\relax }}{172}{figure.caption.391}}
-\newlabel{fig:testCaseRuleBasedHeadOnAvoidancePerformance}{{7.34}{172}{Distance to safety margin evolution for \emph {rule based head on scenario}.\relax }{figure.caption.391}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Peaks:}{172}{section*.392}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.41}{\ignorespaces \emph  {Rule based head on} safety margin distances.\relax }}{172}{table.caption.393}}
-\newlabel{tab:testCaseRuleBasedHeadOnSafetyMarginDistances}{{7.41}{172}{\emph {Rule based head on} safety margin distances.\relax }{table.caption.393}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{173}{section*.394}}
-\newlabel{fig:ruleBasedHeadOnUAS1PathTracking}{{7.35a}{173}{UAS 1.\relax }{figure.caption.395}{}}
-\newlabel{sub@fig:ruleBasedHeadOnUAS1PathTracking}{{a}{173}{UAS 1.\relax }{figure.caption.395}{}}
-\newlabel{fig:ruleBasedHeadOnUAS2PathTracking}{{7.35b}{173}{UAS 2.\relax }{figure.caption.395}{}}
-\newlabel{sub@fig:ruleBasedHeadOnUAS2PathTracking}{{b}{173}{UAS 2.\relax }{figure.caption.395}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.35}{\ignorespaces \emph  {Trajectory tracking} for \emph  {Rule based head on} test case. \relax }}{173}{figure.caption.395}}
-\newlabel{fig:ruleBasedHeadOnTrajectoryTrackingPerformance}{{7.35}{173}{\emph {Trajectory tracking} for \emph {Rule based head on} test case. \relax }{figure.caption.395}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{173}{section*.396}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.42}{\ignorespaces Path tracking properties for \emph  {Rule based head on} scenario.\relax }}{173}{table.caption.397}}
-\newlabel{tab:pathTrackingParametersForRuleBasedHeadOn}{{7.42}{173}{Path tracking properties for \emph {Rule based head on} scenario.\relax }{table.caption.397}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{173}{section*.398}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.36}{\ignorespaces Computation time for \emph  {Rule-based head on} scenario.\relax }}{174}{figure.caption.399}}
-\newlabel{fig:ruleBasedHeadOnComputationTime}{{7.36}{174}{Computation time for \emph {Rule-based head on} scenario.\relax }{figure.caption.399}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.3}Rule based Mixed Head on with Converging}{174}{subsection.7.4.3}}
-\newlabel{s:testRuleMixed}{{7.4.3}{174}{Rule based Mixed Head on with Converging}{subsection.7.4.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scenario:}{174}{section*.400}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.43}{\ignorespaces Mission setup for \emph  {Rule based mixed} scenario.\relax }}{175}{table.caption.401}}
-\newlabel{tab:missionSetupRuleBasedMixedScenario}{{7.43}{175}{Mission setup for \emph {Rule based mixed} scenario.\relax }{table.caption.401}{}}
-\@writefile{toc}{\contentsline {paragraph}{Assumptions:}{175}{section*.402}}
-\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{175}{section*.403}}
-\@writefile{toc}{\contentsline {paragraph}{Acceptance Criteria:}{175}{section*.404}}
-\@writefile{toc}{\contentsline {paragraph}{Testing Setup:}{175}{section*.405}}
-\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{176}{section*.406}}
-\newlabel{fig:ruleMultipleCollisionCasesCreated}{{7.37a}{177}{Collision cases created.\relax }{figure.caption.407}{}}
-\newlabel{sub@fig:ruleMultipleCollisionCasesCreated}{{a}{177}{Collision cases created.\relax }{figure.caption.407}{}}
-\newlabel{fig:ruleMultipleRoundabountEntry}{{7.37b}{177}{Roundabout entry.\relax }{figure.caption.407}{}}
-\newlabel{sub@fig:ruleMultipleRoundabountEntry}{{b}{177}{Roundabout entry.\relax }{figure.caption.407}{}}
-\newlabel{fig:ruleMultipleRoundaboutLeave}{{7.37c}{177}{Roundabout leave.\relax }{figure.caption.407}{}}
-\newlabel{sub@fig:ruleMultipleRoundaboutLeave}{{c}{177}{Roundabout leave.\relax }{figure.caption.407}{}}
-\newlabel{fig:ruleMultipleSituationResolution}{{7.37d}{177}{Situation resolution.\relax }{figure.caption.407}{}}
-\newlabel{sub@fig:ruleMultipleSituationResolution}{{d}{177}{Situation resolution.\relax }{figure.caption.407}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.37}{\ignorespaces Test scenario for \emph  {Rule based mixed} situation with \emph  {self-separation mode}.\relax }}{177}{figure.caption.407}}
-\newlabel{fig:testCaseRuleBasedMixed}{{7.37}{177}{Test scenario for \emph {Rule based mixed} situation with \emph {self-separation mode}.\relax }{figure.caption.407}{}}
-\@writefile{toc}{\contentsline {paragraph}{Collision Cases Calculation:}{177}{section*.408}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.44}{\ignorespaces Collision cases for \emph  {Rule-based mixed} scenario.\relax }}{178}{table.caption.409}}
-\newlabel{tab:collisionCasesRuleBasedMixed}{{7.44}{178}{Collision cases for \emph {Rule-based mixed} scenario.\relax }{table.caption.409}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Evolution:}{178}{section*.410}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.38}{\ignorespaces Distance to safety margin evolution for \emph  {rule based mixed scenario}.\relax }}{179}{figure.caption.411}}
-\newlabel{fig:testRuleBasedMultipleAvoidancePerformance}{{7.38}{179}{Distance to safety margin evolution for \emph {rule based mixed scenario}.\relax }{figure.caption.411}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Peaks:}{179}{section*.412}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.45}{\ignorespaces Distance to safety margin peaks for \emph  {rule based mixed scenario}.\relax }}{179}{table.caption.413}}
-\newlabel{tab:testCaseRuleBasedMixedSafetyMarginDistances}{{7.45}{179}{Distance to safety margin peaks for \emph {rule based mixed scenario}.\relax }{table.caption.413}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{179}{section*.414}}
-\newlabel{fig:ruleBasedMixedPathTrackingUAS1}{{7.39a}{180}{UAS 1.\relax }{figure.caption.415}{}}
-\newlabel{sub@fig:ruleBasedMixedPathTrackingUAS1}{{a}{180}{UAS 1.\relax }{figure.caption.415}{}}
-\newlabel{fig:ruleBasedMixedPathTrackingUAS2}{{7.39b}{180}{UAS 2.\relax }{figure.caption.415}{}}
-\newlabel{sub@fig:ruleBasedMixedPathTrackingUAS2}{{b}{180}{UAS 2.\relax }{figure.caption.415}{}}
-\newlabel{fig:ruleBasedMixedPathTrackingUAS3}{{7.39c}{180}{UAS 3.\relax }{figure.caption.415}{}}
-\newlabel{sub@fig:ruleBasedMixedPathTrackingUAS3}{{c}{180}{UAS 3.\relax }{figure.caption.415}{}}
-\newlabel{fig:ruleBasedMixedPathTrackingUAS4}{{7.39d}{180}{UAS 4.\relax }{figure.caption.415}{}}
-\newlabel{sub@fig:ruleBasedMixedPathTrackingUAS4}{{d}{180}{UAS 4.\relax }{figure.caption.415}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.39}{\ignorespaces Trajectory tracking for \emph  {Rule based mixed} situation test case.\relax }}{180}{figure.caption.415}}
-\newlabel{fig:testCaseRuleBasedMixedTrajectoryTracking}{{7.39}{180}{Trajectory tracking for \emph {Rule based mixed} situation test case.\relax }{figure.caption.415}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{180}{section*.416}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.46}{\ignorespaces Path tracking properties for \emph  {Rule based mixed} scenario.\relax }}{180}{table.caption.417}}
-\newlabel{tab:pathTrackingParametersForRuleBasedMixed}{{7.46}{180}{Path tracking properties for \emph {Rule based mixed} scenario.\relax }{table.caption.417}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{180}{section*.418}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.40}{\ignorespaces Computation time for \emph  {Rule-based multiple} scenario.\relax }}{181}{figure.caption.419}}
-\newlabel{fig:ruleBasedMultipleComputationTime}{{7.40}{181}{Computation time for \emph {Rule-based multiple} scenario.\relax }{figure.caption.419}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.4}Rule based Overtake}{181}{subsection.7.4.4}}
-\newlabel{s:testRuleOvertake}{{7.4.4}{181}{Rule based Overtake}{subsection.7.4.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scenario:}{181}{section*.420}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.47}{\ignorespaces Mission setup for all \emph  {Rule based overtake} scenarios.\relax }}{181}{table.caption.421}}
-\newlabel{tab:missionSetupRuleBasedOvertakeScenarios}{{7.47}{181}{Mission setup for all \emph {Rule based overtake} scenarios.\relax }{table.caption.421}{}}
-\@writefile{toc}{\contentsline {paragraph}{Assumptions:}{182}{section*.422}}
-\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{182}{section*.423}}
-\@writefile{toc}{\contentsline {paragraph}{Acceptance Criteria:}{182}{section*.424}}
-\@writefile{toc}{\contentsline {paragraph}{Testing Setup:}{182}{section*.425}}
-\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{182}{section*.426}}
-\newlabel{fig:ruleBasedOvertake2xCollisionCaseCreation}{{7.41a}{184}{Collision case creation.\relax }{figure.caption.427}{}}
-\newlabel{sub@fig:ruleBasedOvertake2xCollisionCaseCreation}{{a}{184}{Collision case creation.\relax }{figure.caption.427}{}}
-\newlabel{fig:ruleBasedOvertake2xDivergenceWaypointReach}{{7.41b}{184}{Divergence waypoint reach.\relax }{figure.caption.427}{}}
-\newlabel{sub@fig:ruleBasedOvertake2xDivergenceWaypointReach}{{b}{184}{Divergence waypoint reach.\relax }{figure.caption.427}{}}
-\newlabel{fig:ruleBasedOvertake2xConvergenceWaypointReach}{{7.41c}{184}{Convergence waypoint reach.\relax }{figure.caption.427}{}}
-\newlabel{sub@fig:ruleBasedOvertake2xConvergenceWaypointReach}{{c}{184}{Convergence waypoint reach.\relax }{figure.caption.427}{}}
-\newlabel{fig:ruleBasedOvertake2xOriginalWaypointReach}{{7.41d}{184}{Original waypoint reach.\relax }{figure.caption.427}{}}
-\newlabel{sub@fig:ruleBasedOvertake2xOriginalWaypointReach}{{d}{184}{Original waypoint reach.\relax }{figure.caption.427}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.41}{\ignorespaces Test scenario for \emph  {Rule based Overtake} (double speed of overtaking aircraft). \relax }}{184}{figure.caption.427}}
-\newlabel{fig:testCaseRuleBasedOvertake2xSpeed}{{7.41}{184}{Test scenario for \emph {Rule based Overtake} (double speed of overtaking aircraft). \relax }{figure.caption.427}{}}
-\@writefile{toc}{\contentsline {paragraph}{Collision Case Calculation:}{184}{section*.428}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.48}{\ignorespaces Collision case for \emph  {Rule-based Overtake} scenario 2x speed.\relax }}{185}{table.caption.429}}
-\newlabel{tab:collisionCasesRuleOvertake2x}{{7.48}{185}{Collision case for \emph {Rule-based Overtake} scenario 2x speed.\relax }{table.caption.429}{}}
-\@writefile{toc}{\contentsline {paragraph}{Overtake Speed: Divergence/Convergence Waypoints}{185}{section*.430}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.49}{\ignorespaces Convergence and divergence waypoints for various speed differences.\relax }}{185}{table.caption.431}}
-\newlabel{tab:convergenceDivergenceWaypointsOvertake}{{7.49}{185}{Convergence and divergence waypoints for various speed differences.\relax }{table.caption.431}{}}
-\@writefile{toc}{\contentsline {paragraph}{Overtake Speed: Impact on Trajectory}{185}{section*.432}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.42}{\ignorespaces \emph  {Rule based overtake} trajectories for different speed.\relax }}{186}{figure.caption.433}}
-\newlabel{fig:testCaseRuleBasedOvertakeDifferentSpeedTrajectoriesPerformance}{{7.42}{186}{\emph {Rule based overtake} trajectories for different speed.\relax }{figure.caption.433}{}}
-\@writefile{toc}{\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Evolution}{186}{section*.434}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.43}{\ignorespaces Overtake speed dependent distance to safety margin evolution for \emph  {rule based overtake scenario}.\relax }}{186}{figure.caption.435}}
-\newlabel{fig:testRuleBasedOvertakeSafetyMarginForDifferentSpeedPerformance}{{7.43}{186}{Overtake speed dependent distance to safety margin evolution for \emph {rule based overtake scenario}.\relax }{figure.caption.435}{}}
-\@writefile{toc}{\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Peaks}{186}{section*.436}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.50}{\ignorespaces Distance to safety margin peaks for various overtake speed in \emph  {Rule based overtake scenario}.\relax }}{187}{table.caption.437}}
-\newlabel{tab:testCaseRuleBasedOvertakeSafetyMarginDistancesTimes}{{7.50}{187}{Distance to safety margin peaks for various overtake speed in \emph {Rule based overtake scenario}.\relax }{table.caption.437}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance: 2x Speed}{187}{section*.438}}
-\newlabel{fig:ruleBasedOvertake2xdPathTrackingUAS1}{{7.44a}{187}{UAS 1.\relax }{figure.caption.439}{}}
-\newlabel{sub@fig:ruleBasedOvertake2xdPathTrackingUAS1}{{a}{187}{UAS 1.\relax }{figure.caption.439}{}}
-\newlabel{fig:ruleBasedOvertake2xPathTrackingUAS2}{{7.44b}{187}{UAS 2.\relax }{figure.caption.439}{}}
-\newlabel{sub@fig:ruleBasedOvertake2xPathTrackingUAS2}{{b}{187}{UAS 2.\relax }{figure.caption.439}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.44}{\ignorespaces Trajectory tracking for \emph  {Rule based overtake double speed} situation test case.\relax }}{187}{figure.caption.439}}
-\newlabel{fig:testCaseRuleBasedOvertake2xTrajectoryTracking}{{7.44}{187}{Trajectory tracking for \emph {Rule based overtake double speed} situation test case.\relax }{figure.caption.439}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations: 2x Speed}{188}{section*.440}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.51}{\ignorespaces Path tracking properties for \emph  {Rule overtake 2x speed} scenario.\relax }}{188}{table.caption.441}}
-\newlabel{tab:pathTrackingParametersForRuleBasedOvertake2x}{{7.51}{188}{Path tracking properties for \emph {Rule overtake 2x speed} scenario.\relax }{table.caption.441}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{188}{section*.442}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.45}{\ignorespaces Computation time for \emph  {Rule based overtake} scenario.\relax }}{188}{figure.caption.443}}
-\newlabel{fig:ruleBasedOvertakeComputationTime}{{7.45}{188}{Computation time for \emph {Rule based overtake} scenario.\relax }{figure.caption.443}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.5}(R) Test Cases Conclusion}{188}{section.7.5}}
-\newlabel{s:testCasesConclusion}{{7.5}{188}{(R) Test Cases Conclusion}{section.7.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.5.1}(R) Performance Evaluation}{189}{subsection.7.5.1}}
-\newlabel{s:performanceEvaluationTable}{{7.5.1}{189}{(R) Performance Evaluation}{subsection.7.5.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.52}{\ignorespaces Test cases \emph  {performance evaluation}.\relax }}{189}{table.caption.444}}
-\newlabel{tab:testCasesPerformacneEvaluation}{{7.52}{189}{Test cases \emph {performance evaluation}.\relax }{table.caption.444}{}}
-\@writefile{toc}{\contentsline {paragraph}{Highlights:}{189}{section*.445}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.5.2}(R)Adversary Behaviour Impact}{190}{subsection.7.5.2}}
-\newlabel{s:adversadialBehaviourImpact}{{7.5.2}{190}{(R)Adversary Behaviour Impact}{subsection.7.5.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Simulation:}{190}{section*.446}}
-\newlabel{fig:adversaryDetectedDeviation}{{7.46a}{192}{Deviation detection (UAS 2).\relax }{figure.caption.447}{}}
-\newlabel{sub@fig:adversaryDetectedDeviation}{{a}{192}{Deviation detection (UAS 2).\relax }{figure.caption.447}{}}
-\newlabel{fig:adversaryAttacking}{{7.46b}{192}{Adversary attacking (UAS 2).\relax }{figure.caption.447}{}}
-\newlabel{sub@fig:adversaryAttacking}{{b}{192}{Adversary attacking (UAS 2).\relax }{figure.caption.447}{}}
-\newlabel{fig:adversaryEmergencyAvoidance}{{7.46c}{192}{Emergency avoidance (UAS 1).\relax }{figure.caption.447}{}}
-\newlabel{sub@fig:adversaryEmergencyAvoidance}{{c}{192}{Emergency avoidance (UAS 1).\relax }{figure.caption.447}{}}
-\newlabel{fig:adversaryBlindSpot}{{7.46d}{192}{Blind spot (UAS 1).\relax }{figure.caption.447}{}}
-\newlabel{sub@fig:adversaryBlindSpot}{{d}{192}{Blind spot (UAS 1).\relax }{figure.caption.447}{}}
-\newlabel{fig:adversaryCollisionDetail}{{7.46e}{192}{Collision detail.\relax }{figure.caption.447}{}}
-\newlabel{sub@fig:adversaryCollisionDetail}{{e}{192}{Collision detail.\relax }{figure.caption.447}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.46}{\ignorespaces Adversarial behaviour of \emph  {UAS 2} (magenta) to compliant \emph  {UAS 1} (blue)\relax }}{192}{figure.caption.447}}
-\newlabel{fig:adversarialAttackNotableMoments}{{7.46}{192}{Adversarial behaviour of \emph {UAS 2} (magenta) to compliant \emph {UAS 1} (blue)\relax }{figure.caption.447}{}}
-\@writefile{toc}{\contentsline {paragraph}{Performance Parameters Evaluation:}{192}{section*.448}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.47}{\ignorespaces Expected/Real Distance to body/safety margin evolution for \emph  {adversarial behaviour} of UAS 2.\relax }}{193}{figure.caption.449}}
-\newlabel{fig:adversaryDistanceToSafetyMargins}{{7.47}{193}{Expected/Real Distance to body/safety margin evolution for \emph {adversarial behaviour} of UAS 2.\relax }{figure.caption.449}{}}
-\newlabel{eq:expectedDistanceCondition}{{7.10}{193}{Performance Parameters Evaluation:}{equation.7.5.10}{}}
-\newlabel{eq:distanceConditionBreach}{{7.11}{193}{Performance Parameters Evaluation:}{equation.7.5.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.5.3}(R) Computation Footprint}{193}{subsection.7.5.3}}
-\newlabel{s:ComputaitonFootprint}{{7.5.3}{193}{(R) Computation Footprint}{subsection.7.5.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.53}{\ignorespaces \emph  {Computation load statistics} for all test cases.\relax }}{194}{table.caption.450}}
-\newlabel{tab:computationLoadStatistics}{{7.53}{194}{\emph {Computation load statistics} for all test cases.\relax }{table.caption.450}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.6}Reduced Reach Sets Performance}{194}{section.7.6}}
-\newlabel{sec:reducedReachSetPerformance}{{7.6}{194}{Reduced Reach Sets Performance}{section.7.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.7}{\ignorespaces Mission setup for \emph  {Building avoidance} scenario.\relax }}{134}{table.caption.240}}
+\newlabel{tab:missionSetupForBuildingAvoidanceScenario}{{7.7}{134}{Mission setup for \emph {Building avoidance} scenario.\relax }{table.caption.240}{}}
+\@writefile{toc}{\contentsline {paragraph}{Obstacle set:}{134}{section*.241}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.8}{\ignorespaces \emph  {Obstacle set} for \emph  {Building avoidance} scenario.\relax }}{134}{table.caption.242}}
+\newlabel{tab:obstacleSetBuildingAvoidance}{{7.8}{134}{\emph {Obstacle set} for \emph {Building avoidance} scenario.\relax }{table.caption.242}{}}
+\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{134}{section*.243}}
+\@writefile{toc}{\contentsline {paragraph}{Acceptance criteria:}{134}{section*.244}}
+\@writefile{toc}{\contentsline {paragraph}{Testing Setup:}{134}{section*.245}}
+\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{135}{section*.246}}
+\newlabel{fig:firstBuildingAvoidance}{{7.1a}{135}{$1^{st}$ building avoidance.\relax }{figure.caption.247}{}}
+\newlabel{sub@fig:firstBuildingAvoidance}{{a}{135}{$1^{st}$ building avoidance.\relax }{figure.caption.247}{}}
+\newlabel{fig:secondBuildingAvoidance}{{7.1b}{135}{$1^{nd}$ building avoidance.\relax }{figure.caption.247}{}}
+\newlabel{sub@fig:secondBuildingAvoidance}{{b}{135}{$1^{nd}$ building avoidance.\relax }{figure.caption.247}{}}
+\newlabel{fig:thirdBuidlingAvoidance}{{7.1c}{135}{$3^{rd}$ building avoidance.\relax }{figure.caption.247}{}}
+\newlabel{sub@fig:thirdBuidlingAvoidance}{{c}{135}{$3^{rd}$ building avoidance.\relax }{figure.caption.247}{}}
+\newlabel{fig:fourthBuildingAvoidance}{{7.1d}{135}{$4^{th}$ building avoidance.\relax }{figure.caption.247}{}}
+\newlabel{sub@fig:fourthBuildingAvoidance}{{d}{135}{$4^{th}$ building avoidance.\relax }{figure.caption.247}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Test scenario for \emph  {Building avoidance} (static ground obstacles). \relax }}{135}{figure.caption.247}}
+\newlabel{fig:testCaseBuildingAvoidanceSituation}{{7.1}{135}{Test scenario for \emph {Building avoidance} (static ground obstacles). \relax }{figure.caption.247}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{135}{section*.248}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces Distance to body/safety margin evolution for \emph  {Building avoidance scenario}.\relax }}{136}{figure.caption.249}}
+\newlabel{fig:testCaseBuildingAvoidancePerformance}{{7.2}{136}{Distance to body/safety margin evolution for \emph {Building avoidance scenario}.\relax }{figure.caption.249}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{136}{section*.250}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.9}{\ignorespaces Distance to Body/Satety Margin Peaks for \emph  {Building avoidance scenario}.\relax }}{136}{table.caption.251}}
+\newlabel{tab:testCaseBuildingAvoidanceSafetyAndBodyMarginDistances}{{7.9}{136}{Distance to Body/Satety Margin Peaks for \emph {Building avoidance scenario}.\relax }{table.caption.251}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{136}{section*.252}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces \emph  {Building avoidance} path tracking.\relax }}{137}{figure.caption.253}}
+\newlabel{fig:testCaseBuildingAvoidancePathTracking}{{7.3}{137}{\emph {Building avoidance} path tracking.\relax }{figure.caption.253}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{137}{section*.254}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.10}{\ignorespaces Path tracking for properties \emph  {Building avoidance}.\relax }}{137}{table.caption.255}}
+\newlabel{tab:pathTrackingParametersForBuildingAvoidance}{{7.10}{137}{Path tracking for properties \emph {Building avoidance}.\relax }{table.caption.255}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{137}{section*.256}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces Computation time for \emph  {Building avoidance} scenario.\relax }}{137}{figure.caption.257}}
+\newlabel{fig:buildingAvoidanceComputationTime}{{7.4}{137}{Computation time for \emph {Building avoidance} scenario.\relax }{figure.caption.257}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}Slalom}{137}{subsection.7.3.2}}
+\newlabel{s:testSlalom}{{7.3.2}{137}{Slalom}{subsection.7.3.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scenario:}{137}{section*.258}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.11}{\ignorespaces Mission setup for \emph  {Slalom} scenario.\relax }}{138}{table.caption.259}}
+\newlabel{tab:missionSetupSlalomScenario}{{7.11}{138}{Mission setup for \emph {Slalom} scenario.\relax }{table.caption.259}{}}
+\@writefile{toc}{\contentsline {paragraph}{Obstacle set:}{138}{section*.260}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.12}{\ignorespaces \emph  {Obstacle set} for \emph  {Slalom} scenario.\relax }}{138}{table.caption.261}}
+\newlabel{tab:obstacleSetSlalom}{{7.12}{138}{\emph {Obstacle set} for \emph {Slalom} scenario.\relax }{table.caption.261}{}}
+\@writefile{toc}{\contentsline {paragraph}{Main goal:}{138}{section*.262}}
+\@writefile{toc}{\contentsline {paragraph}{Acceptance Criteria}{138}{section*.263}}
+\@writefile{toc}{\contentsline {paragraph}{Testing setup:}{138}{section*.264}}
+\@writefile{toc}{\contentsline {paragraph}{Simulation run:}{138}{section*.265}}
+\newlabel{fig:slalomOpenSpaceObstacle}{{7.5a}{139}{Open space obstacle.\relax }{figure.caption.266}{}}
+\newlabel{sub@fig:slalomOpenSpaceObstacle}{{a}{139}{Open space obstacle.\relax }{figure.caption.266}{}}
+\newlabel{fig:slalomHiddenWaypointStart}{{7.5b}{139}{Hidden waypoint start.\relax }{figure.caption.266}{}}
+\newlabel{sub@fig:slalomHiddenWaypointStart}{{b}{139}{Hidden waypoint start.\relax }{figure.caption.266}{}}
+\newlabel{fig:slalomHiddenWaypointMiddle}{{7.5c}{139}{Hidden waypoint middle.\relax }{figure.caption.266}{}}
+\newlabel{sub@fig:slalomHiddenWaypointMiddle}{{c}{139}{Hidden waypoint middle.\relax }{figure.caption.266}{}}
+\newlabel{fig:slalomHiddenWaypointEnd}{{7.5d}{139}{Hidden waypoint end.\relax }{figure.caption.266}{}}
+\newlabel{sub@fig:slalomHiddenWaypointEnd}{{d}{139}{Hidden waypoint end.\relax }{figure.caption.266}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces Test scenario for \emph  {Slalom} with \emph  {hidden waypoint}. \relax }}{139}{figure.caption.266}}
+\newlabel{fig:testCaseSlalomwithHiddenWaypoint}{{7.5}{139}{Test scenario for \emph {Slalom} with \emph {hidden waypoint}. \relax }{figure.caption.266}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{139}{section*.267}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.6}{\ignorespaces Distance to body/safety margin evolution for \emph  {Slalom scenario}.\relax }}{140}{figure.caption.268}}
+\newlabel{fig:testCaseSlalomAvoidancePerformance}{{7.6}{140}{Distance to body/safety margin evolution for \emph {Slalom scenario}.\relax }{figure.caption.268}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{140}{section*.269}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.13}{\ignorespaces Distance to body/safety margin peaks for \emph  {Slalom scenario}.\relax }}{140}{table.caption.270}}
+\newlabel{tab:testCaseSlalomSafetyAndBodyMarginDistances}{{7.13}{140}{Distance to body/safety margin peaks for \emph {Slalom scenario}.\relax }{table.caption.270}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path tracking performance:}{140}{section*.271}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.7}{\ignorespaces \emph  {Slalom} path tracking.\relax }}{141}{figure.caption.272}}
+\newlabel{fig:testCaseSlalomPathTracking}{{7.7}{141}{\emph {Slalom} path tracking.\relax }{figure.caption.272}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{141}{section*.273}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.14}{\ignorespaces Path tracking properties for \emph  {Slalom} scenario.\relax }}{141}{table.caption.274}}
+\newlabel{tab:pathTrackingParametersForSlalomAvoidance}{{7.14}{141}{Path tracking properties for \emph {Slalom} scenario.\relax }{table.caption.274}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{141}{section*.275}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.8}{\ignorespaces Computation time for \emph  {Slalom} scenario.\relax }}{141}{figure.caption.276}}
+\newlabel{fig:slalomComputationTime}{{7.8}{141}{Computation time for \emph {Slalom} scenario.\relax }{figure.caption.276}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.3}Maze}{142}{subsection.7.3.3}}
+\newlabel{s:testMaze}{{7.3.3}{142}{Maze}{subsection.7.3.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scenario:}{142}{section*.277}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.15}{\ignorespaces Mission setup for \emph  {Maze} scenario.\relax }}{142}{table.caption.278}}
+\newlabel{tab:missionSetupMazeScenario}{{7.15}{142}{Mission setup for \emph {Maze} scenario.\relax }{table.caption.278}{}}
+\@writefile{toc}{\contentsline {paragraph}{Obstacle set:}{142}{section*.279}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.16}{\ignorespaces \emph  {Obstacle set} for \emph  {Maze} scenario.\relax }}{142}{table.caption.280}}
+\newlabel{tab:obstacleSetMaze}{{7.16}{142}{\emph {Obstacle set} for \emph {Maze} scenario.\relax }{table.caption.280}{}}
+\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{143}{section*.281}}
+\@writefile{toc}{\contentsline {paragraph}{Acceptance Criteria:}{143}{section*.282}}
+\@writefile{toc}{\contentsline {paragraph}{Testing Setup:}{143}{section*.283}}
+\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{143}{section*.284}}
+\newlabel{fig:mazeFirstTurn}{{7.9a}{144}{$1^{st}$ turn.\relax }{figure.caption.285}{}}
+\newlabel{sub@fig:mazeFirstTurn}{{a}{144}{$1^{st}$ turn.\relax }{figure.caption.285}{}}
+\newlabel{fig:mazeSecondTurn}{{7.9b}{144}{$2^{nd}$ turn.\relax }{figure.caption.285}{}}
+\newlabel{sub@fig:mazeSecondTurn}{{b}{144}{$2^{nd}$ turn.\relax }{figure.caption.285}{}}
+\newlabel{fig:mazeThirdTurn}{{7.9c}{144}{$3^{rd}$ turn.\relax }{figure.caption.285}{}}
+\newlabel{sub@fig:mazeThirdTurn}{{c}{144}{$3^{rd}$ turn.\relax }{figure.caption.285}{}}
+\newlabel{fig:mazeWaypointReach}{{7.9d}{144}{Waypoint reach.\relax }{figure.caption.285}{}}
+\newlabel{sub@fig:mazeWaypointReach}{{d}{144}{Waypoint reach.\relax }{figure.caption.285}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.9}{\ignorespaces Test scenario for \emph  {Maze}. \relax }}{144}{figure.caption.285}}
+\newlabel{fig:testCaseMazeSolver}{{7.9}{144}{Test scenario for \emph {Maze}. \relax }{figure.caption.285}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{144}{section*.286}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.10}{\ignorespaces Distance to body/safety margin evolution for \emph  {Maze scenario}.\relax }}{145}{figure.caption.287}}
+\newlabel{fig:testCaseMazeAvoidancePerformance}{{7.10}{145}{Distance to body/safety margin evolution for \emph {Maze scenario}.\relax }{figure.caption.287}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{145}{section*.288}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.17}{\ignorespaces Distance to body/safety margin peaks for \emph  {Maze scenario}.\relax }}{145}{table.caption.289}}
+\newlabel{tab:testCaseMazeSafetyAndBodyMarginDistances}{{7.17}{145}{Distance to body/safety margin peaks for \emph {Maze scenario}.\relax }{table.caption.289}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{145}{section*.290}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.11}{\ignorespaces \emph  {Maze} path tracking.\relax }}{146}{figure.caption.291}}
+\newlabel{fig:testCaseMazePathTracking}{{7.11}{146}{\emph {Maze} path tracking.\relax }{figure.caption.291}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{146}{section*.292}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.18}{\ignorespaces Path tracking properties for \emph  {Maze} scenario.\relax }}{146}{table.caption.293}}
+\newlabel{tab:pathTrackingParametersForMazeAvoidance}{{7.18}{146}{Path tracking properties for \emph {Maze} scenario.\relax }{table.caption.293}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{146}{section*.294}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.12}{\ignorespaces Computation time for \emph  {Maze} scenario.\relax }}{146}{figure.caption.295}}
+\newlabel{fig:mazeComputationTime}{{7.12}{146}{Computation time for \emph {Maze} scenario.\relax }{figure.caption.295}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.4}Storm}{146}{subsection.7.3.4}}
+\newlabel{s:testStorm}{{7.3.4}{146}{Storm}{subsection.7.3.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scenario:}{146}{section*.296}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.19}{\ignorespaces Mission setup for \emph  {Storm} scenario.\relax }}{147}{table.caption.297}}
+\newlabel{tab:missionSetupStormScenario}{{7.19}{147}{Mission setup for \emph {Storm} scenario.\relax }{table.caption.297}{}}
+\@writefile{toc}{\contentsline {paragraph}{Constraints:}{147}{section*.298}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.20}{\ignorespaces \emph  {Constraint set} for \emph  {Storm} scenario.\relax }}{147}{table.caption.299}}
+\newlabel{tab:obstacleSetStorm}{{7.20}{147}{\emph {Constraint set} for \emph {Storm} scenario.\relax }{table.caption.299}{}}
+\@writefile{toc}{\contentsline {paragraph}{Assumption:}{147}{section*.300}}
+\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{147}{section*.301}}
+\@writefile{toc}{\contentsline {paragraph}{Acceptance criteria:}{147}{section*.302}}
+\@writefile{toc}{\contentsline {paragraph}{Testing setup:}{147}{section*.303}}
+\@writefile{toc}{\contentsline {paragraph}{Simulation run:}{148}{section*.304}}
+\newlabel{fig:stromSituationDetection}{{7.13a}{148}{Situation detection.\relax }{figure.caption.305}{}}
+\newlabel{sub@fig:stromSituationDetection}{{a}{148}{Situation detection.\relax }{figure.caption.305}{}}
+\newlabel{fig:stormAvoidanceStart}{{7.13b}{148}{Storm avoidance start.\relax }{figure.caption.305}{}}
+\newlabel{sub@fig:stormAvoidanceStart}{{b}{148}{Storm avoidance start.\relax }{figure.caption.305}{}}
+\newlabel{fig:stormAvoidanceEnd}{{7.13c}{148}{Storm avoidance end.\relax }{figure.caption.305}{}}
+\newlabel{sub@fig:stormAvoidanceEnd}{{c}{148}{Storm avoidance end.\relax }{figure.caption.305}{}}
+\newlabel{fig:stormWaypointReach}{{7.13d}{148}{Waypoint reach.\relax }{figure.caption.305}{}}
+\newlabel{sub@fig:stormWaypointReach}{{d}{148}{Waypoint reach.\relax }{figure.caption.305}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.13}{\ignorespaces Test scenario for \emph  {Storm} (Dynamic hard constraint). \relax }}{148}{figure.caption.305}}
+\newlabel{fig:testCaseStormAvoidance}{{7.13}{148}{Test scenario for \emph {Storm} (Dynamic hard constraint). \relax }{figure.caption.305}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{148}{section*.306}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.14}{\ignorespaces Distance to body/safety margin evolution for \emph  {Storm scenario}.\relax }}{149}{figure.caption.307}}
+\newlabel{fig:testCaseStormAvoidancePerformance}{{7.14}{149}{Distance to body/safety margin evolution for \emph {Storm scenario}.\relax }{figure.caption.307}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{149}{section*.308}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.21}{\ignorespaces Distance to body/safety margin peaks for \emph  {Storm scenario}.\relax }}{149}{table.caption.309}}
+\newlabel{tab:testCaseStormSafetyAndBodyMarginDistances}{{7.21}{149}{Distance to body/safety margin peaks for \emph {Storm scenario}.\relax }{table.caption.309}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{149}{section*.310}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.15}{\ignorespaces \emph  {Storm} path tracking.\relax }}{150}{figure.caption.311}}
+\newlabel{fig:testCaseStormPathTracking}{{7.15}{150}{\emph {Storm} path tracking.\relax }{figure.caption.311}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{150}{section*.312}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.22}{\ignorespaces Path tracking properties for \emph  {Storm} scenario.\relax }}{150}{table.caption.313}}
+\newlabel{tab:pathTrackingParametersForStormAvoidance}{{7.22}{150}{Path tracking properties for \emph {Storm} scenario.\relax }{table.caption.313}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{150}{section*.314}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.16}{\ignorespaces Computation time for \emph  {Maze} scenario.\relax }}{150}{figure.caption.315}}
+\newlabel{fig:stormComputationTime}{{7.16}{150}{Computation time for \emph {Maze} scenario.\relax }{figure.caption.315}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.5}Emergency Converging}{150}{subsection.7.3.5}}
+\newlabel{s:testEmergencyConverging}{{7.3.5}{150}{Emergency Converging}{subsection.7.3.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scenario:}{150}{section*.316}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.23}{\ignorespaces Mission setup for \emph  {Emergency converging} scenario.\relax }}{151}{table.caption.317}}
+\newlabel{tab:missionSetupEmergencyConvergingScenario}{{7.23}{151}{Mission setup for \emph {Emergency converging} scenario.\relax }{table.caption.317}{}}
+\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{151}{section*.318}}
+\@writefile{toc}{\contentsline {paragraph}{Acceptance criteria:}{151}{section*.319}}
+\@writefile{toc}{\contentsline {paragraph}{Testing setup:}{151}{section*.320}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.24}{\ignorespaces Avoidance parameters for \emph  {Emergency converging} scenario.\relax }}{151}{table.caption.321}}
+\newlabel{tab:aboidanceParametersForEmergencyConvergingScenario}{{7.24}{151}{Avoidance parameters for \emph {Emergency converging} scenario.\relax }{table.caption.321}{}}
+\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{152}{section*.322}}
+\newlabel{fig:emergencyConvergingSituationDetection}{{7.17a}{153}{Situation detection.\relax }{figure.caption.323}{}}
+\newlabel{sub@fig:emergencyConvergingSituationDetection}{{a}{153}{Situation detection.\relax }{figure.caption.323}{}}
+\newlabel{fig:emergencyConvergingStart}{{7.17b}{153}{Start converging.\relax }{figure.caption.323}{}}
+\newlabel{sub@fig:emergencyConvergingStart}{{b}{153}{Start converging.\relax }{figure.caption.323}{}}
+\newlabel{fig:emergencyConvergingEnd}{{7.17c}{153}{Near miss case.\relax }{figure.caption.323}{}}
+\newlabel{sub@fig:emergencyConvergingEnd}{{c}{153}{Near miss case.\relax }{figure.caption.323}{}}
+\newlabel{fig:emergencyConvergingWaypointReach}{{7.17d}{153}{Waypoints reach.\relax }{figure.caption.323}{}}
+\newlabel{sub@fig:emergencyConvergingWaypointReach}{{d}{153}{Waypoints reach.\relax }{figure.caption.323}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.17}{\ignorespaces Test scenario for \emph  {Emergency converging} (Intruder avoidance). \relax }}{153}{figure.caption.323}}
+\newlabel{fig:testCaseEmergencyConverging}{{7.17}{153}{Test scenario for \emph {Emergency converging} (Intruder avoidance). \relax }{figure.caption.323}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Evolution:}{153}{section*.324}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.18}{\ignorespaces Distance to safety margin evolution for \emph  {emergency converging scenario}.\relax }}{154}{figure.caption.325}}
+\newlabel{fig:testCaseEmergencyConvergingAvoidancePerformance}{{7.18}{154}{Distance to safety margin evolution for \emph {emergency converging scenario}.\relax }{figure.caption.325}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Peaks:}{154}{section*.326}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.25}{\ignorespaces Distance to safety margin peaks for \emph  {emergency converging scenario}.\relax }}{154}{table.caption.327}}
+\newlabel{tab:testCaseEmergencyConvergingSafetyMarginDistances}{{7.25}{154}{Distance to safety margin peaks for \emph {emergency converging scenario}.\relax }{table.caption.327}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{154}{section*.328}}
+\newlabel{fig:emergencyConvergingUAS1PathTracking}{{7.19a}{155}{UAS 1.\relax }{figure.caption.329}{}}
+\newlabel{sub@fig:emergencyConvergingUAS1PathTracking}{{a}{155}{UAS 1.\relax }{figure.caption.329}{}}
+\newlabel{fig:emergencyCovnergingUAS2PathTracking}{{7.19b}{155}{UAS 2.\relax }{figure.caption.329}{}}
+\newlabel{sub@fig:emergencyCovnergingUAS2PathTracking}{{b}{155}{UAS 2.\relax }{figure.caption.329}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.19}{\ignorespaces \emph  {Trajectory tracking} for \emph  {Emergency converging} test case. \relax }}{155}{figure.caption.329}}
+\newlabel{fig:emergencyConvergingTrajectoryTrackingPerformance}{{7.19}{155}{\emph {Trajectory tracking} for \emph {Emergency converging} test case. \relax }{figure.caption.329}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Following Deviations:}{155}{section*.330}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.26}{\ignorespaces Path tracking properties for \emph  {Emergency converging} scenario.\relax }}{155}{table.caption.331}}
+\newlabel{tab:pathTrackingParametersForEmergencyConverging}{{7.26}{155}{Path tracking properties for \emph {Emergency converging} scenario.\relax }{table.caption.331}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{155}{section*.332}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.20}{\ignorespaces Computation time for \emph  {Emergency converging} scenario.\relax }}{156}{figure.caption.333}}
+\newlabel{fig:emergencyConvergingComputationTime}{{7.20}{156}{Computation time for \emph {Emergency converging} scenario.\relax }{figure.caption.333}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.6}Emergency Head on}{156}{subsection.7.3.6}}
+\newlabel{s:testEmergencyHeadOn}{{7.3.6}{156}{Emergency Head on}{subsection.7.3.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scenario:}{156}{section*.334}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.27}{\ignorespaces Mission setup for \emph  {Emergency head on} scenario.\relax }}{156}{table.caption.335}}
+\newlabel{tab:missionSetupEmergencyHeadOnScenario}{{7.27}{156}{Mission setup for \emph {Emergency head on} scenario.\relax }{table.caption.335}{}}
+\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{156}{section*.336}}
+\@writefile{toc}{\contentsline {paragraph}{Acceptance criteria:}{156}{section*.337}}
+\@writefile{toc}{\contentsline {paragraph}{Testing setup:}{157}{section*.338}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.28}{\ignorespaces Avoidance parameters for \emph  {Emergency head on} scenario.\relax }}{157}{table.caption.339}}
+\newlabel{tab:aboidanceParametersForEmergencyHeadOnScenario}{{7.28}{157}{Avoidance parameters for \emph {Emergency head on} scenario.\relax }{table.caption.339}{}}
+\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{157}{section*.340}}
+\newlabel{fig:emergencyHeadOnSituationDetection}{{7.21a}{158}{Situation detection.\relax }{figure.caption.341}{}}
+\newlabel{sub@fig:emergencyHeadOnSituationDetection}{{a}{158}{Situation detection.\relax }{figure.caption.341}{}}
+\newlabel{fig:emergencyHeadOnBeforeNearMiss}{{7.21b}{158}{Before near miss.\relax }{figure.caption.341}{}}
+\newlabel{sub@fig:emergencyHeadOnBeforeNearMiss}{{b}{158}{Before near miss.\relax }{figure.caption.341}{}}
+\newlabel{fig:emergencyHeadOnNearMiss}{{7.21c}{158}{Near miss.\relax }{figure.caption.341}{}}
+\newlabel{sub@fig:emergencyHeadOnNearMiss}{{c}{158}{Near miss.\relax }{figure.caption.341}{}}
+\newlabel{fig:emergencyHeadOnAfterNearMiss}{{7.21d}{158}{After near miss.\relax }{figure.caption.341}{}}
+\newlabel{sub@fig:emergencyHeadOnAfterNearMiss}{{d}{158}{After near miss.\relax }{figure.caption.341}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.21}{\ignorespaces Test scenario for \emph  {Emergency head on approach} (Intruder avoidance). \relax }}{158}{figure.caption.341}}
+\newlabel{fig:testCaseEmergencyHeadOnApproach}{{7.21}{158}{Test scenario for \emph {Emergency head on approach} (Intruder avoidance). \relax }{figure.caption.341}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Evolution:}{158}{section*.342}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.22}{\ignorespaces Distance to safety margin evolution for \emph  {emergency head on scenario}.\relax }}{159}{figure.caption.343}}
+\newlabel{fig:testCaseHeadOnAvoidancePerformance}{{7.22}{159}{Distance to safety margin evolution for \emph {emergency head on scenario}.\relax }{figure.caption.343}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Peaks:}{159}{section*.344}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.29}{\ignorespaces Distance to safety margin peaks for \emph  {Emergency head on scenario}.\relax }}{159}{table.caption.345}}
+\newlabel{tab:testCaseEmergencyHeadOnSafetyMarginDistances}{{7.29}{159}{Distance to safety margin peaks for \emph {Emergency head on scenario}.\relax }{table.caption.345}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance}{159}{section*.346}}
+\newlabel{fig:emergencyHeadOnUAS1PathTracking}{{7.23a}{160}{UAS 1.\relax }{figure.caption.347}{}}
+\newlabel{sub@fig:emergencyHeadOnUAS1PathTracking}{{a}{160}{UAS 1.\relax }{figure.caption.347}{}}
+\newlabel{fig:emergencyHeadOnUAS2PathTracking}{{7.23b}{160}{UAS 2.\relax }{figure.caption.347}{}}
+\newlabel{sub@fig:emergencyHeadOnUAS2PathTracking}{{b}{160}{UAS 2.\relax }{figure.caption.347}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.23}{\ignorespaces \emph  {Trajectory tracking} for \emph  {Emergency head on} test case. \relax }}{160}{figure.caption.347}}
+\newlabel{fig:emergencyHeadOnTrajectoryTrackingPerformance}{{7.23}{160}{\emph {Trajectory tracking} for \emph {Emergency head on} test case. \relax }{figure.caption.347}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Following Deviations:}{160}{section*.348}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.30}{\ignorespaces Path tracking properties for \emph  {Emergency head on} scenario.\relax }}{160}{table.caption.349}}
+\newlabel{tab:pathTrackingParametersForEmergencyHeadOn}{{7.30}{160}{Path tracking properties for \emph {Emergency head on} scenario.\relax }{table.caption.349}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{160}{section*.350}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.24}{\ignorespaces Computation time for \emph  {Emergency head on} scenario.\relax }}{161}{figure.caption.351}}
+\newlabel{fig:emergencyHeadOnComputationTime}{{7.24}{161}{Computation time for \emph {Emergency head on} scenario.\relax }{figure.caption.351}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.7}Emergency Mixed Head on with Converging}{161}{subsection.7.3.7}}
+\newlabel{s:testEmergencyMixed}{{7.3.7}{161}{Emergency Mixed Head on with Converging}{subsection.7.3.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scenario:}{161}{section*.352}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.31}{\ignorespaces Mission setup for \emph  {Emergency mixed} scenario.\relax }}{161}{table.caption.353}}
+\newlabel{tab:missionSetupEmergencyMixedScenario}{{7.31}{161}{Mission setup for \emph {Emergency mixed} scenario.\relax }{table.caption.353}{}}
+\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{161}{section*.354}}
+\@writefile{toc}{\contentsline {paragraph}{Acceptance criteria:}{161}{section*.355}}
+\@writefile{toc}{\contentsline {paragraph}{Testing setup:}{162}{section*.356}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.32}{\ignorespaces Avoidance parameters for \emph  {Emergency mixed} scenario.\relax }}{162}{table.caption.357}}
+\newlabel{tab:aboidanceParametersForEmergencyMixedScenario}{{7.32}{162}{Avoidance parameters for \emph {Emergency mixed} scenario.\relax }{table.caption.357}{}}
+\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{162}{section*.358}}
+\newlabel{fig:emergencyMultipleSituationDetection}{{7.25a}{163}{Situation detection.\relax }{figure.caption.359}{}}
+\newlabel{sub@fig:emergencyMultipleSituationDetection}{{a}{163}{Situation detection.\relax }{figure.caption.359}{}}
+\newlabel{fig:emergencyMultipleBeforeNearMiss}{{7.25b}{163}{Before near miss.\relax }{figure.caption.359}{}}
+\newlabel{sub@fig:emergencyMultipleBeforeNearMiss}{{b}{163}{Before near miss.\relax }{figure.caption.359}{}}
+\newlabel{fig:emergencyMultipleAfterNearMiss}{{7.25c}{163}{After near miss.\relax }{figure.caption.359}{}}
+\newlabel{sub@fig:emergencyMultipleAfterNearMiss}{{c}{163}{After near miss.\relax }{figure.caption.359}{}}
+\newlabel{fig:emergencyMultipleSituationReslution}{{7.25d}{163}{Situation resolution.\relax }{figure.caption.359}{}}
+\newlabel{sub@fig:emergencyMultipleSituationReslution}{{d}{163}{Situation resolution.\relax }{figure.caption.359}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.25}{\ignorespaces Test scenario for \emph  {Emergency mixed} situation with \emph  {self-separation mode}.\relax }}{163}{figure.caption.359}}
+\newlabel{fig:testCaseEmergencyMixed}{{7.25}{163}{Test scenario for \emph {Emergency mixed} situation with \emph {self-separation mode}.\relax }{figure.caption.359}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Evolution:}{163}{section*.360}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.26}{\ignorespaces Distance to safety margin evolution for \emph  {emergency mixed scenario}.\relax }}{164}{figure.caption.361}}
+\newlabel{fig:testCaseMultipleAvoidancePerformance}{{7.26}{164}{Distance to safety margin evolution for \emph {emergency mixed scenario}.\relax }{figure.caption.361}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Peaks:}{164}{section*.362}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.33}{\ignorespaces Distance to safety margin peaks for \emph  {emergency mixed scenario}.\relax }}{164}{table.caption.363}}
+\newlabel{tab:testCaseEmergencyMixedSafetyMarginDistances}{{7.33}{164}{Distance to safety margin peaks for \emph {emergency mixed scenario}.\relax }{table.caption.363}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{164}{section*.364}}
+\newlabel{fig:emergencyMixedPathTrackingUAS1}{{7.27a}{165}{UAS 1.\relax }{figure.caption.365}{}}
+\newlabel{sub@fig:emergencyMixedPathTrackingUAS1}{{a}{165}{UAS 1.\relax }{figure.caption.365}{}}
+\newlabel{fig:emergencyMixedPathTrackingUAS2}{{7.27b}{165}{UAS 2.\relax }{figure.caption.365}{}}
+\newlabel{sub@fig:emergencyMixedPathTrackingUAS2}{{b}{165}{UAS 2.\relax }{figure.caption.365}{}}
+\newlabel{fig:emergencyMixedPathTrackingUAS4}{{7.27c}{165}{UAS 3.\relax }{figure.caption.365}{}}
+\newlabel{sub@fig:emergencyMixedPathTrackingUAS4}{{c}{165}{UAS 3.\relax }{figure.caption.365}{}}
+\newlabel{fig:emergencyMixedPathTrackingUAS3}{{7.27d}{165}{UAS 4.\relax }{figure.caption.365}{}}
+\newlabel{sub@fig:emergencyMixedPathTrackingUAS3}{{d}{165}{UAS 4.\relax }{figure.caption.365}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.27}{\ignorespaces Trajectory tracking for \emph  {Emergency mixed} situation test case.\relax }}{165}{figure.caption.365}}
+\newlabel{fig:testCaseEmergencyMixedTrajectoryTracking}{{7.27}{165}{Trajectory tracking for \emph {Emergency mixed} situation test case.\relax }{figure.caption.365}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{165}{section*.366}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.34}{\ignorespaces Path tracking properties for \emph  {Emergency mixed} scenario.\relax }}{165}{table.caption.367}}
+\newlabel{tab:pathTrackingParametersForEmergencyMixed}{{7.34}{165}{Path tracking properties for \emph {Emergency mixed} scenario.\relax }{table.caption.367}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{166}{section*.368}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.28}{\ignorespaces Computation time for \emph  {Emergency multiple} scenario.\relax }}{166}{figure.caption.369}}
+\newlabel{fig:emergencyHeadOnMultipleComputationTime}{{7.28}{166}{Computation time for \emph {Emergency multiple} scenario.\relax }{figure.caption.369}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Cooperative test cases}{166}{section.7.4}}
+\newlabel{s:cooperativeTestCases}{{7.4}{166}{Cooperative test cases}{section.7.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.1}Rule based Converging}{166}{subsection.7.4.1}}
+\newlabel{s:testRuleConverging}{{7.4.1}{166}{Rule based Converging}{subsection.7.4.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scenario:}{166}{section*.370}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.35}{\ignorespaces Mission setup for \emph  {Rule based converging} scenario.\relax }}{167}{table.caption.371}}
+\newlabel{tab:missionSetupRuleBasedConvergingScenario}{{7.35}{167}{Mission setup for \emph {Rule based converging} scenario.\relax }{table.caption.371}{}}
+\@writefile{toc}{\contentsline {paragraph}{Assumptions:}{167}{section*.372}}
+\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{167}{section*.373}}
+\@writefile{toc}{\contentsline {paragraph}{Acceptance Criteria:}{168}{section*.374}}
+\@writefile{toc}{\contentsline {paragraph}{Testing Setup:}{168}{section*.375}}
+\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{168}{section*.376}}
+\newlabel{fig:ruleBasedConvergingCollisionCaseCreation}{{7.29a}{169}{Collision case creation.\relax }{figure.caption.377}{}}
+\newlabel{sub@fig:ruleBasedConvergingCollisionCaseCreation}{{a}{169}{Collision case creation.\relax }{figure.caption.377}{}}
+\newlabel{fig:ruleBasedConvergingWellClearBefore}{{7.29b}{169}{Well clear before.\relax }{figure.caption.377}{}}
+\newlabel{sub@fig:ruleBasedConvergingWellClearBefore}{{b}{169}{Well clear before.\relax }{figure.caption.377}{}}
+\newlabel{fig:ruleBasedConvergingWellClearAfter}{{7.29c}{169}{Well clear after.\relax }{figure.caption.377}{}}
+\newlabel{sub@fig:ruleBasedConvergingWellClearAfter}{{c}{169}{Well clear after.\relax }{figure.caption.377}{}}
+\newlabel{fig:ruleBasedConvergingWaypointsReach}{{7.29d}{169}{Waypoints reach.\relax }{figure.caption.377}{}}
+\newlabel{sub@fig:ruleBasedConvergingWaypointsReach}{{d}{169}{Waypoints reach.\relax }{figure.caption.377}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.29}{\ignorespaces Test scenario for \emph  {Rule based converging}. \relax }}{169}{figure.caption.377}}
+\newlabel{fig:testCaseRuleBasedConverging}{{7.29}{169}{Test scenario for \emph {Rule based converging}. \relax }{figure.caption.377}{}}
+\@writefile{toc}{\contentsline {paragraph}{Collision Case Calculation:}{169}{section*.378}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.36}{\ignorespaces Collision case for \emph  {Rule-based converging} scenario.\relax }}{169}{table.caption.379}}
+\newlabel{tab:collisionCasesRuleBasedConverging}{{7.36}{169}{Collision case for \emph {Rule-based converging} scenario.\relax }{table.caption.379}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Evolution:}{170}{section*.380}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.30}{\ignorespaces Distance to safety margin evolution for \emph  {rule based converging scenario}.\relax }}{170}{figure.caption.381}}
+\newlabel{fig:testCaseRuleBasedConvergingAvoidancePerformance}{{7.30}{170}{Distance to safety margin evolution for \emph {rule based converging scenario}.\relax }{figure.caption.381}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Peaks:}{170}{section*.382}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.37}{\ignorespaces Distance to safety margin peaks for \emph  {Rule based converging scenario}.\relax }}{170}{table.caption.383}}
+\newlabel{tab:testCaseRuleBasedConvergingSafetyMarginDistances}{{7.37}{170}{Distance to safety margin peaks for \emph {Rule based converging scenario}.\relax }{table.caption.383}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{170}{section*.384}}
+\newlabel{fig:ruleBasedConvergingUAS1PathTracking}{{7.31a}{171}{UAS 1.\relax }{figure.caption.385}{}}
+\newlabel{sub@fig:ruleBasedConvergingUAS1PathTracking}{{a}{171}{UAS 1.\relax }{figure.caption.385}{}}
+\newlabel{fig:ruleBasedCovnergingUAS2PathTracking}{{7.31b}{171}{UAS 2.\relax }{figure.caption.385}{}}
+\newlabel{sub@fig:ruleBasedCovnergingUAS2PathTracking}{{b}{171}{UAS 2.\relax }{figure.caption.385}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.31}{\ignorespaces \emph  {Trajectory tracking} for \emph  {Rule based converging} test case. \relax }}{171}{figure.caption.385}}
+\newlabel{fig:ruleBasedConvergingTrajectoryTrackingPerformance}{{7.31}{171}{\emph {Trajectory tracking} for \emph {Rule based converging} test case. \relax }{figure.caption.385}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{171}{section*.386}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.38}{\ignorespaces Path tracking properties for \emph  {Rule based converging} scenario.\relax }}{171}{table.caption.387}}
+\newlabel{tab:pathTrackingParametersForRuleBasedConverging}{{7.38}{171}{Path tracking properties for \emph {Rule based converging} scenario.\relax }{table.caption.387}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{171}{section*.388}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.32}{\ignorespaces Computation time for \emph  {Rule-based converging} scenario.\relax }}{172}{figure.caption.389}}
+\newlabel{fig:ruleBasedCConvergingComputationTime}{{7.32}{172}{Computation time for \emph {Rule-based converging} scenario.\relax }{figure.caption.389}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.2}Rule based Head on}{172}{subsection.7.4.2}}
+\newlabel{s:testRuleHeadOn}{{7.4.2}{172}{Rule based Head on}{subsection.7.4.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scenario:}{172}{section*.390}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.39}{\ignorespaces Mission setup for \emph  {Rule based head on} scenario.\relax }}{172}{table.caption.391}}
+\newlabel{tab:missionSetupRuleBasedHeadOnScenario}{{7.39}{172}{Mission setup for \emph {Rule based head on} scenario.\relax }{table.caption.391}{}}
+\@writefile{toc}{\contentsline {paragraph}{Assumptions:}{173}{section*.392}}
+\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{173}{section*.393}}
+\@writefile{toc}{\contentsline {paragraph}{Acceptance Criteria:}{173}{section*.394}}
+\@writefile{toc}{\contentsline {paragraph}{Testing Setup:}{173}{section*.395}}
+\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{173}{section*.396}}
+\newlabel{fig:ruleBasedHeadOnSituationCollisionCaseCreation}{{7.33a}{175}{Collision case creation.\relax }{figure.caption.397}{}}
+\newlabel{sub@fig:ruleBasedHeadOnSituationCollisionCaseCreation}{{a}{175}{Collision case creation.\relax }{figure.caption.397}{}}
+\newlabel{fig:ruleBasedHeadOnWellClearBefore}{{7.33b}{175}{Well clear before.\relax }{figure.caption.397}{}}
+\newlabel{sub@fig:ruleBasedHeadOnWellClearBefore}{{b}{175}{Well clear before.\relax }{figure.caption.397}{}}
+\newlabel{fig:ruleBasedHeadOnWellClearAfter}{{7.33c}{175}{Well clear after.\relax }{figure.caption.397}{}}
+\newlabel{sub@fig:ruleBasedHeadOnWellClearAfter}{{c}{175}{Well clear after.\relax }{figure.caption.397}{}}
+\newlabel{fig:ruleBasedHeadOnWaypointsReach}{{7.33d}{175}{Waypoints reach.\relax }{figure.caption.397}{}}
+\newlabel{sub@fig:ruleBasedHeadOnWaypointsReach}{{d}{175}{Waypoints reach.\relax }{figure.caption.397}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.33}{\ignorespaces Test scenario for \emph  {Rule based head on approach} (virtual roundabout). \relax }}{175}{figure.caption.397}}
+\newlabel{fig:testCaseRuleBasedHeadOnApproach}{{7.33}{175}{Test scenario for \emph {Rule based head on approach} (virtual roundabout). \relax }{figure.caption.397}{}}
+\@writefile{toc}{\contentsline {paragraph}{Collision Case Calculation: }{175}{section*.398}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.40}{\ignorespaces Collision case for \emph  {Rule-based head on} scenario.\relax }}{176}{table.caption.399}}
+\newlabel{tab:collisionCasesRuleBasedHeadon}{{7.40}{176}{Collision case for \emph {Rule-based head on} scenario.\relax }{table.caption.399}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Evolution:}{176}{section*.400}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.34}{\ignorespaces Distance to safety margin evolution for \emph  {rule based head on scenario}.\relax }}{176}{figure.caption.401}}
+\newlabel{fig:testCaseRuleBasedHeadOnAvoidancePerformance}{{7.34}{176}{Distance to safety margin evolution for \emph {rule based head on scenario}.\relax }{figure.caption.401}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Peaks:}{176}{section*.402}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.41}{\ignorespaces \emph  {Rule based head on} safety margin distances.\relax }}{176}{table.caption.403}}
+\newlabel{tab:testCaseRuleBasedHeadOnSafetyMarginDistances}{{7.41}{176}{\emph {Rule based head on} safety margin distances.\relax }{table.caption.403}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{177}{section*.404}}
+\newlabel{fig:ruleBasedHeadOnUAS1PathTracking}{{7.35a}{177}{UAS 1.\relax }{figure.caption.405}{}}
+\newlabel{sub@fig:ruleBasedHeadOnUAS1PathTracking}{{a}{177}{UAS 1.\relax }{figure.caption.405}{}}
+\newlabel{fig:ruleBasedHeadOnUAS2PathTracking}{{7.35b}{177}{UAS 2.\relax }{figure.caption.405}{}}
+\newlabel{sub@fig:ruleBasedHeadOnUAS2PathTracking}{{b}{177}{UAS 2.\relax }{figure.caption.405}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.35}{\ignorespaces \emph  {Trajectory tracking} for \emph  {Rule based head on} test case. \relax }}{177}{figure.caption.405}}
+\newlabel{fig:ruleBasedHeadOnTrajectoryTrackingPerformance}{{7.35}{177}{\emph {Trajectory tracking} for \emph {Rule based head on} test case. \relax }{figure.caption.405}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{177}{section*.406}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.42}{\ignorespaces Path tracking properties for \emph  {Rule based head on} scenario.\relax }}{177}{table.caption.407}}
+\newlabel{tab:pathTrackingParametersForRuleBasedHeadOn}{{7.42}{177}{Path tracking properties for \emph {Rule based head on} scenario.\relax }{table.caption.407}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{177}{section*.408}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.36}{\ignorespaces Computation time for \emph  {Rule-based head on} scenario.\relax }}{178}{figure.caption.409}}
+\newlabel{fig:ruleBasedHeadOnComputationTime}{{7.36}{178}{Computation time for \emph {Rule-based head on} scenario.\relax }{figure.caption.409}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.3}Rule based Mixed Head on with Converging}{178}{subsection.7.4.3}}
+\newlabel{s:testRuleMixed}{{7.4.3}{178}{Rule based Mixed Head on with Converging}{subsection.7.4.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scenario:}{178}{section*.410}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.43}{\ignorespaces Mission setup for \emph  {Rule based mixed} scenario.\relax }}{179}{table.caption.411}}
+\newlabel{tab:missionSetupRuleBasedMixedScenario}{{7.43}{179}{Mission setup for \emph {Rule based mixed} scenario.\relax }{table.caption.411}{}}
+\@writefile{toc}{\contentsline {paragraph}{Assumptions:}{179}{section*.412}}
+\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{179}{section*.413}}
+\@writefile{toc}{\contentsline {paragraph}{Acceptance Criteria:}{179}{section*.414}}
+\@writefile{toc}{\contentsline {paragraph}{Testing Setup:}{179}{section*.415}}
+\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{180}{section*.416}}
+\newlabel{fig:ruleMultipleCollisionCasesCreated}{{7.37a}{181}{Collision cases created.\relax }{figure.caption.417}{}}
+\newlabel{sub@fig:ruleMultipleCollisionCasesCreated}{{a}{181}{Collision cases created.\relax }{figure.caption.417}{}}
+\newlabel{fig:ruleMultipleRoundabountEntry}{{7.37b}{181}{Roundabout entry.\relax }{figure.caption.417}{}}
+\newlabel{sub@fig:ruleMultipleRoundabountEntry}{{b}{181}{Roundabout entry.\relax }{figure.caption.417}{}}
+\newlabel{fig:ruleMultipleRoundaboutLeave}{{7.37c}{181}{Roundabout leave.\relax }{figure.caption.417}{}}
+\newlabel{sub@fig:ruleMultipleRoundaboutLeave}{{c}{181}{Roundabout leave.\relax }{figure.caption.417}{}}
+\newlabel{fig:ruleMultipleSituationResolution}{{7.37d}{181}{Situation resolution.\relax }{figure.caption.417}{}}
+\newlabel{sub@fig:ruleMultipleSituationResolution}{{d}{181}{Situation resolution.\relax }{figure.caption.417}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.37}{\ignorespaces Test scenario for \emph  {Rule based mixed} situation with \emph  {self-separation mode}.\relax }}{181}{figure.caption.417}}
+\newlabel{fig:testCaseRuleBasedMixed}{{7.37}{181}{Test scenario for \emph {Rule based mixed} situation with \emph {self-separation mode}.\relax }{figure.caption.417}{}}
+\@writefile{toc}{\contentsline {paragraph}{Collision Cases Calculation:}{181}{section*.418}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.44}{\ignorespaces Collision cases for \emph  {Rule-based mixed} scenario.\relax }}{182}{table.caption.419}}
+\newlabel{tab:collisionCasesRuleBasedMixed}{{7.44}{182}{Collision cases for \emph {Rule-based mixed} scenario.\relax }{table.caption.419}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Evolution:}{182}{section*.420}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.38}{\ignorespaces Distance to safety margin evolution for \emph  {rule based mixed scenario}.\relax }}{183}{figure.caption.421}}
+\newlabel{fig:testRuleBasedMultipleAvoidancePerformance}{{7.38}{183}{Distance to safety margin evolution for \emph {rule based mixed scenario}.\relax }{figure.caption.421}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distance to Safety Margin Peaks:}{183}{section*.422}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.45}{\ignorespaces Distance to safety margin peaks for \emph  {rule based mixed scenario}.\relax }}{183}{table.caption.423}}
+\newlabel{tab:testCaseRuleBasedMixedSafetyMarginDistances}{{7.45}{183}{Distance to safety margin peaks for \emph {rule based mixed scenario}.\relax }{table.caption.423}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance:}{183}{section*.424}}
+\newlabel{fig:ruleBasedMixedPathTrackingUAS1}{{7.39a}{184}{UAS 1.\relax }{figure.caption.425}{}}
+\newlabel{sub@fig:ruleBasedMixedPathTrackingUAS1}{{a}{184}{UAS 1.\relax }{figure.caption.425}{}}
+\newlabel{fig:ruleBasedMixedPathTrackingUAS2}{{7.39b}{184}{UAS 2.\relax }{figure.caption.425}{}}
+\newlabel{sub@fig:ruleBasedMixedPathTrackingUAS2}{{b}{184}{UAS 2.\relax }{figure.caption.425}{}}
+\newlabel{fig:ruleBasedMixedPathTrackingUAS3}{{7.39c}{184}{UAS 3.\relax }{figure.caption.425}{}}
+\newlabel{sub@fig:ruleBasedMixedPathTrackingUAS3}{{c}{184}{UAS 3.\relax }{figure.caption.425}{}}
+\newlabel{fig:ruleBasedMixedPathTrackingUAS4}{{7.39d}{184}{UAS 4.\relax }{figure.caption.425}{}}
+\newlabel{sub@fig:ruleBasedMixedPathTrackingUAS4}{{d}{184}{UAS 4.\relax }{figure.caption.425}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.39}{\ignorespaces Trajectory tracking for \emph  {Rule based mixed} situation test case.\relax }}{184}{figure.caption.425}}
+\newlabel{fig:testCaseRuleBasedMixedTrajectoryTracking}{{7.39}{184}{Trajectory tracking for \emph {Rule based mixed} situation test case.\relax }{figure.caption.425}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations:}{184}{section*.426}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.46}{\ignorespaces Path tracking properties for \emph  {Rule based mixed} scenario.\relax }}{184}{table.caption.427}}
+\newlabel{tab:pathTrackingParametersForRuleBasedMixed}{{7.46}{184}{Path tracking properties for \emph {Rule based mixed} scenario.\relax }{table.caption.427}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{184}{section*.428}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.40}{\ignorespaces Computation time for \emph  {Rule-based multiple} scenario.\relax }}{185}{figure.caption.429}}
+\newlabel{fig:ruleBasedMultipleComputationTime}{{7.40}{185}{Computation time for \emph {Rule-based multiple} scenario.\relax }{figure.caption.429}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.4}Rule based Overtake}{185}{subsection.7.4.4}}
+\newlabel{s:testRuleOvertake}{{7.4.4}{185}{Rule based Overtake}{subsection.7.4.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scenario:}{185}{section*.430}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.47}{\ignorespaces Mission setup for all \emph  {Rule based overtake} scenarios.\relax }}{185}{table.caption.431}}
+\newlabel{tab:missionSetupRuleBasedOvertakeScenarios}{{7.47}{185}{Mission setup for all \emph {Rule based overtake} scenarios.\relax }{table.caption.431}{}}
+\@writefile{toc}{\contentsline {paragraph}{Assumptions:}{186}{section*.432}}
+\@writefile{toc}{\contentsline {paragraph}{Main Goal:}{186}{section*.433}}
+\@writefile{toc}{\contentsline {paragraph}{Acceptance Criteria:}{186}{section*.434}}
+\@writefile{toc}{\contentsline {paragraph}{Testing Setup:}{186}{section*.435}}
+\@writefile{toc}{\contentsline {paragraph}{Simulation Run:}{186}{section*.436}}
+\newlabel{fig:ruleBasedOvertake2xCollisionCaseCreation}{{7.41a}{188}{Collision case creation.\relax }{figure.caption.437}{}}
+\newlabel{sub@fig:ruleBasedOvertake2xCollisionCaseCreation}{{a}{188}{Collision case creation.\relax }{figure.caption.437}{}}
+\newlabel{fig:ruleBasedOvertake2xDivergenceWaypointReach}{{7.41b}{188}{Divergence waypoint reach.\relax }{figure.caption.437}{}}
+\newlabel{sub@fig:ruleBasedOvertake2xDivergenceWaypointReach}{{b}{188}{Divergence waypoint reach.\relax }{figure.caption.437}{}}
+\newlabel{fig:ruleBasedOvertake2xConvergenceWaypointReach}{{7.41c}{188}{Convergence waypoint reach.\relax }{figure.caption.437}{}}
+\newlabel{sub@fig:ruleBasedOvertake2xConvergenceWaypointReach}{{c}{188}{Convergence waypoint reach.\relax }{figure.caption.437}{}}
+\newlabel{fig:ruleBasedOvertake2xOriginalWaypointReach}{{7.41d}{188}{Original waypoint reach.\relax }{figure.caption.437}{}}
+\newlabel{sub@fig:ruleBasedOvertake2xOriginalWaypointReach}{{d}{188}{Original waypoint reach.\relax }{figure.caption.437}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.41}{\ignorespaces Test scenario for \emph  {Rule based Overtake} (double speed of overtaking aircraft). \relax }}{188}{figure.caption.437}}
+\newlabel{fig:testCaseRuleBasedOvertake2xSpeed}{{7.41}{188}{Test scenario for \emph {Rule based Overtake} (double speed of overtaking aircraft). \relax }{figure.caption.437}{}}
+\@writefile{toc}{\contentsline {paragraph}{Collision Case Calculation:}{188}{section*.438}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.48}{\ignorespaces Collision case for \emph  {Rule-based Overtake} scenario 2x speed.\relax }}{189}{table.caption.439}}
+\newlabel{tab:collisionCasesRuleOvertake2x}{{7.48}{189}{Collision case for \emph {Rule-based Overtake} scenario 2x speed.\relax }{table.caption.439}{}}
+\@writefile{toc}{\contentsline {paragraph}{Overtake Speed: Divergence/Convergence Waypoints}{189}{section*.440}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.49}{\ignorespaces Convergence and divergence waypoints for various speed differences.\relax }}{189}{table.caption.441}}
+\newlabel{tab:convergenceDivergenceWaypointsOvertake}{{7.49}{189}{Convergence and divergence waypoints for various speed differences.\relax }{table.caption.441}{}}
+\@writefile{toc}{\contentsline {paragraph}{Overtake Speed: Impact on Trajectory}{189}{section*.442}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.42}{\ignorespaces \emph  {Rule based overtake} trajectories for different speed.\relax }}{190}{figure.caption.443}}
+\newlabel{fig:testCaseRuleBasedOvertakeDifferentSpeedTrajectoriesPerformance}{{7.42}{190}{\emph {Rule based overtake} trajectories for different speed.\relax }{figure.caption.443}{}}
+\@writefile{toc}{\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Evolution}{190}{section*.444}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.43}{\ignorespaces Overtake speed dependent distance to safety margin evolution for \emph  {rule based overtake scenario}.\relax }}{190}{figure.caption.445}}
+\newlabel{fig:testRuleBasedOvertakeSafetyMarginForDifferentSpeedPerformance}{{7.43}{190}{Overtake speed dependent distance to safety margin evolution for \emph {rule based overtake scenario}.\relax }{figure.caption.445}{}}
+\@writefile{toc}{\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Peaks}{190}{section*.446}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.50}{\ignorespaces Distance to safety margin peaks for various overtake speed in \emph  {Rule based overtake scenario}.\relax }}{191}{table.caption.447}}
+\newlabel{tab:testCaseRuleBasedOvertakeSafetyMarginDistancesTimes}{{7.50}{191}{Distance to safety margin peaks for various overtake speed in \emph {Rule based overtake scenario}.\relax }{table.caption.447}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Performance: 2x Speed}{191}{section*.448}}
+\newlabel{fig:ruleBasedOvertake2xdPathTrackingUAS1}{{7.44a}{191}{UAS 1.\relax }{figure.caption.449}{}}
+\newlabel{sub@fig:ruleBasedOvertake2xdPathTrackingUAS1}{{a}{191}{UAS 1.\relax }{figure.caption.449}{}}
+\newlabel{fig:ruleBasedOvertake2xPathTrackingUAS2}{{7.44b}{191}{UAS 2.\relax }{figure.caption.449}{}}
+\newlabel{sub@fig:ruleBasedOvertake2xPathTrackingUAS2}{{b}{191}{UAS 2.\relax }{figure.caption.449}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.44}{\ignorespaces Trajectory tracking for \emph  {Rule based overtake double speed} situation test case.\relax }}{191}{figure.caption.449}}
+\newlabel{fig:testCaseRuleBasedOvertake2xTrajectoryTracking}{{7.44}{191}{Trajectory tracking for \emph {Rule based overtake double speed} situation test case.\relax }{figure.caption.449}{}}
+\@writefile{toc}{\contentsline {paragraph}{Path Tracking Deviations: 2x Speed}{192}{section*.450}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.51}{\ignorespaces Path tracking properties for \emph  {Rule overtake 2x speed} scenario.\relax }}{192}{table.caption.451}}
+\newlabel{tab:pathTrackingParametersForRuleBasedOvertake2x}{{7.51}{192}{Path tracking properties for \emph {Rule overtake 2x speed} scenario.\relax }{table.caption.451}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Load:}{192}{section*.452}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.45}{\ignorespaces Computation time for \emph  {Rule based overtake} scenario.\relax }}{192}{figure.caption.453}}
+\newlabel{fig:ruleBasedOvertakeComputationTime}{{7.45}{192}{Computation time for \emph {Rule based overtake} scenario.\relax }{figure.caption.453}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.5}(R) Test Cases Conclusion}{192}{section.7.5}}
+\newlabel{s:testCasesConclusion}{{7.5}{192}{(R) Test Cases Conclusion}{section.7.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5.1}(R) Performance Evaluation}{193}{subsection.7.5.1}}
+\newlabel{s:performanceEvaluationTable}{{7.5.1}{193}{(R) Performance Evaluation}{subsection.7.5.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.52}{\ignorespaces Test cases \emph  {performance evaluation}.\relax }}{193}{table.caption.454}}
+\newlabel{tab:testCasesPerformacneEvaluation}{{7.52}{193}{Test cases \emph {performance evaluation}.\relax }{table.caption.454}{}}
+\@writefile{toc}{\contentsline {paragraph}{Highlights:}{193}{section*.455}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5.2}(R)Adversary Behaviour Impact}{194}{subsection.7.5.2}}
+\newlabel{s:adversadialBehaviourImpact}{{7.5.2}{194}{(R)Adversary Behaviour Impact}{subsection.7.5.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Simulation:}{194}{section*.456}}
+\newlabel{fig:adversaryDetectedDeviation}{{7.46a}{196}{Deviation detection (UAS 2).\relax }{figure.caption.457}{}}
+\newlabel{sub@fig:adversaryDetectedDeviation}{{a}{196}{Deviation detection (UAS 2).\relax }{figure.caption.457}{}}
+\newlabel{fig:adversaryAttacking}{{7.46b}{196}{Adversary attacking (UAS 2).\relax }{figure.caption.457}{}}
+\newlabel{sub@fig:adversaryAttacking}{{b}{196}{Adversary attacking (UAS 2).\relax }{figure.caption.457}{}}
+\newlabel{fig:adversaryEmergencyAvoidance}{{7.46c}{196}{Emergency avoidance (UAS 1).\relax }{figure.caption.457}{}}
+\newlabel{sub@fig:adversaryEmergencyAvoidance}{{c}{196}{Emergency avoidance (UAS 1).\relax }{figure.caption.457}{}}
+\newlabel{fig:adversaryBlindSpot}{{7.46d}{196}{Blind spot (UAS 1).\relax }{figure.caption.457}{}}
+\newlabel{sub@fig:adversaryBlindSpot}{{d}{196}{Blind spot (UAS 1).\relax }{figure.caption.457}{}}
+\newlabel{fig:adversaryCollisionDetail}{{7.46e}{196}{Collision detail.\relax }{figure.caption.457}{}}
+\newlabel{sub@fig:adversaryCollisionDetail}{{e}{196}{Collision detail.\relax }{figure.caption.457}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.46}{\ignorespaces Adversarial behaviour of \emph  {UAS 2} (magenta) to compliant \emph  {UAS 1} (blue)\relax }}{196}{figure.caption.457}}
+\newlabel{fig:adversarialAttackNotableMoments}{{7.46}{196}{Adversarial behaviour of \emph {UAS 2} (magenta) to compliant \emph {UAS 1} (blue)\relax }{figure.caption.457}{}}
+\@writefile{toc}{\contentsline {paragraph}{Performance Parameters Evaluation:}{196}{section*.458}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.47}{\ignorespaces Expected/Real Distance to body/safety margin evolution for \emph  {adversarial behaviour} of UAS 2.\relax }}{197}{figure.caption.459}}
+\newlabel{fig:adversaryDistanceToSafetyMargins}{{7.47}{197}{Expected/Real Distance to body/safety margin evolution for \emph {adversarial behaviour} of UAS 2.\relax }{figure.caption.459}{}}
+\newlabel{eq:expectedDistanceCondition}{{7.10}{197}{Performance Parameters Evaluation:}{equation.7.5.10}{}}
+\newlabel{eq:distanceConditionBreach}{{7.11}{197}{Performance Parameters Evaluation:}{equation.7.5.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5.3}(R) Computation Footprint}{197}{subsection.7.5.3}}
+\newlabel{s:ComputaitonFootprint}{{7.5.3}{197}{(R) Computation Footprint}{subsection.7.5.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.53}{\ignorespaces \emph  {Computation load statistics} for all test cases.\relax }}{198}{table.caption.460}}
+\newlabel{tab:computationLoadStatistics}{{7.53}{198}{\emph {Computation load statistics} for all test cases.\relax }{table.caption.460}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.6}Reduced Reach Sets Performance}{198}{section.7.6}}
+\newlabel{sec:reducedReachSetPerformance}{{7.6}{198}{Reduced Reach Sets Performance}{section.7.6}{}}
 \citation{gomola2017probabilistic}
-\@writefile{toc}{\contentsline {paragraph}{Approach:}{195}{section*.451}}
-\@writefile{toc}{\contentsline {paragraph}{Testing Avoidance Grid}{195}{section*.452}}
-\@writefile{toc}{\contentsline {paragraph}{Chaotic Reach Set}{195}{section*.453}}
-\newlabel{fig:chaoticComputed}{{7.48a}{196}{Full.\relax }{figure.caption.454}{}}
-\newlabel{sub@fig:chaoticComputed}{{a}{196}{Full.\relax }{figure.caption.454}{}}
-\newlabel{fig:chaoticPruned}{{7.48b}{196}{Pruned.\relax }{figure.caption.454}{}}
-\newlabel{sub@fig:chaoticPruned}{{b}{196}{Pruned.\relax }{figure.caption.454}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.48}{\ignorespaces Chaotic reach set computation example.\relax }}{196}{figure.caption.454}}
-\newlabel{fig:chaoticReachSetComputationExample}{{7.48}{196}{Chaotic reach set computation example.\relax }{figure.caption.454}{}}
-\@writefile{toc}{\contentsline {paragraph}{Harmonic Reach Set}{196}{section*.455}}
-\newlabel{fig:harmonicComputed}{{7.49a}{196}{Full.\relax }{figure.caption.456}{}}
-\newlabel{sub@fig:harmonicComputed}{{a}{196}{Full.\relax }{figure.caption.456}{}}
-\newlabel{fig:harmonicPruned}{{7.49b}{196}{Pruned.\relax }{figure.caption.456}{}}
-\newlabel{sub@fig:harmonicPruned}{{b}{196}{Pruned.\relax }{figure.caption.456}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.49}{\ignorespaces Harmonic reach set computation example.\relax }}{196}{figure.caption.456}}
-\newlabel{fig:harmonicReachSetComputationExample}{{7.49}{196}{Harmonic reach set computation example.\relax }{figure.caption.456}{}}
-\@writefile{toc}{\contentsline {paragraph}{Combined Reach Set}{196}{section*.457}}
-\@writefile{toc}{\contentsline {paragraph}{ACAS-like Reach Set}{196}{section*.458}}
-\newlabel{fig:acasLikeComputed}{{7.50a}{197}{Full.\relax }{figure.caption.459}{}}
-\newlabel{sub@fig:acasLikeComputed}{{a}{197}{Full.\relax }{figure.caption.459}{}}
-\newlabel{fig:acasLikePruned}{{7.50b}{197}{Pruned.\relax }{figure.caption.459}{}}
-\newlabel{sub@fig:acasLikePruned}{{b}{197}{Pruned.\relax }{figure.caption.459}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.50}{\ignorespaces ACAS-like reach set computation example.\relax }}{197}{figure.caption.459}}
-\newlabel{fig:acasLikeReachSetComputationExample}{{7.50}{197}{ACAS-like reach set computation example.\relax }{figure.caption.459}{}}
-\@writefile{toc}{\contentsline {paragraph}{Computation Methods Performance Comparison}{197}{section*.460}}
-\@writefile{toc}{\contentsline {paragraph}{Node count:}{197}{section*.461}}
-\newlabel{eq:NodeWasteRate}{{7.12}{197}{Node count:}{equation.7.6.12}{}}
-\@writefile{toc}{\contentsline {paragraph}{Trajectories count:}{198}{section*.462}}
-\newlabel{eq:trajectoriesWasted}{{7.13}{198}{Trajectories count:}{equation.7.6.13}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.54}{\ignorespaces \emph  {Reduced reach set} computation methods performance\relax }}{198}{table.caption.463}}
-\newlabel{tab:RRMethodsPerformanceComparison}{{7.54}{198}{\emph {Reduced reach set} computation methods performance\relax }{table.caption.463}{}}
-\@writefile{toc}{\contentsline {paragraph}{Coverage ratio:}{198}{section*.464}}
+\@writefile{toc}{\contentsline {paragraph}{Approach:}{199}{section*.461}}
+\@writefile{toc}{\contentsline {paragraph}{Testing Avoidance Grid}{199}{section*.462}}
+\@writefile{toc}{\contentsline {paragraph}{Chaotic Reach Set}{199}{section*.463}}
+\newlabel{fig:chaoticComputed}{{7.48a}{200}{Full.\relax }{figure.caption.464}{}}
+\newlabel{sub@fig:chaoticComputed}{{a}{200}{Full.\relax }{figure.caption.464}{}}
+\newlabel{fig:chaoticPruned}{{7.48b}{200}{Pruned.\relax }{figure.caption.464}{}}
+\newlabel{sub@fig:chaoticPruned}{{b}{200}{Pruned.\relax }{figure.caption.464}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.48}{\ignorespaces Chaotic reach set computation example.\relax }}{200}{figure.caption.464}}
+\newlabel{fig:chaoticReachSetComputationExample}{{7.48}{200}{Chaotic reach set computation example.\relax }{figure.caption.464}{}}
+\@writefile{toc}{\contentsline {paragraph}{Harmonic Reach Set}{200}{section*.465}}
+\newlabel{fig:harmonicComputed}{{7.49a}{200}{Full.\relax }{figure.caption.466}{}}
+\newlabel{sub@fig:harmonicComputed}{{a}{200}{Full.\relax }{figure.caption.466}{}}
+\newlabel{fig:harmonicPruned}{{7.49b}{200}{Pruned.\relax }{figure.caption.466}{}}
+\newlabel{sub@fig:harmonicPruned}{{b}{200}{Pruned.\relax }{figure.caption.466}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.49}{\ignorespaces Harmonic reach set computation example.\relax }}{200}{figure.caption.466}}
+\newlabel{fig:harmonicReachSetComputationExample}{{7.49}{200}{Harmonic reach set computation example.\relax }{figure.caption.466}{}}
+\@writefile{toc}{\contentsline {paragraph}{Combined Reach Set}{200}{section*.467}}
+\@writefile{toc}{\contentsline {paragraph}{ACAS-like Reach Set}{200}{section*.468}}
+\newlabel{fig:acasLikeComputed}{{7.50a}{201}{Full.\relax }{figure.caption.469}{}}
+\newlabel{sub@fig:acasLikeComputed}{{a}{201}{Full.\relax }{figure.caption.469}{}}
+\newlabel{fig:acasLikePruned}{{7.50b}{201}{Pruned.\relax }{figure.caption.469}{}}
+\newlabel{sub@fig:acasLikePruned}{{b}{201}{Pruned.\relax }{figure.caption.469}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.50}{\ignorespaces ACAS-like reach set computation example.\relax }}{201}{figure.caption.469}}
+\newlabel{fig:acasLikeReachSetComputationExample}{{7.50}{201}{ACAS-like reach set computation example.\relax }{figure.caption.469}{}}
+\@writefile{toc}{\contentsline {paragraph}{Computation Methods Performance Comparison}{201}{section*.470}}
+\@writefile{toc}{\contentsline {paragraph}{Node count:}{201}{section*.471}}
+\newlabel{eq:NodeWasteRate}{{7.12}{201}{Node count:}{equation.7.6.12}{}}
+\@writefile{toc}{\contentsline {paragraph}{Trajectories count:}{202}{section*.472}}
+\newlabel{eq:trajectoriesWasted}{{7.13}{202}{Trajectories count:}{equation.7.6.13}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.54}{\ignorespaces \emph  {Reduced reach set} computation methods performance\relax }}{202}{table.caption.473}}
+\newlabel{tab:RRMethodsPerformanceComparison}{{7.54}{202}{\emph {Reduced reach set} computation methods performance\relax }{table.caption.473}{}}
+\@writefile{toc}{\contentsline {paragraph}{Coverage ratio:}{202}{section*.474}}
 \@input{08Conclusion.aux}
 \bibdata{thesis}
 \bibcite{valavanis2015uav}{{1}{}{{}}{{}}}
@@ -1576,7 +1605,7 @@
 \bibcite{pinto2006neptus}{{9}{}{{}}{{}}}
 \bibcite{gardi2015automated}{{10}{}{{}}{{}}}
 \bibcite{huerta2013integration}{{11}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{203}{chapter*.470}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{207}{chapter*.480}}
 \bibcite{johansenetal2018surveyCommunicaiton}{{12}{}{{}}{{}}}
 \bibcite{nex2014uav}{{13}{}{{}}{{}}}
 \bibcite{bodin2007navigating}{{14}{}{{}}{{}}}
@@ -1691,17 +1720,17 @@
 \bibcite{o1996log}{{123}{}{{}}{{}}}
 \bibcite{shively2018uas}{{124}{}{{}}{{}}}
 \bibcite{julian2016policy}{{125}{}{{}}{{}}}
-\bibcite{sabatini2013low}{{126}{}{{}}{{}}}
-\bibcite{shaw1998using}{{127}{}{{}}{{}}}
-\bibcite{sabatini2014navigation}{{128}{}{{}}{{}}}
-\bibcite{Sabatini2014}{{129}{}{{}}{{}}}
-\bibcite{spriesterbach2013unmanned}{{130}{}{{}}{{}}}
-\bibcite{zimmer2011rule}{{131}{}{{}}{{}}}
-\bibcite{prevot2016uas}{{132}{}{{}}{{}}}
-\bibcite{zimmer2014selective}{{133}{}{{}}{{}}}
-\bibcite{ramasamy2014towards}{{134}{}{{}}{{}}}
-\bibcite{ramasamy2013novel}{{135}{}{{}}{{}}}
-\bibcite{icao4444}{{136}{}{{}}{{}}}
+\bibcite{icao4444}{{126}{}{{}}{{}}}
+\bibcite{sabatini2013low}{{127}{}{{}}{{}}}
+\bibcite{shaw1998using}{{128}{}{{}}{{}}}
+\bibcite{sabatini2014navigation}{{129}{}{{}}{{}}}
+\bibcite{Sabatini2014}{{130}{}{{}}{{}}}
+\bibcite{spriesterbach2013unmanned}{{131}{}{{}}{{}}}
+\bibcite{zimmer2011rule}{{132}{}{{}}{{}}}
+\bibcite{prevot2016uas}{{133}{}{{}}{{}}}
+\bibcite{zimmer2014selective}{{134}{}{{}}{{}}}
+\bibcite{ramasamy2014towards}{{135}{}{{}}{{}}}
+\bibcite{ramasamy2013novel}{{136}{}{{}}{{}}}
 \bibcite{subotic2007recovery}{{137}{}{{}}{{}}}
 \bibcite{bayen2005langrangian}{{138}{}{{}}{{}}}
 \bibcite{kopardekar2002dynamic}{{139}{}{{}}{{}}}
