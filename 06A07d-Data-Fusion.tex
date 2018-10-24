@@ -1,0 +1,175 @@
+\subsection{(R) Data fusion}\label{s:sensorFusion}
+
+\noindent The data fusion interfaces \emph{Sensor Field} and \emph{Information Sources} from \emph{cell/trajectory properties}. The \emph{Data Fusion Function} is outlined in (\ref{eq:DataFusionFunction}). 
+
+First there will be an outline of \emph{Partial Ratings} commutation. Then these ratings will be discredited into Boolean values as properties of \emph{Avoidance Grid/Trajectory}. Then these Boolean values will be used for further classification of  space into \emph{Free(t), Occupied(t), Restricted(t)} and \emph{Uncertain(t)}.
+
+All mentioned ratings are result of \emph{Filtered Sensor Readings} from \emph{Sensor Field} and \emph{Information Sources} with prior processing. This section will focus on \emph{final fuzzy value calculation} and \emph{discretization}. 
+\begin{note}
+    All rating values are in \emph{range:} $[0,1]$ and they were introduced in previous sections.
+\end{note}
+
+
+\paragraph{Visibility:} The \emph{sensor reading} of \emph{sensor} if \emph{Sensor field} returns a value of \emph{visibility} for cell space in time of decision $t_i$.
+
+The \emph{visibility} for cell is given in (eq. \ref{eq:visibilityForCell}) as minimal visibility calculated from all capable sensors in \emph{Sensor Field}.
+
+\begin{equation}\label{eq:visibilityForCell}
+    visibility(cell_{i,j,k}) = \min \left\{\begin{aligned}visibility(cell_{i,j,k},&sensor_i):\\&\forall sensor_i \in Sensor Field\end{aligned}\right\}
+\end{equation}
+
+\noindent The example of \emph{visibility} calculation for \emph{LiDAR} sensor is given in (sec. \ref{s:mapObstacles}).
+
+\begin{note}
+    Sensor reliability for \emph{visibility} is already accounted prior \emph{data fusion}. If not \emph{weighted average} should be used instead. 
+\end{note}
+
+\paragraph{Detected Obstacle:} The \emph{physical obstacles} are detected by \emph{sensors} is \emph{Sensor Field}. Each \emph{sensor} returns \emph{detected obstacle rating} in  range $[0,1]$ reflecting the probability of obstacle occurrence in given cell.
+
+The \emph{maximal value} of \emph{detected obstacle} rating is selected from readings multiplied by \emph{visibility rating} to enforce \emph{visibility bias}.
+
+\begin{multline}\label{eq:detectedObstacleRatingForCell}
+    obstacle(cell_{i,j,k}) = \max \left\{\begin{aligned}obstacle(cell_{i,j,k},&sensor_i):\\&\forall sensor_i \in SensorField\end{aligned}\right\}\times\dots\\\dots\times visibility(cell_{i,j,k})
+\end{multline}
+
+\noindent The example of \emph{detected obstacle rating} calculation for \emph{LiDAR} sensor is given in (sec. \ref{s:detectedObstacles}).
+
+\paragraph{Map Obstacle:} The \emph{Information Sources} are feeding \emph{Avoidance Grid} with partial information of \emph{Map obstacle rating}. \emph{Map Obstacle Rating} shows the certainty that \emph{charted obstacle} is in given cell. This property is bound to \emph{Information Source} and it has \emph{range} in  $[0,1]$.
+
+The \emph{Map Obstacle Rating} for cell (eq. \ref{eq:mapObstacleRatingForCell}) is calculated as product of maximal \emph{Map Obstacle Rating} and \emph{inverse visibility}. This gives \emph{visibility biased} certainty of \emph{Map Obstacle}.
+
+\begin{multline}\label{eq:mapObstacleRatingForCell}
+    map(cell_{i,j,k}) = \max 
+    \left\{\begin{aligned}map(&cell_{i,j,k},source_i):\\&\forall source_i \in InformationSources\end{aligned}\right\}\times\dots\\\dots\times \left(1-visibility(cell_{i,j,k})\right)
+\end{multline}
+
+\noindent The example of \emph{Map Obstacle Rating} calculation is given in (sec. \ref{s:mapObstacles}).
+
+
+\paragraph{Intruder:} There is a set of \emph{Active Intruders}, each intruder is using its own \emph{parametric intersection model}. This parametric \emph{intersection} model calculates \emph{partial intersection ratings} representing \emph{intersection certainty} ranging in $[0,1]$. The more \emph{partial intersection rating} is closer to 1 the higher is the probability of aerial collision with that intruder in that cell. 
+
+The \emph{geometrical bias} is used for cumulative of multiple intruders, the \emph{intruders are not cooperative}, therefore their occurrence can not be addressed by simple \emph{maximum}. The proposed formula (eq. \ref{eq:intruderRatingForCell}) is simply bypassing the intruder rating if there is one intruder. If there  is more intruders the geometrical bias is applied.
+
+
+\begin{equation}\label{eq:intruderRatingForCell}
+    intruder(cell_{i,j,k}) = 1 - \prod_{\forall intruder_i \in Intruders} \left(1- intersection\left(\begin{gathered}cell_{i,j,k},\\intruder_i\end{gathered}\right)\right)
+\end{equation}
+
+\noindent The \emph{intruder intersection models} are outlined in (sec. \ref{s:intruderBehaviourPrediction}). 
+
+\paragraph{Constraint:} The \emph{constraints} are coming from various \emph{Information Sources}, the \emph{hierarchical constraint application} is resolved by higher level logic. All \emph{constraints} in this context are considered as \emph{hard}.
+
+The \emph{Constraints rating} (eq. \ref{eq:constraintRatingForCell}) is in \emph{range} $[0,1]$ reflecting certainty of constraint application in cell (usually 1).
+
+\begin{equation}\label{eq:constraintRatingForCell}
+    constraint(cell_{i,j,k}) = \max \left\{\begin{aligned}constraint(&cell_{i,j,k},source_i):\\&\forall source_i \in InformationSources\end{aligned}\right\}
+\end{equation}
+
+\noindent The \emph{Constraint Rating} calculation example for \emph{static} constraints is given in (sec. \ref{s:virtualConstraints}), the example for \emph{moving} constraints is given in (sec. \ref{s:MovingVirtualConstraints}).
+
+\begin{note}{Weather}
+    is already considered in constraints, the weather is handled as soft/hard static/moving constraints.
+\end{note}
+
+\paragraph{Threat:} The concept of threat is \emph{rating of expected harm} to receive in given segment of space. The threat can be time-bound to \emph{decision time $t_i$} (time sensitive \emph{intruder intersection models}).
+
+The \emph{harm prioritization} is addressed by higher navigation logic (fig. \ref{Mission control run activity diagram.}). All \emph{sources of harm} are considered as equal. Threat is formalized in \emph{following definition}:
+
+\begin{definition}{Threat}\label{def:threat} is considered as any source of harm. The threat is \emph{maximal aggregation} of various harm ratings. Our \emph{threat} for specific cell is defined by (eq. \ref{eq:threatRatingForCell}).
+    \begin{equation}\label{eq:threatRatingForCell}
+        threat(cell_{i,j,k}) = \max\left\{\begin{gathered}obstacle(cell_{i,j,k}),map(cell_{i,j,k}),\\intruder(cell_{i,j,k}),constraint(cell_{i,j,k})\end{gathered}\right\}
+    \end{equation}
+\end{definition}
+
+\paragraph{Reachibility:} The \emph{Reachibility} for trajectory reflects how safe is \emph{path along}. The \emph{Threat} (def. \ref{def:threat}) for each cell has been already assessed.  The set of \emph{Passing Cells} is defined in \emph{Trajectory Footprint} (eq. \ref{eq:setOfPassedCells}).
+
+The \emph{Trajectory Reachibility} is given as product of \emph{Threats} along the trajectory (eq. \ref{eq:trajectoryReachibility}). The \emph{Trajectory Reachibility} can be calculated for each \emph{trajectory segment} given as $\{movement_1,\dots,movement_i\}$ $\subset$ $Buffer$ originating from $state_0$.
+
+
+\begin{equation}\label{eq:trajectoryReachibility}
+    reachibility(Trajectory) = \prod_{Passing Cells}^{\forall cell_{i,j,k}\in} \left(1- threat(c_{i,j,k})\right)
+\end{equation}
+
+\begin{note}
+    The \emph{Reachibility} of \emph{trajectory} segment gives the property of \emph{safety} of route from beginning, until last point of segment. There can be a very unsafe trajectory which is very safe from beginning.
+\end{note}
+
+
+The \emph{Reachibility} of \emph{cell} is given by best trajectory segment passing trough the \emph{given cell}. This is given by property, that every trajectory is originating from root $state_0$, which means that one safe route is sufficient to reach space in cell.
+
+The \emph{Trajectory segment} reachability is sufficient, because the overall performance is not interesting, the \emph{local reachability} is sufficient. The cell reachibility is formally defined in (eq. \ref{eq:cellReachibility}).
+
+\begin{multline}\label{eq:cellReachibility}
+    reachibility(cell_{i,j,k}) = \max\{Trajectory.Segment(cell_{i,j,k}).Reachibility: \\\forall Trajectory \in Passing Trajectories (cell{i,j,k})\}
+\end{multline}
+    
+\begin{note}
+    Function Trajectory.Segment($cell_{i,j,k}$).Reachibility gives same results for any segment in $cell_{i,j,k}$, because (eq. \ref{eq:trajectoryReachibility}) accounts each cell $threat$ only once.
+\end{note}
+
+\paragraph{Discretization:} The \emph{fault tolerant} implementation needs to implement sharp Boolean values of properties mentioned before. The \emph{fuzzy values} are usually threshold to Boolean equivalent. The \emph{operational standards} for \emph{Manned Aviation} \cite{icao4444} demands the fail rate below $10^{-7}$, because there is no definition for \emph{UAS} the \emph{minimal fail rate} is expected to be at similar level.
+
+The \emph{fuzzy values} $[0,1]$ are projected to \emph{Boolean} properties of \emph{cell} and \emph{Trajectory} in following manner (tab. \ref{tab:defuzificationRatings}).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|ccc}
+        \multicolumn{4}{c}{Threshold = $10^{-7}$}\\\hline\hline
+        Visibile & $visibility(c_{i,j,k})$&$\ge$&$(1-threshold)$ \\\hline
+        Detected Obstacle &  $obstacle(cell_{i,j,k}) $&$ \ge $&$ threshold$\\\hline
+        Map Obstacle &  $map(cell_{i,j,k})$&$\ge$&$threshold$\\\hline
+        Intruder &  $intruder(cell_{i,j,k})$&$\ge$&$threshold$\\\hline
+        Constraint &  $constraint(cell_{i,j,k})$&$\ge$&$threshold$\\\hline\hline
+        Reachable Trajectory &  $reachibility(trajectory)$&$\ge$&$(1-threshold)$\\\hline
+        Reachable Cell &  $reachibility(cell_{i,j,k})$&$\ge$&$(1-threshold)$
+    \end{tabular}
+    \caption{Changing ratings from fuzzy to Boolean parameters.}
+    \label{tab:defuzificationRatings}
+\end{table}
+
+The high values of \emph{Visibility} (eq. \ref{eq:visibilityForCell}) and \emph{Reachability} (eq. \ref{eq:cellReachibility}, \ref{eq:trajectoryReachibility}) are expected. The low \emph{threshold} for \emph{threaths} values is expected. The error margin is solved by \emph{Sensor Fusion} therefore initial \emph{false positive} cases have low rate. The \emph{Detected Obstacle Rate} (eq. \ref{eq:detectedObstacleRatingForCell}), \emph{Map Obstacle Rate} (eq. \ref{eq:mapObstacleRatingForCell}), \emph{Intruder Rate} (eq. \ref{eq:intruderRatingForCell}), and \emph{Constraint Rate} (eq. \ref{eq:constraintRatingForCell}) thresholds are considered low.
+
+\paragraph{Space Classification:} The \emph{Data Fusion Function} is outlined in (\ref{eq:DataFusionFunction}). This classification is resulting into four distinct space sets.
+
+The \emph{Uncertain} space for decision time $t_i$ is a portion of \emph{Avoidance Grid} which \emph{UAS} can not \emph{read} with \emph{Sensor Field}. The \emph{cells} with $\neg Visible$ property. The \emph{Uncertain} space is given by (eq. \ref{eq:UncertainDataFusion}).
+
+\begin{equation}\label{eq:UncertainDataFusion}
+    Uncertain(t_i) = \left\{cell_{i,j,k}:cell_{i,j,k}\in AvoidanceGrid(t_i),cell_{i,j,k}.\neg Visible \right\}
+\end{equation}
+
+\noindent The \emph{Occupied} space for decision time $t_i$ is a set of cell which are classified as \emph{Detected Obstacles}. The \emph{Visibility} is not an issue, due the initial damping in (eq. \ref{eq:detectedObstacleRatingForCell}). The formal definition is the space portion where it is possible to detect \emph{obstacle bodies} or their portions (eq. \ref{eq:ocuupiedDataFusion}).
+
+\begin{equation}\label{eq:ocuupiedDataFusion}
+    Occupied(t_i) = \left\{cell_{i,j,k}:\begin{aligned}&cell_{i,j,k}\in AvoidanceGrid(t_i),\\&cell_{i,j,k}.DetectedObstacle\end{aligned}\right\}
+\end{equation}
+
+\noindent The \emph{Constrained} space for decision time $t_i$ is \emph{Visible} portion of \emph{Avoidance Grid} where the \emph{Intruder} or \emph{Constraint} is present. The mathematical formulation is given in (eq. \ref{eq:constrainedDataFusion}).
+
+\begin{equation}\label{eq:constrainedDataFusion}
+    Constrained(t_i) = \left\{cell_{i,j,k}:
+    \begin{aligned}
+        &cell_{i,j,k} \in AvoidanceGrid(t_i),\\
+        &cell_{i,j,k}.Visible,\\
+        &cell_{i,j,k}.Constraint \vee cell_{i,j,k}.Intruder
+    \end{aligned}\right\}
+\end{equation}
+
+\noindent The \emph{Free} space is the space which is \emph{Visible} and $\neg Obstacle$,  $\neg Intruder$, and, $\neg Constrained$. The mathematical definition is simple set subtractions from \emph{Avoidance Grid} (eq. \ref{eq:freeDataFusion}).
+
+\begin{multline}\label{eq:freeDataFusion}
+    Free(t_i) = AvoidanceGrid(t_i) -\dots\\\dots -\left(Uncertain(t_i)\cup Occupied(t_i)\cup  Constrained(t_i)\right)
+\end{multline}
+
+\noindent The \emph{Reachable} space for time $t_i$, used in \emph{Avoidance} because its free and there is a safe trajectory, is given as a set of cells from \emph{Avoidance Grid} which are \emph{Reachable}. The mathematical definition is given in (eq. \ref{eq:ReachableDataFusion}).
+
+\begin{equation}\label{eq:ReachableDataFusion}
+    Reachable(t_i) = \left\{cell_{i,j,k}:\begin{aligned}&cell_{i,j,k}\in AvoidanceGrid(t_i),\\&cell_{i,j,k}.Reachable\end{aligned}\right\}
+\end{equation}
+
+\begin{note}{The Reachable Space at decision time $t_i$:}
+The \emph{Reachable space} is non-empty set and its a subset of \emph{Free($t_i$)} space:    
+
+\begin{equation}\label{eq:reachableDataFusionConstraints}
+    |Reachable(t_i)| > 0, \quad Reachable(t_i) \subset Free(t)
+\end{equation}
+\end{note}

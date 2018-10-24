@@ -57,7 +57,7 @@ The \emph{Discretization} is the key to assure calculation in finite time. Finit
             \item \emph{Other Airspace Restrictions} - like restricted airspace, geo-fencing and other future constraint sources, all of them are covered by \emph{Static/Dynamic Constraints} for now.
         \end{enumerate}
     
-    \item \emph{Data Fusion} (Role: Sensor Input Interface) - is the unifying interface to asses \emph{Operational State Properties} mainly \emph{Obstacle Rating}, \emph{Visibility}, \emph{Map Obstacle Rating}, \emph{Intruder Rating} for portion of the space. The partial \emph{ratings} are proposed in related sections.  
+    \item \emph{Data Fusion} (Role: Sensor Input Interface) - is the unifying interface to asses \emph{Operational State Properties} mainly \emph{Obstacle Rating}, \emph{Visibility}, \emph{Map Obstacle Rating}, \emph{Intruder Rating} for portion of the space. The partial \emph{ratings} are proposed in related sections. The data fusion procedure with \emph{defuzzyfication} and final assessment into space sets is outlined in (sec. \ref{s:sensorFusion})  
     
     \item \emph{Reach Set Approximation} (Role: Reachability Estimator) - as \emph{data fusion} is providing the situation assessment, the \emph{Reach set} is providing maneuvering capability assessment. The introduction is given in (sec. \ref{s:reachSet}), the properties are defined in (sec. \ref{s:ReachSetPerformanceCriteria}), the approximation methods with constrained expansion are outlined in (sec. \ref{s:chaoticReachSet}, \ref{s:harmonicReachSet}, \ref{s:combinedReachSet}, \ref{s:acasReachSet}). The reach set estimation is main contribution of this work.
     
