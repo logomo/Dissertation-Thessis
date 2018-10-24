@@ -7,10 +7,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Obstacle avoidance based on Reach sets concept \cite {gomola2017obstacle}.\relax }}{50}{figure.caption.37}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Obstacle avoidance based on Reach sets concept \cite {gomola2017obstacle}.\relax }}{49}{figure.caption.36}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Movement Automaton for Copter UAS \cite {frazzoli2001robust}.\relax }}{51}{figure.caption.44}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces \emph {Movement set primitives} for Lattice Based Movement Planning. \cite {ljungqvist2017lattice}. \relax }}{54}{figure.caption.59}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Example of LSTS toolchain deployment in real environment \cite {pinto2006neptus}\relax }}{56}{figure.caption.65}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Example of LSTS toolchain deployment in real environment \cite {pinto2006neptus}\relax }}{55}{figure.caption.65}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces UTM Operation Modes.\relax }}{58}{figure.caption.70}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Avoidance levels based on reaction time.\relax }}{59}{figure.caption.72}

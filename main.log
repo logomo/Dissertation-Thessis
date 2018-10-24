@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  24 OCT 2018 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  24 OCT 2018 11:39
 entering extended mode
 **./main.tex
 (main.tex
@@ -873,67 +873,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
 ) (05S01-State-Of-Art.tex [48]
 Chapter 5.
-<./Pics/TE001BlockSchemeOfControlConcept.png, id=1827, 431.84468pt x 330.57793p
+<./Pics/TE001BlockSchemeOfControlConcept.png, id=1816, 431.84468pt x 330.57793p
 t>
 File: ./Pics/TE001BlockSchemeOfControlConcept.png Graphic file (type png)
 <use ./Pics/TE001BlockSchemeOfControlConcept.png>
 Package pdftex.def Info: ./Pics/TE001BlockSchemeOfControlConcept.png  used on i
-nput line 27.
+nput line 7.
 (pdftex.def)             Requested size: 364.19664pt x 278.80843pt.
 [49
 
-] [50 <./Pics/TE001BlockSchemeOfControlConcept.png>]
-<./Pics/TE030MovementAutomatonFrazzCite.png, id=1872, 526.96875pt x 390.258pt>
+ <./Pics/TE001BlockSchemeOfControlConcept.png>] [50]
+<./Pics/TE030MovementAutomatonFrazzCite.png, id=1876, 526.96875pt x 390.258pt>
 File: ./Pics/TE030MovementAutomatonFrazzCite.png Graphic file (type png)
 <use ./Pics/TE030MovementAutomatonFrazzCite.png>
 Package pdftex.def Info: ./Pics/TE030MovementAutomatonFrazzCite.png  used on in
-put line 72.
+put line 73.
 (pdftex.def)             Requested size: 250.38562pt x 185.42805pt.
  [51 <./Pics/TE030MovementAutomatonFrazzCite.png>] [52]
-Overfull \hbox (1.60545pt too wide) in paragraph at lines 133--134
+Overfull \hbox (1.60545pt too wide) in paragraph at lines 134--135
  []\OT1/cmr/bx/n/12 Maze Solv-ing Ca-pa-bil-i-ties:[] \OT1/cmr/m/n/12 The \OT1/
 cmr/m/it/12 maze solv-ing ca-pa-bil-ity \OT1/cmr/m/n/12 is us-able in \OT1/cmr/
 m/it/12 con-trolled airspace
  []
 
 [53]
-<./Pics/TE028LattuceMovementSet01.png, id=1998, 652.23676pt x 384.2355pt>
+<./Pics/TE028LattuceMovementSet01.png, id=2000, 652.23676pt x 384.2355pt>
 File: ./Pics/TE028LattuceMovementSet01.png Graphic file (type png)
 <use ./Pics/TE028LattuceMovementSet01.png>
 Package pdftex.def Info: ./Pics/TE028LattuceMovementSet01.png  used on input li
-ne 170.
+ne 171.
 (pdftex.def)             Requested size: 196.66235pt x 115.85196pt.
-<./Pics/TE029LattuceMovementSe02t.png, id=1999, 652.23676pt x 384.2355pt>
+<./Pics/TE029LattuceMovementSe02t.png, id=2001, 652.23676pt x 384.2355pt>
 File: ./Pics/TE029LattuceMovementSe02t.png Graphic file (type png)
 <use ./Pics/TE029LattuceMovementSe02t.png>
 Package pdftex.def Info: ./Pics/TE029LattuceMovementSe02t.png  used on input li
-ne 176.
+ne 177.
 (pdftex.def)             Requested size: 196.66235pt x 115.85196pt.
  [54 <./Pics/TE028LattuceMovementSet01.png> <./Pics/TE029LattuceMovementSe02t.p
 ng>]
-<./Pics/TE036LSTSDeployment.png, id=2036, 458.46281pt x 246.1697pt>
+<./Pics/TE036LSTSDeployment.png, id=2038, 458.46281pt x 246.1697pt>
 File: ./Pics/TE036LSTSDeployment.png Graphic file (type png)
 <use ./Pics/TE036LSTSDeployment.png>
-Package pdftex.def Info: ./Pics/TE036LSTSDeployment.png  used on input line 223
+Package pdftex.def Info: ./Pics/TE036LSTSDeployment.png  used on input line 224
 .
 (pdftex.def)             Requested size: 409.71689pt x 220.00685pt.
- [55] [56 <./Pics/TE036LSTSDeployment.png>] [57]
-<./Pics/TE032FreeRoute.png, id=2099, 221.628pt x 436.63126pt>
+ [55 <./Pics/TE036LSTSDeployment.png>] [56]
+<./Pics/TE032FreeRoute.png, id=2081, 221.628pt x 436.63126pt>
 File: ./Pics/TE032FreeRoute.png Graphic file (type png)
 <use ./Pics/TE032FreeRoute.png>
-Package pdftex.def Info: ./Pics/TE032FreeRoute.png  used on input line 267.
+Package pdftex.def Info: ./Pics/TE032FreeRoute.png  used on input line 268.
 (pdftex.def)             Requested size: 131.11238pt x 258.3031pt.
-<./Pics/TE034Corridors.png, id=2100, 223.43475pt x 436.63126pt>
+<./Pics/TE034Corridors.png, id=2082, 223.43475pt x 436.63126pt>
 File: ./Pics/TE034Corridors.png Graphic file (type png)
 <use ./Pics/TE034Corridors.png>
-Package pdftex.def Info: ./Pics/TE034Corridors.png  used on input line 273.
+Package pdftex.def Info: ./Pics/TE034Corridors.png  used on input line 274.
 (pdftex.def)             Requested size: 131.11238pt x 256.22441pt.
-<./Pics/TE035FixedRoute.png, id=2101, 224.037pt x 436.63126pt>
+<./Pics/TE035FixedRoute.png, id=2083, 224.037pt x 436.63126pt>
 File: ./Pics/TE035FixedRoute.png Graphic file (type png)
 <use ./Pics/TE035FixedRoute.png>
-Package pdftex.def Info: ./Pics/TE035FixedRoute.png  used on input line 279.
+Package pdftex.def Info: ./Pics/TE035FixedRoute.png  used on input line 280.
 (pdftex.def)             Requested size: 131.11238pt x 255.53152pt.
-) (06A01-Approach.tex
+ [57]) (06A01-Approach.tex
 [58 <./Pics/TE032FreeRoute.png> <./Pics/TE034Corridors.png> <./Pics/TE035FixedR
 oute.png>]
 Chapter 6.
@@ -2511,7 +2511,7 @@ H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/H172461/
 MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/H172461/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/H172461/MiKTeX 2
 .9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (226 pages, 21158923 bytes).
+Output written on main.pdf (226 pages, 21158628 bytes).
 PDF statistics:
  5469 PDF objects out of 6186 (max. 8388607)
  1859 named destinations out of 2073 (max. 500000)
