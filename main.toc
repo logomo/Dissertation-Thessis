@@ -212,7 +212,7 @@
 \contentsline {paragraph}{Motivation:}{88}{section*.154}
 \contentsline {paragraph}{Background:}{88}{section*.155}
 \contentsline {paragraph}{Expansion Constraint Function Implementation}{89}{section*.156}
-\contentsline {paragraph}{Step: Initialization}{89}{section*.157}
+\contentsline {paragraph}{Step: Initialization}{90}{section*.157}
 \contentsline {paragraph}{Step: Candidate Selection Process}{90}{section*.158}
 \contentsline {paragraph}{Example:}{90}{section*.159}
 \contentsline {paragraph}{Pros and Cons:}{91}{section*.161}
@@ -221,10 +221,10 @@
 \contentsline {subsection}{\numberline {6.7.2}(R) Data fusion}{92}{subsection.6.7.2}
 \contentsline {paragraph}{Visibility:}{92}{section*.162}
 \contentsline {paragraph}{Detected Obstacle:}{92}{section*.163}
-\contentsline {paragraph}{Map Obstacle:}{92}{section*.164}
+\contentsline {paragraph}{Map Obstacle:}{93}{section*.164}
 \contentsline {paragraph}{Intruder:}{93}{section*.165}
 \contentsline {paragraph}{Constraint:}{93}{section*.166}
-\contentsline {paragraph}{Threat:}{93}{section*.167}
+\contentsline {paragraph}{Threat:}{94}{section*.167}
 \contentsline {paragraph}{Reachibility:}{94}{section*.168}
 \contentsline {paragraph}{Discretization:}{94}{section*.169}
 \contentsline {paragraph}{Space Classification:}{95}{section*.171}
