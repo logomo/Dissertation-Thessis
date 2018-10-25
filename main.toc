@@ -453,38 +453,38 @@
 \contentsline {paragraph}{Collision Case Calculation:}{201}{section*.456}
 \contentsline {paragraph}{Overtake Speed: Divergence/Convergence Waypoints}{202}{section*.458}
 \contentsline {paragraph}{Overtake Speed: Impact on Trajectory}{202}{section*.460}
-\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Evolution}{204}{section*.462}
-\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Peaks}{204}{section*.464}
+\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Evolution}{203}{section*.462}
+\contentsline {paragraph}{Overtake Speed: Impact on Distance to Safety Margin Peaks}{203}{section*.464}
 \contentsline {paragraph}{Path Tracking Performance: 2x Speed}{204}{section*.466}
-\contentsline {paragraph}{Path Tracking Deviations: 2x Speed}{206}{section*.468}
-\contentsline {paragraph}{Computation Load:}{206}{section*.470}
-\contentsline {section}{\numberline {7.5}(R) Test Cases Conclusion}{207}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}(R) Performance Evaluation}{207}{subsection.7.5.1}
-\contentsline {paragraph}{Highlights:}{207}{section*.473}
-\contentsline {subsection}{\numberline {7.5.2}(R)Adversary Behaviour Impact}{208}{subsection.7.5.2}
-\contentsline {paragraph}{Simulation:}{209}{section*.474}
-\contentsline {paragraph}{Performance Parameters Evaluation:}{210}{section*.476}
-\contentsline {subsection}{\numberline {7.5.3}(R) Computation Footprint}{212}{subsection.7.5.3}
-\contentsline {section}{\numberline {7.6}Reduced Reach Sets Performance}{213}{section.7.6}
-\contentsline {paragraph}{Approach:}{213}{section*.479}
-\contentsline {paragraph}{Testing Avoidance Grid}{213}{section*.480}
-\contentsline {paragraph}{Chaotic Reach Set}{214}{section*.481}
-\contentsline {paragraph}{Harmonic Reach Set}{214}{section*.483}
-\contentsline {paragraph}{Combined Reach Set}{214}{section*.485}
-\contentsline {paragraph}{ACAS-like Reach Set}{214}{section*.486}
-\contentsline {paragraph}{Computation Methods Performance Comparison}{215}{section*.488}
-\contentsline {paragraph}{Node count:}{215}{section*.489}
-\contentsline {paragraph}{Trajectories count:}{216}{section*.490}
-\contentsline {paragraph}{Coverage ratio:}{216}{section*.492}
-\contentsline {chapter}{\numberline {8}(W) Conclusion and Future Work}{218}{chapter.8}
-\contentsline {section}{\numberline {8.1}(R) Framework Summary}{218}{section.8.1}
-\contentsline {section}{\numberline {8.2}(W) Other Methods Comparison}{218}{section.8.2}
-\contentsline {section}{\numberline {8.3}(R) Approach Reusability}{218}{section.8.3}
-\contentsline {paragraph}{UTM Services:}{218}{section*.493}
-\contentsline {paragraph}{Emergency Avoidance Functionality:}{218}{section*.494}
-\contentsline {paragraph}{Event Based Avoidance Functionality:}{219}{section*.495}
-\contentsline {paragraph}{Reusability for More Complex Systems:}{219}{section*.496}
-\contentsline {paragraph}{Reach Set Approximations:}{219}{section*.497}
-\contentsline {section}{\numberline {8.4}(W) Lessons learned}{220}{section.8.4}
-\contentsline {section}{\numberline {8.5}(W) Future Work}{220}{section.8.5}
-\contentsline {chapter}{Bibliography}{221}{chapter*.498}
+\contentsline {paragraph}{Path Tracking Deviations: 2x Speed}{205}{section*.468}
+\contentsline {paragraph}{Computation Load:}{205}{section*.470}
+\contentsline {section}{\numberline {7.5}(R) Test Cases Conclusion}{206}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}(R) Performance Evaluation}{206}{subsection.7.5.1}
+\contentsline {paragraph}{Highlights:}{206}{section*.473}
+\contentsline {subsection}{\numberline {7.5.2}(R)Adversary Behaviour Impact}{207}{subsection.7.5.2}
+\contentsline {paragraph}{Simulation:}{208}{section*.474}
+\contentsline {paragraph}{Performance Parameters Evaluation:}{209}{section*.476}
+\contentsline {subsection}{\numberline {7.5.3}(R) Computation Footprint}{211}{subsection.7.5.3}
+\contentsline {section}{\numberline {7.6}Reduced Reach Sets Performance}{212}{section.7.6}
+\contentsline {paragraph}{Approach:}{212}{section*.479}
+\contentsline {paragraph}{Testing Avoidance Grid}{212}{section*.480}
+\contentsline {paragraph}{Chaotic Reach Set}{213}{section*.481}
+\contentsline {paragraph}{Harmonic Reach Set}{213}{section*.483}
+\contentsline {paragraph}{Combined Reach Set}{213}{section*.485}
+\contentsline {paragraph}{ACAS-like Reach Set}{213}{section*.486}
+\contentsline {paragraph}{Computation Methods Performance Comparison}{214}{section*.488}
+\contentsline {paragraph}{Node count:}{214}{section*.489}
+\contentsline {paragraph}{Trajectories count:}{215}{section*.490}
+\contentsline {paragraph}{Coverage ratio:}{215}{section*.492}
+\contentsline {chapter}{\numberline {8}(W) Conclusion and Future Work}{217}{chapter.8}
+\contentsline {section}{\numberline {8.1}(R) Framework Summary}{217}{section.8.1}
+\contentsline {section}{\numberline {8.2}(W) Other Methods Comparison}{217}{section.8.2}
+\contentsline {section}{\numberline {8.3}(R) Approach Reusability}{217}{section.8.3}
+\contentsline {paragraph}{UTM Services:}{217}{section*.493}
+\contentsline {paragraph}{Emergency Avoidance Functionality:}{217}{section*.494}
+\contentsline {paragraph}{Event Based Avoidance Functionality:}{218}{section*.495}
+\contentsline {paragraph}{Reusability for More Complex Systems:}{218}{section*.496}
+\contentsline {paragraph}{Reach Set Approximations:}{218}{section*.497}
+\contentsline {section}{\numberline {8.4}(W) Lessons learned}{219}{section.8.4}
+\contentsline {section}{\numberline {8.5}(W) Future Work}{219}{section.8.5}
+\contentsline {chapter}{Bibliography}{220}{chapter*.498}

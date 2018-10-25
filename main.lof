@@ -86,12 +86,12 @@
 \contentsline {figure}{\numberline {7.40}{\ignorespaces Computation time for \emph {Rule-based multiple} scenario.\relax }}{198}{figure.caption.447}
 \contentsline {figure}{\numberline {7.41}{\ignorespaces Test scenario for \emph {Rule based Overtake} (double speed of overtaking aircraft). \relax }}{201}{figure.caption.455}
 \contentsline {figure}{\numberline {7.42}{\ignorespaces \emph {Rule based overtake} trajectories for different speed.\relax }}{203}{figure.caption.461}
-\contentsline {figure}{\numberline {7.43}{\ignorespaces Overtake speed dependent distance to safety margin evolution for \emph {rule based overtake scenario}.\relax }}{204}{figure.caption.463}
-\contentsline {figure}{\numberline {7.44}{\ignorespaces Trajectory tracking for \emph {Rule based overtake double speed} situation test case.\relax }}{205}{figure.caption.467}
-\contentsline {figure}{\numberline {7.45}{\ignorespaces Computation time for \emph {Rule based overtake} scenario.\relax }}{206}{figure.caption.471}
-\contentsline {figure}{\numberline {7.46}{\ignorespaces Adversarial behaviour of \emph {UAS 2} (magenta) to compliant \emph {UAS 1} (blue)\relax }}{210}{figure.caption.475}
-\contentsline {figure}{\numberline {7.47}{\ignorespaces Expected/Real Distance to body/safety margin evolution for \emph {adversarial behaviour} of UAS 2.\relax }}{211}{figure.caption.477}
-\contentsline {figure}{\numberline {7.48}{\ignorespaces Chaotic reach set computation example.\relax }}{214}{figure.caption.482}
-\contentsline {figure}{\numberline {7.49}{\ignorespaces Harmonic reach set computation example.\relax }}{214}{figure.caption.484}
-\contentsline {figure}{\numberline {7.50}{\ignorespaces ACAS-like reach set computation example.\relax }}{215}{figure.caption.487}
+\contentsline {figure}{\numberline {7.43}{\ignorespaces Overtake speed dependent distance to safety margin evolution for \emph {rule based overtake scenario}.\relax }}{203}{figure.caption.463}
+\contentsline {figure}{\numberline {7.44}{\ignorespaces Trajectory tracking for \emph {Rule based overtake double speed} situation test case.\relax }}{204}{figure.caption.467}
+\contentsline {figure}{\numberline {7.45}{\ignorespaces Computation time for \emph {Rule based overtake} scenario.\relax }}{205}{figure.caption.471}
+\contentsline {figure}{\numberline {7.46}{\ignorespaces Adversarial behaviour of \emph {UAS 2} (magenta) to compliant \emph {UAS 1} (blue)\relax }}{209}{figure.caption.475}
+\contentsline {figure}{\numberline {7.47}{\ignorespaces Expected/Real Distance to body/safety margin evolution for \emph {adversarial behaviour} of UAS 2.\relax }}{210}{figure.caption.477}
+\contentsline {figure}{\numberline {7.48}{\ignorespaces Chaotic reach set computation example.\relax }}{213}{figure.caption.482}
+\contentsline {figure}{\numberline {7.49}{\ignorespaces Harmonic reach set computation example.\relax }}{213}{figure.caption.484}
+\contentsline {figure}{\numberline {7.50}{\ignorespaces ACAS-like reach set computation example.\relax }}{214}{figure.caption.487}
 \addvspace {10\p@ }
