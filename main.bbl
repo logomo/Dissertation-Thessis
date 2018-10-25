@@ -717,6 +717,17 @@ Jim Lawrence.
 \newblock Polytope volume computation.
 \newblock {\em Mathematics of Computation}, 57(195):259--271, 1991.
 
+\bibitem{bentley1979algorithms}
+Jon~Louis Bentley and Thomas~A Ottmann.
+\newblock Algorithms for reporting and counting geometric intersections.
+\newblock {\em IEEE Transactions on computers}, (9):643--647, 1979.
+
+\bibitem{shamos1976geometric}
+Michael~Ian Shamos and Dan Hoey.
+\newblock Geometric intersection problems.
+\newblock In {\em 17th annual symposium on foundations of computer science},
+  pages 208--215. IEEE, 1976.
+
 \bibitem{blanchini1999set}
 Franco Blanchini.
 \newblock Set invariance in control.
