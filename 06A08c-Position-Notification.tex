@@ -1,31 +1,91 @@
-\subsection{(W) Position Notification}\label{sec:positionNotification}
-    \noindent Process of creation for data structure from table \ref{tab:positionNotification}.
-    \begin{tabularx}{\textwidth}{S{0.25}|X}
-         \multicolumn{2}{c}{\textbf{Position}}  \\\hline
-         latitude & based on GPS/IMU sensor fusion.\\
-         longitude & based on GPS/IMU sensor fusion.\\
-         altitude & barometric altitude \emph{Above Mean Sea Level} (AMSL). \\         
-         \multicolumn{2}{c}{\textbf{Heading}}  \\\hline
-         orientation & orientation in standard North-East coordinate frame.\\
-         velocity & relative UAS velocity.\\
-         \multicolumn{2}{c}{\textbf{Flight Levels}}\\\hline
-         main & flight level, where UAS mass center belongs\\
-         passing & flight level, during climb/ascend, or when distance of UAS mass center to flight level boundary $\le 250 ft.$ .\\
-         \multicolumn{2}{c}{\textbf{Registration}}\\\hline
-         registration ID& is unique registration number \emph{to be issued} by local aviation authority for UTM communications purposes.\\
-         flight code& or mission code is unique identification number for approved mission plan which is going to be flown by UAS.\\
-         UAS name & optional UAS identifier to increase human recognition. \\
-         \multicolumn{2}{c}{\textbf{Categorization}}\\\hline
-         craft category & ICAO main category, based on vehicle type.\\
-         maneuverability& secondary categorization specifying size class, horizontal/vertical turning radius, minimal and maximal cruising speed.\\
-         \multicolumn{2}{c}{\textbf{Safety margins}}\\\hline
-         universal & minimal safety margin for any avoidance situation\\
-         head on & minimal distance from other similar maneuverability class aircraft in case of head on approach.\\
-         converging & minimal distance from other similar maneuverability class aircraft in case of head of converging maneuver.\\
-         overtake & minimal distance from other similar maneuverability class aircraft in case of overtake maneuver.\\
-         wake angle & for wake turbulence cone.\\
-         wake radius & for wake turbulence cone.\\
-        \caption{Time-stamped \emph{position notification} structure.}
-        \label{tab:positionNotification}
-    \end{tabularx}
+\subsection{(R) Position Notification}\label{sec:positionNotification}
 
+\paragraph{Motivation:} The \emph{position notification} (tab. \ref{tab:positionNotification}) is designed for further \emph{collision case resolution} (sec. \ref{sec:collisionCase}). It is similar to ADS-B\footnote{ADS-B versions and message containment: \url{https://mode-s.org/decode/adsb/version.html}.} message information. 
+
+
+The main purpose is to broadcast the \emph{position notification} in \emph{controlled aerospace}. The broadcast for \emph{non-controlled} airspace needs to contain \emph{intruder properties}, \emph{preferred separation mode} and \emph{near miss margin}.
+
+\paragraph{Position:} The position is defined in \emph{Global Coordinate System} using GPS for latitude and longitude. The barometric altitude is required for controlled airspace, preferred for non-controlled airspace.
+
+\paragraph{Heading:} The \emph{Linear Velocity} combined with heading in standard \emph{North-East} coordinate frame is used.
+
+\paragraph{Flight Levels:} The \emph{flight level} is notified to UTM for \emph{collision detection} purposes. There is \emph{main flight level} where \emph{aircraft} belong physically. There is \emph{passing flight level} form which/to which is aircraft emerging \cite{icao4444}. 
+
+\paragraph{Aircraft Category:} The aircraft category impacts the prioritization of \emph{role assessment} by UTM/ATM. The following categorization is proposed by \emph{manned aviation pilot community}, from the highest to the lowest right of the way priority:
+
+\begin{enumerate}
+    \item \emph{Manned aviation in distress} \cite{icaoAnnex2} -  the aircraft with impaired capability switched to emergency mode. The emergency mode is usually acknowledged by authority in controlled airspace. 
+    
+    \item \emph{Balloon} (manned) \cite{icaoAnnex2} - the aircraft with \emph{altitude} control and very slow dynamics implying very low maneuverability.  
+    
+    \item \emph{Glider} (manned) \cite{icaoAnnex2} - the aircraft with \emph{full control} but without own \emph{propulsion}. The overall \emph{maneuverability} is good, but the \emph{velocity} changes are impossible with sufficient flexibility.
+    
+    \item \emph{Aerial towing} (manned) \cite{icaoAnnex2} - the towing aircraft usually have \emph{own propulsion} and full maneuverability, the only constraint is \emph{towed load}. The towed load decreases overall maneuverability.
+    
+    \item \emph{Airship} (manned) \cite{icaoAnnex2} - the airship have \emph{own propulsion} and full maneuverability, the constraint is low acceleration/deceleration and huge turning radius.
+    
+    \item \emph{Other manned aviation} \cite{icaoAnnex2} - containing all vehicles with required level of \emph{airworthiness} for given operational \emph{altitude}. They usually have required maneuverability.
+    
+    \item \emph{UAS Autonomous} (proposed) \cite{santiago2015pilot} - containing all autonomous UAS, the lower flexibility is expected at beginning of integration.
+    
+    \item \emph{Remotely Piloted Aerial System (RPAS)} (proposed)  \cite{santiago2015pilot} - has lesser priority due the higher response rate of the pilot.
+\end{enumerate}
+
+\begin{note}
+    This categorization reflects only Pilot community statement, the general priority rule is broken, because maneuverability and vulnerability  should be always considered as key decision factor. 
+\end{note}
+
+\paragraph{Maneuverability:} The maneuverability is the real key factor in priority assessment.  The components of maneuverability are \emph{maximal/mean acceleration/deceleration}, \emph{climb/descent rate} and \emph{turning ratio/radius}. The comparison can be done by solving \emph{pursuit problem} using \emph{Reach Sets} \cite{game1987,game1988}.
+
+The \emph{Maneuverability categorization} is based on \emph{original aircraft priority categorization} \cite{icaoAnnex2} accounting UAS/RPAS as equal to \emph{manned aviation}. The ordered list from the highest to the lowest priority goes as follows:
+
+\begin{enumerate}
+    \item \emph{Impaired control} (Distress aircraft) - any aviation attendant in distress has the priority in case of the conflict occurrence.
+    
+    \item \emph{Altitude control/No} (Balloon, Hovering aircraft) - the balloon type crafts does not have any type of propulsion and horizontal movements follows the airflow in given altitude. 
+    
+    
+    \item \emph{Full control/No propulsion} (Gliders of any sort) - the gliders can control their horizontal position, but there are limits to altitude control and acceleration/deceleration. 
+    
+    \item \emph{Full control/Linear propulsion} (Any aircraft of plane type) - the \emph{towing aircraft's} and \emph{airplanes} belong there, the difference is the \emph{flexibility} of \emph{maneuvering}.
+    
+    \item \emph{Full control/VTOL capability} (Any aircraft with VTOL) - the \emph{other aircraft} capable to do on spot turn. The typical representative is \emph{quad-rotor copter}.
+\end{enumerate}
+
+There are other aspects like \emph{minimal required} acceleration/deceleration/turn ratio to operate in selected segment of the \emph{airspace}. These should be specified later by \emph{Minimum Operational Performance Standards} (MOPS).
+
+\paragraph{Safety Margins:} The \emph{Safety Margin} for \emph{Well Clear Condition} value is based on \emph{situation}. There is also an \emph{universal safety margin} which guarantees the minimal safety for encountering intruder. 
+
+The most prevalent effect is \emph{Wake turbulence} therefore \emph{wake turbulence cone} angle $[0\circ -90\circ ]$ and radius. 
+
+The \emph{safety Margin} for situation-based avoidance is given by list of supported manuevers maneuvers, there is converging (sec. \ref{sec:handlingConvergingManuever}), head on (sec. \ref{sec:handlingHeadOnApproach}), overtake (sec. \ref{sec:handlingOvertakeManuever}) safety margins
+
+\noindent Process of creation for data structure from table \ref{tab:positionNotification}.
+\begin{tabularx}{\textwidth}{S{0.25}|X}
+     \multicolumn{2}{c}{\textbf{Position}}  \\\hline
+     latitude & based on GPS/IMU sensor fusion.\\
+     longitude & based on GPS/IMU sensor fusion.\\
+     altitude & barometric altitude \emph{Above Mean Sea Level} (AMSL). \\         
+     \multicolumn{2}{c}{\textbf{Heading}}  \\\hline
+     orientation & orientation in standard North-East coordinate frame.\\
+     velocity & relative UAS velocity.\\
+     \multicolumn{2}{c}{\textbf{Flight Levels}}\\\hline
+     main & flight level, where UAS mass center belongs\\
+     passing & flight level, during climb/ascend, or when distance of UAS mass center to flight level boundary $\le 250 ft.$ .\\
+     \multicolumn{2}{c}{\textbf{Registration}}\\\hline
+     registration ID& is unique registration number \emph{to be issued} by local aviation authority for UTM communications purposes.\\
+     flight code& or mission code is unique identification number for approved mission plan which is going to be flown by UAS.\\
+     UAS name & optional UAS identifier to increase human recognition. \\
+     \multicolumn{2}{c}{\textbf{Categorization}}\\\hline
+     craft category & ICAO main category, based on vehicle type.\\
+     maneuverability& secondary categorization specifying size class, horizontal/vertical turning radius, minimal and maximal cruising speed.\\
+     \multicolumn{2}{c}{\textbf{Safety margins}}\\\hline
+     universal & minimal safety margin for any avoidance situation\\
+     head on & minimal distance from other similar maneuverability class aircraft in case of head on approach.\\
+     converging & minimal distance from other similar maneuverability class aircraft in case of head of converging maneuver.\\
+     overtake & minimal distance from other similar maneuverability class aircraft in case of overtake maneuver.\\
+     wake angle & for wake turbulence cone.\\
+     wake radius & for wake turbulence cone.\\
+    \caption{Time-stamped \emph{position notification} structure.}
+    \label{tab:positionNotification}
+\end{tabularx}
