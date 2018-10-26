@@ -1,7 +1,7 @@
 %%%%% Single page layout:
 %%%%% ----------------------------------------------------
-\documentclass[12pt, a4paper,draft]{report}
-%\documentclass[12pt, a4paper]{report}
+%\documentclass[12pt, a4paper,draft]{report}
+\documentclass[12pt, a4paper]{report}
 \setlength\textwidth{160mm}
 \setlength\textheight{247mm}
 \setlength\oddsidemargin{0mm}
@@ -148,79 +148,8 @@
 \newcommand{\TBD}[1]{\color{red}\emph{--TBD:}#1\color{black}}
 
 \begin{document}
-%00-Title page 
-    \include{00T01-Title-Page}
-
-%00-Nomenclature
-    \include{00T02-Nomenclature}
-
-%01-Introduction
-    \input{01I01-Introduction}
-    \input{01I02-Related-Work}
-    \input{01I03-Goals}
-    \input{01I04-Assumptions}
-    \input{01I05-Overview}
-    \input{01I06-Contributions}
-
-%02-Collision Avoidance
-    \input{02C01-Collision-Avoidance}
-    \input{02C02-Airspace-Clasification}
-    \input{02C03-Operational-Rules}
-    \input{02C04-WellClear-ATC}
-    \input{02C05-UTM}
-    \input{02C06-Event-Based-Avoidance}
-    \input{02C07-Functional-Decomposition-UTM}
-    
-%03-Background theory
-    \input{03B01-Background-Theory}
-    \input{03B02-UAS-Motion-Model}
-    \input{03B03-Reach-Sets}
-    \input{03B04-Space-Segmentation}
-    \input{03B05-Movement-Automaton}
-
-%04-Problem Statement
-    %%\input{04P00-Problem-Statement-Original} - NEVER USE
-    \input{04P01-Problem-Statement}
-    \input{04P02-Basic-Definitions}
-    \input{04P03-Basic-Obstacle-Avoidance-Problem}
-    \input{04P04-Initial-Assumptions}
-	\input{04P07-Incremental-Problem-Definition}
-    \input{04P05-Avoidance-Requirements}
-    \input{04P06-Navigation-Requirements}
-
-%05-State of Art
-    \input{05S01-State-Of-Art}
-    
-
-%06-Approach
-    \input{06A01-Approach}
-    \input{06A02-Avoidance-Grid}
-    \input{06A03-UAS-Model-MA-Implementation}
-    \input{06A04-Static-Obstace-Constraints}
-    \input{06A05-Moving-Obstacles-Intruders}
-    %06-06 Reach Set
-    	\input{06A06a-Reach-Set-Approximation}
-    	\input{06A06b-Reach-Set-Performance-Criteria}
-    	\input{06A06c-Contrained-Trajectory-Expansion}
-    	\input{06A06d-Avoidance-Grid-Scaling}
-    	\input{06A06e-Reach-Set-Approximations}
-
-    %06-07 Avoidance Concept	
-    \input{06A07-Avodiance-Concept}
-    	\input{06A07d-Data-Fusion}
-    	\input{06A07a-Avoidance-Grid-Run}
-    	\input{06A07b-Mission-Control-Run}
-    	\input{06A07c-Safety-Margin-Calculation}
-    
-    %06-08 UTM implementation
-		\input{06A08a-UAS-Traffic-Management}
-		\input{06A08b-Architecture}
-		\input{06A08f-Cooperative-Resolution}
-		\input{06A08g-Non-Cooperative-Resolution}
-		\input{06A08h-Collision-Case-Resolution}
-		\input{06A08c-Position-Notification}
-		\input{06A08d-Collision-Case}
-		\input{06A08e-Weather-Case}
+	\setcounter{chapter}{6}
+	\setcounter{section}{8}
 		
     
     %06-09 Rule Engine Implementation
@@ -228,37 +157,7 @@
     	\input{06A09a-Rule-Engine-Architecture}
     	\input{06A09b-Rule-Implementation}
     	\input{06A09c-Rule-Definition}
-    	
-    
 
-%07-Simulations
-    \input{07S01-Simulations}
-    \input{07S02-Test-Plan}
-    	\input{07S02a-Test-Performance-Evaluation}
-    \input{07S03-Testing-Configuration}
-    
-    \input{07S04-NonCooperativeTestCases}
-    	\input{07S05-Building-Scenario}
-    	\input{07S06-Slalom-Scenario}
-    	\input{07S07-Maze-Scenario}
-    	\input{07S08-Storm-Scenario}
-    	\input{07S09-Emergency-Converging}
-    	\input{07S10-Emergency-Head-On}
-    	\input{07S11-Emergency-Mixed}
-    
-    \input{07S12-Cooperative-Test-Cases}
-    	\input{07S13-Rule-Converging}
-    	\input{07S14-Rule-Head-On}
-    	\input{07S15-Rule-Mixed}
-    	\input{07S16-Rule-Overtake}	    	
-    
-    \input{07S16a-Test-Cases-Conclusion}
-    \input{07S17-Reduced-Reach-Sets}
-    %Observations moved to Conclusion - no longer in use
-    %\input{07S18-Simulation-Observation} 
-
-%08-Conclusion
-	\include{08Conclusion}
 
 %09-Bibliography
     \bibliography{thesis}

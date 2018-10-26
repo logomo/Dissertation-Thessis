@@ -320,6 +320,11 @@ Thor~I Fossen.
 \newblock {\em Department of Engineering Cybernetics Norwegian University of
   Science and Technology}, 2011.
 
+\bibitem{blanchini1999set}
+Franco Blanchini.
+\newblock Set invariance in control.
+\newblock {\em Automatica}, 35(11):1747--1767, 1999.
+
 \bibitem{kurzhanski2001dynamic}
 Alexander~B. Kurzhanski and Pravin Varaiya.
 \newblock Dynamic optimization for reachability problems.
@@ -727,11 +732,6 @@ Michael~Ian Shamos and Dan Hoey.
 \newblock Geometric intersection problems.
 \newblock In {\em 17th annual symposium on foundations of computer science},
   pages 208--215. IEEE, 1976.
-
-\bibitem{blanchini1999set}
-Franco Blanchini.
-\newblock Set invariance in control.
-\newblock {\em Automatica}, 35(11):1747--1767, 1999.
 
 \bibitem{birmingham1988tree}
 John Birmingham and Peter Kent.

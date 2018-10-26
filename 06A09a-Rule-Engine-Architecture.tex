@@ -1,6 +1,6 @@
 \subsection{(R) Architecture}\label{s:RuleEngineArchitecture}
 
-\paragraph{Purpose:} The \emph{core process} of \emph{Avoidance Grid Run} (sec. \ref{s:aviudabceGridRun}) and \emph{Mission Control Run} (sec. \ref{s:missionControlRun}) needs to be enhanced based on  situation. The architecture is based on \emph{aspect oriented approach} \cite{hill2003jess}. The key ideas and concept is taken from rule engine implementation for multiagent  navigation system \cite{seyboth2013event}.
+\paragraph{Purpose:} The \emph{core process} of \emph{Avoidance Grid Run} (sec. \ref{s:aviudabceGridRun}) and \emph{Mission Control Run} (sec. \ref{s:missionControlRun}) needs to be enhanced based on  situation. The architecture is based on \emph{aspect oriented approach} \cite{hill2003jess}. The key ideas and concepts are taken from rule engine implementation for multiagent  navigation system \cite{seyboth2013event}.
 
 \paragraph{Rule Engine:} The program module to inject and run \emph{rules} modifying standard work-flow based on  triggering events. The \emph{aspect oriented} approach enables to configure rules in \emph{run-time} via predefined process hooks - \emph{Decision Points}. 
 
@@ -18,7 +18,7 @@ The rules in context of this work are pieces of code which have semi-static stru
     \item \emph{Rule application} - calculations and data structure changes. Mainly \emph{disabling trajectories} in \emph{Reach Set} in our implementation.     
 \end{enumerate}
 
-\paragraph{Configurability:} The \emph{Rule Engine} enables real time configuration. The \emph{Enabled Rule Table} have been implemented to enforce specific rules in specific context. 
+\paragraph{Configurability:} The \emph{Rule Engine} enables real time configuration. The \emph{Enabled Rules Table} have been implemented to enforce specific rules in specific context. 
 
 The \emph{Rules} can be invoked from \emph{Rule Application}, this enables effective rule chaining and piece-wise functionality split. 
 
@@ -31,13 +31,13 @@ The \emph{Rules} can be invoked from \emph{Rule Application}, this enables effec
 
 \paragraph{Example:} The \emph{UAS} is flying in controlled airspace. The \emph{intruder} shows in front of \emph{UAS}. The \emph{UAS} is faster than \emph{intruder}. The \emph{UAS} tries to obtain permission for \emph{Overtake}. The \emph{UTM} does not allow \emph{overtake}, because of \emph{insufficient UAS maneuverability capability}. The \emph{Rule} (fig. \ref{fig:RuleEngineBasicArchitecture}) with:
 \begin{enumerate}
-    \item \emph{Context} - UAS Mission Control, containing the actual mission goal and UAS parameters. 
+    \item \emph{Context} - UAS Mission Control, containing the actual mission goal and UAS IMU parameters. 
     
     \item \emph{Decision Point} (Joint Point) - Navigation grid, containing projected constraints and reach set approximation.
     
     \item \emph{Rule is invoked:}
     \begin{enumerate}[a.]
-        \item \emph{Parser} parses the context which is \emph{Intruder position notification} containing heading and velocity.
+        \item \emph{Parser} parses the context which is \emph{intruder`s Position Notification} containing its heading and velocity.
         
         \item \emph{Condition} is checked to \emph{relative intruder velocity}. The \emph{evaluation} is positive, when the UAS is \emph{pursuing intruder}.
         

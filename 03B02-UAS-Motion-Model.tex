@@ -1,8 +1,46 @@
-\section{(W) UAS Motion Model}\label{s:uavMotionModel}
-    \emph{To be done here:}
-    \begin{itemize}
-        \item Continious time model.
-        \item Discrete time model.
-        \item Properties like controllability, observability, invariance to a set of points.
-        \item Taken mostly from \emph{Research plan}, \emph{Article}, and \emph{MPC report}
-    \end{itemize}
+\section{(R) UAS System Model}\label{s:uavMotionModel}
+\noindent
+This section strongly follows \cite{lee2011structure}.
+
+\subsection{Continuous-time systems}\noindent
+
+\noindent Consider a class of systems given by functions:
+\begin{equation}
+    \begin{aligned}
+    State Evolution &: input(time)  \to state(state_0,time) \\
+    input(time)&: [0,FinalTime] \to \R^p \\
+    input(time)&\in \mathbb{R}^p , state(t) \in \mathbb{R}^n \\
+    \end{aligned}
+\end{equation}
+where $input(time)$ and $state(state_0,time)$ are a sets of continuous-time signals. These are often called continuous-time systems because they operate on continuous-time signals. 
+
+Frequently, such systems can be defined by differential equations that relate the input signal to the output signal.
+
+A prototypical description of a controlled (there is a control input signal) continuous-time system is:
+\begin{multline}\label{eq:nonlinearsystem}
+    \partial/\partial\text{t state}(time) =\\ f(time,state(time),input(time)), input(time) \in Inputs(time)
+\end{multline}
+where $f:\mathbb{R}\times\mathbb{R}^n\times\mathbb{R}^p\to\mathbb{R}^n$ satisfies the conditions for existence and uniqueness of the ordinary differential equation and $u$ is our control \cite{butcher1987numerical}.
+
+\subsection{Discrete-time systems}
+\noindent
+\noindent Consider another class of systems given by functions
+\begin{equation}\label{eq:Discretegenericuavmodel}
+    \begin{aligned}
+    State Evolution:& input(k)  \to state(k), \\
+    k \in& \{0, t_s, 2.t_s, 3.t_s, \dots i.t_s\}, i \in \N^+\\
+    input(k)\in& \mathbb{R}^p , state(k) \in \mathbb{R}^n\\
+    \end{aligned}
+\end{equation}
+where $input(k)$, $state(k)$ is a set of discrete-time signals. They can be represented by a function $f$ like $f:\{0, t_s, 2.t_s, 3.t_s, \dots i.t_s\} \to \R^n,  i \in \N^+$ where $t_s$ is sampling time and $i$ is discrete step \cite{shampine1997matlab}.
+
+\subsection{Adversarial behaviour in continuous systems}
+\noindent Consider a subclass of continuous time systems where are two sets of control signals $uas(time)$ and $adversary(time)$ which are accommodated in following system:
+\begin{equation}\label{eq:Adversarial}
+    \begin{aligned}
+    \partial / \partial \text{t state}(time)&= f(t,state(time),uas(time),adversary(time)), \\
+    uas(time) &\in UAS Inputs(time) \subset \R^u, \\
+    adversary(time) &\in Adversary Inputs(time) \subset \R^v \\
+    \end{aligned}
+\end{equation}
+This system representation is often used in definition of problem of pursuit/evasion problem. Krasovskii developed a solution approach to this problem in \cite{game1987}. A complex example of can be found in article \cite{game1988}.
