@@ -293,26 +293,26 @@
 \contentsline {paragraph}{Constrained Area:}{121}{section*.234}
 \contentsline {paragraph}{Additional parameters}{122}{section*.235}
 \contentsline {paragraph}{Avoidance System:}{122}{section*.236}
-\contentsline {section}{\numberline {6.9}(R) Rule Engine}{122}{section.6.9}
-\contentsline {paragraph}{Reasoning:}{122}{section*.237}
+\contentsline {section}{\numberline {6.9}(R) Rule Engine}{123}{section.6.9}
+\contentsline {paragraph}{Reasoning:}{123}{section*.237}
 \contentsline {paragraph}{Inspiration:}{123}{section*.238}
 \contentsline {subsection}{\numberline {6.9.1}(R) Architecture}{123}{subsection.6.9.1}
 \contentsline {paragraph}{Purpose:}{123}{section*.239}
 \contentsline {paragraph}{Rule Engine:}{123}{section*.240}
-\contentsline {paragraph}{Configurability:}{123}{section*.241}
+\contentsline {paragraph}{Configurability:}{124}{section*.241}
 \contentsline {paragraph}{Example:}{124}{section*.243}
-\contentsline {subsection}{\numberline {6.9.2}(R) Rule Implementation}{124}{subsection.6.9.2}
-\contentsline {paragraph}{Configuration:}{124}{section*.244}
+\contentsline {subsection}{\numberline {6.9.2}(R) Rule Implementation}{125}{subsection.6.9.2}
+\contentsline {paragraph}{Configuration:}{125}{section*.244}
 \contentsline {paragraph}{Decision Points:}{125}{section*.246}
-\contentsline {paragraph}{Road map:}{125}{section*.247}
+\contentsline {paragraph}{Road map:}{126}{section*.247}
 \contentsline {subsection}{\numberline {6.9.3}(R) Rule: Detect Collision Cases}{126}{subsection.6.9.3}
 \contentsline {subsection}{\numberline {6.9.4}(R) Rule: Resolve Collision Case}{128}{subsection.6.9.4}
 \contentsline {subsection}{\numberline {6.9.5}(R) Rule: Close Collision Cases}{129}{subsection.6.9.5}
 \contentsline {subsection}{\numberline {6.9.6}(R) Rule: Head on Approach}{130}{subsection.6.9.6}
-\contentsline {subsection}{\numberline {6.9.7}(R) Rule: Converging Maneuver}{131}{subsection.6.9.7}
+\contentsline {subsection}{\numberline {6.9.7}(R) Rule: Converging Maneuver}{132}{subsection.6.9.7}
 \contentsline {subsection}{\numberline {6.9.8}(R) Rule: Overtake}{132}{subsection.6.9.8}
 \contentsline {subsection}{\numberline {6.9.9}(R) Rule: Right Plane Heading}{134}{subsection.6.9.9}
-\contentsline {subsection}{\numberline {6.9.10}(R) Rule: Enforce safety margin}{135}{subsection.6.9.10}
+\contentsline {subsection}{\numberline {6.9.10}(R) Rule: Enforce safety margin}{136}{subsection.6.9.10}
 \contentsline {chapter}{\numberline {7}Simulations}{138}{chapter.7}
 \contentsline {section}{\numberline {7.1}Test Plan}{138}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Testing approach}{138}{subsection.7.1.1}
