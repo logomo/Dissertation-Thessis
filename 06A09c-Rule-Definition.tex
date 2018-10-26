@@ -48,6 +48,7 @@ Then UAS merges \emph{own collision cases} with \emph{UTM collision cases}, if t
     \item \emph{UAS avoidance role} - \emph{Head on Approach} is favored upon \emph{Converging maneuver}, due to direct collision severity.
 \end{enumerate}
 
+\newpage
 \emph{Rule engine invocation} for each \emph{active collision case} is then applied on \emph{descending severity sorted} list. 
 
 The rule is summarized in table \ref{tab:ruleDetectCollisionCases}.
@@ -101,6 +102,7 @@ The rule is summarized in table \ref{tab:ruleDetectCollisionCases}.
 
 It is assumed that UAS is in \emph{cooperative avoidance mode}. If previous application of this rule forced UAS into \emph{emergency mode} the rule is not applied to save system resources. \emph{Emergency} mode is invoked if \emph{rule application} disable all \emph{trajectories} in \emph{Navigation grid}. If there is at least one \emph{feasible trajectory} in \emph{avoidance grid} follow-up rule is invoked based on UAS \emph{avoidance role}.
 
+\newpage
 The rule is summarized in table \ref{tab:ruleResolveCollisionCase}.
 
 \begin{tabularx}{\textwidth}{|X|X|X|}
@@ -270,6 +272,7 @@ Each \emph{round-abound participant} is ordered based on importance (lowest mane
 \label{tab:ruleHeadonApproach}
 \end{tabularx}
 
+\newpage
 \subsection{(R) Rule: Converging Maneuver}\label{sec:ruleConvergingManuever}
 \noindent Rule is invoked based on \emph{angle of approach} range defined in \emph{collision case calculation} (sec. \ref{sec:collisionCase}). Behaviour enforced to this rule is equal to rule \ref{tab:ruleHeadonApproach} except the \emph{intruder} stays on his original path. UAS behaviour is described in section \ref{sec:handlingConvergingManuever}. The \emph{rule summari} is given by table \ref{tab:ruleConvergingManuever}.
 \begin{tabularx}{\textwidth}{|X|X|X|}
@@ -326,6 +329,7 @@ It is assumed that during \emph{overtake} maneuver \emph{overtaken} intruder wil
     decisionDistance =  velocityDifference \times uasDecisionFrame\quad [m,ms^{-1},s]    
 \end{equation}
 
+\newpage
 \noindent \emph{Overtake middle distance}(\ref{eq:overtakeMiddleDistance}) is length of hypotenuse for triangle where \emph{positional difference} and \emph{utm margin} for overtake are cathetuses:
 \begin{equation}\label{eq:overtakeMiddleDistance}
     overtakeMiddle=\sqrt{\begin{aligned}&\norm{uasPosition - collisionPoint}_2+\\ &+ safetyMargin^2 \end{aligned}}\quad [m,\vec{m},\vec{m},m]
@@ -380,7 +384,7 @@ It is assumed that during \emph{overtake} maneuver \emph{overtaken} intruder wil
         convergenceWaypoint =  & collisionPoint \\ &+ R_{XYZ}(overtakenOrientation,convergence) 
     \end{split}
 \end{equation}
-
+\newpage
 \noindent \emph{Overtake rule} is summarized in table \ref{tab:ruleOvertakeDefinition}.    
         
 \begin{tabularx}{\textwidth}{|X|X|X|}
@@ -608,6 +612,7 @@ Rule for right plane heading check is summarized in table \ref{tab:ruleRightPlan
 
 \noindent Figure \ref{fig:ruleEnforceSafetyMarginGeneral}. shows \emph{enabled} (green line) and \emph{disabled} (red lines) \emph{trajectories} (left sub-figure). These trajectories are divided according to \emph{separation line} (magenta dashed line), given by \emph{vehicle position} and \emph{collision point} (magenta circle). More trajectories are disabled due to \emph{safety  margin} (teal dashed line) around the  \emph{collision point}. \emph{Space segmentation} (right subfigure) show \emph{reachable} (green fill) \emph{unreachable} (red fill) space. Situation is shown for various \emph{collision point angles of approach} $\alpha$.
 
+\newpage
 Rule for safety margin check is summarized in table \ref{tab:ruleEnforceSafetyMargin}.   
 
 \begin{tabularx}{\textwidth}{|X|X|X|}

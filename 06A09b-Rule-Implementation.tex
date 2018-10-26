@@ -1,6 +1,7 @@
+\newpage
 \subsection{(R) Rule Implementation}\label{sec:ruleImplementation}
 
-\paragraph{Configuration:} The \emph{Rule Engine Architecture} (fig. \ref{fig:RuleEngineBasicArchitecture}) is configured to handle \emph{UTM functionality} for \emph{Collision Case Resolution} (sec. \ref{sec:collisionCase}).  The overview of \emph{Context} (Green), \emph{Decision Points} (red) and \emph{Rule Invokation} (cyan) is given in (fig. \ref{fig:RuleEngineInstanceLevels}) 
+\paragraph{Configuration:} The \emph{Rule Engine Architecture} (fig. \ref{fig:RuleEngineBasicArchitecture}) is configured to handle \emph{UTM functionality} for \emph{Collision Case Resolution} (sec. \ref{sec:collisionCase}).  The overview of \emph{Context} (Green), \emph{Decision Points} (red) and \emph{Rules to be Invoked} (cyan) is given in (fig. \ref{fig:RuleEngineInstanceLevels}). 
 
 \begin{figure}[H]
     \centering
@@ -10,21 +11,22 @@
 \end{figure}
 
 \begin{note}
-    The \emph{Weather Case} (sec. \ref{sec:weatherCase}) is handled in similar case (fig. \ref{fig:missionControlRunActivityDiagram}) with enforcing \emph{hard constraints} (before step 9.) and \emph{soft constraints} (before step 10.).
+    The \emph{Weather Case} (sec. \ref{sec:weatherCase}) is handled in similar manner. The mission control loop (fig. \ref{fig:missionControlRunActivityDiagram}) have rules with separate \emph{Decision Points} to enforce \emph{hard constraints} (before step 9.) and \emph{soft constraints} (before step 10.).
 \end{note}
 
 
 \paragraph{Decision Points:} The \emph{Decisions} are bounded to \emph{Mission Control Run Process} (fig. \ref{fig:missionControlRunActivityDiagram}) in following manner:
 \begin{enumerate}
-    \item \emph{Before Avoidance Run} (before step 7.) - Context: \emph{Mission Control} (Received Collision Cases) - the \emph{UTM} can send some directives it is required to find which are impacting our \emph{UAS}.
+    \item \emph{Before Avoidance Run} (before step 7.) - Context: \emph{Mission Control} (Received Collision Cases) - the \emph{UTM} can send  directives. It is required to find which ones are impacting our \emph{UAS}.
     
-    \item \emph{Trajectory Restrictions} (after step 7.) - Context: \emph{Navigation Grid} (Trajectory Restrictions) - adaptation of \emph{behaviour} imposed by \emph{active collision cases}.
+    \item \emph{Trajectory Restrictions} (after step 7.) - Context: \emph{Navigation Grid} (Trajectory Restrictions) - adaptation of \emph{behavior} imposed by \emph{active collision cases}.
     
-    \item \emph{After Avoidance Run} (after step 11.) - Context: \emph{Mission Control} (Collision Case Resolutions) - our \emph{UAS} will update the status of \emph{Collision Cases} and checks the \emph{avoidance conditions}, then sends the \emph{Resolution Notification} to UAS.
+    \item \emph{After Avoidance Run} (after step 11.) - Context: \emph{Mission Control} (Collision Case Resolutions) - our \emph{UAS} will update the status of \emph{Collision Cases} then it checks the \emph{avoidance conditions}. The \emph{Resolution Notification} resolution notifications are sent to UTM afterwards.
     
 \end{enumerate}
 
-\paragraph{Road map:} The \emph{implemented rules}(cyan) are in following categories:
+\newpage
+\paragraph{Road map:} The \emph{implemented rules}(cyan) are separated into following categories:
 \begin{enumerate}
     \item \emph{Management Rules} - managing collision cases (additional control flow):
         \begin{enumerate}[a.]

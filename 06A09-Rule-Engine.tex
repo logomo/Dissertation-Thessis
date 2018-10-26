@@ -1,17 +1,14 @@
+\newpage
 \section{(R) Rule Engine}\label{sec:ruleEngine}
 
 \noindent This section is follow up of \emph{UTM functionality definition} (sec. \ref{sec:UASTrafficManagement}), outlining realization of \emph{UTM directives} on \emph{UAS} side (sec. \ref{s:RuleEngineArchitecture},  \ref{sec:ruleImplementation}).
 
-\paragraph{Reasoning:} The \emph{Avoidance} process and \emph{UTM directives fulfillment} is different in every national airspace. 
+\paragraph{Reasoning:} The \emph{Avoidance} process and \emph{UTM directives fulfillment} is different in every national airspace. The ICAO issues recommendation \cite{icao4444,icaoAnnex2} which are implemented by every member country, some of procedures are stricter some are implemented differently.
 
-The ICAO issues recommendation \cite{icao4444,icaoAnnex2} which are implemented by every member country, some of procedures are stricter some are implemented differently.
-
-The \emph{UTM} collision case calculation and procedures may be universal, but their realization by \emph{UAS} will be heavily impacted by local legislation and procedures. 
-
-The \emph{approach} must account the need of \emph{variable parts} of \emph{obstacle avoidance process}. The \emph{dynamic parts} needs to be woven to hard-coded processes. 
+The \emph{UTM} collision case calculation and procedures may be universal, but their realization by \emph{UAS} will be heavily impacted by local legislation and procedures.  The \emph{approach} must account the need of \emph{variable parts} of \emph{obstacle avoidance process}. The \emph{dynamic parts} needs to be woven to hard-coded processes. 
 
 \begin{note}
- Please refer to \emph{Template Programming} and \emph{Aspect Oriented Programming} for further explanation.
+	Please refer to \emph{Template Programming} and \emph{Aspect Oriented Programming} for further explanation.
 \end{note}
 
 \paragraph{Inspiration:} There was a \emph{Maritime Rules} implementation \cite{benjamin2006navigation} in form of \emph{Movement Restrictions} and \emph{Waypoint Changes}.
