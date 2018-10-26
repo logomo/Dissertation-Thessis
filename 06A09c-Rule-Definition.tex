@@ -1,4 +1,4 @@
-\subsection{Rule: Detect Collision Cases}\label{sec:detectCollisionCases}
+\subsection{(R) Rule: Detect Collision Cases}\label{sec:detectCollisionCases}
 \noindent This rule is activated each \emph{UAS avoidance run}. \emph{UTM} sent out all related \emph{collision cases} (\ref{eq:fetchCollisionCases}) based on our \emph{UAS identifier}. Creation of \emph{collision case} is given in sec. \ref{sec:collisionCase} based on air traffic periodical\emph{position notifications} (sec \ref{sec:positionNotification}).
 \begin{equation}\label{eq:fetchCollisionCases}
     UTM\times timeFrame \to UTMCollisionCases
@@ -96,7 +96,7 @@ The rule is summarized in table \ref{tab:ruleDetectCollisionCases}.
 \label{tab:ruleDetectCollisionCases}
 \end{tabularx}
 
-\subsection{Rule: Resolve Collision Case}\label{sec:ruleResolveCollisionCase}
+\subsection{(R) Rule: Resolve Collision Case}\label{sec:ruleResolveCollisionCase}
 \noindent\emph{Active collision cases} are processed one by one. All collision cases are applied to \emph{Navigation grid}. \emph{Navigation grid} contains all possible \emph{trajectories} in form of \emph{Reach set}. All \emph{trajectories} are \emph{reachable} at the beginning of UAS \emph{avoidance frame}. Each application of \emph{collision case resolution} rule disables some subset of feasible \emph{trajectories}. For this reason are \emph{active collision cases} sorted by severity. 
 
 It is assumed that UAS is in \emph{cooperative avoidance mode}. If previous application of this rule forced UAS into \emph{emergency mode} the rule is not applied to save system resources. \emph{Emergency} mode is invoked if \emph{rule application} disable all \emph{trajectories} in \emph{Navigation grid}. If there is at least one \emph{feasible trajectory} in \emph{avoidance grid} follow-up rule is invoked based on UAS \emph{avoidance role}.
@@ -142,7 +142,7 @@ The rule is summarized in table \ref{tab:ruleResolveCollisionCase}.
 \label{tab:ruleResolveCollisionCase}
 \end{tabularx}
 
-\subsection{Rule: Close Collision Cases}\label{sec:ruleCloseCollisionCases}    
+\subsection{(R) Rule: Close Collision Cases}\label{sec:ruleCloseCollisionCases}    
 \noindent\emph{Collection of rule results} detected by rule \ref{tab:ruleDetectCollisionCases} and \emph{resolved} by rule \ref{tab:ruleResolveCollisionCase} is done via \emph{context of rule engine}. For each \emph{time-frame} and each $trajectory\in NavigationGrid$, there exists rule engine \emph{context} query (\ref{eq:collectFromContextClosingCollisionCases}) which returns \emph{trajectory status} and \emph{list of applied rules on trajectory}.
 \begin{equation}\label{eq:collectFromContextClosingCollisionCases}
     Context(trajectory,timeFrame) \to \left\{State: Enabled/Disabled, Rule(s)\right\}
@@ -206,7 +206,7 @@ The rule is summarized in table \ref{tab:ruleResolveCollisionCase}.
 \label{tab:ruleCloseCollisionCase}
 \end{tabularx}    
 
-\subsection{Rule: Head on Approach}\label{sec:ruleHeadOnApproach}
+\subsection{(R) Rule: Head on Approach}\label{sec:ruleHeadOnApproach}
 \noindent Rule (\ref{tab:ruleHeadonApproach}) is invoked based on \emph{angle of approach} range condition, defined \emph{collision case} section \ref{sec:collisionCase}. The handling of \emph{head on} avoidance is given in section \ref{sec:handlingHeadOnApproach}. 
 
 \emph{Virtual round-abound} for UAS and intruder is created by UTM. The center of virtual round-abound and \emph{corrections for participants margins} are determined based on:
@@ -270,7 +270,7 @@ Each \emph{round-abound participant} is ordered based on importance (lowest mane
 \label{tab:ruleHeadonApproach}
 \end{tabularx}
 
-\subsection{Rule: Converging Maneuver}\label{sec:ruleConvergingManuever}
+\subsection{(R) Rule: Converging Maneuver}\label{sec:ruleConvergingManuever}
 \noindent Rule is invoked based on \emph{angle of approach} range defined in \emph{collision case calculation} (sec. \ref{sec:collisionCase}). Behaviour enforced to this rule is equal to rule \ref{tab:ruleHeadonApproach} except the \emph{intruder} stays on his original path. UAS behaviour is described in section \ref{sec:handlingConvergingManuever}. The \emph{rule summari} is given by table \ref{tab:ruleConvergingManuever}.
 \begin{tabularx}{\textwidth}{|X|X|X|}
 \hline\multicolumn{3}{|X|}{
@@ -308,7 +308,7 @@ Each \emph{round-abound participant} is ordered based on importance (lowest mane
 \label{tab:ruleConvergingManuever}
 \end{tabularx}
 
-\subsection{Rule: Overtake}\label{sec:ruleOvertake}
+\subsection{(R) Rule: Overtake}\label{sec:ruleOvertake}
 \noindent During overtake maneuver there is our \emph{UAS} and \emph{Intruder} cruising at same \emph{flight level}. \emph{Angle of approach} ($\alpha$) is lesser than $70^\circ$. \emph{UAS} absolute velocity is much greater than \emph{overtaken} absolute velocity. 
 
 It is assumed that during \emph{overtake} maneuver \emph{overtaken} intruder will keep constant heading and velocity. If this assumption is broken \emph{UAS} system will invoke \emph{Emergency avoidance} procedure. \emph{UTM} will calculate such \emph{divergence} and \emph{convergence} waypoints that \emph{overtake safety condition} (\ref{eq:overtakeManeuverSafetyCondition}) is satisfied.
@@ -424,7 +424,7 @@ It is assumed that during \emph{overtake} maneuver \emph{overtaken} intruder wil
 \label{tab:ruleOvertakeDefinition}
 \end{tabularx}        
 
-\subsection{Rule: Right Plane Heading}\label{sec:ruleRightPlaneHeading}
+\subsection{(R) Rule: Right Plane Heading}\label{sec:ruleRightPlaneHeading}
 \noindent There is need to check if \emph{trajectory} is heading to \emph{right side} from \emph{collision point}. For this purpose we need to define \emph{separation plane in 3D environment}. \emph{Separation plane} will be defined according to Samuelson \emph{hyperplane separation theorem} \cite{samelson1958partition}.
 
 \emph{Separation plane} (\ref{eq:ruleSeparationPlaneDefinition}) is defined by three points in \emph{global coordination frame}:
@@ -535,7 +535,7 @@ Rule for right plane heading check is summarized in table \ref{tab:ruleRightPlan
 \label{tab:ruleRightPlaneHeading}
 \end{tabularx}     
 
-\subsection{Rule: Enforce safety margin}\label{sec:ruleEnforceSafetyMargin}
+\subsection{(R) Rule: Enforce safety margin}\label{sec:ruleEnforceSafetyMargin}
 \noindent Rule \ref{tab:ruleRightPlaneHeading}. checks right plane heading for single mass point along \emph{trajectiories}. Rule needs to account \emph{body mass} of \emph{intruder} and UAS, other factors like safe distance, regulations etc. All mentioned factors are included in \emph{safety margin}. \emph{Safety margin} is applied as \emph{radius ball} around \emph{collision point}. 
 
 \emph{Collision point} can be mapped from \emph{global coordinate frame} to \emph{reach set coordinate frame}, based on UAS \emph{position and orientation} in \emph{decision time}. Then comparison of distance between \emph{collision point} and every \emph{trajectory decision point} is trivial. 
