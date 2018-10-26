@@ -1,14 +1,46 @@
-\subsection{(W) Architecture}\label{s:RuleEngineArchitecture}
-    \begin{itemize}
-        \item Context - data structures which are accessed/modified by rule body 
-        \item Rule Engine - program module to inject and run rules
-        \item Decision point - points in hard wired process where new behaviour can be connected usually with pre created rule context, but that can be dynamic, depending on DRM
-        \item Rule engine is configurable via \emph{Rule table} which says which rules and under what condition can be fired up.
-        \item Rules are chain-able, from one rule body other rule can be fired up.
-    \end{itemize}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.7\linewidth]{\FIGDIR/RE013RuleEngineBasicArchitecture}
-        \caption{Rule engine components overview.}
-        \label{fig:RuleEngineBasicArchitecture}
-    \end{figure}
+\subsection{(R) Architecture}\label{s:RuleEngineArchitecture}
+
+\paragraph{Purpose:} The \emph{core process} of \emph{Avoidance Grid Run} (sec. \ref{s:aviudabceGridRun}) and \emph{Mission Control Run} (sec. \ref{s:missionControlRun}) needs to be enhanced based on  situation. The architecture is based on \emph{aspect oriented approach} \cite{hill2003jess}. The key ideas and concept is taken from rule engine implementation for multiagent  navigation system \cite{seyboth2013event}.
+
+\paragraph{Rule Engine:} The program module to inject and run \emph{rules} modifying standard work-flow based on  triggering events. The \emph{aspect oriented} approach enables to configure rules in \emph{run-time} via predefined process hooks - \emph{Decision Points}. 
+
+The rules in context of this work are pieces of code which have semi-static structure consisting from following parts (fig. \ref{fig:RuleEngineBasicArchitecture}):
+
+\begin{enumerate}
+    \item \emph{Decision Point} - hook point in process where the rule can be attached/detached. If more than one rule is hooked the priority of execution needs to be defined. 
+    
+    \item \emph{Context} - the \emph{run time context} in time of \emph{invocation} in our case the \emph{copy} of \emph{Mission Control}, \emph{Avoidance/Navigation Grid} and \emph{Collision Cases}.
+    
+    \item \emph{Parser Method} - optional helper method to parse interesting data set from \emph{Context}. The \emph{parsed data} have better readability.
+    
+    \item \emph{Condition Check Method} - implementation of the trigger. If the sufficient condition is met, the rule body is applied.
+    
+    \item \emph{Rule application} - calculations and data structure changes. Mainly \emph{disabling trajectories} in \emph{Reach Set} in our implementation.     
+\end{enumerate}
+
+\paragraph{Configurability:} The \emph{Rule Engine} enables real time configuration. The \emph{Enabled Rule Table} have been implemented to enforce specific rules in specific context. 
+
+The \emph{Rules} can be invoked from \emph{Rule Application}, this enables effective rule chaining and piece-wise functionality split. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{\FIGDIR/RE013RuleEngineBasicArchitecture}
+    \caption{Rule engine components overview.}
+    \label{fig:RuleEngineBasicArchitecture}
+\end{figure}
+
+\paragraph{Example:} The \emph{UAS} is flying in controlled airspace. The \emph{intruder} shows in front of \emph{UAS}. The \emph{UAS} is faster than \emph{intruder}. The \emph{UAS} tries to obtain permission for \emph{Overtake}. The \emph{UTM} does not allow \emph{overtake}, because of \emph{insufficient UAS maneuverability capability}. The \emph{Rule} (fig. \ref{fig:RuleEngineBasicArchitecture}) with:
+\begin{enumerate}
+    \item \emph{Context} - UAS Mission Control, containing the actual mission goal and UAS parameters. 
+    
+    \item \emph{Decision Point} (Joint Point) - Navigation grid, containing projected constraints and reach set approximation.
+    
+    \item \emph{Rule is invoked:}
+    \begin{enumerate}[a.]
+        \item \emph{Parser} parses the context which is \emph{Intruder position notification} containing heading and velocity.
+        
+        \item \emph{Condition} is checked to \emph{relative intruder velocity}. The \emph{evaluation} is positive, when the UAS is \emph{pursuing intruder}.
+        
+        \item \emph{Application} of \emph{Rule} is last step, in this case the \emph{UAS} will slow down.
+    \end{enumerate}
+\end{enumerate}
