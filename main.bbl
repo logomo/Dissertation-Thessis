@@ -220,6 +220,22 @@ Gregory Thompson, Marcia~K Politovich, and Roy~M Rasmussen.
   aircraft icing environments.
 \newblock {\em Weather and Forecasting}, 32(1):207--221, 2017.
 
+\bibitem{lee2011structure}
+Edward~A Lee.
+\newblock {\em Structure and interpretation of signals and systems}.
+\newblock Lee \& Seshia, 2011.
+
+\bibitem{butcher1987numerical}
+John~Charles Butcher.
+\newblock {\em The numerical analysis of ordinary differential equations:
+  Runge-Kutta and general linear methods}.
+\newblock Wiley-Interscience, 1987.
+
+\bibitem{shampine1997matlab}
+Lawrence~F Shampine and Mark~W Reichelt.
+\newblock The matlab ode suite.
+\newblock {\em SIAM journal on scientific computing}, 18(1):1--22, 1997.
+
 \bibitem{game1987}
 Nikolai~Nikolaevich Krasovskij, Andrei~Izmailovich Subbotin, and Samuel Kotz.
 \newblock {\em Game-theoretical control problems}.
