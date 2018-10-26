@@ -254,3 +254,21 @@
     \end{equation}
     \end{definition}
     
+    \begin{note}{From Continuous Reach set to Movement Automaton Control Reach Set:}\label{eq:fromContRStoMARS}
+
+\emph{The reach set $R$} (\ref{eq:reachSetExample1}) for system $\partial/\partial \text{t state} =model(state,input)$ with initial state $state_0=state(t_i)$ in time interval $[t_i,t_{i+1}[$  is with existing control strategy $input(t)\in Control Strategy(t)$. The reach set $R(state_0, t_0,t_1)$ where $t_1 > t_0$.
+\begin{equation}\label{eq:reachSetExample1}
+    R(state_0, t_0,t_1) = \bigcup \left\{state(s):input(s)\in Control Strategy(s), s\in (t_0,t_1]\right\} 
+\end{equation}
+
+
+\noindent\emph{The reach set $\mathscr{R}$} (\ref{eq:reachSetExample2}) of the system under the control of the \emph{movement automation} consist from the set of trajectories $Trajectory(initialState,buffer)$, which are executed in constrained time period $[t_i,t_{i+1}[$.
+\begin{multline}\label{eq:reachSetExample2}
+     ReachSet(state_0,t_i,t_{i+1})=\\\left\{Trajectory(state_0,buffer):\text{duration}(buffer) \le (t_{i+1}-t_i)\right\}
+\end{multline}
+\end{note}
+
+\begin{note}{Weak Invariance:}
+
+When the UAS is under the control of the movement automaton  for the obstacle avoidance problem,  by design of the avoidance algorithm, the trajectories of the UAV will not intersect any threat. This means that the controlled system $\partial/\partial \text{t state} =model(state,input)$ is \emph{weakly invariant} with respect to the complement of the threats, and with respect to the free space. A pair $(state, SafeSpace)$, where $\partial/\partial \text{t state} =model(state,input)$ and $SafeSpace$ is a closed set, is weakly invariant if there exist controls such that a trajectory starting inside $State_0\in SafeSpace$ remains inside $State (t)\in SafeSpace$ \cite{blanchini1999set}.
+ \end{note}
