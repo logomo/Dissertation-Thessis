@@ -7,80 +7,80 @@
 \contentsline {table}{\numberline {2.1}{\ignorespaces Collision Avoidance Systems Context Overview \cite {gardi2015automated}.\relax }}{16}{table.2.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Controlled airspace margins violations incidents.\relax }}{47}{table.4.1}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Non-controlled airspace margins violations incidents.\relax }}{48}{table.4.2}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Navigation requirements evaluation metrics.\relax }}{49}{table.4.3}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Controlled airspace margins violations incidents.\relax }}{48}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Non-controlled airspace margins violations incidents.\relax }}{49}{table.4.2}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Navigation requirements evaluation metrics.\relax }}{50}{table.4.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Input values for main axes movements.\relax }}{66}{table.caption.86}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Input values for diagonal axes movements.\relax }}{66}{table.caption.87}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Orientation input values for main axes movements.\relax }}{69}{table.caption.93}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Orientation input values for diagonal axes movements.\relax }}{69}{table.caption.94}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Changing ratings from fuzzy to Boolean parameters.\relax }}{97}{table.caption.170}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Time-stamped \emph {position notification} structure.\relax }}{115}{table.6.6}
-\contentsline {table}{\numberline {6.7}{\ignorespaces Collision case structure for given decision time-frame.\relax }}{121}{table.6.7}
-\contentsline {table}{\numberline {6.8}{\ignorespaces Static/Dynamic weather constraint for given decision time-frame.\relax }}{123}{table.6.8}
-\contentsline {table}{\numberline {6.9}{\ignorespaces Detect collision cases rule definition.\relax }}{129}{Item.351}
-\contentsline {table}{\numberline {6.10}{\ignorespaces Resolve collision case rule definition.\relax }}{130}{Item.355}
-\contentsline {table}{\numberline {6.11}{\ignorespaces Close collision case rule definition.\relax }}{131}{Item.365}
-\contentsline {table}{\numberline {6.12}{\ignorespaces Head on Approach rule definition.\relax }}{132}{Item.373}
-\contentsline {table}{\numberline {6.13}{\ignorespaces Converging maneuver rule definition.\relax }}{133}{Item.377}
-\contentsline {table}{\numberline {6.14}{\ignorespaces Overtake rule definition.\relax }}{135}{Item.379}
-\contentsline {table}{\numberline {6.15}{\ignorespaces Right plane heading rule definition.\relax }}{136}{Item.384}
-\contentsline {table}{\numberline {6.16}{\ignorespaces Enforce safety margin rule definition.\relax }}{138}{Item.386}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Input values for main axes movements.\relax }}{67}{table.caption.87}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Input values for diagonal axes movements.\relax }}{67}{table.caption.88}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Orientation input values for main axes movements.\relax }}{70}{table.caption.94}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Orientation input values for diagonal axes movements.\relax }}{70}{table.caption.95}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Changing ratings from fuzzy to Boolean parameters.\relax }}{98}{table.caption.171}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Time-stamped \emph {position notification} structure.\relax }}{116}{table.6.6}
+\contentsline {table}{\numberline {6.7}{\ignorespaces Collision case structure for given decision time-frame.\relax }}{122}{table.6.7}
+\contentsline {table}{\numberline {6.8}{\ignorespaces Static/Dynamic weather constraint for given decision time-frame.\relax }}{124}{table.6.8}
+\contentsline {table}{\numberline {6.9}{\ignorespaces Detect collision cases rule definition.\relax }}{130}{Item.362}
+\contentsline {table}{\numberline {6.10}{\ignorespaces Resolve collision case rule definition.\relax }}{131}{Item.366}
+\contentsline {table}{\numberline {6.11}{\ignorespaces Close collision case rule definition.\relax }}{132}{Item.376}
+\contentsline {table}{\numberline {6.12}{\ignorespaces Head on Approach rule definition.\relax }}{133}{Item.384}
+\contentsline {table}{\numberline {6.13}{\ignorespaces Converging maneuver rule definition.\relax }}{134}{Item.388}
+\contentsline {table}{\numberline {6.14}{\ignorespaces Overtake rule definition.\relax }}{136}{Item.390}
+\contentsline {table}{\numberline {6.15}{\ignorespaces Right plane heading rule definition.\relax }}{137}{Item.395}
+\contentsline {table}{\numberline {6.16}{\ignorespaces Enforce safety margin rule definition.\relax }}{139}{Item.397}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Test Cases Summary.\relax }}{142}{table.caption.255}
-\contentsline {table}{\numberline {7.2}{\ignorespaces Movement orientations.\relax }}{146}{table.caption.261}
-\contentsline {table}{\numberline {7.3}{\ignorespaces \emph {UAS} parameters.\relax }}{146}{table.caption.262}
-\contentsline {table}{\numberline {7.4}{\ignorespaces \emph {Navigation Space} parameters.\relax }}{146}{table.caption.263}
-\contentsline {table}{\numberline {7.5}{\ignorespaces \emph {Avoidance Space} parameters.\relax }}{146}{table.caption.264}
-\contentsline {table}{\numberline {7.6}{\ignorespaces \emph {UAS} coloring.\relax }}{146}{table.caption.265}
-\contentsline {table}{\numberline {7.7}{\ignorespaces Mission setup for \emph {Building avoidance} scenario.\relax }}{148}{table.caption.267}
-\contentsline {table}{\numberline {7.8}{\ignorespaces \emph {Obstacle set} for \emph {Building avoidance} scenario.\relax }}{148}{table.caption.269}
-\contentsline {table}{\numberline {7.9}{\ignorespaces Distance to Body/Satety Margin Peaks for \emph {Building avoidance scenario}.\relax }}{150}{table.caption.278}
-\contentsline {table}{\numberline {7.10}{\ignorespaces Path tracking for properties \emph {Building avoidance}.\relax }}{151}{table.caption.282}
-\contentsline {table}{\numberline {7.11}{\ignorespaces Mission setup for \emph {Slalom} scenario.\relax }}{152}{table.caption.286}
-\contentsline {table}{\numberline {7.12}{\ignorespaces \emph {Obstacle set} for \emph {Slalom} scenario.\relax }}{152}{table.caption.288}
-\contentsline {table}{\numberline {7.13}{\ignorespaces Distance to body/safety margin peaks for \emph {Slalom scenario}.\relax }}{154}{table.caption.297}
-\contentsline {table}{\numberline {7.14}{\ignorespaces Path tracking properties for \emph {Slalom} scenario.\relax }}{155}{table.caption.301}
-\contentsline {table}{\numberline {7.15}{\ignorespaces Mission setup for \emph {Maze} scenario.\relax }}{156}{table.caption.305}
-\contentsline {table}{\numberline {7.16}{\ignorespaces \emph {Obstacle set} for \emph {Maze} scenario.\relax }}{156}{table.caption.307}
-\contentsline {table}{\numberline {7.17}{\ignorespaces Distance to body/safety margin peaks for \emph {Maze scenario}.\relax }}{159}{table.caption.316}
-\contentsline {table}{\numberline {7.18}{\ignorespaces Path tracking properties for \emph {Maze} scenario.\relax }}{160}{table.caption.320}
-\contentsline {table}{\numberline {7.19}{\ignorespaces Mission setup for \emph {Storm} scenario.\relax }}{161}{table.caption.324}
-\contentsline {table}{\numberline {7.20}{\ignorespaces \emph {Constraint set} for \emph {Storm} scenario.\relax }}{161}{table.caption.326}
-\contentsline {table}{\numberline {7.21}{\ignorespaces Distance to body/safety margin peaks for \emph {Storm scenario}.\relax }}{163}{table.caption.336}
-\contentsline {table}{\numberline {7.22}{\ignorespaces Path tracking properties for \emph {Storm} scenario.\relax }}{164}{table.caption.340}
-\contentsline {table}{\numberline {7.23}{\ignorespaces Mission setup for \emph {Emergency converging} scenario.\relax }}{165}{table.caption.344}
-\contentsline {table}{\numberline {7.24}{\ignorespaces Avoidance parameters for \emph {Emergency converging} scenario.\relax }}{166}{table.caption.348}
-\contentsline {table}{\numberline {7.25}{\ignorespaces Distance to safety margin peaks for \emph {emergency converging scenario}.\relax }}{168}{table.caption.354}
-\contentsline {table}{\numberline {7.26}{\ignorespaces Path tracking properties for \emph {Emergency converging} scenario.\relax }}{169}{table.caption.358}
-\contentsline {table}{\numberline {7.27}{\ignorespaces Mission setup for \emph {Emergency head on} scenario.\relax }}{171}{table.caption.362}
-\contentsline {table}{\numberline {7.28}{\ignorespaces Avoidance parameters for \emph {Emergency head on} scenario.\relax }}{172}{table.caption.366}
-\contentsline {table}{\numberline {7.29}{\ignorespaces Distance to safety margin peaks for \emph {Emergency head on scenario}.\relax }}{174}{table.caption.372}
-\contentsline {table}{\numberline {7.30}{\ignorespaces Path tracking properties for \emph {Emergency head on} scenario.\relax }}{175}{table.caption.376}
-\contentsline {table}{\numberline {7.31}{\ignorespaces Mission setup for \emph {Emergency mixed} scenario.\relax }}{176}{table.caption.380}
-\contentsline {table}{\numberline {7.32}{\ignorespaces Avoidance parameters for \emph {Emergency mixed} scenario.\relax }}{177}{table.caption.384}
-\contentsline {table}{\numberline {7.33}{\ignorespaces Distance to safety margin peaks for \emph {emergency mixed scenario}.\relax }}{179}{table.caption.390}
-\contentsline {table}{\numberline {7.34}{\ignorespaces Path tracking properties for \emph {Emergency mixed} scenario.\relax }}{180}{table.caption.394}
-\contentsline {table}{\numberline {7.35}{\ignorespaces Mission setup for \emph {Rule based converging} scenario.\relax }}{183}{table.caption.398}
-\contentsline {table}{\numberline {7.36}{\ignorespaces Collision case for \emph {Rule-based converging} scenario.\relax }}{186}{table.caption.406}
-\contentsline {table}{\numberline {7.37}{\ignorespaces Distance to safety margin peaks for \emph {Rule based converging scenario}.\relax }}{186}{table.caption.410}
-\contentsline {table}{\numberline {7.38}{\ignorespaces Path tracking properties for \emph {Rule based converging} scenario.\relax }}{187}{table.caption.414}
-\contentsline {table}{\numberline {7.39}{\ignorespaces Mission setup for \emph {Rule based head on} scenario.\relax }}{189}{table.caption.418}
-\contentsline {table}{\numberline {7.40}{\ignorespaces Collision case for \emph {Rule-based head on} scenario.\relax }}{192}{table.caption.426}
-\contentsline {table}{\numberline {7.41}{\ignorespaces \emph {Rule based head on} safety margin distances.\relax }}{192}{table.caption.430}
-\contentsline {table}{\numberline {7.42}{\ignorespaces Path tracking properties for \emph {Rule based head on} scenario.\relax }}{193}{table.caption.434}
-\contentsline {table}{\numberline {7.43}{\ignorespaces Mission setup for \emph {Rule based mixed} scenario.\relax }}{195}{table.caption.438}
-\contentsline {table}{\numberline {7.44}{\ignorespaces Collision cases for \emph {Rule-based mixed} scenario.\relax }}{198}{table.caption.446}
-\contentsline {table}{\numberline {7.45}{\ignorespaces Distance to safety margin peaks for \emph {rule based mixed scenario}.\relax }}{199}{table.caption.450}
-\contentsline {table}{\numberline {7.46}{\ignorespaces Path tracking properties for \emph {Rule based mixed} scenario.\relax }}{200}{table.caption.454}
-\contentsline {table}{\numberline {7.47}{\ignorespaces Mission setup for all \emph {Rule based overtake} scenarios.\relax }}{202}{table.caption.458}
-\contentsline {table}{\numberline {7.48}{\ignorespaces Collision case for \emph {Rule-based Overtake} scenario 2x speed.\relax }}{205}{table.caption.466}
-\contentsline {table}{\numberline {7.49}{\ignorespaces Convergence and divergence waypoints for various speed differences.\relax }}{205}{table.caption.468}
-\contentsline {table}{\numberline {7.50}{\ignorespaces Distance to safety margin peaks for various overtake speed in \emph {Rule based overtake scenario}.\relax }}{207}{table.caption.474}
-\contentsline {table}{\numberline {7.51}{\ignorespaces Path tracking properties for \emph {Rule overtake 2x speed} scenario.\relax }}{208}{table.caption.478}
-\contentsline {table}{\numberline {7.52}{\ignorespaces Test cases \emph {performance evaluation}.\relax }}{209}{table.caption.481}
-\contentsline {table}{\numberline {7.53}{\ignorespaces \emph {Computation load statistics} for all test cases.\relax }}{214}{table.caption.487}
-\contentsline {table}{\numberline {7.54}{\ignorespaces \emph {Reduced reach set} computation methods performance\relax }}{218}{table.caption.500}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Test Cases Summary.\relax }}{143}{table.caption.256}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Movement orientations.\relax }}{147}{table.caption.262}
+\contentsline {table}{\numberline {7.3}{\ignorespaces \emph {UAS} parameters.\relax }}{147}{table.caption.263}
+\contentsline {table}{\numberline {7.4}{\ignorespaces \emph {Navigation Space} parameters.\relax }}{147}{table.caption.264}
+\contentsline {table}{\numberline {7.5}{\ignorespaces \emph {Avoidance Space} parameters.\relax }}{147}{table.caption.265}
+\contentsline {table}{\numberline {7.6}{\ignorespaces \emph {UAS} coloring.\relax }}{147}{table.caption.266}
+\contentsline {table}{\numberline {7.7}{\ignorespaces Mission setup for \emph {Building avoidance} scenario.\relax }}{149}{table.caption.268}
+\contentsline {table}{\numberline {7.8}{\ignorespaces \emph {Obstacle set} for \emph {Building avoidance} scenario.\relax }}{149}{table.caption.270}
+\contentsline {table}{\numberline {7.9}{\ignorespaces Distance to Body/Satety Margin Peaks for \emph {Building avoidance scenario}.\relax }}{151}{table.caption.279}
+\contentsline {table}{\numberline {7.10}{\ignorespaces Path tracking for properties \emph {Building avoidance}.\relax }}{152}{table.caption.283}
+\contentsline {table}{\numberline {7.11}{\ignorespaces Mission setup for \emph {Slalom} scenario.\relax }}{153}{table.caption.287}
+\contentsline {table}{\numberline {7.12}{\ignorespaces \emph {Obstacle set} for \emph {Slalom} scenario.\relax }}{153}{table.caption.289}
+\contentsline {table}{\numberline {7.13}{\ignorespaces Distance to body/safety margin peaks for \emph {Slalom scenario}.\relax }}{155}{table.caption.298}
+\contentsline {table}{\numberline {7.14}{\ignorespaces Path tracking properties for \emph {Slalom} scenario.\relax }}{156}{table.caption.302}
+\contentsline {table}{\numberline {7.15}{\ignorespaces Mission setup for \emph {Maze} scenario.\relax }}{157}{table.caption.306}
+\contentsline {table}{\numberline {7.16}{\ignorespaces \emph {Obstacle set} for \emph {Maze} scenario.\relax }}{157}{table.caption.308}
+\contentsline {table}{\numberline {7.17}{\ignorespaces Distance to body/safety margin peaks for \emph {Maze scenario}.\relax }}{160}{table.caption.317}
+\contentsline {table}{\numberline {7.18}{\ignorespaces Path tracking properties for \emph {Maze} scenario.\relax }}{161}{table.caption.321}
+\contentsline {table}{\numberline {7.19}{\ignorespaces Mission setup for \emph {Storm} scenario.\relax }}{162}{table.caption.325}
+\contentsline {table}{\numberline {7.20}{\ignorespaces \emph {Constraint set} for \emph {Storm} scenario.\relax }}{162}{table.caption.327}
+\contentsline {table}{\numberline {7.21}{\ignorespaces Distance to body/safety margin peaks for \emph {Storm scenario}.\relax }}{164}{table.caption.337}
+\contentsline {table}{\numberline {7.22}{\ignorespaces Path tracking properties for \emph {Storm} scenario.\relax }}{165}{table.caption.341}
+\contentsline {table}{\numberline {7.23}{\ignorespaces Mission setup for \emph {Emergency converging} scenario.\relax }}{166}{table.caption.345}
+\contentsline {table}{\numberline {7.24}{\ignorespaces Avoidance parameters for \emph {Emergency converging} scenario.\relax }}{167}{table.caption.349}
+\contentsline {table}{\numberline {7.25}{\ignorespaces Distance to safety margin peaks for \emph {emergency converging scenario}.\relax }}{169}{table.caption.355}
+\contentsline {table}{\numberline {7.26}{\ignorespaces Path tracking properties for \emph {Emergency converging} scenario.\relax }}{170}{table.caption.359}
+\contentsline {table}{\numberline {7.27}{\ignorespaces Mission setup for \emph {Emergency head on} scenario.\relax }}{172}{table.caption.363}
+\contentsline {table}{\numberline {7.28}{\ignorespaces Avoidance parameters for \emph {Emergency head on} scenario.\relax }}{173}{table.caption.367}
+\contentsline {table}{\numberline {7.29}{\ignorespaces Distance to safety margin peaks for \emph {Emergency head on scenario}.\relax }}{175}{table.caption.373}
+\contentsline {table}{\numberline {7.30}{\ignorespaces Path tracking properties for \emph {Emergency head on} scenario.\relax }}{176}{table.caption.377}
+\contentsline {table}{\numberline {7.31}{\ignorespaces Mission setup for \emph {Emergency mixed} scenario.\relax }}{177}{table.caption.381}
+\contentsline {table}{\numberline {7.32}{\ignorespaces Avoidance parameters for \emph {Emergency mixed} scenario.\relax }}{178}{table.caption.385}
+\contentsline {table}{\numberline {7.33}{\ignorespaces Distance to safety margin peaks for \emph {emergency mixed scenario}.\relax }}{180}{table.caption.391}
+\contentsline {table}{\numberline {7.34}{\ignorespaces Path tracking properties for \emph {Emergency mixed} scenario.\relax }}{181}{table.caption.395}
+\contentsline {table}{\numberline {7.35}{\ignorespaces Mission setup for \emph {Rule based converging} scenario.\relax }}{184}{table.caption.399}
+\contentsline {table}{\numberline {7.36}{\ignorespaces Collision case for \emph {Rule-based converging} scenario.\relax }}{187}{table.caption.407}
+\contentsline {table}{\numberline {7.37}{\ignorespaces Distance to safety margin peaks for \emph {Rule based converging scenario}.\relax }}{187}{table.caption.411}
+\contentsline {table}{\numberline {7.38}{\ignorespaces Path tracking properties for \emph {Rule based converging} scenario.\relax }}{188}{table.caption.415}
+\contentsline {table}{\numberline {7.39}{\ignorespaces Mission setup for \emph {Rule based head on} scenario.\relax }}{190}{table.caption.419}
+\contentsline {table}{\numberline {7.40}{\ignorespaces Collision case for \emph {Rule-based head on} scenario.\relax }}{193}{table.caption.427}
+\contentsline {table}{\numberline {7.41}{\ignorespaces \emph {Rule based head on} safety margin distances.\relax }}{193}{table.caption.431}
+\contentsline {table}{\numberline {7.42}{\ignorespaces Path tracking properties for \emph {Rule based head on} scenario.\relax }}{194}{table.caption.435}
+\contentsline {table}{\numberline {7.43}{\ignorespaces Mission setup for \emph {Rule based mixed} scenario.\relax }}{196}{table.caption.439}
+\contentsline {table}{\numberline {7.44}{\ignorespaces Collision cases for \emph {Rule-based mixed} scenario.\relax }}{199}{table.caption.447}
+\contentsline {table}{\numberline {7.45}{\ignorespaces Distance to safety margin peaks for \emph {rule based mixed scenario}.\relax }}{200}{table.caption.451}
+\contentsline {table}{\numberline {7.46}{\ignorespaces Path tracking properties for \emph {Rule based mixed} scenario.\relax }}{201}{table.caption.455}
+\contentsline {table}{\numberline {7.47}{\ignorespaces Mission setup for all \emph {Rule based overtake} scenarios.\relax }}{203}{table.caption.459}
+\contentsline {table}{\numberline {7.48}{\ignorespaces Collision case for \emph {Rule-based Overtake} scenario 2x speed.\relax }}{206}{table.caption.467}
+\contentsline {table}{\numberline {7.49}{\ignorespaces Convergence and divergence waypoints for various speed differences.\relax }}{206}{table.caption.469}
+\contentsline {table}{\numberline {7.50}{\ignorespaces Distance to safety margin peaks for various overtake speed in \emph {Rule based overtake scenario}.\relax }}{208}{table.caption.475}
+\contentsline {table}{\numberline {7.51}{\ignorespaces Path tracking properties for \emph {Rule overtake 2x speed} scenario.\relax }}{209}{table.caption.479}
+\contentsline {table}{\numberline {7.52}{\ignorespaces Test cases \emph {performance evaluation}.\relax }}{210}{table.caption.482}
+\contentsline {table}{\numberline {7.53}{\ignorespaces \emph {Computation load statistics} for all test cases.\relax }}{215}{table.caption.488}
+\contentsline {table}{\numberline {7.54}{\ignorespaces \emph {Reduced reach set} computation methods performance\relax }}{219}{table.caption.501}
 \addvspace {10\p@ }

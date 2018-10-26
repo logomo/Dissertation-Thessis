@@ -32,6 +32,13 @@ Glenn~K Rutledge, Jordan Alpert, and Wesley Ebisuzaki.
 \newblock {\em Bulletin of the American Meteorological Society},
   87(3):327--341, 2006.
 
+\bibitem{yapo2008probabilistic}
+Theodore~C Yapo, Charles~V Stewart, and Richard~J Radke.
+\newblock A probabilistic representation of lidar range data for efficient 3d
+  object detection.
+\newblock In {\em Computer Vision and Pattern Recognition Workshops, 2008.
+  CVPRW'08. IEEE Computer Society Conference on}, pages 1--8. IEEE, 2008.
+
 \bibitem{gomola2017obstacle}
 Alojz Gomola, Jo{\~a}o~Borges de~Sousa, Fernando~Lobo Pereira, and Pavel Klang.
 \newblock Obstacle avoidance framework based on reach sets.
@@ -340,6 +347,18 @@ Thor~I Fossen.
 Franco Blanchini.
 \newblock Set invariance in control.
 \newblock {\em Automatica}, 35(11):1747--1767, 1999.
+
+\bibitem{martin2011meteorological}
+S~Martin, J~Bange, and F~Beyrich.
+\newblock Meteorological profiling of the lower troposphere using the research
+  uav" m 2 av carolo".
+\newblock {\em Atmospheric Measurement Techniques}, 4(4):705--716, 2011.
+
+\bibitem{chen2007airborne}
+Qi~Chen.
+\newblock Airborne lidar data processing and information extraction.
+\newblock {\em Photogrammetric engineering and remote sensing}, 73(2):109,
+  2007.
 
 \bibitem{kurzhanski2001dynamic}
 Alexander~B. Kurzhanski and Pravin Varaiya.
