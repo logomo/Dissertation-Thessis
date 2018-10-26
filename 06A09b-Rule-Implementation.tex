@@ -1,12 +1,54 @@
-\subsection{(W/R) Rule Implementation}\label{sec:ruleImplementation}
-\begin{itemize}
-    \item Make references to \emph{decision points} in avoidance algorithm and navigation loop
-    \item define context state based on \emph{decision points}.
-    \item Short roadmap to rules,
-\end{itemize}
+\subsection{(R) Rule Implementation}\label{sec:ruleImplementation}
+
+\paragraph{Configuration:} The \emph{Rule Engine Architecture} (fig. \ref{fig:RuleEngineBasicArchitecture}) is configured to handle \emph{UTM functionality} for \emph{Collision Case Resolution} (sec. \ref{sec:collisionCase}).  The overview of \emph{Context} (Green), \emph{Decision Points} (red) and \emph{Rule Invokation} (cyan) is given in (fig. \ref{fig:RuleEngineInstanceLevels}) 
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{\FIGDIR/RE014RuleEngineInstanceLevels} 
     \caption{Rule engine initialization with Rules of the air.}
     \label{fig:RuleEngineInstanceLevels}
 \end{figure}
+
+\begin{note}
+    The \emph{Weather Case} (sec. \ref{sec:weatherCase}) is handled in similar case (fig. \ref{fig:missionControlRunActivityDiagram}) with enforcing \emph{hard constraints} (before step 9.) and \emph{soft constraints} (before step 10.).
+\end{note}
+
+
+\paragraph{Decision Points:} The \emph{Decisions} are bounded to \emph{Mission Control Run Process} (fig. \ref{fig:missionControlRunActivityDiagram}) in following manner:
+\begin{enumerate}
+    \item \emph{Before Avoidance Run} (before step 7.) - Context: \emph{Mission Control} (Received Collision Cases) - the \emph{UTM} can send some directives it is required to find which are impacting our \emph{UAS}.
+    
+    \item \emph{Trajectory Restrictions} (after step 7.) - Context: \emph{Navigation Grid} (Trajectory Restrictions) - adaptation of \emph{behaviour} imposed by \emph{active collision cases}.
+    
+    \item \emph{After Avoidance Run} (after step 11.) - Context: \emph{Mission Control} (Collision Case Resolutions) - our \emph{UAS} will update the status of \emph{Collision Cases} and checks the \emph{avoidance conditions}, then sends the \emph{Resolution Notification} to UAS.
+    
+\end{enumerate}
+
+\paragraph{Road map:} The \emph{implemented rules}(cyan) are in following categories:
+\begin{enumerate}
+    \item \emph{Management Rules} - managing collision cases (additional control flow):
+        \begin{enumerate}[a.]
+            
+            \item \emph{Detect Collision Cases} (sec. \ref{sec:detectCollisionCases}) - the detection of active participation in received \emph{collision cases} and generation of \emph{restrictions}.
+            
+            \item \emph{Resolve Collision Cases} (sec. \ref{sec:ruleResolveCollisionCase}) - the enforcement of \emph{active avoidance roles} in \emph{collision cases}. The one \emph{Restriction Rule} is invoked directly.
+            
+            \item \emph{Close Collision Cases} (sec. \ref{sec:ruleCloseCollisionCases}) - impact calculation and \emph{Resolution Notification} to \emph{UTM} authority.
+        \end{enumerate}
+    
+    \item \emph{Restriction Rules} - restricting the \emph{Navigation Grid} trajectories or altering \emph{goal waypoint} based on \emph{selected collision cases}:
+    \begin{enumerate}[a.]
+        \item \emph{Converging Maneuver} (sec. \ref{sec:ruleConvergingManuever}) implementation of \emph{Converging Avoidance} (sec. \ref{sec:handlingConvergingManuever}).
+        
+        \item \emph{Head On Approach} (sec. \ref{sec:ruleHeadOnApproach}) implementation of \emph{Virtual Roundabout Enforcement} (sec. \ref{sec:handlingHeadOnApproach}).
+        
+        \item \emph{Overtake} (sec. \ref{sec:ruleOvertake}) implementation of \emph{overtake maneuver} for \emph{Overtaking plane} (sec. \ref{sec:handlingOvertakeManuever}).
+    \end{enumerate}
+    
+    \item \emph{Miscellaneous Rules} - reused pieces of code in \emph{Head On} and \emph{Converging Situations}:
+    \begin{enumerate}[a.]
+        \item \emph{Right Plane Heading} (sec. \ref{}) - restrict all trajectories heading to space separated by parametric plane in \emph{Avoidance Grid} which are heading or belonging to plane.
+        
+        \item \emph{Enforce Safety Margin} (sec. \ref{}) - restrict all \emph{Trajectories Segments} which are in proximity of \emph{Collision Point} lesser than \emph{Enforced Safety Margin}.
+    \end{enumerate}
+\end{enumerate}
