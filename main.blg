@@ -4,13 +4,10 @@ A level-1 auxiliary file: 00T01-Title-Page.aux
 A level-1 auxiliary file: 00T02-Nomenclature.aux
 A level-1 auxiliary file: 08Conclusion.aux
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "lee2011structure"
-Warning--I didn't find a database entry for "butcher1987numerical"
-Warning--I didn't find a database entry for "shampine1997matlab"
 Warning--can't use both volume and number fields in williams1983self
 Warning--empty journal in lavalle1998rapidly
 Warning--empty journal in alessandrettinotes
 Warning--empty year in alessandrettinotes
 Warning--there's a number but no volume in bentley1979algorithms
 Warning--empty journal in shively2018uas
-(There were 9 warnings)
+(There were 6 warnings)
