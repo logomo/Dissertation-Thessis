@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  26 OCT 2018 14:38
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  26 OCT 2018 13:47
+>>>>>>> 3e60f4f34c5dfd0c707f2c9163c9c0927b167950
 entering extended mode
 **./main.tex
 (main.tex
@@ -993,6 +997,7 @@ Underfull \hbox (badness 2261) in paragraph at lines 18--19
 ce-ment pro-ce-dure \OT1/cmr/m/n/12 is con-sist-ing from
  []
 
+<<<<<<< HEAD
 [116] [117] [118] [119] [120]) (06A08e-Weather-Case.tex [121] [122])
 (06A09-Rule-Engine.tex [123]) (06A09a-Rule-Engine-Architecture.tex
 <./Pics/RE013RuleEngineBasicArchitecture.png, id=478, 646.5756pt x 435.5472pt>
@@ -1001,6 +1006,28 @@ ce-ment pro-ce-dure \OT1/cmr/m/n/12 is con-sist-ing from
 <./Pics/RE014RuleEngineInstanceLevels.png, id=486, 2125.9425pt x 1355.0625pt>
  [126]) (06A09c-Rule-Definition.tex
 [127] [128]
+=======
+[115] [116] [117] [118] [119]) (06A08e-Weather-Case.tex [120] [121])
+(06A09-Rule-Engine.tex [122]) (06A09a-Rule-Engine-Architecture.tex
+<./Pics/RE013RuleEngineBasicArchitecture.png, id=3350, 646.5756pt x 435.5472pt>
+
+File: ./Pics/RE013RuleEngineBasicArchitecture.png Graphic file (type png)
+<use ./Pics/RE013RuleEngineBasicArchitecture.png>
+Package pdftex.def Info: ./Pics/RE013RuleEngineBasicArchitecture.png  used on i
+nput line 27.
+(pdftex.def)             Requested size: 318.66946pt x 214.66277pt.
+ [123])
+(06A09b-Rule-Implementation.tex [124 <./Pics/RE013RuleEngineBasicArchitecture.p
+ng>]
+<./Pics/RE014RuleEngineInstanceLevels.png, id=3384, 2125.9425pt x 1355.0625pt>
+File: ./Pics/RE014RuleEngineInstanceLevels.png Graphic file (type png)
+<use ./Pics/RE014RuleEngineInstanceLevels.png>
+Package pdftex.def Info: ./Pics/RE014RuleEngineInstanceLevels.png  used on inpu
+t line 8.
+(pdftex.def)             Requested size: 318.66946pt x 203.10587pt.
+ [125 <./Pics/RE014RuleEngineInstanceLevels.png>])
+(06A09c-Rule-Definition.tex [126] [127]
+>>>>>>> 3e60f4f34c5dfd0c707f2c9163c9c0927b167950
 Underfull \hbox (badness 10000) in paragraph at lines 98--98
 
  []
@@ -1009,7 +1036,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--98
 Underfull \vbox (badness 10000) detected at line 98
  []
 
+<<<<<<< HEAD
 [129]
+=======
+[128]
+>>>>>>> 3e60f4f34c5dfd0c707f2c9163c9c0927b167950
 Underfull \hbox (badness 10000) in paragraph at lines 145--145
 
  []
@@ -1028,7 +1059,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--145
 Underfull \vbox (badness 10000) detected at line 145
  []
 
+<<<<<<< HEAD
 [130]
+=======
+[129]
+>>>>>>> 3e60f4f34c5dfd0c707f2c9163c9c0927b167950
 Underfull \hbox (badness 10000) in paragraph at lines 209--209
 
  []
@@ -1037,7 +1072,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--209
 Underfull \vbox (badness 10000) detected at line 209
  []
 
+<<<<<<< HEAD
 [131]
+=======
+[130]
+>>>>>>> 3e60f4f34c5dfd0c707f2c9163c9c0927b167950
 Underfull \hbox (badness 10000) in paragraph at lines 273--273
 
  []
@@ -1053,7 +1092,11 @@ r
 Underfull \vbox (badness 10000) detected at line 273
  []
 
+<<<<<<< HEAD
 [132]
+=======
+[131]
+>>>>>>> 3e60f4f34c5dfd0c707f2c9163c9c0927b167950
 Underfull \hbox (badness 10000) in paragraph at lines 312--312
 
  []
@@ -1069,7 +1112,11 @@ r
 Underfull \vbox (badness 10000) detected at line 312
  []
 
+<<<<<<< HEAD
 [133] [134]
+=======
+[132] [133]
+>>>>>>> 3e60f4f34c5dfd0c707f2c9163c9c0927b167950
 Underfull \hbox (badness 10000) in paragraph at lines 429--429
 
  []
@@ -1081,8 +1128,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 429--429
 
 
 Underfull \hbox (badness 1112) in paragraph at lines 429--429
+<<<<<<< HEAD
 \OT1/cmr/m/it/12 Convergence Way-point \OT1/cmr/m/n/12 (6.100): way-point when 
 con-ver-gence to orig-i-nal UAS
+=======
+\OT1/cmr/m/it/12 Convergence Way-point \OT1/cmr/m/n/12 ([]6.100[]): way-point w
+hen con-ver-gence to orig-i-nal UAS
+>>>>>>> 3e60f4f34c5dfd0c707f2c9163c9c0927b167950
  []
 
 
@@ -1101,6 +1153,7 @@ cmm/m/it/12 scale:usasPosition \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = \OML/cmm/m/i
 t/12 scale:collisionPoint \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 =|
  []
 
+<<<<<<< HEAD
 [135]
 <./Pics/RE016RightPlaneHeadin01.png, id=518, 825.0825pt x 516.42938pt>
 <./Pics/RE17RightPlaneHeading02.png, id=519, 837.1275pt x 515.67656pt>
@@ -1108,6 +1161,45 @@ t/12 scale:collisionPoint \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 =|
 <./Pics/RE019RightPlaneHeading04.png, id=521, 919.93687pt x 511.9125pt>
 <./Pics/RE020RightPlaneHeading05.png, id=522, 907.89188pt x 516.42938pt>
 <./Pics/RE021RightPlaneHeading07.png, id=523, 870.25125pt x 516.42938pt>
+=======
+[134]
+<./Pics/RE016RightPlaneHeadin01.png, id=3585, 825.0825pt x 516.42938pt>
+File: ./Pics/RE016RightPlaneHeadin01.png Graphic file (type png)
+<use ./Pics/RE016RightPlaneHeadin01.png>
+Package pdftex.def Info: ./Pics/RE016RightPlaneHeadin01.png  used on input line
+ 467.
+(pdftex.def)             Requested size: 131.10944pt x 82.06302pt.
+<./Pics/RE17RightPlaneHeading02.png, id=3586, 837.1275pt x 515.67656pt>
+File: ./Pics/RE17RightPlaneHeading02.png Graphic file (type png)
+<use ./Pics/RE17RightPlaneHeading02.png>
+Package pdftex.def Info: ./Pics/RE17RightPlaneHeading02.png  used on input line
+ 473.
+(pdftex.def)             Requested size: 131.1074pt x 80.7631pt.
+<./Pics/RE018RightPlaneHeading03.png, id=3587, 889.82437pt x 514.92375pt>
+File: ./Pics/RE018RightPlaneHeading03.png Graphic file (type png)
+<use ./Pics/RE018RightPlaneHeading03.png>
+Package pdftex.def Info: ./Pics/RE018RightPlaneHeading03.png  used on input lin
+e 479.
+(pdftex.def)             Requested size: 131.1054pt x 75.86809pt.
+<./Pics/RE019RightPlaneHeading04.png, id=3588, 919.93687pt x 511.9125pt>
+File: ./Pics/RE019RightPlaneHeading04.png Graphic file (type png)
+<use ./Pics/RE019RightPlaneHeading04.png>
+Package pdftex.def Info: ./Pics/RE019RightPlaneHeading04.png  used on input lin
+e 486.
+(pdftex.def)             Requested size: 131.1064pt x 72.9561pt.
+<./Pics/RE020RightPlaneHeading05.png, id=3589, 907.89188pt x 516.42938pt>
+File: ./Pics/RE020RightPlaneHeading05.png Graphic file (type png)
+<use ./Pics/RE020RightPlaneHeading05.png>
+Package pdftex.def Info: ./Pics/RE020RightPlaneHeading05.png  used on input lin
+e 492.
+(pdftex.def)             Requested size: 131.10759pt x 74.57695pt.
+<./Pics/RE021RightPlaneHeading07.png, id=3590, 870.25125pt x 516.42938pt>
+File: ./Pics/RE021RightPlaneHeading07.png Graphic file (type png)
+<use ./Pics/RE021RightPlaneHeading07.png>
+Package pdftex.def Info: ./Pics/RE021RightPlaneHeading07.png  used on input lin
+e 498.
+(pdftex.def)             Requested size: 131.10304pt x 77.7999pt.
+>>>>>>> 3e60f4f34c5dfd0c707f2c9163c9c0927b167950
 
 Underfull \hbox (badness 10000) in paragraph at lines 540--540
 
@@ -1126,6 +1218,7 @@ Underfull \vbox (badness 10000) detected at line 540
 Overfull \vbox (8.1035pt too high) has occurred while \output is active []
 
 
+<<<<<<< HEAD
 [136]
 <./Pics/RE023EnforceSafetyMargin01.png, id=527, 702.2235pt x 431.211pt>
 <./Pics/RE024EnforceSafetyMargin02.png, id=528, 702.2235pt x 431.211pt>
@@ -1134,6 +1227,52 @@ Overfull \vbox (8.1035pt too high) has occurred while \output is active []
 <./Pics/RE027EnforceSafetyMargin05.png, id=531, 702.2235pt x 431.211pt>
 <./Pics/RE028EnforceSafetyMargin06.png, id=532, 702.2235pt x 431.211pt>
  [137]
+=======
+[135 <./Pics/RE016RightPlaneHeadin01.png> <./Pics/RE17RightPlaneHeading02.png> 
+<./Pics/RE018RightPlaneHeading03.png> <./Pics/RE019RightPlaneHeading04.png> <./
+Pics/RE020RightPlaneHeading05.png> <./Pics/RE021RightPlaneHeading07.png>]
+<./Pics/RE023EnforceSafetyMargin01.png, id=3610, 702.2235pt x 431.211pt>
+File: ./Pics/RE023EnforceSafetyMargin01.png Graphic file (type png)
+<use ./Pics/RE023EnforceSafetyMargin01.png>
+Package pdftex.def Info: ./Pics/RE023EnforceSafetyMargin01.png  used on input l
+ine 568.
+(pdftex.def)             Requested size: 131.11238pt x 80.5097pt.
+<./Pics/RE024EnforceSafetyMargin02.png, id=3611, 702.2235pt x 431.211pt>
+File: ./Pics/RE024EnforceSafetyMargin02.png Graphic file (type png)
+<use ./Pics/RE024EnforceSafetyMargin02.png>
+Package pdftex.def Info: ./Pics/RE024EnforceSafetyMargin02.png  used on input l
+ine 575.
+(pdftex.def)             Requested size: 131.11238pt x 80.5097pt.
+<./Pics/RE025EnforceSafetyMargin03.png, id=3612, 702.2235pt x 431.211pt>
+File: ./Pics/RE025EnforceSafetyMargin03.png Graphic file (type png)
+<use ./Pics/RE025EnforceSafetyMargin03.png>
+Package pdftex.def Info: ./Pics/RE025EnforceSafetyMargin03.png  used on input l
+ine 582.
+(pdftex.def)             Requested size: 131.11238pt x 80.5097pt.
+<./Pics/RE026EnforceSafetyMargin04.png, id=3613, 702.2235pt x 431.211pt>
+File: ./Pics/RE026EnforceSafetyMargin04.png Graphic file (type png)
+<use ./Pics/RE026EnforceSafetyMargin04.png>
+Package pdftex.def Info: ./Pics/RE026EnforceSafetyMargin04.png  used on input l
+ine 590.
+(pdftex.def)             Requested size: 131.11238pt x 80.5097pt.
+<./Pics/RE027EnforceSafetyMargin05.png, id=3614, 702.2235pt x 431.211pt>
+File: ./Pics/RE027EnforceSafetyMargin05.png Graphic file (type png)
+<use ./Pics/RE027EnforceSafetyMargin05.png>
+Package pdftex.def Info: ./Pics/RE027EnforceSafetyMargin05.png  used on input l
+ine 597.
+(pdftex.def)             Requested size: 131.11238pt x 80.5097pt.
+<./Pics/RE028EnforceSafetyMargin06.png, id=3615, 702.2235pt x 431.211pt>
+File: ./Pics/RE028EnforceSafetyMargin06.png Graphic file (type png)
+<use ./Pics/RE028EnforceSafetyMargin06.png>
+Package pdftex.def Info: ./Pics/RE028EnforceSafetyMargin06.png  used on input l
+ine 604.
+(pdftex.def)             Requested size: 131.11238pt x 80.5097pt.
+
+[136 <./Pics/RE023EnforceSafetyMargin01.png> <./Pics/RE024EnforceSafetyMargin02
+.png> <./Pics/RE025EnforceSafetyMargin03.png> <./Pics/RE026EnforceSafetyMargin0
+4.png> <./Pics/RE027EnforceSafetyMargin05.png> <./Pics/RE028EnforceSafetyMargin
+06.png>]
+>>>>>>> 3e60f4f34c5dfd0c707f2c9163c9c0927b167950
 Underfull \hbox (badness 10000) in paragraph at lines 650--650
 
  []
@@ -1147,7 +1286,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 650--650
 Underfull \vbox (badness 10000) detected at line 650
  []
 
+<<<<<<< HEAD
 ) (07S01-Simulations.tex [138]
+=======
+) (07S01-Simulations.tex [137]
+>>>>>>> 3e60f4f34c5dfd0c707f2c9163c9c0927b167950
 Chapter 7.
 ) (07S02-Test-Plan.tex [139
 
@@ -1460,7 +1603,11 @@ H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/H172461/
 MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/H172461/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/H172461/MiKTeX 2
 .9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+<<<<<<< HEAD
 Output written on main.pdf (236 pages, 957867 bytes).
+=======
+Output written on main.pdf (235 pages, 21225867 bytes).
+>>>>>>> 3e60f4f34c5dfd0c707f2c9163c9c0927b167950
 PDF statistics:
  1029 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
