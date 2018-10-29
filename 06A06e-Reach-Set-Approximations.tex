@@ -318,7 +318,7 @@ Function is applied on \emph{root Node} iterating over \emph{Movements in Moveme
     \Fn(){\FRecurs{Node firstNode, Node secondNode}}{
         \BlankLine
         \# Try to copy reference node or return null\;
-        Node referenceNode = firstNode?:secondNode? return null\;
+        Node referenceNode = (firstNode?:(secondNode?: return null))\;
         Node merged =  new Node(referenceNode)\;
         merged.leafs= []\;
         \BlankLine
