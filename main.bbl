@@ -227,6 +227,36 @@ Gregory Thompson, Marcia~K Politovich, and Roy~M Rasmussen.
   aircraft icing environments.
 \newblock {\em Weather and Forecasting}, 32(1):207--221, 2017.
 
+\bibitem{spriesterbach2013unmanned}
+Thomas~P Spriesterbach, Kelly~A Bruns, Lauren~I Baron, and Jason~E Sohlke.
+\newblock Unmanned aircraft system airspace integration in the national
+  airspace using a ground-based sense and avoid system.
+\newblock {\em Johns Hopkins APL Technical Digest}, 32(3):572--583, 2013.
+
+\bibitem{muraru2011critical}
+Adrian Muraru.
+\newblock A critical analysis of sense and avoid technologies for modern uavs.
+\newblock In {\em Mechanical, Industrial, and Manufacturing
+  Engineering--Proceedings of 2011 International Conference on Mechanical,
+  Industrial, and Manufacturing Engineering (MIME 2011)}, 2011.
+
+\bibitem{lai2012see}
+John Lai, Jason~J Ford, Luis Mejias, Peter O'Shea, and Rod Walker.
+\newblock See and avoid using onboard computer vision.
+\newblock {\em Sense and Avoid in UAS Research and Applications, Plamen Angelov
+  (ed.), John Wiley and Sons, West Sussex, UK}, 2012.
+
+\bibitem{kochenderfer2008encounter}
+Mykel~J Kochenderfer, Leo~P Espindle, J~Daniel Griffith, and James~K Kuchar.
+\newblock Encounter modeling for sense and avoid development.
+\newblock In {\em 2008 Integrated Communications, Navigation and Surveillance
+  Conference}, pages 1--10. IEEE, 2008.
+
+\bibitem{jarus2016regulations}
+{JARUS} regulations.
+\newblock \url{http://jarus-rpas.org/regulations}.
+\newblock Accessed: 2018-10-28.
+
 \bibitem{lee2011structure}
 Edward~A Lee.
 \newblock {\em Structure and interpretation of signals and systems}.
@@ -859,12 +889,6 @@ Roberto Sabatini, Alessandro Gardi, and M~Richardson.
 \newblock Lidar obstacle warning and avoidance system for unmanned aircraft.
 \newblock {\em International Journal of Mechanical, Aerospace, Industrial and
   Mechatronics Engineering}, 8(4):718--729, 2014.
-
-\bibitem{spriesterbach2013unmanned}
-Thomas~P Spriesterbach, Kelly~A Bruns, Lauren~I Baron, and Jason~E Sohlke.
-\newblock Unmanned aircraft system airspace integration in the national
-  airspace using a ground-based sense and avoid system.
-\newblock {\em Johns Hopkins APL Technical Digest}, 32(3):572--583, 2013.
 
 \bibitem{zimmer2011rule}
 Nico Zimmer, Jens Schiefele, Keyvan Bayram, Theo Hankers, Sebastian Frank, and
