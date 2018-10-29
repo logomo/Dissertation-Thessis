@@ -12,7 +12,7 @@ This section strongly follows \cite{lee2011structure}.
     input(time)&\in \mathbb{R}^p , state(t) \in \mathbb{R}^n \\
     \end{aligned}
 \end{equation}
-where $input(time)$ and $state(state_0,time)$ are a sets of continuous-time signals. These are often called continuous-time systems because they operate on continuous-time signals. 
+Where $input(time)$ and $state(state_0,time)$ are a sets of continuous-time signals. These are often called continuous-time systems because they operate on continuous-time signals. 
 
 Frequently, such systems can be defined by differential equations that relate the input signal to the output signal.
 
@@ -20,7 +20,7 @@ A prototypical description of a controlled (there is a control input signal) con
 \begin{multline}\label{eq:nonlinearsystem}
     \partial/\partial\text{t state}(time) =\\ f(time,state(time),input(time)), input(time) \in Inputs(time)
 \end{multline}
-where $f:\mathbb{R}\times\mathbb{R}^n\times\mathbb{R}^p\to\mathbb{R}^n$ satisfies the conditions for existence and uniqueness of the ordinary differential equation and $u$ is our control \cite{butcher1987numerical}.
+Where $f:\mathbb{R}\times\mathbb{R}^n\times\mathbb{R}^p\to\mathbb{R}^n$ satisfies the conditions for existence and uniqueness of the ordinary differential equation and $u$ is our control \cite{butcher1987numerical}.
 
 \subsection{Discrete-time systems}
 \noindent
@@ -32,7 +32,7 @@ where $f:\mathbb{R}\times\mathbb{R}^n\times\mathbb{R}^p\to\mathbb{R}^n$ satisfie
     input(k)\in& \mathbb{R}^p , state(k) \in \mathbb{R}^n\\
     \end{aligned}
 \end{equation}
-where $input(k)$, $state(k)$ is a set of discrete-time signals. They can be represented by a function $f$ like $f:\{0, t_s, 2.t_s, 3.t_s, \dots i.t_s\} \to \R^n,  i \in \N^+$ where $t_s$ is sampling time and $i$ is discrete step \cite{shampine1997matlab}.
+Where $input(k)$, $state(k)$ is a set of discrete-time signals. They can be represented by a function $f$ like $f:\{0, t_s, 2.t_s, 3.t_s, \dots i.t_s\} \to \R^n,  i \in \N^+$ where $t_s$ is sampling time and $i$ is discrete step \cite{shampine1997matlab}.
 
 \subsection{Adversarial behaviour in continuous systems}
 \noindent Consider a subclass of continuous time systems where are two sets of control signals $uas(time)$ and $adversary(time)$ which are accommodated in following system:
