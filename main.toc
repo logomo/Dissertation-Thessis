@@ -48,9 +48,9 @@
 \contentsline {paragraph}{Trajectory with Transitions:}{28}{section*.21}
 \contentsline {paragraph}{Movement Mapping Example:}{29}{section*.22}
 \contentsline {paragraph}{Minimal Movement Time:}{29}{section*.23}
-\contentsline {paragraph}{Movement Chaining:}{29}{section*.24}
+\contentsline {paragraph}{Movement Chaining:}{30}{section*.24}
 \contentsline {paragraph}{State Projection:}{30}{section*.25}
-\contentsline {subsection}{\numberline {3.3.3}Definition}{30}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.3}Definition}{31}{subsection.3.3.3}
 \contentsline {section}{\numberline {3.4}(R) LiDAR}{32}{section.3.4}
 \contentsline {paragraph}{LiDAR(Light Detection And Ranging)}{32}{section*.26}
 \contentsline {paragraph}{Point-cloud}{33}{section*.27}
