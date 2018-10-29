@@ -58,7 +58,7 @@
     \item \emph{Goal Waypoint} $\mathscr{WP}_G$ from \emph{Mission Control Run} (sec. \ref{s:missionControlRun}).
 \end{enumerate}
 
-The \emph{Algorithm} (alg. \ref{alg:ExpansionConstraintFunctionForACASLikeReachSet}) is based on \emph{shortest path} search. Navigation is trying to reach \emph{goal waypoint}, therefore it tries to shorter distance between \emph{trajectory final cell} and \emph{goal waypoint}. If there is \emph{reachable space} two situations can occur:
+The \emph{Algorithm} (alg. \ref{alg:FindBestPathAvoidanceGrid}) is based on \emph{shortest path} search. Navigation is trying to reach \emph{goal waypoint}, therefore it tries to shorter distance between \emph{trajectory final cell} and \emph{goal waypoint}. If there is \emph{reachable space} two situations can occur:
 \begin{enumerate}
     \item \emph{Goal waypoint is inside the Avoidance Grid} - the \emph{avoidance cell} is cell$_{i,j,k}$ containing \emph{goal waypoint} if reachable. 
     
@@ -126,7 +126,7 @@ The \emph{Avoidance Path} selection is simple lowest cost selection of \emph{Tra
     \Return{[avoidancePath,message]}
     
     \caption{Find best \emph{Path} in \emph{Avoidance Grid}}
-    \label{alg:ExpansionConstraintFunctionForACASLikeReachSet}    
+    \label{alg:FindBestPathAvoidanceGrid}    
 \end{algorithm}
 
 \newpage
@@ -189,5 +189,5 @@ Cells in Avoidance grid are divided in similar matter, depending on count of \em
 \end{figure}
 
 \begin{note}
-    The \emph{best avoidance path} is selected form \emph{reachable outer cells} (green fill in fig. \ref{fig:exampleReachibilityEvaluation}), depending on \emph{goal waypoint} according to (alg. \ref{alg:ExpansionConstraintFunctionForACASLikeReachSet}).
+    The \emph{best avoidance path} is selected form \emph{reachable outer cells} (green fill in fig. \ref{fig:exampleReachibilityEvaluation}), depending on \emph{goal waypoint} according to (alg. \ref{alg:FindBestPathAvoidanceGrid}).
 \end{note}
