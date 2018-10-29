@@ -360,6 +360,22 @@ Qi~Chen.
 \newblock {\em Photogrammetric engineering and remote sensing}, 73(2):109,
   2007.
 
+\bibitem{euler1775formulae}
+Leonhard Euler.
+\newblock Formulae generales pro translatione quacunque corporum rigidorum.
+\newblock {\em Novi Acad. Sci. Petrop}, 20:189--207, 1775.
+
+\bibitem{schaub2003analytical}
+Hanspeter Schaub and John~L Junkins.
+\newblock {\em Analytical mechanics of space systems}.
+\newblock Aiaa, 2003.
+
+\bibitem{kramer1977gyro}
+Manuel Kramer and Douglas~J Dapprich.
+\newblock Gyro stabilized inertial reference system with gimbal lock prevention
+  means, October~4 1977.
+\newblock US Patent 4,052,654.
+
 \bibitem{kurzhanski2001dynamic}
 Alexander~B. Kurzhanski and Pravin Varaiya.
 \newblock Dynamic optimization for reachability problems.
