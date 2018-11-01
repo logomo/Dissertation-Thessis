@@ -82,7 +82,7 @@ The \emph{Avoidance Grid} from \emph{UAS} viewpoint can be separated into follow
         \label{fig:newtWaypointAGR}
     \end{subfigure}
     \caption{Joining multiple \emph{Avoidance Grid Runs} for achieve Navigation.}
-    \label{fig:joiningMultipleAGRS }
+    \label{fig:joiningMultipleAGRS}
     
 \end{figure}
     
@@ -108,7 +108,7 @@ The \emph{Avoidance Grid} from \emph{UAS} viewpoint can be separated into follow
     \label{fig:missionControlRunActivityDiagram}
 \end{figure}
 
-\noindent The main changes to \emph{Navigation architecture} are given in \emph{Mission Control Run} activity diagram (fig. \ref{s:missionControlRunActivityDiagram}):
+\noindent The main changes to \emph{Navigation architecture} are given in \emph{Mission Control Run} activity diagram (fig. \ref{fig:missionControlRunActivityDiagram}):
 
 \begin{enumerate}
     \item \emph{Situation Assessment} - added event-based mode switching control. 
@@ -244,7 +244,7 @@ Then the \emph{Navigation Loop} is invoked  every \emph{decision time} $t_i$, \e
     \end{equation*}
     Otherwise enforce \emph{Landing sequence} (Out of Scope).
         
-    \item[\textbf{3\textsuperscript{rd}}] \textbf{Trajectory Prediction} - the \emph{Movement Buffer} is loaded with planned movements from \emph{Movement Automaton}. The \emph{future trajectory} is predicted according to (eq. \ref{ourTrajectoryImplementation}):
+    \item[\textbf{3\textsuperscript{rd}}] \textbf{Trajectory Prediction} - the \emph{Movement Buffer} is loaded with planned movements from \emph{Movement Automaton}. The \emph{future trajectory} is predicted according to (eq. \ref{eq:ourTrajectoryImplementation}):
     \begin{multline*}
         Predicted Trajectory = \\Trajectory(state=UAS.state(t_i),buffer=future Movements)
     \end{multline*}
