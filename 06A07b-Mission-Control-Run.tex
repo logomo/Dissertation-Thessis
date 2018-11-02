@@ -167,7 +167,7 @@ Then the \emph{UAS system} (sec. \ref{s:UASNonlinearModel}) with \emph{Movement 
     Movement Buffer = \{\}
 \end{equation}
 
-The \emph{Avoidance Grids} for both \emph{Operation Modes} are created with \emph{identical space segmentation}. The \emph{Reach Set Approximations} are loaded based on initial \emph{UAS State} at decision time $0$. The \emph{Reach Set Approximation} is always selected based on \emph{UAS System State}. The initial \emph{Operation Mode} is set up as \emph{Navigation}. The initialization is summarized like follow:
+\noindent The \emph{Avoidance Grids} for both \emph{Operation Modes} are created with \emph{identical space segmentation}. The \emph{Reach Set Approximations} are loaded based on initial \emph{UAS State} at decision time $0$. The \emph{Reach Set Approximation} is always selected based on \emph{UAS System State}. The initial \emph{Operation Mode} is set up as \emph{Navigation}. The initialization is summarized like follow:
 
 \begin{equation}
     \begin{aligned}
@@ -219,6 +219,7 @@ First start with definition of \emph{waypoint reach condition} (def. \ref{def:wa
     Grid(t_i).range \ge distance(UAS.position(t_i),GoalWaypoint(t_i))
 \end{equation}
 
+\newpage
 \noindent and following condition is satisfied:
 
 \begin{multline}\label{eq:unreachableWaypoint}
@@ -274,7 +275,7 @@ The \emph{intruders} source are valid \emph{active intruders notifications} rece
     The \emph{Intruders} needs to be predicted for the next decision time-frame starting at time $t_{i+1}$ Due their mobility.
 \end{note}
 
-The \emph{hard/soft constraints} are obtained from \emph{Information Sources} and the area of next decision time $t_{i+1}$ \emph{Avoidance Frame} is used as space parameter in search. The sets of hard and soft constraints are obtained in following manner:
+\noindent The \emph{hard/soft constraints} are obtained from \emph{Information Sources} and the area of next decision time $t_{i+1}$ \emph{Avoidance Frame} is used as space parameter in search. The sets of hard and soft constraints are obtained in following manner:
 
 \begin{equation*}
     hard Constraints= Information Sources.fuse(Avoidance Grid(t_{i+1}))
@@ -351,7 +352,7 @@ If the \emph{Operation Mode} is set as \emph{Navigation Mode} the algorithm cont
     \end{equation*}
     
     The \emph{Find Best Path} (alg. \ref{alg:FindBestPathAvoidanceGrid}) is applied, the resulting \emph{avoidance path} is labeled as \emph{Obstacle Avoidance Path}.
-    
+  
     \item[\textbf{8\textsuperscript{th}}] \textbf{Apply Intruders} - The \emph{Space assessment} (tab. \ref{tab:defuzificationRatings}) for \emph{Avoidance Grid} is calculated  with following threat modification:
     
     \begin{equation*}

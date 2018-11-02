@@ -1,3 +1,4 @@
+\newpage
 \subsection{(R) Computation Complexity}\label{sec:MCRcomputationalComplexity}
 \paragraph{Introduction:}The \emph{Computation Complexity} one mission control run assessment is necessary to identify the strong and weak points of approach. Lets get trough modules to assess notable calculations/algorithms complexity on high abstraction level.
 
@@ -92,7 +93,7 @@ Each \emph{threat} category application in \emph{Mission Control Run} is done af
     \texttt{Recalculate Reachibility: } \mathscr{O}(4 \times (|nodes| + |cells|))
 \end{equation*}
 
-Each time at the end of in 7\textsuperscript{th} to 10\textsuperscript{th} step the \emph{Avoidance Path is Selected}. The \emph{Worst Case} (expected) scenario is to \emph{select} four paths for each \emph{treath} application. The algorithm for \emph{best path selection} (alg. \ref{alg:FindBestPathAvoidanceGrid}) iterates over all \emph{cells} in avoidance grid and over all \emph{trajectories} passing trough that cell. The complexity boundary for \emph{path selection} is given as follow:
+\noindent Each time at the end of in 7\textsuperscript{th} to 10\textsuperscript{th} step the \emph{Avoidance Path is Selected}. The \emph{Worst Case} (expected) scenario is to \emph{select} four paths for each \emph{treath} application. The algorithm for \emph{best path selection} (alg. \ref{alg:FindBestPathAvoidanceGrid}) iterates over all \emph{cells} in avoidance grid and over all \emph{trajectories} passing trough that cell. The complexity boundary for \emph{path selection} is given as follow:
 
 \begin{equation*}
     \texttt{Select Path: } \mathscr{O}\left(4 \times \left(|cells|+\frac{|nodes|}{|cells|}\right)\right)
