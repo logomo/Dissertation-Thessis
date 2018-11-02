@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  2 NOV 2018 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  2 NOV 2018 16:41
 entering extended mode
 **./main.tex
 (main.tex
@@ -506,11 +506,7 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 62.
 \c@example=\count144
 \c@assumption=\count145
  (main.aux
-(00T01-Title-Page.aux) (00T02-Nomenclature.aux)
-
-LaTeX Warning: Label `s:aviudabceGridRun' multiply defined.
-
-(08Conclusion.aux))
+(00T01-Title-Page.aux) (00T02-Nomenclature.aux) (08Conclusion.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 150.
@@ -529,7 +525,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 150.
 LaTeX Font Info:    ... okay on input line 150.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 150.
 LaTeX Font Info:    ... okay on input line 150.
- ("C:\Users\H172461\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Users\H172461\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count146
 \scratchdimen=\dimen153
@@ -1166,12 +1163,8 @@ g  used on input line 526.
 ) (06A07-Avodiance-Concept.tex [99 <./Pics/RS005ACASLikeReachSetEstimationMetho
 dFull.png> <./Pics/RS006ACASLikeReachSetEstimationMethodHorizontalVertical.png>
  <./Pics/RS008ACASLikeReachSetEstimationMethodHorizontal.png> <./Pics/RS009CASL
-ikeReachSetEstimationMethodVertical.png>]
-
-LaTeX Warning: Reference `R) Avoidance Grid Run' on page 100 undefined on input
- line 8.
-
-) (06A07d-Data-Fusion.tex [100] [101] [102] [103]
+ikeReachSetEstimationMethodVertical.png>]) (06A07d-Data-Fusion.tex
+[100] [101] [102] [103]
 Underfull \hbox (badness 1365) in paragraph at lines 159--160
 \OT1/cmr/m/n/12 The \OT1/cmr/m/it/12 Free \OT1/cmr/m/n/12 space is the space wh
 ich is \OT1/cmr/m/it/12 Vis-i-ble \OT1/cmr/m/n/12 and $\OMS/cmsy/m/n/12 :\OML/c
@@ -1180,25 +1173,25 @@ der$\OT1/cmr/m/n/12 , and,
  []
 
 ) (06A07a-Avoidance-Grid-Run.tex [104]
-<./Pics/CA001ObstacleDetection.png, id=3072, 1069.596pt x 780.516pt>
+<./Pics/CA001ObstacleDetection.png, id=3073, 1069.596pt x 780.516pt>
 File: ./Pics/CA001ObstacleDetection.png Graphic file (type png)
 <use ./Pics/CA001ObstacleDetection.png>
 Package pdftex.def Info: ./Pics/CA001ObstacleDetection.png  used on input line 
 12.
 (pdftex.def)             Requested size: 196.66235pt x 143.51187pt.
-<./Pics/CA002UncertainityAssesment.png, id=3073, 1069.596pt x 780.516pt>
+<./Pics/CA002UncertainityAssesment.png, id=3074, 1069.596pt x 780.516pt>
 File: ./Pics/CA002UncertainityAssesment.png Graphic file (type png)
 <use ./Pics/CA002UncertainityAssesment.png>
 Package pdftex.def Info: ./Pics/CA002UncertainityAssesment.png  used on input l
 ine 17.
 (pdftex.def)             Requested size: 196.66235pt x 143.51187pt.
-<./Pics/CA003SurveyOfVacantSpace.png, id=3074, 1069.596pt x 780.516pt>
+<./Pics/CA003SurveyOfVacantSpace.png, id=3075, 1069.596pt x 780.516pt>
 File: ./Pics/CA003SurveyOfVacantSpace.png Graphic file (type png)
 <use ./Pics/CA003SurveyOfVacantSpace.png>
 Package pdftex.def Info: ./Pics/CA003SurveyOfVacantSpace.png  used on input lin
 e 23.
 (pdftex.def)             Requested size: 196.66235pt x 143.51187pt.
-<./Pics/CA004ReachableSpaceAssesment.png, id=3075, 1336.995pt x 975.645pt>
+<./Pics/CA004ReachableSpaceAssesment.png, id=3076, 1336.995pt x 975.645pt>
 File: ./Pics/CA004ReachableSpaceAssesment.png Graphic file (type png)
 <use ./Pics/CA004ReachableSpaceAssesment.png>
 Package pdftex.def Info: ./Pics/CA004ReachableSpaceAssesment.png  used on input
@@ -1207,57 +1200,57 @@ Package pdftex.def Info: ./Pics/CA004ReachableSpaceAssesment.png  used on input
  [105 <./Pics/CA001ObstacleDetection.png> <./Pics/CA002UncertainityAssesment.pn
 g> <./Pics/CA003SurveyOfVacantSpace.png> <./Pics/CA004ReachableSpaceAssesment.p
 ng>] [106] [107]
-<./Pics/TE038AvoidanceRunExample.png, id=3146, 217.7736pt x 198.9834pt>
+<./Pics/TE038AvoidanceRunExample.png, id=3147, 217.7736pt x 198.9834pt>
 File: ./Pics/TE038AvoidanceRunExample.png Graphic file (type png)
 <use ./Pics/TE038AvoidanceRunExample.png>
 Package pdftex.def Info: ./Pics/TE038AvoidanceRunExample.png  used on input lin
 e 142.
 (pdftex.def)             Requested size: 341.43306pt x 312.00383pt.
  [108 <./Pics/TE038AvoidanceRunExample.png>]
-<./Pics/TE040Visibility.png, id=3154, 500.1084pt x 410.4936pt>
+<./Pics/TE040Visibility.png, id=3155, 500.1084pt x 410.4936pt>
 File: ./Pics/TE040Visibility.png Graphic file (type png)
 <use ./Pics/TE040Visibility.png>
 Package pdftex.def Info: ./Pics/TE040Visibility.png  used on input line 162.
 (pdftex.def)             Requested size: 432.48048pt x 354.99066pt.
  [109 <./Pics/TE040Visibility.png>]
-<./Pics/TE041Reachibility.png, id=3163, 491.436pt x 402.303pt>
+<./Pics/TE041Reachibility.png, id=3164, 491.436pt x 402.303pt>
 File: ./Pics/TE041Reachibility.png Graphic file (type png)
 <use ./Pics/TE041Reachibility.png>
 Package pdftex.def Info: ./Pics/TE041Reachibility.png  used on input line 186.
 (pdftex.def)             Requested size: 432.48048pt x 354.05841pt.
 )
 (06A07b-Mission-Control-Run.tex [110 <./Pics/TE041Reachibility.png>]
-<./Pics/CA005PathCalculation.png, id=3181, 1063.5735pt x 809.424pt>
+<./Pics/CA005PathCalculation.png, id=3182, 1063.5735pt x 809.424pt>
 File: ./Pics/CA005PathCalculation.png Graphic file (type png)
 <use ./Pics/CA005PathCalculation.png>
 Package pdftex.def Info: ./Pics/CA005PathCalculation.png  used on input line 27
 .
 (pdftex.def)             Requested size: 196.66235pt x 149.66699pt.
-<./Pics/CA006FieldOfViewZones.png, id=3182, 1069.596pt x 809.424pt>
+<./Pics/CA006FieldOfViewZones.png, id=3183, 1069.596pt x 809.424pt>
 File: ./Pics/CA006FieldOfViewZones.png Graphic file (type png)
 <use ./Pics/CA006FieldOfViewZones.png>
 Package pdftex.def Info: ./Pics/CA006FieldOfViewZones.png  used on input line 3
 3.
 (pdftex.def)             Requested size: 196.66235pt x 148.82713pt.
  [111 <./Pics/CA005PathCalculation.png> <./Pics/CA006FieldOfViewZones.png>]
-<./Pics/TE042MissionExample.png, id=3201, 1186.4325pt x 775.39688pt>
+<./Pics/TE042MissionExample.png, id=3202, 1186.4325pt x 775.39688pt>
 File: ./Pics/TE042MissionExample.png Graphic file (type png)
 <use ./Pics/TE042MissionExample.png>
 Package pdftex.def Info: ./Pics/TE042MissionExample.png  used on input line 60.
 
 (pdftex.def)             Requested size: 196.66235pt x 128.52654pt.
-<./Pics/TE043AllDecisionDecisionPoint.png, id=3202, 1186.4325pt x 775.39688pt>
+<./Pics/TE043AllDecisionDecisionPoint.png, id=3203, 1186.4325pt x 775.39688pt>
 File: ./Pics/TE043AllDecisionDecisionPoint.png Graphic file (type png)
 <use ./Pics/TE043AllDecisionDecisionPoint.png>
 Package pdftex.def Info: ./Pics/TE043AllDecisionDecisionPoint.png  used on inpu
 t line 66.
 (pdftex.def)             Requested size: 196.66235pt x 128.52654pt.
-<./Pics/TE044WaypointReach.png, id=3203, 379.6584pt x 248.127pt>
+<./Pics/TE044WaypointReach.png, id=3204, 379.6584pt x 248.127pt>
 File: ./Pics/TE044WaypointReach.png Graphic file (type png)
 <use ./Pics/TE044WaypointReach.png>
 Package pdftex.def Info: ./Pics/TE044WaypointReach.png  used on input line 74.
 (pdftex.def)             Requested size: 196.66235pt x 128.527pt.
-<./Pics/TE045NewWaypointSetup.png, id=3204, 1186.4325pt x 775.39688pt>
+<./Pics/TE045NewWaypointSetup.png, id=3205, 1186.4325pt x 775.39688pt>
 File: ./Pics/TE045NewWaypointSetup.png Graphic file (type png)
 <use ./Pics/TE045NewWaypointSetup.png>
 Package pdftex.def Info: ./Pics/TE045NewWaypointSetup.png  used on input line 8
@@ -1265,7 +1258,7 @@ Package pdftex.def Info: ./Pics/TE045NewWaypointSetup.png  used on input line 8
 (pdftex.def)             Requested size: 196.66235pt x 128.52654pt.
  [112 <./Pics/TE042MissionExample.png> <./Pics/TE043AllDecisionDecisionPoint.pn
 g> <./Pics/TE044WaypointReach.png> <./Pics/TE045NewWaypointSetup.png>]
-<./Pics/TE026AvoidanceAlgorithmMainLoopRun.png, id=3223, 2127.95pt x 1644.1425p
+<./Pics/TE026AvoidanceAlgorithmMainLoopRun.png, id=3224, 2127.95pt x 1644.1425p
 t>
 File: ./Pics/TE026AvoidanceAlgorithmMainLoopRun.png Graphic file (type png)
 <use ./Pics/TE026AvoidanceAlgorithmMainLoopRun.png>
@@ -1277,7 +1270,7 @@ Package pdftex.def Info: ./Pics/TE026AvoidanceAlgorithmMainLoopRun.png  used on
 (06A07e-Calculation-Complexity.tex [120] [121] [122])
 (06A07c-Safety-Margin-Calculation.tex [123]) (06A08a-UAS-Traffic-Management.tex
 [124]) (06A08b-Architecture.tex [125]
-<./Pics/RE002UTMCommunicationDiagram.png, id=3435, 635.0124pt x 348.8232pt>
+<./Pics/RE002UTMCommunicationDiagram.png, id=3436, 635.0124pt x 348.8232pt>
 File: ./Pics/RE002UTMCommunicationDiagram.png Graphic file (type png)
 <use ./Pics/RE002UTMCommunicationDiagram.png>
 Package pdftex.def Info: ./Pics/RE002UTMCommunicationDiagram.png  used on input
@@ -1285,7 +1278,7 @@ Package pdftex.def Info: ./Pics/RE002UTMCommunicationDiagram.png  used on input
 (pdftex.def)             Requested size: 318.66946pt x 175.04988pt.
 ) (06A08f-Cooperative-Resolution.tex
 [126 <./Pics/RE002UTMCommunicationDiagram.png>]
-<./Pics/RE003CooperativeResolution.png, id=3460, 620.5584pt x 423.984pt>
+<./Pics/RE003CooperativeResolution.png, id=3461, 620.5584pt x 423.984pt>
 File: ./Pics/RE003CooperativeResolution.png Graphic file (type png)
 <use ./Pics/RE003CooperativeResolution.png>
 Package pdftex.def Info: ./Pics/RE003CooperativeResolution.png  used on input l
@@ -1293,7 +1286,7 @@ ine 14.
 (pdftex.def)             Requested size: 318.66946pt x 217.72987pt.
  [127 <./Pics/RE003CooperativeResolution.png>]) (06A08g-Non-Cooperative-Resolut
 ion.tex [128]
-<./Pics/RE004NonCooperativeResolution.png, id=3498, 659.1024pt x 422.0568pt>
+<./Pics/RE004NonCooperativeResolution.png, id=3499, 659.1024pt x 422.0568pt>
 File: ./Pics/RE004NonCooperativeResolution.png Graphic file (type png)
 <use ./Pics/RE004NonCooperativeResolution.png>
 Package pdftex.def Info: ./Pics/RE004NonCooperativeResolution.png  used on inpu
@@ -1302,32 +1295,32 @@ t line 46.
 )
 (06A08h-Collision-Case-Resolution.tex [129 <./Pics/RE004NonCooperativeResolutio
 n.png>]
-<./Pics/RE008HeadOnApproach01.png, id=3519, 644.6484pt x 328.5876pt>
+<./Pics/RE008HeadOnApproach01.png, id=3520, 644.6484pt x 328.5876pt>
 File: ./Pics/RE008HeadOnApproach01.png Graphic file (type png)
 <use ./Pics/RE008HeadOnApproach01.png>
 Package pdftex.def Info: ./Pics/RE008HeadOnApproach01.png  used on input line 2
 3.
 (pdftex.def)             Requested size: 184.36607pt x 93.97433pt.
-<./Pics/RE009HeadOnApproach02.png, id=3520, 686.0832pt x 410.4936pt>
+<./Pics/RE009HeadOnApproach02.png, id=3521, 686.0832pt x 410.4936pt>
 File: ./Pics/RE009HeadOnApproach02.png Graphic file (type png)
 <use ./Pics/RE009HeadOnApproach02.png>
 Package pdftex.def Info: ./Pics/RE009HeadOnApproach02.png  used on input line 2
 9.
 (pdftex.def)             Requested size: 158.76941pt x 94.99405pt.
  [130 <./Pics/RE008HeadOnApproach01.png> <./Pics/RE009HeadOnApproach02.png>]
-<./Pics/RE005ConvergingManeuver01.png, id=3549, 487.5816pt x 418.2024pt>
+<./Pics/RE005ConvergingManeuver01.png, id=3550, 487.5816pt x 418.2024pt>
 File: ./Pics/RE005ConvergingManeuver01.png Graphic file (type png)
 <use ./Pics/RE005ConvergingManeuver01.png>
 Package pdftex.def Info: ./Pics/RE005ConvergingManeuver01.png  used on input li
 ne 95.
 (pdftex.def)             Requested size: 122.4159pt x 104.99702pt.
-<./Pics/RE006ConvergingManuever02.png, id=3550, 493.3632pt x 418.2024pt>
+<./Pics/RE006ConvergingManuever02.png, id=3551, 493.3632pt x 418.2024pt>
 File: ./Pics/RE006ConvergingManuever02.png Graphic file (type png)
 <use ./Pics/RE006ConvergingManuever02.png>
 Package pdftex.def Info: ./Pics/RE006ConvergingManuever02.png  used on input li
 ne 101.
 (pdftex.def)             Requested size: 123.86746pt x 104.99702pt.
-<./Pics/RE007ConvergingManuever03.png, id=3551, 429.7656pt x 359.4228pt>
+<./Pics/RE007ConvergingManuever03.png, id=3552, 429.7656pt x 359.4228pt>
 File: ./Pics/RE007ConvergingManuever03.png Graphic file (type png)
 <use ./Pics/RE007ConvergingManuever03.png>
 Package pdftex.def Info: ./Pics/RE007ConvergingManuever03.png  used on input li
@@ -1335,19 +1328,19 @@ ne 107.
 (pdftex.def)             Requested size: 125.5469pt x 104.99774pt.
  [131 <./Pics/RE005ConvergingManeuver01.png> <./Pics/RE006ConvergingManuever02.
 png> <./Pics/RE007ConvergingManuever03.png>]
-<./Pics/RE010OvertakeMAnuever01.png, id=3576, 384.4764pt x 446.1468pt>
+<./Pics/RE010OvertakeMAnuever01.png, id=3577, 384.4764pt x 446.1468pt>
 File: ./Pics/RE010OvertakeMAnuever01.png Graphic file (type png)
 <use ./Pics/RE010OvertakeMAnuever01.png>
 Package pdftex.def Info: ./Pics/RE010OvertakeMAnuever01.png  used on input line
  159.
 (pdftex.def)             Requested size: 122.37202pt x 142.00063pt.
-<./Pics/RE011OvertakeMAnuever02.png, id=3577, 291.9708pt x 444.2196pt>
+<./Pics/RE011OvertakeMAnuever02.png, id=3578, 291.9708pt x 444.2196pt>
 File: ./Pics/RE011OvertakeMAnuever02.png Graphic file (type png)
 <use ./Pics/RE011OvertakeMAnuever02.png>
 Package pdftex.def Info: ./Pics/RE011OvertakeMAnuever02.png  used on input line
  164.
 (pdftex.def)             Requested size: 93.33455pt x 142.00406pt.
-<./Pics/RE012OvertakeMAnuever03.png, id=3578, 405.6756pt x 437.4744pt>
+<./Pics/RE012OvertakeMAnuever03.png, id=3579, 405.6756pt x 437.4744pt>
 File: ./Pics/RE012OvertakeMAnuever03.png Graphic file (type png)
 <use ./Pics/RE012OvertakeMAnuever03.png>
 Package pdftex.def Info: ./Pics/RE012OvertakeMAnuever03.png  used on input line
@@ -1370,7 +1363,7 @@ ce-ment pro-ce-dure \OT1/cmr/m/n/12 is con-sist-ing from
 
 [137] [138] [139] [140] [141]) (06A08e-Weather-Case.tex [142] [143])
 (06A09-Rule-Engine.tex [144]) (06A09a-Rule-Engine-Architecture.tex
-<./Pics/RE013RuleEngineBasicArchitecture.png, id=3841, 646.5756pt x 435.5472pt>
+<./Pics/RE013RuleEngineBasicArchitecture.png, id=3842, 646.5756pt x 435.5472pt>
 
 File: ./Pics/RE013RuleEngineBasicArchitecture.png Graphic file (type png)
 <use ./Pics/RE013RuleEngineBasicArchitecture.png>
@@ -1380,7 +1373,7 @@ nput line 27.
  [145])
 (06A09b-Rule-Implementation.tex [146 <./Pics/RE013RuleEngineBasicArchitecture.p
 ng>]
-<./Pics/RE014RuleEngineInstanceLevels.png, id=3875, 2125.9425pt x 1355.0625pt>
+<./Pics/RE014RuleEngineInstanceLevels.png, id=3876, 2125.9425pt x 1355.0625pt>
 File: ./Pics/RE014RuleEngineInstanceLevels.png Graphic file (type png)
 <use ./Pics/RE014RuleEngineInstanceLevels.png>
 Package pdftex.def Info: ./Pics/RE014RuleEngineInstanceLevels.png  used on inpu
@@ -1489,37 +1482,37 @@ t/12 scale:collisionPoint \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 =
  []
 
 [156]
-<./Pics/RE016RightPlaneHeadin01.png, id=4076, 825.0825pt x 516.42938pt>
+<./Pics/RE016RightPlaneHeadin01.png, id=4077, 825.0825pt x 516.42938pt>
 File: ./Pics/RE016RightPlaneHeadin01.png Graphic file (type png)
 <use ./Pics/RE016RightPlaneHeadin01.png>
 Package pdftex.def Info: ./Pics/RE016RightPlaneHeadin01.png  used on input line
  467.
 (pdftex.def)             Requested size: 131.10944pt x 82.06302pt.
-<./Pics/RE17RightPlaneHeading02.png, id=4077, 837.1275pt x 515.67656pt>
+<./Pics/RE17RightPlaneHeading02.png, id=4078, 837.1275pt x 515.67656pt>
 File: ./Pics/RE17RightPlaneHeading02.png Graphic file (type png)
 <use ./Pics/RE17RightPlaneHeading02.png>
 Package pdftex.def Info: ./Pics/RE17RightPlaneHeading02.png  used on input line
  473.
 (pdftex.def)             Requested size: 131.1074pt x 80.7631pt.
-<./Pics/RE018RightPlaneHeading03.png, id=4078, 889.82437pt x 514.92375pt>
+<./Pics/RE018RightPlaneHeading03.png, id=4079, 889.82437pt x 514.92375pt>
 File: ./Pics/RE018RightPlaneHeading03.png Graphic file (type png)
 <use ./Pics/RE018RightPlaneHeading03.png>
 Package pdftex.def Info: ./Pics/RE018RightPlaneHeading03.png  used on input lin
 e 479.
 (pdftex.def)             Requested size: 131.1054pt x 75.86809pt.
-<./Pics/RE019RightPlaneHeading04.png, id=4079, 919.93687pt x 511.9125pt>
+<./Pics/RE019RightPlaneHeading04.png, id=4080, 919.93687pt x 511.9125pt>
 File: ./Pics/RE019RightPlaneHeading04.png Graphic file (type png)
 <use ./Pics/RE019RightPlaneHeading04.png>
 Package pdftex.def Info: ./Pics/RE019RightPlaneHeading04.png  used on input lin
 e 486.
 (pdftex.def)             Requested size: 131.1064pt x 72.9561pt.
-<./Pics/RE020RightPlaneHeading05.png, id=4080, 907.89188pt x 516.42938pt>
+<./Pics/RE020RightPlaneHeading05.png, id=4081, 907.89188pt x 516.42938pt>
 File: ./Pics/RE020RightPlaneHeading05.png Graphic file (type png)
 <use ./Pics/RE020RightPlaneHeading05.png>
 Package pdftex.def Info: ./Pics/RE020RightPlaneHeading05.png  used on input lin
 e 492.
 (pdftex.def)             Requested size: 131.10759pt x 74.57695pt.
-<./Pics/RE021RightPlaneHeading07.png, id=4081, 870.25125pt x 516.42938pt>
+<./Pics/RE021RightPlaneHeading07.png, id=4082, 870.25125pt x 516.42938pt>
 File: ./Pics/RE021RightPlaneHeading07.png Graphic file (type png)
 <use ./Pics/RE021RightPlaneHeading07.png>
 Package pdftex.def Info: ./Pics/RE021RightPlaneHeading07.png  used on input lin
@@ -1546,37 +1539,37 @@ Overfull \vbox (8.1035pt too high) has occurred while \output is active []
 [157 <./Pics/RE016RightPlaneHeadin01.png> <./Pics/RE17RightPlaneHeading02.png> 
 <./Pics/RE018RightPlaneHeading03.png> <./Pics/RE019RightPlaneHeading04.png> <./
 Pics/RE020RightPlaneHeading05.png> <./Pics/RE021RightPlaneHeading07.png>]
-<./Pics/RE023EnforceSafetyMargin01.png, id=4101, 702.2235pt x 431.211pt>
+<./Pics/RE023EnforceSafetyMargin01.png, id=4102, 702.2235pt x 431.211pt>
 File: ./Pics/RE023EnforceSafetyMargin01.png Graphic file (type png)
 <use ./Pics/RE023EnforceSafetyMargin01.png>
 Package pdftex.def Info: ./Pics/RE023EnforceSafetyMargin01.png  used on input l
 ine 568.
 (pdftex.def)             Requested size: 131.11238pt x 80.5097pt.
-<./Pics/RE024EnforceSafetyMargin02.png, id=4102, 702.2235pt x 431.211pt>
+<./Pics/RE024EnforceSafetyMargin02.png, id=4103, 702.2235pt x 431.211pt>
 File: ./Pics/RE024EnforceSafetyMargin02.png Graphic file (type png)
 <use ./Pics/RE024EnforceSafetyMargin02.png>
 Package pdftex.def Info: ./Pics/RE024EnforceSafetyMargin02.png  used on input l
 ine 575.
 (pdftex.def)             Requested size: 131.11238pt x 80.5097pt.
-<./Pics/RE025EnforceSafetyMargin03.png, id=4103, 702.2235pt x 431.211pt>
+<./Pics/RE025EnforceSafetyMargin03.png, id=4104, 702.2235pt x 431.211pt>
 File: ./Pics/RE025EnforceSafetyMargin03.png Graphic file (type png)
 <use ./Pics/RE025EnforceSafetyMargin03.png>
 Package pdftex.def Info: ./Pics/RE025EnforceSafetyMargin03.png  used on input l
 ine 582.
 (pdftex.def)             Requested size: 131.11238pt x 80.5097pt.
-<./Pics/RE026EnforceSafetyMargin04.png, id=4104, 702.2235pt x 431.211pt>
+<./Pics/RE026EnforceSafetyMargin04.png, id=4105, 702.2235pt x 431.211pt>
 File: ./Pics/RE026EnforceSafetyMargin04.png Graphic file (type png)
 <use ./Pics/RE026EnforceSafetyMargin04.png>
 Package pdftex.def Info: ./Pics/RE026EnforceSafetyMargin04.png  used on input l
 ine 590.
 (pdftex.def)             Requested size: 131.11238pt x 80.5097pt.
-<./Pics/RE027EnforceSafetyMargin05.png, id=4105, 702.2235pt x 431.211pt>
+<./Pics/RE027EnforceSafetyMargin05.png, id=4106, 702.2235pt x 431.211pt>
 File: ./Pics/RE027EnforceSafetyMargin05.png Graphic file (type png)
 <use ./Pics/RE027EnforceSafetyMargin05.png>
 Package pdftex.def Info: ./Pics/RE027EnforceSafetyMargin05.png  used on input l
 ine 597.
 (pdftex.def)             Requested size: 131.11238pt x 80.5097pt.
-<./Pics/RE028EnforceSafetyMargin06.png, id=4106, 702.2235pt x 431.211pt>
+<./Pics/RE028EnforceSafetyMargin06.png, id=4107, 702.2235pt x 431.211pt>
 File: ./Pics/RE028EnforceSafetyMargin06.png Graphic file (type png)
 <use ./Pics/RE028EnforceSafetyMargin06.png>
 Package pdftex.def Info: ./Pics/RE028EnforceSafetyMargin06.png  used on input l
@@ -1613,14 +1606,14 @@ Overfull \hbox (23.41116pt too wide) in paragraph at lines 42--127
 
 [166]) (07S04-NonCooperativeTestCases.tex [167]) (07S05-Building-Scenario.tex
 [168] [169]
-<./Pics/NS001ConstraintsBuildingObstacle00061.png, id=4337, 940.7145pt x 622.72
+<./Pics/NS001ConstraintsBuildingObstacle00061.png, id=4338, 940.7145pt x 622.72
 65pt>
 File: ./Pics/NS001ConstraintsBuildingObstacle00061.png Graphic file (type png)
 <use ./Pics/NS001ConstraintsBuildingObstacle00061.png>
 Package pdftex.def Info: ./Pics/NS001ConstraintsBuildingObstacle00061.png  used
  on input line 70.
 (pdftex.def)             Requested size: 196.66235pt x 130.1778pt.
-<./Pics/NS002ConstraintsBuildingObstacles00161.png, id=4338, 376.2858pt x 249.0
+<./Pics/NS002ConstraintsBuildingObstacles00161.png, id=4339, 376.2858pt x 249.0
 906pt>
 File: ./Pics/NS002ConstraintsBuildingObstacles00161.png Graphic file (type png)
 
@@ -1628,7 +1621,7 @@ File: ./Pics/NS002ConstraintsBuildingObstacles00161.png Graphic file (type png)
 Package pdftex.def Info: ./Pics/NS002ConstraintsBuildingObstacles00161.png  use
 d on input line 76.
 (pdftex.def)             Requested size: 196.66235pt x 130.1854pt.
-<./Pics/NS003ConstraintsBuildingObstacles00311.png, id=4339, 376.2858pt x 249.0
+<./Pics/NS003ConstraintsBuildingObstacles00311.png, id=4340, 376.2858pt x 249.0
 906pt>
 File: ./Pics/NS003ConstraintsBuildingObstacles00311.png Graphic file (type png)
 
@@ -1636,7 +1629,7 @@ File: ./Pics/NS003ConstraintsBuildingObstacles00311.png Graphic file (type png)
 Package pdftex.def Info: ./Pics/NS003ConstraintsBuildingObstacles00311.png  use
 d on input line 83.
 (pdftex.def)             Requested size: 196.66235pt x 130.1854pt.
-<./Pics/NS004ConstraintsBuildingObstacles00470.png, id=4340, 940.7145pt x 622.7
+<./Pics/NS004ConstraintsBuildingObstacles00470.png, id=4341, 940.7145pt x 622.7
 265pt>
 File: ./Pics/NS004ConstraintsBuildingObstacles00470.png Graphic file (type png)
 
@@ -1644,7 +1637,7 @@ File: ./Pics/NS004ConstraintsBuildingObstacles00470.png Graphic file (type png)
 Package pdftex.def Info: ./Pics/NS004ConstraintsBuildingObstacles00470.png  use
 d on input line 89.
 (pdftex.def)             Requested size: 196.66235pt x 130.1778pt.
-<./Pics/NS005ConstraintsPolynomialBuildingObstaclesPerformance.png, id=4343, 64
+<./Pics/NS005ConstraintsPolynomialBuildingObstaclesPerformance.png, id=4344, 64
 1.7576pt x 291.489pt>
 File: ./Pics/NS005ConstraintsPolynomialBuildingObstaclesPerformance.png Graphic
  file (type png)
@@ -1655,7 +1648,7 @@ ormance.png  used on input line 107.
  [170 <./Pics/NS001ConstraintsBuildingObstacle00061.png> <./Pics/NS002Constrain
 tsBuildingObstacles00161.png> <./Pics/NS003ConstraintsBuildingObstacles00311.pn
 g> <./Pics/NS004ConstraintsBuildingObstacles00470.png>]
-<./Pics/NS006ConstraintsPolynomialBuildingPathFollowing.png, id=4360, 377.7312p
+<./Pics/NS006ConstraintsPolynomialBuildingPathFollowing.png, id=4361, 377.7312p
 t x 283.2984pt>
 File: ./Pics/NS006ConstraintsPolynomialBuildingPathFollowing.png Graphic file (
 type png)
@@ -1665,7 +1658,7 @@ Package pdftex.def Info: ./Pics/NS006ConstraintsPolynomialBuildingPathFollowing
 (pdftex.def)             Requested size: 250.38562pt x 187.79451pt.
  [171 <./Pics/NS005ConstraintsPolynomialBuildingObstaclesPerformance.png>]
 Missing character: There is no 2 in font eusm10!
-<./Pics/NS092BuildingAvoidanceComputationTime.png, id=4372, 360.6273pt x 149.35
+<./Pics/NS092BuildingAvoidanceComputationTime.png, id=4373, 360.6273pt x 149.35
 8pt>
 File: ./Pics/NS092BuildingAvoidanceComputationTime.png Graphic file (type png)
 <use ./Pics/NS092BuildingAvoidanceComputationTime.png>
@@ -1675,7 +1668,7 @@ Package pdftex.def Info: ./Pics/NS092BuildingAvoidanceComputationTime.png  used
 )
 (07S06-Slalom-Scenario.tex [172 <./Pics/NS006ConstraintsPolynomialBuildingPathF
 ollowing.png> <./Pics/NS092BuildingAvoidanceComputationTime.png>] [173]
-<./Pics/NS007ConstraintsPolynomialSlalom-00015.png, id=4410, 373.8768pt x 307.8
+<./Pics/NS007ConstraintsPolynomialSlalom-00015.png, id=4411, 373.8768pt x 307.8
 702pt>
 File: ./Pics/NS007ConstraintsPolynomialSlalom-00015.png Graphic file (type png)
 
@@ -1683,7 +1676,7 @@ File: ./Pics/NS007ConstraintsPolynomialSlalom-00015.png Graphic file (type png)
 Package pdftex.def Info: ./Pics/NS007ConstraintsPolynomialSlalom-00015.png  use
 d on input line 72.
 (pdftex.def)             Requested size: 196.66235pt x 161.93962pt.
-<./Pics/NS008ConstraintsPolynomialSlalom-00069.png, id=4411, 373.1541pt x 308.3
+<./Pics/NS008ConstraintsPolynomialSlalom-00069.png, id=4412, 373.1541pt x 308.3
 52pt>
 File: ./Pics/NS008ConstraintsPolynomialSlalom-00069.png Graphic file (type png)
 
@@ -1691,14 +1684,14 @@ File: ./Pics/NS008ConstraintsPolynomialSlalom-00069.png Graphic file (type png)
 Package pdftex.def Info: ./Pics/NS008ConstraintsPolynomialSlalom-00069.png  use
 d on input line 78.
 (pdftex.def)             Requested size: 196.66235pt x 162.51299pt.
-<./Pics/NS009ConstraintsPolynomialSlalom00080.png, id=4412, 373.395pt x 308.111
+<./Pics/NS009ConstraintsPolynomialSlalom00080.png, id=4413, 373.395pt x 308.111
 1pt>
 File: ./Pics/NS009ConstraintsPolynomialSlalom00080.png Graphic file (type png)
 <use ./Pics/NS009ConstraintsPolynomialSlalom00080.png>
 Package pdftex.def Info: ./Pics/NS009ConstraintsPolynomialSlalom00080.png  used
  on input line 85.
 (pdftex.def)             Requested size: 196.66235pt x 162.2779pt.
-<./Pics/NS010ConstraintsPolynomialSlalom00094.png, id=4413, 373.6359pt x 308.35
+<./Pics/NS010ConstraintsPolynomialSlalom00094.png, id=4414, 373.6359pt x 308.35
 2pt>
 File: ./Pics/NS010ConstraintsPolynomialSlalom00094.png Graphic file (type png)
 <use ./Pics/NS010ConstraintsPolynomialSlalom00094.png>
@@ -1709,7 +1702,7 @@ Package pdftex.def Info: ./Pics/NS010ConstraintsPolynomialSlalom00094.png  used
 [174 <./Pics/NS007ConstraintsPolynomialSlalom-00015.png> <./Pics/NS008Constrain
 tsPolynomialSlalom-00069.png> <./Pics/NS009ConstraintsPolynomialSlalom00080.png
 > <./Pics/NS010ConstraintsPolynomialSlalom00094.png>]
-<./Pics/NS011ConstraintsPolynomialSlalomPerformance.png, id=4429, 775.698pt x 2
+<./Pics/NS011ConstraintsPolynomialSlalomPerformance.png, id=4430, 775.698pt x 2
 93.898pt>
 File: ./Pics/NS011ConstraintsPolynomialSlalomPerformance.png Graphic file (type
  png)
@@ -1717,7 +1710,7 @@ File: ./Pics/NS011ConstraintsPolynomialSlalomPerformance.png Graphic file (type
 Package pdftex.def Info: ./Pics/NS011ConstraintsPolynomialSlalomPerformance.png
   used on input line 107.
 (pdftex.def)             Requested size: 364.19664pt x 137.98856pt.
-<./Pics/NS012ConstraintsPolynomialSlalomPathFollowing.png, id=4434, 361.8318pt 
+<./Pics/NS012ConstraintsPolynomialSlalomPathFollowing.png, id=4435, 361.8318pt 
 x 276.7941pt>
 File: ./Pics/NS012ConstraintsPolynomialSlalomPathFollowing.png Graphic file (ty
 pe png)
@@ -1726,7 +1719,7 @@ Package pdftex.def Info: ./Pics/NS012ConstraintsPolynomialSlalomPathFollowing.p
 ng  used on input line 139.
 (pdftex.def)             Requested size: 250.38562pt x 191.5414pt.
  [175 <./Pics/NS011ConstraintsPolynomialSlalomPerformance.png>]
-<./Pics/NS093SlalomComputationTime.png, id=4448, 363.9999pt x 151.767pt>
+<./Pics/NS093SlalomComputationTime.png, id=4449, 363.9999pt x 151.767pt>
 File: ./Pics/NS093SlalomComputationTime.png Graphic file (type png)
 <use ./Pics/NS093SlalomComputationTime.png>
 Package pdftex.def Info: ./Pics/NS093SlalomComputationTime.png  used on input l
@@ -1734,28 +1727,28 @@ ine 168.
 (pdftex.def)             Requested size: 295.90587pt x 123.38448pt.
 ) (07S07-Maze-Scenario.tex [176 <./Pics/NS012ConstraintsPolynomialSlalomPathFol
 lowing.png> <./Pics/NS093SlalomComputationTime.png>] [177]
-<./Pics/NS013ConstraintsPolynomialMaze00022.png, id=4481, 419.166pt x 276.5532p
+<./Pics/NS013ConstraintsPolynomialMaze00022.png, id=4482, 419.166pt x 276.5532p
 t>
 File: ./Pics/NS013ConstraintsPolynomialMaze00022.png Graphic file (type png)
 <use ./Pics/NS013ConstraintsPolynomialMaze00022.png>
 Package pdftex.def Info: ./Pics/NS013ConstraintsPolynomialMaze00022.png  used o
 n input line 84.
 (pdftex.def)             Requested size: 196.66235pt x 129.75214pt.
-<./Pics/NS014ConstraintsPolynomialMaze00044.png, id=4482, 418.6842pt x 276.0714
+<./Pics/NS014ConstraintsPolynomialMaze00044.png, id=4483, 418.6842pt x 276.0714
 pt>
 File: ./Pics/NS014ConstraintsPolynomialMaze00044.png Graphic file (type png)
 <use ./Pics/NS014ConstraintsPolynomialMaze00044.png>
 Package pdftex.def Info: ./Pics/NS014ConstraintsPolynomialMaze00044.png  used o
 n input line 90.
 (pdftex.def)             Requested size: 196.66235pt x 129.67773pt.
-<./Pics/NS015ConstraintsPolynomialMaze00081.png, id=4483, 420.6114pt x 276.0714
+<./Pics/NS015ConstraintsPolynomialMaze00081.png, id=4484, 420.6114pt x 276.0714
 pt>
 File: ./Pics/NS015ConstraintsPolynomialMaze00081.png Graphic file (type png)
 <use ./Pics/NS015ConstraintsPolynomialMaze00081.png>
 Package pdftex.def Info: ./Pics/NS015ConstraintsPolynomialMaze00081.png  used o
 n input line 97.
 (pdftex.def)             Requested size: 196.66235pt x 129.07956pt.
-<./Pics/NS016ConstraintsPolynomialMaze00098.png, id=4484, 421.575pt x 278.4804p
+<./Pics/NS016ConstraintsPolynomialMaze00098.png, id=4485, 421.575pt x 278.4804p
 t>
 File: ./Pics/NS016ConstraintsPolynomialMaze00098.png Graphic file (type png)
 <use ./Pics/NS016ConstraintsPolynomialMaze00098.png>
@@ -1763,7 +1756,7 @@ Package pdftex.def Info: ./Pics/NS016ConstraintsPolynomialMaze00098.png  used o
 n input line 103.
 (pdftex.def)             Requested size: 196.66235pt x 129.91272pt.
  [178]
-<./Pics/NS017ConstraintsPolynomialMazePerformance.png, id=4506, 505.89pt x 293.
+<./Pics/NS017ConstraintsPolynomialMazePerformance.png, id=4507, 505.89pt x 293.
 898pt>
 File: ./Pics/NS017ConstraintsPolynomialMazePerformance.png Graphic file (type p
 ng)
@@ -1774,7 +1767,7 @@ used on input line 124.
  [179 <./Pics/NS013ConstraintsPolynomialMaze00022.png> <./Pics/NS014Constraints
 PolynomialMaze00044.png> <./Pics/NS015ConstraintsPolynomialMaze00081.png> <./Pi
 cs/NS016ConstraintsPolynomialMaze00098.png>]
-<./Pics/NS018ConstraintsPolynomialMazePathFollowing.png, id=4519, 360.3864pt x 
+<./Pics/NS018ConstraintsPolynomialMazePathFollowing.png, id=4520, 360.3864pt x 
 276.5532pt>
 File: ./Pics/NS018ConstraintsPolynomialMazePathFollowing.png Graphic file (type
  png)
@@ -1790,35 +1783,35 @@ ine 190.
 (pdftex.def)             Requested size: 295.90587pt x 123.38448pt.
 ) (07S08-Storm-Scenario.tex
 [181 <./Pics/NS018ConstraintsPolynomialMazePathFollowing.png>] [182]
-<./Pics/NS019ConstraintsPolynomialStorm00017.png, id=4568, 1005.7575pt x 449.27
+<./Pics/NS019ConstraintsPolynomialStorm00017.png, id=4569, 1005.7575pt x 449.27
 85pt>
 File: ./Pics/NS019ConstraintsPolynomialStorm00017.png Graphic file (type png)
 <use ./Pics/NS019ConstraintsPolynomialStorm00017.png>
 Package pdftex.def Info: ./Pics/NS019ConstraintsPolynomialStorm00017.png  used 
 on input line 69.
 (pdftex.def)             Requested size: 196.66235pt x 87.84546pt.
-<./Pics/NS020ConstraintsPolynomialStorm00031.png, id=4569, 1005.7575pt x 449.27
+<./Pics/NS020ConstraintsPolynomialStorm00031.png, id=4570, 1005.7575pt x 449.27
 85pt>
 File: ./Pics/NS020ConstraintsPolynomialStorm00031.png Graphic file (type png)
 <use ./Pics/NS020ConstraintsPolynomialStorm00031.png>
 Package pdftex.def Info: ./Pics/NS020ConstraintsPolynomialStorm00031.png  used 
 on input line 75.
 (pdftex.def)             Requested size: 196.66235pt x 87.84546pt.
-<./Pics/NS021ConstraintsPolynomialStorm00043.png, id=4570, 1005.7575pt x 449.27
+<./Pics/NS021ConstraintsPolynomialStorm00043.png, id=4571, 1005.7575pt x 449.27
 85pt>
 File: ./Pics/NS021ConstraintsPolynomialStorm00043.png Graphic file (type png)
 <use ./Pics/NS021ConstraintsPolynomialStorm00043.png>
 Package pdftex.def Info: ./Pics/NS021ConstraintsPolynomialStorm00043.png  used 
 on input line 82.
 (pdftex.def)             Requested size: 196.66235pt x 87.84546pt.
-<./Pics/NS022ConstraintsPolynomialStorm00062.png, id=4571, 1005.7575pt x 449.27
+<./Pics/NS022ConstraintsPolynomialStorm00062.png, id=4572, 1005.7575pt x 449.27
 85pt>
 File: ./Pics/NS022ConstraintsPolynomialStorm00062.png Graphic file (type png)
 <use ./Pics/NS022ConstraintsPolynomialStorm00062.png>
 Package pdftex.def Info: ./Pics/NS022ConstraintsPolynomialStorm00062.png  used 
 on input line 88.
 (pdftex.def)             Requested size: 196.66235pt x 87.84546pt.
-<./Pics/NS023ConstraintsPolynomialStormPerformance.png, id=4574, 531.9072pt x 2
+<./Pics/NS023ConstraintsPolynomialStormPerformance.png, id=4575, 531.9072pt x 2
 91.9708pt>
 File: ./Pics/NS023ConstraintsPolynomialStormPerformance.png Graphic file (type 
 png)
@@ -1829,7 +1822,7 @@ Package pdftex.def Info: ./Pics/NS023ConstraintsPolynomialStormPerformance.png
  [183 <./Pics/NS019ConstraintsPolynomialStorm00017.png> <./Pics/NS020Constraint
 sPolynomialStorm00031.png> <./Pics/NS021ConstraintsPolynomialStorm00043.png> <.
 /Pics/NS022ConstraintsPolynomialStorm00062.png>]
-<./Pics/NS024ConstraintsPolynomialStormPathFollowing.png, id=4592, 363.759pt x 
+<./Pics/NS024ConstraintsPolynomialStormPathFollowing.png, id=4593, 363.759pt x 
 270.2898pt>
 File: ./Pics/NS024ConstraintsPolynomialStormPathFollowing.png Graphic file (typ
 e png)
@@ -1838,7 +1831,7 @@ Package pdftex.def Info: ./Pics/NS024ConstraintsPolynomialStormPathFollowing.pn
 g  used on input line 129.
 (pdftex.def)             Requested size: 250.38562pt x 186.05061pt.
  [184 <./Pics/NS023ConstraintsPolynomialStormPerformance.png>]
-<./Pics/NS095StormComputationTime.png, id=4604, 367.3725pt x 152.9715pt>
+<./Pics/NS095StormComputationTime.png, id=4605, 367.3725pt x 152.9715pt>
 File: ./Pics/NS095StormComputationTime.png Graphic file (type png)
 <use ./Pics/NS095StormComputationTime.png>
 Package pdftex.def Info: ./Pics/NS095StormComputationTime.png  used on input li
@@ -1847,25 +1840,25 @@ ne 158.
 ) (07S09-Emergency-Converging.tex [185 <./Pics/NS024ConstraintsPolynomialStormP
 athFollowing.png> <./Pics/NS095StormComputationTime.png>]
 [186]
-<./Pics/NS025UtmEmergencyConverging00001.png, id=4648, 1002.144pt x 809.424pt>
+<./Pics/NS025UtmEmergencyConverging00001.png, id=4649, 1002.144pt x 809.424pt>
 File: ./Pics/NS025UtmEmergencyConverging00001.png Graphic file (type png)
 <use ./Pics/NS025UtmEmergencyConverging00001.png>
 Package pdftex.def Info: ./Pics/NS025UtmEmergencyConverging00001.png  used on i
 nput line 84.
 (pdftex.def)             Requested size: 196.66235pt x 158.83128pt.
-<./Pics/NS026UtmEmergencyConverging00012.png, id=4649, 990.099pt x 809.424pt>
+<./Pics/NS026UtmEmergencyConverging00012.png, id=4650, 990.099pt x 809.424pt>
 File: ./Pics/NS026UtmEmergencyConverging00012.png Graphic file (type png)
 <use ./Pics/NS026UtmEmergencyConverging00012.png>
 Package pdftex.def Info: ./Pics/NS026UtmEmergencyConverging00012.png  used on i
 nput line 90.
 (pdftex.def)             Requested size: 196.66235pt x 160.77036pt.
-<./Pics/NS027UtmEmergencyConverging00018.png, id=4650, 1002.144pt x 809.424pt>
+<./Pics/NS027UtmEmergencyConverging00018.png, id=4651, 1002.144pt x 809.424pt>
 File: ./Pics/NS027UtmEmergencyConverging00018.png Graphic file (type png)
 <use ./Pics/NS027UtmEmergencyConverging00018.png>
 Package pdftex.def Info: ./Pics/NS027UtmEmergencyConverging00018.png  used on i
 nput line 97.
 (pdftex.def)             Requested size: 196.66235pt x 158.83128pt.
-<./Pics/NS028UtmEmergencyConverging00032.png, id=4651, 1002.144pt x 809.424pt>
+<./Pics/NS028UtmEmergencyConverging00032.png, id=4652, 1002.144pt x 809.424pt>
 File: ./Pics/NS028UtmEmergencyConverging00032.png Graphic file (type png)
 <use ./Pics/NS028UtmEmergencyConverging00032.png>
 Package pdftex.def Info: ./Pics/NS028UtmEmergencyConverging00032.png  used on i
@@ -1874,7 +1867,7 @@ nput line 103.
  [187] [188 <./Pics/NS025UtmEmergencyConverging00001.png> <./Pics/NS026UtmEmerg
 encyConverging00012.png> <./Pics/NS027UtmEmergencyConverging00018.png> <./Pics/
 NS028UtmEmergencyConverging00032.png>]
-<./Pics/NS029UtmEmergencyConvergingPerformance.png, id=4671, 356.2911pt x 290.0
+<./Pics/NS029UtmEmergencyConvergingPerformance.png, id=4672, 356.2911pt x 290.0
 436pt>
 File: ./Pics/NS029UtmEmergencyConvergingPerformance.png Graphic file (type png)
 
@@ -1883,7 +1876,7 @@ Package pdftex.def Info: ./Pics/NS029UtmEmergencyConvergingPerformance.png  use
 d on input line 120.
 (pdftex.def)             Requested size: 250.38562pt x 203.8346pt.
  [189 <./Pics/NS029UtmEmergencyConvergingPerformance.png>]
-<./Pics/NS030UtmEmergencyConvergingUAV1PathFollowing.png, id=4685, 990.099pt x 
+<./Pics/NS030UtmEmergencyConvergingUAV1PathFollowing.png, id=4686, 990.099pt x 
 809.424pt>
 File: ./Pics/NS030UtmEmergencyConvergingUAV1PathFollowing.png Graphic file (typ
 e png)
@@ -1891,7 +1884,7 @@ e png)
 Package pdftex.def Info: ./Pics/NS030UtmEmergencyConvergingUAV1PathFollowing.pn
 g  used on input line 154.
 (pdftex.def)             Requested size: 196.66235pt x 160.77036pt.
-<./Pics/NS031UtmEmergencyConvergingUAV2PathFollowing.png, id=4686, 990.099pt x 
+<./Pics/NS031UtmEmergencyConvergingUAV2PathFollowing.png, id=4687, 990.099pt x 
 809.424pt>
 File: ./Pics/NS031UtmEmergencyConvergingUAV2PathFollowing.png Graphic file (typ
 e png)
@@ -1901,7 +1894,7 @@ g  used on input line 160.
 (pdftex.def)             Requested size: 196.66235pt x 160.77036pt.
  [190 <./Pics/NS030UtmEmergencyConvergingUAV1PathFollowing.png> <./Pics/NS031Ut
 mEmergencyConvergingUAV2PathFollowing.png>]
-<./Pics/NS096EmergencyConvergingComputationTime.png, id=4701, 365.2044pt x 291.
+<./Pics/NS096EmergencyConvergingComputationTime.png, id=4702, 365.2044pt x 291.
 7299pt>
 File: ./Pics/NS096EmergencyConvergingComputationTime.png Graphic file (type png
 )
@@ -1912,32 +1905,32 @@ ed on input line 192.
 )
 (07S10-Emergency-Head-On.tex [191 <./Pics/NS096EmergencyConvergingComputationTi
 me.png>] [192]
-<./Pics/NS032UtmEmergencyHeadOn00013.png, id=4743, 932.283pt x 286.671pt>
+<./Pics/NS032UtmEmergencyHeadOn00013.png, id=4744, 932.283pt x 286.671pt>
 File: ./Pics/NS032UtmEmergencyHeadOn00013.png Graphic file (type png)
 <use ./Pics/NS032UtmEmergencyHeadOn00013.png>
 Package pdftex.def Info: ./Pics/NS032UtmEmergencyHeadOn00013.png  used on input
  line 96.
 (pdftex.def)             Requested size: 307.28766pt x 94.48798pt.
-<./Pics/NS033UtmEmergencyHeadOn00018.png, id=4744, 932.283pt x 286.671pt>
+<./Pics/NS033UtmEmergencyHeadOn00018.png, id=4745, 932.283pt x 286.671pt>
 File: ./Pics/NS033UtmEmergencyHeadOn00018.png Graphic file (type png)
 <use ./Pics/NS033UtmEmergencyHeadOn00018.png>
 Package pdftex.def Info: ./Pics/NS033UtmEmergencyHeadOn00018.png  used on input
  line 103.
 (pdftex.def)             Requested size: 307.28766pt x 94.48798pt.
-<./Pics/NS034UtmEmergencyHeadOn00021.png, id=4745, 932.283pt x 286.671pt>
+<./Pics/NS034UtmEmergencyHeadOn00021.png, id=4746, 932.283pt x 286.671pt>
 File: ./Pics/NS034UtmEmergencyHeadOn00021.png Graphic file (type png)
 <use ./Pics/NS034UtmEmergencyHeadOn00021.png>
 Package pdftex.def Info: ./Pics/NS034UtmEmergencyHeadOn00021.png  used on input
  line 110.
 (pdftex.def)             Requested size: 307.28766pt x 94.48798pt.
-<./Pics/NS035UtmEmergencyHeadOn00022.png, id=4746, 932.283pt x 286.671pt>
+<./Pics/NS035UtmEmergencyHeadOn00022.png, id=4747, 932.283pt x 286.671pt>
 File: ./Pics/NS035UtmEmergencyHeadOn00022.png Graphic file (type png)
 <use ./Pics/NS035UtmEmergencyHeadOn00022.png>
 Package pdftex.def Info: ./Pics/NS035UtmEmergencyHeadOn00022.png  used on input
  line 117.
 (pdftex.def)             Requested size: 307.28766pt x 94.48798pt.
  [193]
-<./Pics/NS036UtmEmergencyHeadOnPerformance.png, id=4760, 356.2911pt x 292.6935p
+<./Pics/NS036UtmEmergencyHeadOnPerformance.png, id=4761, 356.2911pt x 292.6935p
 t>
 File: ./Pics/NS036UtmEmergencyHeadOnPerformance.png Graphic file (type png)
 <use ./Pics/NS036UtmEmergencyHeadOnPerformance.png>
@@ -1947,7 +1940,7 @@ Package pdftex.def Info: ./Pics/NS036UtmEmergencyHeadOnPerformance.png  used on
  [194 <./Pics/NS032UtmEmergencyHeadOn00013.png> <./Pics/NS033UtmEmergencyHeadOn
 00018.png> <./Pics/NS034UtmEmergencyHeadOn00021.png> <./Pics/NS035UtmEmergencyH
 eadOn00022.png>]
-<./Pics/NS037UtmEmergencyHeadOnUAV1PathFollowing.png, id=4776, 915.42pt x 699.8
+<./Pics/NS037UtmEmergencyHeadOnUAV1PathFollowing.png, id=4777, 915.42pt x 699.8
 145pt>
 File: ./Pics/NS037UtmEmergencyHeadOnUAV1PathFollowing.png Graphic file (type pn
 g)
@@ -1955,7 +1948,7 @@ g)
 Package pdftex.def Info: ./Pics/NS037UtmEmergencyHeadOnUAV1PathFollowing.png  u
 sed on input line 168.
 (pdftex.def)             Requested size: 196.66235pt x 150.33972pt.
-<./Pics/NS038UtmEmergencyHeadOnUAV2PathFollowing.png, id=4777, 366.168pt x 279.
+<./Pics/NS038UtmEmergencyHeadOnUAV2PathFollowing.png, id=4778, 366.168pt x 279.
 9258pt>
 File: ./Pics/NS038UtmEmergencyHeadOnUAV2PathFollowing.png Graphic file (type pn
 g)
@@ -1964,7 +1957,7 @@ Package pdftex.def Info: ./Pics/NS038UtmEmergencyHeadOnUAV2PathFollowing.png  u
 sed on input line 174.
 (pdftex.def)             Requested size: 196.66235pt x 150.34612pt.
  [195 <./Pics/NS036UtmEmergencyHeadOnPerformance.png>]
-<./Pics/NS097EmergencyHeadOnComputationTime.png, id=4791, 359.9046pt x 293.898p
+<./Pics/NS097EmergencyHeadOnComputationTime.png, id=4792, 359.9046pt x 293.898p
 t>
 File: ./Pics/NS097EmergencyHeadOnComputationTime.png Graphic file (type png)
 <use ./Pics/NS097EmergencyHeadOnComputationTime.png>
@@ -1974,28 +1967,28 @@ n input line 207.
 ) (07S11-Emergency-Mixed.tex [196 <./Pics/NS037UtmEmergencyHeadOnUAV1PathFollow
 ing.png> <./Pics/NS038UtmEmergencyHeadOnUAV2PathFollowing.png> <./Pics/NS097Eme
 rgencyHeadOnComputationTime.png>] [197]
-<./Pics/NS039UtmEmergencyHeadOnMultiple00012.png, id=4837, 899.7615pt x 540.820
+<./Pics/NS039UtmEmergencyHeadOnMultiple00012.png, id=4838, 899.7615pt x 540.820
 5pt>
 File: ./Pics/NS039UtmEmergencyHeadOnMultiple00012.png Graphic file (type png)
 <use ./Pics/NS039UtmEmergencyHeadOnMultiple00012.png>
 Package pdftex.def Info: ./Pics/NS039UtmEmergencyHeadOnMultiple00012.png  used 
 on input line 85.
 (pdftex.def)             Requested size: 196.66235pt x 118.20515pt.
-<./Pics/NS040UtmEmergencyHeadOnMultiple00019.png, id=4838, 899.7615pt x 540.820
+<./Pics/NS040UtmEmergencyHeadOnMultiple00019.png, id=4839, 899.7615pt x 540.820
 5pt>
 File: ./Pics/NS040UtmEmergencyHeadOnMultiple00019.png Graphic file (type png)
 <use ./Pics/NS040UtmEmergencyHeadOnMultiple00019.png>
 Package pdftex.def Info: ./Pics/NS040UtmEmergencyHeadOnMultiple00019.png  used 
 on input line 91.
 (pdftex.def)             Requested size: 196.66235pt x 118.20515pt.
-<./Pics/NS041UtmEmergencyHeadOnMultiple00024.png, id=4839, 899.7615pt x 540.820
+<./Pics/NS041UtmEmergencyHeadOnMultiple00024.png, id=4840, 899.7615pt x 540.820
 5pt>
 File: ./Pics/NS041UtmEmergencyHeadOnMultiple00024.png Graphic file (type png)
 <use ./Pics/NS041UtmEmergencyHeadOnMultiple00024.png>
 Package pdftex.def Info: ./Pics/NS041UtmEmergencyHeadOnMultiple00024.png  used 
 on input line 98.
 (pdftex.def)             Requested size: 196.66235pt x 118.20515pt.
-<./Pics/NS042UtmEmergencyHeadOnMultiple00030.png, id=4840, 899.7615pt x 540.820
+<./Pics/NS042UtmEmergencyHeadOnMultiple00030.png, id=4841, 899.7615pt x 540.820
 5pt>
 File: ./Pics/NS042UtmEmergencyHeadOnMultiple00030.png Graphic file (type png)
 <use ./Pics/NS042UtmEmergencyHeadOnMultiple00030.png>
@@ -2003,7 +1996,7 @@ Package pdftex.def Info: ./Pics/NS042UtmEmergencyHeadOnMultiple00030.png  used
 on input line 104.
 (pdftex.def)             Requested size: 196.66235pt x 118.20515pt.
  [198]
-<./Pics/NS043UtmEmergencyHeadOnMultiplePerformance.png, id=4851, 2119.92pt x 11
+<./Pics/NS043UtmEmergencyHeadOnMultiplePerformance.png, id=4852, 2119.92pt x 11
 94.864pt>
 File: ./Pics/NS043UtmEmergencyHeadOnMultiplePerformance.png Graphic file (type 
 png)
@@ -2015,7 +2008,7 @@ Package pdftex.def Info: ./Pics/NS043UtmEmergencyHeadOnMultiplePerformance.png
 cyHeadOnMultiple00019.png> <./Pics/NS041UtmEmergencyHeadOnMultiple00024.png> <.
 /Pics/NS042UtmEmergencyHeadOnMultiple00030.png> <./Pics/NS043UtmEmergencyHeadOn
 MultiplePerformance.png>]
-<./Pics/NS044UtmEmergencyHeadOnMultipleUAV1PathFollowing.png, id=4870, 913.011p
+<./Pics/NS044UtmEmergencyHeadOnMultipleUAV1PathFollowing.png, id=4871, 913.011p
 t x 701.62125pt>
 File: ./Pics/NS044UtmEmergencyHeadOnMultipleUAV1PathFollowing.png Graphic file 
 (type png)
@@ -2023,7 +2016,7 @@ File: ./Pics/NS044UtmEmergencyHeadOnMultipleUAV1PathFollowing.png Graphic file
 Package pdftex.def Info: ./Pics/NS044UtmEmergencyHeadOnMultipleUAV1PathFollowin
 g.png  used on input line 164.
 (pdftex.def)             Requested size: 196.66235pt x 151.12398pt.
-<./Pics/NS045UtmEmergencyHeadOnMultipleUAV2PathFollowing.png, id=4871, 913.011p
+<./Pics/NS045UtmEmergencyHeadOnMultipleUAV2PathFollowing.png, id=4872, 913.011p
 t x 701.62125pt>
 File: ./Pics/NS045UtmEmergencyHeadOnMultipleUAV2PathFollowing.png Graphic file 
 (type png)
@@ -2031,7 +2024,7 @@ File: ./Pics/NS045UtmEmergencyHeadOnMultipleUAV2PathFollowing.png Graphic file
 Package pdftex.def Info: ./Pics/NS045UtmEmergencyHeadOnMultipleUAV2PathFollowin
 g.png  used on input line 170.
 (pdftex.def)             Requested size: 196.66235pt x 151.12398pt.
-<./Pics/NS046UtmEmergencyHeadOnMultipleUAV3PathFollowing.png, id=4872, 913.011p
+<./Pics/NS046UtmEmergencyHeadOnMultipleUAV3PathFollowing.png, id=4873, 913.011p
 t x 701.62125pt>
 File: ./Pics/NS046UtmEmergencyHeadOnMultipleUAV3PathFollowing.png Graphic file 
 (type png)
@@ -2039,7 +2032,7 @@ File: ./Pics/NS046UtmEmergencyHeadOnMultipleUAV3PathFollowing.png Graphic file
 Package pdftex.def Info: ./Pics/NS046UtmEmergencyHeadOnMultipleUAV3PathFollowin
 g.png  used on input line 177.
 (pdftex.def)             Requested size: 196.66235pt x 151.12398pt.
-<./Pics/NS047UtmEmergencyHeadOnMultipleUAV4PathFollowing.png, id=4873, 357.7365
+<./Pics/NS047UtmEmergencyHeadOnMultipleUAV4PathFollowing.png, id=4874, 357.7365
 pt x 280.6485pt>
 File: ./Pics/NS047UtmEmergencyHeadOnMultipleUAV4PathFollowing.png Graphic file 
 (type png)
@@ -2051,7 +2044,7 @@ g.png  used on input line 183.
 cs/NS045UtmEmergencyHeadOnMultipleUAV2PathFollowing.png> <./Pics/NS046UtmEmerge
 ncyHeadOnMultipleUAV3PathFollowing.png> <./Pics/NS047UtmEmergencyHeadOnMultiple
 UAV4PathFollowing.png>]
-<./Pics/NS098EmergencyHeadOnMultipleComputationTime.png, id=4897, 733.7814pt x 
+<./Pics/NS098EmergencyHeadOnMultipleComputationTime.png, id=4898, 733.7814pt x 
 221.628pt>
 File: ./Pics/NS098EmergencyHeadOnMultipleComputationTime.png Graphic file (type
  png)
@@ -2062,28 +2055,28 @@ Package pdftex.def Info: ./Pics/NS098EmergencyHeadOnMultipleComputationTime.png
 ) (07S12-Cooperative-Test-Cases.tex [202 <./Pics/NS098EmergencyHeadOnMultipleCo
 mputationTime.png>]) (07S13-Rule-Converging.tex
 [203] [204]
-<./Pics/NS048UtmCooperativeConverging00003.png, id=4951, 341.3553pt x 272.217pt
+<./Pics/NS048UtmCooperativeConverging00003.png, id=4952, 341.3553pt x 272.217pt
 >
 File: ./Pics/NS048UtmCooperativeConverging00003.png Graphic file (type png)
 <use ./Pics/NS048UtmCooperativeConverging00003.png>
 Package pdftex.def Info: ./Pics/NS048UtmCooperativeConverging00003.png  used on
  input line 108.
 (pdftex.def)             Requested size: 196.66235pt x 156.83507pt.
-<./Pics/NS049UtmCooperativeConverging00016.png, id=4952, 853.38824pt x 680.5425
+<./Pics/NS049UtmCooperativeConverging00016.png, id=4953, 853.38824pt x 680.5425
 pt>
 File: ./Pics/NS049UtmCooperativeConverging00016.png Graphic file (type png)
 <use ./Pics/NS049UtmCooperativeConverging00016.png>
 Package pdftex.def Info: ./Pics/NS049UtmCooperativeConverging00016.png  used on
  input line 114.
 (pdftex.def)             Requested size: 196.66235pt x 156.82262pt.
-<./Pics/NS050UtmCooperativeConverging00024.png, id=4953, 853.38824pt x 680.5425
+<./Pics/NS050UtmCooperativeConverging00024.png, id=4954, 853.38824pt x 680.5425
 pt>
 File: ./Pics/NS050UtmCooperativeConverging00024.png Graphic file (type png)
 <use ./Pics/NS050UtmCooperativeConverging00024.png>
 Package pdftex.def Info: ./Pics/NS050UtmCooperativeConverging00024.png  used on
  input line 121.
 (pdftex.def)             Requested size: 196.66235pt x 156.82262pt.
-<./Pics/NS051UtmCooperativeConverging00037.png, id=4954, 853.38824pt x 680.5425
+<./Pics/NS051UtmCooperativeConverging00037.png, id=4955, 853.38824pt x 680.5425
 pt>
 File: ./Pics/NS051UtmCooperativeConverging00037.png Graphic file (type png)
 <use ./Pics/NS051UtmCooperativeConverging00037.png>
@@ -2093,7 +2086,7 @@ Package pdftex.def Info: ./Pics/NS051UtmCooperativeConverging00037.png  used on
  [205] [206 <./Pics/NS048UtmCooperativeConverging00003.png> <./Pics/NS049UtmCoo
 perativeConverging00016.png> <./Pics/NS050UtmCooperativeConverging00024.png> <.
 /Pics/NS051UtmCooperativeConverging00037.png>]
-<./Pics/NS052UtmCooperativeConvergingPerformance.png, id=4993, 356.2911pt x 289
+<./Pics/NS052UtmCooperativeConvergingPerformance.png, id=4994, 356.2911pt x 289
 .8027pt>
 File: ./Pics/NS052UtmCooperativeConvergingPerformance.png Graphic file (type pn
 g)
@@ -2102,7 +2095,7 @@ Package pdftex.def Info: ./Pics/NS052UtmCooperativeConvergingPerformance.png  u
 sed on input line 168.
 (pdftex.def)             Requested size: 250.38562pt x 203.66531pt.
  [207 <./Pics/NS052UtmCooperativeConvergingPerformance.png>]
-<./Pics/NS053UtmCooperativeConvergingUAV1PathFollowing.png, id=5005, 893.739pt 
+<./Pics/NS053UtmCooperativeConvergingUAV1PathFollowing.png, id=5006, 893.739pt 
 x 678.1335pt>
 File: ./Pics/NS053UtmCooperativeConvergingUAV1PathFollowing.png Graphic file (t
 ype png)
@@ -2110,7 +2103,7 @@ ype png)
 Package pdftex.def Info: ./Pics/NS053UtmCooperativeConvergingUAV1PathFollowing.
 png  used on input line 200.
 (pdftex.def)             Requested size: 196.66235pt x 149.21053pt.
-<./Pics/NS054UtmCooperativeConvergingUAV2PathFollowing.png, id=5006, 893.739pt 
+<./Pics/NS054UtmCooperativeConvergingUAV2PathFollowing.png, id=5007, 893.739pt 
 x 678.1335pt>
 File: ./Pics/NS054UtmCooperativeConvergingUAV2PathFollowing.png Graphic file (t
 ype png)
@@ -2120,7 +2113,7 @@ png  used on input line 206.
 (pdftex.def)             Requested size: 196.66235pt x 149.21053pt.
  [208 <./Pics/NS053UtmCooperativeConvergingUAV1PathFollowing.png> <./Pics/NS054
 UtmCooperativeConvergingUAV2PathFollowing.png>]
-<./Pics/NS099RuleBasedCConvergingComputationTime.png, id=5020, 363.0363pt x 295
+<./Pics/NS099RuleBasedCConvergingComputationTime.png, id=5021, 363.0363pt x 295
 .3434pt>
 File: ./Pics/NS099RuleBasedCConvergingComputationTime.png Graphic file (type pn
 g)
@@ -2130,25 +2123,25 @@ sed on input line 239.
 (pdftex.def)             Requested size: 295.90587pt x 240.73203pt.
 ) (07S14-Rule-Head-On.tex [209 <./Pics/NS099RuleBasedCConvergingComputationTime
 .png>] [210]
-<./Pics/NS055UtmCooperativeHeadOn00008.png, id=5060, 925.65825pt x 361.35pt>
+<./Pics/NS055UtmCooperativeHeadOn00008.png, id=5061, 925.65825pt x 361.35pt>
 File: ./Pics/NS055UtmCooperativeHeadOn00008.png Graphic file (type png)
 <use ./Pics/NS055UtmCooperativeHeadOn00008.png>
 Package pdftex.def Info: ./Pics/NS055UtmCooperativeHeadOn00008.png  used on inp
 ut line 97.
 (pdftex.def)             Requested size: 307.28766pt x 119.95714pt.
-<./Pics/NS056UtmCooperativeHeadOn00018.png, id=5061, 925.65825pt x 361.35pt>
+<./Pics/NS056UtmCooperativeHeadOn00018.png, id=5062, 925.65825pt x 361.35pt>
 File: ./Pics/NS056UtmCooperativeHeadOn00018.png Graphic file (type png)
 <use ./Pics/NS056UtmCooperativeHeadOn00018.png>
 Package pdftex.def Info: ./Pics/NS056UtmCooperativeHeadOn00018.png  used on inp
 ut line 104.
 (pdftex.def)             Requested size: 307.28766pt x 119.95714pt.
-<./Pics/NS057UtmCooperativeHeadOn00023.png, id=5062, 925.65825pt x 361.35pt>
+<./Pics/NS057UtmCooperativeHeadOn00023.png, id=5063, 925.65825pt x 361.35pt>
 File: ./Pics/NS057UtmCooperativeHeadOn00023.png Graphic file (type png)
 <use ./Pics/NS057UtmCooperativeHeadOn00023.png>
 Package pdftex.def Info: ./Pics/NS057UtmCooperativeHeadOn00023.png  used on inp
 ut line 111.
 (pdftex.def)             Requested size: 307.28766pt x 119.95714pt.
-<./Pics/NS058UtmCooperativeHeadOn00038.png, id=5063, 925.65825pt x 361.35pt>
+<./Pics/NS058UtmCooperativeHeadOn00038.png, id=5064, 925.65825pt x 361.35pt>
 File: ./Pics/NS058UtmCooperativeHeadOn00038.png Graphic file (type png)
 <use ./Pics/NS058UtmCooperativeHeadOn00038.png>
 Package pdftex.def Info: ./Pics/NS058UtmCooperativeHeadOn00038.png  used on inp
@@ -2157,7 +2150,7 @@ ut line 118.
  [211] [212 <./Pics/NS055UtmCooperativeHeadOn00008.png> <./Pics/NS056UtmCoopera
 tiveHeadOn00018.png> <./Pics/NS057UtmCooperativeHeadOn00023.png> <./Pics/NS058U
 tmCooperativeHeadOn00038.png>]
-<./Pics/NS059UtmCooperativeHeadOnPerformance.png, id=5100, 356.532pt x 289.8027
+<./Pics/NS059UtmCooperativeHeadOnPerformance.png, id=5101, 356.532pt x 289.8027
 pt>
 File: ./Pics/NS059UtmCooperativeHeadOnPerformance.png Graphic file (type png)
 <use ./Pics/NS059UtmCooperativeHeadOnPerformance.png>
@@ -2165,7 +2158,7 @@ Package pdftex.def Info: ./Pics/NS059UtmCooperativeHeadOnPerformance.png  used
 on input line 158.
 (pdftex.def)             Requested size: 250.38562pt x 203.52823pt.
  [213 <./Pics/NS059UtmCooperativeHeadOnPerformance.png>]
-<./Pics/NS060UtmCooperativeHeadOnUAV1PathFollowing.png, id=5112, 906.38625pt x 
+<./Pics/NS060UtmCooperativeHeadOnUAV1PathFollowing.png, id=5113, 906.38625pt x 
 680.5425pt>
 File: ./Pics/NS060UtmCooperativeHeadOnUAV1PathFollowing.png Graphic file (type 
 png)
@@ -2173,7 +2166,7 @@ png)
 Package pdftex.def Info: ./Pics/NS060UtmCooperativeHeadOnUAV1PathFollowing.png 
  used on input line 189.
 (pdftex.def)             Requested size: 196.66235pt x 147.65335pt.
-<./Pics/NS061UtmCooperativeHeadOnUAV2PathFollowing.png, id=5113, 906.38625pt x 
+<./Pics/NS061UtmCooperativeHeadOnUAV2PathFollowing.png, id=5114, 906.38625pt x 
 680.5425pt>
 File: ./Pics/NS061UtmCooperativeHeadOnUAV2PathFollowing.png Graphic file (type 
 png)
@@ -2183,7 +2176,7 @@ Package pdftex.def Info: ./Pics/NS061UtmCooperativeHeadOnUAV2PathFollowing.png
 (pdftex.def)             Requested size: 196.66235pt x 147.65335pt.
  [214 <./Pics/NS060UtmCooperativeHeadOnUAV1PathFollowing.png> <./Pics/NS061UtmC
 ooperativeHeadOnUAV2PathFollowing.png>]
-<./Pics/NS100RuleBasedHeadOnComputationTime.png, id=5127, 365.9271pt x 293.1753
+<./Pics/NS100RuleBasedHeadOnComputationTime.png, id=5128, 365.9271pt x 293.1753
 pt>
 File: ./Pics/NS100RuleBasedHeadOnComputationTime.png Graphic file (type png)
 <use ./Pics/NS100RuleBasedHeadOnComputationTime.png>
@@ -2193,7 +2186,7 @@ n input line 225.
 )
 (07S15-Rule-Mixed.tex [215 <./Pics/NS100RuleBasedHeadOnComputationTime.png>]
 [216] [217]
-<./Pics/NS062UtmCooperativeHeadOnMultiple00002.png, id=5187, 776.9025pt x 732.9
+<./Pics/NS062UtmCooperativeHeadOnMultiple00002.png, id=5188, 776.9025pt x 732.9
 3825pt>
 File: ./Pics/NS062UtmCooperativeHeadOnMultiple00002.png Graphic file (type png)
 
@@ -2201,7 +2194,7 @@ File: ./Pics/NS062UtmCooperativeHeadOnMultiple00002.png Graphic file (type png)
 Package pdftex.def Info: ./Pics/NS062UtmCooperativeHeadOnMultiple00002.png  use
 d on input line 115.
 (pdftex.def)             Requested size: 196.66235pt x 185.52676pt.
-<./Pics/NS063UtmCooperativeHeadOnMultiple00016.png, id=5188, 776.9025pt x 732.9
+<./Pics/NS063UtmCooperativeHeadOnMultiple00016.png, id=5189, 776.9025pt x 732.9
 3825pt>
 File: ./Pics/NS063UtmCooperativeHeadOnMultiple00016.png Graphic file (type png)
 
@@ -2209,7 +2202,7 @@ File: ./Pics/NS063UtmCooperativeHeadOnMultiple00016.png Graphic file (type png)
 Package pdftex.def Info: ./Pics/NS063UtmCooperativeHeadOnMultiple00016.png  use
 d on input line 121.
 (pdftex.def)             Requested size: 196.66235pt x 185.52676pt.
-<./Pics/NS064UtmCooperativeHeadOnMultiple00028.png, id=5189, 776.9025pt x 732.9
+<./Pics/NS064UtmCooperativeHeadOnMultiple00028.png, id=5190, 776.9025pt x 732.9
 3825pt>
 File: ./Pics/NS064UtmCooperativeHeadOnMultiple00028.png Graphic file (type png)
 
@@ -2217,7 +2210,7 @@ File: ./Pics/NS064UtmCooperativeHeadOnMultiple00028.png Graphic file (type png)
 Package pdftex.def Info: ./Pics/NS064UtmCooperativeHeadOnMultiple00028.png  use
 d on input line 128.
 (pdftex.def)             Requested size: 196.66235pt x 185.52676pt.
-<./Pics/NS065UtmCooperativeHeadOnMultiple00040.png, id=5190, 776.9025pt x 732.9
+<./Pics/NS065UtmCooperativeHeadOnMultiple00040.png, id=5191, 776.9025pt x 732.9
 3825pt>
 File: ./Pics/NS065UtmCooperativeHeadOnMultiple00040.png Graphic file (type png)
 
@@ -2228,7 +2221,7 @@ d on input line 134.
  [218 <./Pics/NS062UtmCooperativeHeadOnMultiple00002.png> <./Pics/NS063UtmCoope
 rativeHeadOnMultiple00016.png> <./Pics/NS064UtmCooperativeHeadOnMultiple00028.p
 ng> <./Pics/NS065UtmCooperativeHeadOnMultiple00040.png>] [219]
-<./Pics/NS066UtmCooperativeHeadOnMultiplePerformance.png, id=5213, 850.8588pt x
+<./Pics/NS066UtmCooperativeHeadOnMultiplePerformance.png, id=5214, 850.8588pt x
  484.6908pt>
 File: ./Pics/NS066UtmCooperativeHeadOnMultiplePerformance.png Graphic file (typ
 e png)
@@ -2238,7 +2231,7 @@ g  used on input line 201.
 (pdftex.def)             Requested size: 409.71689pt x 233.3959pt.
 
 [220 <./Pics/NS066UtmCooperativeHeadOnMultiplePerformance.png>]
-<./Pics/NS067UtmCooperativeHeadOnMultipleUAV1PathFollowing.png, id=5227, 908.19
+<./Pics/NS067UtmCooperativeHeadOnMultipleUAV1PathFollowing.png, id=5228, 908.19
 3pt x 700.41675pt>
 File: ./Pics/NS067UtmCooperativeHeadOnMultipleUAV1PathFollowing.png Graphic fil
 e (type png)
@@ -2246,7 +2239,7 @@ e (type png)
 Package pdftex.def Info: ./Pics/NS067UtmCooperativeHeadOnMultipleUAV1PathFollow
 ing.png  used on input line 243.
 (pdftex.def)             Requested size: 196.66235pt x 151.66609pt.
-<./Pics/NS068UtmCooperativeHeadOnMultipleUAV2PathFollowing.png, id=5228, 908.19
+<./Pics/NS068UtmCooperativeHeadOnMultipleUAV2PathFollowing.png, id=5229, 908.19
 3pt x 700.41675pt>
 File: ./Pics/NS068UtmCooperativeHeadOnMultipleUAV2PathFollowing.png Graphic fil
 e (type png)
@@ -2254,7 +2247,7 @@ e (type png)
 Package pdftex.def Info: ./Pics/NS068UtmCooperativeHeadOnMultipleUAV2PathFollow
 ing.png  used on input line 249.
 (pdftex.def)             Requested size: 196.66235pt x 151.66609pt.
-<./Pics/NS069UtmCooperativeHeadOnMultipleUAV3PathFollowing.png, id=5229, 908.19
+<./Pics/NS069UtmCooperativeHeadOnMultipleUAV3PathFollowing.png, id=5230, 908.19
 3pt x 700.41675pt>
 File: ./Pics/NS069UtmCooperativeHeadOnMultipleUAV3PathFollowing.png Graphic fil
 e (type png)
@@ -2262,7 +2255,7 @@ e (type png)
 Package pdftex.def Info: ./Pics/NS069UtmCooperativeHeadOnMultipleUAV3PathFollow
 ing.png  used on input line 256.
 (pdftex.def)             Requested size: 196.66235pt x 151.66609pt.
-<./Pics/NS070UtmCooperativeHeadOnMultipleUAV4PathFollowing.png, id=5230, 908.19
+<./Pics/NS070UtmCooperativeHeadOnMultipleUAV4PathFollowing.png, id=5231, 908.19
 3pt x 700.41675pt>
 File: ./Pics/NS070UtmCooperativeHeadOnMultipleUAV4PathFollowing.png Graphic fil
 e (type png)
@@ -2274,7 +2267,7 @@ ing.png  used on input line 262.
 S068UtmCooperativeHeadOnMultipleUAV2PathFollowing.png> <./Pics/NS069UtmCooperat
 iveHeadOnMultipleUAV3PathFollowing.png> <./Pics/NS070UtmCooperativeHeadOnMultip
 leUAV4PathFollowing.png>]
-<./Pics/NS101RuleBasedMultipleComputationTime.png, id=5248, 780.516pt x 298.716
+<./Pics/NS101RuleBasedMultipleComputationTime.png, id=5249, 780.516pt x 298.716
 pt>
 File: ./Pics/NS101RuleBasedMultipleComputationTime.png Graphic file (type png)
 <use ./Pics/NS101RuleBasedMultipleComputationTime.png>
@@ -2283,7 +2276,7 @@ Package pdftex.def Info: ./Pics/NS101RuleBasedMultipleComputationTime.png  used
 (pdftex.def)             Requested size: 432.48048pt x 165.51585pt.
 ) (07S16-Rule-Overtake.tex [222 <./Pics/NS101RuleBasedMultipleComputationTime.p
 ng>] [223]
-<./Pics/NS071UtmCooperativeOvertake2xSpeed00002.png, id=5285, 945.5325pt x 310.
+<./Pics/NS071UtmCooperativeOvertake2xSpeed00002.png, id=5286, 945.5325pt x 310.
 761pt>
 File: ./Pics/NS071UtmCooperativeOvertake2xSpeed00002.png Graphic file (type png
 )
@@ -2291,7 +2284,7 @@ File: ./Pics/NS071UtmCooperativeOvertake2xSpeed00002.png Graphic file (type png
 Package pdftex.def Info: ./Pics/NS071UtmCooperativeOvertake2xSpeed00002.png  us
 ed on input line 85.
 (pdftex.def)             Requested size: 307.28766pt x 100.99612pt.
-<./Pics/NS072UtmCooperativeOvertake2xSpeed00022.png, id=5286, 945.5325pt x 310.
+<./Pics/NS072UtmCooperativeOvertake2xSpeed00022.png, id=5287, 945.5325pt x 310.
 761pt>
 File: ./Pics/NS072UtmCooperativeOvertake2xSpeed00022.png Graphic file (type png
 )
@@ -2299,7 +2292,7 @@ File: ./Pics/NS072UtmCooperativeOvertake2xSpeed00022.png Graphic file (type png
 Package pdftex.def Info: ./Pics/NS072UtmCooperativeOvertake2xSpeed00022.png  us
 ed on input line 92.
 (pdftex.def)             Requested size: 307.28766pt x 100.99612pt.
-<./Pics/NS073UtmCooperativeOvertake2xSpeed00052.png, id=5287, 945.5325pt x 310.
+<./Pics/NS073UtmCooperativeOvertake2xSpeed00052.png, id=5288, 945.5325pt x 310.
 761pt>
 File: ./Pics/NS073UtmCooperativeOvertake2xSpeed00052.png Graphic file (type png
 )
@@ -2307,7 +2300,7 @@ File: ./Pics/NS073UtmCooperativeOvertake2xSpeed00052.png Graphic file (type png
 Package pdftex.def Info: ./Pics/NS073UtmCooperativeOvertake2xSpeed00052.png  us
 ed on input line 99.
 (pdftex.def)             Requested size: 307.28766pt x 100.99612pt.
-<./Pics/NS074UtmCooperativeOvertake2xSpeed00073.png, id=5288, 378.213pt x 124.3
+<./Pics/NS074UtmCooperativeOvertake2xSpeed00073.png, id=5289, 378.213pt x 124.3
 044pt>
 File: ./Pics/NS074UtmCooperativeOvertake2xSpeed00073.png Graphic file (type png
 )
@@ -2318,7 +2311,7 @@ ed on input line 106.
  [224] [225 <./Pics/NS071UtmCooperativeOvertake2xSpeed00002.png> <./Pics/NS072U
 tmCooperativeOvertake2xSpeed00022.png> <./Pics/NS073UtmCooperativeOvertake2xSpe
 ed00052.png> <./Pics/NS074UtmCooperativeOvertake2xSpeed00073.png>]
-<./Pics/NS078UtmCooperativeOvertakeMultipleTrajectories.png, id=5321, 836.4048p
+<./Pics/NS078UtmCooperativeOvertakeMultipleTrajectories.png, id=5322, 836.4048p
 t x 401.8212pt>
 File: ./Pics/NS078UtmCooperativeOvertakeMultipleTrajectories.png Graphic file (
 type png)
@@ -2327,7 +2320,7 @@ Package pdftex.def Info: ./Pics/NS078UtmCooperativeOvertakeMultipleTrajectories
 .png  used on input line 170.
 (pdftex.def)             Requested size: 409.71689pt x 196.83891pt.
  [226]
-<./Pics/NS079UtmCooperativeOvertakeMultiplePerformance.png, id=5331, 359.4228pt
+<./Pics/NS079UtmCooperativeOvertakeMultiplePerformance.png, id=5332, 359.4228pt
  x 291.9708pt>
 File: ./Pics/NS079UtmCooperativeOvertakeMultiplePerformance.png Graphic file (t
 ype png)
@@ -2337,7 +2330,7 @@ png  used on input line 178.
 (pdftex.def)             Requested size: 273.14922pt x 221.89565pt.
  [227 <./Pics/NS078UtmCooperativeOvertakeMultipleTrajectories.png> <./Pics/NS07
 9UtmCooperativeOvertakeMultiplePerformance.png>]
-<./Pics/NS076UtmCooperativeOvertake2xSpeedUAV1PathFollowing.png, id=5346, 925.0
+<./Pics/NS076UtmCooperativeOvertake2xSpeedUAV1PathFollowing.png, id=5347, 925.0
 56pt x 700.41675pt>
 File: ./Pics/NS076UtmCooperativeOvertake2xSpeedUAV1PathFollowing.png Graphic fi
 le (type png)
@@ -2345,7 +2338,7 @@ le (type png)
 Package pdftex.def Info: ./Pics/NS076UtmCooperativeOvertake2xSpeedUAV1PathFollo
 wing.png  used on input line 225.
 (pdftex.def)             Requested size: 196.66235pt x 148.89804pt.
-<./Pics/NS077UtmCooperativeOvertake2xSpeedUAV2PathFollowing.png, id=5347, 925.0
+<./Pics/NS077UtmCooperativeOvertake2xSpeedUAV2PathFollowing.png, id=5348, 925.0
 56pt x 700.41675pt>
 File: ./Pics/NS077UtmCooperativeOvertake2xSpeedUAV2PathFollowing.png Graphic fi
 le (type png)
@@ -2355,7 +2348,7 @@ wing.png  used on input line 231.
 (pdftex.def)             Requested size: 196.66235pt x 148.89804pt.
  [228 <./Pics/NS076UtmCooperativeOvertake2xSpeedUAV1PathFollowing.png> <./Pics/
 NS077UtmCooperativeOvertake2xSpeedUAV2PathFollowing.png>]
-<./Pics/NS102RuleBasedOvertakeComputationTime.png, id=5367, 361.35pt x 293.898p
+<./Pics/NS102RuleBasedOvertakeComputationTime.png, id=5368, 361.35pt x 293.898p
 t>
 File: ./Pics/NS102RuleBasedOvertakeComputationTime.png Graphic file (type png)
 <use ./Pics/NS102RuleBasedOvertakeComputationTime.png>
@@ -2368,38 +2361,38 @@ Overfull \vbox (9.49998pt too high) detected at line 123
  []
 
 [230] [231]
-<./Pics/NS086UTMAdversary00011.png, id=5484, 436.029pt x 235.6002pt>
+<./Pics/NS086UTMAdversary00011.png, id=5485, 436.029pt x 235.6002pt>
 File: ./Pics/NS086UTMAdversary00011.png Graphic file (type png)
 <use ./Pics/NS086UTMAdversary00011.png>
 Package pdftex.def Info: ./Pics/NS086UTMAdversary00011.png  used on input line 
 215.
 (pdftex.def)             Requested size: 196.66235pt x 106.26355pt.
-<./Pics/NS087UTMAdversary-00014.png, id=5485, 433.62pt x 234.6366pt>
+<./Pics/NS087UTMAdversary-00014.png, id=5486, 433.62pt x 234.6366pt>
 File: ./Pics/NS087UTMAdversary-00014.png Graphic file (type png)
 <use ./Pics/NS087UTMAdversary-00014.png>
 Package pdftex.def Info: ./Pics/NS087UTMAdversary-00014.png  used on input line
  221.
 (pdftex.def)             Requested size: 196.66235pt x 106.4161pt.
-<./Pics/NS088UTMAdversary-00017.png, id=5486, 434.5836pt x 235.1184pt>
+<./Pics/NS088UTMAdversary-00017.png, id=5487, 434.5836pt x 235.1184pt>
 File: ./Pics/NS088UTMAdversary-00017.png Graphic file (type png)
 <use ./Pics/NS088UTMAdversary-00017.png>
 Package pdftex.def Info: ./Pics/NS088UTMAdversary-00017.png  used on input line
  228.
 (pdftex.def)             Requested size: 196.66235pt x 106.39783pt.
-<./Pics/NS089UTMAdversary-00020.png, id=5487, 433.1382pt x 235.1184pt>
+<./Pics/NS089UTMAdversary-00020.png, id=5488, 433.1382pt x 235.1184pt>
 File: ./Pics/NS089UTMAdversary-00020.png Graphic file (type png)
 <use ./Pics/NS089UTMAdversary-00020.png>
 Package pdftex.def Info: ./Pics/NS089UTMAdversary-00020.png  used on input line
  234.
 (pdftex.def)             Requested size: 196.66235pt x 106.753pt.
-<./Pics/NS090UTMAdversaryCrash.png, id=5488, 145.5036pt x 105.0324pt>
+<./Pics/NS090UTMAdversaryCrash.png, id=5489, 145.5036pt x 105.0324pt>
 File: ./Pics/NS090UTMAdversaryCrash.png Graphic file (type png)
 <use ./Pics/NS090UTMAdversaryCrash.png>
 Package pdftex.def Info: ./Pics/NS090UTMAdversaryCrash.png  used on input line 
 241.
 (pdftex.def)             Requested size: 163.88425pt x 118.30219pt.
  [232]
-<./Pics/NS091UTMAdversaryPerformance.png, id=5511, 574.3056pt x 233.673pt>
+<./Pics/NS091UTMAdversaryPerformance.png, id=5512, 574.3056pt x 233.673pt>
 File: ./Pics/NS091UTMAdversaryPerformance.png Graphic file (type png)
 <use ./Pics/NS091UTMAdversaryPerformance.png>
 Package pdftex.def Info: ./Pics/NS091UTMAdversaryPerformance.png  used on input
@@ -2409,36 +2402,36 @@ Package pdftex.def Info: ./Pics/NS091UTMAdversaryPerformance.png  used on input
 <./Pics/NS088UTMAdversary-00017.png> <./Pics/NS089UTMAdversary-00020.png> <./Pi
 cs/NS090UTMAdversaryCrash.png>] [234 <./Pics/NS091UTMAdversaryPerformance.png>]
 ) (07S17-Reduced-Reach-Sets.tex [235] [236]
-<./Pics/NS082CoverageRS00010.png, id=5595, 944.93025pt x 675.7245pt>
+<./Pics/NS082CoverageRS00010.png, id=5596, 944.93025pt x 675.7245pt>
 File: ./Pics/NS082CoverageRS00010.png Graphic file (type png)
 <use ./Pics/NS082CoverageRS00010.png>
 Package pdftex.def Info: ./Pics/NS082CoverageRS00010.png  used on input line 57
 .
 (pdftex.def)             Requested size: 196.66235pt x 140.6278pt.
-<./Pics/NS083CoverageRSAfterPruning.png, id=5596, 377.9721pt x 270.2898pt>
+<./Pics/NS083CoverageRSAfterPruning.png, id=5597, 377.9721pt x 270.2898pt>
 File: ./Pics/NS083CoverageRSAfterPruning.png Graphic file (type png)
 <use ./Pics/NS083CoverageRSAfterPruning.png>
 Package pdftex.def Info: ./Pics/NS083CoverageRSAfterPruning.png  used on input 
 line 63.
 (pdftex.def)             Requested size: 196.66235pt x 140.63399pt.
-<./Pics/NS084smoothRS00010.png, id=5600, 377.7312pt x 271.0125pt>
+<./Pics/NS084smoothRS00010.png, id=5601, 377.7312pt x 271.0125pt>
 File: ./Pics/NS084smoothRS00010.png Graphic file (type png)
 <use ./Pics/NS084smoothRS00010.png>
 Package pdftex.def Info: ./Pics/NS084smoothRS00010.png  used on input line 79.
 (pdftex.def)             Requested size: 196.66235pt x 141.10098pt.
-<./Pics/NS085smoothRSAfterPruning.png, id=5601, 944.328pt x 677.53125pt>
+<./Pics/NS085smoothRSAfterPruning.png, id=5602, 944.328pt x 677.53125pt>
 File: ./Pics/NS085smoothRSAfterPruning.png Graphic file (type png)
 <use ./Pics/NS085smoothRSAfterPruning.png>
 Package pdftex.def Info: ./Pics/NS085smoothRSAfterPruning.png  used on input li
 ne 85.
 (pdftex.def)             Requested size: 196.66235pt x 141.09685pt.
-<./Pics/NS080acasLikeRS00010.png, id=5608, 377.9721pt x 270.7716pt>
+<./Pics/NS080acasLikeRS00010.png, id=5609, 377.9721pt x 270.7716pt>
 File: ./Pics/NS080acasLikeRS00010.png Graphic file (type png)
 <use ./Pics/NS080acasLikeRS00010.png>
 Package pdftex.def Info: ./Pics/NS080acasLikeRS00010.png  used on input line 10
 1.
 (pdftex.def)             Requested size: 196.66235pt x 140.88467pt.
-<./Pics/NS081acasLikeRSAfterPruning.png, id=5609, 944.93025pt x 676.929pt>
+<./Pics/NS081acasLikeRSAfterPruning.png, id=5610, 944.93025pt x 676.929pt>
 File: ./Pics/NS081acasLikeRSAfterPruning.png Graphic file (type png)
 <use ./Pics/NS081acasLikeRSAfterPruning.png>
 Package pdftex.def Info: ./Pics/NS081acasLikeRSAfterPruning.png  used on input 
@@ -2480,19 +2473,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
  ) 
 Here is how much of TeX's memory you used:
- 18534 strings out of 492973
- 311867 string characters out of 3135926
- 387624 words of memory out of 3000000
- 19593 multiletter control sequences out of 15000+200000
+ 18533 strings out of 492973
+ 311844 string characters out of 3135926
+ 387585 words of memory out of 3000000
+ 19592 multiletter control sequences out of 15000+200000
  25804 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,22n,56p,1040b,1081s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2518,9 +2505,9 @@ H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/H172461/
 MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/H172461/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/H172461/MiKTeX 2
 .9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (258 pages, 21588342 bytes).
+Output written on main.pdf (258 pages, 21588333 bytes).
 PDF statistics:
- 6310 PDF objects out of 7423 (max. 8388607)
+ 6311 PDF objects out of 7423 (max. 8388607)
  2190 named destinations out of 2487 (max. 500000)
  2096 words of extra memory for PDF output out of 10000 (max. 10000000)
 
