@@ -895,6 +895,12 @@ Jon Kleinberg, Christos Papadimitriou, and Prabhakar Raghavan.
 \newblock A microeconomic view of data mining.
 \newblock {\em Data mining and knowledge discovery}, 2(4):311--324, 1998.
 
+\bibitem{borenstein1991vector}
+Johann Borenstein and Yoram Koren.
+\newblock The vector field histogram-fast obstacle avoidance for mobile robots.
+\newblock {\em IEEE Transactions on Robotics and Automation}, 7(3):278--288,
+  1991.
+
 \bibitem{zimmer2011rule}
 Nico Zimmer, Jens Schiefele, Keyvan Bayram, Theo Hankers, Sebastian Frank, and
   Thomas Feuerle.
@@ -1029,12 +1035,6 @@ Alojz Gomola, Pavel Klang, and Jan Ludvik.
   framework based on reach sets.
 \newblock In {\em Internal publication collection}, pages 1--93. Honeywell,
   2017.
-
-\bibitem{borenstein1991vector}
-Johann Borenstein and Yoram Koren.
-\newblock The vector field histogram-fast obstacle avoidance for mobile robots.
-\newblock {\em IEEE Transactions on Robotics and Automation}, 7(3):278--288,
-  1991.
 
 \bibitem{koren1991potential}
 Yoram Koren and Johann Borenstein.
