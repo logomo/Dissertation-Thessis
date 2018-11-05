@@ -55,9 +55,9 @@ The full rotation matrix in X,Y,Z  is given by (eq. \ref{eq:xyzspaceRotationMatr
 \begin{equation*}
     point_{polar}=[distance, horizontal Dislocation Angle, vertical Dislocation Angle]^T
 \end{equation*}
-which is ideal for representation of LiDAR scanned point, because usually total point distance and pair of dislocation angles are returned. Using most common LiDAR with horizontal rotation $horizontal^\circ$ and vertical mirror inclination $vertical^\circ$, one can define planar coordinate $point_{planar} = [distance_{x,y,z},horizontal^\circ,vertical^\circ]$ which is dual to Cartesian coordinate $point_{cartesian} = [x,y,z]$. If rotation angle  ranges are $horizontal^\circ,vertical^\circ\in(-\pi,\pi]$ transformation function is bijection.
+which is ideal for representation of LiDAR scanned point, because usually total point distance and pair of dislocation angles are returned. Using most common LiDAR with horizontal rotation $horizontal^\circ$ and vertical mirror inclination $vertical^\circ$, one can define polar coordinate $point_{polar} = [distance_{x,y,z},horizontal^\circ,vertical^\circ]$ which is dual to Cartesian coordinate $point_{cartesian} = [x,y,z]$. If rotation angle  ranges are $horizontal^\circ,vertical^\circ\in(-\pi,\pi]$ transformation function is bijection.
 
-\paragraph{Planar $\to$ Cartesian:} Transformation from planar to Cartesian representation is defined by following series of functions (eq. \ref{eq:cpt01}, \ref{eq:cpt02},\ref{eq:cpt03}, \ref{eq:cpt04}).
+\paragraph{Polar $\to$ Cartesian:} Transformation from polar to Cartesian representation is defined by following series of functions (eq. \ref{eq:cpt01}, \ref{eq:cpt02},\ref{eq:cpt03}, \ref{eq:cpt04}).
 
 \begin{equation}\label{eq:cpt01}
     distance_{xy} = \cos(horizontal^\circ)\times distance_{xyz}
@@ -76,7 +76,7 @@ which is ideal for representation of LiDAR scanned point, because usually total 
 \end{equation}
 
 
-\paragraph{Cartesian $\to$ Planar:} Transformation from Cartesian to planar representation is defined by following series of functions (eq \ref{eq:cpt05}, \ref{eq:cpt06},\ref{eq:cpt07}, \ref{eq:cpt08}).
+\paragraph{Cartesian $\to$ Polar:} Transformation from Cartesian to polar representation is defined by following series of functions (eq \ref{eq:cpt05}, \ref{eq:cpt06},\ref{eq:cpt07}, \ref{eq:cpt08}).
 
 \begin{equation}\label{eq:cpt05}
     distance_{xyz} = \sqrt{x^2+y^2+z^2}    
@@ -102,10 +102,10 @@ which is ideal for representation of LiDAR scanned point, because usually total 
     takes as center $c_{\mathscr{L}0}$ frame of vehicle and can be changing position and orientation in global coordinate frame $\mathscr{X}_\mathscr{G}$.
 \end{definition}
 
-\begin{definition}{Global position of planar obstacle $o_i\in\mathscr{O}_{3D}$.}\label{def:globalObstaclePosition3D}
-    Let $o_i = [d_o, \theta_o, \varphi_o]^T$ be planar position of obstacle $o_i$ in local coordinate frame of vehicle with global Cartesian position $[x,_v,y_v,z_v]^T$ and normalized orientation angles $[roll_v,pitch_v,yaw_v]$.\\
+\begin{definition}{Global position of polar obstacle $o_i\in\mathscr{O}_{3D}$.}\label{def:globalObstaclePosition3D}
+    Let $o_i = [d_o, \theta_o, \varphi_o]^T$ be polar position of obstacle $o_i$ in local coordinate frame of vehicle with global Cartesian position $[x,_v,y_v,z_v]^T$ and normalized orientation angles $[roll_v,pitch_v,yaw_v]$.\\
     Then Cartesian position of obstacle $oi$, $[x_o,y_o,z_o]^T$  in local coordinate frame is given by transformation functions $x_o$ (eq. \ref{eq:cpt04}), $y_o$ (eq. \ref{eq:cpt03}), $z_o$ (eq. \ref{eq:cpt02}).\\ 
-    Global  position of planar obstacle $oi$, $[x_g,y_g,z_g]^T$ is given by following equation:
+    Global  position of polar obstacle $oi$, $[x_g,y_g,z_g]^T$ is given by following equation:
     \begin{equation}
         \begin{bmatrix}
             x_g\\y_g\\z_g
@@ -145,10 +145,10 @@ which is ideal for representation of LiDAR scanned point, because usually total 
             \right )
         \right ]
     \end{equation}
-    Local planar position is given as $[distance_l, horizontal_l^\circ,horizontal_l^\circ]$, where $distance_l$ is given by (eq. \ref{eq:cpt05}), $vertical_l^\circ$ is given by (eq. \ref{eq:cpt07}). $vertical_l^\circ$ is given by (eq. \ref{eq:cpt08}), where $[x_l,y_l,z_l]$ are used as local coordinates.
+    Local polar position is given as $[distance_l, horizontal_l^\circ,horizontal_l^\circ]$, where $distance_l$ is given by (eq. \ref{eq:cpt05}), $vertical_l^\circ$ is given by (eq. \ref{eq:cpt07}). $vertical_l^\circ$ is given by (eq. \ref{eq:cpt08}), where $[x_l,y_l,z_l]$ are used as local coordinates.
 \end{definition}
 
-\paragraph{Planar surface calculation:} The problem is to calculate intersected surface $dA$ of ball subsurface defined by radius $r$, horizontal span $\phi$ and vertical span $\theta$. From classical mechanics one can formulate problem as given by (fig. \ref{fig:80BallSpan}). The intersection plot is in (fig. \ref{fig:81BallSpan2}).
+\paragraph{Polar surface calculation:} The problem is to calculate intersected surface $dA$ of ball subsurface defined by radius $r$, horizontal span $\phi$ and vertical span $\theta$. From classical mechanics one can formulate problem as given by (fig. \ref{fig:80BallSpan}). The intersection plot is in (fig. \ref{fig:81BallSpan2}).
 
 \begin{figure}[H]
     \centering
@@ -162,11 +162,11 @@ which is ideal for representation of LiDAR scanned point, because usually total 
         \caption{Plot}
         \label{fig:81BallSpan2}
     \end{subfigure}
-    \caption{Planar surface calculation notation and plot}
+    \caption{Polar surface calculation notation and plot}
     \label{fig:BallSpanNOTPLOT}
 \end{figure}
 
-\noindent One can use first fundamental form to determine the surface area element. Recall that this is the metric tensor, whose components are obtained by taking the inner product of two tangent vectors in planar space $g_{i,j}= X_i \cdot X_j$, for tangent vectors $X_i$, $X_j$. Following identification for the components of metric tensor will be used:
+\noindent One can use first fundamental form to determine the surface area element. Recall that this is the metric tensor, whose components are obtained by taking the inner product of two tangent vectors in polar space $g_{i,j}= X_i \cdot X_j$, for tangent vectors $X_i$, $X_j$. Following identification for the components of metric tensor will be used:
 \begin{equation}\label{eq:metricTensorIdentification}
     g_{ij}=
     \begin{bmatrix}
@@ -208,7 +208,7 @@ which is ideal for representation of LiDAR scanned point, because usually total 
 \end{equation}
 
 \begin{note} 
-    \emph{Planar Surface} is used in \emph{Detected Obstacle Rating Calculation} (sec. \ref{s:detectedObstacles}). The final formula used in \emph{surface integral calculation} in \emph{non-compact notation} is given as follow:
+    \emph{Polar Surface} is used in \emph{Detected Obstacle Rating Calculation} (sec. \ref{s:detectedObstacles}). The final formula used in \emph{surface integral calculation} in \emph{non-compact notation} is given as follow:
 
     \begin{equation}\label{eq:finalCellSquare}
         \text{d}A= r^2 \cos(horizontal^\circ)\quad \text{d}horizontal^\circ \text{d}vertical^\circ

@@ -61,7 +61,7 @@ The \emph{Discretization} is the key to assure calculation in finite time. Finit
     
     \item \emph{Reach Set Approximation} (Role: Reachability Estimator) - as \emph{data fusion} is providing the situation assessment, the \emph{Reach set} is providing maneuvering capability assessment. The introduction is given in (sec. \ref{s:reachSet}), the properties are defined in (sec. \ref{s:ReachSetPerformanceCriteria}), the approximation methods with constrained expansion are outlined in (sec. \ref{s:chaoticReachSet}, \ref{s:harmonicReachSet}, \ref{s:combinedReachSet}, \ref{s:acasReachSet}). The reach set estimation is main contribution of this work.
     
-    \item \emph{Grids: Navigation/Avoidance} (Role: Operation Space Segmentation \& Situation Evaluation) - space discretization in planar grid, different reach sets are used for different grid type, defined in (sec. \ref{s:AvoidanceGrid}).
+    \item \emph{Grids: Navigation/Avoidance} (Role: Operation Space Segmentation \& Situation Evaluation) - space discretization in polar coordinates grid, different reach sets are used for different grid type, defined in (sec. \ref{s:AvoidanceGrid}).
     
     \item \emph{Avoidance loop} (Role: Short Term Decision Maker) - using data from \emph{Sensor fusion} in \emph{Avoidance/Navigation Grid} trimming \emph{Reachable Space} approximated by \emph{Reach Set} generating feasible \emph{Avoidance Path}. \emph{Avoidance Path} is fed to controlling \emph{Movement Automaton}. The Goal is given by \emph{Navigation Loop}. Avoidance loop is given in (sec. \ref{s:aviudabceGridRun}).
     
