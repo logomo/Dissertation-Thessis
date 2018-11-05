@@ -1,0 +1,163 @@
+%%%%% Single page layout:
+%%%%% ----------------------------------------------------
+%\documentclass[12pt, a4paper,draft]{report}
+\documentclass[12pt, a4paper]{report}
+\setlength\textwidth{160mm}
+\setlength\textheight{247mm}
+\setlength\oddsidemargin{0mm}
+\setlength\evensidemargin{0mm}
+\setlength\topmargin{0mm}
+\setlength\headsep{0mm}
+\setlength\headheight{0mm}
+\let\openright=\clearpage
+% Overfull statements
+\pretolerance=150
+\setlength{\emergencystretch}{3em}
+% Overfull end
+
+\usepackage[utf8]{inputenc}
+
+
+%%% Additional useful packages
+%%% ----------------------------------------------------------------
+\usepackage{array}
+\usepackage{amsmath}  
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\DeclareFontFamily{OT1}{pzc}{}
+\DeclareFontShape{OT1}{pzc}{m}{it}{<-> s * [0.900] pzcmi7t}{}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{amsthm}      
+\usepackage[ruled,algochapter]{algorithm2e}
+\usepackage{algorithmic}
+\usepackage{bm}
+\usepackage[mathscr]{euscript}
+\usepackage{graphicx}       
+\usepackage{psfrag}         
+\usepackage{fancyvrb}    
+\usepackage{float}
+\usepackage{ltablex}
+\usepackage[square,sort,comma,numbers]{natbib}        
+\usepackage{bbding}         
+\usepackage{dcolumn}        
+\usepackage{booktabs} 
+\usepackage{multirow}
+\usepackage{paralist}       
+\usepackage{indentfirst}    
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+\usepackage{url}
+\usepackage{tabularx}
+\usepackage{subcaption}
+\usepackage[unicode]{hyperref}
+\usepackage{xcolor}
+
+\hypersetup{pdftitle=LiDAR obstacle detection and avoidance, 
+            pdfauthor=Alojz Gomola,
+            colorlinks=false,
+            urlcolor=blue,
+            pdfstartview=FitH,
+            pdfpagemode=UseOutlines,
+            pdfnewwindow,
+            breaklinks
+          }
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}         
+\newcolumntype{B}{X}
+\newcolumntype{S}[1]{>{\hsize=#1\textwidth}X}
+
+\newcommand{\FIGDIR}{./Pics}    %%% directory containing figures
+\newcommand{\twolinecellr}[2][r]{%
+  \begin{tabular}[#1]{@{}r@{}}#2\end{tabular}}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{plain}
+\newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+\newtheorem{example}{Example}
+\newtheorem{assumption}{Assumption}
+
+\theoremstyle{remark}
+\newtheorem*{corollary}{Corollary}
+\newtheorem*{note}{Note}
+
+
+
+
+\newenvironment{dokaz}{
+  \par\medskip\noindent
+  \textit{Proof}.
+}{
+\newline
+\rightline{\SquareCastShadowBottomRight}
+}
+
+\newenvironment{constraints}[1]{
+  \par\medskip\noindent
+  \textit{Constraints #1} \\
+}{
+\newline
+\rightline{\SquareCastShadowBottomRight}
+}
+
+
+%\bibliographystyle{plainnat}     %% Author (year) style
+\bibliographystyle{unsrt}        %% [number] style
+\setcitestyle{square}
+
+% Section  3.7 Challenge list
+\newif\ifproblemchallenge   %# Build block for problem challenges
+\problemchallengetrue       %# Show comments
+
+
+\title{Dissertation thesis}
+\author{Alojz Gomola}
+\date{February 2019}
+
+%%%%% ------------------------------------------------------------
+\DefineVerbatimEnvironment{PCinout}{Verbatim}{fontsize=\small, frame=single}
+
+
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+
+\DeclareMathOperator{\pr}{\textsf{P}}
+\DeclareMathOperator{\E}{\textsf{E}\,}
+\DeclareMathOperator{\var}{\textrm{var}}
+\DeclareMathOperator{\sd}{\textrm{sd}}
+
+
+\newcommand{\T}[1]{#1^\top}        
+
+\newcommand{\goto}{\rightarrow}
+\newcommand{\gotop}{\stackrel{P}{\longrightarrow}}
+\newcommand{\maon}[1]{o(n^{#1})}
+\newcommand{\abs}[1]{\left|{#1}\right|}
+\newcommand{\dint}{\int_0^\tau\!\!\int_0^\tau}
+\newcommand{\isqr}[1]{\frac{1}{\sqrt{#1}}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+
+\newcommand{\pulrad}[1]{\raisebox{1.5ex}[0pt]{#1}}
+\newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+\newcommand{\TBD}[1]{\color{red}\emph{--TBD:}#1\color{black}}
+
+\begin{document}
+
+\setcounter{chapter}{6}
+\setcounter{section}{5}
+    %06-06 Reach Set
+    	\input{06A06a-Reach-Set-Approximation}
+    	\input{06A06b-Reach-Set-Performance-Criteria}
+    	\input{06A06c-Contrained-Trajectory-Expansion}
+    	%\input{06A06d-Avoidance-Grid-Scaling}
+    	\input{06A06e-Reach-Set-Approximations}
+
+%09-Bibliography
+    \bibliography{thesis}
+\end{document}
