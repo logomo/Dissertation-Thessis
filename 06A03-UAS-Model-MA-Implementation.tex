@@ -1,3 +1,4 @@
+\newpage
 \section{(R) UAS Model and Control}\label{s:modelMAImplementation}
 
 \noindent The key feature of \emph{Movement Automaton} is to interface \emph{continuous-control signal} as the \emph{discrete command chain}. Following topics are introduced in this section:
@@ -183,7 +184,7 @@ Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is then given as the time-
 \begin{equation}\label{eq:ourTrajectoryImplementation}
     Trajectory(state(0),Buffer)= \left\{\begin{gathered}state(0)+\sum_{j=0}^{i-1} input(movement(j)):\\i \in\left\{1\dots |Buffer|+1\right\}, \\movement(\cdot) \in Buffer\end{gathered}\right\}
 \end{equation}
-
+\newpage
 Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states bounded to discrete time $0\dots n$ , where $n$ is member count of \emph{Buffer}. Trajectory set has $n+1$ members:
 
 \begin{equation}
@@ -233,7 +234,7 @@ Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states b
         \forall impactState\in ImpactStates, \exists:\\ lower(impactState) \le value(impactState) \le upper(impactState) 
     \end{multline}
     
-    The bounded interval of impact state can be separated into distinctive \emph{impact state segments} like follow:
+	\noindent    The bounded interval of impact state can be separated into distinctive \emph{impact state segments} like follow:
     \begin{multline}
         impactState\in [lower,upper]:\\ \{[lower,separator_1[\dots\cup\dots[separator_i,separator_{i+1}[\dots\cup\dots\\\dots\cup\dots[separator_n,upper]\}=\\
         = impactStateIntervals(impactState)
@@ -274,6 +275,7 @@ Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states b
 
 \paragraph{Segmented Movement Automaton:} The segmentation of \emph{state space} is done  in (def. \ref{def:stateSpacePartition}) any \emph{state} belongs exactly to \emph{Segment} of \emph{State Space}. For each \emph{Segment} in \emph{State Space}it is possible to assess: \emph{Climb/Descent Rate} $\delta pitch_{max}(k)$, \emph{Turn Rate} $\delta yaw_{max}(k)$, and, \emph{Acceleration} $\delta v_{max}(k)$.
 
+\newpage
 \begin{definition}{Movement Automaton for Segment(index)}\label{def:segmentMovementAutomaton}
     
 
