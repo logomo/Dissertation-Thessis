@@ -1,16 +1,50 @@
 \newpage
-\section{(W) Moving Obstacles - Intruders and Constraints}\label{s:intruders}
-    \noindent Fast overview of obstacles and space constraints which position is dynamic relative to mission or avoidance time frame:
-    \begin{itemize}
-        \item Non-cooperative intruders
-        \item Short term bad weather areas (constraints)
-        \item The models are based on \emph{analytical geometry} for \emph{cones and ellipsoids} taken from \cite{sommerville2016analytical}.
-        \item The cell boundary was approximated as set of points, the intersection objects were discretized.
-        \item Closes point problem \cite{shamos1975closest} was solved by application of method  \cite{bentley1980optimal}
-		\item Moving obstacles were adressed in \cite{fiorini1998motion}.
-		\item Lidar like intersection rebase the obstacle or intruder into pointcloud with evaluated impact rate ...
-    \end{itemize}
-    
-TODO new section look to Storm scenario structure
+\section{(R) Moving Obstacles - Intruders and Constraints}\label{s:intruders}
+\paragraph{Intruder behaviour:} \emph{Adversarial behaviour} of moving obstacle is trying to destroy avoiding our UAS.  The \emph{Intruder} UAS \cite{fiorini1998motion} is not trying to hurt our \emph{UAS} actively. The \emph{Adversarial behaviour} is neglected in this work. The non-cooperative avoidance is assumed, it can be relaxed to \emph{cooperative avoidance} in \emph{UTM controlled airspace}.
 
-The algorithm used for intersection selected based on:\citep{bentley1979algorithms} the selected algorithm  \emph{Shamos-Hoey} \cite{shamos1976geometric}.
+\paragraph{Intruder information:} The \emph{observable intruder information set} for any kind of intruder, obtained trough sensor/C2 line, is following:
+\begin{enumerate}
+    \item\emph{Position} - position of intruder in \emph{local} or \emph{global} coordinate frame, which can be transformed into \emph{avoidance grid coordinate frame}.
+    
+    \item\emph{Heading and Velocity} - intruder heading and linear velocity in avoidance grid coordinate frame.
+    
+    \item\emph{Horizontal/Vertical Maneuver Uncertainty Spreads} - how much can an \emph{intruder} deviate from \emph{original linear path} in \emph{horizontal/vertical} plane in \emph{Global coordinate Frame}.
+\end{enumerate}
+
+ 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{\FIGDIR/TE052AdversaryProbabilitySpread}
+    \caption{Intruder UAS intersection rate along expected trajectory.}
+    \label{fig:intruderProbabiltySpreadTheoretical}
+\end{figure}   
+
+\paragraph{Example of Intruder Intersection:} Lets neglect the \emph{time-impact} aspect on \emph{intersection}.  The \emph{intruder} (black "I" circle) is intersecting one \emph{avoidance grid horizontal slice} (fig. \ref{fig:intruderProbabiltySpreadTheoretical}).  The intruder is moving along linear path approximation based on velocity (middle green line). The \emph{Horizontal Maneuver Uncertainty spread} is in \emph{green line boundary area} \emph{intruder intersection rating} is denoted as green-orange-red cell fill reflecting intersection severity:  red is high rate of intersection, orange is medium rate of intersection and green is low rate of intersection.
+    
+
+
+\paragraph{Moving Threats:} The \emph{UAS} can encounter following threats during the \emph{mission execution}:
+\begin{enumerate}
+    \item \emph{Non-cooperative Intruders} - the intruders whom does not implement any approach to ensure mutual avoidance efficiency.
+    
+    \item \emph{Cooperative Intruders} - the intruders whom actively communicate or follow common agreed behaviour pattern (ex. Rules of the Air).
+    
+    \item \emph{Moving Constraints} - the constrained portion of \emph{free} space which is shifting its boundary over time (ex. Short term bad weather).
+\end{enumerate}
+    
+\begin{note}
+    Our approach considers only \emph{UAS} intruders, because \emph{Data Fusion} considers data received trough \emph{ADS-B} messages. The \emph{Intruders} extracted from \emph{LiDAR} scan were not considered (ex. birds). The proposed \emph{intruder intersection models} are reusable for other \emph{intruder sources}.
+\end{note}
+
+\paragraph{Approach Overview:} The \emph{Avoidance Grid} (def. \ref{def:AvoidanceGrid}) is adapted to \emph{LiDAR} sensor. The \emph{euclidean grid intersections} are fairly simple. The \emph{polar coordinates grid} are not. The need to keep \emph{polar coordinates grid} is prevalent, because of fast \emph{LiDAR} reading assessment.  There are following commonly known methods to address this issue:
+
+\begin{enumerate}
+    \item\emph{Point-cloud Intersections} - the \emph{threat impact area} is discredited into sufficiently thick point cloud. This point-cloud have \emph{point impact rate} and \emph{intersection time} assigned to each point. The \emph{point-cloud} is projected to \emph{Avoidance Grid}. If \emph{impact point} hits $cell_{i,j,k}$ the cell`s impact rate is increased by amount of \emph{point impact rate}. The final \emph{threat impact rate} in $cell_{i,j,k}$ is given when \emph{all} points from point cloud are consumed. Close point problem \cite{shamos1975closest} was solved by application of method  \cite{bentley1980optimal}.
+    
+    \item\emph{Polygon Intersections} - the \emph{threat impact area} is modeled as polygon, each $cell_{i,j,k}$ in \emph{Avoidance Grid} is considered as \emph{polygon}. There is a possibility to calculate cell space geometrical inclusive intersection. The \emph{impact rate} is then given as rate between \emph{intersection volume} and $cell_{i,j,k}$ volume. The algorithm used for intersection selected based on:\citep{bentley1979algorithms} the selected algorithm  \emph{Shamos-Hoey} \cite{shamos1976geometric}.
+\end{enumerate}
+
+\begin{note}
+    The \emph{Intruder Intersection} models are based on \emph{analytically geometry} for \emph{cones and ellipsoids} taken from \cite{sommerville2016analytical}.
+\end{note}
