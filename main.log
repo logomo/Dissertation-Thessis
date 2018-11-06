@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  5 NOV 2018 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  6 NOV 2018 09:32
 entering extended mode
 **./main.tex
 (main.tex
@@ -1072,18 +1072,18 @@ File: ./Pics/TE016EllipsoidCutTimeOfArrival.png Graphic file (type png)
 Package pdftex.def Info: ./Pics/TE016EllipsoidCutTimeOfArrival.png  used on inp
 ut line 54.
 (pdftex.def)             Requested size: 196.66235pt x 92.07135pt.
-) (06A06a-Reach-Set-Approximation.tex
-Underfull \hbox (badness 3108) in paragraph at lines 10--11
+) (06A06a-Reach-Set-Approximation.tex [83 <./Pics/TE013ElipticConeIntersecitonE
+xample.png> <./Pics/TE014ElipticConeIOnePoint.png> <./Pics/TE015ProbabilisticDi
+stributionOfEllipsoidCutSideForTE016.png> <./Pics/TE016EllipsoidCutTimeOfArriva
+l.png>]
+Underfull \hbox (badness 3108) in paragraph at lines 11--12
 []\OT1/cmr/m/it/12 Property bind-ing \OT1/cmr/m/n/12 - bind-ing re-lated prop-e
 r-ties seems prob-lem-atic, be-cause
  []
 
-[83 <./Pics/TE013ElipticConeIntersecitonExample.png> <./Pics/TE014ElipticConeIO
-nePoint.png> <./Pics/TE015ProbabilisticDistributionOfEllipsoidCutSideForTE016.p
-ng> <./Pics/TE016EllipsoidCutTimeOfArrival.png>] [84] [85])
-(06A06b-Reach-Set-Performance-Criteria.tex [86] [87])
+[84] [85]) (06A06b-Reach-Set-Performance-Criteria.tex [86] [87] [88])
 (06A06c-Contrained-Trajectory-Expansion.tex
-<./Pics/RS001RapidExplorationTreeExampleShrink.png, id=2813, 808.52063pt x 460.
+<./Pics/RS001RapidExplorationTreeExampleShrink.png, id=2824, 808.52063pt x 460.
 72125pt>
 File: ./Pics/RS001RapidExplorationTreeExampleShrink.png Graphic file (type png)
 
@@ -1091,38 +1091,37 @@ File: ./Pics/RS001RapidExplorationTreeExampleShrink.png Graphic file (type png)
 Package pdftex.def Info: ./Pics/RS001RapidExplorationTreeExampleShrink.png  use
 d on input line 11.
 (pdftex.def)             Requested size: 409.71689pt x 233.47437pt.
- [88] [89 <./Pics/RS001RapidExplorationTreeExampleShrink.png>] [90]) (06A06e-Re
-ach-Set-Approximations.tex [91]
-[92]
-<./Pics/RS002ChaoticReachSetEstimationMethod.png, id=2896, 384.6872pt x 298.113
+ [89 <./Pics/RS001RapidExplorationTreeExampleShrink.png>] [90]) (06A06e-Reach-S
+et-Approximations.tex [91] [92]
+<./Pics/RS002ChaoticReachSetEstimationMethod.png, id=2895, 384.6872pt x 298.113
 75pt>
 File: ./Pics/RS002ChaoticReachSetEstimationMethod.png Graphic file (type png)
 <use ./Pics/RS002ChaoticReachSetEstimationMethod.png>
 Package pdftex.def Info: ./Pics/RS002ChaoticReachSetEstimationMethod.png  used 
-on input line 75.
+on input line 76.
 (pdftex.def)             Requested size: 318.66946pt x 246.97037pt.
- [93] [94 <./Pics/RS002ChaoticReachSetEstimationMethod.png>] [95] [96]
+
+[93] [94 <./Pics/RS002ChaoticReachSetEstimationMethod.png>] [95] [96]
 <./Pics/RS003HarmonicReachSetEstimationMethod.png, id=2946, 389.95688pt x 295.1
 025pt>
 File: ./Pics/RS003HarmonicReachSetEstimationMethod.png Graphic file (type png)
 <use ./Pics/RS003HarmonicReachSetEstimationMethod.png>
 Package pdftex.def Info: ./Pics/RS003HarmonicReachSetEstimationMethod.png  used
- on input line 195.
+ on input line 196.
 (pdftex.def)             Requested size: 318.66946pt x 241.16608pt.
-
-[97 <./Pics/RS003HarmonicReachSetEstimationMethod.png>]
+ [97 <./Pics/RS003HarmonicReachSetEstimationMethod.png>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 283.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 284.
  [98]
 <./Pics/RS004CombinedReachSetEstimationMethod.png, id=2980, 403.5075pt x 296.60
 812pt>
 File: ./Pics/RS004CombinedReachSetEstimationMethod.png Graphic file (type png)
 <use ./Pics/RS004CombinedReachSetEstimationMethod.png>
 Package pdftex.def Info: ./Pics/RS004CombinedReachSetEstimationMethod.png  used
- on input line 360.
+ on input line 361.
 (pdftex.def)             Requested size: 318.66946pt x 234.24542pt.
  [99] [100 <./Pics/RS004CombinedReachSetEstimationMethod.png>]
-Underfull \hbox (badness 1924) in paragraph at lines 419--420
+Underfull \hbox (badness 1924) in paragraph at lines 420--421
 \OT1/cmr/m/n/12 For each $\OML/cmm/m/it/12 Node\OT1/cmr/m/n/12 ([] \OML/cmm/m/i
 t/12 ; buffer\OT1/cmr/m/n/12 )$ and each \OT1/cmr/m/it/12 sep-a-ra-tion \OT1/cm
 r/m/n/12 there is a eval-u-a-tion func-tion
@@ -1135,7 +1134,7 @@ File: ./Pics/RS005ACASLikeReachSetEstimationMethodFull.png Graphic file (type p
 ng)
 <use ./Pics/RS005ACASLikeReachSetEstimationMethodFull.png>
 Package pdftex.def Info: ./Pics/RS005ACASLikeReachSetEstimationMethodFull.png  
-used on input line 510.
+used on input line 511.
 (pdftex.def)             Requested size: 196.66235pt x 150.40584pt.
 <./Pics/RS006ACASLikeReachSetEstimationMethodHorizontalVertical.png, id=3047, 3
 86.6445pt x 295.70474pt>
@@ -1143,7 +1142,7 @@ File: ./Pics/RS006ACASLikeReachSetEstimationMethodHorizontalVertical.png Graphi
 c file (type png)
 <use ./Pics/RS006ACASLikeReachSetEstimationMethodHorizontalVertical.png>
 Package pdftex.def Info: ./Pics/RS006ACASLikeReachSetEstimationMethodHorizontal
-Vertical.png  used on input line 515.
+Vertical.png  used on input line 516.
 (pdftex.def)             Requested size: 196.66235pt x 150.40584pt.
 <./Pics/RS008ACASLikeReachSetEstimationMethodHorizontal.png, id=3048, 386.6445p
 t x 295.70474pt>
@@ -1151,7 +1150,7 @@ File: ./Pics/RS008ACASLikeReachSetEstimationMethodHorizontal.png Graphic file (
 type png)
 <use ./Pics/RS008ACASLikeReachSetEstimationMethodHorizontal.png>
 Package pdftex.def Info: ./Pics/RS008ACASLikeReachSetEstimationMethodHorizontal
-.png  used on input line 521.
+.png  used on input line 522.
 (pdftex.def)             Requested size: 196.66235pt x 150.40584pt.
 <./Pics/RS009CASLikeReachSetEstimationMethodVertical.png, id=3049, 386.6445pt x
  295.70474pt>
@@ -1159,7 +1158,7 @@ File: ./Pics/RS009CASLikeReachSetEstimationMethodVertical.png Graphic file (typ
 e png)
 <use ./Pics/RS009CASLikeReachSetEstimationMethodVertical.png>
 Package pdftex.def Info: ./Pics/RS009CASLikeReachSetEstimationMethodVertical.pn
-g  used on input line 526.
+g  used on input line 527.
 (pdftex.def)             Requested size: 196.66235pt x 150.40584pt.
 ) (06A07-Avodiance-Concept.tex [103 <./Pics/RS005ACASLikeReachSetEstimationMeth
 odFull.png> <./Pics/RS006ACASLikeReachSetEstimationMethodHorizontalVertical.png
@@ -2479,11 +2478,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
 Here is how much of TeX's memory you used:
  18601 strings out of 492973
  312648 string characters out of 3135926
- 387881 words of memory out of 3000000
+ 387880 words of memory out of 3000000
  19608 multiletter control sequences out of 15000+200000
  25804 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,22n,56p,1040b,1081s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,22n,56p,1040b,1093s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
 ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/H1724
 61/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/H172461/MiKTe
@@ -2506,7 +2505,7 @@ H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/H172461/
 MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/H172461/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/H172461/MiKTeX 2
 .9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (262 pages, 21845060 bytes).
+Output written on main.pdf (262 pages, 21844756 bytes).
 PDF statistics:
  6410 PDF objects out of 7423 (max. 8388607)
  2245 named destinations out of 2487 (max. 500000)

@@ -177,41 +177,41 @@
 \contentsline {subsection}{\numberline {6.5.3}(W) Body-volume intersection}{82}{subsection.6.5.3}
 \contentsline {subsection}{\numberline {6.5.4}(W) Maneuverability uncertainty intersection}{83}{subsection.6.5.4}
 \contentsline {subsection}{\numberline {6.5.5}(W) Moving Constraints}{83}{subsection.6.5.5}
-\contentsline {section}{\numberline {6.6}(R) Reach Set Approximation}{83}{section.6.6}
-\contentsline {paragraph}{Motivation:}{83}{section*.123}
+\contentsline {section}{\numberline {6.6}(R) Reach Set Approximation}{84}{section.6.6}
+\contentsline {paragraph}{Motivation:}{84}{section*.123}
 \contentsline {paragraph}{Proposed Solution Features:}{84}{section*.124}
 \contentsline {paragraph}{Discretization of Reach set:}{84}{section*.125}
 \contentsline {paragraph}{The Complete Reach Set}{84}{section*.126}
-\contentsline {paragraph}{The Reach Set Approximation by Movement Automaton}{84}{section*.127}
+\contentsline {paragraph}{The Reach Set Approximation by Movement Automaton}{85}{section*.127}
 \contentsline {paragraph}{Approximated Reach Set Containment:}{85}{section*.128}
 \contentsline {paragraph}{Properties:}{85}{section*.129}
 \contentsline {paragraph}{Passing cell:}{85}{section*.130}
 \contentsline {paragraph}{Reach Set Pruning:}{85}{section*.131}
-\contentsline {paragraph}{Reach Set Trajectory Tree:}{85}{section*.132}
+\contentsline {paragraph}{Reach Set Trajectory Tree:}{86}{section*.132}
 \contentsline {subsection}{\numberline {6.6.1}(R) Reach Set Performance Criteria}{86}{subsection.6.6.1}
 \contentsline {paragraph}{Motivation:}{86}{section*.133}
 \contentsline {paragraph}{Core Performance Criteria:}{86}{section*.134}
-\contentsline {paragraph}{Trajectory footprint:}{86}{section*.135}
+\contentsline {paragraph}{Trajectory footprint:}{87}{section*.135}
 \contentsline {paragraph}{Coverage set:}{87}{section*.136}
 \contentsline {paragraph}{Coverage set properties:}{87}{section*.137}
 \contentsline {paragraph}{Trajectory smoothness:}{88}{section*.138}
-\contentsline {subsection}{\numberline {6.6.2}(R) Constrained Trajectory Expansion}{88}{subsection.6.6.2}
-\contentsline {paragraph}{Motivation:}{88}{section*.139}
+\contentsline {subsection}{\numberline {6.6.2}(R) Constrained Trajectory Expansion}{89}{subsection.6.6.2}
+\contentsline {paragraph}{Motivation:}{89}{section*.139}
 \contentsline {paragraph}{Rapid Exploration Tree}{89}{section*.140}
 \contentsline {paragraph}{The example}{89}{section*.142}
-\contentsline {paragraph}{Rapid Exploration Tree Node}{89}{section*.143}
-\contentsline {paragraph}{Wave-front propagation of Rapid Exploration Tree}{89}{section*.144}
+\contentsline {paragraph}{Rapid Exploration Tree Node}{90}{section*.143}
+\contentsline {paragraph}{Wave-front propagation of Rapid Exploration Tree}{90}{section*.144}
 \contentsline {paragraph}{Step: Initialization}{90}{section*.145}
 \contentsline {paragraph}{Step: Wave-front Propagation}{90}{section*.146}
-\contentsline {paragraph}{Step: After Layer Propagation Purge}{90}{section*.147}
+\contentsline {paragraph}{Step: After Layer Propagation Purge}{91}{section*.147}
 \contentsline {subsection}{\numberline {6.6.3}(R) Chaotic Reach set}{91}{subsection.6.6.3}
 \contentsline {paragraph}{Motivation:}{91}{section*.148}
 \contentsline {paragraph}{Background:}{91}{section*.149}
-\contentsline {paragraph}{Expansion Constraint Function Implementation}{91}{section*.150}
+\contentsline {paragraph}{Expansion Constraint Function Implementation}{92}{section*.150}
 \contentsline {paragraph}{Tuning Parameters}{92}{section*.151}
 \contentsline {paragraph}{Step: Initialization}{92}{section*.152}
 \contentsline {paragraph}{Step: Evaluate best trajectories with unique Footprints}{92}{section*.153}
-\contentsline {paragraph}{Step: Select candidates}{92}{section*.154}
+\contentsline {paragraph}{Step: Select candidates}{93}{section*.154}
 \contentsline {paragraph}{Example:}{93}{section*.155}
 \contentsline {paragraph}{Pros and Cons:}{94}{section*.157}
 \contentsline {subsection}{\numberline {6.6.4}(R) Harmonic Reach set}{94}{subsection.6.6.4}
