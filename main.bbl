@@ -64,6 +64,13 @@ Jos{\'e}~Queir{\'o}s Pinto, Paulo~Sousa Dias, Rui Gon{\c{c}}alves, Gil~Manuel
 \newblock In {\em Proceedings of the 7th Conference on Manoeuvring and Control
   of Marine Craft}, 2006.
 
+\bibitem{cernamaria2018}
+Maria Cerna.
+\newblock Usage of maps obtained by lidar in uav navigation.
+\newblock Master thesis, Institute of Automotive Mechatronics, Faculty of
+  Electrical Engineering and Information Technology, Slovak University of
+  Technology, Ilkovicova 3, Bratislava. Slovak Republic, jun 2018.
+
 \bibitem{gardi2015automated}
 Alessandro Gardi, Roberto Sabatini, Subramanian Ramasamy, Matthew Marino,
   et~al.
@@ -836,10 +843,11 @@ Pascal~Van Hentenryck and Laurent Michel.
 \newblock {\em Constraint-based local search}.
 \newblock The MIT press, 2009.
 
-\bibitem{sommerville2016analytical}
-Duncan Mclaren~Young Sommerville.
-\newblock {\em Analytical geometry of three dimensions}.
-\newblock Cambridge University Press, 2016.
+\bibitem{fiorini1998motion}
+Paolo Fiorini and Zvi Shiller.
+\newblock Motion planning in dynamic environments using velocity obstacles.
+\newblock {\em The International Journal of Robotics Research}, 17(7):760--772,
+  1998.
 
 \bibitem{shamos1975closest}
 Michael~Ian Shamos and Dan Hoey.
@@ -853,12 +861,6 @@ Jon~Louis Bentley, Bruce~W Weide, and Andrew~C Yao.
 \newblock {\em ACM Transactions on Mathematical Software (TOMS)},
   6(4):563--580, 1980.
 
-\bibitem{fiorini1998motion}
-Paolo Fiorini and Zvi Shiller.
-\newblock Motion planning in dynamic environments using velocity obstacles.
-\newblock {\em The International Journal of Robotics Research}, 17(7):760--772,
-  1998.
-
 \bibitem{bentley1979algorithms}
 Jon~Louis Bentley and Thomas~A Ottmann.
 \newblock Algorithms for reporting and counting geometric intersections.
@@ -869,6 +871,11 @@ Michael~Ian Shamos and Dan Hoey.
 \newblock Geometric intersection problems.
 \newblock In {\em 17th annual symposium on foundations of computer science},
   pages 208--215. IEEE, 1976.
+
+\bibitem{sommerville2016analytical}
+Duncan Mclaren~Young Sommerville.
+\newblock {\em Analytical geometry of three dimensions}.
+\newblock Cambridge University Press, 2016.
 
 \bibitem{lawrence1991polytope}
 Jim Lawrence.
