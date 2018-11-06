@@ -140,105 +140,105 @@
 \contentsline {section}{\numberline {6.1}(R) Overview}{67}{section.6.1}
 \contentsline {paragraph}{Structure of Avoidance Framework:}{67}{section*.90}
 \contentsline {paragraph}{Communication in Avoidance Framework:}{69}{section*.91}
-\contentsline {section}{\numberline {6.2}(R) Space Discretization - Avoidance Grid}{70}{section.6.2}
-\contentsline {paragraph}{Operation Space:}{70}{section*.92}
-\contentsline {paragraph}{LiDAR Reading Space Segmentation:}{70}{section*.93}
-\contentsline {paragraph}{Effective Operation Space - Avoidance Grid:}{71}{section*.94}
-\contentsline {paragraph}{Trajectory Intersection:}{73}{section*.96}
-\contentsline {paragraph}{Grid Scaling:}{73}{section*.97}
-\contentsline {paragraph}{Cell in Avoidance Grid Properties:}{74}{section*.98}
-\contentsline {section}{\numberline {6.3}(R) UAS Model and Control}{75}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}(R) UAS Nonlinear Model}{75}{subsection.6.3.1}
-\contentsline {paragraph}{Motivation:}{75}{section*.99}
-\contentsline {paragraph}{State Vector}{75}{section*.100}
-\contentsline {paragraph}{Input Vector}{75}{section*.101}
-\contentsline {paragraph}{UAS Nonlinear Model}{75}{section*.102}
-\contentsline {subsection}{\numberline {6.3.2}(R) Movement Automaton for UAS Model}{76}{subsection.6.3.2}
-\contentsline {paragraph}{Motivation:}{76}{section*.103}
-\contentsline {paragraph}{Movement Primitives}{76}{section*.104}
-\contentsline {paragraph}{Movements}{76}{section*.105}
-\contentsline {paragraph}{Movement Set}{77}{section*.106}
-\contentsline {paragraph}{Trajectory}{77}{section*.109}
-\contentsline {paragraph}{State Projection}{78}{section*.110}
-\contentsline {subsection}{\numberline {6.3.3}(R) Segmented Movement Automaton}{78}{subsection.6.3.3}
-\contentsline {paragraph}{Motivation:}{78}{section*.111}
-\contentsline {paragraph}{Partitioning UAS State Space:}{78}{section*.112}
-\contentsline {paragraph}{Segmented Movement Automaton:}{79}{section*.113}
-\contentsline {subsection}{\numberline {6.3.4}(R) Reference Trajectory Generator}{81}{subsection.6.3.4}
-\contentsline {paragraph}{Reference Trajectory Generator:}{81}{section*.116}
-\contentsline {paragraph}{Predictor:}{81}{section*.117}
-\contentsline {section}{\numberline {6.4}(W) Static Obstacles and Constraints}{82}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}(W) Detected obstacles}{82}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}(W) Map obstacles}{82}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}(W) Static constraints}{83}{subsection.6.4.3}
-\contentsline {section}{\numberline {6.5}(W) Moving Obstacles - Intruders and Constraints}{84}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}(W) Intruder Behaviour Prediction}{84}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}(W) Linear Intersection Model}{84}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}(W) Body-volume Intersection}{84}{subsection.6.5.3}
-\contentsline {subsection}{\numberline {6.5.4}(W) Maneuverability Uncertainty Intersection}{85}{subsection.6.5.4}
-\contentsline {subsection}{\numberline {6.5.5}(W) Moving Constraints}{85}{subsection.6.5.5}
-\contentsline {section}{\numberline {6.6}(R) Reach Set Approximation}{86}{section.6.6}
-\contentsline {paragraph}{Motivation:}{86}{section*.123}
-\contentsline {paragraph}{Proposed Solution Features:}{86}{section*.124}
-\contentsline {paragraph}{Discretization of Reach set:}{86}{section*.125}
-\contentsline {paragraph}{The Complete Reach Set}{86}{section*.126}
-\contentsline {paragraph}{The Reach Set Approximation by Movement Automaton}{87}{section*.127}
-\contentsline {paragraph}{Approximated Reach Set Containment:}{87}{section*.128}
-\contentsline {paragraph}{Properties:}{87}{section*.129}
-\contentsline {paragraph}{Passing cell:}{87}{section*.130}
-\contentsline {paragraph}{Reach Set Pruning:}{87}{section*.131}
-\contentsline {paragraph}{Reach Set Trajectory Tree:}{88}{section*.132}
-\contentsline {subsection}{\numberline {6.6.1}(R) Reach Set Performance Criteria}{88}{subsection.6.6.1}
-\contentsline {paragraph}{Motivation:}{88}{section*.133}
-\contentsline {paragraph}{Core Performance Criteria:}{88}{section*.134}
-\contentsline {paragraph}{Trajectory footprint:}{89}{section*.135}
-\contentsline {paragraph}{Coverage set:}{89}{section*.136}
-\contentsline {paragraph}{Coverage set properties:}{89}{section*.137}
-\contentsline {paragraph}{Trajectory smoothness:}{90}{section*.138}
-\contentsline {subsection}{\numberline {6.6.2}(R) Constrained Trajectory Expansion}{91}{subsection.6.6.2}
-\contentsline {paragraph}{Motivation:}{91}{section*.139}
-\contentsline {paragraph}{Rapid Exploration Tree}{91}{section*.140}
-\contentsline {paragraph}{The example}{91}{section*.142}
-\contentsline {paragraph}{Rapid Exploration Tree Node}{92}{section*.143}
-\contentsline {paragraph}{Wave-front propagation of Rapid Exploration Tree}{92}{section*.144}
-\contentsline {paragraph}{Step: Initialization}{92}{section*.145}
-\contentsline {paragraph}{Step: Wave-front Propagation}{92}{section*.146}
-\contentsline {paragraph}{Step: After Layer Propagation Purge}{93}{section*.147}
-\contentsline {subsection}{\numberline {6.6.3}(R) Chaotic Reach set}{93}{subsection.6.6.3}
-\contentsline {paragraph}{Motivation:}{93}{section*.148}
-\contentsline {paragraph}{Background:}{93}{section*.149}
-\contentsline {paragraph}{Expansion Constraint Function Implementation}{94}{section*.150}
-\contentsline {paragraph}{Tuning Parameters}{94}{section*.151}
-\contentsline {paragraph}{Step: Initialization}{94}{section*.152}
-\contentsline {paragraph}{Step: Evaluate best trajectories with unique Footprints}{94}{section*.153}
-\contentsline {paragraph}{Step: Select candidates}{95}{section*.154}
-\contentsline {paragraph}{Example:}{95}{section*.155}
-\contentsline {paragraph}{Pros and Cons:}{96}{section*.157}
-\contentsline {subsection}{\numberline {6.6.4}(R) Harmonic Reach set}{96}{subsection.6.6.4}
-\contentsline {paragraph}{Motivation:}{96}{section*.158}
-\contentsline {paragraph}{Background:}{96}{section*.159}
-\contentsline {paragraph}{Expansion Constraint Function Implementation}{97}{section*.160}
-\contentsline {paragraph}{Tuning Parameter:}{97}{section*.161}
-\contentsline {paragraph}{Step: Initialization}{97}{section*.162}
-\contentsline {paragraph}{Step: Evaluate smoothest trajectories with unique Footprints}{97}{section*.163}
-\contentsline {paragraph}{Step: Select candidates}{98}{section*.164}
-\contentsline {paragraph}{Example:}{98}{section*.165}
-\contentsline {paragraph}{Pros and Cons:}{99}{section*.167}
-\contentsline {subsection}{\numberline {6.6.5}(R) Combined Reach set}{99}{subsection.6.6.5}
-\contentsline {paragraph}{Motivation:}{99}{section*.168}
-\contentsline {paragraph}{Background:}{100}{section*.169}
-\contentsline {paragraph}{Combined Reach Set Calculation Function}{100}{section*.170}
-\contentsline {paragraph}{Merge Tree Function}{101}{section*.171}
-\contentsline {paragraph}{Example:}{101}{section*.172}
-\contentsline {paragraph}{Pros and Cons:}{102}{section*.174}
-\contentsline {subsection}{\numberline {6.6.6}(R) ACAS-X like Reach set}{102}{subsection.6.6.6}
-\contentsline {paragraph}{Motivation:}{102}{section*.175}
-\contentsline {paragraph}{Background:}{102}{section*.176}
-\contentsline {paragraph}{Expansion Constraint Function Implementation}{103}{section*.177}
-\contentsline {paragraph}{Step: Initialization}{104}{section*.178}
-\contentsline {paragraph}{Step: Candidate Selection Process}{104}{section*.179}
-\contentsline {paragraph}{Example:}{104}{section*.180}
-\contentsline {paragraph}{Pros and Cons:}{105}{section*.182}
+\contentsline {section}{\numberline {6.2}(R) UAS Model and Control}{70}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}(R) UAS Nonlinear Model}{70}{subsection.6.2.1}
+\contentsline {paragraph}{Motivation:}{70}{section*.92}
+\contentsline {paragraph}{State Vector}{70}{section*.93}
+\contentsline {paragraph}{Input Vector}{70}{section*.94}
+\contentsline {paragraph}{UAS Nonlinear Model}{70}{section*.95}
+\contentsline {subsection}{\numberline {6.2.2}(R) Movement Automaton for UAS Model}{71}{subsection.6.2.2}
+\contentsline {paragraph}{Motivation:}{71}{section*.96}
+\contentsline {paragraph}{Movement Primitives}{71}{section*.97}
+\contentsline {paragraph}{Movements}{71}{section*.98}
+\contentsline {paragraph}{Movement Set}{72}{section*.99}
+\contentsline {paragraph}{Trajectory}{72}{section*.102}
+\contentsline {paragraph}{State Projection}{73}{section*.103}
+\contentsline {subsection}{\numberline {6.2.3}(R) Segmented Movement Automaton}{73}{subsection.6.2.3}
+\contentsline {paragraph}{Motivation:}{73}{section*.104}
+\contentsline {paragraph}{Partitioning UAS State Space:}{73}{section*.105}
+\contentsline {paragraph}{Segmented Movement Automaton:}{74}{section*.106}
+\contentsline {subsection}{\numberline {6.2.4}(R) Reference Trajectory Generator}{76}{subsection.6.2.4}
+\contentsline {paragraph}{Reference Trajectory Generator:}{76}{section*.109}
+\contentsline {paragraph}{Predictor:}{76}{section*.110}
+\contentsline {section}{\numberline {6.3}(R) Space Discretization - Avoidance Grid}{77}{section.6.3}
+\contentsline {paragraph}{Operation Space:}{77}{section*.111}
+\contentsline {paragraph}{LiDAR Reading Space Segmentation:}{77}{section*.112}
+\contentsline {paragraph}{Effective Operation Space - Avoidance Grid:}{78}{section*.113}
+\contentsline {paragraph}{Trajectory Intersection:}{80}{section*.115}
+\contentsline {paragraph}{Grid Scaling:}{80}{section*.116}
+\contentsline {paragraph}{Cell in Avoidance Grid Properties:}{81}{section*.117}
+\contentsline {section}{\numberline {6.4}(R) Reach Set Approximation}{82}{section.6.4}
+\contentsline {paragraph}{Motivation:}{82}{section*.118}
+\contentsline {paragraph}{Proposed Solution Features:}{82}{section*.119}
+\contentsline {paragraph}{Discretization of Reach set:}{82}{section*.120}
+\contentsline {paragraph}{The Complete Reach Set}{82}{section*.121}
+\contentsline {paragraph}{The Reach Set Approximation by Movement Automaton}{83}{section*.122}
+\contentsline {paragraph}{Approximated Reach Set Containment:}{83}{section*.123}
+\contentsline {paragraph}{Properties:}{83}{section*.124}
+\contentsline {paragraph}{Passing cell:}{83}{section*.125}
+\contentsline {paragraph}{Reach Set Pruning:}{83}{section*.126}
+\contentsline {paragraph}{Reach Set Trajectory Tree:}{84}{section*.127}
+\contentsline {subsection}{\numberline {6.4.1}(R) Reach Set Performance Criteria}{84}{subsection.6.4.1}
+\contentsline {paragraph}{Motivation:}{84}{section*.128}
+\contentsline {paragraph}{Core Performance Criteria:}{84}{section*.129}
+\contentsline {paragraph}{Trajectory footprint:}{85}{section*.130}
+\contentsline {paragraph}{Coverage set:}{85}{section*.131}
+\contentsline {paragraph}{Coverage set properties:}{85}{section*.132}
+\contentsline {paragraph}{Trajectory smoothness:}{86}{section*.133}
+\contentsline {subsection}{\numberline {6.4.2}(R) Constrained Trajectory Expansion}{87}{subsection.6.4.2}
+\contentsline {paragraph}{Motivation:}{87}{section*.134}
+\contentsline {paragraph}{Rapid Exploration Tree}{87}{section*.135}
+\contentsline {paragraph}{The example}{87}{section*.137}
+\contentsline {paragraph}{Rapid Exploration Tree Node}{88}{section*.138}
+\contentsline {paragraph}{Wave-front propagation of Rapid Exploration Tree}{88}{section*.139}
+\contentsline {paragraph}{Step: Initialization}{88}{section*.140}
+\contentsline {paragraph}{Step: Wave-front Propagation}{88}{section*.141}
+\contentsline {paragraph}{Step: After Layer Propagation Purge}{89}{section*.142}
+\contentsline {subsection}{\numberline {6.4.3}(R) Chaotic Reach set}{89}{subsection.6.4.3}
+\contentsline {paragraph}{Motivation:}{89}{section*.143}
+\contentsline {paragraph}{Background:}{89}{section*.144}
+\contentsline {paragraph}{Expansion Constraint Function Implementation}{90}{section*.145}
+\contentsline {paragraph}{Tuning Parameters}{90}{section*.146}
+\contentsline {paragraph}{Step: Initialization}{90}{section*.147}
+\contentsline {paragraph}{Step: Evaluate best trajectories with unique Footprints}{90}{section*.148}
+\contentsline {paragraph}{Step: Select candidates}{91}{section*.149}
+\contentsline {paragraph}{Example:}{91}{section*.150}
+\contentsline {paragraph}{Pros and Cons:}{92}{section*.152}
+\contentsline {subsection}{\numberline {6.4.4}(R) Harmonic Reach set}{92}{subsection.6.4.4}
+\contentsline {paragraph}{Motivation:}{92}{section*.153}
+\contentsline {paragraph}{Background:}{92}{section*.154}
+\contentsline {paragraph}{Expansion Constraint Function Implementation}{93}{section*.155}
+\contentsline {paragraph}{Tuning Parameter:}{93}{section*.156}
+\contentsline {paragraph}{Step: Initialization}{93}{section*.157}
+\contentsline {paragraph}{Step: Evaluate smoothest trajectories with unique Footprints}{93}{section*.158}
+\contentsline {paragraph}{Step: Select candidates}{94}{section*.159}
+\contentsline {paragraph}{Example:}{94}{section*.160}
+\contentsline {paragraph}{Pros and Cons:}{95}{section*.162}
+\contentsline {subsection}{\numberline {6.4.5}(R) Combined Reach set}{95}{subsection.6.4.5}
+\contentsline {paragraph}{Motivation:}{95}{section*.163}
+\contentsline {paragraph}{Background:}{96}{section*.164}
+\contentsline {paragraph}{Combined Reach Set Calculation Function}{96}{section*.165}
+\contentsline {paragraph}{Merge Tree Function}{97}{section*.166}
+\contentsline {paragraph}{Example:}{97}{section*.167}
+\contentsline {paragraph}{Pros and Cons:}{98}{section*.169}
+\contentsline {subsection}{\numberline {6.4.6}(R) ACAS-X like Reach set}{98}{subsection.6.4.6}
+\contentsline {paragraph}{Motivation:}{98}{section*.170}
+\contentsline {paragraph}{Background:}{98}{section*.171}
+\contentsline {paragraph}{Expansion Constraint Function Implementation}{99}{section*.172}
+\contentsline {paragraph}{Step: Initialization}{100}{section*.173}
+\contentsline {paragraph}{Step: Candidate Selection Process}{100}{section*.174}
+\contentsline {paragraph}{Example:}{100}{section*.175}
+\contentsline {paragraph}{Pros and Cons:}{101}{section*.177}
+\contentsline {section}{\numberline {6.5}(W) Static Obstacles and Constraints}{102}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}(W) Detected obstacles}{102}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}(W) Map obstacles}{102}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}(W) Static constraints}{103}{subsection.6.5.3}
+\contentsline {section}{\numberline {6.6}(W) Moving Obstacles - Intruders and Constraints}{104}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}(W) Intruder Behaviour Prediction}{104}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}(W) Linear Intersection Model}{104}{subsection.6.6.2}
+\contentsline {subsection}{\numberline {6.6.3}(W) Body-volume Intersection}{104}{subsection.6.6.3}
+\contentsline {subsection}{\numberline {6.6.4}(W) Maneuverability Uncertainty Intersection}{105}{subsection.6.6.4}
+\contentsline {subsection}{\numberline {6.6.5}(W) Moving Constraints}{105}{subsection.6.6.5}
 \contentsline {section}{\numberline {6.7}(R) Avoidance Concept}{106}{section.6.7}
 \contentsline {subsection}{\numberline {6.7.1}(R) Data fusion}{106}{subsection.6.7.1}
 \contentsline {paragraph}{Visibility:}{106}{section*.183}

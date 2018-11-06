@@ -17,17 +17,17 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Avoidance levels based on reaction time.\relax }}{66}{figure.caption.87}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Avoidance Framework Concept.\relax }}{67}{figure.caption.89}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Example: The \emph {LiDAR} reading segmentation - cells.\relax }}{71}{figure.caption.95}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Obstacle, UAS local, and UAS global coordinate frame relations.\relax }}{82}{figure.caption.118}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Obstacle hindrance impact on visibility in \emph {Avoidance Grid Slice}.\relax }}{82}{figure.caption.119}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Map obstacle states after \emph {Data fusion}.\relax }}{83}{figure.caption.120}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Elliptical cone represented maneuverability approximation. \relax }}{85}{figure.caption.121}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Properties for one elliptic cone slice. \relax }}{85}{figure.caption.122}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces \emph {Rapid Exploration tree as result of \emph {Constrained trajectory expansion}}.\relax }}{91}{figure.caption.141}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces \emph {Chaotic \emph {reach set} approximation}.\relax }}{96}{figure.caption.156}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces \emph {Harmonic \emph {reach set} approximation}.\relax }}{99}{figure.caption.166}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces \emph {Combined \emph {reach set} approximation}.\relax }}{102}{figure.caption.173}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces ACAS-X imitation \emph {reach set} approximation for various \emph {separation modes}. \relax }}{105}{figure.caption.181}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Example: The \emph {LiDAR} reading segmentation - cells.\relax }}{78}{figure.caption.114}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces \emph {Rapid Exploration tree as result of \emph {Constrained trajectory expansion}}.\relax }}{87}{figure.caption.136}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces \emph {Chaotic \emph {reach set} approximation}.\relax }}{92}{figure.caption.151}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces \emph {Harmonic \emph {reach set} approximation}.\relax }}{95}{figure.caption.161}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces \emph {Combined \emph {reach set} approximation}.\relax }}{98}{figure.caption.168}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces ACAS-X imitation \emph {reach set} approximation for various \emph {separation modes}. \relax }}{101}{figure.caption.176}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Obstacle, UAS local, and UAS global coordinate frame relations.\relax }}{102}{figure.caption.178}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Obstacle hindrance impact on visibility in \emph {Avoidance Grid Slice}.\relax }}{102}{figure.caption.179}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Map obstacle states after \emph {Data fusion}.\relax }}{103}{figure.caption.180}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Elliptical cone represented maneuverability approximation. \relax }}{105}{figure.caption.181}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Properties for one elliptic cone slice. \relax }}{105}{figure.caption.182}
 \contentsline {figure}{\numberline {6.14}{\ignorespaces Significant steps of \emph {Avoidance grid run} (inner loop).\relax }}{111}{figure.caption.194}
 \contentsline {figure}{\numberline {6.15}{\ignorespaces Example: The situation to be evaluated by \emph {Avoidance Run}.\relax }}{114}{figure.caption.198}
 \contentsline {figure}{\numberline {6.16}{\ignorespaces Example: The \emph {Visibility} evaluation by \emph {Avoidance Run}.\relax }}{115}{figure.caption.199}

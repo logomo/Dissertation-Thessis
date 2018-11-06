@@ -563,113 +563,245 @@
 \newlabel{fig:AvoidanceFrameworkConceptNew}{{6.2}{67}{Avoidance Framework Concept.\relax }{figure.caption.89}{}}
 \@writefile{toc}{\contentsline {paragraph}{Structure of Avoidance Framework:}{67}{section*.90}}
 \@writefile{toc}{\contentsline {paragraph}{Communication in Avoidance Framework:}{69}{section*.91}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}(R) UAS Model and Control}{70}{section.6.2}}
+\newlabel{s:modelMAImplementation}{{6.2}{70}{(R) UAS Model and Control}{section.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}(R) UAS Nonlinear Model}{70}{subsection.6.2.1}}
+\newlabel{s:UASNonlinearModel}{{6.2.1}{70}{(R) UAS Nonlinear Model}{subsection.6.2.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Motivation:}{70}{section*.92}}
+\@writefile{toc}{\contentsline {paragraph}{State Vector}{70}{section*.93}}
+\newlabel{eq:simple3dStatevector}{{6.1}{70}{State Vector}{equation.6.2.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Input Vector}{70}{section*.94}}
+\newlabel{eq:simple3dInputVector}{{6.2}{70}{Input Vector}{equation.6.2.2}{}}
+\newlabel{eq:simple3dvelocityDistribution}{{6.3}{70}{Input Vector}{equation.6.2.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{UAS Nonlinear Model}{70}{section*.95}}
+\newlabel{eq:UASNonlinearModelSimple}{{6.4}{70}{UAS Nonlinear Model}{equation.6.2.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}(R) Movement Automaton for UAS Model}{71}{subsection.6.2.2}}
+\newlabel{s:movementAutomatonDefinition}{{6.2.2}{71}{(R) Movement Automaton for UAS Model}{subsection.6.2.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Motivation:}{71}{section*.96}}
+\@writefile{toc}{\contentsline {paragraph}{Movement Primitives}{71}{section*.97}}
+\newlabel{ass:transitionTime}{{6}{71}{}{assumption.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Movements}{71}{section*.98}}
+\newlabel{eq:applyMovement}{{6.5}{71}{Movements}{equation.6.2.5}{}}
+\newlabel{eq:applyMovement1}{{6.6}{71}{Movements}{equation.6.2.6}{}}
+\newlabel{eq:applyMovement2}{{6.7}{71}{Movements}{equation.6.2.7}{}}
+\newlabel{eq:ourImput}{{6.8}{71}{Movements}{equation.6.2.8}{}}
+\newlabel{eq:ourState}{{6.9}{71}{Movements}{equation.6.2.9}{}}
+\newlabel{eq:uasLinearDiscreteModel}{{6.10}{71}{Movements}{equation.6.2.10}{}}
+\@writefile{toc}{\contentsline {paragraph}{Movement Set}{72}{section*.99}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Input values for main axes movements.\relax }}{72}{table.caption.100}}
+\newlabel{tab:movements1}{{6.1}{72}{Input values for main axes movements.\relax }{table.caption.100}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Input values for diagonal axes movements.\relax }}{72}{table.caption.101}}
+\newlabel{tab:movements2}{{6.2}{72}{Input values for diagonal axes movements.\relax }{table.caption.101}{}}
+\newlabel{eq:OurMovementSet}{{6.11}{72}{}{equation.6.2.11}{}}
+\@writefile{toc}{\contentsline {paragraph}{Trajectory}{72}{section*.102}}
+\newlabel{eq:ourBuffer}{{6.12}{72}{Trajectory}{equation.6.2.12}{}}
+\newlabel{eq:ourTrajectoryImplementation}{{6.13}{72}{Trajectory}{equation.6.2.13}{}}
+\citation{fossen2011mathematical}
+\@writefile{toc}{\contentsline {paragraph}{State Projection}{73}{section*.103}}
+\newlabel{eq:ourStateProjection}{{6.15}{73}{State Projection}{equation.6.2.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}(R) Segmented Movement Automaton}{73}{subsection.6.2.3}}
+\newlabel{s:segmentedMovementAutomaton}{{6.2.3}{73}{(R) Segmented Movement Automaton}{subsection.6.2.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Motivation:}{73}{section*.104}}
+\@writefile{toc}{\contentsline {paragraph}{Partitioning UAS State Space:}{73}{section*.105}}
+\newlabel{def:stateSpacePartition}{{20}{73}{}{definition.20}{}}
+\newlabel{eq:segmentedStateSpace}{{6.21}{74}{}{equation.6.2.21}{}}
+\@writefile{toc}{\contentsline {paragraph}{Segmented Movement Automaton:}{74}{section*.106}}
+\newlabel{def:segmentMovementAutomaton}{{21}{75}{}{definition.21}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Orientation input values for main axes movements.\relax }}{75}{table.caption.107}}
+\newlabel{tab:movements3}{{6.3}{75}{Orientation input values for main axes movements.\relax }{table.caption.107}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces Orientation input values for diagonal axes movements.\relax }}{75}{table.caption.108}}
+\newlabel{tab:movements4}{{6.4}{75}{Orientation input values for diagonal axes movements.\relax }{table.caption.108}{}}
+\newlabel{def:segmentedMovementAutomaton}{{22}{75}{}{definition.22}{}}
+\newlabel{eq:activeMovementAutomaton}{{6.23}{75}{}{equation.6.2.23}{}}
+\newlabel{eq:ourTrajectoryImplementationSegmented}{{6.24}{75}{}{equation.6.2.24}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}(R) Reference Trajectory Generator}{76}{subsection.6.2.4}}
+\newlabel{s:referenceTrajectoryGenerator}{{6.2.4}{76}{(R) Reference Trajectory Generator}{subsection.6.2.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Reference Trajectory Generator:}{76}{section*.109}}
+\newlabel{eq:generatedReferenceTrajectory}{{6.25}{76}{Reference Trajectory Generator:}{equation.6.2.25}{}}
+\@writefile{toc}{\contentsline {paragraph}{Predictor:}{76}{section*.110}}
 \citation{homm2010efficient}
 \citation{gupta2010comparative}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}(R) Space Discretization - Avoidance Grid}{70}{section.6.2}}
-\newlabel{s:AvoidanceGrid}{{6.2}{70}{(R) Space Discretization - Avoidance Grid}{section.6.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Operation Space:}{70}{section*.92}}
-\@writefile{toc}{\contentsline {paragraph}{LiDAR Reading Space Segmentation:}{70}{section*.93}}
-\newlabel{def:cell}{{20}{70}{}{definition.20}{}}
-\newlabel{eq:boundedSpaceCell}{{6.1}{70}{}{equation.6.2.1}{}}
-\newlabel{eq:LidarHitsCell}{{6.2}{70}{}{equation.6.2.2}{}}
-\newlabel{eq:passingHitsCell}{{6.3}{71}{}{equation.6.2.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Effective Operation Space - Avoidance Grid:}{71}{section*.94}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Example: The \emph  {LiDAR} reading segmentation - cells.\relax }}{71}{figure.caption.95}}
-\newlabel{fig:LidarSpaceSegmentation}{{6.3}{71}{Example: The \emph {LiDAR} reading segmentation - cells.\relax }{figure.caption.95}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}(R) Space Discretization - Avoidance Grid}{77}{section.6.3}}
+\newlabel{s:AvoidanceGrid}{{6.3}{77}{(R) Space Discretization - Avoidance Grid}{section.6.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Operation Space:}{77}{section*.111}}
+\@writefile{toc}{\contentsline {paragraph}{LiDAR Reading Space Segmentation:}{77}{section*.112}}
+\newlabel{def:cell}{{23}{77}{}{definition.23}{}}
+\newlabel{eq:boundedSpaceCell}{{6.26}{77}{}{equation.6.3.26}{}}
+\newlabel{eq:LidarHitsCell}{{6.27}{77}{}{equation.6.3.27}{}}
+\newlabel{eq:passingHitsCell}{{6.28}{78}{}{equation.6.3.28}{}}
+\@writefile{toc}{\contentsline {paragraph}{Effective Operation Space - Avoidance Grid:}{78}{section*.113}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Example: The \emph  {LiDAR} reading segmentation - cells.\relax }}{78}{figure.caption.114}}
+\newlabel{fig:LidarSpaceSegmentation}{{6.3}{78}{Example: The \emph {LiDAR} reading segmentation - cells.\relax }{figure.caption.114}{}}
 \citation{zaiane2002clustering}
-\newlabel{def:AvoidanceGrid}{{21}{72}{}{definition.21}{}}
-\newlabel{eq:avoidanceGridCellDistanceRange}{{6.4}{72}{}{equation.6.2.4}{}}
-\newlabel{eq:avoidanceGridCellHorizontalRange}{{6.5}{72}{}{equation.6.2.5}{}}
-\newlabel{eq:avoidanceGridCellVerticalRange}{{6.6}{72}{}{equation.6.2.6}{}}
+\newlabel{def:AvoidanceGrid}{{24}{79}{}{definition.24}{}}
+\newlabel{eq:avoidanceGridCellDistanceRange}{{6.29}{79}{}{equation.6.3.29}{}}
+\newlabel{eq:avoidanceGridCellHorizontalRange}{{6.30}{79}{}{equation.6.3.30}{}}
+\newlabel{eq:avoidanceGridCellVerticalRange}{{6.31}{79}{}{equation.6.3.31}{}}
 \citation{sabatini2014lidar}
 \citation{kurzhanskiy2006ellipsoidal}
-\newlabel{eq:avoidanceGridCellSpace}{{6.7}{73}{}{equation.6.2.7}{}}
-\@writefile{toc}{\contentsline {paragraph}{Trajectory Intersection:}{73}{section*.96}}
-\@writefile{toc}{\contentsline {paragraph}{Grid Scaling:}{73}{section*.97}}
-\@writefile{toc}{\contentsline {paragraph}{Cell in Avoidance Grid Properties:}{74}{section*.98}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}(R) UAS Model and Control}{75}{section.6.3}}
-\newlabel{s:modelMAImplementation}{{6.3}{75}{(R) UAS Model and Control}{section.6.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}(R) UAS Nonlinear Model}{75}{subsection.6.3.1}}
-\newlabel{s:UASNonlinearModel}{{6.3.1}{75}{(R) UAS Nonlinear Model}{subsection.6.3.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Motivation:}{75}{section*.99}}
-\@writefile{toc}{\contentsline {paragraph}{State Vector}{75}{section*.100}}
-\newlabel{eq:simple3dStatevector}{{6.14}{75}{State Vector}{equation.6.3.14}{}}
-\@writefile{toc}{\contentsline {paragraph}{Input Vector}{75}{section*.101}}
-\newlabel{eq:simple3dInputVector}{{6.15}{75}{Input Vector}{equation.6.3.15}{}}
-\newlabel{eq:simple3dvelocityDistribution}{{6.16}{75}{Input Vector}{equation.6.3.16}{}}
-\@writefile{toc}{\contentsline {paragraph}{UAS Nonlinear Model}{75}{section*.102}}
-\newlabel{eq:UASNonlinearModelSimple}{{6.17}{75}{UAS Nonlinear Model}{equation.6.3.17}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}(R) Movement Automaton for UAS Model}{76}{subsection.6.3.2}}
-\newlabel{s:movementAutomatonDefinition}{{6.3.2}{76}{(R) Movement Automaton for UAS Model}{subsection.6.3.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Motivation:}{76}{section*.103}}
-\@writefile{toc}{\contentsline {paragraph}{Movement Primitives}{76}{section*.104}}
-\newlabel{ass:transitionTime}{{6}{76}{}{assumption.6}{}}
-\@writefile{toc}{\contentsline {paragraph}{Movements}{76}{section*.105}}
-\newlabel{eq:applyMovement}{{6.18}{76}{Movements}{equation.6.3.18}{}}
-\newlabel{eq:applyMovement1}{{6.19}{76}{Movements}{equation.6.3.19}{}}
-\newlabel{eq:applyMovement2}{{6.20}{76}{Movements}{equation.6.3.20}{}}
-\newlabel{eq:ourImput}{{6.21}{76}{Movements}{equation.6.3.21}{}}
-\newlabel{eq:ourState}{{6.22}{76}{Movements}{equation.6.3.22}{}}
-\newlabel{eq:uasLinearDiscreteModel}{{6.23}{76}{Movements}{equation.6.3.23}{}}
-\@writefile{toc}{\contentsline {paragraph}{Movement Set}{77}{section*.106}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Input values for main axes movements.\relax }}{77}{table.caption.107}}
-\newlabel{tab:movements1}{{6.1}{77}{Input values for main axes movements.\relax }{table.caption.107}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Input values for diagonal axes movements.\relax }}{77}{table.caption.108}}
-\newlabel{tab:movements2}{{6.2}{77}{Input values for diagonal axes movements.\relax }{table.caption.108}{}}
-\newlabel{eq:OurMovementSet}{{6.24}{77}{}{equation.6.3.24}{}}
-\@writefile{toc}{\contentsline {paragraph}{Trajectory}{77}{section*.109}}
-\newlabel{eq:ourBuffer}{{6.25}{77}{Trajectory}{equation.6.3.25}{}}
-\newlabel{eq:ourTrajectoryImplementation}{{6.26}{77}{Trajectory}{equation.6.3.26}{}}
-\citation{fossen2011mathematical}
-\@writefile{toc}{\contentsline {paragraph}{State Projection}{78}{section*.110}}
-\newlabel{eq:ourStateProjection}{{6.28}{78}{State Projection}{equation.6.3.28}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}(R) Segmented Movement Automaton}{78}{subsection.6.3.3}}
-\newlabel{s:segmentedMovementAutomaton}{{6.3.3}{78}{(R) Segmented Movement Automaton}{subsection.6.3.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Motivation:}{78}{section*.111}}
-\@writefile{toc}{\contentsline {paragraph}{Partitioning UAS State Space:}{78}{section*.112}}
-\newlabel{def:stateSpacePartition}{{22}{78}{}{definition.22}{}}
-\newlabel{eq:segmentedStateSpace}{{6.34}{79}{}{equation.6.3.34}{}}
-\@writefile{toc}{\contentsline {paragraph}{Segmented Movement Automaton:}{79}{section*.113}}
-\newlabel{def:segmentMovementAutomaton}{{23}{80}{}{definition.23}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Orientation input values for main axes movements.\relax }}{80}{table.caption.114}}
-\newlabel{tab:movements3}{{6.3}{80}{Orientation input values for main axes movements.\relax }{table.caption.114}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces Orientation input values for diagonal axes movements.\relax }}{80}{table.caption.115}}
-\newlabel{tab:movements4}{{6.4}{80}{Orientation input values for diagonal axes movements.\relax }{table.caption.115}{}}
-\newlabel{def:segmentedMovementAutomaton}{{24}{80}{}{definition.24}{}}
-\newlabel{eq:activeMovementAutomaton}{{6.36}{80}{}{equation.6.3.36}{}}
-\newlabel{eq:ourTrajectoryImplementationSegmented}{{6.37}{80}{}{equation.6.3.37}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}(R) Reference Trajectory Generator}{81}{subsection.6.3.4}}
-\newlabel{s:referenceTrajectoryGenerator}{{6.3.4}{81}{(R) Reference Trajectory Generator}{subsection.6.3.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Reference Trajectory Generator:}{81}{section*.116}}
-\newlabel{eq:generatedReferenceTrajectory}{{6.38}{81}{Reference Trajectory Generator:}{equation.6.3.38}{}}
-\@writefile{toc}{\contentsline {paragraph}{Predictor:}{81}{section*.117}}
+\newlabel{eq:avoidanceGridCellSpace}{{6.32}{80}{}{equation.6.3.32}{}}
+\@writefile{toc}{\contentsline {paragraph}{Trajectory Intersection:}{80}{section*.115}}
+\@writefile{toc}{\contentsline {paragraph}{Grid Scaling:}{80}{section*.116}}
+\@writefile{toc}{\contentsline {paragraph}{Cell in Avoidance Grid Properties:}{81}{section*.117}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}(R) Reach Set Approximation}{82}{section.6.4}}
+\newlabel{s:reachSet}{{6.4}{82}{(R) Reach Set Approximation}{section.6.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Motivation:}{82}{section*.118}}
+\@writefile{toc}{\contentsline {paragraph}{Proposed Solution Features:}{82}{section*.119}}
+\@writefile{toc}{\contentsline {paragraph}{Discretization of Reach set:}{82}{section*.120}}
+\newlabel{def:ReachSetApproximationByMovementAutomaton}{{25}{82}{Reach set Approximation by Movement Automaton}{definition.25}{}}
+\@writefile{toc}{\contentsline {paragraph}{The Complete Reach Set}{82}{section*.121}}
+\newlabel{eq:reachSetFormalDefintion}{{6.39}{82}{The Complete Reach Set}{equation.6.4.39}{}}
+\citation{blanchini1999set}
+\@writefile{toc}{\contentsline {paragraph}{The Reach Set Approximation by Movement Automaton}{83}{section*.122}}
+\newlabel{eq:ReachSetDefinitionDiscrete}{{6.40}{83}{The Reach Set Approximation by Movement Automaton}{equation.6.4.40}{}}
+\@writefile{toc}{\contentsline {paragraph}{Approximated Reach Set Containment:}{83}{section*.123}}
+\newlabel{def:ContainedReducedReachSet}{{26}{83}{Contained Aproximated Reach Set}{definition.26}{}}
+\newlabel{eq:containedReachSet}{{6.41}{83}{Contained Aproximated Reach Set}{equation.6.4.41}{}}
+\@writefile{toc}{\contentsline {paragraph}{Properties:}{83}{section*.124}}
+\@writefile{toc}{\contentsline {paragraph}{Passing cell:}{83}{section*.125}}
+\@writefile{toc}{\contentsline {paragraph}{Reach Set Pruning:}{83}{section*.126}}
+\citation{birmingham1988tree}
+\citation{gomola2017obstacle}
+\@writefile{toc}{\contentsline {paragraph}{Reach Set Trajectory Tree:}{84}{section*.127}}
+\newlabel{eq:trajectoryTree}{{6.42}{84}{Reach Set Trajectory Tree:}{equation.6.4.42}{}}
+\newlabel{eq:reachsetIntersectionConstraintSet}{{6.43}{84}{Reach Set Trajectory Tree:}{equation.6.4.43}{}}
+\newlabel{def:PrunedReachSet}{{27}{84}{Pruned Reach Set}{definition.27}{}}
+\newlabel{eq:PrunedReachSet}{{6.44}{84}{Pruned Reach Set}{equation.6.4.44}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}(R) Reach Set Performance Criteria}{84}{subsection.6.4.1}}
+\newlabel{s:ReachSetPerformanceCriteria}{{6.4.1}{84}{(R) Reach Set Performance Criteria}{subsection.6.4.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Motivation:}{84}{section*.128}}
+\newlabel{eq:fullReachSetNodeCount}{{6.45}{84}{Motivation:}{equation.6.4.45}{}}
+\@writefile{toc}{\contentsline {paragraph}{Core Performance Criteria:}{84}{section*.129}}
+\@writefile{toc}{\contentsline {paragraph}{Trajectory footprint:}{85}{section*.130}}
+\newlabel{def:trajectoryFootprint}{{28}{85}{Trajectory footprint}{definition.28}{}}
+\newlabel{eq:setOfPassedCells}{{6.46}{85}{Trajectory footprint}{equation.6.4.46}{}}
+\newlabel{eq:TrajectoryEquality}{{6.47}{85}{Trajectory footprint}{equation.6.4.47}{}}
+\@writefile{toc}{\contentsline {paragraph}{Coverage set:}{85}{section*.131}}
+\newlabel{def:CoverageSet}{{29}{85}{Coverage Set}{definition.29}{}}
+\newlabel{eq:CoverageSet}{{6.48}{85}{Coverage Set}{equation.6.4.48}{}}
+\@writefile{toc}{\contentsline {paragraph}{Coverage set properties:}{85}{section*.132}}
+\newlabel{def:coverageRatio}{{30}{86}{Coverage Ratio}{definition.30}{}}
+\newlabel{eq:CoverageRatio}{{6.49}{86}{Coverage Ratio}{equation.6.4.49}{}}
+\@writefile{toc}{\contentsline {paragraph}{Trajectory smoothness:}{86}{section*.133}}
+\newlabel{eq:ChaoticSmoothMovementSetDefinition}{{6.50}{86}{Trajectory smoothness:}{equation.6.4.50}{}}
+\newlabel{eq:SmoothnesClasificatorCounter}{{6.51}{86}{Trajectory smoothness:}{equation.6.4.51}{}}
+\newlabel{def:SmoothnessRatingForTrajectory}{{31}{86}{Smoothness Rating for Trajectory}{definition.31}{}}
+\citation{goerzen2009survey}
+\citation{plaisant2002spacetree}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}(R) Constrained Trajectory Expansion}{87}{subsection.6.4.2}}
+\newlabel{s:constrainedTrajectoryExpansion}{{6.4.2}{87}{(R) Constrained Trajectory Expansion}{subsection.6.4.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Motivation:}{87}{section*.134}}
+\@writefile{toc}{\contentsline {paragraph}{Rapid Exploration Tree}{87}{section*.135}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces \emph  {Rapid Exploration tree as result of \emph  {Constrained trajectory expansion}}.\relax }}{87}{figure.caption.136}}
+\newlabel{fig:rapidExplorationTrajectoryTree}{{6.4}{87}{\emph {Rapid Exploration tree as result of \emph {Constrained trajectory expansion}}.\relax }{figure.caption.136}{}}
+\@writefile{toc}{\contentsline {paragraph}{The example}{87}{section*.137}}
+\@writefile{toc}{\contentsline {paragraph}{Rapid Exploration Tree Node}{88}{section*.138}}
+\@writefile{toc}{\contentsline {paragraph}{Wave-front propagation of Rapid Exploration Tree}{88}{section*.139}}
+\@writefile{toc}{\contentsline {paragraph}{Step: Initialization}{88}{section*.140}}
+\@writefile{toc}{\contentsline {paragraph}{Step: Wave-front Propagation}{88}{section*.141}}
+\citation{mingers1989empirical}
+\@writefile{toc}{\contentsline {paragraph}{Step: After Layer Propagation Purge}{89}{section*.142}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {6.1}{\ignorespaces \emph  {Wave-front propagation} of \emph  {Rapid Exploration Tree} to form \emph  {Reach Set}.\relax }}{89}{algocf.6.1}}
+\newlabel{alg:Wavefront Propagation}{{6.1}{89}{Step: After Layer Propagation Purge}{algocf.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}(R) Chaotic Reach set}{89}{subsection.6.4.3}}
+\newlabel{s:chaoticReachSet}{{6.4.3}{89}{(R) Chaotic Reach set}{subsection.6.4.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Motivation:}{89}{section*.143}}
+\@writefile{toc}{\contentsline {paragraph}{Background:}{89}{section*.144}}
+\@writefile{toc}{\contentsline {paragraph}{Expansion Constraint Function Implementation}{90}{section*.145}}
+\@writefile{toc}{\contentsline {paragraph}{Tuning Parameters}{90}{section*.146}}
+\@writefile{toc}{\contentsline {paragraph}{Step: Initialization}{90}{section*.147}}
+\@writefile{toc}{\contentsline {paragraph}{Step: Evaluate best trajectories with unique Footprints}{90}{section*.148}}
+\@writefile{toc}{\contentsline {paragraph}{Step: Select candidates}{91}{section*.149}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {6.2}{\ignorespaces Expansion Constraint function for \emph  {Chaotic Reach Set Approximation}\relax }}{91}{algocf.6.2}}
+\newlabel{alg:ExpansionConstraintFunctionForChaoticReachSet}{{6.2}{91}{Step: Select candidates}{algocf.6.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Example:}{91}{section*.150}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces \emph  {Chaotic \emph  {reach set} approximation}.\relax }}{92}{figure.caption.151}}
+\newlabel{fig:chaoticReachSetApproximation}{{6.5}{92}{\emph {Chaotic \emph {reach set} approximation}.\relax }{figure.caption.151}{}}
+\@writefile{toc}{\contentsline {paragraph}{Pros and Cons:}{92}{section*.152}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.4}(R) Harmonic Reach set}{92}{subsection.6.4.4}}
+\newlabel{s:harmonicReachSet}{{6.4.4}{92}{(R) Harmonic Reach set}{subsection.6.4.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Motivation:}{92}{section*.153}}
+\@writefile{toc}{\contentsline {paragraph}{Background:}{92}{section*.154}}
+\@writefile{toc}{\contentsline {paragraph}{Expansion Constraint Function Implementation}{93}{section*.155}}
+\@writefile{toc}{\contentsline {paragraph}{Tuning Parameter:}{93}{section*.156}}
+\@writefile{toc}{\contentsline {paragraph}{Step: Initialization}{93}{section*.157}}
+\@writefile{toc}{\contentsline {paragraph}{Step: Evaluate smoothest trajectories with unique Footprints}{93}{section*.158}}
+\@writefile{toc}{\contentsline {paragraph}{Step: Select candidates}{94}{section*.159}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {6.3}{\ignorespaces Expansion Constraint function for \emph  {Harmonic Reach Set Approximation}\relax }}{94}{algocf.6.3}}
+\newlabel{alg:ExpansionConstraintFunctionForHarmonicReachSet}{{6.3}{94}{Step: Select candidates}{algocf.6.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Example:}{94}{section*.160}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces \emph  {Harmonic \emph  {reach set} approximation}.\relax }}{95}{figure.caption.161}}
+\newlabel{fig:harmonicReachSetApproximation}{{6.6}{95}{\emph {Harmonic \emph {reach set} approximation}.\relax }{figure.caption.161}{}}
+\@writefile{toc}{\contentsline {paragraph}{Pros and Cons:}{95}{section*.162}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.5}(R) Combined Reach set}{95}{subsection.6.4.5}}
+\newlabel{s:combinedReachSet}{{6.4.5}{95}{(R) Combined Reach set}{subsection.6.4.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Motivation:}{95}{section*.163}}
+\citation{o1996log}
+\@writefile{toc}{\contentsline {paragraph}{Background:}{96}{section*.164}}
+\newlabel{eq:mergeTreeFunctionExample}{{6.59}{96}{Background:}{equation.6.4.59}{}}
+\@writefile{toc}{\contentsline {paragraph}{Combined Reach Set Calculation Function}{96}{section*.165}}
+\@writefile{toc}{\contentsline {paragraph}{Merge Tree Function}{97}{section*.166}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {6.4}{\ignorespaces Reach Set Merge Function and Combined Reach Set calculation\relax }}{97}{algocf.6.4}}
+\newlabel{alg:ReachSetMerge}{{6.4}{97}{Merge Tree Function}{algocf.6.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Example:}{97}{section*.167}}
+\citation{shively2018uas}
+\citation{marston2015acas}
+\citation{julian2016policy}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces \emph  {Combined \emph  {reach set} approximation}.\relax }}{98}{figure.caption.168}}
+\newlabel{fig:combinedReachSetApproximation}{{6.7}{98}{\emph {Combined \emph {reach set} approximation}.\relax }{figure.caption.168}{}}
+\@writefile{toc}{\contentsline {paragraph}{Pros and Cons:}{98}{section*.169}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.6}(R) ACAS-X like Reach set}{98}{subsection.6.4.6}}
+\newlabel{s:acasReachSet}{{6.4.6}{98}{(R) ACAS-X like Reach set}{subsection.6.4.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Motivation:}{98}{section*.170}}
+\@writefile{toc}{\contentsline {paragraph}{Background:}{98}{section*.171}}
+\newlabel{eq:implementedseparations}{{6.63}{99}{Background:}{equation.6.4.63}{}}
+\newlabel{eq:isSeparationPredicate}{{6.64}{99}{Background:}{equation.6.4.64}{}}
+\@writefile{toc}{\contentsline {paragraph}{Expansion Constraint Function Implementation}{99}{section*.172}}
+\citation{marston2015acas}
+\@writefile{toc}{\contentsline {paragraph}{Step: Initialization}{100}{section*.173}}
+\@writefile{toc}{\contentsline {paragraph}{Step: Candidate Selection Process}{100}{section*.174}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {6.5}{\ignorespaces Expansion Constraint function for \emph  {ACAS-like Reach Set Approximation}\relax }}{100}{algocf.6.5}}
+\newlabel{alg:ExpansionConstraintFunctionForACASLikeReachSet}{{6.5}{100}{Step: Candidate Selection Process}{algocf.6.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Example:}{100}{section*.175}}
+\citation{marston2015acas}
+\newlabel{fig:acasLikeReachSetFull}{{6.8a}{101}{Full.\relax }{figure.caption.176}{}}
+\newlabel{sub@fig:acasLikeReachSetFull}{{a}{101}{Full.\relax }{figure.caption.176}{}}
+\newlabel{fig:acasLikeReachSetHorizontalVertical}{{6.8b}{101}{Horizontal-Vertical.\relax }{figure.caption.176}{}}
+\newlabel{sub@fig:acasLikeReachSetHorizontalVertical}{{b}{101}{Horizontal-Vertical.\relax }{figure.caption.176}{}}
+\newlabel{fig:acasLikeReachSetHorizontalOnly}{{6.8c}{101}{Horizontal.\relax }{figure.caption.176}{}}
+\newlabel{sub@fig:acasLikeReachSetHorizontalOnly}{{c}{101}{Horizontal.\relax }{figure.caption.176}{}}
+\newlabel{fig:acasLikeReachSetVerticalOnly}{{6.8d}{101}{Vertical.\relax }{figure.caption.176}{}}
+\newlabel{sub@fig:acasLikeReachSetVerticalOnly}{{d}{101}{Vertical.\relax }{figure.caption.176}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces ACAS-X imitation \emph  {reach set} approximation for various \emph  {separation modes}. \relax }}{101}{figure.caption.176}}
+\newlabel{fig:acasLikeReachSetVariousSeparationMode}{{6.8}{101}{ACAS-X imitation \emph {reach set} approximation for various \emph {separation modes}. \relax }{figure.caption.176}{}}
+\@writefile{toc}{\contentsline {paragraph}{Pros and Cons:}{101}{section*.177}}
 \citation{hentenryck2009constraint}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}(W) Static Obstacles and Constraints}{82}{section.6.4}}
-\newlabel{s:staticObstacles}{{6.4}{82}{(W) Static Obstacles and Constraints}{section.6.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Obstacle, UAS local, and UAS global coordinate frame relations.\relax }}{82}{figure.caption.118}}
-\newlabel{fig:coordinateFrameRelationsInFramework}{{6.4}{82}{Obstacle, UAS local, and UAS global coordinate frame relations.\relax }{figure.caption.118}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}(W) Detected obstacles}{82}{subsection.6.4.1}}
-\newlabel{s:detectedObstacles}{{6.4.1}{82}{(W) Detected obstacles}{subsection.6.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}(W) Map obstacles}{82}{subsection.6.4.2}}
-\newlabel{s:mapObstacles}{{6.4.2}{82}{(W) Map obstacles}{subsection.6.4.2}{}}
-\newlabel{fig:fistObstacleHindrance}{{6.5a}{82}{1\textsuperscript {st} hindrance.\relax }{figure.caption.119}{}}
-\newlabel{sub@fig:fistObstacleHindrance}{{a}{82}{1\textsuperscript {st} hindrance.\relax }{figure.caption.119}{}}
-\newlabel{fig:secondObstacleHindrance}{{6.5b}{82}{2\textsuperscript {nd} hindrance.\relax }{figure.caption.119}{}}
-\newlabel{sub@fig:secondObstacleHindrance}{{b}{82}{2\textsuperscript {nd} hindrance.\relax }{figure.caption.119}{}}
-\newlabel{fig:thirdObstacleHindrance}{{6.5c}{82}{3\textsuperscript {rd} hindrance.\relax }{figure.caption.119}{}}
-\newlabel{sub@fig:thirdObstacleHindrance}{{c}{82}{3\textsuperscript {rd} hindrance.\relax }{figure.caption.119}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Obstacle hindrance impact on visibility in \emph  {Avoidance Grid Slice}.\relax }}{82}{figure.caption.119}}
-\newlabel{fig:hindranceImpactOnVisibility}{{6.5}{82}{Obstacle hindrance impact on visibility in \emph {Avoidance Grid Slice}.\relax }{figure.caption.119}{}}
-\newlabel{fig:undetectedMapObstalce.}{{6.6a}{83}{Undetected.\relax }{figure.caption.120}{}}
-\newlabel{sub@fig:undetectedMapObstalce.}{{a}{83}{Undetected.\relax }{figure.caption.120}{}}
-\newlabel{fig:detectedMapObstacle}{{6.6b}{83}{Detected.\relax }{figure.caption.120}{}}
-\newlabel{sub@fig:detectedMapObstacle}{{b}{83}{Detected.\relax }{figure.caption.120}{}}
-\newlabel{fig:hinderedMapObstacle}{{6.6c}{83}{Hindered.\relax }{figure.caption.120}{}}
-\newlabel{sub@fig:hinderedMapObstacle}{{c}{83}{Hindered.\relax }{figure.caption.120}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Map obstacle states after \emph  {Data fusion}.\relax }}{83}{figure.caption.120}}
-\newlabel{fig:mapObstacleStatesAfterDataFusion}{{6.6}{83}{Map obstacle states after \emph {Data fusion}.\relax }{figure.caption.120}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}(W) Static constraints}{83}{subsection.6.4.3}}
-\newlabel{s:virtualConstraints}{{6.4.3}{83}{(W) Static constraints}{subsection.6.4.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}(W) Static Obstacles and Constraints}{102}{section.6.5}}
+\newlabel{s:staticObstacles}{{6.5}{102}{(W) Static Obstacles and Constraints}{section.6.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Obstacle, UAS local, and UAS global coordinate frame relations.\relax }}{102}{figure.caption.178}}
+\newlabel{fig:coordinateFrameRelationsInFramework}{{6.9}{102}{Obstacle, UAS local, and UAS global coordinate frame relations.\relax }{figure.caption.178}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}(W) Detected obstacles}{102}{subsection.6.5.1}}
+\newlabel{s:detectedObstacles}{{6.5.1}{102}{(W) Detected obstacles}{subsection.6.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}(W) Map obstacles}{102}{subsection.6.5.2}}
+\newlabel{s:mapObstacles}{{6.5.2}{102}{(W) Map obstacles}{subsection.6.5.2}{}}
+\newlabel{fig:fistObstacleHindrance}{{6.10a}{102}{1\textsuperscript {st} hindrance.\relax }{figure.caption.179}{}}
+\newlabel{sub@fig:fistObstacleHindrance}{{a}{102}{1\textsuperscript {st} hindrance.\relax }{figure.caption.179}{}}
+\newlabel{fig:secondObstacleHindrance}{{6.10b}{102}{2\textsuperscript {nd} hindrance.\relax }{figure.caption.179}{}}
+\newlabel{sub@fig:secondObstacleHindrance}{{b}{102}{2\textsuperscript {nd} hindrance.\relax }{figure.caption.179}{}}
+\newlabel{fig:thirdObstacleHindrance}{{6.10c}{102}{3\textsuperscript {rd} hindrance.\relax }{figure.caption.179}{}}
+\newlabel{sub@fig:thirdObstacleHindrance}{{c}{102}{3\textsuperscript {rd} hindrance.\relax }{figure.caption.179}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Obstacle hindrance impact on visibility in \emph  {Avoidance Grid Slice}.\relax }}{102}{figure.caption.179}}
+\newlabel{fig:hindranceImpactOnVisibility}{{6.10}{102}{Obstacle hindrance impact on visibility in \emph {Avoidance Grid Slice}.\relax }{figure.caption.179}{}}
+\newlabel{fig:undetectedMapObstalce.}{{6.11a}{103}{Undetected.\relax }{figure.caption.180}{}}
+\newlabel{sub@fig:undetectedMapObstalce.}{{a}{103}{Undetected.\relax }{figure.caption.180}{}}
+\newlabel{fig:detectedMapObstacle}{{6.11b}{103}{Detected.\relax }{figure.caption.180}{}}
+\newlabel{sub@fig:detectedMapObstacle}{{b}{103}{Detected.\relax }{figure.caption.180}{}}
+\newlabel{fig:hinderedMapObstacle}{{6.11c}{103}{Hindered.\relax }{figure.caption.180}{}}
+\newlabel{sub@fig:hinderedMapObstacle}{{c}{103}{Hindered.\relax }{figure.caption.180}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Map obstacle states after \emph  {Data fusion}.\relax }}{103}{figure.caption.180}}
+\newlabel{fig:mapObstacleStatesAfterDataFusion}{{6.11}{103}{Map obstacle states after \emph {Data fusion}.\relax }{figure.caption.180}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.3}(W) Static constraints}{103}{subsection.6.5.3}}
+\newlabel{s:virtualConstraints}{{6.5.3}{103}{(W) Static constraints}{subsection.6.5.3}{}}
 \citation{sommerville2016analytical}
 \citation{shamos1975closest}
 \citation{bentley1980optimal}
@@ -677,164 +809,32 @@
 \citation{bentley1979algorithms}
 \citation{shamos1976geometric}
 \citation{lawrence1991polytope}
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}(W) Moving Obstacles - Intruders and Constraints}{84}{section.6.5}}
-\newlabel{s:intruders}{{6.5}{84}{(W) Moving Obstacles - Intruders and Constraints}{section.6.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}(W) Intruder Behaviour Prediction}{84}{subsection.6.5.1}}
-\newlabel{s:intruderBehaviourPrediction}{{6.5.1}{84}{(W) Intruder Behaviour Prediction}{subsection.6.5.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}(W) Linear Intersection Model}{84}{subsection.6.5.2}}
-\newlabel{s:linearIntersectionModel}{{6.5.2}{84}{(W) Linear Intersection Model}{subsection.6.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.3}(W) Body-volume Intersection}{84}{subsection.6.5.3}}
-\newlabel{s:bodyvolumeIntersection}{{6.5.3}{84}{(W) Body-volume Intersection}{subsection.6.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}(W) Moving Obstacles - Intruders and Constraints}{104}{section.6.6}}
+\newlabel{s:intruders}{{6.6}{104}{(W) Moving Obstacles - Intruders and Constraints}{section.6.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.1}(W) Intruder Behaviour Prediction}{104}{subsection.6.6.1}}
+\newlabel{s:intruderBehaviourPrediction}{{6.6.1}{104}{(W) Intruder Behaviour Prediction}{subsection.6.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.2}(W) Linear Intersection Model}{104}{subsection.6.6.2}}
+\newlabel{s:linearIntersectionModel}{{6.6.2}{104}{(W) Linear Intersection Model}{subsection.6.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.3}(W) Body-volume Intersection}{104}{subsection.6.6.3}}
+\newlabel{s:bodyvolumeIntersection}{{6.6.3}{104}{(W) Body-volume Intersection}{subsection.6.6.3}{}}
 \citation{bentley1979algorithms}
 \citation{shamos1976geometric}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.4}(W) Maneuverability Uncertainty Intersection}{85}{subsection.6.5.4}}
-\newlabel{s:uncertaintyIntersection}{{6.5.4}{85}{(W) Maneuverability Uncertainty Intersection}{subsection.6.5.4}{}}
-\newlabel{fig:ellipticConeIntersectionExample}{{6.7a}{85}{\emph {Avoidance Grid} Intersection.\relax }{figure.caption.121}{}}
-\newlabel{sub@fig:ellipticConeIntersectionExample}{{a}{85}{\emph {Avoidance Grid} Intersection.\relax }{figure.caption.121}{}}
-\newlabel{fig:ellipticalConeHorizontalSlice}{{6.7b}{85}{Horizontal slice.\relax }{figure.caption.121}{}}
-\newlabel{sub@fig:ellipticalConeHorizontalSlice}{{b}{85}{Horizontal slice.\relax }{figure.caption.121}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Elliptical cone represented maneuverability approximation. \relax }}{85}{figure.caption.121}}
-\newlabel{fig:ellipticalConeRepresentedManuevurabilityApproximation}{{6.7}{85}{Elliptical cone represented maneuverability approximation. \relax }{figure.caption.121}{}}
-\newlabel{fig:intruderPassingProbability}{{6.8a}{85}{Intruder passing probability.\relax }{figure.caption.122}{}}
-\newlabel{sub@fig:intruderPassingProbability}{{a}{85}{Intruder passing probability.\relax }{figure.caption.122}{}}
-\newlabel{fig:intruderTimeOfArrival}{{6.8b}{85}{Time of arrival.\relax }{figure.caption.122}{}}
-\newlabel{sub@fig:intruderTimeOfArrival}{{b}{85}{Time of arrival.\relax }{figure.caption.122}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Properties for one elliptic cone slice. \relax }}{85}{figure.caption.122}}
-\newlabel{fig:propertiesEllipticConeSlice}{{6.8}{85}{Properties for one elliptic cone slice. \relax }{figure.caption.122}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.5}(W) Moving Constraints}{85}{subsection.6.5.5}}
-\newlabel{s:MovingVirtualConstraints}{{6.5.5}{85}{(W) Moving Constraints}{subsection.6.5.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}(R) Reach Set Approximation}{86}{section.6.6}}
-\newlabel{s:reachSet}{{6.6}{86}{(R) Reach Set Approximation}{section.6.6}{}}
-\@writefile{toc}{\contentsline {paragraph}{Motivation:}{86}{section*.123}}
-\@writefile{toc}{\contentsline {paragraph}{Proposed Solution Features:}{86}{section*.124}}
-\@writefile{toc}{\contentsline {paragraph}{Discretization of Reach set:}{86}{section*.125}}
-\newlabel{def:ReachSetApproximationByMovementAutomaton}{{25}{86}{Reach set Approximation by Movement Automaton}{definition.25}{}}
-\@writefile{toc}{\contentsline {paragraph}{The Complete Reach Set}{86}{section*.126}}
-\newlabel{eq:reachSetFormalDefintion}{{6.39}{86}{The Complete Reach Set}{equation.6.6.39}{}}
-\citation{blanchini1999set}
-\@writefile{toc}{\contentsline {paragraph}{The Reach Set Approximation by Movement Automaton}{87}{section*.127}}
-\newlabel{eq:ReachSetDefinitionDiscrete}{{6.40}{87}{The Reach Set Approximation by Movement Automaton}{equation.6.6.40}{}}
-\@writefile{toc}{\contentsline {paragraph}{Approximated Reach Set Containment:}{87}{section*.128}}
-\newlabel{def:ContainedReducedReachSet}{{26}{87}{Contained Aproximated Reach Set}{definition.26}{}}
-\newlabel{eq:containedReachSet}{{6.41}{87}{Contained Aproximated Reach Set}{equation.6.6.41}{}}
-\@writefile{toc}{\contentsline {paragraph}{Properties:}{87}{section*.129}}
-\@writefile{toc}{\contentsline {paragraph}{Passing cell:}{87}{section*.130}}
-\@writefile{toc}{\contentsline {paragraph}{Reach Set Pruning:}{87}{section*.131}}
-\citation{birmingham1988tree}
-\citation{gomola2017obstacle}
-\@writefile{toc}{\contentsline {paragraph}{Reach Set Trajectory Tree:}{88}{section*.132}}
-\newlabel{eq:trajectoryTree}{{6.42}{88}{Reach Set Trajectory Tree:}{equation.6.6.42}{}}
-\newlabel{eq:reachsetIntersectionConstraintSet}{{6.43}{88}{Reach Set Trajectory Tree:}{equation.6.6.43}{}}
-\newlabel{def:PrunedReachSet}{{27}{88}{Pruned Reach Set}{definition.27}{}}
-\newlabel{eq:PrunedReachSet}{{6.44}{88}{Pruned Reach Set}{equation.6.6.44}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.1}(R) Reach Set Performance Criteria}{88}{subsection.6.6.1}}
-\newlabel{s:ReachSetPerformanceCriteria}{{6.6.1}{88}{(R) Reach Set Performance Criteria}{subsection.6.6.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Motivation:}{88}{section*.133}}
-\newlabel{eq:fullReachSetNodeCount}{{6.45}{88}{Motivation:}{equation.6.6.45}{}}
-\@writefile{toc}{\contentsline {paragraph}{Core Performance Criteria:}{88}{section*.134}}
-\@writefile{toc}{\contentsline {paragraph}{Trajectory footprint:}{89}{section*.135}}
-\newlabel{def:trajectoryFootprint}{{28}{89}{Trajectory footprint}{definition.28}{}}
-\newlabel{eq:setOfPassedCells}{{6.46}{89}{Trajectory footprint}{equation.6.6.46}{}}
-\newlabel{eq:TrajectoryEquality}{{6.47}{89}{Trajectory footprint}{equation.6.6.47}{}}
-\@writefile{toc}{\contentsline {paragraph}{Coverage set:}{89}{section*.136}}
-\newlabel{def:CoverageSet}{{29}{89}{Coverage Set}{definition.29}{}}
-\newlabel{eq:CoverageSet}{{6.48}{89}{Coverage Set}{equation.6.6.48}{}}
-\@writefile{toc}{\contentsline {paragraph}{Coverage set properties:}{89}{section*.137}}
-\newlabel{def:coverageRatio}{{30}{90}{Coverage Ratio}{definition.30}{}}
-\newlabel{eq:CoverageRatio}{{6.49}{90}{Coverage Ratio}{equation.6.6.49}{}}
-\@writefile{toc}{\contentsline {paragraph}{Trajectory smoothness:}{90}{section*.138}}
-\newlabel{eq:ChaoticSmoothMovementSetDefinition}{{6.50}{90}{Trajectory smoothness:}{equation.6.6.50}{}}
-\newlabel{eq:SmoothnesClasificatorCounter}{{6.51}{90}{Trajectory smoothness:}{equation.6.6.51}{}}
-\newlabel{def:SmoothnessRatingForTrajectory}{{31}{90}{Smoothness Rating for Trajectory}{definition.31}{}}
-\citation{goerzen2009survey}
-\citation{plaisant2002spacetree}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.2}(R) Constrained Trajectory Expansion}{91}{subsection.6.6.2}}
-\newlabel{s:constrainedTrajectoryExpansion}{{6.6.2}{91}{(R) Constrained Trajectory Expansion}{subsection.6.6.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Motivation:}{91}{section*.139}}
-\@writefile{toc}{\contentsline {paragraph}{Rapid Exploration Tree}{91}{section*.140}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces \emph  {Rapid Exploration tree as result of \emph  {Constrained trajectory expansion}}.\relax }}{91}{figure.caption.141}}
-\newlabel{fig:rapidExplorationTrajectoryTree}{{6.9}{91}{\emph {Rapid Exploration tree as result of \emph {Constrained trajectory expansion}}.\relax }{figure.caption.141}{}}
-\@writefile{toc}{\contentsline {paragraph}{The example}{91}{section*.142}}
-\@writefile{toc}{\contentsline {paragraph}{Rapid Exploration Tree Node}{92}{section*.143}}
-\@writefile{toc}{\contentsline {paragraph}{Wave-front propagation of Rapid Exploration Tree}{92}{section*.144}}
-\@writefile{toc}{\contentsline {paragraph}{Step: Initialization}{92}{section*.145}}
-\@writefile{toc}{\contentsline {paragraph}{Step: Wave-front Propagation}{92}{section*.146}}
-\citation{mingers1989empirical}
-\@writefile{toc}{\contentsline {paragraph}{Step: After Layer Propagation Purge}{93}{section*.147}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {6.1}{\ignorespaces \emph  {Wave-front propagation} of \emph  {Rapid Exploration Tree} to form \emph  {Reach Set}.\relax }}{93}{algocf.6.1}}
-\newlabel{alg:Wavefront Propagation}{{6.1}{93}{Step: After Layer Propagation Purge}{algocf.6.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.3}(R) Chaotic Reach set}{93}{subsection.6.6.3}}
-\newlabel{s:chaoticReachSet}{{6.6.3}{93}{(R) Chaotic Reach set}{subsection.6.6.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Motivation:}{93}{section*.148}}
-\@writefile{toc}{\contentsline {paragraph}{Background:}{93}{section*.149}}
-\@writefile{toc}{\contentsline {paragraph}{Expansion Constraint Function Implementation}{94}{section*.150}}
-\@writefile{toc}{\contentsline {paragraph}{Tuning Parameters}{94}{section*.151}}
-\@writefile{toc}{\contentsline {paragraph}{Step: Initialization}{94}{section*.152}}
-\@writefile{toc}{\contentsline {paragraph}{Step: Evaluate best trajectories with unique Footprints}{94}{section*.153}}
-\@writefile{toc}{\contentsline {paragraph}{Step: Select candidates}{95}{section*.154}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {6.2}{\ignorespaces Expansion Constraint function for \emph  {Chaotic Reach Set Approximation}\relax }}{95}{algocf.6.2}}
-\newlabel{alg:ExpansionConstraintFunctionForChaoticReachSet}{{6.2}{95}{Step: Select candidates}{algocf.6.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Example:}{95}{section*.155}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces \emph  {Chaotic \emph  {reach set} approximation}.\relax }}{96}{figure.caption.156}}
-\newlabel{fig:chaoticReachSetApproximation}{{6.10}{96}{\emph {Chaotic \emph {reach set} approximation}.\relax }{figure.caption.156}{}}
-\@writefile{toc}{\contentsline {paragraph}{Pros and Cons:}{96}{section*.157}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.4}(R) Harmonic Reach set}{96}{subsection.6.6.4}}
-\newlabel{s:harmonicReachSet}{{6.6.4}{96}{(R) Harmonic Reach set}{subsection.6.6.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Motivation:}{96}{section*.158}}
-\@writefile{toc}{\contentsline {paragraph}{Background:}{96}{section*.159}}
-\@writefile{toc}{\contentsline {paragraph}{Expansion Constraint Function Implementation}{97}{section*.160}}
-\@writefile{toc}{\contentsline {paragraph}{Tuning Parameter:}{97}{section*.161}}
-\@writefile{toc}{\contentsline {paragraph}{Step: Initialization}{97}{section*.162}}
-\@writefile{toc}{\contentsline {paragraph}{Step: Evaluate smoothest trajectories with unique Footprints}{97}{section*.163}}
-\@writefile{toc}{\contentsline {paragraph}{Step: Select candidates}{98}{section*.164}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {6.3}{\ignorespaces Expansion Constraint function for \emph  {Harmonic Reach Set Approximation}\relax }}{98}{algocf.6.3}}
-\newlabel{alg:ExpansionConstraintFunctionForHarmonicReachSet}{{6.3}{98}{Step: Select candidates}{algocf.6.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Example:}{98}{section*.165}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces \emph  {Harmonic \emph  {reach set} approximation}.\relax }}{99}{figure.caption.166}}
-\newlabel{fig:harmonicReachSetApproximation}{{6.11}{99}{\emph {Harmonic \emph {reach set} approximation}.\relax }{figure.caption.166}{}}
-\@writefile{toc}{\contentsline {paragraph}{Pros and Cons:}{99}{section*.167}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.5}(R) Combined Reach set}{99}{subsection.6.6.5}}
-\newlabel{s:combinedReachSet}{{6.6.5}{99}{(R) Combined Reach set}{subsection.6.6.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Motivation:}{99}{section*.168}}
-\citation{o1996log}
-\@writefile{toc}{\contentsline {paragraph}{Background:}{100}{section*.169}}
-\newlabel{eq:mergeTreeFunctionExample}{{6.59}{100}{Background:}{equation.6.6.59}{}}
-\@writefile{toc}{\contentsline {paragraph}{Combined Reach Set Calculation Function}{100}{section*.170}}
-\@writefile{toc}{\contentsline {paragraph}{Merge Tree Function}{101}{section*.171}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {6.4}{\ignorespaces Reach Set Merge Function and Combined Reach Set calculation\relax }}{101}{algocf.6.4}}
-\newlabel{alg:ReachSetMerge}{{6.4}{101}{Merge Tree Function}{algocf.6.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Example:}{101}{section*.172}}
-\citation{shively2018uas}
-\citation{marston2015acas}
-\citation{julian2016policy}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces \emph  {Combined \emph  {reach set} approximation}.\relax }}{102}{figure.caption.173}}
-\newlabel{fig:combinedReachSetApproximation}{{6.12}{102}{\emph {Combined \emph {reach set} approximation}.\relax }{figure.caption.173}{}}
-\@writefile{toc}{\contentsline {paragraph}{Pros and Cons:}{102}{section*.174}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.6}(R) ACAS-X like Reach set}{102}{subsection.6.6.6}}
-\newlabel{s:acasReachSet}{{6.6.6}{102}{(R) ACAS-X like Reach set}{subsection.6.6.6}{}}
-\@writefile{toc}{\contentsline {paragraph}{Motivation:}{102}{section*.175}}
-\@writefile{toc}{\contentsline {paragraph}{Background:}{102}{section*.176}}
-\newlabel{eq:implementedseparations}{{6.63}{103}{Background:}{equation.6.6.63}{}}
-\newlabel{eq:isSeparationPredicate}{{6.64}{103}{Background:}{equation.6.6.64}{}}
-\@writefile{toc}{\contentsline {paragraph}{Expansion Constraint Function Implementation}{103}{section*.177}}
-\citation{marston2015acas}
-\@writefile{toc}{\contentsline {paragraph}{Step: Initialization}{104}{section*.178}}
-\@writefile{toc}{\contentsline {paragraph}{Step: Candidate Selection Process}{104}{section*.179}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {6.5}{\ignorespaces Expansion Constraint function for \emph  {ACAS-like Reach Set Approximation}\relax }}{104}{algocf.6.5}}
-\newlabel{alg:ExpansionConstraintFunctionForACASLikeReachSet}{{6.5}{104}{Step: Candidate Selection Process}{algocf.6.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Example:}{104}{section*.180}}
-\citation{marston2015acas}
-\newlabel{fig:acasLikeReachSetFull}{{6.13a}{105}{Full.\relax }{figure.caption.181}{}}
-\newlabel{sub@fig:acasLikeReachSetFull}{{a}{105}{Full.\relax }{figure.caption.181}{}}
-\newlabel{fig:acasLikeReachSetHorizontalVertical}{{6.13b}{105}{Horizontal-Vertical.\relax }{figure.caption.181}{}}
-\newlabel{sub@fig:acasLikeReachSetHorizontalVertical}{{b}{105}{Horizontal-Vertical.\relax }{figure.caption.181}{}}
-\newlabel{fig:acasLikeReachSetHorizontalOnly}{{6.13c}{105}{Horizontal.\relax }{figure.caption.181}{}}
-\newlabel{sub@fig:acasLikeReachSetHorizontalOnly}{{c}{105}{Horizontal.\relax }{figure.caption.181}{}}
-\newlabel{fig:acasLikeReachSetVerticalOnly}{{6.13d}{105}{Vertical.\relax }{figure.caption.181}{}}
-\newlabel{sub@fig:acasLikeReachSetVerticalOnly}{{d}{105}{Vertical.\relax }{figure.caption.181}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces ACAS-X imitation \emph  {reach set} approximation for various \emph  {separation modes}. \relax }}{105}{figure.caption.181}}
-\newlabel{fig:acasLikeReachSetVariousSeparationMode}{{6.13}{105}{ACAS-X imitation \emph {reach set} approximation for various \emph {separation modes}. \relax }{figure.caption.181}{}}
-\@writefile{toc}{\contentsline {paragraph}{Pros and Cons:}{105}{section*.182}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.4}(W) Maneuverability Uncertainty Intersection}{105}{subsection.6.6.4}}
+\newlabel{s:uncertaintyIntersection}{{6.6.4}{105}{(W) Maneuverability Uncertainty Intersection}{subsection.6.6.4}{}}
+\newlabel{fig:ellipticConeIntersectionExample}{{6.12a}{105}{\emph {Avoidance Grid} Intersection.\relax }{figure.caption.181}{}}
+\newlabel{sub@fig:ellipticConeIntersectionExample}{{a}{105}{\emph {Avoidance Grid} Intersection.\relax }{figure.caption.181}{}}
+\newlabel{fig:ellipticalConeHorizontalSlice}{{6.12b}{105}{Horizontal slice.\relax }{figure.caption.181}{}}
+\newlabel{sub@fig:ellipticalConeHorizontalSlice}{{b}{105}{Horizontal slice.\relax }{figure.caption.181}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Elliptical cone represented maneuverability approximation. \relax }}{105}{figure.caption.181}}
+\newlabel{fig:ellipticalConeRepresentedManuevurabilityApproximation}{{6.12}{105}{Elliptical cone represented maneuverability approximation. \relax }{figure.caption.181}{}}
+\newlabel{fig:intruderPassingProbability}{{6.13a}{105}{Intruder passing probability.\relax }{figure.caption.182}{}}
+\newlabel{sub@fig:intruderPassingProbability}{{a}{105}{Intruder passing probability.\relax }{figure.caption.182}{}}
+\newlabel{fig:intruderTimeOfArrival}{{6.13b}{105}{Time of arrival.\relax }{figure.caption.182}{}}
+\newlabel{sub@fig:intruderTimeOfArrival}{{b}{105}{Time of arrival.\relax }{figure.caption.182}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Properties for one elliptic cone slice. \relax }}{105}{figure.caption.182}}
+\newlabel{fig:propertiesEllipticConeSlice}{{6.13}{105}{Properties for one elliptic cone slice. \relax }{figure.caption.182}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.5}(W) Moving Constraints}{105}{subsection.6.6.5}}
+\newlabel{s:MovingVirtualConstraints}{{6.6.5}{105}{(W) Moving Constraints}{subsection.6.6.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.7}(R) Avoidance Concept}{106}{section.6.7}}
 \newlabel{s:avoidanceConcept}{{6.7}{106}{(R) Avoidance Concept}{section.6.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.7.1}(R) Data fusion}{106}{subsection.6.7.1}}
@@ -1946,21 +1946,21 @@
 \bibcite{gupta2010comparative}{{127}{}{{}}{{}}}
 \bibcite{zaiane2002clustering}{{128}{}{{}}{{}}}
 \bibcite{kurzhanskiy2006ellipsoidal}{{129}{}{{}}{{}}}
-\bibcite{hentenryck2009constraint}{{130}{}{{}}{{}}}
-\bibcite{sommerville2016analytical}{{131}{}{{}}{{}}}
-\bibcite{shamos1975closest}{{132}{}{{}}{{}}}
-\bibcite{bentley1980optimal}{{133}{}{{}}{{}}}
-\bibcite{fiorini1998motion}{{134}{}{{}}{{}}}
-\bibcite{bentley1979algorithms}{{135}{}{{}}{{}}}
-\bibcite{shamos1976geometric}{{136}{}{{}}{{}}}
-\bibcite{lawrence1991polytope}{{137}{}{{}}{{}}}
-\bibcite{birmingham1988tree}{{138}{}{{}}{{}}}
-\bibcite{goerzen2009survey}{{139}{}{{}}{{}}}
-\bibcite{plaisant2002spacetree}{{140}{}{{}}{{}}}
-\bibcite{mingers1989empirical}{{141}{}{{}}{{}}}
-\bibcite{o1996log}{{142}{}{{}}{{}}}
-\bibcite{shively2018uas}{{143}{}{{}}{{}}}
-\bibcite{julian2016policy}{{144}{}{{}}{{}}}
+\bibcite{birmingham1988tree}{{130}{}{{}}{{}}}
+\bibcite{goerzen2009survey}{{131}{}{{}}{{}}}
+\bibcite{plaisant2002spacetree}{{132}{}{{}}{{}}}
+\bibcite{mingers1989empirical}{{133}{}{{}}{{}}}
+\bibcite{o1996log}{{134}{}{{}}{{}}}
+\bibcite{shively2018uas}{{135}{}{{}}{{}}}
+\bibcite{julian2016policy}{{136}{}{{}}{{}}}
+\bibcite{hentenryck2009constraint}{{137}{}{{}}{{}}}
+\bibcite{sommerville2016analytical}{{138}{}{{}}{{}}}
+\bibcite{shamos1975closest}{{139}{}{{}}{{}}}
+\bibcite{bentley1980optimal}{{140}{}{{}}{{}}}
+\bibcite{fiorini1998motion}{{141}{}{{}}{{}}}
+\bibcite{bentley1979algorithms}{{142}{}{{}}{{}}}
+\bibcite{shamos1976geometric}{{143}{}{{}}{{}}}
+\bibcite{lawrence1991polytope}{{144}{}{{}}{{}}}
 \bibcite{icao4444}{{145}{}{{}}{{}}}
 \bibcite{sabatini2013low}{{146}{}{{}}{{}}}
 \bibcite{shaw1998using}{{147}{}{{}}{{}}}

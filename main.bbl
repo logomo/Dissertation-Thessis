@@ -789,6 +789,48 @@ Alex~A Kurzhanskiy and Pravin Varaiya.
 \newblock In {\em Decision and Control, 2006 45th IEEE Conference on}, pages
   1498--1503. IEEE, 2006.
 
+\bibitem{birmingham1988tree}
+John Birmingham and Peter Kent.
+\newblock Tree-searching and tree-pruning techniques.
+\newblock In {\em Computer chess compendium}, pages 123--128. Springer, 1988.
+
+\bibitem{goerzen2009survey}
+Chad Goerzen, Zhaodan Kong, and Bernard Mettler.
+\newblock A survey of motion planning algorithms from the perspective of
+  autonomous uav guidance.
+\newblock In {\em Selected papers from the 2nd International Symposium on UAVs,
+  Reno, Nevada, USA June 8--10, 2009}, pages 65--100. Springer, 2009.
+
+\bibitem{plaisant2002spacetree}
+Catherine Plaisant, Jesse Grosjean, and Benjamin~B Bederson.
+\newblock Spacetree: Supporting exploration in large node link tree, design
+  evolution and empirical evaluation.
+\newblock In {\em Information Visualization, 2002. INFOVIS 2002. IEEE Symposium
+  on}, pages 57--64. IEEE, 2002.
+
+\bibitem{mingers1989empirical}
+John Mingers.
+\newblock An empirical comparison of pruning methods for decision tree
+  induction.
+\newblock {\em Machine learning}, 4(2):227--243, 1989.
+
+\bibitem{o1996log}
+Patrick O’Neil, Edward Cheng, Dieter Gawlick, and Elizabeth O’Neil.
+\newblock The log-structured merge-tree (lsm-tree).
+\newblock {\em Acta Informatica}, 33(4):351--385, 1996.
+
+\bibitem{shively2018uas}
+Jay Shively.
+\newblock Uas integration in the nas: Detect and avoid.
+\newblock 2018.
+
+\bibitem{julian2016policy}
+Kyle~D Julian, Jessica Lopez, Jeffrey~S Brush, Michael~P Owen, and Mykel~J
+  Kochenderfer.
+\newblock Policy compression for aircraft collision avoidance systems.
+\newblock In {\em Digital Avionics Systems Conference (DASC), 2016 IEEE/AIAA
+  35th}, pages 1--10. IEEE, 2016.
+
 \bibitem{hentenryck2009constraint}
 Pascal~Van Hentenryck and Laurent Michel.
 \newblock {\em Constraint-based local search}.
@@ -832,48 +874,6 @@ Michael~Ian Shamos and Dan Hoey.
 Jim Lawrence.
 \newblock Polytope volume computation.
 \newblock {\em Mathematics of Computation}, 57(195):259--271, 1991.
-
-\bibitem{birmingham1988tree}
-John Birmingham and Peter Kent.
-\newblock Tree-searching and tree-pruning techniques.
-\newblock In {\em Computer chess compendium}, pages 123--128. Springer, 1988.
-
-\bibitem{goerzen2009survey}
-Chad Goerzen, Zhaodan Kong, and Bernard Mettler.
-\newblock A survey of motion planning algorithms from the perspective of
-  autonomous uav guidance.
-\newblock In {\em Selected papers from the 2nd International Symposium on UAVs,
-  Reno, Nevada, USA June 8--10, 2009}, pages 65--100. Springer, 2009.
-
-\bibitem{plaisant2002spacetree}
-Catherine Plaisant, Jesse Grosjean, and Benjamin~B Bederson.
-\newblock Spacetree: Supporting exploration in large node link tree, design
-  evolution and empirical evaluation.
-\newblock In {\em Information Visualization, 2002. INFOVIS 2002. IEEE Symposium
-  on}, pages 57--64. IEEE, 2002.
-
-\bibitem{mingers1989empirical}
-John Mingers.
-\newblock An empirical comparison of pruning methods for decision tree
-  induction.
-\newblock {\em Machine learning}, 4(2):227--243, 1989.
-
-\bibitem{o1996log}
-Patrick O’Neil, Edward Cheng, Dieter Gawlick, and Elizabeth O’Neil.
-\newblock The log-structured merge-tree (lsm-tree).
-\newblock {\em Acta Informatica}, 33(4):351--385, 1996.
-
-\bibitem{shively2018uas}
-Jay Shively.
-\newblock Uas integration in the nas: Detect and avoid.
-\newblock 2018.
-
-\bibitem{julian2016policy}
-Kyle~D Julian, Jessica Lopez, Jeffrey~S Brush, Michael~P Owen, and Mykel~J
-  Kochenderfer.
-\newblock Policy compression for aircraft collision avoidance systems.
-\newblock In {\em Digital Avionics Systems Conference (DASC), 2016 IEEE/AIAA
-  35th}, pages 1--10. IEEE, 2016.
 
 \bibitem{icao4444}
 ICAO.
