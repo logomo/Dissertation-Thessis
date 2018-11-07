@@ -1,3 +1,37 @@
 \subsection{(W) Body-volume Intersection}\label{s:bodyvolumeIntersection}
-    \noindent Prediction of \emph{impact area} based on intruder position/velocity/estimated body volume, mandatory for \emph{large scale objects} and \emph{Short term bad weather areas}.
+\paragraph{Idea:} The \emph{Intruder} has \empty body volume greater than \emph{average} $cell_{i,j,k}$ volume. The \emph{intruder body} is considered as the ball moving along \emph{intruder position}. The \emph{intersection} of the intruder body is realized as sufficiently thick \emph{point-cloud intersection}.
+
+\paragraph{Space Intersection Rate - Body Volume:} The \emph{body volume mass} with center at $position(t)$ is moving along intruder trajectory prediction (eq. \ref{eq:linearintersectionmodelVehicleVolume}) in time interval $[0,\infty[$:
+
+\begin{equation}\label{eq:linearintersectionmodelVehicleVolume}
+    position(time) = position(time_0) + velocity \times time
+\end{equation}
+
+\noindent The body \emph{Volume ball} $Body(position(t),radius)$ (eq. \ref{eq:volumeballofIntruder}) is defined as set of points in $\R^3$ euclidean space. The center is moving along the \emph{position(t)}. The body \emph{volume ball} is a set of points sufficiently thick including also inner points. The \emph{thickness} is guaranteed by existence of neighbour point which is close enough.
+
+\begin{equation}\label{eq:volumeballofIntruder}
+    Body(position(t),radius) = \left\{point \in \R^3:\begin{aligned}&\norm{position(t) - point} \le radius\\ &\forall point_i \exists point_{j\neq i},\\ &distance(point_i,point_j)\le thickness\end{aligned} \right\}
+\end{equation}
+
+\noindent The \emph{polar volume ball} $polarBody$ (eq. \ref{eq:plannarCoordinateTransformationVolumeBall}) is projection of body volume ball  set $Body(position(t),radius)$ to a set of planar coordinates in avoidance grid coordinate frame:
+
+\begin{equation}\label{eq:plannarCoordinateTransformationVolumeBall}
+    polarBall(t):  Body(position(t),radius) \to \left\{\left[\begin{aligned}&distance, horizontal^\circ,\\ &vertical^\circ, intersection Time\end{aligned}\right]\right\}
+\end{equation}
+
+\noindent The \emph{space intersection rate for vehicle body} $space(Intruder, cell_{i,j,k})$ (eq. \ref{eq:baseIntersectionProbabilityBallIntersectionType}) is calculated as intersection of polar body volume ball and $cell_{i,j,k}$. If intersection is non empty then base probability is one, zero otherwise:
+
+\begin{equation}\label{eq:baseIntersectionProbabilityBallIntersectionType}
+    space\left(\begin{gathered}Intruder,\\cell_{i,j,k}\end{gathered}\right)=
+    \begin{cases}
+        1:&\exists point \in polarBall(eq.\ref{eq:plannarCoordinateTransformationVolumeBall}): point \in c_{i,j,k}\\
+        0:&\text{otherwise}
+    \end{cases}
+\end{equation}
+
+\paragraph{Intersection Time:} The \emph{intersection time} id depending on point cloud (eq. \ref{eq:plannarCoordinateTransformationVolumeBall}) where each point \emph{have intersection time} given as \emph{body-center position} time (eq. \ref{eq:linearintersectionmodelVehicleVolume}). 
+
+\begin{note}
+    The \emph{body-volume} intersection model, can insert the \emph{multiple intersection times} into one $cell_{i,j,k}$. the \emph{interval length} considers all of these for intersection rates (eq. \ref{eq:timeIntersectionRate}).
+\end{note}
     
