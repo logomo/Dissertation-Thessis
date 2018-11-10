@@ -838,6 +838,13 @@ Kyle~D Julian, Jessica Lopez, Jeffrey~S Brush, Michael~P Owen, and Mykel~J
 \newblock In {\em Digital Avionics Systems Conference (DASC), 2016 IEEE/AIAA
   35th}, pages 1--10. IEEE, 2016.
 
+\bibitem{gomola2017probabilistic}
+Alojz Gomola, Pavel Klang, and Jan Ludvik.
+\newblock Probabilistic approach in data fusion for obstacle avoidance
+  framework based on reach sets.
+\newblock In {\em Internal publication collection}, pages 1--93. Honeywell,
+  2017.
+
 \bibitem{hentenryck2009constraint}
 Pascal~Van Hentenryck and Laurent Michel.
 \newblock {\em Constraint-based local search}.
@@ -1049,13 +1056,6 @@ Hans Samelson, Robert~M Thrall, and Oscar Wesler.
 \newblock A partition theorem for euclidean n-space.
 \newblock {\em Proceedings of the American Mathematical Society},
   9(5):805--807, 1958.
-
-\bibitem{gomola2017probabilistic}
-Alojz Gomola, Pavel Klang, and Jan Ludvik.
-\newblock Probabilistic approach in data fusion for obstacle avoidance
-  framework based on reach sets.
-\newblock In {\em Internal publication collection}, pages 1--93. Honeywell,
-  2017.
 
 \bibitem{koren1991potential}
 Yoram Koren and Johann Borenstein.

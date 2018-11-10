@@ -1,7 +1,7 @@
 \newpage
 \section{(R) Static Obstacles and Constraints}\label{s:staticObstacles}
     
-\paragraph{Introduction:} The \emph{static obstacles} were used in original concept \cite{alojzgomola2017}, the \emph{Avoidance Grid} and \emph{Movement Automaton} were repurposed to enable \emph{finite time deterministic} avoidance. An \emph{Constraint based path search} and \emph{obstacle modeling} is summarized in \cite{hentenryck2009constraint}.
+\paragraph{Introduction:} The \emph{static obstacles} were used in original concept \cite{gomola2017probabilistic}, the \emph{Avoidance Grid} and \emph{Movement Automaton} were repurposed to enable \emph{finite time deterministic} avoidance. An \emph{Constraint based path search} and \emph{obstacle modeling} is summarized in \cite{hentenryck2009constraint}.
 
 This section is handling basic problems of \emph{static obstacle} detection and its focused on following real-world fixed position threats:
 \begin{enumerate}
@@ -29,7 +29,7 @@ Let say that $\partial horizontal^\circ, \partial vertical^\circ$ is unitary ang
 The example is given in (fig. \ref{fig:P01CountOfLiDARHits}) where we have two identical objects (red circle) in distances 5 and 10 meters. The closer object consumes 5 LiDAR beam hits and the farther object consumes only 3 LiDAR beam hits. The probability of obstacle encounter is remaining the same for closer and farther object. The \emph{detected obstacle rate} assessment should return the same  detected obstacle collision rate for objects with same scanned surface (with different LiDAR ray hit count).
 
 
-\paragraph{Map and Detected Obstacles Fusion:} The concept of \emph{offline/online obstacle map} is mandatory in modern obstacle avoidance systems and increases the safety of navigation/avoidance path. The \emph{older} concept was considering only LiDAR reading or \emph{real-time sensor readings} in general \cite{alojzgomola2017}. 
+\paragraph{Map and Detected Obstacles Fusion:} The concept of \emph{offline/online obstacle map} is mandatory in modern obstacle avoidance systems and increases the safety of navigation/avoidance path. The \emph{older} concept was considering only LiDAR reading or \emph{real-time sensor readings} in general \cite{gomola2017probabilistic}. 
 
 \begin{figure}[htbp]
     \centering
