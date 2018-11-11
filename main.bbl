@@ -850,6 +850,11 @@ Pascal~Van Hentenryck and Laurent Michel.
 \newblock {\em Constraint-based local search}.
 \newblock The MIT press, 2009.
 
+\bibitem{ritter1990efficient}
+Jack Ritter.
+\newblock An efficient bounding sphere.
+\newblock {\em Graphics gems}, 1:301--303, 1990.
+
 \bibitem{fiorini1998motion}
 Paolo Fiorini and Zvi Shiller.
 \newblock Motion planning in dynamic environments using velocity obstacles.
@@ -1028,11 +1033,6 @@ Raffaele Mauro and Marco Cattani.
 \newblock Potential accident rate of turbo-roundabouts.
 \newblock In {\em 4th International Symposium on Highway Geometric
   DesignPolytechnic University of ValenciaTransportation Research Board}, 2010.
-
-\bibitem{ritter1990efficient}
-Jack Ritter.
-\newblock An efficient bounding sphere.
-\newblock {\em Graphics gems}, 1:301--303, 1990.
 
 \bibitem{benjamin2006navigation}
 Michael~R Benjamin, Joseph~A Curcio, John~J Leonard, and Paul~M Newman.
