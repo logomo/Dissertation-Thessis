@@ -135,7 +135,7 @@
 \contentsline {paragraph}{Idea:}{64}{section*.83}
 \contentsline {paragraph}{UTM Operation Modes:}{64}{section*.84}
 \contentsline {paragraph}{Used Concepts:}{65}{section*.86}
-\contentsline {chapter}{\numberline {6}(R/W) Approach}{66}{chapter.6}
+\contentsline {chapter}{\numberline {6}(R) Approach}{66}{chapter.6}
 \contentsline {paragraph}{Basic Idea:}{66}{section*.88}
 \contentsline {section}{\numberline {6.1}(R) Overview}{67}{section.6.1}
 \contentsline {paragraph}{Structure of Avoidance Framework:}{67}{section*.90}
@@ -243,7 +243,7 @@
 \contentsline {subsection}{\numberline {6.5.2}(R) Map obstacles}{107}{subsection.6.5.2}
 \contentsline {paragraph}{Idea:}{107}{section*.190}
 \contentsline {paragraph}{Concept:}{107}{section*.191}
-\contentsline {paragraph}{Implementation:}{107}{section*.193}
+\contentsline {paragraph}{Implementation:}{108}{section*.193}
 \contentsline {subsection}{\numberline {6.5.3}(R) Static constraints}{110}{subsection.6.5.3}
 \contentsline {paragraph}{Idea:}{110}{section*.195}
 \contentsline {paragraph}{Representation:}{110}{section*.196}
@@ -273,7 +273,7 @@
 \contentsline {paragraph}{Idea:}{118}{section*.216}
 \contentsline {paragraph}{Sprace Intersection Rate - Body Volume Intersection:}{118}{section*.217}
 \contentsline {paragraph}{Combined intersection model:}{124}{section*.222}
-\contentsline {subsection}{\numberline {6.6.5}(W) Moving Constraints}{125}{subsection.6.6.5}
+\contentsline {subsection}{\numberline {6.6.5}(R) Moving Constraints}{125}{subsection.6.6.5}
 \contentsline {paragraph}{Idea:}{125}{section*.223}
 \contentsline {paragraph}{Definition:}{125}{section*.224}
 \contentsline {paragraph}{Cell Intersection:}{125}{section*.225}
