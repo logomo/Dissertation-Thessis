@@ -1,4 +1,46 @@
 \subsection{(W) Moving Constraints}\label{s:MovingVirtualConstraints}
-TODO new section look to Storm scenario structure
+\paragraph{Idea:} The basic ideas is the same as in case \emph{static constraints} (sec. \ref{s:virtualConstraints}). There is horizontal constraint and altitude constraint outlining the constrained space. The only additional concept is moving of \emph{constraint} on horizontal plane in global coordinate system. 
 
-The algorithm used for intersection selected based on:\citep{bentley1979algorithms} the selected algorithm  \emph{Shamos-Hoey} \cite{shamos1976geometric}.
+The constraint intersection  with \emph{avoidance grid} is done in \emph{fixed decision Time}, for cell in \emph{fixed cell leave time} (eq. \ref{eq:cellLeaveTime}), which means concept from static obstacles can be fully reused.
+
+\paragraph{Definition:} The \emph{moving constraint definition} (eq. \ref{eq:movingConstraintDefinition}) covers minimal data scope for  moving constraint, assuming linear constraint movement. 
+
+The original definition (eq. \ref{eq:staticConstraint}) is enhanced with additional parameters to support constraint moving:
+
+\begin{enumerate}
+    \item \emph{Velocity} - velocity vector on 2D horizontal plane.
+    
+    \item \emph{Detection time} - the time when \emph{constraint} was created/detected, this is the time when \emph center and boundary points position were valid.
+\end{enumerate}
+
+\begin{multline}\label{eq:movingConstraintDefinition}
+    constraint = \{position,boundary,\dots\\\dots, velocity, detection Time, \dots \\\dots altitude_{start},altitude_{end}, safety Margin\}
+\end{multline}
+
+\paragraph{Cell Intersection:} The \emph{intersection algorithm} follows (eq. \ref{eq:contraintToCellIntersection}), only shift of the \emph{center and boundary points} is required. 
+
+First let us introduce $\Delta time$ (eq. \ref{eq:deltatimeMovingconst}), which represents difference between the constraint detection time and expected cell leave time (eq. \ref{eq:cellLeaveTime}).
+
+\begin{equation}\label{eq:deltatimeMovingconst}
+    \Delta time = UAS_{leave}(cell_{i,j,k}) - detection Time
+\end{equation}
+
+\noindent The constraint boundary is shifted to:
+
+\begin{multline}
+    shifted Boundary(constraint) = \{new Point = point + velocity \times \Delta time:\dots\\\dots \forall point \in constraint.boundary \}
+\end{multline}
+
+\noindent The constraint center is shifted to:
+
+\begin{equation}
+    shifted Center(constraint) = constraint.center + velocity
+\end{equation}
+
+\begin{note}
+    The $\Delta time$ is calculated separately for each $cell_{i,j,k}$, because \emph{UAS} is also  moving and reaching cells in different times. The \emph{cell leave time} can be calculated in advance after reach set approximation.
+\end{note}
+
+\paragraph{Alternative Intersection Implementation:} The alternative used for intersection selected based on polygon intersection algorithms review \citep{bentley1979algorithms}, the selected algorithm  is \emph{Shamos-Hoey} \cite{shamos1976geometric}.
+
+The implementation was tested on \emph{Storm scenario} (sec. \ref{s:testStorm}) and it yelds same results.
