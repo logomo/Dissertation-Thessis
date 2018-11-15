@@ -204,6 +204,19 @@ Guy Katz, Clark Barrett, David~L Dill, Kyle Julian, and Mykel~J Kochenderfer.
 \newblock In {\em International Conference on Computer Aided Verification},
   pages 97--117. Springer, 2017.
 
+\bibitem{eurocontrol2018rpasatm}
+Remotely piloted aircraft systems atm concept of operations.
+\newblock obtained from:
+  \url{https://www.eurocontrol.int/publications/remotely-piloted-aircraft-systems-rpas-atm-concept-operations-conops}
+  on 14\textsuperscript{th} November 2018, February 2017.
+
+\bibitem{easa2016rpasroperegul}
+EASA.
+\newblock Prototype commission regulation on unmanned aircraft operations.
+\newblock obtained from:
+  \url{https://www.easa.europa.eu/sites/default/files/dfu/UAS%20Prototype%20Regulation%20final.pdf}
+  on 14\textsuperscript{th} November 2018, August 2016.
+
 \bibitem{icaoAnnex2}
 ICAO.
 \newblock Annex 2 (rules of the air).
