@@ -19,11 +19,62 @@
     This section contains important parts from previously mentioned documents. 
 \end{note}
 
-\subsection{(W) Visual Flight Rules (VFR)}\label{sec:VisualFlightRules}
-\begin{itemize}
-    \item Rules of the Air
-    \item Visual separation
-\end{itemize}
+\subsection{(R) Visual Flight Rules (VFR)}\label{sec:VisualFlightRules}
+\paragraph{Motivation:} A \emph{Visual Flight Rules} (VFR) requires pilot ability to see outside the cockpit to to:
+
+\begin{enumerate}
+    \item \emph{Control an aircraft} - to check a responses to control input (UAS self diagnostic).
+    
+    \item \emph{Check altitude} - to check and asses an altitude based on the estimated ground distance (UAS - barometric altimeter, ranging sensors).
+    
+    \item \emph{Navigate} - to steer aircraft for reaching long term goal, including position estimation. (UAS Navigation Module, GPS Module)
+    
+    \item \emph{Avoid other obstacles and intruders} - see and avoid procedures, following rules of the air in case of the intruder avoidance. (UAS Detect And Avoid system).
+\end{enumerate}
+
+\begin{note}
+    Each of VFR task has equivalent task in IFR or UAS implementation. The system impact on aircraft airworthiness is interchangeable up to some degree.
+\end{note}
+
+\paragraph{See And Avoid:} The pilot have situations awareness of its own surroundings and velocity. The \emph{horizontal/vertical} avoidance maneuvers are executed if necessary. 
+
+\paragraph{Night VFR:} Some countries (ex. United states) allows flights under VFR when sun is after horizon (astronomical night). The separation minimums are same. There is \emph{clear sky requirement} (FAA) which disallows any clouds on higher flight levels.
+
+
+
+\paragraph{Traffic Advisories:} The \emph{United States}, \emph{Australia}, and , \emph{Canada} ATC provides the service of \emph{flight following}. A pilot can request the \emph{flight following} outside the \emph{B,C,D} class airspace, the ATC will communicate possible threats to pilot, the responsibility for safety is on pilot.
+
+\begin{note}
+    The \emph{traffic advisories} are weaker version of \emph{directives}, they can be used for RPAS systems communication.
+\end{note}
+
+
+\paragraph{Weather Separation:} VFR Weather Minimums – \emph{Visual Meteorological Conditions} (VMC).  Europe currently follows SERA (Standardised European Rules of the Air) rules, which are mostly the same as ICAO rules used throughout the world (local exceptions may apply). Current VFR Weather Minimums are:
+
+\begin{enumerate}
+    \item Altitude: at and above 10000 feet (3000 m), in every class of airspace – flight visibility 8000 m; 1500m horizontally from clouds, 1000 feet (300 m) vertically from clouds.
+    
+    \item Altitude: below 10000 feet (3000 m) and above 3000 feet (900 m) or above 1000 feet  (300 m) above terrain (whichever is higher) in every class of airspace – flight visibility 5000 m, 1500m horizontally from clouds, 1000 feet (300m) vertically from clouds.
+
+    \item Altitude: at or below 3000 feet (900 m) or at or below 1000 feet (300m) above terrain in class A, B, C, D, E airspace (controlled) – flight visibility 5km and 1500 m horizontally from clouds 1000 feet (300 m) vertically from clouds.
+
+    \item Altitude: at or below 3000 feet (900 m) or at or below 1000 feet (300 m) above terrain in class F and G airspace (uncontrolled) – flight visibility 5000 m, clear of cloud and with sight of surface. 
+\end{enumerate}
+
+There are exceptions from the last rule. ICAO rules allow for flights (at or below 3000 feet or at or below 1000 feet above terrain in F and G uncontrolled airspace) when flight visibility is no less than 1500m:
+\begin{enumerate}
+    \item at speeds that, in the prevailing visibility, will give adequate opportunity to observe other traffic or any obstacles in time to avoid collision,
+    
+    \item in circumstances in which the probability of encounters with other traffic would normally be low, e.g. in areas of low volume traffic and for aerial work at low levels
+\end{enumerate}
+
+A similar exception (at or below 3000 feet or at or below 1000 feet above terrain) applies to helicopters, which can fly when flight visibility is less than 1500 m.
+
+Refer your country AIP\footnote{Czech republic AIP 1.1 document: \url{https://lis.rlp.cz/ais_data/aip/data/valid/e1-2.pdf}} (usually  or AIP ENR 1.1) for local restrictions.
+
+\begin{note}
+    The clouds are very dangerous for UAS, because they impair sensors, causes freezing and damages the on-board electronic, the WMC can be used in \emph{weather safety handling definitions}.
+\end{note}
 
 \subsection{(W) Instrumental Flight Rules (IFR)}\label{sec:InstrumentalFlightRules}
 \begin{itemize}
