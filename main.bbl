@@ -191,6 +191,11 @@ David~H Williams.
 \newblock In {\em Proceedings of the Human Factors Society Annual Meeting},
   volume~27, pages 772--776. Sage Publications Sage CA: Los Angeles, CA, 1983.
 
+\bibitem{icaoAnnex2}
+ICAO.
+\newblock Annex 2 (rules of the air).
+\newblock Technical report, ICAO, 2018.
+
 \bibitem{gardi2014real}
 Alessandro Gardi, Roberto Sabatini, Subramanian Ramasamy, and Trevor Kistan.
 \newblock Real-time trajectory optimisation models for next generation air
@@ -216,11 +221,6 @@ EASA.
 \newblock obtained from:
   \url{https://www.easa.europa.eu/sites/default/files/dfu/UAS%20Prototype%20Regulation%20final.pdf}
   on 14\textsuperscript{th} November 2018, August 2016.
-
-\bibitem{icaoAnnex2}
-ICAO.
-\newblock Annex 2 (rules of the air).
-\newblock Technical report, ICAO, 2018.
 
 \bibitem{ec201208ref5}
 European Commision.
