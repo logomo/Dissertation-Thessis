@@ -78,6 +78,16 @@ Alessandro Gardi, Roberto Sabatini, Subramanian Ramasamy, Matthew Marino,
 \newblock In {\em AIAC16: 16th Australian International Aerospace Congress},
   page 190. Engineers Australia, 2015.
 
+\bibitem{icao4444}
+ICAO.
+\newblock 4444: Procedures for air navigation services.
+\newblock Technical report, ICAO, 2018.
+
+\bibitem{icaoAnnex11}
+ICAO.
+\newblock Annex 11 (air traffic services).
+\newblock Technical report, ICAO, 2018.
+
 \bibitem{corus2018}
 Andrew Hately.
 \newblock {C}oncept of {O}perations for {U}-space.
@@ -190,16 +200,6 @@ David~H Williams.
 \newblock Self-separation in terminal areas using cdti.
 \newblock In {\em Proceedings of the Human Factors Society Annual Meeting},
   volume~27, pages 772--776. Sage Publications Sage CA: Los Angeles, CA, 1983.
-
-\bibitem{icaoAnnex11}
-ICAO.
-\newblock Annex 11 (air traffic services).
-\newblock Technical report, ICAO, 2018.
-
-\bibitem{icao4444}
-ICAO.
-\newblock 4444: Procedures for air navigation services.
-\newblock Technical report, ICAO, 2018.
 
 \bibitem{authority2013human}
 Civil Aviation~Safety Authority.

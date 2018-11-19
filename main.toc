@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {1.4}(W) Overview}{15}{section.1.4}
 \contentsline {section}{\numberline {1.5}(W) Contributions}{15}{section.1.5}
 \contentsline {chapter}{\numberline {2}(W) Collision avoidance}{16}{chapter.2}
-\contentsline {section}{\numberline {2.1}(R) Airspace classification}{17}{section.2.1}
+\contentsline {section}{\numberline {2.1}(R) Airspace Classification}{17}{section.2.1}
 \contentsline {paragraph}{Motivation:}{17}{section*.5}
 \contentsline {paragraph}{Airspace Categorization:}{17}{section*.6}
 \contentsline {paragraph}{Airspace Roles and Responsibilities:}{19}{section*.8}
