@@ -1,38 +1,77 @@
-\chapter{(W) Collision avoidance}\label{ch:CollisionAvoidance}
-    \noindent The context of Collision Avoidance is introduced in table \ref{tab:CASContext}, the structure was taken from Gardi \cite{gardi2015automated}and modified to reflect actual state of art.
-    \begin{tabularx}{\textwidth}{S{0.20}|S{0.55}} 
-        \centering \emph{Function} & \emph{Equipment/Task}\\ \hline\hline
-        \centering Communication & Telecommunication datalinks,\newline Controller Pilot Data Link-Control (CPDLC), \newline Voice Communication\\\hline
-        \centering Navigation & Navigation sensors including GNSS, INS, etc. providing 3D/4D navigation capabilities.\\\hline
-        \centering Surveillance & Cooperative Systems (TCAS, ACAS, etc.)\newline Non-cooperative Sensors (LiDAR,Cameras, etc.)\\\hline
-        \centering Situation\newline Awareness& Early Warning Systems, \newline CDTI Display\\\hline
-        \centering Autonomous\newline Decision\newline Making & Strategic, Tactical, Emergency Flight Planning,\newline Intelligent Collision Detection,\newline Conflict Resolution and Prevention,\newline Weather/Terrain/Constraints Avoidance\\
-        \caption{Collision Avoidance Systems Context Overview \cite{gardi2015automated}.}
-        \label{tab:CASContext}
-    \end{tabularx}
+\chapter{(R/W) Collision avoidance}\label{ch:CollisionAvoidance}
+\paragraph{Introduction} The context of Collision Avoidance is introduced in (tab. \ref{tab:CASContext}), the structure was taken from Gardi \cite{gardi2015automated}. The \emph{state of art} changes were incorporated into the table.
+
+\begin{tabularx}{\textwidth}{S{0.20}||S{0.55}} 
+    \centering \emph{Function} &  \emph{Equipment/Task}\\ \hline\hline
+    \centering Communication & Telecommunication datalinks,\newline Controller Pilot Data Link-Control (CPDLC), \newline Voice Communication\\\hline
+    \centering Navigation & Navigation sensors including GNSS, INS, etc. providing 3D/4D navigation capabilities.\\\hline
+    \centering Surveillance & Cooperative Systems (TCAS, ACAS, etc.)\newline Non-cooperative Sensors (LiDAR,Cameras, etc.)\\\hline
+    \centering Situation\newline Awareness& Early Warning Systems, \newline CDTI Display\\\hline
+    \centering{Autonomous\newline{Decision}\newline{Making}}& Strategic, Tactical, Emergency Flight Planning,\newline Intelligent Collision Detection,\newline Conflict Resolution and Prevention,\newline Weather/Terrain/Constraints Avoidance\\
+    \caption{Collision avoidance systems context overview \cite{gardi2015automated}.}
+    \label{tab:CASContext}
+\end{tabularx}
+
+\noindent The \emph{Detect and Avoid}, as a part of \emph{Collision Avoidance}, impacts all collision avoidance aspects (tab. \ref{tab:CASContext}). This work focuses on the \emph{Reach Sets} which gives us the following focus area:
+
+\begin{enumerate}
+    \item \emph{Communication} - it is assumed the command \& control communication link is stable. This aspect is not affected by reach sets.
     
-    \emph{Communication} overview elaboration on capability, reliability, security, architecture have been summarized  by Johansen et. al. in \cite{johansenetal2018surveyCommunicaiton}.
+    \item \emph{Navigation} - minimal navigation framework needs to be implemented for full experimentation with navigation capabilities of the \emph{Reach Set} based trajectory generation.
     
-    \emph{Navigation} overview is given by Nex \cite{nex2014uav} \emph{Waypoint planning in 3D enviroment} is elaborated in \cite{bodin2007navigating}. \emph{Waypoint Tracking and Test Environments} are thoughtfully discussed in \cite{how2008real,girard2004border,andrade2017autonomous,klausen2017nonlinear}.
+    \item \emph{Surveillance} - the surveillance will be covered with necessary low cost technologies, the simulated sensor inputs for following surveillance equipment is considered:
+    \begin{enumerate}[a.]
+        \item \emph{Non-cooperative} - LiDAR Sensor.
+        \item \emph{Cooperative} - ADS-B In/Out.
+    \end{enumerate}
     
-    \emph{Surveillance} cooperative surveillance is covered by TCAS and ACAS systems, interesting aspect of these systems are \emph{Resolution Advisories} \cite{kennedy1995resolution} for TCAS \cite{marston2015acas}. For ACAS. The visualization of surroundings has been introduced in \cite{blaskovich2007declutter}. \emph{LiDAR} based \emph{SAA} system have been introduced by Sabatini \cite{sabatini2014lidar} further enhanced by Ramasay \cite{ramasamy2016lidar}. Other \emph{Non-Cooperative} sensors and their feasibility have been outlined in Ramasay work \cite{ramasamy2014avionics}.
+    \item \emph{Situation  awareness} - the situation awareness focus on \emph{space segmentation} and \emph{safety evaluation} to support proper safe trajectory selection from \emph{reach set}.
     
-    \emph{Situation awareness} is implemented mainly as \emph{human-based} systems, \emph{Early Warning System} has been proposed by Lee \cite{lee2002collision} and adaptive version by Miller \cite{miller2002adaptive}. Effects of \emph{CDTI Display} visualization and human decision impact have been examined by Thomas \cite{thomas2005effects}. \emph{Self Separation} aspect have been examined by Williams \cite{williams1983self}.
+    \item \emph{Autonomous decision making} - the \emph{reach set} covers all possible avoidance strategies, to know how to select proper strategy is key in successfully avoidance maneuvering.
+\end{enumerate}
+
+\paragraph{Communication:} An overview elaboration on capability, reliability, security, architecture have been summarized  by Johansen et. al. in \cite{johansenetal2018surveyCommunicaiton}.
+
+The current state of art \emph{communication lines} and relay approaches are sufficient to provide necessary utilities. The use of existing 4G/3G mobile network is most probable candidate for low altitude UAS operations. The necessity to build back-up network for communication is still open topic.
+
+\paragraph{Navigation:} An overview is given by Nex \cite{nex2014uav} \emph{Waypoint planning in 3D environment} is elaborated in \cite{bodin2007navigating}. \emph{Waypoint Tracking and Test Environments} are thoughtfully discussed in \cite{how2008real,girard2004border,andrade2017autonomous,klausen2017nonlinear}. 
+
+All navigation methods are fairly similar. Consisting from following steps in the loop:
+\begin{enumerate}
+    \item Select goal waypoint.
+    \item Evaluate feasible navigation strategies (cost function).
     
-    \emph{Autonomous Decision Making} \TBD{This will be added later, because its main part...}
+    \item Select navigation strategy and generate reference trajectory.
     
-    \begin{note}
-        The purpose following sections is to introduce current state in:
-        \begin{enumerate}
-            \item Introduce \emph{Airspace Classification} in \ref{sec:AirspaceClassification}, from current ICAO/FAA/EASA viewpoint, emphasizing common viewpoint among regulations.
-            \item Provide background for \emph{manned aircraft operation rules} in \ref{sec:AircraftOperationRules},restriction imposed by Visual(\ref{sec:VisualFlightRules})/Instrumental(\ref{sec:InstrumentalFlightRules}) Flight rules.
-            \item Define \emph{"Well Clear"} (sec.\ref{sec:WellClear}) state of aircraft in airspace. Introducing the roles of \emph{Air Traffic Control} (\ref{sec:AirTrafficControl}) and current CAS systems TCAS (\ref{sec:TCAS}) and ACAS-X (\ref{sec:ACASX}).
-        \end{enumerate}
+    \item Follow reference trajectory with UAS system.
+\end{enumerate}
+The \emph{evaluation process} and selection criteria needs to be designed in context of \emph{reach sets}.
+
+\paragraph{Surveillance:} The cooperative surveillance is covered by TCAS and ACAS systems, interesting aspect of these systems are \emph{Resolution Advisories} \cite{kennedy1995resolution} for TCAS \cite{marston2015acas}. For ACAS.  These advisories are giving the suggestions for the pilot to avoid occurring collision. The responsibility for following advisories and avoiding collision is on the pilot.  
+
+This mechanism needs to be changed to increase the determinism of UAS behaviour. The voluntary approach of advisories needs to be replaced with mandatory approach (directives).
+
+\paragraph{Situation awareness:} The aspect of the situation awarnes of surroundings has been introduced in \cite{blaskovich2007declutter}. \emph{LiDAR} based \emph{SAA} system have been introduced by Sabatini \cite{sabatini2014lidar} further enhanced by Ramasay \cite{ramasamy2016lidar}. Other \emph{Non-Cooperative} sensors and their feasibility have been outlined in Ramasay work \cite{ramasamy2014avionics}. 
+
+The common ground of these works is a operational space discretization into various forms finite discrete sets to enable deterministic decision making. The key issue is to find good rate between space democratization and solution precision. The large cells in grid usually hide many escape routes. The small cells in grid usually increase the computation complexity and diminish computation time optimal solution.
+
+Examples \emph{situation awareness:} implementation can be found mainly in \emph{human-centered} systems, \emph{Early Warning System} has been proposed by Lee \cite{lee2002collision} and adaptive version by Miller \cite{miller2002adaptive}. Effects of \emph{CDTI Display} visualization and human decision impact have been examined by Thomas \cite{thomas2005effects}. \emph{Self Separation} aspect have been examined by Williams \cite{williams1983self}.
+
+The important concept for \emph{UAS} is internal data representation and autonomous situation resolution. The autonomous situation resolution (decision making process) can be extracted from human pilot operation procedures.  
+
+\paragraph{Manned Aviation Concepts:} The introduction of necessary concepts from manned aviation is organic in UAS concept understanding. 
+Many of the concepts are taken directly from manned aviation. The main contribution is to change the \emph{human decisions} into \emph{autonomous system decisions}.
+
+\paragraph{Airspace Classification:} For integration of the UAS systems into non segregated airspace it is necessary to known the classification of the \emph{operational space}. Who is the authority, in which space, and when the authority is enforced. The general overview of airspace classess and concepts accepted by ICAO/FAA/EASA are outlined in (sec. \ref{sec:AirspaceClassification}). The common viewpoint is emphasized. 
+    
+\paragraph{Aircraft Operational Rules:} It is necessary to know the basic rules in controlled/uncontrolled airspace. What is expected to be done by the aircraft in various flight modes. What is minimal equipment's, what is airworthiness and so on. The basic regulations are outlined in (sec. \ref{sec:AircraftOperationRules}). Visual Flight Rules (VFR) interesting parts can be found in (sec. \ref{sec:VisualFlightRules}). Instrumental Flight Rules interesting parts can be found in (sec. \ref{sec:InstrumentalFlightRules}).
         
-        \noindent The purpose of following sections is to introduce ATM extension for UAS systems:
-        \begin{enumerate}
-            \item \emph{UAS Traffic Management} functionality is analysed in \ref{sec:UTM}, two major movements EU USPACE (\ref{sec:USpace}) and US NASA UTM (\ref{sec:NASAUtm}).
-            \item \emph{Event Based Avoidance} (\ref{sec:EventBasedAvoidance}) defines basic event based control invoked by \emph{UTM}, two major categories are analyzed in \emph{MACP} (\ref{sec:MidairCollisionPrevention}) section and \emph{Weather Impact} (\ref{sec:WeatherImpact})
-            \item \emph{UTM Functional decomposition} is given in section \ref{sec:UTMFunctionaalDecomposition}.
-        \end{enumerate}
-    \end{note}
+\paragraph{Keeping "Well Clear" state:} The \emph{safe navigation} in \emph{airspace} have multiple levels, going from least strict to very strict. Keeping aircraft or UAS \emph{well clear} of all threats. There is first protective barrel known as \emph{well clear}, then there is smaller protective barrel representing \emph{near miss}, then the smallest protective barrel representing \emph{crash zone}. The \emph{Well clear} state of aircraft/UAS in airspace  important parts are mentioned in (sec.\ref{sec:WellClear}). 
+
+The important role of \emph{Air Traffic Control} for manned aircrafts is introduced in  (sec. \ref{sec:AirTrafficControl}). The general aviation \emph{routing} principles can be used on various scale for \emph{UAS routing}. The form of \emph{ATC} commands and directives must persist in future UAS traffic management, for compatibility reasons.
+
+The current Collision Avoidance Systems systems TCAS (\ref{sec:TCAS}) and ACAS-X (\ref{sec:ACASX}) which can be used as unmanned approach base are introduced.
+
+\paragraph{UAS Traffic Management:} The traffic management functionality is analyzed in (sec. \ref{sec:UTM}), two major movements EU USPACE (\ref{sec:USpace}) and US NASA UTM (\ref{sec:NASAUtm}) exists. The most notable information from operation specification are extracted there.
+
+\emph{Event Based Avoidance} (sec. \ref{sec:EventBasedAvoidance}) defines basic event based control invoked by \emph{UTM}, two major categories are analyzed in \emph{Mid-Air Collision Prevention} (sec. \ref{sec:MidairCollisionPrevention}) and \emph{Weather Impact} (sec. \ref{sec:WeatherImpact}).
