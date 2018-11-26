@@ -1,61 +1,88 @@
-\section{(W) Event Based Avoidance}\label{sec:EventBasedAvoidance}
+\section{(R) Event Based Avoidance}\label{sec:EventBasedAvoidance}
+\paragraph{Avoidance Urgency:} The avoidance problem is most dependable on the \emph{reaction time frame} or \emph{opportunity time}. A \emph{Reaction Time frame} can be derived from \emph{manned aviation}:
+
+\begin{enumerate}
+    \item \emph{Preventive Detect \& Avoid} - the parallel to a \emph{flight plan} which is approved by \emph{Air Traffic Control}. The purpose of \emph{preventive avoidance} in UAS systems is to \emph{mitigate collision risk}. The \emph{collision mitigation} is ensured by planed route validation, airway reservations, etc. The \emph{Preemptive Detect \& Avoid} for UAS will be covered by \emph{UTM} mission plan acceptance procedure.  
+    
+    \item \emph{Event Based Detect \& Avoid} - the parallel to \emph{manned aviation} \emph{Surveillance} and \emph{ATC directives}. The \emph{reaction time frame} is in minutes to tenth of minutes. The practices can be taken from \emph{Instrumental Flight Rules} (sec. \ref{sec:InstrumentalFlightRules}). Following sources of conflicts are expected:
+    \begin{enumerate}[a.]
+        \item \emph{UTM directive} - the directive to change heading or goal from authority, similar to \emph{ATM directives} \cite{icao4444}.
+        
+        \item \emph{UAS threat detection} - the \emph{Surveillance} detection of \emph{direct impact}.
+    \end{enumerate}
+    
+    \item \emph{Reactive Detect \& Avoid} - the parallel to \emph{manned aviation} See \& Avoid or \emph{Visual Flight Rules}. The reaction time frame is in seconds or tenth of seconds. The \emph{avoidance maneuver} is usually to minimize the damaging impact on environment or to preserve the \emph{UAs} intact.
+\end{enumerate}
+
+This work focus on \emph{Event Based} and \emph{Reactive Detect \& Avoid} level. The \emph{preventive level} is implementation of pre-flight procedures which are not outlined yet.
+
+\paragraph{Notification Event Resolution:} The \emph{future UAS/UTM} network can be abstracted as a hierarchical agent network, where UTM is master for given \emph{controlled airspace portion} and UAS systems are slaves. The communication principle is outlined by following communication diagram:
+\begin{equation*}
+    \begin{aligned}
+         \texttt{UTM (master)}& & &  \texttt{UAS (slave)} \\
+         send(Notification)&\longleftarrow&&|\\
+         |&\longrightarrow  &&receive(Notification)\\
+         |& & \circlearrowleft& triggerEvents(Notification)\\
+         |& \longleftarrow && send(Events)\\
+         \circlearrowleft check(Events)&\longleftrightarrow  &\circlearrowleft & process(Events)\\
+         |&\longleftarrow&&resolve(Nontification)
+    \end{aligned}
+\end{equation*}
+
+\noindent The \emph{UTM authority} (master) sends a notification about dangerous situation or a directive for one or multiple \emph{UAS}(slaves). The \emph{UAS} receive \emph{Notification/Directive}, this can trigger multiple events on UAS side. The \emph{triggered Events} are notified to \emph{UTM} (master). Then \emph{UAS} process events and \emph{UTM} checks the outcome. Once \emph{events} from notification are resolved, the \emph{UAS} will send out \emph{resolution notification}. 
+
+The presented communication schema requires to implement following mechanisms to ensure concept flexibility:
+\begin{enumerate}
+    \item \emph{UTM notification mechanism} - to notify some airspace changes it is necessary to implement minimal detection mechanism and to sent necessary data for \emph{slave event handling} system. The \emph{UTM} should also cover mechanisms for \emph{fail safe} directives fulfillment check.
+    
+    \item \emph{UAS rule engine} - The UAS \emph{Navigation/Detect \& Avoid} systems must have some level of flexibility. The processing of some events are changing with time and having static structure of event handling is obsolete. The \emph{rule engine} with well defined process decision points is modern approach to event handling.
+\end{enumerate}
+
+\paragraph{Threat Hierarchy:} The \emph{Threath Hierarchy} is depending on the \emph{airspace type} and its decided by \emph{rules and regulations}, sometimes by a common sense. The \emph{hierarchy} goes like follow:
+
 \begin{itemize}
-    \item Introduce the context for Event based avoidance: 
+    \item[$\to$] \emph{Controlled Airspace} - there should be no static obstacles, usually the \emph{airspace} is controlled from flight levels where is no presence of \emph{permanent structures}.
+        \begin{itemize}
+            \item[$\to$] \emph{Air Traffic Control Restrictions} - there are restrictions of \emph{airspace corridors} or \emph{portions}. These restrictions are over \emph{all} following and can not be broken without causing a serious security incident.
+            
+            \item[$\to$] \emph{Weather Restrictions (Critical Conditions)} - there are static or moving areas of bad weather, which impact can harm the UAS to the point of no recovery. This areas can be classified as \emph{hard constraints}.  
+            
+            \item[$\to$] \emph{UAS Traffic Management Restrictions} - there are static or moving  areas which are prohibited to enter by \emph{UTM} authority.  They are similar to \emph{Air Traffic Control} restrictions. The \emph{restricted space} is prohibited to enter by \emph{UAS}, but it can contain or be entered by \emph{manned aviation}.
+            \begin{note}
+                The pilot community statement to UAS integration is to have preferential treatment to manned aviation.
+            \end{note}      
+            
+            
+            \item[$\to$] \emph{Non-cooperative Intruders} - the \emph{intruding UAS} or \emph{bird} entering into \emph{controlled portion}. These needs to be avoided without using \emph{cooperative} capabilities.
+            
+            \item[$\to$] \emph{Weather Restrictions (Breachable Conditions)} - there are weather impacted areas where the \emph weather impact is not fatal to UAS (humidity resistance, wind resistance, improved exoskeleton). These impacted areas can be entered if its safe and cost effective for the UAS. These type of restrictions are considered as \emph{soft constraints}, because they can be broken without significant drawback. 
+        \end{itemize}
+        
+    \item[$\to$] \emph{Non-Controlled Airspace} - there is addition of \emph{static obstacles} and \emph{geo-fencing} threats to UAS, some of \emph{controlled airspace aspects} are relaxed.
+    
     \begin{itemize}
-        \item Preventive DAA - before flight preparation
-        \item Event-based DAA - reaction window in minutes, usually cooperative via notifications and other methods
-        \item Reactive DAA - you know the drill boys ..., reaction window in 10th of seconds ...
+        \item[$\to$] \emph{Static obstacles} - there is terrain and man made structures which are considered static in UAS mission time frame. These needs to be avoided with highest priority. They are usually detected with \emph{UAS Sensors}.
+        
+        \item[$\to$] \emph{Intruders} - there can be intruders which do not have an intention to harm the \emph{UAS}. These intruders can be handled same way as in term of \emph{controlled airspace}.
+        
+        \item[$\to$] \emph{Geo-fencing} - there are important structures or natural formations which are protected against entrance of an \emph{UAS}. The protection zone can have different shapes and can impact different altitudes even in \emph{Controlled Airspace}. These zones can be considered as \emph{hard constraints} or \emph{soft constraints} depending on the situation.
+        
+        \item[$\to$] \emph{Weather Restrictions (Critical/Breachable Conditions)} - the weather have same impact as in \emph{controlled airspace}. The \emph{weather} in non-controlled airspace can be considered as \emph{hard constraints} or \emph{soft constraints} depending on the situation.
     \end{itemize}
-    \item Introduce the process of notification and Event Resolution
-    \item Outline hierarchy in U(A)TM controlled space 
-    \item Outline expected minimal set of data sources
 \end{itemize}
 
-\subsection{(W) Mid-Air Collision Prevention}\label{sec:MidairCollisionPrevention}
-\begin{itemize}
-    \item Identify and dispute shortcomings of Aircraft classification in ICAO
-    \item List of MAC events
-    \item For each event describe trigger and resolution 
-    \item cite barrel \cite{welzl1991smallest}
-\end{itemize}
+\paragraph{Minimal Operational Data Set:} The \emph{operational equipment} should be at least on the \emph{manned aviation} grade. The \emph{minimal} Instrumental Flight Rules (IFR) equipment was outlined in (sec. \ref{sec:InstrumentalFlightRules}). The minimal operational data set can be defined trough mandatory equipment, the listing goes as follow:
 
-\subsection{(W) Weather Impact}\label{sec:WeatherImpact}
-
-    \begin{itemize}
-        \item do not use term "climate change"
-        \item critical events are getting more localized and their magnitude is increased
-        \item List of Weather event
-        \item Discuss weather mitigation
-    \end{itemize}
+\begin{enumerate}
+    \item \emph{Precise positioning} - the precise and real-time position for UAS are mandatory for precise navigation and precise position notifications. 
     
-    \emph{Weather Impact} on transportation in general has been introduced by Koetse in study \cite{koetse2009impact}.
+    \item \emph{Self Identification Service} - each UAS needs to provide own identity, sharing position information and intentions information. The unique identifier and registration is mandatory to provide UAS ownership and responsibility link.
     
-    \emph{Weather-based} preemptive planning have been introduced into manned aviation in 2015 \cite{yamashita2015climate}. \TBD{This one shows global model impact}
+    \item \emph{Barometric Altitude} - the precise measurement for barometric altitude is necessary to enter into \emph{controlled airspace}. The reference barometric pressure is provided by \emph{Air Traffic Services} for selected airport/national airspace.
     
-    \emph{Severe Weather Condition Detection Capabilities} for current level of standard aviation equipment have been reviewed in \cite{smith2016multi} \TBD{This one shows intermediate weather detection}
+    \item \emph{Terrain Sensor} - the ability to avoid static obstacles and terrain is necessary for \emph{low altitude operations}.
     
-    \begin{figure}[H]
-	\centering
-	\begin{subfigure}{0.45\textwidth}
-		\includegraphics[width=\textwidth]{\FIGDIR/02_03_RelativeHumidity}
-		\caption{Relative Humidity.} 
-	\end{subfigure}
-	\vspace{1em} 
-	\begin{subfigure}{0.45\textwidth} % width of right subfigure
-		\includegraphics[width=\textwidth]{\FIGDIR/02_04_WindTemperature}
-		\caption{Localized Wind Vectors.} % subcaption
-	\end{subfigure}
-	\caption{Localized Weather Model \cite{balaban2017dynamic}.} % caption for whole figure
-    \end{figure}
+    \item \emph{Transponder (Cooperative Intruders Sensor)} - complement to \emph{self identification service} and \emph{position notification}. All mentioned functionality is covered by single device ADS-B In/Out.
     
-    \emph{Icing risk} in localized environment have been predicted based on numerical model \cite{thompson2017numerical}. It is shown that icing can be prevented by \emph{planned} and \emph{reactive} avoidance.
-    
-    \emph{Weather Models} can be extracted from \emph{Climate and weather model archive at the National Oceanic and Atmospheric Administration} \cite{rutledge2006nomads}.
-    
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.7\textwidth]{\FIGDIR/02_01_IVS_Model}
-        \caption{Example of upper troposphere winds \cite{rutledge2006nomads}.}
-        \label{fig:ExampleOfTroposphereWinds}
-    \end{figure}
-
+    \item \emph{Non-cooperative Intruders Sensor} - the identification and extraction of non cooperative intruders (hobby UAVs, birds) is increasing overall safety.
+\end{enumerate}
