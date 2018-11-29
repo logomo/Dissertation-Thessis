@@ -17,6 +17,10 @@ Ingrid Gerdes, Annette Temme, and Michael Schultz.
 \newblock Dynamic airspace sectorization using controller task load.
 \newblock {\em Sixth SESAR Innovation Days}, 2016.
 
+\bibitem{netalert2013n17}
+EUROCONTROL NETALERT.
+\newblock N17-acas x-the future of airborne collision avoidance, 2013.
+
 \bibitem{balaban2017dynamic}
 Edward Balaban, Indranil Roychoudhury, Lilly Spirkovska, Shankar Sankararaman,
   Chetan~S Kulkarni, and Matthew Daigle.
@@ -235,10 +239,6 @@ Alessandro Gardi, Roberto Sabatini, Subramanian Ramasamy, and Trevor Kistan.
   traffic management systems.
 \newblock In {\em Applied Mechanics and Materials}, volume 629, pages 327--332.
   Trans Tech Publ, 2014.
-
-\bibitem{netalert2013n17}
-EUROCONTROL NETALERT.
-\newblock N17-acas x-the future of airborne collision avoidance, 2013.
 
 \bibitem{annex200710}
 ICAO Annex.
