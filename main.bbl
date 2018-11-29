@@ -236,11 +236,14 @@ Alessandro Gardi, Roberto Sabatini, Subramanian Ramasamy, and Trevor Kistan.
 \newblock In {\em Applied Mechanics and Materials}, volume 629, pages 327--332.
   Trans Tech Publ, 2014.
 
-\bibitem{katz2017reluplex}
-Guy Katz, Clark Barrett, David~L Dill, Kyle Julian, and Mykel~J Kochenderfer.
-\newblock Reluplex: An efficient smt solver for verifying deep neural networks.
-\newblock In {\em International Conference on Computer Aided Verification},
-  pages 97--117. Springer, 2017.
+\bibitem{netalert2013n17}
+EUROCONTROL NETALERT.
+\newblock N17-acas x-the future of airborne collision avoidance, 2013.
+
+\bibitem{annex200710}
+ICAO Annex.
+\newblock 10-vol. 4 - aeronautical telecommunications, surveillance radar and
+  collision avoidance systems, 2007.
 
 \bibitem{eurocontrol2018rpasatm}
 Remotely piloted aircraft systems atm concept of operations.
