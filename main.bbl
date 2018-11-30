@@ -245,6 +245,17 @@ ICAO Annex.
 \newblock 10-vol. 4 - aeronautical telecommunications, surveillance radar and
   collision avoidance systems, 2007.
 
+\bibitem{federal2011introduction}
+Federal~Aviation Administration.
+\newblock Introduction to tcas ii, version 7.1.
+\newblock 2011.
+
+\bibitem{munoz2013tcas}
+C{\'e}sar Munoz, Anthony Narkawicz, and James Chamberlain.
+\newblock A tcas-ii resolution advisory detection algorithm.
+\newblock In {\em AIAA Guidance, Navigation, and Control (GNC) Conference},
+  page 4622, 2013.
+
 \bibitem{eurocontrol2018rpasatm}
 Remotely piloted aircraft systems atm concept of operations.
 \newblock obtained from:
