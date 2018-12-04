@@ -1,0 +1,52 @@
+\section{List of Publications}\label{sec:listOfPublications}
+
+\noindent This \emph{section} contains the list of published articles, proceedings, technical reports and module projects, relevant to the \emph{thesis topic}.
+
+%   My First Article Ever!
+\paragraph{Article:} Alojz Gomola, Joao Borges de Sousa, Fernando Lobo Pereira, and Pavel Klang. Obstacle avoidance framework based on reach sets. In Iberian Robotics conference, pages 768–779. Springer, 2017. \cite{gomola2017obstacle}\footnote{Draft available online: \url{https://goo.gl/kZujZE}}.
+
+\emph{Summary:} This report on preliminary investigations concerning the development of a LIDAR based detect and avoid (DAA) system with a low computational footprint for small Unmanned Air Systems. The focus is on the integration with nominal flight control systems and on computational feasibility. The proposed system decomposes the SAA problem into the following components detection, space assessment, escape trajectory estimation and avoidance execution. The control logic is encoded with the help of a hybrid automaton. The properties of the system are studied with the help of approximations to time slices of the UAV reach set.
+
+
+\paragraph{Article:}  Juraj {\v{S}}tevek,  Michal  Kvasnica,  Miroslav  Fikar,  and  Alojz  Gomola. A  parametric programming  approach  to  automated  integrated  circuit  design. IEEE Transactions on Control Systems Technology, 26(4):1180–1191, 2018. \cite{vstevek2018parametric}\footnote{IEEE copy online: \url{https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7981386}}.
+
+\emph{Summary:} The proposal of an optimization-based slotting approach to automated \emph{integrated circuit} design for generating a power transistor. The original slotting problem is formulated as a mixed-integer linear program. It is solved through parametric optimization with advantage that usage of any commercial optimization solvers on user’s side is avoided with short evaluation time and simple implementation. The approach is applied in specific very large scale integration production technology and demonstrated on an example.
+
+\emph{Contributions:} Point-location algorithm for MPC region selection. 
+
+\paragraph{Proceedings:} Kristian Klausen, Jostein Borgen Moe, Jonathan Cornel van den Hoorn, Alojz Gomola, Thor I Fossen, and Tor Arne Johansen. Coordinated control concept for recovery of a fixed-wing uav on a ship using a net carried by multirotor UAVs.  In Unmanned Aircraft Systems (ICUAS), 2016 International Conference on, pages 964–973. IEEE, 2016, \cite{klausen2016coordinated}\footnote{Public copy available online: \url{http://folk.ntnu.no/torarnj/ICUAS2016_singlecolumn.pdf}}.
+
+\emph{Summary:} Ship-based Unmanned Aerial Vehicle (UAV) operations represent an important field of research which enables a large variety of mission types. Most of these operations demand a high level of endurance which normally requires the use of a fixed-wing UAV. Traditionally, a net located on the ship deck is used for recovering the fixed-wing UAV. However, there are numerous challenges when attempting autonomous landings in such environments. Waves will induce heave motion, and turbulence near the ship will make approaches challenging. In this paper, we present a concept using multi-rotor UAVs to move the recovery operation off the ship deck. To recover the fixed-wing UAV, a net is suspended below two coordinated multirotor UAVs which can synchronize the movement with the fixed-wing UAV. The approach trajectory can be optimized with respect to the wind direction, and turbulence caused by the ship can be avoided. In addition, the multirotor UAVs can transport the net at a certain speed along the trajectory of the fixed-wing UAV, thus decreasing the relative velocity between the net and fixed-wing UAV to reduce the forces of impact. This paper proves the proposed concept through a simulation study and a preliminary control system architecture.
+
+\emph{Contributions:} Ground station manuever implementation, messaging between ground station/UAVs. RTK-GPS for precise navigation integration, Net-release mechanism design, Mechanical parts for 3D printer modeling. 
+
+\paragraph{Proceedings:}  Alojz Gomola.  Aspect-oriented solution for mutual exclusion in embedded systems. In Alena Kozakova, editor,ELITECH15: 17th Conference of doctoral students, pages964–973, Bratislava, Slovak Republic, may 2015. Online publication, \cite{gomola2015aspectOriented}\footnote{Draft available online: \url{https://github.com/logomo/Elitech15-paper}}.
+
+\emph{Summary:} Embedded systems are developed for wide range of applications. The best known applications are industrial process control and banking solutions. Fault tolerance is the crucial requirement in long-term embedded systems. This paper presents solution for mutual exclusion in embedded systems. The usual mutual exclusion solution using semaphores is a crosscutting concern. Semaphores are difficult to maintain in code and their failure rate is high. We propose new aspect-oriented solution for mutual exclusion. Our solution utilizes aspect-oriented approach, is usable in other systems and designed to be robust against program changes, and it provides a solution to aspect fragility problem.
+
+\paragraph{Technical report:} Alojz Gomola, Pavel Klang, and Jan Ludvik. Probabilistic approach in data fusion forobstacle avoidance framework based on reach sets. In Internal publication collection,pages 1–93. Honeywell, 2017, \cite{gomola2017probabilistic}\footnote{Public copy available online: \url{https://github.com/logomo/Data-Fusion-Report}}.
+
+\emph{Summary:} The \emph{sensor input} and \emph{information sources} fusion procedure design to obtain rated space assessment for visibility, obstacle occupancy and reachibility evaluation. Unique statistical approach was proposed to couple partial ratings under reading and time uncertainty. The key contribution is scalable approach to evaluate \emph{UAS action space} and \emph{Feasible Trajectories} properties. 
+
+\paragraph{Technical report:}  Alojz Gomola. Model predictive control of unmanned air vehicles with obstacle avoidance capabilities.  Technical report, FEUP, 2017, \cite{gomola2017mpc}\footnote{Public copy available online: \url{https://github.com/logomo/Predictive-control---Final-report}}.
+
+\emph{Summary:} Initial solution of \emph{predictive control} problem for \emph{UAS} navigation in constrained, non-controlled airspace. The key contribution is \emph{Movement Automaton} (a special type of hybrid automaton) establishment in current form (sec. \ref{sec:MovementAutomatonBackground}). The \emph{stability}, \emph{controllability} and \emph{observabillity} properties have been proven. The \emph{feasibility} of \emph{Movement Automaton} as \emph{control interface} and \emph{future state predictor} have been shown trough formal proof and excessive testing.
+
+\paragraph{Technical report:} Alojz  Gomola.   Optimal  control  of  unmanned  air  vehicles  with  obstacle  avoidance capabilities in partially known environment.  Technical report, FEUP, 2017. \cite{gomola2017optimal}\footnote{Public copy available online: \url{https://github.com/logomo/Optimal-Control}}.
+
+\emph{Summary:} The \emph{optimization problem} for \emph{obstacle avoidance} (eq. \ref{eq:trajectoryTrackingOptimalizaitonProblem}) to provide satisfy  \emph{avoidance requirements} (sec. \ref{s:AvoidanceRequirements}) 
+
+\paragraph{Framework:} Feature-based ACAS\footnote{Matlab prototype available online: \url{https://github.com/logomo/Feature-based-ACAS}} implementation to support claims of this work has been developed trough course of years \emph{2016-2018}. The framework provides: 
+\begin{enumerate}
+    \item \emph{Simulation environment} - full support for single/multiple UAS simulation support in controlled/non-controlled airspace.
+    
+    \item \emph{Mission Control Support} - standard mission control support for \emph{sparse ordered waypoint} mission type. 
+    
+    \item \emph{UAS Traffic Management} - support for \emph{collaborative} weather and collision avoidance with general authority in controlled airspace. The configurable \emph{event handling} trough \emph{rule-engine}.
+    
+    \item \emph{Encounter Models} - model for \emph{static obstacles} supporting point-cloud generation of LiDAR sensor, various intruders model supporting the ADS-B like encounter model, static/dynamic polygon constraints with altitude range. 
+    
+    \item \emph{Collision Avoidance} - the support for \emph{cooperative} and \emph{non-cooperative} behaviour in controlled airspace, \emph{non-collaborative, non-adversary} bahaviour in non-controlled airspace. 
+    
+    \item \emph{Reach Set Estimation Methods} - four methods for various property focused \emph{Reach Set Estimations}.
+\end{enumerate}
