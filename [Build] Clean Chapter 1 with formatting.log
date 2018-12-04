@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  4 DEC 2018 14:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  4 DEC 2018 17:08
 entering extended mode
 **"./[Build] Clean Chapter 1 with formatting.tex"
 ("[Build] Clean Chapter 1 with formatting.tex"
@@ -589,8 +589,135 @@ Non-PDF special ignored!
 <special> header=psfrag.pro
 
 
-{C:/Users/H172461/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-(01I06-ListOfPublications.tex
+{C:/Users/H172461/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+LaTeX Warning: Reference `s:HybridAutomaton' on page 2 undefined on input line 
+7.
+
+
+LaTeX Warning: Reference `s:MovementAutomatonDefinitionAndProperties' on page 2
+ undefined on input line 7.
+
+
+LaTeX Warning: Reference `s:UASNonlinearModel' on page 2 undefined on input lin
+e 7.
+
+
+LaTeX Warning: Reference `s:movementAutomatonDefinition' on page 2 undefined on
+ input line 7.
+
+
+LaTeX Warning: Reference `s:referenceTrajectoryGenerator' on page 2 undefined o
+n input line 7.
+
+
+LaTeX Warning: Reference `s:segmentedMovementAutomaton' on page 2 undefined on 
+input line 7.
+
+
+LaTeX Warning: Reference `eq:ourTrajectoryImplementation' on page 2 undefined o
+n input line 9.
+
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 11.
+
+
+LaTeX Warning: Reference `def:ReachSetApproximationByMovementAutomaton' on page
+ 2 undefined on input line 11.
+
+
+LaTeX Warning: Reference `eq:trajectoryReachibility' on page 2 undefined on inp
+ut line 11.
+
+
+LaTeX Warning: Reference `sec:MCRcomputationalComplexity' on page 2 undefined o
+n input line 11.
+
+
+LaTeX Warning: Reference `s:sensorFusion' on page 2 undefined on input line 13.
+
+
+
+LaTeX Warning: Reference `fig:missionControlRunActivityDiagram' on page 2 undef
+ined on input line 15.
+
+
+LaTeX Warning: Reference `sec:utmArchitecture' on page 2 undefined on input lin
+e 17.
+
+
+LaTeX Warning: Reference `sec:handlingHeadOnApproach' on page 2 undefined on in
+put line 17.
+
+
+LaTeX Warning: Reference `sec:handlingConvergingManuever' on page 2 undefined o
+n input line 17.
+
+
+LaTeX Warning: Reference `sec:handlingOvertakeManuever' on page 2 undefined on 
+input line 17.
+
+
+LaTeX Warning: Reference `sec:cooperativeConflictResolution' on page 2 undefine
+d on input line 17.
+
+
+LaTeX Warning: Reference `sec:nonCooperativeConflictResolution' on page 2 undef
+ined on input line 17.
+
+
+LaTeX Warning: Reference `s:AvoidanceGrid' on page 2 undefined on input line 23
+.
+
+
+LaTeX Warning: Reference `fig:LidarSpaceSegmentation' on page 2 undefined on in
+put line 23.
+
+
+LaTeX Warning: Reference `fig:P01CountOfLiDARHits' on page 2 undefined on input
+ line 23.
+
+
+LaTeX Warning: Reference `fig:P02OvershadowedMapobstacle' on page 2 undefined o
+n input line 23.
+
+
+LaTeX Warning: Reference `fig:rapidExplorationTrajectoryTree' on page 2 undefin
+ed on input line 25.
+
+
+LaTeX Warning: Reference `alg:Wavefront Propagation' on page 2 undefined on inp
+ut line 25.
+
+
+LaTeX Warning: Reference `alg:ExpansionConstraintFunctionForChaoticReachSet' on
+ page 2 undefined on input line 25.
+
+
+LaTeX Warning: Reference `alg:ExpansionConstraintFunctionForHarmonicReachSet' o
+n page 2 undefined on input line 25.
+
+
+LaTeX Warning: Reference `alg:ExpansionConstraintFunctionForACASLikeReachSet' o
+n page 2 undefined on input line 25.
+
+
+LaTeX Warning: Reference `s:staticObstacles' on page 2 undefined on input line 
+27.
+
+
+LaTeX Warning: Reference `s:intruders' on page 2 undefined on input line 27.
+
+[2]
+
+LaTeX Warning: Reference `s:RuleEngineArchitecture' on page 3 undefined on inpu
+t line 29.
+
+
+LaTeX Warning: Reference `fig:RuleEngineInstanceLevels' on page 3 undefined on 
+input line 29.
+
+) (01I06-ListOfPublications.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 6.
 
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -600,23 +727,23 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 6.
 
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2]
+) [3]
 
-LaTeX Warning: Reference `sec:MovementAutomatonBackground' on page 3 undefined 
+LaTeX Warning: Reference `sec:MovementAutomatonBackground' on page 4 undefined 
 on input line 33.
 
-[3]
+[4]
 
-LaTeX Warning: Reference `eq:trajectoryTrackingOptimalizaitonProblem' on page 4
+LaTeX Warning: Reference `eq:trajectoryTrackingOptimalizaitonProblem' on page 5
  undefined on input line 37.
 
 
-LaTeX Warning: Reference `s:AvoidanceRequirements' on page 4 undefined on input
+LaTeX Warning: Reference `s:AvoidanceRequirements' on page 5 undefined on input
  line 37.
 
-) ("[Build] Clean Chapter 1 with formatting.bbl" [4])
+) ("[Build] Clean Chapter 1 with formatting.bbl" [5])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
- [5
+ [6
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
@@ -626,7 +753,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
 Package rerunfilecheck Info: File `"[Build] Clean Chapter 1 with formatting".ou
 t' has not changed.
-(rerunfilecheck)             Checksum: E7E00B32B3AEA2EF549BB6D27EEE08F1;944.
+(rerunfilecheck)             Checksum: B42E4F1123C1E70EEFF839B777320F79;945.
 
 
 LaTeX Warning: There were undefined references.
@@ -634,13 +761,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 163.
  ) 
 Here is how much of TeX's memory you used:
- 13703 strings out of 492973
- 195039 string characters out of 3135926
+ 13748 strings out of 492973
+ 196097 string characters out of 3135926
  292474 words of memory out of 3000000
- 17339 multiletter control sequences out of 15000+200000
+ 17371 multiletter control sequences out of 15000+200000
  17237 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,8n,40p,1371b,400s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,8n,40p,1371b,436s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
 ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/H1724
 61/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/H172461/MiKTeX
@@ -649,10 +776,10 @@ ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/H1724
 lic/amsfonts/cm/cmsy10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmti12.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmtt10.pfb>
-Output written on "[Build] Clean Chapter 1 with formatting.pdf" (5 pages, 13816
-5 bytes).
+Output written on "[Build] Clean Chapter 1 with formatting.pdf" (6 pages, 14571
+8 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
+ 169 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
