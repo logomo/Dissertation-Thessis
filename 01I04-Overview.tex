@@ -1,6 +1,38 @@
-\section{(W) Overview}\label{s:Overview}
-    \emph{To be done here:}
-    \begin{itemize}
-        \item  Chapter overview 
-        \item Notation of key concepts
-    \end{itemize}
+\section{(R) Overview}\label{s:Overview}
+
+\noindent The work is organized like follows:
+
+\begin{enumerate}
+    \item \emph{Introduction} (ch. \ref{ch:introduction}) - the introduction chapter giving overview of work motivation, goals, contributions and \emph{author`s list of publication}.
+    
+    \item \emph{Collision Avoidance} (ch. \ref{ch:CollisionAvoidance}) - This chapter gives aerospace related background. The manned aviation is serving as knowledge base for assumption of future UAS Detect \& Avoid functionality. The chapter gives overview of airspace classification, which told us where and what we can do or expect. Aircraft operational rules for general are reflected into \emph{separation functionality}. The separation can be passive enforced by Air Traffic Management authority or active enforced by \emph{ACAS-X/TCAS} systems. The \emph{UAS Traffic Management} is parallel to maned aviation practices with additional layer of complexity.  The \emph{Event Based avoidance} is introduced to give overview of concepts used later.
+    
+    \item \emph{Background Theory} (ch. \ref{ch:backGroundTheory}) - this chapter outlines background necessary for approach understanding. The \emph{control theory} system models are used as base for the \emph{reach set} calculation. The important concept of \emph{movement automaton} (special case of hybrid automaton) used for prediction, trajectory representation, and, reach set estimation is introduced. The LiDAR related theory and complements are presented at last. 
+    
+    \item \emph{Problem Statement} (ch. \ref{c:problemStatement}) - this chapter states the problem solved in this work. The basic definition and terminology is established at beginning with initial problem and assumptions. Incremental problem is introduced with increasing complexity and relaxed conditions. Avoidance and Navigation functional and non-functional requirements are stated at last. 
+    
+    \item \emph{State of Art} (ch. \ref{ch:stateOfArt}) - this chapter covers important results of other researcher works in topics of Movement Automaton, Sensor \& Data Fusion, Navigation Algorithm, Reach Sets, and Testing Approach. The \emph{UAS Traffic Management} concept relevant for this work is introduced.  
+    
+    \item \emph{Approach} (ch. \ref{ch:approach}) - this chapter describes approach, it starts with overview (sec. \ref{s:approachOverview}), outlining the block scheme of the system (fig. \ref{fig:AvoidanceFrameworkConceptNew}). The discretization of the space, trajectories and system model are covered in (sec. \ref{s:modelMAImplementation} - \ref{s:AvoidanceGrid}), the following topics are covered:
+    \begin{enumerate}[a.]
+        \item \emph{Reach Set Estimation} (sec. \ref{s:reachSet}) - the discretization, performance evaluation and generation algorithms.
+        
+        \item \emph{Encounter Modeling} (sec. \ref{s:staticObstacles} - \ref{s:intruders}) - static obstacles, intruders, static/moving constraints, and more.
+        
+        \item \emph{Collision Avoidance} (sec. \ref{s:avoidanceConcept}) - the avoidance/navigation loop with global data fusion procedure, complexity and safety margin calculations.
+        
+        \item \emph{Further to Cooperative Operations} (sec. \ref{sec:UASTrafficManagement} - \ref{sec:ruleEngine}) - the approach to satisfy scalability and \emph{UTM} requirements.
+    \end{enumerate}
+    
+    \item \emph{Simulations} (ch. \ref{Simulations}) the simulations covers aspects developed in approach, the test plan (tab. \ref{tab:testCasesSummary}) summarizes test cases. The results are outlined in (tab. \ref{tab:testCasesPerformacneEvaluation}), the computation load statistics are summarized in (tab. \ref{tab:computationLoadStatistics}). The test are divided into following categories:
+    
+    \begin{enumerate}[a.]
+        \item \emph{Non-cooperative Test Cases} (sec. \ref{s:noncooperativeTestCases}) - various obstacles, weather constraints and non-cooperative intruders test cases
+    
+        \item \emph{Cooperative Test Cases} (sec. \ref{s:cooperativeTestCases}) - maneuvers in controlled airspace under supervision of traffic management.
+    
+        \item \emph{Reach Set Estimation Performance and Properties} (sec. \ref{Reduced Reach Sets Performance}) - the comparison of various estimation methods, the impact on complexity.
+    \end{enumerate}
+    
+    \item \emph{Conclusion and Future Work} (ch. \ref{ch:Conclusion}) - work conclusion, summarizing achieved results, comparing other approaches, outlining reusable modular parts of approach, utilizing the future work on approach shortcommings.
+\end{enumerate}
