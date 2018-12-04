@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  30 NOV 2018 14:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  4 DEC 2018 10:52
 entering extended mode
 **"./[Build] Clean Chapter 2 with formatting.tex"
 ("[Build] Clean Chapter 2 with formatting.tex"
@@ -590,13 +590,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--30
 10 http : / / www . airservicesaustralia . com / services /
  []
 
-<./Pics/TE055GenericAirspaceClasses.jpg, id=164, 426.8748pt x 331.4784pt>
+<./Pics/TE055GenericAirspaceClasses.jpg, id=167, 426.8748pt x 331.4784pt>
 File: ./Pics/TE055GenericAirspaceClasses.jpg Graphic file (type jpg)
 <use ./Pics/TE055GenericAirspaceClasses.jpg>
 Package pdftex.def Info: ./Pics/TE055GenericAirspaceClasses.jpg  used on input 
 line 36.
 (pdftex.def)             Requested size: 200.3085pt x 155.54701pt.
-<./Pics/TE056CzechAirspaceClassification.png, id=165, 825.0825pt x 591.20876pt>
+<./Pics/TE056CzechAirspaceClassification.png, id=168, 825.0825pt x 591.20876pt>
 
 File: ./Pics/TE056CzechAirspaceClassification.png Graphic file (type png)
 <use ./Pics/TE056CzechAirspaceClassification.png>
@@ -605,7 +605,7 @@ nput line 41.
 (pdftex.def)             Requested size: 218.51521pt x 156.57034pt.
 [4 <./Pics/TE055GenericAirspaceClasses.jpg> <./Pics/TE056CzechAirspaceClassific
 ation.png (PNG copy)>] [5] [6]
-<./Pics/TE057RestrictedAirspaceMap.png, id=226, 799.98875pt x 457.71pt>
+<./Pics/TE057RestrictedAirspaceMap.png, id=229, 799.98875pt x 457.71pt>
 File: ./Pics/TE057RestrictedAirspaceMap.png Graphic file (type png)
 <use ./Pics/TE057RestrictedAirspaceMap.png>
 Package pdftex.def Info: ./Pics/TE057RestrictedAirspaceMap.png  used on input l
@@ -631,7 +631,7 @@ LaTeX Warning: Reference `sec:handlingOvertakeManuever' on page 9 undefined on
 input line 16.
 
 [9] [10]) (02C04-WellClear-ATC.tex [11]
-<./Pics/02_05_WellClearTreshold.png, id=304, 587.796pt x 417.9615pt>
+<./Pics/02_05_WellClearTreshold.png, id=307, 587.796pt x 417.9615pt>
 File: ./Pics/02_05_WellClearTreshold.png Graphic file (type png)
 <use ./Pics/02_05_WellClearTreshold.png>
 Package pdftex.def Info: ./Pics/02_05_WellClearTreshold.png  used on input line
@@ -639,7 +639,7 @@ Package pdftex.def Info: ./Pics/02_05_WellClearTreshold.png  used on input line
 (pdftex.def)             Requested size: 273.14922pt x 194.22891pt.
 ) (02C04a-Air-Traffic-Controll.tex
 [12 <./Pics/02_05_WellClearTreshold.png>] [13]
-<./Pics/02_02_DAM_Example.png, id=359, 863.6265pt x 222.23026pt>
+<./Pics/02_02_DAM_Example.png, id=362, 863.6265pt x 222.23026pt>
 File: ./Pics/02_02_DAM_Example.png Graphic file (type png)
 <use ./Pics/02_02_DAM_Example.png>
 Package pdftex.def Info: ./Pics/02_02_DAM_Example.png  used on input line 73.
@@ -652,7 +652,7 @@ LaTeX Warning: Reference `s:reachSet' on page 16 undefined on input line 33.
 LaTeX Warning: Reference `s:missionControlRun' on page 16 undefined on input li
 ne 39.
 
-<./Pics/TE058TwoPhasesACASX.png, id=399, 925.20656pt x 551.05875pt>
+<./Pics/TE058TwoPhasesACASX.png, id=402, 925.20656pt x 551.05875pt>
 File: ./Pics/TE058TwoPhasesACASX.png Graphic file (type png)
 <use ./Pics/TE058TwoPhasesACASX.png>
 Package pdftex.def Info: ./Pics/TE058TwoPhasesACASX.png  used on input line 47.
@@ -668,7 +668,7 @@ LaTeX Warning: Reference `s:RuleEngineArchitecture' on page 17 undefined on inp
 ut line 79.
 
 [17]
-<./Pics/TE059ACASConflictExample.png, id=425, 863.47594pt x 453.19313pt>
+<./Pics/TE059ACASConflictExample.png, id=428, 863.47594pt x 453.19313pt>
 File: ./Pics/TE059ACASConflictExample.png Graphic file (type png)
 <use ./Pics/TE059ACASConflictExample.png>
 Package pdftex.def Info: ./Pics/TE059ACASConflictExample.png  used on input lin
@@ -683,20 +683,20 @@ Overfull \hbox (8.26682pt too wide) in paragraph at lines 31--41
 [25] [26] [27] [28]) (02C05b-NASA-UTM.tex) (02C06-Event-Based-Avoidance.tex
 [29] [30] [31]) (02C06a-Mid-Air-Collision-Prevention.tex [32])
 (02C06b-Weather-Impact.tex [33]
-<./Pics/02_03_RelativeHumidity.png, id=665, 445.06274pt x 363.15675pt>
+<./Pics/02_03_RelativeHumidity.png, id=668, 445.06274pt x 363.15675pt>
 File: ./Pics/02_03_RelativeHumidity.png Graphic file (type png)
 <use ./Pics/02_03_RelativeHumidity.png>
 Package pdftex.def Info: ./Pics/02_03_RelativeHumidity.png  used on input line 
 34.
 (pdftex.def)             Requested size: 204.85844pt x 167.15941pt.
-<./Pics/02_04_WindTemperature.png, id=666, 438.438pt x 360.74776pt>
+<./Pics/02_04_WindTemperature.png, id=669, 438.438pt x 360.74776pt>
 File: ./Pics/02_04_WindTemperature.png Graphic file (type png)
 <use ./Pics/02_04_WindTemperature.png>
 Package pdftex.def Info: ./Pics/02_04_WindTemperature.png  used on input line 4
 0.
 (pdftex.def)             Requested size: 204.85844pt x 168.56064pt.
  [34]
-<./Pics/02_01_IVS_Model.png, id=683, 567.3195pt x 419.76825pt>
+<./Pics/02_01_IVS_Model.png, id=686, 567.3195pt x 419.76825pt>
 File: ./Pics/02_01_IVS_Model.png Graphic file (type png)
 <use ./Pics/02_01_IVS_Model.png>
 Package pdftex.def Info: ./Pics/02_01_IVS_Model.png  used on input line 55.
@@ -751,7 +751,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
 Package rerunfilecheck Info: File `"[Build] Clean Chapter 2 with formatting".ou
 t' has not changed.
-(rerunfilecheck)             Checksum: EDE90F9DAB61EB5248FB308A532BB137;3193.
+(rerunfilecheck)             Checksum: EB28301492A506B1A8FEA3BA1E4F410C;3289.
 
 
 LaTeX Warning: There were undefined references.
@@ -759,10 +759,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
  ) 
 Here is how much of TeX's memory you used:
- 14268 strings out of 492973
- 205260 string characters out of 3135926
- 298138 words of memory out of 3000000
- 17559 multiletter control sequences out of 15000+200000
+ 14270 strings out of 492973
+ 205303 string characters out of 3135926
+ 298173 words of memory out of 3000000
+ 17561 multiletter control sequences out of 15000+200000
  18999 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,22n,56p,835b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -781,9 +781,9 @@ ti12.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb>
 s/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/H17246
 1/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
 Output written on "[Build] Clean Chapter 2 with formatting.pdf" (39 pages, 4241
-615 bytes).
+898 bytes).
 PDF statistics:
- 841 PDF objects out of 1000 (max. 8388607)
+ 844 PDF objects out of 1000 (max. 8388607)
  353 named destinations out of 1000 (max. 500000)
- 179 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 187 words of extra memory for PDF output out of 10000 (max. 10000000)
 
