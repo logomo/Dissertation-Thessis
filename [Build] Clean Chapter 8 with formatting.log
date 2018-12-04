@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  3 DEC 2018 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  4 DEC 2018 11:12
 entering extended mode
 **"./[Build] Clean Chapter 8 with formatting.tex"
 ("[Build] Clean Chapter 8 with formatting.tex"
@@ -743,7 +743,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
 Package rerunfilecheck Info: File `"[Build] Clean Chapter 8 with formatting".ou
 t' has not changed.
-(rerunfilecheck)             Checksum: 43D7C360531E7935D5DC09C6D4FB49DF;1190.
+(rerunfilecheck)             Checksum: 9F45D57F5A024E0125744DA1E3983433;1155.
 
 
 LaTeX Warning: There were undefined references.
@@ -753,7 +753,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
 Here is how much of TeX's memory you used:
  13672 strings out of 492973
  194493 string characters out of 3135926
- 291002 words of memory out of 3000000
+ 291005 words of memory out of 3000000
  17333 multiletter control sequences out of 15000+200000
  12613 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -764,7 +764,7 @@ ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/H172
 X 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/H172461/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmti12.pfb>
-Output written on "[Build] Clean Chapter 8 with formatting.pdf" (4 pages, 96300
+Output written on "[Build] Clean Chapter 8 with formatting.pdf" (4 pages, 95959
  bytes).
 PDF statistics:
  114 PDF objects out of 1000 (max. 8388607)
