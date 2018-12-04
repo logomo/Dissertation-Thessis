@@ -1,10 +1,79 @@
 \begin{thebibliography}{100}
 
-\bibitem{huerta2013integration}
-Michael Huerta.
-\newblock Integration of civil unmanned aircraft systems (uas) in the national
-  airspace system (nas) roadmap.
-\newblock {\em Federal Aviation Administration, Retrieved Dec}, 19:2013, 2013.
+\bibitem{valavanis2015uav}
+Kimon~P Valavanis and George~J Vachtsevanos.
+\newblock Uav sense, detect and avoid: Introduction.
+\newblock In {\em Handbook of Unmanned Aerial Vehicles}, pages 1813--1816.
+  Springer, 2015.
+
+\bibitem{united1983pilots}
+United States. Federal~Aviation Administration.
+\newblock {\em Pilots' Role in Collision Avoidance}.
+\newblock Number~48 in 1. US Department of Transportation, Federal Aviation
+  Administration, 1983.
+
+\bibitem{gerdes2016dynamic}
+Ingrid Gerdes, Annette Temme, and Michael Schultz.
+\newblock Dynamic airspace sectorization using controller task load.
+\newblock {\em Sixth SESAR Innovation Days}, 2016.
+
+\bibitem{netalert2013n17}
+EUROCONTROL NETALERT.
+\newblock N17-acas x-the future of airborne collision avoidance, 2013.
+
+\bibitem{balaban2017dynamic}
+Edward Balaban, Indranil Roychoudhury, Lilly Spirkovska, Shankar Sankararaman,
+  Chetan~S Kulkarni, and Matthew Daigle.
+\newblock Dynamic routing of aircraft in presence of adverse weather using a
+  pomdp framework.
+\newblock In {\em 17\textsuperscript{th} AIAA Aviation Technology, Integration,
+  and Operations Conference}, page 3429, 2017.
+
+\bibitem{rutledge2006nomads}
+Glenn~K Rutledge, Jordan Alpert, and Wesley Ebisuzaki.
+\newblock Nomads: A climate and weather model archive at the national oceanic
+  and atmospheric administration.
+\newblock {\em Bulletin of the American Meteorological Society},
+  87(3):327--341, 2006.
+
+\bibitem{yapo2008probabilistic}
+Theodore~C Yapo, Charles~V Stewart, and Richard~J Radke.
+\newblock A probabilistic representation of lidar range data for efficient 3d
+  object detection.
+\newblock In {\em Computer Vision and Pattern Recognition Workshops, 2008.
+  CVPRW'08. IEEE Computer Society Conference on}, pages 1--8. IEEE, 2008.
+
+\bibitem{gomola2017obstacle}
+Alojz Gomola, Jo{\~a}o~Borges de~Sousa, Fernando~Lobo Pereira, and Pavel Klang.
+\newblock Obstacle avoidance framework based on reach sets.
+\newblock In {\em Iberian Robotics conference}, pages 768--779. Springer, 2017.
+
+\bibitem{frazzoli2001robust}
+Emilio Frazzoli.
+\newblock {\em Robust hybrid control for autonomous vehicle motion planning}.
+\newblock PhD thesis, Massachusetts Institute of Technology, 2001.
+
+\bibitem{ljungqvist2017lattice}
+Oskar Ljungqvist, Niclas Evestedt, Marcello Cirillo, Daniel Axehill, and Olov
+  Holmer.
+\newblock Lattice-based motion planning for a general 2-trailer system.
+\newblock In {\em Intelligent Vehicles Symposium (IV), 2017 IEEE}, pages
+  819--824. IEEE, 2017.
+
+\bibitem{pinto2006neptus}
+Jos{\'e}~Queir{\'o}s Pinto, Paulo~Sousa Dias, Rui Gon{\c{c}}alves, Gil~Manuel
+  Gon{\c{c}}alves, Jo{\~a}o Tasso de Figueiredo~Borges Sousa, Fernando~Lobo
+  Pereira, et~al.
+\newblock Neptus a framework to support a mission life cycle.
+\newblock In {\em Proceedings of the 7th Conference on Manoeuvring and Control
+  of Marine Craft}, 2006.
+
+\bibitem{cernamaria2018}
+Maria Cerna.
+\newblock Usage of maps obtained by lidar in uav navigation.
+\newblock Master thesis, Institute of Automotive Mechatronics, Faculty of
+  Electrical Engineering and Information Technology, Slovak University of
+  Technology, Ilkovicova 3, Bratislava. Slovak Republic, jun 2018.
 
 \bibitem{gardi2015automated}
 Alessandro Gardi, Roberto Sabatini, Subramanian Ramasamy, Matthew Marino,
@@ -12,6 +81,68 @@ Alessandro Gardi, Roberto Sabatini, Subramanian Ramasamy, Matthew Marino,
 \newblock Automated atm system for 4-dimensional trajectory based operations.
 \newblock In {\em AIAC16: 16th Australian International Aerospace Congress},
   page 190. Engineers Australia, 2015.
+
+\bibitem{icao4444}
+ICAO.
+\newblock 4444: Procedures for air navigation services.
+\newblock Technical report, ICAO, 2018.
+
+\bibitem{icaoAnnex11}
+ICAO.
+\newblock Annex 11 (air traffic services).
+\newblock Technical report, ICAO, 2018.
+
+\bibitem{corus2018}
+Andrew Hately.
+\newblock {C}oncept of {O}perations for {U}-space.
+\newblock Eurocontrol draft., June 2018.
+
+\bibitem{huerta2013integration}
+Michael Huerta.
+\newblock Integration of civil unmanned aircraft systems (uas) in the national
+  airspace system (nas) roadmap.
+\newblock {\em Federal Aviation Administration, Retrieved Dec}, 19:2013, 2013.
+
+\bibitem{vstevek2018parametric}
+Juraj {\v{S}}tevek, Michal Kvasnica, Miroslav Fikar, and Alojz Gomola.
+\newblock A parametric programming approach to automated integrated circuit
+  design.
+\newblock {\em IEEE Transactions on Control Systems Technology},
+  26(4):1180--1191, 2018.
+
+\bibitem{klausen2016coordinated}
+Kristian Klausen, Jostein~Borgen Moe, Jonathan~Cornel van~den Hoorn, Alojz
+  Gomola, Thor~I Fossen, and Tor~Arne Johansen.
+\newblock Coordinated control concept for recovery of a fixed-wing uav on a
+  ship using a net carried by multirotor uavs.
+\newblock In {\em Unmanned Aircraft Systems (ICUAS), 2016 International
+  Conference on}, pages 964--973. IEEE, 2016.
+
+\bibitem{gomola2015aspectOriented}
+Alojz Gomola.
+\newblock Aspect-oriented solution for mutual exclusion in embedded systems.
+\newblock In Alena Kozakova, editor, {\em ELITECH15: 17th Conference of
+  doctoral students}, pages 964--973, Bratislava, Slovak Republic, may 2015.
+  Online publication.
+
+\bibitem{gomola2017probabilistic}
+Alojz Gomola, Pavel Klang, and Jan Ludvik.
+\newblock Probabilistic approach in data fusion for obstacle avoidance
+  framework based on reach sets.
+\newblock In {\em Internal publication collection}, pages 1--93. Honeywell,
+  2017.
+
+\bibitem{gomola2017mpc}
+Alojz Gomola.
+\newblock Model predictive control of unmanned air vehicles with obstacle
+  avoidance capabilities.
+\newblock Technical report, FEUP, 2017.
+
+\bibitem{gomola2017optimal}
+Alojz Gomola.
+\newblock Optimal control of unmanned air vehicles with obstacle avoidance
+  capabilities in partially known environment.
+\newblock Technical report, FEUP, 2017.
 
 \bibitem{johansenetal2018surveyCommunicaiton}
 Artur Zolich, David Palma, Kimmo Kansanen, Kay Fjørtoft, João Sousa, Karl
@@ -115,16 +246,6 @@ David~H Williams.
 \newblock In {\em Proceedings of the Human Factors Society Annual Meeting},
   volume~27, pages 772--776. Sage Publications Sage CA: Los Angeles, CA, 1983.
 
-\bibitem{icaoAnnex11}
-ICAO.
-\newblock Annex 11 (air traffic services).
-\newblock Technical report, ICAO, 2018.
-
-\bibitem{icao4444}
-ICAO.
-\newblock 4444: Procedures for air navigation services.
-\newblock Technical report, ICAO, 2018.
-
 \bibitem{authority2013human}
 Civil Aviation~Safety Authority.
 \newblock Human injury model for small unmanned aircraft impacts, 2013.
@@ -153,33 +274,12 @@ Commission implementing regulation (eu) no 923/2012.
   \url{https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2012:281:0001:0066:EN:PDF}
   on 15\textsuperscript{th} November 2018, February 2017.
 
-\bibitem{valavanis2015uav}
-Kimon~P Valavanis and George~J Vachtsevanos.
-\newblock Uav sense, detect and avoid: Introduction.
-\newblock In {\em Handbook of Unmanned Aerial Vehicles}, pages 1813--1816.
-  Springer, 2015.
-
-\bibitem{united1983pilots}
-United States. Federal~Aviation Administration.
-\newblock {\em Pilots' Role in Collision Avoidance}.
-\newblock Number~48 in 1. US Department of Transportation, Federal Aviation
-  Administration, 1983.
-
 \bibitem{gardi2014real}
 Alessandro Gardi, Roberto Sabatini, Subramanian Ramasamy, and Trevor Kistan.
 \newblock Real-time trajectory optimisation models for next generation air
   traffic management systems.
 \newblock In {\em Applied Mechanics and Materials}, volume 629, pages 327--332.
   Trans Tech Publ, 2014.
-
-\bibitem{gerdes2016dynamic}
-Ingrid Gerdes, Annette Temme, and Michael Schultz.
-\newblock Dynamic airspace sectorization using controller task load.
-\newblock {\em Sixth SESAR Innovation Days}, 2016.
-
-\bibitem{netalert2013n17}
-EUROCONTROL NETALERT.
-\newblock N17-acas x-the future of airborne collision avoidance, 2013.
 
 \bibitem{annex200710}
 ICAO Annex.
@@ -209,11 +309,6 @@ EASA.
 \newblock obtained from:
   \url{https://www.easa.europa.eu/sites/default/files/dfu/UAS%20Prototype%20Regulation%20final.pdf}
   on 14\textsuperscript{th} November 2018, August 2016.
-
-\bibitem{corus2018}
-Andrew Hately.
-\newblock {C}oncept of {O}perations for {U}-space.
-\newblock Eurocontrol draft., June 2018.
 
 \bibitem{ec201208ref5}
 European Commision.
@@ -295,26 +390,11 @@ Travis~M Smith, Valliappa Lakshmanan, Gregory~J Stumpf, Kiel~L Ortega, Kurt
 \newblock {\em Bulletin of the American Meteorological Society},
   97(9):1617--1630, 2016.
 
-\bibitem{balaban2017dynamic}
-Edward Balaban, Indranil Roychoudhury, Lilly Spirkovska, Shankar Sankararaman,
-  Chetan~S Kulkarni, and Matthew Daigle.
-\newblock Dynamic routing of aircraft in presence of adverse weather using a
-  pomdp framework.
-\newblock In {\em 17\textsuperscript{th} AIAA Aviation Technology, Integration,
-  and Operations Conference}, page 3429, 2017.
-
 \bibitem{thompson2017numerical}
 Gregory Thompson, Marcia~K Politovich, and Roy~M Rasmussen.
 \newblock A numerical weather model’s ability to predict characteristics of
   aircraft icing environments.
 \newblock {\em Weather and Forecasting}, 32(1):207--221, 2017.
-
-\bibitem{rutledge2006nomads}
-Glenn~K Rutledge, Jordan Alpert, and Wesley Ebisuzaki.
-\newblock Nomads: A climate and weather model archive at the national oceanic
-  and atmospheric administration.
-\newblock {\em Bulletin of the American Meteorological Society},
-  87(3):327--341, 2006.
 
 \bibitem{spriesterbach2013unmanned}
 Thomas~P Spriesterbach, Kelly~A Bruns, Lauren~I Baron, and Jason~E Sohlke.
@@ -438,22 +518,12 @@ Yoshiaki Kuwata, Justin Teo, Gaston Fiore, Sertac Karaman, Emilio Frazzoli, and
 \newblock {\em IEEE Transactions on Control Systems Technology},
   17(5):1105--1118, 2009.
 
-\bibitem{frazzoli2001robust}
-Emilio Frazzoli.
-\newblock {\em Robust hybrid control for autonomous vehicle motion planning}.
-\newblock PhD thesis, Massachusetts Institute of Technology, 2001.
-
 \bibitem{frazzoli2000trajectory}
 Emilio Frazzoli, Munther~A Dahleh, and Eric Feron.
 \newblock Trajectory tracking control design for autonomous helicopters using a
   backstepping algorithm.
 \newblock In {\em American Control Conference, 2000. Proceedings of the 2000},
   volume~6, pages 4102--4107. IEEE, 2000.
-
-\bibitem{gomola2017obstacle}
-Alojz Gomola, Jo{\~a}o~Borges de~Sousa, Fernando~Lobo Pereira, and Pavel Klang.
-\newblock Obstacle avoidance framework based on reach sets.
-\newblock In {\em Iberian Robotics conference}, pages 768--779. Springer, 2017.
 
 \bibitem{lazar2006model}
 Mircea Lazar.
@@ -488,13 +558,6 @@ Qi~Chen.
 \newblock Airborne lidar data processing and information extraction.
 \newblock {\em Photogrammetric engineering and remote sensing}, 73(2):109,
   2007.
-
-\bibitem{yapo2008probabilistic}
-Theodore~C Yapo, Charles~V Stewart, and Richard~J Radke.
-\newblock A probabilistic representation of lidar range data for efficient 3d
-  object detection.
-\newblock In {\em Computer Vision and Pattern Recognition Workshops, 2008.
-  CVPRW'08. IEEE Computer Society Conference on}, pages 1--8. IEEE, 2008.
 
 \bibitem{euler1775formulae}
 Leonhard Euler.
@@ -719,13 +782,6 @@ Allison Ryan and J~Karl Hedrick.
   Conference. CDC-ECC'05. 44th IEEE Conference on}, pages 1471--1476. IEEE,
   2005.
 
-\bibitem{ljungqvist2017lattice}
-Oskar Ljungqvist, Niclas Evestedt, Marcello Cirillo, Daniel Axehill, and Olov
-  Holmer.
-\newblock Lattice-based motion planning for a general 2-trailer system.
-\newblock In {\em Intelligent Vehicles Symposium (IV), 2017 IEEE}, pages
-  819--824. IEEE, 2017.
-
 \bibitem{ljungqvist2016path}
 Oskar Ljungqvist, Daniel Axehill, and Anders Helmersson.
 \newblock Path following control for a reversing general 2-trailer system.
@@ -812,14 +868,6 @@ Diego Merani, Alessandro Berni, John Potter, and Ricardo Martins.
 Kanna Rajan, Fr{\'e}d{\'e}ric Py, and Javier Barreiro.
 \newblock Towards deliberative control in marine robotics.
 \newblock In {\em Marine Robot Autonomy}, pages 91--175. Springer, 2013.
-
-\bibitem{pinto2006neptus}
-Jos{\'e}~Queir{\'o}s Pinto, Paulo~Sousa Dias, Rui Gon{\c{c}}alves, Gil~Manuel
-  Gon{\c{c}}alves, Jo{\~a}o Tasso de Figueiredo~Borges Sousa, Fernando~Lobo
-  Pereira, et~al.
-\newblock Neptus a framework to support a mission life cycle.
-\newblock In {\em Proceedings of the 7th Conference on Manoeuvring and Control
-  of Marine Craft}, 2006.
 
 \bibitem{dias2006mission}
 Paulo~Sousa Dias, Rui~MF Gomes, and Jos{\'e} Pinto.
@@ -952,24 +1000,10 @@ Kyle~D Julian, Jessica Lopez, Jeffrey~S Brush, Michael~P Owen, and Mykel~J
 \newblock In {\em Digital Avionics Systems Conference (DASC), 2016 IEEE/AIAA
   35th}, pages 1--10. IEEE, 2016.
 
-\bibitem{gomola2017probabilistic}
-Alojz Gomola, Pavel Klang, and Jan Ludvik.
-\newblock Probabilistic approach in data fusion for obstacle avoidance
-  framework based on reach sets.
-\newblock In {\em Internal publication collection}, pages 1--93. Honeywell,
-  2017.
-
 \bibitem{hentenryck2009constraint}
 Pascal~Van Hentenryck and Laurent Michel.
 \newblock {\em Constraint-based local search}.
 \newblock The MIT press, 2009.
-
-\bibitem{cernamaria2018}
-Maria Cerna.
-\newblock Usage of maps obtained by lidar in uav navigation.
-\newblock Master thesis, Institute of Automotive Mechatronics, Faculty of
-  Electrical Engineering and Information Technology, Slovak University of
-  Technology, Ilkovicova 3, Bratislava. Slovak Republic, jun 2018.
 
 \bibitem{ritter1990efficient}
 Jack Ritter.
