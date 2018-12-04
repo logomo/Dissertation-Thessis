@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  4 DEC 2018 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  4 DEC 2018 18:37
 entering extended mode
 **"./[Build] Clean Chapter 1 with formatting.tex"
 ("[Build] Clean Chapter 1 with formatting.tex"
@@ -583,138 +583,227 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
-) (01I02-Motivation.tex) (01I03-Goals.tex) (01I04-Overview.tex) (01I05-Contribu
-tions.tex [1
+) (01I02-Motivation.tex) (01I03-Goals.tex) (01I04-Overview.tex
+
+LaTeX Warning: Reference `ch:CollisionAvoidance' on page 1 undefined on input l
+ine 8.
+
+[1
 Non-PDF special ignored!
 <special> header=psfrag.pro
 
 
 {C:/Users/H172461/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Reference `s:HybridAutomaton' on page 2 undefined on input line 
-7.
+LaTeX Warning: Reference `ch:backGroundTheory' on page 2 undefined on input lin
+e 10.
 
 
-LaTeX Warning: Reference `s:MovementAutomatonDefinitionAndProperties' on page 2
- undefined on input line 7.
+LaTeX Warning: Reference `c:problemStatement' on page 2 undefined on input line
+ 12.
 
 
-LaTeX Warning: Reference `s:UASNonlinearModel' on page 2 undefined on input lin
-e 7.
+LaTeX Warning: Reference `ch:stateOfArt' on page 2 undefined on input line 14.
 
 
-LaTeX Warning: Reference `s:movementAutomatonDefinition' on page 2 undefined on
- input line 7.
+LaTeX Warning: Reference `ch:approach' on page 2 undefined on input line 16.
 
 
-LaTeX Warning: Reference `s:referenceTrajectoryGenerator' on page 2 undefined o
-n input line 7.
+LaTeX Warning: Reference `s:approachOverview' on page 2 undefined on input line
+ 16.
 
 
-LaTeX Warning: Reference `s:segmentedMovementAutomaton' on page 2 undefined on 
-input line 7.
+LaTeX Warning: Reference `fig:AvoidanceFrameworkConceptNew' on page 2 undefined
+ on input line 16.
 
 
-LaTeX Warning: Reference `eq:ourTrajectoryImplementation' on page 2 undefined o
-n input line 9.
+LaTeX Warning: Reference `s:modelMAImplementation' on page 2 undefined on input
+ line 16.
 
 
-LaTeX Warning: Reference `' on page 2 undefined on input line 11.
-
-
-LaTeX Warning: Reference `def:ReachSetApproximationByMovementAutomaton' on page
- 2 undefined on input line 11.
-
-
-LaTeX Warning: Reference `eq:trajectoryReachibility' on page 2 undefined on inp
-ut line 11.
-
-
-LaTeX Warning: Reference `sec:MCRcomputationalComplexity' on page 2 undefined o
-n input line 11.
-
-
-LaTeX Warning: Reference `s:sensorFusion' on page 2 undefined on input line 13.
-
-
-
-LaTeX Warning: Reference `fig:missionControlRunActivityDiagram' on page 2 undef
-ined on input line 15.
-
-
-LaTeX Warning: Reference `sec:utmArchitecture' on page 2 undefined on input lin
-e 17.
-
-
-LaTeX Warning: Reference `sec:handlingHeadOnApproach' on page 2 undefined on in
-put line 17.
-
-
-LaTeX Warning: Reference `sec:handlingConvergingManuever' on page 2 undefined o
-n input line 17.
-
-
-LaTeX Warning: Reference `sec:handlingOvertakeManuever' on page 2 undefined on 
-input line 17.
-
-
-LaTeX Warning: Reference `sec:cooperativeConflictResolution' on page 2 undefine
-d on input line 17.
-
-
-LaTeX Warning: Reference `sec:nonCooperativeConflictResolution' on page 2 undef
-ined on input line 17.
-
-
-LaTeX Warning: Reference `s:AvoidanceGrid' on page 2 undefined on input line 23
+LaTeX Warning: Reference `s:AvoidanceGrid' on page 2 undefined on input line 16
 .
 
 
-LaTeX Warning: Reference `fig:LidarSpaceSegmentation' on page 2 undefined on in
+LaTeX Warning: Reference `s:reachSet' on page 2 undefined on input line 18.
+
+
+LaTeX Warning: Reference `s:staticObstacles' on page 2 undefined on input line 
+20.
+
+
+LaTeX Warning: Reference `s:intruders' on page 2 undefined on input line 20.
+
+
+LaTeX Warning: Reference `s:avoidanceConcept' on page 2 undefined on input line
+ 22.
+
+
+LaTeX Warning: Reference `sec:UASTrafficManagement' on page 2 undefined on inpu
+t line 24.
+
+
+LaTeX Warning: Reference `sec:ruleEngine' on page 2 undefined on input line 24.
+
+
+
+LaTeX Warning: Reference `Simulations' on page 2 undefined on input line 27.
+
+
+LaTeX Warning: Reference `tab:testCasesSummary' on page 2 undefined on input li
+ne 27.
+
+
+LaTeX Warning: Reference `tab:testCasesPerformacneEvaluation' on page 2 undefin
+ed on input line 27.
+
+
+LaTeX Warning: Reference `tab:computationLoadStatistics' on page 2 undefined on
+ input line 27.
+
+
+LaTeX Warning: Reference `s:noncooperativeTestCases' on page 2 undefined on inp
+ut line 30.
+
+
+LaTeX Warning: Reference `s:cooperativeTestCases' on page 2 undefined on input 
+line 32.
+
+[2]
+
+LaTeX Warning: Reference `Reduced Reach Sets Performance' on page 3 undefined o
+n input line 34.
+
+
+LaTeX Warning: Reference `ch:Conclusion' on page 3 undefined on input line 37.
+
+) (01I05-Contributions.tex
+
+LaTeX Warning: Reference `s:HybridAutomaton' on page 3 undefined on input line 
+7.
+
+
+LaTeX Warning: Reference `s:MovementAutomatonDefinitionAndProperties' on page 3
+ undefined on input line 7.
+
+
+LaTeX Warning: Reference `s:UASNonlinearModel' on page 3 undefined on input lin
+e 7.
+
+
+LaTeX Warning: Reference `s:movementAutomatonDefinition' on page 3 undefined on
+ input line 7.
+
+
+LaTeX Warning: Reference `s:referenceTrajectoryGenerator' on page 3 undefined o
+n input line 7.
+
+
+LaTeX Warning: Reference `s:segmentedMovementAutomaton' on page 3 undefined on 
+input line 7.
+
+
+LaTeX Warning: Reference `eq:ourTrajectoryImplementation' on page 3 undefined o
+n input line 9.
+
+
+LaTeX Warning: Reference `def:reachset01' on page 3 undefined on input line 11.
+
+
+
+LaTeX Warning: Reference `def:ReachSetApproximationByMovementAutomaton' on page
+ 3 undefined on input line 11.
+
+
+LaTeX Warning: Reference `eq:trajectoryReachibility' on page 3 undefined on inp
+ut line 11.
+
+
+LaTeX Warning: Reference `sec:MCRcomputationalComplexity' on page 3 undefined o
+n input line 11.
+
+
+LaTeX Warning: Reference `s:sensorFusion' on page 3 undefined on input line 13.
+
+
+
+LaTeX Warning: Reference `fig:missionControlRunActivityDiagram' on page 3 undef
+ined on input line 15.
+
+
+LaTeX Warning: Reference `sec:utmArchitecture' on page 3 undefined on input lin
+e 17.
+
+
+LaTeX Warning: Reference `sec:handlingHeadOnApproach' on page 3 undefined on in
+put line 17.
+
+
+LaTeX Warning: Reference `sec:handlingConvergingManuever' on page 3 undefined o
+n input line 17.
+
+
+LaTeX Warning: Reference `sec:handlingOvertakeManuever' on page 3 undefined on 
+input line 17.
+
+
+LaTeX Warning: Reference `sec:cooperativeConflictResolution' on page 3 undefine
+d on input line 17.
+
+
+LaTeX Warning: Reference `sec:nonCooperativeConflictResolution' on page 3 undef
+ined on input line 17.
+
+
+LaTeX Warning: Reference `s:AvoidanceGrid' on page 3 undefined on input line 23
+.
+
+
+LaTeX Warning: Reference `fig:LidarSpaceSegmentation' on page 3 undefined on in
 put line 23.
 
 
-LaTeX Warning: Reference `fig:P01CountOfLiDARHits' on page 2 undefined on input
+LaTeX Warning: Reference `fig:P01CountOfLiDARHits' on page 3 undefined on input
  line 23.
 
 
-LaTeX Warning: Reference `fig:P02OvershadowedMapobstacle' on page 2 undefined o
+LaTeX Warning: Reference `fig:P02OvershadowedMapobstacle' on page 3 undefined o
 n input line 23.
 
+[3]
 
-LaTeX Warning: Reference `fig:rapidExplorationTrajectoryTree' on page 2 undefin
+LaTeX Warning: Reference `fig:rapidExplorationTrajectoryTree' on page 4 undefin
 ed on input line 25.
 
 
-LaTeX Warning: Reference `alg:Wavefront Propagation' on page 2 undefined on inp
+LaTeX Warning: Reference `alg:Wavefront Propagation' on page 4 undefined on inp
 ut line 25.
 
 
 LaTeX Warning: Reference `alg:ExpansionConstraintFunctionForChaoticReachSet' on
- page 2 undefined on input line 25.
+ page 4 undefined on input line 25.
 
 
 LaTeX Warning: Reference `alg:ExpansionConstraintFunctionForHarmonicReachSet' o
-n page 2 undefined on input line 25.
+n page 4 undefined on input line 25.
 
 
 LaTeX Warning: Reference `alg:ExpansionConstraintFunctionForACASLikeReachSet' o
-n page 2 undefined on input line 25.
+n page 4 undefined on input line 25.
 
 
-LaTeX Warning: Reference `s:staticObstacles' on page 2 undefined on input line 
+LaTeX Warning: Reference `s:staticObstacles' on page 4 undefined on input line 
 27.
 
 
-LaTeX Warning: Reference `s:intruders' on page 2 undefined on input line 27.
+LaTeX Warning: Reference `s:intruders' on page 4 undefined on input line 27.
 
-[2]
 
-LaTeX Warning: Reference `s:RuleEngineArchitecture' on page 3 undefined on inpu
+LaTeX Warning: Reference `s:RuleEngineArchitecture' on page 4 undefined on inpu
 t line 29.
 
 
-LaTeX Warning: Reference `fig:RuleEngineInstanceLevels' on page 3 undefined on 
+LaTeX Warning: Reference `fig:RuleEngineInstanceLevels' on page 4 undefined on 
 input line 29.
 
 ) (01I06-ListOfPublications.tex
@@ -727,23 +816,22 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 6.
 
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3]
+) [4] [5]
 
-LaTeX Warning: Reference `sec:MovementAutomatonBackground' on page 4 undefined 
+LaTeX Warning: Reference `sec:MovementAutomatonBackground' on page 6 undefined 
 on input line 33.
 
-[4]
 
-LaTeX Warning: Reference `eq:trajectoryTrackingOptimalizaitonProblem' on page 5
+LaTeX Warning: Reference `eq:trajectoryTrackingOptimalizaitonProblem' on page 6
  undefined on input line 37.
 
 
-LaTeX Warning: Reference `s:AvoidanceRequirements' on page 5 undefined on input
+LaTeX Warning: Reference `s:AvoidanceRequirements' on page 6 undefined on input
  line 37.
 
-) ("[Build] Clean Chapter 1 with formatting.bbl" [5])
+) ("[Build] Clean Chapter 1 with formatting.bbl" [6])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
- [6
+ [7
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
@@ -753,7 +841,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
 Package rerunfilecheck Info: File `"[Build] Clean Chapter 1 with formatting".ou
 t' has not changed.
-(rerunfilecheck)             Checksum: B42E4F1123C1E70EEFF839B777320F79;945.
+(rerunfilecheck)             Checksum: 01936106A13F8D9EAF6E5FDFB0C66A49;945.
 
 
 LaTeX Warning: There were undefined references.
@@ -761,13 +849,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 163.
  ) 
 Here is how much of TeX's memory you used:
- 13748 strings out of 492973
- 196097 string characters out of 3135926
- 292474 words of memory out of 3000000
- 17371 multiletter control sequences out of 15000+200000
+ 13784 strings out of 492973
+ 196667 string characters out of 3135926
+ 291474 words of memory out of 3000000
+ 17391 multiletter control sequences out of 15000+200000
  17237 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,8n,40p,1371b,436s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,8n,40p,1371b,553s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
 ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/H1724
 61/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/H172461/MiKTeX
@@ -776,10 +864,10 @@ ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/H1724
 lic/amsfonts/cm/cmsy10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmti12.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmtt10.pfb>
-Output written on "[Build] Clean Chapter 1 with formatting.pdf" (6 pages, 14571
-8 bytes).
+Output written on "[Build] Clean Chapter 1 with formatting.pdf" (7 pages, 15339
+1 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
+ 193 PDF objects out of 1000 (max. 8388607)
+ 71 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
