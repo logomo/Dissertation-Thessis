@@ -150,7 +150,7 @@
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01] % robust macros with * form
 \ProvidesClass{fcup-thesis}[\utthesisupdated\space\utthesisversion\space
-   graduate theses at the University of Toronto]
+   graduate theses at the University of Porto]
 
 
 %%%%%%%%%%%%         INITIAL CODE         %%%%%%%%%%%%
