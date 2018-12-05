@@ -471,24 +471,24 @@
 \contentsline {subsection}{\numberline {6.9.8} Rule: Overtake}{229}{subsection.6.9.8}
 \contentsline {subsection}{\numberline {6.9.9} Rule: Right Plane Heading}{232}{subsection.6.9.9}
 \contentsline {subsection}{\numberline {6.9.10} Rule: Enforce safety margin}{233}{subsection.6.9.10}
-\contentsline {chapter}{\numberline {7}Simulations}{237}{chapter.7}
-\contentsline {section}{\numberline {7.1}Test Plan}{237}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Testing approach}{237}{subsection.7.1.1}
+\contentsline {chapter}{\numberline {7} Simulations}{237}{chapter.7}
+\contentsline {section}{\numberline {7.1} Test Plan}{237}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1} Testing approach}{237}{subsection.7.1.1}
 \contentsline {paragraph}{Operational Environment}{238}{section*.426}
 \contentsline {paragraph}{Air Traffic Attendants:}{239}{section*.427}
 \contentsline {paragraph}{Weather}{239}{section*.428}
 \contentsline {paragraph}{UTM:}{239}{section*.429}
 \contentsline {paragraph}{Navigation:}{240}{section*.430}
-\contentsline {subsection}{\numberline {7.1.2}Test Cases Summary}{240}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}(R) Performance Evaluation}{241}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.2} Test Cases Summary}{240}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3} Performance Evaluation}{241}{subsection.7.1.3}
 \contentsline {paragraph}{Evaluation method:}{241}{section*.432}
 \contentsline {paragraph}{Safety Margin Performance Evaluation:}{241}{section*.433}
 \contentsline {paragraph}{Distance to Safety Margin}{243}{section*.434}
 \contentsline {paragraph}{Trajectory Tracking Evaluation}{243}{section*.435}
 \contentsline {paragraph}{Computation Load:}{243}{section*.436}
-\contentsline {section}{\numberline {7.2}Testing configuration}{244}{section.7.2}
-\contentsline {section}{\numberline {7.3}Non-cooperative test cases}{246}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Building avoidance}{246}{subsection.7.3.1}
+\contentsline {section}{\numberline {7.2} Testing configuration}{244}{section.7.2}
+\contentsline {section}{\numberline {7.3} Non-cooperative test cases}{246}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1} Building avoidance}{246}{subsection.7.3.1}
 \contentsline {paragraph}{Scenario:}{247}{section*.442}
 \contentsline {paragraph}{Obstacle set:}{247}{section*.444}
 \contentsline {paragraph}{Main Goal:}{247}{section*.446}
@@ -500,7 +500,7 @@
 \contentsline {paragraph}{Path Tracking Performance:}{249}{section*.455}
 \contentsline {paragraph}{Path Tracking Deviations:}{250}{section*.457}
 \contentsline {paragraph}{Computation Load:}{250}{section*.459}
-\contentsline {subsection}{\numberline {7.3.2}Slalom}{251}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.2} Slalom}{251}{subsection.7.3.2}
 \contentsline {paragraph}{Scenario:}{251}{section*.461}
 \contentsline {paragraph}{Obstacle set:}{251}{section*.463}
 \contentsline {paragraph}{Main goal:}{251}{section*.465}
@@ -512,7 +512,7 @@
 \contentsline {paragraph}{Path tracking performance:}{254}{section*.474}
 \contentsline {paragraph}{Path Tracking Deviations:}{255}{section*.476}
 \contentsline {paragraph}{Computation Load:}{255}{section*.478}
-\contentsline {subsection}{\numberline {7.3.3}Maze}{256}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.3} Maze}{256}{subsection.7.3.3}
 \contentsline {paragraph}{Scenario:}{256}{section*.480}
 \contentsline {paragraph}{Obstacle set:}{256}{section*.482}
 \contentsline {paragraph}{Main Goal:}{257}{section*.484}
@@ -524,7 +524,7 @@
 \contentsline {paragraph}{Path Tracking Performance:}{260}{section*.493}
 \contentsline {paragraph}{Path Tracking Deviations:}{260}{section*.495}
 \contentsline {paragraph}{Computation Load:}{261}{section*.497}
-\contentsline {subsection}{\numberline {7.3.4}Storm}{261}{subsection.7.3.4}
+\contentsline {subsection}{\numberline {7.3.4} Storm}{261}{subsection.7.3.4}
 \contentsline {paragraph}{Scenario:}{261}{section*.499}
 \contentsline {paragraph}{Constraints:}{261}{section*.501}
 \contentsline {paragraph}{Assumption:}{262}{section*.503}
@@ -537,7 +537,7 @@
 \contentsline {paragraph}{Path Tracking Performance:}{264}{section*.513}
 \contentsline {paragraph}{Path Tracking Deviations:}{264}{section*.515}
 \contentsline {paragraph}{Computation Load:}{265}{section*.517}
-\contentsline {subsection}{\numberline {7.3.5}Emergency Converging}{265}{subsection.7.3.5}
+\contentsline {subsection}{\numberline {7.3.5} Emergency Converging}{265}{subsection.7.3.5}
 \contentsline {paragraph}{Scenario:}{265}{section*.519}
 \contentsline {paragraph}{Main Goal:}{266}{section*.521}
 \contentsline {paragraph}{Acceptance criteria:}{266}{section*.522}
@@ -548,7 +548,7 @@
 \contentsline {paragraph}{Path Tracking Performance:}{269}{section*.531}
 \contentsline {paragraph}{Path Following Deviations:}{270}{section*.533}
 \contentsline {paragraph}{Computation Load:}{270}{section*.535}
-\contentsline {subsection}{\numberline {7.3.6}Emergency Head on}{271}{subsection.7.3.6}
+\contentsline {subsection}{\numberline {7.3.6} Emergency Head-On}{271}{subsection.7.3.6}
 \contentsline {paragraph}{Scenario:}{271}{section*.537}
 \contentsline {paragraph}{Main Goal:}{271}{section*.539}
 \contentsline {paragraph}{Acceptance criteria:}{271}{section*.540}
@@ -559,7 +559,7 @@
 \contentsline {paragraph}{Path Tracking Performance}{275}{section*.549}
 \contentsline {paragraph}{Path Following Deviations:}{276}{section*.551}
 \contentsline {paragraph}{Computation Load:}{276}{section*.553}
-\contentsline {subsection}{\numberline {7.3.7}Emergency Mixed Head on with Converging}{277}{subsection.7.3.7}
+\contentsline {subsection}{\numberline {7.3.7} Emergency Mixed Head-On with Converging}{277}{subsection.7.3.7}
 \contentsline {paragraph}{Scenario:}{277}{section*.555}
 \contentsline {paragraph}{Main Goal:}{277}{section*.557}
 \contentsline {paragraph}{Acceptance criteria:}{277}{section*.558}
@@ -570,8 +570,8 @@
 \contentsline {paragraph}{Path Tracking Performance:}{280}{section*.567}
 \contentsline {paragraph}{Path Tracking Deviations:}{282}{section*.569}
 \contentsline {paragraph}{Computation Load:}{282}{section*.571}
-\contentsline {section}{\numberline {7.4}Cooperative test cases}{282}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Rule based Converging}{283}{subsection.7.4.1}
+\contentsline {section}{\numberline {7.4} Cooperative Test Cases}{282}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1} Rule Based Converging}{283}{subsection.7.4.1}
 \contentsline {paragraph}{Scenario:}{283}{section*.573}
 \contentsline {paragraph}{Assumptions:}{284}{section*.575}
 \contentsline {paragraph}{Main Goal:}{284}{section*.576}
@@ -584,7 +584,7 @@
 \contentsline {paragraph}{Path Tracking Performance:}{288}{section*.587}
 \contentsline {paragraph}{Path Tracking Deviations:}{288}{section*.589}
 \contentsline {paragraph}{Computation Load:}{289}{section*.591}
-\contentsline {subsection}{\numberline {7.4.2}Rule based Head on}{289}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.2} Rule Based Head-On}{289}{subsection.7.4.2}
 \contentsline {paragraph}{Scenario:}{289}{section*.593}
 \contentsline {paragraph}{Assumptions:}{290}{section*.595}
 \contentsline {paragraph}{Main Goal:}{290}{section*.596}
@@ -597,7 +597,7 @@
 \contentsline {paragraph}{Path Tracking Performance:}{295}{section*.607}
 \contentsline {paragraph}{Path Tracking Deviations:}{295}{section*.609}
 \contentsline {paragraph}{Computation Load:}{296}{section*.611}
-\contentsline {subsection}{\numberline {7.4.3}Rule based Mixed Head on with Converging}{296}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.3} Rule Based Mixed Head-On with Converging}{296}{subsection.7.4.3}
 \contentsline {paragraph}{Scenario:}{296}{section*.613}
 \contentsline {paragraph}{Assumptions:}{297}{section*.615}
 \contentsline {paragraph}{Main Goal:}{298}{section*.616}
@@ -610,7 +610,7 @@
 \contentsline {paragraph}{Path Tracking Performance:}{302}{section*.627}
 \contentsline {paragraph}{Path Tracking Deviations:}{303}{section*.629}
 \contentsline {paragraph}{Computation Load:}{304}{section*.631}
-\contentsline {subsection}{\numberline {7.4.4}Rule based Overtake}{304}{subsection.7.4.4}
+\contentsline {subsection}{\numberline {7.4.4} Rule Based Overtake}{304}{subsection.7.4.4}
 \contentsline {paragraph}{Scenario:}{304}{section*.633}
 \contentsline {paragraph}{Assumptions:}{305}{section*.635}
 \contentsline {paragraph}{Main Goal:}{305}{section*.636}
@@ -625,14 +625,14 @@
 \contentsline {paragraph}{Path Tracking Performance: 2x Speed}{310}{section*.651}
 \contentsline {paragraph}{Path Tracking Deviations: 2x Speed}{311}{section*.653}
 \contentsline {paragraph}{Computation Load:}{311}{section*.655}
-\contentsline {section}{\numberline {7.5}(R) Test Cases Conclusion}{312}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}(R) Performance Evaluation}{312}{subsection.7.5.1}
+\contentsline {section}{\numberline {7.5} Test Cases Conclusion}{312}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1} Performance Evaluation}{312}{subsection.7.5.1}
 \contentsline {paragraph}{Highlights:}{313}{section*.658}
-\contentsline {subsection}{\numberline {7.5.2}(R)Adversary Behaviour Impact}{314}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.2} Adversary Behaviour Impact}{314}{subsection.7.5.2}
 \contentsline {paragraph}{Simulation:}{315}{section*.659}
 \contentsline {paragraph}{Performance Parameters Evaluation:}{316}{section*.661}
-\contentsline {subsection}{\numberline {7.5.3}(R) Computation Footprint}{318}{subsection.7.5.3}
-\contentsline {section}{\numberline {7.6}Reduced Reach Sets Performance}{319}{section.7.6}
+\contentsline {subsection}{\numberline {7.5.3} Computation Footprint}{318}{subsection.7.5.3}
+\contentsline {section}{\numberline {7.6} Reduced Reach Sets Performance}{319}{section.7.6}
 \contentsline {paragraph}{Approach:}{319}{section*.664}
 \contentsline {paragraph}{Testing Avoidance Grid}{320}{section*.665}
 \contentsline {paragraph}{Chaotic Reach Set}{320}{section*.666}
@@ -643,16 +643,16 @@
 \contentsline {paragraph}{Node count:}{321}{section*.674}
 \contentsline {paragraph}{Trajectories count:}{322}{section*.675}
 \contentsline {paragraph}{Coverage ratio:}{323}{section*.677}
-\contentsline {chapter}{\numberline {8}(W) Conclusion and Future Work}{325}{chapter.8}
-\contentsline {section}{\numberline {8.1}(W) Summary}{325}{section.8.1}
-\contentsline {section}{\numberline {8.2}(W) Comparison to Other Methods}{325}{section.8.2}
-\contentsline {section}{\numberline {8.3}(R) Approach Reusability}{325}{section.8.3}
+\contentsline {chapter}{\numberline {8} Conclusion and Future Work}{325}{chapter.8}
+\contentsline {section}{\numberline {8.1} Summary}{325}{section.8.1}
+\contentsline {section}{\numberline {8.2} Comparison to Other Methods}{325}{section.8.2}
+\contentsline {section}{\numberline {8.3} Approach Reusability}{325}{section.8.3}
 \contentsline {paragraph}{UTM Services:}{325}{section*.678}
 \contentsline {paragraph}{Emergency Avoidance Functionality:}{326}{section*.679}
 \contentsline {paragraph}{Event Based Avoidance Functionality:}{326}{section*.680}
 \contentsline {paragraph}{Reusability for More Complex Systems:}{326}{section*.681}
 \contentsline {paragraph}{Reach Set Approximations:}{327}{section*.682}
-\contentsline {section}{\numberline {8.4}(W) Lessons learned}{327}{section.8.4}
-\contentsline {section}{\numberline {8.5}(W) Future Work}{327}{section.8.5}
+\contentsline {section}{\numberline {8.4} Lessons learned}{327}{section.8.4}
+\contentsline {section}{\numberline {8.5} Future Work}{327}{section.8.5}
 \contentsline {chapter}{Bibliography}{328}{Item.1017}
 \contentsline {chapter}{Bibliography}{329}{chapter*.683}
