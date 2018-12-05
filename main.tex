@@ -53,7 +53,7 @@
 %%    two-sided documents to put the next page on the right-hand side)
 %%    can be set with one of the options `cleardoublepagestyleempty',
 %%    `cleardoublepagestyleplain', or `cleardoublepagestylestandard'.
-%%  - Any other standard option for the `report' document class can be
+%%  - Any other standard option for the `report' document arclass can be
 %%    used to override the default or draft settings (such as `10pt',
 %%    `11pt', `12pt'), and standard LaTeX packages can be used to
 %%    further customize the layout and/or formatting of the document.
@@ -63,8 +63,8 @@
 %\documentclass[narrowmargins,12pt,oneside,draft,onehalfspaced,singlespacednotes]{fcup-thesis}
 %\documentclass[narrowmargins,12pt,oneside,onehalfspaced,singlespacednotes]{fcup-thesis}
 %Print
-%\documentclass[narrowmargins,12pt,twoside,draft,onehalfspaced,singlespacednotes]{fcup-thesis}
-\documentclass[narrowmargins,12pt,twoside,onehalfspaced,singlespacednotes]{fcup-thesis}
+%\documentclass[narrowmargins,12pt,twoside,openright,draft,onehalfspaced,singlespacednotes]{fcup-thesis}
+\documentclass[narrowmargins,12pt,twoside,openright,onehalfspaced,singlespacednotes]{fcup-thesis}
 
 %% *** Add \usepackage declarations here. ***
 %% The standard packages `geometry' and `setspace' are already loaded by
@@ -311,6 +311,7 @@
 \listofalgorithms
 
 \newpage
+\cleardoublepage
 \input{00T02-Nomenclature}
 %% End of the preliminary sections: reset page style and numbering.
 \end{preliminary}
