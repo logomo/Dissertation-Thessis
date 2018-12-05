@@ -1,4 +1,3 @@
-\newpage
 \subsection{(R) Mission Control Run}\label{s:missionControlRun}
 \paragraph{Introduction and Motivation:}  This section will introduce \emph{Navigation Concept} using  \emph{Reach Set Approximation}. The \emph{Avoidance Framework Concept} (fig. \ref{fig:AvoidanceFrameworkConceptNew}) defines \emph{Navigation Module} as \emph{sub-system} for long term \emph{trajectory tracking}.  The \emph{Avoidance Grid Run} (sec. \ref{s:aviudabceGridRun}) is solving the \emph{Path Search} problem inside operation space constrained by \emph{Avoidance Grid} for time $t_i$. 
 
@@ -38,7 +37,6 @@ The \emph{Avoidance Grid} from \emph{UAS} viewpoint can be separated into follow
     \label{fig:definitionsForMissionControlRun}
 \end{figure}
 
-\newpage
 \noindent Joining \emph{Avoidance Grid Runs} (fig. \ref{fig:joiningMultipleAGRS})  example portrays \emph{Avoidance Grid Runs} invoked on various \emph{Decision Points} to achieve \emph{Navigation} functionality. The UAS (blue plane) is flying Mission (green numbered waypoints). The \emph{Avoidance Grid} boundary (black dashed line) for each \emph{Decision Point} (UAS position at time $t_i$). Following example of \emph{Navigation} (fig. \ref{fig:missionControlRunActivityDiagram}) run is shown:
 
 \begin{enumerate}
@@ -86,9 +84,7 @@ The \emph{Avoidance Grid} from \emph{UAS} viewpoint can be separated into follow
     
 \end{figure}
     
-    
 
-\newpage
 \paragraph{General Concept:}\footnote{Mission Control Run Function Implementation: \url{RuleEngine/MissionControl/MissionControl.m::runOnce(.)}} The \emph{General Concept} is taken from  \cite{sabatini2014navigation,Sabatini2014}, consisting from following main modules:
 \begin{enumerate}
     \item \emph{Navigation Loop} - module responsible for \emph{Navigation} providing \emph{Goal Waypoint}.
@@ -116,8 +112,7 @@ The \emph{Avoidance Grid} from \emph{UAS} viewpoint can be separated into follow
     \item \emph{Avoidance Run} - added hierarchical evaluation for \emph{Avoidance Path} selection. Prioritizing threat avoidance according to a type. 
 \end{enumerate}
 
-\newpage
-\noindent The \emph{Operation Mode} is introduced, based on \emph{Situation assessment} and \emph{Triggering Events} one of following modes are selected in \emph{Avoidance Run}:
+The \emph{Operation Mode} is introduced, based on \emph{Situation assessment} and \emph{Triggering Events} one of following modes are selected in \emph{Avoidance Run}:
 
 \begin{enumerate}
     \item \emph{Navigation Mode} - the \emph{UAS} is navigating trough \emph{Airspace} following \emph{cost effective patterns} and obeying \emph{Airspace Authority} (UTM). The \emph{Navigation Grid} is a instance of \emph{Avoidance Grid} (sec. \ref{s:AvoidanceGrid}) with initialized \emph{Navigation Reach Set} (ex. \emph{Harmonic Reach Set Approximation} (sec. \ref{s:harmonicReachSet})).
@@ -219,7 +214,6 @@ First start with definition of \emph{waypoint reach condition} (def. \ref{def:wa
     Grid(t_i).range \ge distance(UAS.position(t_i),GoalWaypoint(t_i))
 \end{equation}
 
-\newpage
 \noindent and following condition is satisfied:
 
 \begin{multline}\label{eq:unreachableWaypoint}
