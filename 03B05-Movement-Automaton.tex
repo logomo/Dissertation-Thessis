@@ -1,4 +1,4 @@
-\section{(R) Movement Automaton}\label{sec:MovementAutomatonBackground}
+\section{\secState{R}Movement Automaton}\label{sec:MovementAutomatonBackground}
 
     \noindent\emph{Movement Automaton} is basic interface approach for discretization of \emph{trajectory evolution}  or \emph{control input} for any \emph{continuous or discrete system model}.
     
@@ -21,7 +21,7 @@
     \end{enumerate}
 
 
-    \subsection{Hybrid Automaton}\label{s:HybridAutomaton}
+    \subsection{\secState{D}Hybrid Automaton}\label{s:HybridAutomaton}
     \noindent First the notion of  \emph{hybrid} automaton  \cite{lazar2006model,borrelli2006mpc,daws1996tool} needs to be introduced:
 
     \begin{definition}{Hybrid automaton} (\ref{eq:hybridAutomaton}) is given as structure:
@@ -56,7 +56,7 @@
     
     \end{definition}
 
-\subsection{Specialization of Hybrid Automaton}\label{s:MovementAutomatonBuidlingBlocks}
+\subsection{\secState{D}Specialization of Hybrid Automaton}\label{s:MovementAutomatonBuidlingBlocks}
     \begin{definition}{Movement Primitive:}\label{def:MovementPrimitive}\\\emph{States} from \emph{Hybrid automaton} can be taken as \emph{Movements} in \emph{Movement Automaton}. \emph{MovementPrimitive} (eq. \ref{eq:movementPrimitive}) is describing the \emph{Movement} behaviour as transfer function \emph{VectorField} enriched with parameters. 
 
     \begin{equation}\label{eq:movementPrimitive}
@@ -200,7 +200,7 @@
         StateProjection:Trajectory\times Time \to State(Time)
     \end{equation}
 
-\subsection{Definition}\label{s:MovementAutomatonDefinitionAndProperties}
+\subsection{\secState{D}Definition}\label{s:MovementAutomatonDefinitionAndProperties}
 
     \begin{definition}\label{def:movementAutomaton}Movement Automaton is given as follow:
     

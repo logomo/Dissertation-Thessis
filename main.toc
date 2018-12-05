@@ -1,12 +1,12 @@
 \babel@toc {english}{}
 \contentsline {chapter}{\numberline {1} Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}(W) Motivation}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}(W) Goals}{1}{section.1.2}
-\contentsline {section}{\numberline {1.3}(R) Overview}{2}{section.1.3}
-\contentsline {section}{\numberline {1.4}(R) Contributions}{3}{section.1.4}
+\contentsline {section}{\numberline {1.1} Motivation}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2} Goals}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3} Overview}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4} Contributions}{3}{section.1.4}
 \contentsline {paragraph}{Conceptual Contributions:}{3}{section*.10}
 \contentsline {paragraph}{Implementation Contributions:}{4}{section*.11}
-\contentsline {section}{\numberline {1.5}(R) List of Publications}{5}{section.1.5}
+\contentsline {section}{\numberline {1.5} List of Publications}{5}{section.1.5}
 \contentsline {paragraph}{Article:}{5}{section*.12}
 \contentsline {paragraph}{Article:}{5}{section*.13}
 \contentsline {paragraph}{Proceedings:}{5}{section*.14}
@@ -15,8 +15,8 @@
 \contentsline {paragraph}{Technical report:}{7}{section*.17}
 \contentsline {paragraph}{Technical report:}{7}{section*.18}
 \contentsline {paragraph}{Framework:}{7}{section*.19}
-\contentsline {chapter}{\numberline {2}(R) Collision Avoidance}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Overview}{9}{section.2.1}
+\contentsline {chapter}{\numberline {2} Collision Avoidance}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1} Overview}{9}{section.2.1}
 \contentsline {paragraph}{Communication:}{10}{section*.20}
 \contentsline {paragraph}{Navigation:}{10}{section*.21}
 \contentsline {paragraph}{Surveillance:}{10}{section*.22}
@@ -26,43 +26,43 @@
 \contentsline {paragraph}{Aircraft Operational Rules:}{11}{section*.26}
 \contentsline {paragraph}{Keeping "Well Clear" state:}{11}{section*.27}
 \contentsline {paragraph}{UAS Traffic Management:}{12}{section*.28}
-\contentsline {section}{\numberline {2.2}(R) Airspace Classification}{12}{section.2.2}
+\contentsline {section}{\numberline {2.2} Airspace Classification}{12}{section.2.2}
 \contentsline {paragraph}{Motivation:}{12}{section*.29}
 \contentsline {paragraph}{Airspace Categorization:}{12}{section*.30}
 \contentsline {paragraph}{Airspace Roles and Responsibilities:}{14}{section*.32}
 \contentsline {paragraph}{Example of Airspace Segmentation:}{15}{section*.34}
 \contentsline {paragraph}{Aircraft Categorization:}{16}{section*.36}
-\contentsline {section}{\numberline {2.3}(R) Aircraft Operational Rules}{17}{section.2.3}
+\contentsline {section}{\numberline {2.3} Aircraft Operational Rules}{17}{section.2.3}
 \contentsline {paragraph}{Motivation:}{17}{section*.37}
 \contentsline {paragraph}{Rules Origin:}{17}{section*.38}
-\contentsline {subsection}{\numberline {2.3.1}(R) Visual Flight Rules}{18}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.1} Visual Flight Rules}{18}{subsection.2.3.1}
 \contentsline {paragraph}{Motivation:}{18}{section*.39}
 \contentsline {paragraph}{See And Avoid:}{18}{section*.40}
 \contentsline {paragraph}{Night VFR:}{18}{section*.41}
 \contentsline {paragraph}{Traffic Advisories:}{18}{section*.42}
 \contentsline {paragraph}{Weather Separation:}{19}{section*.43}
-\contentsline {subsection}{\numberline {2.3.2}(R) Instrumental Flight Rules}{20}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2} Instrumental Flight Rules}{20}{subsection.2.3.2}
 \contentsline {paragraph}{Idea:}{20}{section*.44}
 \contentsline {paragraph}{Instrument Flight Rules:}{20}{section*.45}
 \contentsline {paragraph}{Required Navigation Performance:}{20}{section*.46}
-\contentsline {section}{\numberline {2.4}(R) Separation from Air Traffic}{21}{section.2.4}
+\contentsline {section}{\numberline {2.4} Separation from Air Traffic}{21}{section.2.4}
 \contentsline {paragraph}{Remaining "Well Clear":}{21}{section*.47}
 \contentsline {paragraph}{Air Traffic Control:}{21}{section*.49}
 \contentsline {paragraph}{ACAS-X/TCAS:}{22}{section*.50}
-\contentsline {subsection}{\numberline {2.4.1}(R) Air Traffic Control}{22}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1} Air Traffic Control}{22}{subsection.2.4.1}
 \contentsline {paragraph}{Motivation:}{22}{section*.51}
 \contentsline {paragraph}{Commands issued by ATC:}{22}{section*.52}
 \contentsline {paragraph}{Separation enforcement:}{22}{section*.53}
 \contentsline {paragraph}{Traffic Information:}{23}{section*.54}
 \contentsline {paragraph}{Dynamic Airspace Management:}{24}{section*.55}
-\contentsline {subsection}{\numberline {2.4.2}(R) Airborne Collision Avoidance System X}{24}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.2} Airborne Collision Avoidance System X}{24}{subsection.2.4.2}
 \contentsline {paragraph}{Overview:}{24}{section*.57}
 \contentsline {paragraph}{AcAS-X variants:}{25}{section*.58}
 \contentsline {paragraph}{ACAS-X Concept:}{25}{section*.59}
 \contentsline {paragraph}{Advisories:}{26}{section*.61}
 \contentsline {paragraph}{Example Overview of the Incident:}{27}{section*.62}
-\contentsline {subsection}{\numberline {2.4.3}(R) Traffic Collision Avoidance System}{29}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}(R) UAS Traffic Management (UTM)}{29}{section.2.5}
+\contentsline {subsection}{\numberline {2.4.3} Traffic Collision Avoidance System}{29}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5} UAS Traffic Management}{29}{section.2.5}
 \contentsline {paragraph}{Introduction:}{29}{section*.64}
 \contentsline {paragraph}{Airspace Assessment:}{29}{section*.65}
 \contentsline {paragraph}{Types of RPAS/UAS operations:}{30}{section*.66}
@@ -76,45 +76,45 @@
 \contentsline {paragraph}{Class VI.:}{35}{section*.74}
 \contentsline {paragraph}{VHL operations (Above FL 600):}{35}{section*.75}
 \contentsline {paragraph}{Class VII.:}{36}{section*.76}
-\contentsline {subsection}{\numberline {2.5.1}(R) U-Space}{36}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.1} U-Space}{36}{subsection.2.5.1}
 \contentsline {paragraph}{Small UAS Classification:}{37}{section*.77}
 \contentsline {paragraph}{Separation Minima:}{37}{section*.79}
 \contentsline {paragraph}{Flight Rules:}{38}{section*.81}
 \contentsline {paragraph}{Geo-fencing Modes:}{40}{section*.83}
 \contentsline {paragraph}{Actively maintaining separation during flight:}{42}{section*.85}
-\contentsline {subsection}{\numberline {2.5.2}(R) NASA UTM}{42}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.2} NASA UTM}{42}{subsection.2.5.2}
 \contentsline {paragraph}{Useful concepts:}{42}{section*.86}
-\contentsline {section}{\numberline {2.6}(R) Event Based Avoidance}{42}{section.2.6}
+\contentsline {section}{\numberline {2.6} Event Based Avoidance}{42}{section.2.6}
 \contentsline {paragraph}{Avoidance Urgency:}{42}{section*.87}
 \contentsline {paragraph}{Notification Event Resolution:}{43}{section*.88}
 \contentsline {paragraph}{Threat Hierarchy:}{44}{section*.89}
 \contentsline {paragraph}{Minimal Operational Data Set:}{45}{section*.90}
-\contentsline {subsection}{\numberline {2.6.1}(R) Mid-Air Collision Prevention}{46}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.1} Mid-Air Collision Prevention}{46}{subsection.2.6.1}
 \contentsline {paragraph}{Idea:}{46}{section*.91}
 \contentsline {paragraph}{Collision Situation Awareness:}{46}{section*.92}
-\contentsline {subsection}{\numberline {2.6.2}(R) Weather Impact}{47}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.2} Weather Impact}{47}{subsection.2.6.2}
 \contentsline {paragraph}{Idea:}{47}{section*.93}
 \contentsline {paragraph}{Transportation Impact:}{47}{section*.94}
 \contentsline {paragraph}{Weather avoidance:}{48}{section*.95}
 \contentsline {paragraph}{Localized Weather Impact Example:}{49}{section*.97}
 \contentsline {paragraph}{Weather Models:}{49}{section*.98}
-\contentsline {chapter}{\numberline {3}(R) Background Theory}{51}{chapter.3}
+\contentsline {chapter}{\numberline {3} Background Theory}{51}{chapter.3}
 \contentsline {paragraph}{Motivation:}{51}{section*.100}
 \contentsline {paragraph}{Background Areas:}{51}{section*.101}
-\contentsline {section}{\numberline {3.1}(R) UAS System Model}{52}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Continuous-time systems}{52}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Discrete-time Systems}{52}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Adversarial behaviour in continuous systems}{53}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Reach Sets}{53}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Definitions}{53}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.1} UAS System Model}{52}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1} Continuous-time Systems}{52}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2} Discrete-time Systems}{52}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3} Adversarial Behavior in Continuous-time Systems}{53}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2} Reach Sets}{53}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1} Definitions}{53}{subsection.3.2.1}
 \contentsline {paragraph}{For following definitions}{53}{section*.102}
 \contentsline {paragraph}{Reach set starting at given set}{53}{section*.103}
 \contentsline {paragraph}{Reach set for adversarial behavior}{54}{section*.104}
 \contentsline {paragraph}{Reach set under constraints}{54}{section*.105}
-\contentsline {subsection}{\numberline {3.2.2}Computation of Reach Sets}{54}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}(R) Movement Automaton}{55}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Hybrid Automaton}{56}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Specialization of Hybrid Automaton}{57}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.2.2} Computation of Reach Sets}{54}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3} Movement Automaton}{55}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1} Hybrid Automaton}{56}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2} Specialization of Hybrid Automaton}{57}{subsection.3.3.2}
 \contentsline {paragraph}{Example: }{57}{section*.106}
 \contentsline {paragraph}{Trajectory from Movement Primitives:}{57}{section*.107}
 \contentsline {paragraph}{Trajectory with Transitions:}{57}{section*.108}
@@ -122,11 +122,11 @@
 \contentsline {paragraph}{Minimal Movement Time:}{59}{section*.110}
 \contentsline {paragraph}{Movement Chaining:}{59}{section*.111}
 \contentsline {paragraph}{State Projection:}{60}{section*.112}
-\contentsline {subsection}{\numberline {3.3.3}Definition}{60}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}(R) LiDAR}{61}{section.3.4}
+\contentsline {subsection}{\numberline {3.3.3} Definition}{60}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4} LiDAR}{61}{section.3.4}
 \contentsline {paragraph}{LiDAR(Light Detection And Ranging)}{61}{section*.113}
 \contentsline {paragraph}{Point-cloud}{62}{section*.114}
-\contentsline {section}{\numberline {3.5}(R) Complementary Definitions}{63}{section.3.5}
+\contentsline {section}{\numberline {3.5} Complementary Definitions}{63}{section.3.5}
 \contentsline {paragraph}{Cartesian Space:}{63}{section*.116}
 \contentsline {paragraph}{Base Works:}{63}{section*.117}
 \contentsline {paragraph}{UAS Coordinate System:}{63}{section*.118}
