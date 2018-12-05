@@ -1,5 +1,5 @@
 \cleardoublepage
-\chapter{(R) State of art}\label{ch:stateOfArt}
+\chapter{\secState{R}State of the Art}\label{ch:stateOfArt}
 
 \noindent This  chapter is introducing notable works and concepts of fellow \emph{researchers} i the field of \emph{control theory}, \emph{software engineering} and other essential fields used in \emph{Detect and Avoid} systems.
 
@@ -31,7 +31,7 @@
     
 \end{enumerate}
 
-\section{(R) Movement Automaton}\label{s:movementAutomatonTheory}
+\section{\secState{R}Movement Automaton}\label{s:movementAutomatonTheory}
 
 \paragraph{Idea:} The key idea is to create \emph{interface} between \emph{controlled plant} (UAV) and \emph{Avoidance Algorithm} to ensure \emph{Concept Reusability} at maximum degree.  The concept is following:
 
@@ -81,7 +81,7 @@ UAS in (fig. \ref{fig:movementAutomatonExampleTheory}) ignores the vertical mane
 The \emph{Movement Automaton} is used as is (sec. \ref{s:MovementAutomatonDefinitionAndProperties}). The implementation is described in (sec. \ref{s:modelMAImplementation}). The testing configuration was given in (tab. \ref{tab:testMovementOrientations}).
 
 
-\section{(R) Sensor (Data) Fusion}\label{s:dataFusionProbabilisticModelTheory}
+\section{\secState{R}Sensor (Data) Fusion}\label{s:dataFusionProbabilisticModelTheory}
 \paragraph{Idea:}  There is \emph{Need for abstract representation} of \emph{operational space}, which is independent of used sensors, technologies, information sources. The universal obstacle avoidance system should have \emph{portability property}. Our previous work \emph{Obstacle avoidance framework based on reach sets} \cite{gomola2017obstacle} have introduced similar concept of \emph{control interface}.
 
 The original concept was using cell status interpretation, which was hardwired to LiDAR technology.  The new demand is to incorporate concepts of \emph{visibility}, \emph{reachibility} and \emph{obstacle probability}. The base methodst for \emph{Statistical Sensor Fusion} were outlined in \cite{gustafsson2010statistical}.
@@ -126,7 +126,7 @@ Overall concepts of probabilistic sets have been given by Hirota in \cite{hirota
 
 
 
-\section{(R) Navigation Algorithms}\label{s:NavigationAlgorithms}
+\section{\secState{R}Navigation Algorithms}\label{s:NavigationAlgorithms}
 \paragraph{Idea:} The basic idea is to provide hierarchical\emph{navigation frame} with \emph{some optimal path search capabilities}. 
 
 \paragraph{Standard Navigation:} The standard navigation is given as \emph{expected cost optimization problem} for \emph{future cost function} (eq. \ref{eq:costFunctionReachable}). The key concept of navigation algorithm was fully taken from \cite{gardi2018multi}. The decision was made based on navigation survey \cite{goerzen2010survey}. The \emph{descent} for landing is out of scope in this work, can be found in \cite{lim2018energy}. The navigation principle is roughly described in (sec. \ref{s:missionControlRun}).
@@ -156,7 +156,7 @@ This concept will be reused, the \emph{Task specific mode} will be \emph{Emergen
 \end{enumerate}
 
 
-\section{(R) Reach Set Estimation}\label{s:ReachSetEstimationTheory}
+\section{\secState{R}Reach Set Estimation}\label{s:ReachSetEstimationTheory}
 \paragraph{Idea:} The basic idea for \emph{Discrete Reach set Estimation  method} is taken from \cite{ljungqvist2017lattice}. The focus of their work is to generate paths that are kinematically feasible. Path following controllers in order to find techniques to stabilize the system around these paths \cite{ljungqvist2016path,evestedt2016path}. 
 
 Lattice-based planners have been deployed with great success on several robotic platforms \cite{pivtoraiko2009differentially,urmson2008william,cirillo2017videogames,tomlin2000game,chen1997game}. However, a problem with lattice-based approaches is the exponential complexity in the dimension of the state space which can limit the use for more complicated models.
@@ -214,7 +214,7 @@ The \emph{Constraints} of obstacle set in \emph{Known world} (sec. \ref{s:KnownW
 
 
 
-\section{(R) Software Testing}\label{s:TestingFrameworkTheory}
+\section{\secState{R}Software Testing}\label{s:TestingFrameworkTheory}
 
 \paragraph{Idea:} \emph{Reuse LSTS toolchain architecture} for DAA testing framework.
 
@@ -244,7 +244,7 @@ The \textit{Inter-Module Communication} \cite{martins2009imc} (IMC) protocol was
 
 \paragraph{Used concepts:} Most of the architecture was re-used in our approach, the concept of \emph{Rule engine} (sec. \ref{sec:ruleEngine}) was introduced to cover missing \emph{UTM} related functionality. The implementation in Matlab was influenced by Alessandeti works \cite{allesandeti2016virtualArena,alessandrettinotes}. The other aircraft dynamic and control related concepts were taken from  \cite{stevens2015aircraft}.
 
-\section{(R) UTM Services}\label{s:utmServicesTheory}
+\section{\secState{R}UTM Services}\label{s:utmServicesTheory}
 \paragraph{Idea:} Take the Airbus UTM concept \cite{airbusUTM2018blueprint} combine it with \emph{EUROCONTROL} concept \cite{andrewhately2018} to obtain legal framework. \emph{Provide conflict resolution functionality} for \emph{Controlled Airspace}:
 \begin{enumerate}
     \item \emph{Collision Detection} - define minimal required functionality for collision detection.
