@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  5 DEC 2018 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  5 DEC 2018 18:12
 entering extended mode
 **./main.tex
 (main.tex
@@ -562,6 +562,9 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 \plparsep=\skip94
 \pl@lab=\toks34
 )
+("C:\Users\H172461\MiKTeX 2.9\tex\latex\oberdiek\ifdraft.sty"
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+)
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
@@ -733,9 +736,9 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-Package hyperref Info: Option `colorlinks' set `false' on input line 128.
-Package hyperref Info: Option `pdfnewwindow' set `true' on input line 128.
-Package hyperref Info: Option `breaklinks' set `true' on input line 128.
+Package hyperref Info: Option `colorlinks' set `false' on input line 129.
+Package hyperref Info: Option `pdfnewwindow' set `true' on input line 129.
+Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@theorem=\count305
 \c@definition=\count306
 \c@problem=\count307
@@ -749,22 +752,22 @@ LaTeX Warning: Unused global option(s):
 (main.aux (08Conclusion.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 249.
+LaTeX Font Info:    ... okay on input line 249.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -830,7 +833,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box61
-Package hyperref Info: Link coloring OFF on input line 245.
+Package hyperref Info: Link coloring OFF on input line 249.
 
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -840,21 +843,21 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count316
 )
-LaTeX Info: Redefining \ref on input line 245.
-LaTeX Info: Redefining \pageref on input line 245.
-LaTeX Info: Redefining \nameref on input line 245.
+LaTeX Info: Redefining \ref on input line 249.
+LaTeX Info: Redefining \pageref on input line 249.
+LaTeX Info: Redefining \nameref on input line 249.
 
 (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 252.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 256.
 
  ("C:\Users\H172461\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 252.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 256.
 
 [1
 Non-PDF special ignored!
@@ -2988,27 +2991,27 @@ pa . eu / legalcontent / EN / TXT / ?uri = CELEX :
  []
 
 [333] [334] [335] [336] [337] [338] [339] [340] [341] [342] [343] [344])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 483.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 487.
 
 [345]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 483.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 487.
  (main.aux (08Conclusion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 483.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 483.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 487.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 487.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D8AEA20C22B2EFC173739E191CE1F14C;27782.
+(rerunfilecheck)             Checksum: 72873BE4837D2F0108FB3B9493EB1F12;27769.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 483.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 487.
  ) 
 Here is how much of TeX's memory you used:
- 29809 strings out of 492973
- 526612 string characters out of 3135926
- 824575 words of memory out of 3000000
- 30130 multiletter control sequences out of 15000+200000
+ 29825 strings out of 492973
+ 526922 string characters out of 3135926
+ 824725 words of memory out of 3000000
+ 30143 multiletter control sequences out of 15000+200000
  555707 words of font info for 114 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,22n,63p,1334b,1207s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3104,7 +3107,7 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/H172461/MiKTeX 2.
 9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/H172461/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (373 pages, 24869607 bytes).
+Output written on main.pdf (373 pages, 24869566 bytes).
 PDF statistics:
  7860 PDF objects out of 8907 (max. 8388607)
  2820 named destinations out of 2984 (max. 500000)
