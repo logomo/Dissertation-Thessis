@@ -63,7 +63,7 @@
 %\documentclass[a4,narrowmargins,12pt,oneside,draft,onehalfspaced,singlespacednotes]{fcup-thesis}
 %\documentclass[a4,narrowmargins,12pt,oneside,onehalfspaced,singlespacednotes]{fcup-thesis}
 %Print
-%\documentclass[a4,narrowmargins,12pt,twoside,openright,draft,onehalfspaced,singlespacednotes]{fcup-thesis}
+%\documentclass[draft,a4,narrowmargins,12pt,twoside,openright,onehalfspaced,singlespacednotes]{fcup-thesis}
 \documentclass[a4,narrowmargins,12pt,twoside,openright,onehalfspaced,singlespacednotes]{fcup-thesis}
 
 %% *** Add \usepackage declarations here. ***
@@ -108,7 +108,8 @@
 \usepackage{dcolumn}        
 \usepackage{booktabs} 
 \usepackage{multirow}
-\usepackage{paralist}       
+\usepackage{paralist}     
+\usepackage{ifdraft}  
 \usepackage{indentfirst}    
 \usepackage[nottoc,notlof,notlot]{tocbibind}
 \usepackage{url}
@@ -136,6 +137,9 @@
 \newcommand{\FIGDIR}{./Pics}    %%% directory containing figures
 \newcommand{\twolinecellr}[2][r]{%
   \begin{tabular}[#1]{@{}r@{}}#2\end{tabular}}
+\newcommand{\secState}[1]{
+	\ifdraft{(#1) }{}
+}
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}

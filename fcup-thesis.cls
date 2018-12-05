@@ -190,15 +190,14 @@
 %% `draft' option: change default document settings.
 \DeclareOption{draft}{\@drafttrue
    \newcommand*{\tlDRAFT}%
-     {\raisebox{ 3ex}[0pt][0pt]{\llap{\sffamily\scriptsize DRAFT\ \ }}}
+     {}
    \newcommand*{\trDRAFT}%
-     {\raisebox{ 3ex}[0pt][0pt]{\rlap{\sffamily\scriptsize \ \ DRAFT}}}
+     {}
    \newcommand*{\blDRAFT}%
-     {\raisebox{-3ex}[0pt][0pt]{\llap{\sffamily\scriptsize DRAFT\ \ }}}
+     {}
    \newcommand*{\brDRAFT}%
-     {\raisebox{-3ex}[0pt][0pt]{\rlap{\sffamily\scriptsize \ \ DRAFT}}}
-   \ExecuteOptions{doublespaced}
-   \PassOptionsToClass{draft,twoside,openany}{report}}
+     {}
+   \PassOptionsToClass{draft}{report}}
 
 %% Margin options.
 \DeclareOption{narrowmargins}{\AtEndOfClass % 1 1/4" left, 3/4" others
