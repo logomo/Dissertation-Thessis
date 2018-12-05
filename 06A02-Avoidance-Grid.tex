@@ -1,4 +1,3 @@
-\newpage
 \section{(R) Space Discretization - Avoidance Grid}\label{s:AvoidanceGrid}
 
 \paragraph{Operation Space:} The \emph{Operation Space} is a space where UAS can effectively surveillance its surroundings.
@@ -82,8 +81,7 @@ The \emph{point} scanned by \emph{LiDAR}, where \emph{UAS position} is center of
 
 The \emph{full LiDAR Swipe} (cyan and red lines) of \emph{UAS} (blue plane) has \emph{shape} of conical cylinder. Under \emph{ideal circumstances} the \emph{LiDAR swipe} would have \emph{ball shape}, but in real cases the \emph{craft body portion} where \emph{LiDAR} is mounted is unused.
 
-\newpage
-\noindent The \emph{frontal portion} (red line) is a set of cells where \emph{UAS} can make maneuver. The \emph{red portion} size is determined by \cite{zaiane2002clustering}:
+The \emph{frontal portion} (red line) is a set of cells where \emph{UAS} can make maneuver. The \emph{red portion} size is determined by \cite{zaiane2002clustering}:
 
 \begin{enumerate}
         \item \emph{Sensors ranges} - the union of \emph{effective sensor ranges} defines the maximal \emph{effective space boundary}, because there is no reason to asses situation over effective \emph{sensor range}.
@@ -129,8 +127,7 @@ The \emph{full LiDAR Swipe} (cyan and red lines) of \emph{UAS} (blue plane) has 
     \end{aligned};\quad k\in 1\dots K
 \end{equation}
 
-\newpage
-\noindent Then $cell_{i,j,k}$ given by (def. \ref{def:cell}) is member cell of Avoidance Grid for boundaries:
+Then $cell_{i,j,k}$ given by (def. \ref{def:cell}) is member cell of Avoidance Grid for boundaries:
 \begin{enumerate}
     \item \emph{Cell Distance Range} (eq. \ref{eq:avoidanceGridCellDistanceRange}) depending on layer index $i$.
     
@@ -197,8 +194,7 @@ The \emph{efficient boundary} is given by  \emph{Reach Set}. Estimate reach set 
     Boundary(Reach Set) = Ellipsoid(UAS System,distance)
 \end{equation}
 
-\newpage
-\noindent The values for \emph{Reach Set Boundary} with distance 10 m was following:
+The values for \emph{Reach Set Boundary} with distance 10 m was following:
 \begin{enumerate}
     \item distance range $[0m,10m]$,
     \item horizontal range $[-45^\circ,45^\circ]$,

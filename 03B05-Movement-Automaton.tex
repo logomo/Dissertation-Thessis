@@ -1,4 +1,3 @@
-\newpage
 \section{(R) Movement Automaton}\label{sec:MovementAutomatonBackground}
 
     \noindent\emph{Movement Automaton} is basic interface approach for discretization of \emph{trajectory evolution}  or \emph{control input} for any \emph{continuous or discrete system model}.
@@ -157,8 +156,7 @@
         &minimalTime(MovementPrimitive) +\\ &\text{max}_{in/out}\left\{time(Transition)\right\}
         \end{aligned}
     \end{equation}
-
-	\newpage    
+   
     \paragraph{Movement Chaining:}\emph{Movements} can be \emph{chained} and applied to initial \emph{system state} to generate \emph{system trajectory}. Example of trajectory is given by (eq. \ref{eq:trajectoryExample}). Movements are reversibly obtained by participation such \emph{trajectory} into \emph{Movement primitives} and \emph{Transitions}. Then sample \emph{Trajectory} for $n\in \N^+$ movements looks like (eq. \ref{eq:movementChaining}).
     \begin{equation}\label{eq:movementChaining}
         \begin{aligned}
@@ -202,7 +200,6 @@
         StateProjection:Trajectory\times Time \to State(Time)
     \end{equation}
 
-\newpage    
 \subsection{Definition}\label{s:MovementAutomatonDefinitionAndProperties}
 
     \begin{definition}\label{def:movementAutomaton}Movement Automaton is given as follow:
