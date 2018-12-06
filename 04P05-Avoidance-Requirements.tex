@@ -1,5 +1,4 @@
-\newpage
-\section{Avoidance requirements}\label{s:AvoidanceRequirements}
+\section{\secState{D}Avoidance Requirements}\label{s:AvoidanceRequirements}
 
 \paragraph{SAA systems} have following conflicting performance criteria:
 \begin{enumerate}
@@ -12,7 +11,7 @@
     \emph{Energy efficiency} and \emph{Trajectory Tracking} are an optional criteria, while \emph{the safety} is mandatory.
 \end{note}
 
-\subsection{Energy efficiency}\label{s:EnergyEfficiency}
+\subsection{\secState{D}Energy Efficiency}\label{s:EnergyEfficiency}
 \paragraph{Energy efficiency} can be measured by \emph{cost function} (eq. \ref{eq:consFunctionMeta}), consisting from the \emph{cost of flown trajectory} (eq. \ref{eq:costFunctionExecuted}) and the \emph{expected reach cost} (eq. \ref{eq:costFunctionReachable}) portions. There are optimalizaiton techniques based on \emph{Reach sets} \cite{kurzhanski2001dynamic}. The inputs for the \emph{cost function} are:
 \begin{enumerate}
     \item \emph{Time} - current mission time.
@@ -69,7 +68,7 @@
     The tuning parameters are set up $verticalPenalizaiton \le horizontalPenalizaiton < \infty$ for \emph{copter} UAS in an \emph{uncontrolled airspace}
 \end{note}
 
-\subsection{Trajectory tracking}\label{s:trajectoryTracking}
+\subsection{\secState{D}Trajectory Tracking}\label{s:trajectoryTracking}
 \paragraph{Trajectory Tracking} is crucial parameter for \emph{controlled airspace} and is expected to be important in \emph{upcoming UTM systems}. There is \emph{mission plan} which is compared with \emph{real-time airspace situation} obtained from UAS \emph{Position notifications}. The optimalization based on \emph{Reach Set} is given in \cite{varaiya2000reach}.
 
 \paragraph{Motivation:} \emph{Situation awareness} for modern DAA systems is depending on planned trajectory tracking. The main conflict is between \emph{navigaiton precision} and \emph{situation evaluation}. If the planned trajectory is defined for \emph{continuous domain} it takes a lot of effort to calculate collision points. 
@@ -162,11 +161,10 @@ The \emph{reference trajectory} is given by \emph{mission} set of \emph{waypoint
 Feasible trajectory condition (eq. \ref{feasibleTrajectoryCondition}) is used as \emph{margin} for airworthiness,s and \emph{Deviation} is used as performance indicator further in this work.
 
 
-\newpage
-\subsection{Safety}\label{s:Safety}
+\subsection{\secState{D}Safety}\label{s:Safety}
 \noindent \emph{Safety} is very broad term there are following incidents which can occur and will be discussed in (sec. \ref{s:safetyMarginCalculation}) \emph{Safety margin} is broad term describing minimal distance to the center of intruder/adversary, surface of obstacle, boundary of protected area.
 
-\subsubsection{Controlled airspace safety}
+\paragraph{Controlled airspace safety}
 \noindent  Safety for \emph{controlled airspace} in given \emph{flight level} is given as list of incidents:
 \begin{enumerate}
     \item \emph{Soft constrained zone breach} - UAS fly to \emph{soft constraint body} or \emph{hard constraint protection zone}, these incidents can happen, and have least avoidance priority. 
@@ -190,7 +188,7 @@ Feasible trajectory condition (eq. \ref{feasibleTrajectoryCondition}) is used as
     \label{tab:controlledAirspaceViolations}
 \end{tabularx}
 
-\subsubsection{Uncontrolled airspace safety}
+\paragraph{Uncontrolled airspace safety}
 \noindent Safety for \emph{uncontrolled airspace} is applied in $F/G$ class of airspace, which is given as airspace between the \emph{ground} level and \emph{other airspace prevalence}.
 \begin{note}{Clarification of controlled/uncontrolled airspace:}
     \begin{itemize}

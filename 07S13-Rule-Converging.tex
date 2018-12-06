@@ -1,5 +1,4 @@
-\newpage
-\subsection{Rule based Converging}\label{s:testRuleConverging}
+\subsection{\secState{D}Rule Based Converging}\label{s:testRuleConverging}
 
 \paragraph{Scenario:} Two \emph{UAS} are approaching an \emph{airway intersection} at \emph{same time} in \emph{controlled airspace} (over 500 feet Above the Ground Level). The mutual position of \emph{UAS} can be classified as \emph{Side approach}. Following \emph{collision hazards} are present:
 
@@ -184,7 +183,6 @@ The mutual \emph{UAS distance} (blue line) does not go over \emph{Safety Margin}
     \label{tab:testCaseRuleBasedConvergingSafetyMarginDistances}
 \end{table}
 
-\newpage
 \paragraph{Path Tracking Performance:} \emph{Path tracking} is displayed in (fig. \ref{fig:ruleBasedConvergingTrajectoryTrackingPerformance}). The \emph{UAS} trajectory is divined into \emph{X, Y, Z axis tracking over UTM Time}. The \emph{Reference Trajectory} (green dashed line) interconnect starting position of UAS (green square marked S) an goal waypoint (green square marked 1). The \emph{Executed Trajectory} (blue solid line) reflects real UAS trajectory. 
 
 \begin{enumerate}
@@ -229,7 +227,6 @@ The minimal deviation distance was expected at value of \emph{safety margin} ($8
     \label{tab:pathTrackingParametersForRuleBasedConverging}
 \end{table}
 
-\newpage
 \paragraph{Computation Load:} The \emph{computation load} for \emph{scenario} (fig.\ref{fig:ruleBasedCConvergingComputationTime}) shows used time (y-axis) over decision frame (x-axis).
 
 The \emph{computation time} is slightly increased for avoiding UAS 1 during avoidance. The initial increase of computation time UAS 2 is caused by UTM communication demand.

@@ -1,4 +1,5 @@
-\chapter{(R) Approach}\label{ch:approach}
+\cleardoublepage
+\chapter{\secState{R}Approach}\label{ch:approach}
 
 \noindent There are few levels of \emph{Avoidance} based on the \emph{remaining time to collision}. These levels are summarized in (fig. \ref{s:approachOverview}).
 
@@ -21,8 +22,8 @@ The \emph{Event Avoidance} has more opportunity to react. Some threats are know 
 
 The \emph{Discretization} is the key to assure calculation in finite time. Finite \emph{partition} of \emph{operational space (Known World)} and finite representation of \emph{Reach set} guarantees finite count of calculation steps. Aircraft conflict prediction mentioned in \cite{prandini2008application}.
 
-\newpage    
-\section{(R) Overview}\label{s:approachOverview}
+    
+\section{\secState{R}Overview}\label{s:approachOverview}
 
 \noindent The \emph{Overview} is based on \emph{Existing} Emergency avoidance framework \cite{gomola2017obstacle} (fig. \ref{fig:avoidanceConcept}). To achieve goals defined in \emph{Problem Definition} (sec. \ref{s:BasicProblemDefinition}, \ref{s:IncrementalProblemDefinition}) following \emph{Avoidance Framework Concept} (fig. \ref{fig:AvoidanceFrameworkConceptNew}) is proposed:
 
@@ -48,12 +49,12 @@ The \emph{Discretization} is the key to assure calculation in finite time. Finit
             \item \emph{ADS-B} (Intruder UAS/Plane detection) - detection of intruders whom are broadcasting their position and heading sometimes with future plans and additional parameters. The \emph{intersection models} are given in (sec. \ref{s:intruderBehaviourPrediction}, \ref{s:linearIntersectionModel}, \ref{s:bodyvolumeIntersection}, \ref{s:uncertaintyIntersection}).
         \end{enumerate}
 
-\newpage    
+    
     \item \emph{Information Sources} (Role: Known World Information Enhancers): 
         \begin{enumerate}[a.]
             \item \emph{Obstacle Map} (Static Restriction Source) - imposing static soft/hard constraints on \emph{Known Word}/\emph{Operational Space}. Static constraints are given in (sec. \ref{s:virtualConstraints}).
             
-            \item \emph{Weather Information} (Static/Dynamic Restriction Source) - imposing static/moving soft/hard constraints on \emph{Known World}/\emph{Operational Space}. Moving constraints are given in (sec. \ref{s:MovingVirtualConstraints}).
+            \item \emph{Weather Information} (Static/Dynamic Restriction Source) - imposing static/mo\-vi\-ng soft/hard constraints on \emph{Known World}/\emph{Operational Space}. Moving constraints are given in (sec. \ref{s:MovingVirtualConstraints}).
             
             \item \emph{Other Airspace Restrictions} - like restricted airspace, geo-fencing and other future constraint sources, all of them are covered by \emph{Static/Dynamic Constraints} for now.
         \end{enumerate}
@@ -74,7 +75,6 @@ The \emph{Discretization} is the key to assure calculation in finite time. Finit
     
 \end{enumerate}
 
-\newpage
 \paragraph{Communication in Avoidance Framework:}
 \begin{enumerate}
     \item \emph{UAS $\leftrightarrow$ Movement Automaton} - sharing \emph{actual system state}, commanding the UAS platform.

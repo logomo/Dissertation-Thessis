@@ -1,5 +1,5 @@
-\newpage
-\section{(R) UAS Model and Control}\label{s:modelMAImplementation}
+\cleardoublepage
+\section{\secState{R}UAS Model and Control}\label{s:modelMAImplementation}
 
 \noindent The key feature of \emph{Movement Automaton} is to interface \emph{continuous-control signal} as the \emph{discrete command chain}. Following topics are introduced in this section:
 
@@ -14,7 +14,7 @@
 \end{enumerate}
 
 
-\subsection{(R) UAS Nonlinear Model}\label{s:UASNonlinearModel}
+\subsection{\secState{R}UAS Nonlinear Model}\label{s:UASNonlinearModel}
 \paragraph{Motivation:} Simplified rigid body kinematic model will be used. This model have decoupled roll, yaw and pitch angles. The focus is on \emph{reach set approximation methods}, therefore \emph{UAS model} is simplified.
 
 \paragraph{State Vector} (eq. \ref{eq:simple3dStatevector}) defined as positional state in euclidean position in right-hand euclidean space, where \emph{x, y, z} can be abstracted as latitude, longitude, altitude.
@@ -61,7 +61,7 @@
     \end{aligned}
 \end{equation}
 
-\subsection{(R) Movement Automaton for UAS Model}\label{s:movementAutomatonDefinition}
+\subsection{\secState{R}Movement Automaton for UAS Model}\label{s:movementAutomatonDefinition}
 
 \paragraph{Motivation:} An \emph{UAS Nonlinear Model} (eq. \ref{eq:UASNonlinearModelSimple}) can be modeled by \emph{Movement Automaton} (def. \ref{def:movementAutomaton}). 
 
@@ -184,7 +184,7 @@ Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is then given as the time-
 \begin{equation}\label{eq:ourTrajectoryImplementation}
     Trajectory(state(0),Buffer)= \left\{\begin{gathered}state(0)+\sum_{j=0}^{i-1} input(movement(j)):\\i \in\left\{1\dots |Buffer|+1\right\}, \\movement(\cdot) \in Buffer\end{gathered}\right\}
 \end{equation}
-\newpage
+
 Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states bounded to discrete time $0\dots n$ , where $n$ is member count of \emph{Buffer}. Trajectory set has $n+1$ members:
 
 \begin{equation}
@@ -211,7 +211,7 @@ Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states b
     \emph{Movement Automaton} for system (eq. \ref{eq:UASNonlinearModelSimple}) with given (as. \ref{ass:transitionTime}) is established with all related properties (sec. \ref{def:movementAutomaton}).
 \end{note}
 
-\subsection{(R) Segmented Movement Automaton}\label{s:segmentedMovementAutomaton}
+\subsection{\secState{R}Segmented Movement Automaton}\label{s:segmentedMovementAutomaton}
 \paragraph{Motivation:} Constructing \emph{Movement Automaton} for more complex system can be tedious. Used \emph{Movement Automaton} for \emph{UAS system} (\ref{eq:UASNonlinearModelSimple}) has decoupled control which is not true for most of the copters/planes \cite{fossen2011mathematical}.
 
 \paragraph{Partitioning UAS State Space:} Proposed movement automaton is defined by its Movement set (tab. \ref{tab:movements1},\ref{tab:movements2}). Those can be scaled depending on maneuverability in the  \emph{Initial state} $state(0)$:
@@ -275,7 +275,7 @@ Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states b
 
 \paragraph{Segmented Movement Automaton:} The segmentation of \emph{state space} is done  in (def. \ref{def:stateSpacePartition}) any \emph{state} belongs exactly to \emph{Segment} of \emph{State Space}. For each \emph{Segment} in \emph{State Space}it is possible to assess: \emph{Climb/Descent Rate} $\delta pitch_{max}(k)$, \emph{Turn Rate} $\delta yaw_{max}(k)$, and, \emph{Acceleration} $\delta v_{max}(k)$.
 
-\newpage
+
 \begin{definition}{Movement Automaton for Segment(index)}\label{def:segmentMovementAutomaton}
     
 
@@ -351,7 +351,7 @@ Then the \emph{Movement Automaton} for \emph{Segment} $\in$ \emph{State Space} i
     
 \end{definition}
 
-\subsection{(R) Reference Trajectory Generator}\label{s:referenceTrajectoryGenerator}
+\subsection{\secState{R}Reference Trajectory Generator}\label{s:referenceTrajectoryGenerator}
 
 \paragraph{Reference Trajectory Generator:} Segmented Movement Automaton (def.  \ref{def:segmentedMovementAutomaton}) with \emph{trajectory function} (eq. \ref{eq:ourTrajectoryImplementationSegmented}) is used as \emph{reference trajectory generator} for \emph{complex systems}. 
 

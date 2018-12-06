@@ -1,4 +1,4 @@
-\section{Test Plan} \label{s:testPlan}
+\section{\secState{D}Test Plan} \label{s:testPlan}
 
 \noindent The \emph{Avoidance requirements} are given in (sec. \ref{s:AvoidanceRequirements}), namely:
 \begin{enumerate}
@@ -11,7 +11,7 @@ These are given as nominal behaviour (sec. \ref{s:aviudabceGridRun}),further enh
 The \emph{Navigation requirements}, out of this scope, are given in (sec. \ref{s:navigationRequirements}). These are satisfied by \emph{Mission Control Run} (sec. \ref{s:missionControlRun}).
 
 
-\subsection{Testing approach}\label{s:testingApproach}
+\subsection{\secState{D}Testing approach}\label{s:testingApproach}
 
 \noindent The purpose of this section is to show complex scenarios, not unit testing of framework functionality. The focus is on \emph{border line} cases for typical situations in \emph{expected environment}. The \emph{mode switch} between \emph{Navigation} and \emph{Emergency Avoidance}.
 
@@ -49,7 +49,6 @@ The \emph{Tests} are designed to focus on particular functionality in specific \
     \item \emph{Controlled airspace constraints (open air)} are: restricted airspace (hard constraint), weather (soft/hard constraint), non-controlled airspace boundary (hard constraints), UTM Directives (hard constraints).
 \end{enumerate}
 
-\newpage
 \paragraph{Air Traffic Attendants:} 
 \begin{enumerate}
     \item \emph{Non-cooperative UAS} (Intruder) -  there are some intruders with some degree of authority, size and \emph{severity}. There were three test cases for non-cooperative intrudes. Non-cooperative Intruders can be categorized as follow based on behaviour:
@@ -76,7 +75,6 @@ Then there is \emph{location services}, which are necessary for coordinated coll
 
 \emph{Directives} for \emph{Traffic management} and \emph{Collision prevention} are implemented  as functional life cycle of  \emph{Position notification} (sec. \ref{sec:positionNotification}), \emph{Collision Case} (sec. \ref{sec:collisionCase}) for UTM. The directive handling is implemented as \emph{Rule engine} (sec. \ref{sec:ruleImplementation}) on UAS side.
 
-\newpage
 \paragraph{Navigation:} Navigation algorithm is depending on \emph{Navigation mode}. UAS is usually in \emph{Navigation mode} most of the time, despite this fact, UAS was forced into \emph{Emergency Avoidance Mode} most of time in test cases. The navigation complexity have been divined into following categories:
 
 \begin{enumerate}
@@ -86,7 +84,7 @@ Then there is \emph{location services}, which are necessary for coordinated coll
     \item \emph{Rule following} - UAS navigation capabilities are constrained by rule enforcement.
 \end{enumerate}
 
-\subsection{Test Cases Summary}\label{s:testCaseSummary}
+\subsection{\secState{D}Test Cases Summary}\label{s:testCaseSummary}
 
 \noindent \emph{Test cases} are summarized in (tab. \ref{tab:testCasesSummary}).
 

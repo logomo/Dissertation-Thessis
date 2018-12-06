@@ -1,4 +1,4 @@
-\subsection{(R) Body-volume Intersection}\label{s:bodyvolumeIntersection}
+\subsection{\secState{R}Body-volume Intersection}\label{s:bodyvolumeIntersection}
 \paragraph{Idea:} The \emph{Intruder} has \empty body volume greater than \emph{average} $cell_{i,j,k}$ volume. The \emph{intruder body} is considered as the ball moving along \emph{intruder position}. The \emph{intersection} of the intruder body is realized as sufficiently thick \emph{point-cloud intersection}.
 
 \paragraph{Space Intersection Rate - Body Volume:} The \emph{body volume mass} with center at $position(t)$ is moving along intruder trajectory prediction (eq. \ref{eq:linearintersectionmodelVehicleVolume}) in time interval $[0,\infty[$:
@@ -19,7 +19,7 @@
     polarBall(t):  Body(position(t),radius) \to \left\{\left[\begin{aligned}&distance, horizontal^\circ,\\ &vertical^\circ, intersection Time\end{aligned}\right]\right\}
 \end{equation}
 
-\newpage\noindent The \emph{space intersection rate for vehicle body} $space(Intruder, cell_{i,j,k})$ (eq. \ref{eq:baseIntersectionProbabilityBallIntersectionType}) is calculated as intersection of polar body volume ball and $cell_{i,j,k}$. If intersection is non empty then base probability is one, zero otherwise:
+The \emph{space intersection rate for vehicle body} $space(Intruder, cell_{i,j,k})$ (eq. \ref{eq:baseIntersectionProbabilityBallIntersectionType}) is calculated as intersection of polar body volume ball and $cell_{i,j,k}$. If intersection is non empty then base probability is one, zero otherwise:
 
 \begin{equation}\label{eq:baseIntersectionProbabilityBallIntersectionType}
     space\left(\begin{gathered}Intruder,\\cell_{i,j,k}\end{gathered}\right)=

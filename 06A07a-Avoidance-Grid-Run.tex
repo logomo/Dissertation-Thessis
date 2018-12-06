@@ -1,5 +1,4 @@
-\newpage
-\subsection{(R) Avoidance Grid Run}\label{s:aviudabceGridRun}
+\subsection{\secState{R}Avoidance Grid Run}\label{s:aviudabceGridRun}
 \paragraph{Main Goal:} The main goal of this section is to introduce the trajectory selection process, based on a \emph{situation assessment}, originating from \emph{Data Fusion Procedure} (sec. \ref{s:sensorFusion}). 
 
 \begin{note}
@@ -70,7 +69,7 @@ The \emph{Algorithm} (alg. \ref{alg:FindBestPathAvoidanceGrid}) is based on \emp
 \end{note}
 
 The \emph{Avoidance Path} selection is simple lowest cost selection of \emph{Trajectory} $\in$ cell$_{i,j,k}$.
-\newpage
+
 
 \begin{algorithm}[H]
 \SetKwInOut{Input}{Input}
@@ -129,7 +128,7 @@ The \emph{Avoidance Path} selection is simple lowest cost selection of \emph{Tra
     \label{alg:FindBestPathAvoidanceGrid}    
 \end{algorithm}
 
-\newpage
+
 \paragraph{Space Assessment Example:} For better understanding there is following example of \emph{space assessment} and \emph{Best Path Selection}. 
 
 
@@ -143,8 +142,8 @@ The \emph{LiDAR hits} are denoted as red filled circles. The \emph{Avoidance Gri
     \caption{Example: The situation to be evaluated by \emph{Avoidance Run}.}
     \label{fig:exampleSituationAvoidanceRun}
 \end{figure}
-\newpage
-\noindent\emph{Visibility Assessment:} The visibility assessment (fig. \ref{fig:exampleVisibilityEvaluation}) divides the \emph{Avoidance Grid} into two
+
+\emph{Visibility Assessment:} The visibility assessment (fig. \ref{fig:exampleVisibilityEvaluation}) divides the \emph{Avoidance Grid} into two
 \begin{enumerate}
     \item \emph{Visible space} (blue filled cells) is space \emph{trough} which \emph{LiDAR} rays roamed freely until they hit an \emph{Obstacle}.
     
@@ -164,8 +163,7 @@ The \emph{LiDAR hits} are denoted as red filled circles. The \emph{Avoidance Gri
     \label{fig:exampleVisibilityEvaluation}
 \end{figure}
 
-\newpage
-\noindent\emph{Reachibility Assessment:} For Each trajectory the \emph{Reachibility} is assessed (fig. \ref{fig:exampleReachibilityEvaluation}). The \emph{Obstacle Space} and \emph{Uncertain Space} are rendering \emph{reachibility}, effectively separating \emph{trajectories} into two categories:
+\emph{Reachibility Assessment:} For Each trajectory the \emph{Reachibility} is assessed (fig. \ref{fig:exampleReachibilityEvaluation}). The \emph{Obstacle Space} and \emph{Uncertain Space} are rendering \emph{reachibility}, effectively separating \emph{trajectories} into two categories:
 
 \begin{enumerate}
     \item \emph{Unreachable Trajectories} (red lines) - there is at least one trajectory segment leading trough \emph{Obstacle} or \emph{Uncertain} space.

@@ -1,4 +1,4 @@
-\subsection{(R) Moving Constraints}\label{s:MovingVirtualConstraints}
+\subsection{\secState{R}Moving Constraints}\label{s:MovingVirtualConstraints}
 \paragraph{Idea:} The basic ideas is the same as in case \emph{static constraints} (sec. \ref{s:virtualConstraints}). There is horizontal constraint and altitude constraint outlining the constrained space. The only additional concept is moving of \emph{constraint} on horizontal plane in global coordinate system. 
 
 The constraint intersection  with \emph{avoidance grid} is done in \emph{fixed decision Time}, for cell in \emph{fixed cell leave time} (eq. \ref{eq:cellLeaveTime}), which means concept from static obstacles can be fully reused.
@@ -25,7 +25,7 @@ First let us introduce $\Delta time$ (eq. \ref{eq:deltatimeMovingconst}), which 
     \Delta time = UAS_{leave}(cell_{i,j,k}) - detection Time
 \end{equation}
 
-\newpage\noindent The constraint boundary is shifted to:
+The constraint boundary is shifted to:
 
 \begin{multline}
     shifted Boundary(constraint) = \{new Point = point + velocity \times \Delta time:\dots\\\dots \forall point \in constraint.boundary \}

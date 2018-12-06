@@ -1,5 +1,5 @@
 
-\subsection{(R) Chaotic Reach set}\label{s:chaoticReachSet}
+\subsection{\secState{R}Chaotic Reach set}\label{s:chaoticReachSet}
 
 \paragraph{Motivation:} Design of calculation method for \emph{Reach Set Approximation} guarantying high \emph{Maneuverability}.
 
@@ -96,7 +96,7 @@ The \emph{Cell} $cell_{i,j,k}$ has a center and walls from UAS viewpoint: front 
 \noindent\emph{Absence} of \emph{Smooth Trajectories} disqualifies \emph{Chaotic Reach Set Approximation} to be used for \emph{Navigation}. This type of reach set is feasible for \emph{Avoidance}, because it contains variety of maneuvers.
 
 
-\subsection{(R) Harmonic Reach set}\label{s:harmonicReachSet}
+\subsection{\secState{R}Harmonic Reach set}\label{s:harmonicReachSet}
 
 \paragraph{Motivation:} Imagine having an \emph{Avoidance Grid} like (fig. \ref{fig:LidarSpaceSegmentation}). There is a need of \emph{Reach Set Approximation} which will have \emph{Smooth Trajectories} (def. \ref{def:SmoothnessRatingForTrajectory}) going nearby $cell$ centers.
 
@@ -216,7 +216,7 @@ High smoothness ratio ($\ge 0.9$) is provided, while keeping low node count for 
 
 
 
-\subsection{(R) Combined Reach set}\label{s:combinedReachSet}
+\subsection{\secState{R}Combined Reach Set}\label{s:combinedReachSet}
 \paragraph{Motivation:} Harmonic reach set (sec. \ref{s:harmonicReachSet}) is \emph{efficient} for \emph{Navigation in \emph{Controlled Airspace}}. Chaotic reach set (sec. \ref{s:chaoticReachSet}) is good for \emph{Emergency avoidance}. The need to differentiation between \emph{Navigation} and \emph{Emergency Avoidance} mode is necessary in \emph{Controlled Airspace}. but not in \emph{Non-controlled Airspace}. The combination of \emph{Harmonic} and \emph{Chaotic} reach sets is obvious solution. 
 
 \emph{Automatic mode switch} can be provided by combination of \emph{Navigation Reach Set} and \emph{Avoidance Reach Set} with elevated cost function. Overall having a method to merge multiple trees would be beneficial.
@@ -379,7 +379,7 @@ Function is applied on \emph{root Node} iterating over \emph{Movements in Moveme
 \noindent \emph{Harmonic Reach Set} is ideal for \emph{Non-controlled Airspace} missions, because it contains \emph{Automatic Mode Switch} between \emph{Navigation} and \emph{Emergency Avoidance}.
 
 
-\subsection{(R) ACAS-X like Reach set}\label{s:acasReachSet}
+\subsection{\secState{R}ACAS-X like Reach set}\label{s:acasReachSet}
 \paragraph{Motivation:} The implementation of \emph{ACAS-Xu} behavior in DAA system will  be mandatory for \emph{National Airspace System Integration} in United spaces \cite{shively2018uas}. 
 
 Implementation of ACAS-Xu like behaviour increase usability of approach, if it can be achieved without major concept changes.

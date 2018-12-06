@@ -1,5 +1,4 @@
-\newpage
-\section{(R) Event Based Avoidance}\label{sec:EventBasedAvoidance}
+\section{\secState{R}Event Based Avoidance}\label{sec:EventBasedAvoidance}
 \paragraph{Avoidance Urgency:} The avoidance problem is most dependable on the \emph{reaction time frame} or \emph{opportunity time}. A \emph{Reaction Time frame} can be derived from \emph{manned aviation}:
 
 \begin{enumerate}
@@ -31,7 +30,7 @@ This work focus on \emph{Event Based} and \emph{Reactive Detect \& Avoid} level.
 \end{equation*}
 
 \noindent The \emph{UTM authority} (master) sends a notification about dangerous situation or a directive for one or multiple \emph{UAS}(slaves). The \emph{UAS} receive \emph{Notification/Directive}, this can trigger multiple events on UAS side. The \emph{triggered Events} are notified to \emph{UTM} (master). Then \emph{UAS} process events and \emph{UTM} checks the outcome. Once \emph{events} from notification are resolved, the \emph{UAS} will send out \emph{resolution notification}. 
-\newpage\noindent
+
 The presented communication schema requires to implement following mechanisms to ensure concept flexibility:
 \begin{enumerate}
     \item \emph{UTM notification mechanism} - to notify some airspace changes it is necessary to implement minimal detection mechanism and to sent necessary data for \emph{slave event handling} system. The \emph{UTM} should also cover mechanisms for \emph{fail safe} directives fulfillment check.
