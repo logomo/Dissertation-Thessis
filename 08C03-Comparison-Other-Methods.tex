@@ -1,0 +1,40 @@
+\section{\secState{W}Comparison to Other Methods}\label{s:OtherMethodsComparison}
+
+\begin{enumerate}
+	\item Vector field avoidance \cite{borenstein1991vector}
+	\item Potential field \cite{koren1991potential}
+\end{enumerate}
+
+\subsection{\secState{W}Scalability}\label{s:conclusionScalability}
+
+\begin{itemize}
+    \item the scalability is a key for everchanging rules/regulations accomodations
+    
+    \item many concepts have margins hardwired
+    
+    \item our concept is limited by turning ratio + body radius < margin < max range of sensor field - avoidance grid
+    
+    \item our approach is scalable trough concept of multiple  margins:
+    \begin{itemize}
+        \item body margin
+        \item safety margin
+        \item soft constraitns - warning margin
+        \item hard constraints - body margin
+    \end{itemize}
+    
+\end{itemize}
+
+\subsection{\secState{W}Conservative Method Comparison}\label{s:conservativeComparison}
+\begin{itemize}
+    \item Take notes from martin hrdlik work - compare the method 
+    \item Key concept/Idea: keep awayat leas double of truning radius
+    \item Show calculation/comparison
+\end{itemize}
+
+\subsection{\secState{W}Potential Field Method Comparison}\label{s:potentialComparison}
+\begin{itemize}
+    \item Take ntoes from martin hrdlik work - compare the methods
+    \item key concept/Idea: Every obstacle have charge proportional to expected mass. our UAS is repelled by this charge, the charges can aslo have static/dinamic energy emulating obstacles/intruders
+    \item method has good performance but do not guarantees the safety like ours
+\end{itemize}
+
