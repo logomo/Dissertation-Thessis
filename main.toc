@@ -656,20 +656,22 @@
 \contentsline {paragraph}{Trajectories count:}{338}{section*.690}
 \contentsline {paragraph}{Coverage ratio:}{339}{section*.692}
 \contentsline {chapter}{\numberline {8} Conclusion and Future Work}{341}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{341}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Reach Set Role in Avoidance}{341}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2} Avoidance/Navigation Run}{342}{subsection.8.1.2}
-\contentsline {section}{\numberline {8.2} Comparison to Other Methods}{342}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1} Scalability}{342}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2} Conservative Method Comparison}{342}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3} Potential Field Method Comparison}{343}{subsection.8.2.3}
-\contentsline {section}{\numberline {8.3} Approach Reusability}{343}{section.8.3}
-\contentsline {paragraph}{UTM Services:}{343}{section*.693}
-\contentsline {paragraph}{Emergency Avoidance Functionality:}{343}{section*.694}
-\contentsline {paragraph}{Event Based Avoidance Functionality:}{343}{section*.695}
-\contentsline {paragraph}{Reusability for More Complex Systems:}{344}{section*.696}
-\contentsline {paragraph}{Reach Set Approximations:}{344}{section*.697}
-\contentsline {section}{\numberline {8.4} Lessons Learned}{345}{section.8.4}
-\contentsline {section}{\numberline {8.5} Future Work}{345}{section.8.5}
-\contentsline {chapter}{Bibliography}{346}{Item.1032}
-\contentsline {chapter}{Bibliography}{347}{chapter*.698}
+\contentsline {section}{\numberline {8.1} Summary}{341}{section.8.1}
+\contentsline {paragraph}{Reactive Avoidance Test Coverage:}{341}{section*.693}
+\contentsline {paragraph}{Event Based Avoidance Coverage:}{342}{section*.694}
+\contentsline {subsection}{\numberline {8.1.1} Hierarchical Decision Making}{342}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2} Use of Developed Reach Set Approximations}{343}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2} Comparison to Other Methods}{344}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1} Scalability}{344}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2} Conservative Method Comparison}{344}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3} Potential Field Method Comparison}{344}{subsection.8.2.3}
+\contentsline {section}{\numberline {8.3} Approach Reusability}{344}{section.8.3}
+\contentsline {paragraph}{UTM Services:}{345}{section*.695}
+\contentsline {paragraph}{Emergency Avoidance Functionality:}{345}{section*.696}
+\contentsline {paragraph}{Event Based Avoidance Functionality:}{345}{section*.697}
+\contentsline {paragraph}{Reusability for More Complex Systems:}{345}{section*.698}
+\contentsline {paragraph}{Reach Set Approximations:}{346}{section*.699}
+\contentsline {section}{\numberline {8.4} Lessons Learned}{346}{section.8.4}
+\contentsline {section}{\numberline {8.5} Future Work}{347}{section.8.5}
+\contentsline {chapter}{Bibliography}{347}{Item.1050}
+\contentsline {chapter}{Bibliography}{349}{chapter*.700}
