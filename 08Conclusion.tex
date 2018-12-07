@@ -1,14 +1,40 @@
 \cleardoublepage
-\chapter{\secState{W}Conclusion and Future Work}\label{ch:Conclusion}
-    \emph{To be done here:}
-    \begin{itemize}
-        \item Conclusion of the work (This chapter can not be predicted for now)
-    \end{itemize}
+\chapter{\secState{R/W}Conclusion and Future Work}\label{ch:Conclusion}
+\noindent This section summarizes \emph{obstacle avoidance framework} functionality (sec. \ref{s:conclusionSummary}), provides \emph{comparison to other methods} (sec. \ref{s:OtherMethodsComparison}), outlines \emph{approach reusability} (sec. \ref{s:approachReusability}), summarizes \emph{lessons learned} (sec. \ref{s:lessonsLearned}) and introduces possible \emph{future research heading} (sec. \ref{s:futureWork}).
 
-
-
-\section{\secState{W}Summary}
+\section{\secState{W}Summary}\label{s:conclusionSummary}
+\noindent The \emph{obstacle avoidance} is a complex topic the work has adressed:
+\begin{itemize}
+    \item Reactive obstacle avoidance (practically for large scale of threats) - obstacles, intruders, constraints
     
+    \item Event Based obstacle avoidance (partially for smal subset of events +UTM) - there are issues which has not been adressed (and they will be later)
+    
+    \item Pre-emptive obstacle avoidance - this has not been adressed at all still holding the reachibility of waypoint assumption (link assumption) 
+    \item link the avoidance levels from chapter 6
+\end{itemize}
+
+    
+\subsection{\secState{W}Reach Set Role in Avoidance}\label{s:conclusionReachSet}
+
+\noindent The reach set represents a set of avoidance/movement (manuevering) strategies which can be used in different context (situations)
+\begin{itemize}
+    \item Chaotic - intermediate emergency avoidance
+    \item Harmonic - navigation
+    \item Combined - non controlled airspace navigation + avoidance
+    \item ACAS like  controlled airspace navigation + avoidance
+\end{itemize}
+
+
+\subsection{\secState{W}Avoidance/Navigation Run}\label{s:conclusionAvoidanceNavigationRun}
+
+\noindent The principle of hierarchical decision making
+\begin{itemize}
+    \item Avoidance Run - one decision, one context
+    \item Navigation Run - multiple avoidance runs with different context (hierarchical applicaiton), joining multiple decisions over time
+    \item short summary with references
+\end{itemize}
+
+
 \section{\secState{W}Comparison to Other Methods}\label{s:OtherMethodsComparison}
 
 \begin{enumerate}
@@ -16,7 +42,43 @@
 	\item Potential field \cite{koren1991potential}
 \end{enumerate}
 
+\subsection{\secState{W}Scalability}\label{s:conclusionScalability}
+
+\begin{itemize}
+    \item the scalability is a key for everchanging rules/regulations accomodations
+    
+    \item many concepts have margins hardwired
+    
+    \item our concept is limited by turning ratio + body radius < margin < max range of sensor field - avoidance grid
+    
+    \item our approach is scalable trough concept of multiple  margins:
+    \begin{itemize}
+        \item body margin
+        \item safety margin
+        \item soft constraitns - warning margin
+        \item hard constraints - body margin
+    \end{itemize}
+    
+\end{itemize}
+
+\subsection{\secState{W}Conservative Method Comparison}\label{s:conservativeComparison}
+\begin{itemize}
+    \item Take notes from martin hrdlik work - compare the method 
+    \item Key concept/Idea: keep awayat leas double of truning radius
+    \item Show calculation/comparison
+\end{itemize}
+
+\subsection{\secState{W}Potential Field Method Comparison}\label{s:potentialComparison}
+\begin{itemize}
+    \item Take ntoes from martin hrdlik work - compare the methods
+    \item key concept/Idea: Every obstacle have charge proportional to expected mass. our UAS is repelled by this charge, the charges can aslo have static/dinamic energy emulating obstacles/intruders
+    \item method has good performance but do not guarantees the safety like ours
+\end{itemize}
+
 \section{\secState{W}Approach Reusability}\label{s:approachReusability}
+\begin{itemize}
+    \item write introduction, check the content is something is not missing
+\end{itemize}
 \paragraph{UTM Services:} The constrained \emph{UTM functionality} is outlined in (sec. \ref{sec:UASTrafficManagement}) including:
 \begin{enumerate}
     \item \emph{Future UTM Communication Architecture} (fig. \ref{fig:UTMArchitectureOverview}) as the authority over \emph{airspace segment} (fig. \ref{fig:DAMExample})\cite{gerdes2016dynamic}.
@@ -75,27 +137,51 @@
 \end{enumerate}
 
 
-\section{\secState{W}Lessons learned}
+\section{\secState{W}Lessons Learned}\label{s:lessonsLearned}
 What can be done differently
 \begin{itemize}
-	\item The discretization - euclidian grid vs polar grid
-	\item Intruder modeling ideas, the linear intersection without body volume
-	\item The probabilistic/vs rating approach
+	\item planar/euc grid: cube cells vs planar cells:
+	\begin{itemize}
+	    \item there is good rate - increasing distance from uas, increasing cell volume , decreasing importance
+	    \item the linear cell count growth with increasing distance, covering more space vs quadratic cell count in euclidiean
+	\end{itemize}
+	
+	\item Intruder uncertainity model ideas:
+	\begin{itemize}
+	    \item intruder as line/curve ontersection
+	    \item intruder as movement automaton simulated trajectory
+	    \item intruder well clear implementation as rule - potential fields
+	\end{itemize}
+	
+	\item Probabilistic vs rating approach:
+	\begin{itemize}
+	    \item Probablistic approach - too formal
+	    \item Deterministic approach - true/false - too constrained
+	    \item rating +  post deterministic: 
+	    \begin{itemize}
+	        \item freedom of probablilstic
+	        \item regulation and business accomodation/introduction
+	    \end{itemize}
+	    \item Ratings reflects probabilities, they share basic mechanisms
+	    \item man made rules incorporation - some things are automatic no go, even if probabilistic approach says its "safe"
+	    \item Situation assessment trough tresholding
+	\end{itemize}
 \end{itemize}
 
-\section{\secState{W}Future Work}
+\section{\secState{W}Future Work}\label{s:futureWork}
 \begin{enumerate}
 	\item Adversarial avoidance
-	\item Real system implementation
+	\begin{itemize}
+	    \item further implementation of game theory
+	    \item pursuer reach set u(t)-v(t) as input
+	    \item solving problems from 7.6.2
+	\end{itemize}
+	
+	\item Real system implementation:
+	\begin{itemize}
+	    \item future implementation in Ground station
+	    \item future implementation onboard
+	    \item what should be put into OS/Cloud
+	    \item use LSTS architecture
+	\end{itemize}
 \end{enumerate}
-
-
-
-
-
-
-
-
-    
-
-
