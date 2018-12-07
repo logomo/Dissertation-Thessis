@@ -1,0 +1,15 @@
+\noindent This work addresses an issue of \emph{event-based/reactive obstacle avoidance} for \emph{Unmanned Autonomous Systems} (UAS) operating in non-segregated airspace. 
+
+The \emph{UAS} is controlled through \emph{movement automaton}, this enables trajectory discretization and \emph{control independence}. The movement automaton acts as an \emph{interface} consuming movement \emph{command chain} to control UAS or generate a reference trajectory for low-level control.
+
+The \emph{sensor readings} and \emph{information sources} are fused trough rating-based \emph{data fusion}, this provides \emph{sensor-platform independence}. The situational assessment is projected into operational space.
+
+The UAS \emph{operational space} is represented as \emph{planar grid}, this is separated into non-uniform cells. The \emph{threats} are tracked for each cell, namely obstacles or intruders presence, geo-fencing or weather impact. 
+
+The \emph{avoidance} or \emph{navigation strategy} of UAS is represented as a \emph{reach set} in operational space. The \emph{reach set} is approximated as a tree where the root is initial system state, the nodes are expected states after movements application. The reach set is calculated for a range of initial states prior the flight, giving a low computational footprint, enabling approach implementation on embedded platforms. 
+
+The reach set approximation can include various \emph{maneuvering properties}, like \emph{high space coverage} or \emph{trajectory smoothness}, for avoidance or navigation tasks. The \emph{customization} is used to integrate UAS into \emph{controlled airspace}, where \emph{separation requirements} are included in \emph{reach set}.
+
+The basic services of \emph{UAS Traffic Management} like position notification, airspace restriction, directives, and micromanagement are implemented to prove the operational feasibility of approach in controlled airspace. 
+
+The \emph{verification of approach feasibility} was proven trough \emph{border-line case test scenarios} taken from general aviation practices and experience. The complete simulation environment with wide customization options is presented.
