@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  7 DEC 2018 16:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  7 DEC 2018 16:44
 entering extended mode
 **./main.tex
 (main.tex
@@ -749,9 +749,7 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 LaTeX Warning: Unused global option(s):
     [a4].
 
-(main.aux (08C01-Conclusion.aux) (08C02-Summary.aux)
-(08C03-Comparison-Other-Methods.aux) (08C04-Approach-Reusability.aux)
-(08C05-Lessons-Learned.aux) (08C06-Future-Work.aux))
+(main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 249.
@@ -3020,51 +3018,16 @@ line 107.
  [337 <./Pics/NS084smoothRS00010.png> <./Pics/NS085smoothRSAfterPruning.png> <.
 /Pics/NS080acasLikeRS00010.png> <./Pics/NS081acasLikeRSAfterPruning.png>] [338]
  [339])
-[340]
-\openout2 = `08C01-Conclusion.aux'.
-
- (08C01-Conclusion.tex
+(08C01-Conclusion.tex [340]
 Chapter 8.
-) [341
+) (08C02-Summary.tex [341
 
 
-
-]
-\openout2 = `08C02-Summary.aux'.
-
- (08C02-Summary.tex) [342
-
+]) (08C03-Comparison-Other-Methods.tex [342])
+(08C04-Approach-Reusability.tex [343]) (08C05-Lessons-Learned.tex [344])
+(08C06-Future-Work.tex [345]) (main.bbl [346] [347
 
 ]
-\openout2 = `08C03-Comparison-Other-Methods.aux'.
-
- (08C03-Comparison-Other-Methods.tex) [343
-
-
-]
-\openout2 = `08C04-Approach-Reusability.aux'.
-
-
-(08C04-Approach-Reusability.tex [344
-
-
-]) [345]
-\openout2 = `08C05-Lessons-Learned.aux'.
-
- (08C05-Lessons-Learned.tex)
-[346
-
-
-]
-\openout2 = `08C06-Future-Work.aux'.
-
- (08C06-Future-Work.tex) [347
-
-
-] (main.bbl [348
-
-
-] [349]
 Underfull \hbox (badness 10000) in paragraph at lines 125--129
 []\OT1/cmr/m/n/12 Remotely pi-loted air-craft sys-tems atm con-cept of op-er-a-
 tions.
@@ -3076,7 +3039,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--129
 ol . int / publications /
  []
 
-[350] [351] [352]
+[348] [349] [350]
 Underfull \hbox (badness 7064) in paragraph at lines 296--300
 []\OT1/cmr/m/n/12 Commission im-ple-ment-ing reg-u-la-tion (eu) no 923/2012.  o
 b-tained from:
@@ -3106,18 +3069,16 @@ Underfull \hbox (badness 1033) in paragraph at lines 332--339
 pa . eu / legalcontent / EN / TXT / ?uri = CELEX :
  []
 
-[353] [354] [355] [356] [357] [358] [359] [360] [361] [362] [363] [364])
+[351] [352] [353] [354] [355] [356] [357] [358] [359] [360] [361] [362])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 491.
 
-[365]
+[363]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 491.
- (main.aux (08C01-Conclusion.aux) (08C02-Summary.aux)
-(08C03-Comparison-Other-Methods.aux) (08C04-Approach-Reusability.aux)
-(08C05-Lessons-Learned.aux) (08C06-Future-Work.aux))
+ (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 491.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 491.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E9A4296F0DEE4E2409DFE9DF4BE88D45;27898.
+(rerunfilecheck)             Checksum: 6998B1B5EDE482F0A4C8C1568B7E8162;27866.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -3126,10 +3087,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 491.
  ) 
 Here is how much of TeX's memory you used:
- 29967 strings out of 492973
- 530849 string characters out of 3135926
- 662454 words of memory out of 3000000
- 30181 multiletter control sequences out of 15000+200000
+ 29935 strings out of 492973
+ 529360 string characters out of 3135926
+ 658318 words of memory out of 3000000
+ 30175 multiletter control sequences out of 15000+200000
  555707 words of font info for 114 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,22n,63p,1334b,1207s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3225,9 +3186,9 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/H172461/MiKTeX 2.
 9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/H172461/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (391 pages, 25806802 bytes).
+Output written on main.pdf (389 pages, 25805523 bytes).
 PDF statistics:
- 8060 PDF objects out of 8907 (max. 8388607)
- 2874 named destinations out of 2984 (max. 500000)
+ 8051 PDF objects out of 8907 (max. 8388607)
+ 2872 named destinations out of 2984 (max. 500000)
  2170 words of extra memory for PDF output out of 10000 (max. 10000000)
 
