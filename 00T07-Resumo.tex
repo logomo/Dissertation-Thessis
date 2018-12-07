@@ -1,0 +1,15 @@
+\noindent Este trabalho aborda uma questão de prevenção de obstáculos reativa / baseada em eventos para sistemas autônomos não tripulados (UAS) operando em espaço aéreo não-segregado.
+
+O UAS é controlado por meio de autômato de movimento, isso permite a discretização da trajetória e a independência do controle. O autômato de movimento atua como uma interface consumindo cadeia de comando de movimento para controlar UAS ou gerar uma trajetória de referência para controle de baixo nível.
+
+As leituras do sensor e as fontes de informação são fundidas através da fusão de dados baseada em classificação, o que proporciona independência da plataforma do sensor. A avaliação situacional é projetada no espaço operacional.
+
+O espaço operacional UAS é representado como uma grade planar, isso é separado em células não uniformes. As ameaças são rastreadas para cada célula, ou seja, presença de obstáculos ou intrusos, geofencing ou impacto climático.
+
+A estratégia de evitação ou navegação do UAS é representada como um conjunto de alcance no espaço operacional. O conjunto de alcance é aproximado como uma árvore onde a raiz é o estado inicial do sistema, os nós são estados esperados após a aplicação de movimentos. O conjunto de alcance é calculado para uma gama de estados iniciais antes do voo, dando uma baixa pegada computacional, permitindo a implementação da abordagem em plataformas incorporadas.
+
+A aproximação do conjunto de alcance pode incluir várias propriedades de manobra, como alta cobertura de espaço ou suavidade de trajetória, para evitar tarefas de navegação. A personalização é usada para integrar o UAS no espaço aéreo controlado, onde os requisitos de separação são incluídos no conjunto de alcance.
+
+Os serviços básicos de Gerenciamento de Tráfego da UAS, como notificação de posição, restrição de espaço aéreo, diretivas e microgestão, são implementados para comprovar a viabilidade operacional da abordagem em espaço aéreo controlado.
+
+A verificação da viabilidade da abordagem foi comprovada através de cenários de teste de caso de linha de fronteira, retirados das práticas e da experiência da aviação geral. O ambiente de simulação completo com opções amplas de personalização é apresentado.
