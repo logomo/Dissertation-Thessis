@@ -1,6 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: unsrt.bst
-A level-1 auxiliary file: 08Conclusion.aux
+A level-1 auxiliary file: 08C01-Conclusion.aux
+A level-1 auxiliary file: 08C02-Summary.aux
+A level-1 auxiliary file: 08C03-Comparison-Other-Methods.aux
+A level-1 auxiliary file: 08C04-Approach-Reusability.aux
+A level-1 auxiliary file: 08C05-Lessons-Learned.aux
+A level-1 auxiliary file: 08C06-Future-Work.aux
 Database file #1: thesis.bib
 Warning--can't use both volume and number fields in williams1983self
 Warning--empty journal in federal2011introduction
