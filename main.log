@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  6 DEC 2018 19:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  7 DEC 2018 14:13
 entering extended mode
 **./main.tex
 (main.tex
@@ -889,7 +889,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--8
 ) [3] (00T04-Acknowledgement.tex
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
-) [4] [5] [6] (main.toc
+) [4] (00T07-Abstract.tex) [5]
+(00T07-Resumo.tex) [6] (main.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 6.
 
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -3095,10 +3096,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 487.
  ) 
 Here is how much of TeX's memory you used:
- 29897 strings out of 492973
- 528263 string characters out of 3135926
- 824452 words of memory out of 3000000
- 30159 multiletter control sequences out of 15000+200000
+ 29906 strings out of 492973
+ 528506 string characters out of 3135926
+ 669555 words of memory out of 3000000
+ 30162 multiletter control sequences out of 15000+200000
  555707 words of font info for 114 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,22n,63p,1334b,1207s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3194,7 +3195,7 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/H172461/MiKTeX 2.
 9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/H172461/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (389 pages, 25795881 bytes).
+Output written on main.pdf (389 pages, 25798850 bytes).
 PDF statistics:
  8020 PDF objects out of 8907 (max. 8388607)
  2867 named destinations out of 2984 (max. 500000)
