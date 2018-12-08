@@ -498,7 +498,7 @@
 \contentsline {paragraph}{Distance to Safety Margin}{255}{section*.449}
 \contentsline {paragraph}{Trajectory Tracking Evaluation}{255}{section*.450}
 \contentsline {paragraph}{Computation Load:}{255}{section*.451}
-\contentsline {section}{\numberline {7.2} Testing configuration}{257}{section.7.2}
+\contentsline {section}{\numberline {7.2} Testing Configuration}{257}{section.7.2}
 \contentsline {section}{\numberline {7.3} Non-cooperative test cases}{259}{section.7.3}
 \contentsline {subsection}{\numberline {7.3.1} Building avoidance}{259}{subsection.7.3.1}
 \contentsline {paragraph}{Scenario:}{259}{section*.457}
@@ -662,16 +662,34 @@
 \contentsline {subsection}{\numberline {8.1.1} Hierarchical Decision Making}{342}{subsection.8.1.1}
 \contentsline {subsection}{\numberline {8.1.2} Use of Developed Reach Set Approximations}{343}{subsection.8.1.2}
 \contentsline {section}{\numberline {8.2} Comparison to Other Methods}{344}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1} Scalability}{344}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2} Conservative Method Comparison}{344}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3} Potential Field Method Comparison}{344}{subsection.8.2.3}
-\contentsline {section}{\numberline {8.3} Approach Reusability}{344}{section.8.3}
-\contentsline {paragraph}{UTM Services:}{345}{section*.695}
-\contentsline {paragraph}{Emergency Avoidance Functionality:}{345}{section*.696}
-\contentsline {paragraph}{Event Based Avoidance Functionality:}{345}{section*.697}
-\contentsline {paragraph}{Reusability for More Complex Systems:}{345}{section*.698}
-\contentsline {paragraph}{Reach Set Approximations:}{346}{section*.699}
-\contentsline {section}{\numberline {8.4} Lessons Learned}{346}{section.8.4}
-\contentsline {section}{\numberline {8.5} Future Work}{347}{section.8.5}
-\contentsline {chapter}{Bibliography}{347}{Item.1050}
-\contentsline {chapter}{Bibliography}{349}{chapter*.700}
+\contentsline {subsection}{\numberline {8.2.1} Conservative and Adaptive Method Comparison}{344}{subsection.8.2.1}
+\contentsline {paragraph}{Testing scenario:}{344}{section*.695}
+\contentsline {paragraph}{Scenario example:}{344}{section*.698}
+\contentsline {paragraph}{Conservative Method Performance Margin:}{345}{section*.700}
+\contentsline {paragraph}{Conservative Method Performance Margin}{345}{section*.701}
+\contentsline {paragraph}{Distance to Body Margin Evolution:}{346}{section*.702}
+\contentsline {paragraph}{Disclaimer:}{347}{section*.704}
+\contentsline {subsection}{\numberline {8.2.2} Scalability}{347}{subsection.8.2.2}
+\contentsline {paragraph}{Range scalability:}{347}{section*.705}
+\contentsline {paragraph}{Static obstacles:}{347}{section*.706}
+\contentsline {paragraph}{Intruders:}{347}{section*.707}
+\contentsline {paragraph}{Constraints:}{348}{section*.708}
+\contentsline {section}{\numberline {8.3} Approach Reusability}{348}{section.8.3}
+\contentsline {paragraph}{UTM Services:}{348}{section*.709}
+\contentsline {paragraph}{Emergency Avoidance Functionality:}{348}{section*.710}
+\contentsline {paragraph}{Event Based Avoidance Functionality:}{348}{section*.711}
+\contentsline {paragraph}{Reusability for More Complex Systems:}{349}{section*.712}
+\contentsline {paragraph}{Reach Set Approximations:}{349}{section*.713}
+\contentsline {section}{\numberline {8.4} Lessons Learned}{350}{section.8.4}
+\contentsline {paragraph}{Euclidean vs. Planar Space Partitioning:}{350}{section*.714}
+\contentsline {paragraph}{Euclidean grid shortcomings:}{350}{section*.715}
+\contentsline {paragraph}{Euclidean Grid Benefits:}{350}{section*.716}
+\contentsline {paragraph}{Planar Grid Deployment:}{351}{section*.717}
+\contentsline {paragraph}{Intruder Intersection Models:}{351}{section*.718}
+\contentsline {paragraph}{Approach to data fusion:}{352}{section*.719}
+\contentsline {paragraph}{Deterministic approach:}{352}{section*.720}
+\contentsline {paragraph}{Probabilistic approach:}{352}{section*.721}
+\contentsline {paragraph}{Final Approach as a Synthesis:}{352}{section*.722}
+\contentsline {section}{\numberline {8.5} Future Work}{353}{section.8.5}
+\contentsline {chapter}{Bibliography}{353}{Item.1074}
+\contentsline {chapter}{Bibliography}{355}{chapter*.723}
