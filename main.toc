@@ -681,6 +681,15 @@
 \contentsline {paragraph}{Reusability for More Complex Systems:}{349}{section*.712}
 \contentsline {paragraph}{Reach Set Approximations:}{349}{section*.713}
 \contentsline {section}{\numberline {8.4} Lessons Learned}{350}{section.8.4}
-\contentsline {section}{\numberline {8.5} Future Work}{350}{section.8.5}
-\contentsline {chapter}{Bibliography}{351}{Item.1051}
-\contentsline {chapter}{Bibliography}{353}{chapter*.714}
+\contentsline {paragraph}{Euclidean vs. Planar Space Partitioning:}{350}{section*.714}
+\contentsline {paragraph}{Euclidean grid shortcomings:}{350}{section*.715}
+\contentsline {paragraph}{Euclidean Grid Benefits:}{350}{section*.716}
+\contentsline {paragraph}{Planar Grid Deployment:}{351}{section*.717}
+\contentsline {paragraph}{Intruder Intersection Models:}{351}{section*.718}
+\contentsline {paragraph}{Approach to data fusion:}{352}{section*.719}
+\contentsline {paragraph}{Deterministic approach:}{352}{section*.720}
+\contentsline {paragraph}{Probabilistic approach:}{352}{section*.721}
+\contentsline {paragraph}{Final Approach as a Synthesis:}{352}{section*.722}
+\contentsline {section}{\numberline {8.5} Future Work}{353}{section.8.5}
+\contentsline {chapter}{Bibliography}{353}{Item.1074}
+\contentsline {chapter}{Bibliography}{355}{chapter*.723}
