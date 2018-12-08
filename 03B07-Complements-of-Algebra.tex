@@ -57,7 +57,7 @@ The full rotation matrix in X,Y,Z  is given by (eq. \ref{eq:xyzspaceRotationMatr
 \end{equation*}
 which is ideal for representation of LiDAR scanned point, because usually total point distance and pair of dislocation angles are returned. Using most common LiDAR with horizontal rotation $horizontal^\circ$ and vertical mirror inclination $vertical^\circ$, one can define polar coordinate $point_{polar} = [distance_{x,y,z},horizontal^\circ,vertical^\circ]$ which is dual to Cartesian coordinate $point_{cartesian} = [x,y,z]$. If rotation angle  ranges are $horizontal^\circ,vertical^\circ\in(-\pi,\pi]$ transformation function is bijection.
 
-\paragraph{Polar $\to$ Cartesian:} Transformation from polar to Cartesian representation is defined by following series of functions (eq. \ref{eq:cpt01}, \ref{eq:cpt02},\ref{eq:cpt03}, \ref{eq:cpt04}).
+\paragraph{Polar $\to$ Cartesian:} Transformation from polar to Cartesian representation is defined by following series of functions (eq. \ref{eq:cpt01}, \ref{eq:cpt02}, \ref{eq:cpt03}, \ref{eq:cpt04}).
 
 \begin{equation}\label{eq:cpt01}
     distance_{xy} = \cos(horizontal^\circ)\times distance_{xyz}
