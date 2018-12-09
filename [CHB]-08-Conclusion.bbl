@@ -1,0 +1,76 @@
+\begin{thebibliography}{10}
+
+\bibitem{hrdlik2018}
+Martin Hrdlik.
+\newblock Advanced obstacle detection and navigation methods of unmanned
+  vehicles.
+\newblock Master thesis, Institute of Automotive Mechatronics, Faculty of
+  Electrical Engineering and Information Technology, Slovak University of
+  Technology, Ilkovicova 3, Bratislava. Slovak Republic, jun 2018.
+
+\bibitem{borenstein1991vector}
+Johann Borenstein and Yoram Koren.
+\newblock The vector field histogram-fast obstacle avoidance for mobile robots.
+\newblock {\em IEEE Transactions on Robotics and Automation}, 7(3):278--288,
+  1991.
+
+\bibitem{koren1991potential}
+Yoram Koren and Johann Borenstein.
+\newblock Potential field methods and their inherent limitations for mobile
+  robot navigation.
+\newblock In {\em Robotics and Automation, 1991. Proceedings., 1991 IEEE
+  International Conference on}, pages 1398--1404. IEEE, 1991.
+
+\bibitem{gomola2017obstacle}
+Alojz Gomola, Jo{\~a}o~Borges de~Sousa, Fernando~Lobo Pereira, and Pavel Klang.
+\newblock Obstacle avoidance framework based on reach sets.
+\newblock In {\em Iberian Robotics conference}, pages 768--779. Springer, 2017.
+
+\bibitem{gerdes2016dynamic}
+Ingrid Gerdes, Annette Temme, and Michael Schultz.
+\newblock Dynamic airspace sectorization using controller task load.
+\newblock {\em Sixth SESAR Innovation Days}, 2016.
+
+\bibitem{gomola2017optimal}
+Alojz Gomola.
+\newblock Optimal control of unmanned air vehicles with obstacle avoidance
+  capabilities in partially known environment.
+\newblock Technical report, FEUP, 2017.
+
+\bibitem{gomola2017mpc}
+Alojz Gomola.
+\newblock Model predictive control of unmanned air vehicles with obstacle
+  avoidance capabilities.
+\newblock Technical report, FEUP, 2017.
+
+\bibitem{gomola2017probabilistic}
+Alojz Gomola, Pavel Klang, and Jan Ludvik.
+\newblock Probabilistic approach in data fusion for obstacle avoidance
+  framework based on reach sets.
+\newblock In {\em Internal publication collection}, pages 1--93. Honeywell,
+  2017.
+
+\bibitem{cernamaria2018}
+Maria Cerna.
+\newblock Usage of maps obtained by lidar in uav navigation.
+\newblock Master thesis, Institute of Automotive Mechatronics, Faculty of
+  Electrical Engineering and Information Technology, Slovak University of
+  Technology, Ilkovicova 3, Bratislava. Slovak Republic, jun 2018.
+
+\bibitem{game1987}
+Nikolai~Nikolaevich Krasovskij, Andrei~Izmailovich Subbotin, and Samuel Kotz.
+\newblock {\em Game-theoretical control problems}.
+\newblock Springer-Verlag New York, Inc., 1987.
+
+\bibitem{game1988}
+NN~Krasovskii and AI~Subbotin.
+\newblock Game-theoretical control problems. translated from the russian by
+  samuel kotz, 1988.
+
+\bibitem{pinto2013lsts}
+Jos{\'e} Pinto, Paulo~S Dias, Ricardo Martins, Joao Fortuna, Eduardo Marques,
+  and Joao Sousa.
+\newblock The lsts toolchain for networked vehicle systems.
+\newblock In {\em OCEANS-Bergen, 2013 MTS/IEEE}, pages 1--9. IEEE, 2013.
+
+\end{thebibliography}
