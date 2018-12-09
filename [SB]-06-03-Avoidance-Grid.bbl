@@ -1,0 +1,34 @@
+\begin{thebibliography}{1}
+
+\bibitem{homm2010efficient}
+Florian Homm, Nico Kaempchen, Jeff Ota, and Darius Burschka.
+\newblock Efficient occupancy grid computation on the gpu with lidar and radar
+  for road boundary detection.
+\newblock In {\em Intelligent Vehicles Symposium (IV), 2010 IEEE}, pages
+  1006--1013. IEEE, 2010.
+
+\bibitem{gupta2010comparative}
+Sandeep Gupta, Holger Weinacker, and Barbara Koch.
+\newblock Comparative analysis of clustering-based approaches for 3-d single
+  tree detection using airborne fullwave lidar data.
+\newblock {\em Remote Sensing}, 2(4):968--989, 2010.
+
+\bibitem{zaiane2002clustering}
+Osmar~R Za{\"\i}ane and Chi-Hoon Lee.
+\newblock Clustering spatial data when facing physical constraints.
+\newblock In {\em Data Mining, 2002. ICDM 2003. Proceedings. 2002 IEEE
+  International Conference on}, pages 737--740. IEEE, 2002.
+
+\bibitem{sabatini2014lidar}
+Roberto Sabatini, Alessandro Gardi, and Mark~A Richardson.
+\newblock Lidar obstacle warning and avoidance system for unmanned aircraft.
+\newblock {\em International Journal of Mechanical, Aerospace, Industrial and
+  Mechatronics Engineering}, 8(4):702--713, 2014.
+
+\bibitem{kurzhanskiy2006ellipsoidal}
+Alex~A Kurzhanskiy and Pravin Varaiya.
+\newblock Ellipsoidal toolbox (et).
+\newblock In {\em Decision and Control, 2006 45th IEEE Conference on}, pages
+  1498--1503. IEEE, 2006.
+
+\end{thebibliography}

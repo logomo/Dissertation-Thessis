@@ -1,0 +1,284 @@
+%% fcup-thesis.tex -- document template for PhD theses at FCUP
+%%
+%% Copyright (c) 2015 João Faria <joao.faria@astro.up.pt>
+%%
+%% This work may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license
+%% or (at your option) any later version.
+%% The latest version of this license is in
+%%     http://www.latex-project.org/lppl.txt
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status "maintained".
+%%
+%% The Current Maintainer of this work is
+%% João Faria <joao.faria@astro.up.pt>.
+%%
+%% This work consists of the files listed in the accompanying README.
+
+%% SUMMARY OF FEATURES:
+%%
+%% All environments, commands, and options provided by the `ut-thesis'
+%% class will be described below, at the point where they should appear
+%% in the document.  See the file `ut-thesis.cls' for more details.
+%%
+%% To explicitly set the pagestyle of any blank page inserted with
+%% \cleardoublepage, use one of \clearemptydoublepage,
+%% \clearplaindoublepage, \clearthesisdoublepage, or
+%% \clearstandarddoublepage (to use the style currently in effect).
+%%
+%% For single-spaced quotes or quotations, use the `longquote' and
+%% `longquotation' environments.
+
+
+%%%%%%%%%%%%         PREAMBLE         %%%%%%%%%%%%
+
+%%  - Default settings format a final copy (single-sided, normal
+%%    margins, one-and-a-half-spaced with single-spaced notes).
+%%  - For a rough copy (double-sided, normal margins, double-spaced,
+%%    with the word "DRAFT" printed at each corner of every page), use
+%%    the `draft' option.
+%%  - The default global line spacing can be changed with one of the
+%%    options `singlespaced', `onehalfspaced', or `doublespaced'.
+%%  - Footnotes and marginal notes are all single-spaced by default, but
+%%    can be made to have the same spacing as the rest of the document
+%%    by using the option `standardspacednotes'.
+%%  - The size of the margins can be changed with one of the options:
+%%     . `narrowmargins' (1 1/4" left, 3/4" others),
+%%     . `normalmargins' (1 1/4" left, 1" others),
+%%     . `widemargins' (1 1/4" all),
+%%     . `extrawidemargins' (1 1/2" all).
+%%  - The pagestyle of "cleared" pages (empty pages inserted in
+%%    two-sided documents to put the next page on the right-hand side)
+%%    can be set with one of the options `cleardoublepagestyleempty',
+%%    `cleardoublepagestyleplain', or `cleardoublepagestylestandard'.
+%%  - Any other standard option for the `report' document arclass can be
+%%    used to override the default or draft settings (such as `10pt',
+%%    `11pt', `12pt'), and standard LaTeX packages can be used to
+%%    further customize the layout and/or formatting of the document.
+
+%% *** Add any desired options. ***
+%PDF
+%\documentclass[a4,narrowmargins,12pt,oneside,draft,onehalfspaced,singlespacednotes]{fcup-thesis}
+%\documentclass[a4,narrowmargins,12pt,oneside,onehalfspaced,singlespacednotes]{fcup-thesis}
+%Print
+%\documentclass[draft,a4,narrowmargins,12pt,twoside,openright,onehalfspaced,singlespacednotes]{fcup-thesis}
+\documentclass[a4,narrowmargins,12pt,twoside,openright,onehalfspaced,singlespacednotes]{fcup-thesis}
+
+%% *** Add \usepackage declarations here. ***
+%% The standard packages `geometry' and `setspace' are already loaded by
+%% `ut-thesis' -- see their documentation for details of the features
+%% they provide.  In particular, you may use the \geometry command here
+%% to adjust the margins if none of the ut-thesis options are suitable
+%% (see the `geometry' package for details).  You may also use the
+%% \setstretch command to set the line spacing to a value other than
+%% single, one-and-a-half, or double spaced (see the `setspace' package
+%% for details).
+% Overfull statements
+\pretolerance=150
+\setlength{\emergencystretch}{3em}
+% Overfull end
+\usepackage[english]{babel}
+\usepackage{lipsum}
+\usepackage[utf8]{inputenc}
+
+
+%%% Additional useful packages
+%%% ----------------------------------------------------------------
+\usepackage{array}
+\usepackage{amsmath}  
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\DeclareFontFamily{OT1}{pzc}{}
+\DeclareFontShape{OT1}{pzc}{m}{it}{<-> s * [0.900] pzcmi7t}{}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{amsthm}      
+\usepackage[ruled,algochapter]{algorithm2e}
+\usepackage{algorithmic}
+\usepackage{bm}
+\usepackage[mathscr]{euscript}
+\usepackage{graphicx}       
+\usepackage{psfrag}         
+\usepackage{fancyvrb}    
+\usepackage{float}
+\usepackage{ltablex}
+\usepackage[square,sort,comma,numbers]{natbib}        
+\usepackage{bbding}         
+\usepackage{dcolumn}        
+\usepackage{booktabs} 
+\usepackage{multirow}
+\usepackage{paralist}     
+\usepackage{ifdraft}  
+\usepackage{indentfirst}    
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+\usepackage{url}
+\usepackage{tabularx}
+\usepackage{subcaption}
+\usepackage[unicode]{hyperref}
+\usepackage{xcolor}
+
+\hypersetup{pdftitle=LiDAR obstacle detection and avoidance, 
+            pdfauthor=Alojz Gomola,
+            colorlinks=false,
+            urlcolor=blue,
+            pdfstartview=FitH,
+            pdfpagemode=UseOutlines,
+            pdfnewwindow,
+            breaklinks
+          }
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}         
+\newcolumntype{B}{X}
+\newcolumntype{S}[1]{>{\hsize=#1\textwidth}X}
+
+\newcommand{\FIGDIR}{./Pics}    %%% directory containing figures
+\newcommand{\twolinecellr}[2][r]{%
+  \begin{tabular}[#1]{@{}r@{}}#2\end{tabular}}
+\newcommand{\secState}[1]{
+	\ifdraft{(#1) }{}
+}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{plain}
+\newtheorem{definition}{Definition}
+\newtheorem{problem}{Problem}
+\newtheorem{example}{Example}
+\newtheorem{assumption}{Assumption}
+
+\theoremstyle{remark}
+\newtheorem*{corollary}{Corollary}
+\newtheorem*{note}{Note}
+
+
+
+
+\newenvironment{dokaz}{
+  \par\medskip\noindent
+  \textit{Proof}.
+}{
+\newline
+\rightline{\SquareCastShadowBottomRight}
+}
+
+\newenvironment{constraints}[1]{
+  \par\medskip\noindent
+  \textit{Constraints #1} \\
+}{
+\newline
+\rightline{\SquareCastShadowBottomRight}
+}
+
+
+%\bibliographystyle{plainnat}     %% Author (year) style
+\bibliographystyle{unsrt}        %% [number] style
+\setcitestyle{square}
+
+% Section  3.7 Challenge list
+\newif\ifproblemchallenge   %# Build block for problem challenges
+\problemchallengetrue       %# Show comments
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+
+\DeclareMathOperator{\pr}{\textsf{P}}
+\DeclareMathOperator{\E}{\textsf{E}\,}
+\DeclareMathOperator{\var}{\textrm{var}}
+\DeclareMathOperator{\sd}{\textrm{sd}}
+
+
+\newcommand{\T}[1]{#1^\top}        
+
+\newcommand{\goto}{\rightarrow}
+\newcommand{\gotop}{\stackrel{P}{\longrightarrow}}
+\newcommand{\maon}[1]{o(n^{#1})}
+\newcommand{\abs}[1]{\left|{#1}\right|}
+\newcommand{\dint}{\int_0^\tau\!\!\int_0^\tau}
+\newcommand{\isqr}[1]{\frac{1}{\sqrt{#1}}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+
+\newcommand{\pulrad}[1]{\raisebox{1.5ex}[0pt]{#1}}
+\newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+\newcommand{\TBD}[1]{\color{red}\emph{--TBD:}#1\color{black}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                    %%
+%%                   ***   I M P O R T A N T   ***                    %%
+%%                                                                    %%
+%%  Fill in the following fields with the required information:       %%
+%%   - \degree{...}       name of the degree obtained                 %%
+%%   - \department{...}   name of the graduate department             %%
+%%   - \gradyear{...}     year of graduation                          %%
+%%   - \author{...}       name of the author                          %%
+%%   - \title{...}        title of the thesis                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% *** Change this example to appropriate values. ***
+\degree{Doctor of Philosophy}
+\department{Departamento de Matem\'{a}tica}
+\gradyear{2019}
+\author{Alojz Gomola}
+\title{Obstacle Avoidance Framework based on Reach Sets}
+
+%% *** NOTE ***
+%% Put here all other formatting commands that belong in the preamble.
+%% In particular, you should put all of your \newcommand's,
+%% \newenvironment's, \newtheorem's, etc. (in other words, all the
+%% global definitions that you will need throughout your thesis) in a
+%% separate file and use "\input{filename}" to input it here.
+
+
+%% *** Adjust the following settings as desired. ***
+
+%% List only down to subsections in the table of contents;
+%% 0=chapter, 1=section, 2=subsection, 3=subsubsection, etc.
+\setcounter{tocdepth}{3}
+
+%% Make each page fill up the entire page.
+\flushbottom
+
+
+%%%%%%%%%%%%      MAIN  DOCUMENT      %%%%%%%%%%%%
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Put your Chapters here; the easiest way to do this is to keep     %%
+%%  each chapter in a separate file and `\include' all the files.     %%
+%%  Each chapter file should start with "\chapter{ChapterName}".      %%
+%%  Note that using `\include' instead of `\input' will make each     %%
+%%  chapter start on a new page, and allow you to format only parts   %%
+%%  of your thesis at a time by using `\includeonly'.                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% *** Include chapter files here. ***
+
+\setcounter{chapter}{6}
+\setcounter{section}{1}
+%06-Approach
+
+    \input{06A03-UAS-Model-MA-Implementation}
+	
+%% This adds a line for the Bibliography in the Table of Contents.
+\addcontentsline{toc}{chapter}{Bibliography}
+%% *** Set the bibliography style. ***
+%% (change according to your preference/requirements)
+%\bibliographystyle{plain}
+%% *** Set the bibliography file. ***
+%% ("thesis.bib" by default; change as needed)
+\bibliography{thesis}
+
+%% *** NOTE ***
+%% If you don't use bibliography files, comment out the previous line
+%% and use \begin{thebibliography}...\end{thebibliography}.  (In that
+%% case, you should probably put the bibliography in a separate file and
+%% `\include' or `\input' it here).
+
+\end{document}
