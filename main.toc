@@ -691,5 +691,7 @@
 \contentsline {paragraph}{Probabilistic approach:}{352}{section*.721}
 \contentsline {paragraph}{Final Approach as a Synthesis:}{352}{section*.722}
 \contentsline {section}{\numberline {8.5} Future Work}{353}{section.8.5}
-\contentsline {chapter}{Bibliography}{353}{Item.1074}
-\contentsline {chapter}{Bibliography}{355}{chapter*.723}
+\contentsline {paragraph}{Adversarial Avoidance:}{353}{section*.723}
+\contentsline {paragraph}{Real System Implementation:}{353}{section*.724}
+\contentsline {chapter}{Bibliography}{354}{Item.1079}
+\contentsline {chapter}{Bibliography}{355}{chapter*.725}
