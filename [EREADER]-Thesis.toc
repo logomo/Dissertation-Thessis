@@ -36,7 +36,7 @@
 \contentsline {paragraph}{Manned Aviation Concepts:}{14}{section*.39}
 \contentsline {paragraph}{Airspace Classification:}{14}{section*.40}
 \contentsline {paragraph}{Aircraft Operational Rules:}{14}{section*.41}
-\contentsline {paragraph}{Keeping "Well Clear" state:}{14}{section*.42}
+\contentsline {paragraph}{Active/Passive Separation and Self-Separation:}{14}{section*.42}
 \contentsline {paragraph}{UAS Traffic Management:}{15}{section*.43}
 \contentsline {section}{\numberline {2.2} Airspace Classification}{15}{section.2.2}
 \contentsline {paragraph}{Motivation:}{15}{section*.44}
