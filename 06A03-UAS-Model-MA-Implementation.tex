@@ -79,12 +79,12 @@ Under the assumption (as. \ref{ass:transitionTime}) the \emph{movement transitio
 
 \paragraph{Movements} (def. \ref{def:Movement}) for \emph{fixed step} $k$ we start with discretization of the input variables.
 
-The \emph{linear velocity} in text step is given:
+\noindent The \emph{linear velocity} in text step is given:
 \begin{equation}\label{eq:applyMovement}
     v(k+1) = v(k) +\delta v(k)
 \end{equation}
 
-The \emph{roll, pitch, yaw} for next step are given 
+\noindent The \emph{roll, pitch, yaw} for next step are given 
 
 \begin{equation}\label{eq:applyMovement1}
     \begin{aligned}
@@ -94,7 +94,7 @@ The \emph{roll, pitch, yaw} for next step are given
     \end{aligned}    
 \end{equation}
 
-The $\delta v(k)$ is \emph{velocity change}, $\delta roll(k)$, $\delta pitch(k)$, $\delta yaw(k)$, are \emph{orientation changes} for current discrete step $k$. If the duration of \emph{transition} is $0 s$ (as. \ref{ass:transitionTime}) then 3D trajectory evolution in discrete time is given as: 
+\noindent The $\delta v(k)$ is \emph{velocity change}, $\delta roll(k)$, $\delta pitch(k)$, $\delta yaw(k)$, are \emph{orientation changes} for current discrete step $k$. If the duration of \emph{transition} is $0 s$ (as. \ref{ass:transitionTime}) then 3D trajectory evolution in discrete time is given as: 
 
 \begin{equation}\label{eq:applyMovement2}
     \begin{aligned}
@@ -105,7 +105,7 @@ The $\delta v(k)$ is \emph{velocity change}, $\delta roll(k)$, $\delta pitch(k)$
     \end{aligned}    
 \end{equation}
 
-The $\delta x(k)$, $\delta y(k)$, $\delta z(k)$ are positional differences depending on \emph{input vector} for given discrete time $k$:
+\noindent The $\delta x(k)$, $\delta y(k)$, $\delta z(k)$ are positional differences depending on \emph{input vector} for given discrete time $k$:
 \begin{equation}\label{eq:ourImput}
     input(k) = \left[
                     \begin{gathered}
@@ -115,7 +115,7 @@ The $\delta x(k)$, $\delta y(k)$, $\delta z(k)$ are positional differences depen
                 \right]^T
 \end{equation}
 
-The \emph{state vector} for discrete time is given:
+\noindent The \emph{state vector} for discrete time is given:
 \begin{equation}\label{eq:ourState}
     state(k) = \left[
                     \begin{gathered}
@@ -125,7 +125,7 @@ The \emph{state vector} for discrete time is given:
                 \right]^T
 \end{equation}
 
-The nonlinear model (eq. \ref{eq:UASNonlinearModelSimple}) is then reduced to \emph{linear discrete model} (eq. \ref{eq:uasLinearDiscreteModel}) given by \emph{apply movements} function (eq. \ref{eq:applyMovement}, \ref{eq:applyMovement1}, \ref{eq:applyMovement2}).
+\noindent The nonlinear model (eq. \ref{eq:UASNonlinearModelSimple}) is then reduced to \emph{linear discrete model} (eq. \ref{eq:uasLinearDiscreteModel}) given by \emph{apply movements} function (eq. \ref{eq:applyMovement}, \ref{eq:applyMovement1}, \ref{eq:applyMovement2}).
 
 \begin{equation}\label{eq:uasLinearDiscreteModel}
     state(k+1) = applyMovement(state(k), input(k)) 
@@ -180,12 +180,12 @@ The nonlinear model (eq. \ref{eq:UASNonlinearModelSimple}) is then reduced to \e
     Buffer \in Movement Set^* (eq. \ref{eq:OurMovementSet}), \quad  |Buffer| \in \N
 \end{equation}
 
-Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is then given as the time-series of discrete states:
+\noindent Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is then given as the time-series of discrete states:
 \begin{equation}\label{eq:ourTrajectoryImplementation}
     Trajectory(state(0),Buffer)= \left\{\begin{gathered}state(0)+\sum_{j=0}^{i-1} input(movement(j)):\\i \in\left\{1\dots |Buffer|+1\right\}, \\movement(\cdot) \in Buffer\end{gathered}\right\}
 \end{equation}
 
-Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states bounded to discrete time $0\dots n$ , where $n$ is member count of \emph{Buffer}. Trajectory set has $n+1$ members:
+\noindent Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states bounded to discrete time $0\dots n$ , where $n$ is member count of \emph{Buffer}. Trajectory set has $n+1$ members:
 
 \begin{equation}
     \begin{aligned}
@@ -211,6 +211,7 @@ Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states b
     \emph{Movement Automaton} for system (eq. \ref{eq:UASNonlinearModelSimple}) with given (as. \ref{ass:transitionTime}) is established with all related properties (sec. \ref{def:movementAutomaton}).
 \end{note}
 
+\newpage
 \subsection{\secState{R}Segmented Movement Automaton}\label{s:segmentedMovementAutomaton}
 \paragraph{Motivation:} Constructing \emph{Movement Automaton} for more complex system can be tedious. Used \emph{Movement Automaton} for \emph{UAS system} (\ref{eq:UASNonlinearModelSimple}) has decoupled control which is not true for most of the copters/planes \cite{fossen2011mathematical}.
 
@@ -243,7 +244,7 @@ Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states b
         The interval length depends on model dynamics. The rule of thumb is to keep maximal climb/descend/turn/acceleration rates near constant value. 
     \end{note}
         
-    When partitioning of \emph{all impact States} finishes, the count of partitions is given as product of \emph{count of partitions} for each member of \emph{Impact States}:
+\noindent When partitioning of \emph{all impact States} finishes, the count of partitions is given as product of \emph{count of partitions} for each member of \emph{Impact States}:
     
     \begin{equation}
         partition Count = \prod_{impactState \in}^{ImpactStates} |impactStateIntervals(impactState)| 
@@ -279,7 +280,7 @@ Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states b
 \begin{definition}{Movement Automaton for Segment(index)}\label{def:segmentMovementAutomaton}
     
 
-For for Model(eq. \ref{eq:uasLinearDiscreteModel}) with State (eq. \ref{eq:ourState}) the input vector (eq. \ref{eq:ourImput}) is for position $[x,y,z]$ and velocity defined like: 
+\noindent For for Model(eq. \ref{eq:uasLinearDiscreteModel}) with State (eq. \ref{eq:ourState}) the input vector (eq. \ref{eq:ourImput}) is for position $[x,y,z]$ and velocity defined like: 
 
 \begin{equation}
     \begin{aligned}
@@ -291,7 +292,7 @@ For for Model(eq. \ref{eq:uasLinearDiscreteModel}) with State (eq. \ref{eq:ourSt
 \end{equation}
 \end{definition}
 
-The acceleration $\delta v(k)$ is in interval $[-\delta v(k)_{max},\delta v(k)_{max}]$, usually set to 0 $ms^{-1}$. The change of the orientation angles for \emph{Movement Set} (eq. \ref{eq:OurMovementSet}) is given in (tab. \ref{tab:movements3},\ref{tab:movements4}).
+\noindent The acceleration $\delta v(k)$ is in interval $[-\delta v(k)_{max},\delta v(k)_{max}]$, usually set to 0 $ms^{-1}$. The change of the orientation angles for \emph{Movement Set} (eq. \ref{eq:OurMovementSet}) is given in (tab. \ref{tab:movements3},\ref{tab:movements4}).
 
 \begin{table}[H]
     \centering
@@ -324,7 +325,7 @@ The acceleration $\delta v(k)$ is in interval $[-\delta v(k)_{max},\delta v(k)_{
     The \emph{Trajectory} is calculated same as in (eq. \ref{eq:ourTrajectoryImplementation}). The \emph{State Projection} is given as in (eq. \ref{eq:ourStateProjection}).
 \end{note}
 
-Then the \emph{Movement Automaton} for \emph{Segment} $\in$ \emph{State Space} is defined.
+\noindent Then the \emph{Movement Automaton} for \emph{Segment} $\in$ \emph{State Space} is defined.
 
 \begin{definition}{Segmented Movement Automaton}\label{def:segmentedMovementAutomaton}
     For system with segmented state space (eq. \ref{eq:segmentedStateSpace}) there is for each $state(k)$ in $StateSpace$ injection function:
@@ -332,7 +333,7 @@ Then the \emph{Movement Automaton} for \emph{Segment} $\in$ \emph{State Space} i
         ActiveMovementAutomaton:StateSpace\to MovementAutomaton
     \end{equation}
     
-    Selecting appropriate \emph{movement automaton} implementation (def. \ref{def:segmentMovementAutomaton}) for \emph{state(k)} $\in$ \emph{Segment} $\subset$ \emph{State Space}. The mapping function (eq. \ref{eq:activeMovementAutomaton}) is injection mapping every state(k) to Segment then \emph{Movement Automaton Implementation}. The trajectory generated is then given:
+\noindent Selecting appropriate \emph{movement automaton} implementation (def. \ref{def:segmentMovementAutomaton}) for \emph{state(k)} $\in$ \emph{Segment} $\subset$ \emph{State Space}. The mapping function (eq. \ref{eq:activeMovementAutomaton}) is injection mapping every state(k) to Segment then \emph{Movement Automaton Implementation}. The trajectory generated is then given:
     
     \begin{equation}\label{eq:ourTrajectoryImplementationSegmented}
         Trajectory\left(\begin{gathered}state(0),\\Buffer\end{gathered}\right)= 
@@ -351,6 +352,7 @@ Then the \emph{Movement Automaton} for \emph{Segment} $\in$ \emph{State Space} i
     
 \end{definition}
 
+\newpage
 \subsection{\secState{R}Reference Trajectory Generator}\label{s:referenceTrajectoryGenerator}
 
 \paragraph{Reference Trajectory Generator:} Segmented Movement Automaton (def.  \ref{def:segmentedMovementAutomaton}) with \emph{trajectory function} (eq. \ref{eq:ourTrajectoryImplementationSegmented}) is used as \emph{reference trajectory generator} for \emph{complex systems}. 
