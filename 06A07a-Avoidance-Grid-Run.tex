@@ -1,3 +1,4 @@
+\newpage
 \subsection{\secState{R}Avoidance Grid Run}\label{s:aviudabceGridRun}
 \paragraph{Main Goal:} The main goal of this section is to introduce the trajectory selection process, based on a \emph{situation assessment}, originating from \emph{Data Fusion Procedure} (sec. \ref{s:sensorFusion}). 
 
@@ -82,8 +83,7 @@ The \emph{Avoidance Path} selection is simple lowest cost selection of \emph{Tra
     \# Initialization \& Reachibility test\;    
     avoidancePath = $\varnothing$\;
     \If{reachable ==  $\varnothing$}{        
-        message = "No path available, empty Reach Set"\;
-        \Return{[avoidancePath,message]}
+        \Return{[avoidancePath,"No path available, empty Reach Set"]}
     }
     avoidanceCell = GetRandomCell(reachable)\;
     
@@ -94,8 +94,7 @@ The \emph{Avoidance Path} selection is simple lowest cost selection of \emph{Tra
         \# Goal is inside Avoidance Grid, Check if reachable\;
         avoidanceCell = grid.selectCellXYZ(goal)\;
         \If{avoidanceCell.Reachable != true}{
-            message = "Waypoint not Reachable"\;
-            \Return{[avoidancePath,message]}
+            \Return{[avoidancePath,"Waypoint not Reachable"]}
         }
     }{
         \BlankLine
@@ -143,7 +142,7 @@ The \emph{LiDAR hits} are denoted as red filled circles. The \emph{Avoidance Gri
     \label{fig:exampleSituationAvoidanceRun}
 \end{figure}
 
-\emph{Visibility Assessment:} The visibility assessment (fig. \ref{fig:exampleVisibilityEvaluation}) divides the \emph{Avoidance Grid} into two
+\paragraph{Visibility Assessment:} The visibility assessment (fig. \ref{fig:exampleVisibilityEvaluation}) divides the \emph{Avoidance Grid} into two
 \begin{enumerate}
     \item \emph{Visible space} (blue filled cells) is space \emph{trough} which \emph{LiDAR} rays roamed freely until they hit an \emph{Obstacle}.
     
@@ -154,7 +153,7 @@ The \emph{LiDAR hits} are denoted as red filled circles. The \emph{Avoidance Gri
      The \emph{detected obstacle cells} are part of \emph{visible space}, because there is certainty about its containment.
  \end{note}
  
- The \emph{Reach Set} trajectories are colored based on their visibility, blue for \emph{uncertain} trajectories and \emph{green} for visible trajectories.
+\noindent The \emph{Reach Set} trajectories are colored based on their visibility, blue for \emph{uncertain} trajectories and \emph{green} for visible trajectories.
 
 \begin{figure}[H]
     \centering
@@ -163,7 +162,7 @@ The \emph{LiDAR hits} are denoted as red filled circles. The \emph{Avoidance Gri
     \label{fig:exampleVisibilityEvaluation}
 \end{figure}
 
-\emph{Reachibility Assessment:} For Each trajectory the \emph{Reachibility} is assessed (fig. \ref{fig:exampleReachibilityEvaluation}). The \emph{Obstacle Space} and \emph{Uncertain Space} are rendering \emph{reachibility}, effectively separating \emph{trajectories} into two categories:
+\paragraph{Reachibility Assessment:} For Each trajectory the \emph{Reachibility} is assessed (fig. \ref{fig:exampleReachibilityEvaluation}). The \emph{Obstacle Space} and \emph{Uncertain Space} are rendering \emph{reachibility}, effectively separating \emph{trajectories} into two categories:
 
 \begin{enumerate}
     \item \emph{Unreachable Trajectories} (red lines) - there is at least one trajectory segment leading trough \emph{Obstacle} or \emph{Uncertain} space.
@@ -171,7 +170,7 @@ The \emph{LiDAR hits} are denoted as red filled circles. The \emph{Avoidance Gri
     \item \emph{Reachable Trajectories} (green lines) -  all trajectory segments are lying in \emph{Free} space.
 \end{enumerate}
 
-Cells in Avoidance grid are divided in similar matter, depending on count of \emph{reachable trajectories} passing trough them:
+\newpage\noindent Cells in Avoidance grid are divided in similar matter, depending on count of \emph{reachable trajectories} passing trough them:
 
 \begin{enumerate}
     \item \emph{Unreachable Cells} (red fill) - there is no trajectory trough \emph{free space} or the \emph{cell} is not in \emph{free space}.

@@ -83,7 +83,7 @@ The \emph{harm prioritization} is addressed by higher navigation logic (fig. \re
 
 \paragraph{Reachibility:} The \emph{Reachibility} for trajectory reflects how safe is \emph{path along}. The \emph{Threat} (def. \ref{def:threat}) for each cell has been already assessed.  The set of \emph{Passing Cells} is defined in \emph{Trajectory Footprint} (eq. \ref{eq:setOfPassedCells}).
 
-The \emph{Trajectory Reachibility} is given as product of \emph{Threats} along the trajectory (eq. \ref{eq:trajectoryReachibility}). The \emph{Trajectory Reachibility} can be calculated for each \emph{trajectory segment} given as $\{movement_1,\dots,movement_i\}$ $\subset$ $Buffer$ originating from $state_0$.
+\noindent The \emph{Trajectory Reachibility} is given as product of \emph{Threats} along the trajectory (eq. \ref{eq:trajectoryReachibility}). The \emph{Trajectory Reachibility} can be calculated for each \emph{trajectory segment} given as $\{movement_1,\dots,movement_i\}$ $\subset$ $Buffer$ originating from $state_0$.
 
 
 \begin{equation}\label{eq:trajectoryReachibility}
@@ -111,6 +111,9 @@ The \emph{Trajectory segment} reachability is sufficient, because the overall pe
 
 The \emph{fuzzy values} $[0,1]$ are projected to \emph{Boolean} properties of \emph{cell} and \emph{Trajectory} in following manner (tab. \ref{tab:defuzificationRatings}).
 
+
+The high values of \emph{Visibility} (eq. \ref{eq:visibilityForCell}) and \emph{Reachability} (eq. \ref{eq:cellReachibility}, \ref{eq:trajectoryReachibility}) are expected. The low \emph{threshold} for \emph{threaths} values is expected. The error margin is solved by \emph{Sensor Fusion} therefore initial \emph{false positive} cases have low rate. The \emph{Detected Obstacle Rate} (eq. \ref{eq:detectedObstacleRatingForCell}), \emph{Map Obstacle Rate} (eq. \ref{eq:mapObstacleRatingForCell}), \emph{Intruder Rate} (eq. \ref{eq:intruderRatingForCell}), and \emph{Constraint Rate} (eq. \ref{eq:constraintRatingForCell}) thresholds are considered low.
+
 \begin{table}[H]
     \centering
     \begin{tabular}{c|ccc}
@@ -127,7 +130,6 @@ The \emph{fuzzy values} $[0,1]$ are projected to \emph{Boolean} properties of \e
     \label{tab:defuzificationRatings}
 \end{table}
 
-The high values of \emph{Visibility} (eq. \ref{eq:visibilityForCell}) and \emph{Reachability} (eq. \ref{eq:cellReachibility}, \ref{eq:trajectoryReachibility}) are expected. The low \emph{threshold} for \emph{threaths} values is expected. The error margin is solved by \emph{Sensor Fusion} therefore initial \emph{false positive} cases have low rate. The \emph{Detected Obstacle Rate} (eq. \ref{eq:detectedObstacleRatingForCell}), \emph{Map Obstacle Rate} (eq. \ref{eq:mapObstacleRatingForCell}), \emph{Intruder Rate} (eq. \ref{eq:intruderRatingForCell}), and \emph{Constraint Rate} (eq. \ref{eq:constraintRatingForCell}) thresholds are considered low.
 
 \paragraph{Space Classification:} The \emph{Data Fusion Function} is outlined in (\ref{eq:DataFusionFunction}). This classification is resulting into four distinct space sets.
 
@@ -154,7 +156,7 @@ The \emph{Uncertain} space for decision time $t_i$ is a portion of \emph{Avoidan
     \end{aligned}\right\}
 \end{equation}
 
-\noindent The \emph{Free} space is the space which is \emph{Visible} and $\neg Obstacle$,  $\neg Intruder$, and, $\neg Constrained$. The mathematical definition is simple set subtractions from \emph{Avoidance Grid} (eq. \ref{eq:freeDataFusion}).
+\newpage\noindent The \emph{Free} space is the space which is \emph{Visible} and $\neg Obstacle$,  $\neg Intruder$, and, $\neg Constrained$. The mathematical definition is simple set subtractions from \emph{Avoidance Grid} (eq. \ref{eq:freeDataFusion}).
 
 \begin{multline}\label{eq:freeDataFusion}
     Free(t_i) = AvoidanceGrid(t_i) -\dots\\\dots -\left(Uncertain(t_i)\cup Occupied(t_i)\cup  Constrained(t_i)\right)
