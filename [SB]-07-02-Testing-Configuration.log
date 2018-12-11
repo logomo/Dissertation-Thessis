@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  9 DEC 2018 19:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  11 DEC 2018 14:21
 entering extended mode
 **./[SB]-07-02-Testing-Configuration.tex
 ([SB]-07-02-Testing-Configuration.tex
@@ -749,7 +749,7 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 LaTeX Warning: Unused global option(s):
     [a4].
 
-No file [SB]-07-02-Testing-Configuration.aux.
+([SB]-07-02-Testing-Configuration.aux)
 \openout1 = `[SB]-07-02-Testing-Configuration.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 249.
@@ -768,6 +768,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 249.
 LaTeX Font Info:    ... okay on input line 249.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 249.
 LaTeX Font Info:    ... okay on input line 249.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -845,6 +846,8 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 249.
 LaTeX Info: Redefining \pageref on input line 249.
 LaTeX Info: Redefining \nameref on input line 249.
+
+([SB]-07-02-Testing-Configuration.out) ([SB]-07-02-Testing-Configuration.out)
 \@outlinefile=\write5
 \openout5 = `[SB]-07-02-Testing-Configuration.out'.
 
@@ -853,10 +856,6 @@ LaTeX Info: Redefining \nameref on input line 249.
 
 LaTeX Warning: Reference `s:modelMAImplementation' on page 1 undefined on input
  line 4.
-
-
-LaTeX Warning: Reference `tab:testUASBasicParameters' on page 1 undefined on in
-put line 6.
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 6.
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -867,30 +866,6 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 6.
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-LaTeX Warning: Reference `eq:marginsBoundary' on page 1 undefined on input line
- 6.
-
-
-LaTeX Warning: Reference `eq:decisionTimeBoundary' on page 1 undefined on input
- line 20.
-
-
-LaTeX Warning: Reference `eq:speedBoundary' on page 1 undefined on input line 2
-5.
-
-
-LaTeX Warning: Reference `tab:testMovementOrientations' on page 1 undefined on 
-input line 37.
-
-
-LaTeX Warning: Reference `tab:testNavigationGridBasic' on page 1 undefined on i
-nput line 39.
-
-
-LaTeX Warning: Reference `tab:testAvoidanceGridBasic' on page 1 undefined on in
-put line 39.
-
 
 LaTeX Warning: Reference `s:AvoidanceGrid' on page 1 undefined on input line 41
 .
@@ -910,40 +885,36 @@ Non-PDF special ignored!
 
 
 ])
-No file [SB]-07-02-Testing-Configuration.bbl.
+([SB]-07-02-Testing-Configuration.bbl [2]
+
+Package natbib Warning: Empty `thebibliography' environment on input line 3.
+
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 285.
-[2]
+ [3
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 285.
  ([SB]-07-02-Testing-Configuration.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 285.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 285.
+Package rerunfilecheck Info: File `[SB]-07-02-Testing-Configuration.out' has no
+t changed.
+(rerunfilecheck)             Checksum: 251DD1A00F528F0BDDF5696A8D1E3449;386.
 
-
-Package rerunfilecheck Warning: File `[SB]-07-02-Testing-Configuration.out' has
- changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `[SB]-07-02-Testing-Configuration.ou
-t':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  E1DBE664823D7869B128CECFD6E622CB;280.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 285.
  ) 
 Here is how much of TeX's memory you used:
- 24024 strings out of 492973
- 393902 string characters out of 3135926
- 575706 words of memory out of 3000000
- 27650 multiletter control sequences out of 15000+200000
- 541358 words of font info for 56 fonts, out of 3000000 for 9000
+ 24044 strings out of 492973
+ 394575 string characters out of 3135926
+ 576274 words of memory out of 3000000
+ 27656 multiletter control sequences out of 15000+200000
+ 541964 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,18n,63p,704b,435s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,18n,63p,704b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
 ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/H17
 2461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/H172461/MiK
@@ -953,10 +924,10 @@ e1/public/amsfonts/cm/cmr8.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb>
-Output written on [SB]-07-02-Testing-Configuration.pdf (2 pages, 111663 bytes).
+Output written on [SB]-07-02-Testing-Configuration.pdf (3 pages, 117200 bytes).
 
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 92 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

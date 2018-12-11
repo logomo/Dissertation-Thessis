@@ -17,12 +17,12 @@
         \end{enumerate}
     \end{note}
     
-    \emph{Decision time:} Decision time can be set by the user to any positive non-zero value (\ref{eq:decisionTimeBoundary}). The \emph{Decision time} is equal $1$ $s$ and \emph{Decision frames} are synchronized.
+	\paragraph{Decision time:} Decision time can be set by the user to any positive non-zero value (\ref{eq:decisionTimeBoundary}). The \emph{Decision time} is equal $1$ $s$ and \emph{Decision frames} are synchronized.
     \begin{equation}\label{eq:decisionTimeBoundary}
         maxAlrogithmCalculationTime \le decisionTome \le \infty
     \end{equation}
     
-    \emph{Speed:} For \emph{all movements} constant speed $1$ $m.s^{-1}$ is used. Speed can be changed to any value in given boundary (\ref{eq:speedBoundary}).
+    \paragraph{Speed:} For \emph{all movements} constant speed $1$ $m.s^{-1}$ is used. Speed can be changed to any value in given boundary (\ref{eq:speedBoundary}).
         \begin{equation}\label{eq:speedBoundary}
             0 \le speed    \le 
             \min\left(
@@ -34,9 +34,9 @@
         \end{equation}
     
     
-    \emph{Movement automaton:} The \emph{movement set} is given in (tab. \ref{tab:testMovementOrientations}). The \emph{movement} set contains horizontal, vertical, and, combined movements. 
+    \paragraph{Movement automaton:} The \emph{movement set} is given in (tab. \ref{tab:testMovementOrientations}). The \emph{movement} set contains horizontal, vertical, and, combined movements. 
     
-    \emph{Grids:} Used \emph{Navigation grid parameters} are given in (tab. \ref{tab:testNavigationGridBasic}).Selected \emph{Navigation Reach set} is \emph{ACAS-like} with enabled horizontal/vertical separation. Used \emph{Avoidance grid parameters} are given in (tab. \ref{tab:testAvoidanceGridBasic}). Selected \emph{Avoidance Reach set} is \emph{combined} because of high \emph{coverage ratio}. 
+    \paragraph{Grids:} Used \emph{Navigation grid parameters} are given in (tab. \ref{tab:testNavigationGridBasic}).Selected \emph{Navigation Reach set} is \emph{ACAS-like} with enabled horizontal/vertical separation. Used \emph{Avoidance grid parameters} are given in (tab. \ref{tab:testAvoidanceGridBasic}). Selected \emph{Avoidance Reach set} is \emph{combined} because of high \emph{coverage ratio}. 
     
     User can define own grid parameters according to the \emph{space discretization rules} (sec. \ref{s:AvoidanceGrid}) and chose own \emph{reach set type} according to preference (sec. \ref{s:reachSet}).
     
