@@ -35,32 +35,6 @@ The main purpose is to broadcast the \emph{position notification} in \emph{contr
     This categorization reflects only Pilot community statement, the general priority rule is broken, because maneuverability and vulnerability  should be always considered as key decision factor. 
 \end{note}
 
-\paragraph{Maneuverability:} The maneuverability is the real key factor in priority assessment.  The components of maneuverability are \emph{maximal/mean acceleration/deceleration}, \emph{climb/ descent rate} and \emph{turning ratio/radius}. The comparison can be done by solving \emph{pursuit problem} using \emph{Reach Sets} \cite{game1987,game1988}.
-
-The \emph{Maneuverability categorization} is based on \emph{original aircraft priority categorization} \cite{icaoAnnex2} accounting UAS/RPAS as equal to \emph{manned aviation}. The ordered list from the highest to the lowest priority goes as follows:
-
-\begin{enumerate}
-    \item \emph{Impaired control} (Distress aircraft) - any aviation attendant in distress has the priority in case of the conflict occurrence.
-    
-    \item \emph{Altitude control/No} (Balloon, Hovering aircraft) - the balloon type crafts does not have any type of propulsion and horizontal movements follows the airflow in given altitude. 
-    
-    
-    \item \emph{Full control/No propulsion} (Gliders of any sort) - the gliders can control their horizontal position, but there are limits to altitude control and acceleration/deceleration. 
-    
-    \item \emph{Full control/Linear propulsion} (Any aircraft of plane type) - the \emph{towing aircraft's} and \emph{airplanes} belong there, the difference is the \emph{flexibility} of \emph{maneuvering}.
-    
-    \item \emph{Full control/VTOL capability} (Any aircraft with VTOL) - the \emph{other aircraft} capable to do on spot turn. The typical representative is \emph{quad-rotor copter}.
-\end{enumerate}
-
-There are other aspects like \emph{minimal required} acceleration/deceleration/turn ratio to operate in selected segment of the \emph{airspace}. These should be specified later by \emph{Minimum Operational Performance Standards} (MOPS).
-
-\paragraph{Safety Margins:} The \emph{Safety Margin} for \emph{Well Clear Condition} value is based on \emph{situation}. There is also an \emph{universal safety margin} which guarantees the minimal safety for encountering intruder. 
-
-The most prevalent effect is \emph{Wake turbulence} therefore \emph{wake turbulence cone} angle $[0\circ -90\circ ]$ and radius. 
-
-The \emph{safety Margin} for situation-based avoidance is given by list of supported manuevers maneuvers, there is converging (sec. \ref{sec:handlingConvergingManuever}), head on (sec. \ref{sec:handlingHeadOnApproach}), overtake (sec. \ref{sec:handlingOvertakeManuever}) safety margins
-
-
 \begin{tabularx}{\textwidth}{S{0.25}|X}
      \multicolumn{2}{c}{\textbf{Position}}  \\\hline
      latitude & based on GPS/IMU sensor fusion.\\
@@ -89,3 +63,30 @@ The \emph{safety Margin} for situation-based avoidance is given by list of suppo
     \caption{Time-stamped \emph{position notification} structure.}
     \label{tab:positionNotification}
 \end{tabularx}
+
+\paragraph{Maneuverability:} The maneuverability is the real key factor in priority assessment.  The components of maneuverability are \emph{maximal/mean acceleration/deceleration}, \emph{climb/ descent rate} and \emph{turning ratio/radius}. The comparison can be done by solving \emph{pursuit problem} using \emph{Reach Sets} \cite{game1987,game1988}.
+
+\noindent The \emph{Maneuverability categorization} is based on \emph{original aircraft priority categorization} \cite{icaoAnnex2} accounting UAS/RPAS as equal to \emph{manned aviation}. The ordered list from the highest to the lowest priority goes as follows:
+
+\begin{enumerate}
+    \item \emph{Impaired control} (Distress aircraft) - any aviation attendant in distress has the priority in case of the conflict occurrence.
+    
+    \item \emph{Altitude control/No} (Balloon, Hovering aircraft) - the balloon type crafts does not have any type of propulsion and horizontal movements follows the airflow in given altitude. 
+    
+    
+    \item \emph{Full control/No propulsion} (Gliders of any sort) - the gliders can control their horizontal position, but there are limits to altitude control and acceleration/deceleration. 
+    
+    \item \emph{Full control/Linear propulsion} (Any aircraft of plane type) - the \emph{towing aircraft's} and \emph{airplanes} belong there, the difference is the \emph{flexibility} of \emph{maneuvering}.
+    
+    \item \emph{Full control/VTOL capability} (Any aircraft with VTOL) - the \emph{other aircraft} capable to do on spot turn. The typical representative is \emph{quad-rotor copter}.
+\end{enumerate}
+
+There are other aspects like \emph{minimal required} acceleration/deceleration/turn ratio to operate in selected segment of the \emph{airspace}. These should be specified later by \emph{Minimum Operational Performance Standards} (MOPS).
+
+\paragraph{Safety Margins:} The \emph{Safety Margin} for \emph{Well Clear Condition} value is based on \emph{situation}. There is also an \emph{universal safety margin} which guarantees the minimal safety for encountering intruder. 
+
+The most prevalent effect is \emph{Wake turbulence} therefore \emph{wake turbulence cone} angle $[0\circ -90\circ ]$ and radius. 
+
+The \emph{safety Margin} for situation-based avoidance is given by list of supported manuevers maneuvers, there is converging (sec. \ref{sec:handlingConvergingManuever}), head on (sec. \ref{sec:handlingHeadOnApproach}), overtake (sec. \ref{sec:handlingOvertakeManuever}) safety margins
+
+
