@@ -1,17 +1,6 @@
 \subsection{\secState{R}Map Obstacles}\label{s:mapObstacles}
 \paragraph{Idea:} Use \emph{stored LiDAR readings} from previous mission to build an compact obstacle map \cite{cernamaria2018}. Then use \emph{this map} as a additional information source.
 
-\paragraph{Concept:} A \emph{map obstacle} state has very simple logic, there are three possible cases:
-
-\begin{enumerate}
-    \item \emph{Undetected} - Map obstacle $O_M$ is charted on map (fig. \ref{fig:undetectedMapObstalce}), but is undetected by any sensor in sensor field, therefore the probability of map obstacle occurrence is equal to $0$.
-
-
-    \item \emph{Detected} Map obstacle $O_M$ is charted on map and detected by any sensor in sensor field (fig. \ref{fig:detectedMapObstacle}). The map obstacle rate is equal to detected obstacle rate, usually its equal to $1$.
-
-    \item \emph{Hindered} Map obstacle $O_M$ is hindered behind other detected obstacle $O_1$ (fig. \ref{fig:hinderedMapObstacle}). The detected obstacle $O_1$ is in $cell_{i,j,k}$ and is reducing visibility in follow up $cellRow_{i_f>i,j,k}$ by $60$ percent.
-\end{enumerate}
-
 \begin{figure}[H]
     \begin{subfigure}{0.32\textwidth}
         \includegraphics[width=0.9\linewidth]{\FIGDIR/TE009MapObstacleUndetected} 
@@ -31,6 +20,17 @@
     \caption{Map obstacle states after \emph{Data fusion}.}
     \label{fig:mapObstacleStatesAfterDataFusion}
 \end{figure}
+
+\paragraph{Concept:} A \emph{map obstacle} state has very simple logic, there are three possible cases:
+
+\begin{enumerate}
+    \item \emph{Undetected} - Map obstacle $O_M$ is charted on map (fig. \ref{fig:undetectedMapObstalce}), but is undetected by any sensor in sensor field, therefore the probability of map obstacle occurrence is equal to $0$.
+
+
+    \item \emph{Detected} Map obstacle $O_M$ is charted on map and detected by any sensor in sensor field (fig. \ref{fig:detectedMapObstacle}). The map obstacle rate is equal to detected obstacle rate, usually its equal to $1$.
+
+    \item \emph{Hindered} Map obstacle $O_M$ is hindered behind other detected obstacle $O_1$ (fig. \ref{fig:hinderedMapObstacle}). The detected obstacle $O_1$ is in $cell_{i,j,k}$ and is reducing visibility in follow up $cellRow_{i_f>i,j,k}$ by $60$ percent.
+\end{enumerate}
 
 \paragraph{Implementation:} The formulation of final map obstacle rate  $map(cell_{i,j,k})$ was outlined in previous examples. These examples are showing the \emph{desired behaviour} and its solved by \emph{data fusion} (sec. \ref{s:sensorFusion}).
 
@@ -64,7 +64,7 @@ The \emph{Map Obstacle} concept is taken from my \emph{master student work} \cit
     \label{fig:exampleExtractedMapObstacles}
 \end{figure} 
 
-\noindent The space covered by any obstacle  is non-empty by definition. There are following types of map charted obstacles which are implemented in framework:
+\newpage\noindent The space covered by any obstacle  is non-empty by definition. There are following types of map charted obstacles which are implemented in framework:
 
 \begin{enumerate}
     \item\emph{Ball obstacle $parameters=\varnothing$} - simple ball with center at $position$, with offset safety margin.
