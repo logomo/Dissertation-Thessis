@@ -9,7 +9,7 @@ The \emph{threat} is multidimensional, there are often multiple \emph{static obs
     crashDistance(t) =  distance(UAScenter(t),threat) \\\text{  where \emph{selection criterion} is:  }\\ \min \left\{\begin{gathered}\left( \begin{gathered} distance(UAScenter(t),threat)-\dots\\\dots-threat.SafetyMargin\end{gathered}\right)\\:\forall threat \in KnownWorld (t)\end{gathered}\right\}
 \end{multline}
 
-The \emph{crash distance} (eq. \ref{eq:crashDistance}) for given time is evaluated as shortest distance between UAS center and threat. The threat origins from known world (sec. \ref{s:KnownWorld}). The \emph{threat} have safety margin. The distance to safety margin is used as prioritization criterion in our test cases (tab. \ref{tab:testCasesSummary}).
+\noindent The \emph{crash distance} (eq. \ref{eq:crashDistance}) for given time is evaluated as shortest distance between UAS center and threat. The threat origins from known world (sec. \ref{s:KnownWorld}). The \emph{threat} have safety margin. The distance to safety margin is used as prioritization criterion in our test cases (tab. \ref{tab:testCasesSummary}).
 
 
 The \emph{safety margin} evolution over time (eq. \ref{eq:safetyMarginOverTimeEvolution}) is calculated similar to \emph{crash distance}. The most dangerous threat is selected based on \emph{distance to safety margin} criterion. The value of \emph{safety margin} property is then used.
@@ -18,7 +18,7 @@ The \emph{safety margin} evolution over time (eq. \ref{eq:safetyMarginOverTimeEv
     safety Margin(t) =  threat.SafetyMargin\\\text{  where \emph{selection criterion} is:  }\\ \min \left\{\begin{gathered}\left( \begin{gathered} distance(UAScenter(t),threat)-\dots\\\dots-threat.SafetyMargin\end{gathered}\right)\\:\forall threat \in KnownWorld (t)\end{gathered}\right\}
 \end{multline}
 
-The \emph{distance to safety margin} (eq. \ref{eq:distanceToSafetyMargin}) is calculated as a difference between \emph{crash distance} (eq. \ref{eq:crashDistance}) and \emph{safety margin} (eq. \ref{eq:safetyMarginOverTimeEvolution}). The \emph{acceptance criteria} for safety is \emph{distance to safety margin} $\ge$ 0.
+\noindent The \emph{distance to safety margin} (eq. \ref{eq:distanceToSafetyMargin}) is calculated as a difference between \emph{crash distance} (eq. \ref{eq:crashDistance}) and \emph{safety margin} (eq. \ref{eq:safetyMarginOverTimeEvolution}). The \emph{acceptance criteria} for safety is \emph{distance to safety margin} $\ge$ 0.
 
 \begin{equation}\label{eq:distanceToSafetyMargin}
     distanceToSafetyMargin(t) =  crashDistance(t) - safetyMargin(t) \ge 0

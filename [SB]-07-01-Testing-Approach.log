@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  9 DEC 2018 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  11 DEC 2018 14:15
 entering extended mode
 **./[SB]-07-01-Testing-Approach.tex
 ([SB]-07-01-Testing-Approach.tex
@@ -937,22 +937,20 @@ ut line 56.
 LaTeX Warning: Reference `s:bodyvolumeIntersection' on page 3 undefined on inpu
 t line 58.
 
+[3]
 
-LaTeX Warning: Reference `sec:positionNotification' on page 3 undefined on inpu
+LaTeX Warning: Reference `sec:positionNotification' on page 4 undefined on inpu
 t line 76.
 
 
-LaTeX Warning: Reference `sec:collisionCase' on page 3 undefined on input line 
+LaTeX Warning: Reference `sec:collisionCase' on page 4 undefined on input line 
 76.
 
 
-LaTeX Warning: Reference `sec:ruleImplementation' on page 3 undefined on input 
+LaTeX Warning: Reference `sec:ruleImplementation' on page 4 undefined on input 
 line 76.
 
-[3]) (07S02a-Test-Performance-Evaluation.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
+[4]) (07S02a-Test-Performance-Evaluation.tex
 
 LaTeX Warning: Reference `s:AvoidanceRequirements' on page 5 undefined on input
  line 2.
@@ -968,10 +966,7 @@ ne 2.
 LaTeX Warning: Reference `s:EnergyEfficiency' on page 5 undefined on input line
  2.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
+[5]
 
 LaTeX Warning: Reference `s:KnownWorld' on page 6 undefined on input line 12.
 
@@ -1022,7 +1017,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 289.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 289.
 Package rerunfilecheck Info: File `[SB]-07-01-Testing-Approach.out' has not cha
 nged.
-(rerunfilecheck)             Checksum: 45DCF12EFD43C34297B1BDFF0AA0D461;975.
+(rerunfilecheck)             Checksum: 418682DB4D8E398845A243EAFA0E65AA;975.
 
 
 LaTeX Warning: There were undefined references.
@@ -1030,8 +1025,8 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 289.
  ) 
 Here is how much of TeX's memory you used:
- 24165 strings out of 492973
- 396285 string characters out of 3135926
+ 24167 strings out of 492973
+ 396307 string characters out of 3135926
  578452 words of memory out of 3000000
  27710 multiletter control sequences out of 15000+200000
  547894 words of font info for 80 fonts, out of 3000000 for 9000
@@ -1065,9 +1060,9 @@ rs/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/H17246
 1/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/H172461/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/H172461/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on [SB]-07-01-Testing-Approach.pdf (9 pages, 227390 bytes).
+Output written on [SB]-07-01-Testing-Approach.pdf (9 pages, 227541 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
+ 221 PDF objects out of 1000 (max. 8388607)
+ 71 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
