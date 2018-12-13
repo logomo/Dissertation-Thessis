@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  9 DEC 2018 13:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 16:54
 entering extended mode
 **./[CHB]-08-Conclusion.tex
 ([CHB]-08-Conclusion.tex
@@ -745,10 +745,6 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
 ([CHB]-08-Conclusion.aux)
 \openout1 = `[CHB]-08-Conclusion.aux'.
 
@@ -773,16 +769,16 @@ LaTeX Font Info:    ... okay on input line 249.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -855,33 +851,36 @@ LaTeX Info: Redefining \nameref on input line 249.
 Chapter 8.
 ) (08C02-Summary.tex
 
-LaTeX Warning: Reference `ch:approach' on page 1 undefined on input line 5.
+LaTeX Warning: Reference `ch:approach' on page 1 undefined on input line 2.
 
 
 LaTeX Warning: Reference `fig:AvoidanceLevels' on page 1 undefined on input lin
-e 5.
+e 2.
 
 
 LaTeX Warning: Reference `ass:reachableWaypoints' on page 1 undefined on input 
-line 11.
+line 9.
 
 
 LaTeX Warning: Reference `tab:uncontrolledAirspaceViolations' on page 1 undefin
-ed on input line 14.
+ed on input line 12.
 
 
 LaTeX Warning: Reference `s:testBuildingAvoidance' on page 1 undefined on input
- line 17.
+ line 15.
 
 
-LaTeX Warning: Reference `s:testSlalom' on page 1 undefined on input line 18.
+LaTeX Warning: Reference `s:testSlalom' on page 1 undefined on input line 16.
 
 
-LaTeX Warning: Reference `s:testMaze' on page 1 undefined on input line 19.
+LaTeX Warning: Reference `s:testMaze' on page 1 undefined on input line 17.
 
 
 LaTeX Warning: Reference `fig:missionControlRunActivityDiagram' on page 1 undef
-ined on input line 19.
+ined on input line 17.
+
+
+LaTeX Warning: Reference `s:testStorm' on page 1 undefined on input line 18.
 
 [1
 Non-PDF special ignored!
@@ -891,76 +890,81 @@ Non-PDF special ignored!
 
 {C:/Users/H172461/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Reference `s:testStorm' on page 2 undefined on input line 20.
-
-
 LaTeX Warning: Reference `s:testEmergencyConverging' on page 2 undefined on inp
-ut line 21.
+ut line 19.
 
 
 LaTeX Warning: Reference `s:testEmergencyHeadOn' on page 2 undefined on input l
-ine 22.
+ine 20.
 
 
 LaTeX Warning: Reference `s:testEmergencyMixed' on page 2 undefined on input li
-ne 23.
+ne 21.
 
 
 LaTeX Warning: Reference `tab:controlledAirspaceViolations' on page 2 undefined
- on input line 26.
+ on input line 24.
 
 
 LaTeX Warning: Reference `s:testRuleConverging' on page 2 undefined on input li
-ne 29.
+ne 27.
 
 
-LaTeX Warning: Reference `s:testRuleHeadOn' on page 2 undefined on input line 3
-1.
+LaTeX Warning: Reference `s:testRuleHeadOn' on page 2 undefined on input line 2
+9.
 
 
-LaTeX Warning: Reference `s:testRuleMixed' on page 2 undefined on input line 33
+LaTeX Warning: Reference `s:testRuleMixed' on page 2 undefined on input line 31
 .
 
 
 LaTeX Warning: Reference `s:testRuleOvertake' on page 2 undefined on input line
- 35.
+ 33.
 
 
 LaTeX Warning: Reference `fig:AvoidanceFrameworkConceptNew' on page 2 undefined
- on input line 40.
+ on input line 38.
 
 
-LaTeX Warning: Reference `s:sensorFusion' on page 2 undefined on input line 40.
+LaTeX Warning: Reference `s:sensorFusion' on page 2 undefined on input line 38.
 
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 43.
+LaTeX Font Info:    Try loading font information for U+msa on input line 41.
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 43.
+LaTeX Font Info:    Try loading font information for U+msb on input line 41.
 
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Warning: Reference `s:aviudabceGridRun' on page 2 undefined on input line
- 43.
+ 41.
 
 
 LaTeX Warning: Reference `s:missionControlRun' on page 2 undefined on input lin
-e 45.
+e 43.
+
+
+LaTeX Warning: Reference `fig:missionControlRunActivityDiagram' on page 2 undef
+ined on input line 46.
+
+
+LaTeX Warning: Reference `s:detectedObstacles' on page 2 undefined on input lin
+e 48.
+
+
+LaTeX Warning: Reference `s:intruders' on page 2 undefined on input line 50.
 
 [2]
 
-LaTeX Warning: Reference `fig:missionControlRunActivityDiagram' on page 3 undef
-ined on input line 48.
+LaTeX Warning: Reference `s:virtualConstraints' on page 3 undefined on input li
+ne 52.
 
 
-LaTeX Warning: Reference `s:detectedObstacles' on page 3 undefined on input lin
-e 50.
-
-
-LaTeX Warning: Reference `s:intruders' on page 3 undefined on input line 52.
+LaTeX Warning: Reference `s:MovingVirtualConstraints' on page 3 undefined on in
+put line 52.
 
 
 LaTeX Warning: Reference `s:virtualConstraints' on page 3 undefined on input li
@@ -971,42 +975,34 @@ LaTeX Warning: Reference `s:MovingVirtualConstraints' on page 3 undefined on in
 put line 54.
 
 
-LaTeX Warning: Reference `s:virtualConstraints' on page 3 undefined on input li
-ne 56.
-
-
-LaTeX Warning: Reference `s:MovingVirtualConstraints' on page 3 undefined on in
-put line 56.
-
-
-LaTeX Warning: Reference `s:reachSet' on page 3 undefined on input line 65.
+LaTeX Warning: Reference `s:reachSet' on page 3 undefined on input line 63.
 
 
 LaTeX Warning: Reference `s:constrainedTrajectoryExpansion' on page 3 undefined
- on input line 65.
+ on input line 63.
 
 
 LaTeX Warning: Reference `s:ReachSetPerformanceCriteria' on page 3 undefined on
- input line 65.
+ input line 63.
 
 
 LaTeX Warning: Reference `sec:reducedReachSetPerformance' on page 3 undefined o
-n input line 67.
+n input line 65.
 
 
 LaTeX Warning: Reference `s:chaoticReachSet' on page 3 undefined on input line 
-70.
+68.
 
 
 LaTeX Warning: Reference `s:harmonicReachSet' on page 3 undefined on input line
- 72.
+ 70.
 
 
 LaTeX Warning: Reference `s:combinedReachSet' on page 3 undefined on input line
- 74.
+ 72.
 
 
-LaTeX Warning: Reference `s:acasReachSet' on page 3 undefined on input line 76.
+LaTeX Warning: Reference `s:acasReachSet' on page 3 undefined on input line 74.
 
 
 ) (08C03-Comparison-Other-Methods.tex
@@ -1034,28 +1030,29 @@ LaTeX Font Info:    Try loading font information for U+eus on input line 7.
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) [4]
-<./Pics/C001TestingScenario.png, id=124, 519.3804pt x 292.9344pt>
+<./Pics/C001TestingScenario.png, id=129, 519.3804pt x 292.9344pt>
 File: ./Pics/C001TestingScenario.png Graphic file (type png)
 <use ./Pics/C001TestingScenario.png>
 Package pdftex.def Info: ./Pics/C001TestingScenario.png  used on input line 52.
 
-(pdftex.def)             Requested size: 328.82706pt x 185.46149pt.
+(pdftex.def)             Requested size: 317.07613pt x 178.83275pt.
 
 
 LaTeX Warning: Reference `sec:testingConfiguration' on page 5 undefined on inpu
 t line 63.
 
-[5 <./Pics/C001TestingScenario.png>]
 
-LaTeX Warning: Reference `sec:testingConfiguration' on page 6 undefined on inpu
+LaTeX Warning: Reference `sec:testingConfiguration' on page 5 undefined on inpu
 t line 71.
 
-<./Pics/C002CrashDistanceEvolution.png, id=145, 1534.23187pt x 1227.08438pt>
+[5 <./Pics/C001TestingScenario.png>]
+<./Pics/C002CrashDistanceEvolution.png, id=147, 1534.23187pt x 1227.08438pt>
 File: ./Pics/C002CrashDistanceEvolution.png Graphic file (type png)
 <use ./Pics/C002CrashDistanceEvolution.png>
 Package pdftex.def Info: ./Pics/C002CrashDistanceEvolution.png  used on input l
 ine 89.
-(pdftex.def)             Requested size: 328.82706pt x 262.99416pt.
+(pdftex.def)             Requested size: 317.07613pt x 253.59482pt.
+
 
 LaTeX Warning: Reference `tab:testCasesPerformacneEvaluation' on page 6 undefin
 ed on input line 94.
@@ -1076,27 +1073,27 @@ t line 120.
 LaTeX Warning: Reference `s:uncertaintyIntersection' on page 7 undefined on inp
 ut line 130.
 
-[7]
 
-LaTeX Warning: Reference `s:virtualConstraints' on page 8 undefined on input li
+LaTeX Warning: Reference `s:virtualConstraints' on page 7 undefined on input li
 ne 141.
 
 
-LaTeX Warning: Reference `s:MovingVirtualConstraints' on page 8 undefined on in
+LaTeX Warning: Reference `s:MovingVirtualConstraints' on page 7 undefined on in
 put line 141.
 
 ) (08C04-Approach-Reusability.tex
 
-LaTeX Warning: Reference `sec:UASTrafficManagement' on page 8 undefined on inpu
+LaTeX Warning: Reference `sec:UASTrafficManagement' on page 7 undefined on inpu
 t line 4.
 
 
-LaTeX Warning: Reference `fig:UTMArchitectureOverview' on page 8 undefined on i
+LaTeX Warning: Reference `fig:UTMArchitectureOverview' on page 7 undefined on i
 nput line 6.
 
 
-LaTeX Warning: Reference `fig:DAMExample' on page 8 undefined on input line 6.
+LaTeX Warning: Reference `fig:DAMExample' on page 7 undefined on input line 6.
 
+[7]
 
 LaTeX Warning: Reference `fig:CooperativeConflictResolutionUTM' on page 8 undef
 ined on input line 8.
@@ -1177,15 +1174,15 @@ input line 26.
 LaTeX Warning: Reference `alg:Wavefront Propagation' on page 8 undefined on inp
 ut line 26.
 
-[8]
 
-LaTeX Warning: Reference `s:referenceTrajectoryGenerator' on page 9 undefined o
+LaTeX Warning: Reference `s:referenceTrajectoryGenerator' on page 8 undefined o
 n input line 31.
 
 
-LaTeX Warning: Reference `s:SensorFusionDefinition' on page 9 undefined on inpu
+LaTeX Warning: Reference `s:SensorFusionDefinition' on page 8 undefined on inpu
 t line 33.
 
+[8]
 
 LaTeX Warning: Reference `alg:Wavefront Propagation' on page 9 undefined on inp
 ut line 48.
@@ -1214,27 +1211,28 @@ LaTeX Warning: Reference `s:combinedReachSet' on page 9 undefined on input line
 LaTeX Warning: Reference `s:acasReachSet' on page 9 undefined on input line 56.
 
 
-) (08C05-Lessons-Learned.tex [9]
+) (08C05-Lessons-Learned.tex
 
-LaTeX Warning: Reference `eq:cpt01' on page 10 undefined on input line 6.
-
-
-LaTeX Warning: Reference `eq:cpt02' on page 10 undefined on input line 6.
+LaTeX Warning: Reference `eq:cpt01' on page 9 undefined on input line 6.
 
 
-LaTeX Warning: Reference `eq:cpt03' on page 10 undefined on input line 6.
+LaTeX Warning: Reference `eq:cpt02' on page 9 undefined on input line 6.
 
 
-LaTeX Warning: Reference `eq:cpt04' on page 10 undefined on input line 6.
+LaTeX Warning: Reference `eq:cpt03' on page 9 undefined on input line 6.
 
 
-LaTeX Warning: Reference `alg:Wavefront Propagation' on page 10 undefined on in
-put line 8.
+LaTeX Warning: Reference `eq:cpt04' on page 9 undefined on input line 6.
 
 
-LaTeX Warning: Reference `def:ContainedReducedReachSet' on page 10 undefined on
- input line 8.
+LaTeX Warning: Reference `alg:Wavefront Propagation' on page 9 undefined on inp
+ut line 8.
 
+
+LaTeX Warning: Reference `def:ContainedReducedReachSet' on page 9 undefined on 
+input line 8.
+
+[9]
 
 LaTeX Warning: Reference `def:trajectoryFootprint' on page 10 undefined on inpu
 t line 10.
@@ -1300,15 +1298,15 @@ d on input line 62.
 LaTeX Warning: Reference `sec:MovementAutomatonBackground' on page 11 undefined
  on input line 62.
 
-[11]
 
-LaTeX Warning: Reference `s:dataFusionDefinition' on page 12 undefined on input
+LaTeX Warning: Reference `s:dataFusionDefinition' on page 11 undefined on input
  line 64.
 
 
-LaTeX Warning: Reference `s:sensorFusion' on page 12 undefined on input line 64
+LaTeX Warning: Reference `s:sensorFusion' on page 11 undefined on input line 64
 .
 
+[11]
 
 LaTeX Warning: Reference `s:sensorFusion' on page 12 undefined on input line 70
 .
@@ -1360,35 +1358,35 @@ ut line 83.
 LaTeX Warning: Reference `eq:freeDataFusion' on page 12 undefined on input line
  85.
 
-[12]
 
-LaTeX Warning: Reference `eq:ReachableDataFusion' on page 13 undefined on input
+LaTeX Warning: Reference `eq:ReachableDataFusion' on page 12 undefined on input
  line 87.
 
 
-LaTeX Warning: Reference `s:dataFusionDefinition' on page 13 undefined on input
+LaTeX Warning: Reference `s:dataFusionDefinition' on page 12 undefined on input
  line 92.
 
 
-LaTeX Warning: Reference `s:KnownWorld' on page 13 undefined on input line 92.
+LaTeX Warning: Reference `s:KnownWorld' on page 12 undefined on input line 92.
 
 
-LaTeX Warning: Reference `s:BasicProblemDefinition' on page 13 undefined on inp
+LaTeX Warning: Reference `s:BasicProblemDefinition' on page 12 undefined on inp
 ut line 92.
 
 ) (08C06-Future-Work.tex
 
-LaTeX Warning: Reference `s:adversadialBehaviourImpact' on page 13 undefined on
+LaTeX Warning: Reference `s:adversadialBehaviourImpact' on page 12 undefined on
  input line 3.
 
 
-LaTeX Warning: Reference `s:TestingFrameworkTheory' on page 13 undefined on inp
+LaTeX Warning: Reference `s:TestingFrameworkTheory' on page 12 undefined on inp
 ut line 3.
 
 
-LaTeX Warning: Reference `fig:adversarialAttackNotableMoments' on page 13 undef
+LaTeX Warning: Reference `fig:adversarialAttackNotableMoments' on page 12 undef
 ined on input line 5.
 
+[12]
 
 LaTeX Warning: Reference `tab:testCasesPerformacneEvaluation' on page 13 undefi
 ned on input line 15.
@@ -1421,9 +1419,9 @@ fined on input line 24.
 LaTeX Warning: Reference `fig:NonCooperativeConflictResolutionUTM' on page 13 u
 ndefined on input line 24.
 
-[13]) ([CHB]-08-Conclusion.bbl [14] [15
+) ([CHB]-08-Conclusion.bbl [13] [14
 
-])
+] [15])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 288.
  [16]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 288.
@@ -1439,13 +1437,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 288.
  ) 
 Here is how much of TeX's memory you used:
- 24348 strings out of 492973
+ 24347 strings out of 492973
  400078 string characters out of 3135926
- 569877 words of memory out of 3000000
- 27819 multiletter control sequences out of 15000+200000
+ 569836 words of memory out of 3000000
+ 27818 multiletter control sequences out of 15000+200000
  543169 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,63p,840b,566s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,10n,63p,840b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
 ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/H17
 2461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/H172461/MiK
@@ -1456,7 +1454,7 @@ msfonts/cm/cmsl12.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8
 .pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:
 /Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb>
-Output written on [CHB]-08-Conclusion.pdf (16 pages, 444314 bytes).
+Output written on [CHB]-08-Conclusion.pdf (16 pages, 444025 bytes).
 PDF statistics:
  347 PDF objects out of 1000 (max. 8388607)
  137 named destinations out of 1000 (max. 500000)
