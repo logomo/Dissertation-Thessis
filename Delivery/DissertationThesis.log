@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6745 64-bit) (preloaded format=xelatex 2018.12.6)  13 DEC 2018 11:21
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6745 64-bit) (preloaded format=xelatex 2018.12.6)  13 DEC 2018 17:13
 entering extended mode
 **./DissertationThesis.tex
 (DissertationThesis.tex
@@ -2904,42 +2904,14 @@ File: ../main.pdf Graphic file (type pdf)
 <use ../main.pdf, page 382>
 File: ../main.pdf Graphic file (type pdf)
 <use ../main.pdf, page 382>
- [386]
-File: ../main.pdf Graphic file (type pdf)
-<use ../main.pdf, page 383>
-File: ../main.pdf Graphic file (type pdf)
-<use ../main.pdf, page 383>
-File: ../main.pdf Graphic file (type pdf)
-<use ../main.pdf, page 383>
- [387]
-File: ../main.pdf Graphic file (type pdf)
-<use ../main.pdf, page 384>
-File: ../main.pdf Graphic file (type pdf)
-<use ../main.pdf, page 384>
-File: ../main.pdf Graphic file (type pdf)
-<use ../main.pdf, page 384>
- [388]
-File: ../main.pdf Graphic file (type pdf)
-<use ../main.pdf, page 385>
-File: ../main.pdf Graphic file (type pdf)
-<use ../main.pdf, page 385>
-File: ../main.pdf Graphic file (type pdf)
-<use ../main.pdf, page 385>
- [389]
-File: ../main.pdf Graphic file (type pdf)
-<use ../main.pdf, page 386>
-File: ../main.pdf Graphic file (type pdf)
-<use ../main.pdf, page 386>
-File: ../main.pdf Graphic file (type pdf)
-<use ../main.pdf, page 386>
- [390] (DissertationThesis.aux) ) 
+ [386] (DissertationThesis.aux) ) 
 Here is how much of TeX's memory you used:
- 2856 strings out of 427798
- 51419 string characters out of 3151797
- 109649 words of memory out of 3000000
- 6868 multiletter control sequences out of 15000+200000
+ 2848 strings out of 427798
+ 51175 string characters out of 3151797
+ 109441 words of memory out of 3000000
+ 6860 multiletter control sequences out of 15000+200000
  3648 words of font info for 15 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  38i,18n,42p,267b,433s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on DissertationThesis.pdf (390 pages).
+Output written on DissertationThesis.pdf (386 pages).
