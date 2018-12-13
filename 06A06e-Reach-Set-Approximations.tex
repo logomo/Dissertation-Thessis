@@ -1,4 +1,4 @@
-
+\newpage
 \subsection{\secState{R}Chaotic Reach set}\label{s:chaoticReachSet}
 
 \paragraph{Motivation:} Design of calculation method for \emph{Reach Set Approximation} guarantying high \emph{Maneuverability}.
@@ -15,6 +15,19 @@ The \emph{Cell} $cell_{i,j,k}$ has a center and walls from UAS viewpoint: front 
     
     \item \emph{Spread Limit} - upper limit of candidates which are going to be select for further expansion, minimal value 1, default value \emph{Count of unique Moves in Movement set}, maximal value $\infty$. If more than default values is selected the algorithm will generate \emph{redundant trajectories}. If less is selected then some trajectories are omitted and \emph{Coverage Rate} decreases sharply. 
 \end{enumerate}
+
+\paragraph{Step: Initialization} initialization of \emph{candidate} array (return value), \emph{leftovers} array (return Value). Node array \emph{passing} is populated with \emph{Nodes} which represents \emph{end node of Trajectory} and the tip of \emph{trajectory is constrained in \emph{cell}$_{i,j,k}$}.
+
+\paragraph{Step: Evaluate best trajectories with unique Footprints} following steps are executed:
+\begin{enumerate}
+    \item \emph{Best Performance Map} is created with \emph{footprint} as key set element to ensure footprint uniqueness.
+    \item \emph{Wall distance} for \emph{test node} is calculated as a closest trajectory portion distance to \emph{top, bottom, left, right} wall of cell $cell_{i,j,k}$
+    \item \emph{Footprint} for \emph{test node} is created with maximal length given by \emph{Footprint Length} tuning parameter.
+    \item \emph{Existence and Performance Test} is executed to ensure that best performing node is selected. If there is not key entry in the \emph{Best Performance Map}, then new entry for \emph{Test Node} is created. If there is key entry, the performance of \emph{Old Node} and \emph{Test Node} is compared and better is stored.
+\end{enumerate}
+
+\paragraph{Step: Select candidates} is executed on \emph{Best Performance Map} records using  \emph{Wall distance} as pivot parameter, ordering by closest proximity and limited by \emph{Search Limit} tuning parameter. The \emph{Leftovers} are difference set between \emph{Passing Nodes} and \emph{Candidate Nodes}. 
+
 
 \begin{algorithm}[H]
     \SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}\SetKwInOut{TuningParameters}{Tuning Parameters}
@@ -56,17 +69,7 @@ The \emph{Cell} $cell_{i,j,k}$ has a center and walls from UAS viewpoint: front 
 \end{algorithm}
 
 
-\paragraph{Step: Initialization} initialization of \emph{candidate} array (return value), \emph{leftovers} array (return Value). Node array \emph{passing} is populated with \emph{Nodes} which represents \emph{end node of Trajectory} and the tip of \emph{trajectory is constrained in \emph{cell}$_{i,j,k}$}.
-
-\paragraph{Step: Evaluate best trajectories with unique Footprints} following steps are executed:
-\begin{enumerate}
-    \item \emph{Best Performance Map} is created with \emph{footprint} as key set element to ensure footprint uniqueness.
-    \item \emph{Wall distance} for \emph{test node} is calculated as a closest trajectory portion distance to \emph{top, bottom, left, right} wall of cell $cell_{i,j,k}$
-    \item \emph{Footprint} for \emph{test node} is created with maximal length given by \emph{Footprint Length} tuning parameter.
-    \item \emph{Existence and Performance Test} is executed to ensure that best performing node is selected. If there is not key entry in the \emph{Best Performance Map}, then new entry for \emph{Test Node} is created. If there is key entry, the performance of \emph{Old Node} and \emph{Test Node} is compared and better is stored.
-\end{enumerate}
-
-\paragraph{Step: Select candidates} is executed on \emph{Best Performance Map} records using  \emph{Wall distance} as pivot parameter, ordering by closest proximity and limited by \emph{Search Limit} tuning parameter. The \emph{Leftovers} are difference set between \emph{Passing Nodes} and \emph{Candidate Nodes}. 
+\paragraph{Example:} for \emph{Avoidance Grid} with \emph{Distance 10 m}, \emph{Layer count 10}, \emph{Horizontal range $[-45^\circ,+45^\circ]$}, \emph{Horizontal Cell Count 7}, \emph{Vertical range $[-30^\circ,+30^\circ]$}, and \emph{Vertical Cell Count 5}. Is given in (fig. \ref{fig:chaoticReachSetApproximation}). The UAS is at \emph{Back-side} of \emph{Figure} (initial state is at all \emph{Trajectory Origins}). The \emph{black dashed line} marks \emph{Avoidance Grid} space boundary. Each trajectory has its own color and ends at \emph{Front-side} of \emph{Avoidance Grid Boundary}.
 
 \begin{figure}[H]
     \centering
@@ -74,9 +77,6 @@ The \emph{Cell} $cell_{i,j,k}$ has a center and walls from UAS viewpoint: front 
     \caption{\emph{Chaotic \emph{reach set} approximation}.}
     \label{fig:chaoticReachSetApproximation}
 \end{figure}
-
-\newpage
-\paragraph{Example:} for \emph{Avoidance Grid} with \emph{Distance 10 m}, \emph{Layer count 10}, \emph{Horizontal range $[-45^\circ,+45^\circ]$}, \emph{Horizontal Cell Count 7}, \emph{Vertical range $[-30^\circ,+30^\circ]$}, and \emph{Vertical Cell Count 5}. Is given in (fig. \ref{fig:chaoticReachSetApproximation}). The UAS is at \emph{Back-side} of \emph{Figure} (initial state is at all \emph{Trajectory Origins}). The \emph{black dashed line} marks \emph{Avoidance Grid} space boundary. Each trajectory has its own color and ends at \emph{Front-side} of \emph{Avoidance Grid Boundary}.
 
 
 \paragraph{Pros and Cons:} It can be seen from example (fig. \ref{fig:chaoticReachSetApproximation}) that \emph{Chaotic Reach Set Approximation Method} (alg. \ref{alg:ExpansionConstraintFunctionForChaoticReachSet}) generates a lot of \emph{turning} and \emph{shaky} \emph{trajectories}. 
@@ -131,7 +131,7 @@ The \emph{Avoidance Grid} (fig. \ref{fig:LidarSpaceSegmentation}) cell centers f
 \end{enumerate}
 
 \paragraph{Step: Initialization} sets candidate \emph{Nodes} as empty set, leftover \emph{Nodes} as empty set. and selects all \emph{Nodes} from \emph{Stack} which represents  \emph{Finishing Trajectories} in working cell $cell_{i,j,k}$.
-\newpage
+
 \begin{algorithm}[H]
 \SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}\SetKwInOut{TuningParameters}{Tuning Parameters}
     \Input{Node[] stack, Cell cell$_{i,j,k}$}
@@ -304,7 +304,7 @@ The Goal is to have penalization for \emph{Chaotic behaviour}, implementation of
     \item \emph{Calculate Penalization for \emph{Chaotic Behaviour}}, calculate \emph{Smoothness Rating for Trajectory} (def. \ref{def:SmoothnessRatingForTrajectory}) in interval $[0,1]$, introduce penalization with base $100 \%$.
 \end{enumerate}
 
-The final $Cost(Node)$ function is applied on each \emph{Combined Reach Set Node} and look like follows:
+\newpage\noindent The final $Cost(Node)$ function is applied on each \emph{Combined Reach Set Node} and look like follows:
 
 \begin{multline}
     Cost(Node) = Cost(Node.Trajectory) \times\dots\\\dots\times \left(1+ \left(1-SmoothnessRate(N ode.T rajectory)\right)\right)
@@ -432,7 +432,7 @@ The \emph{Evasive Maneuver} selection process in ACAS-Xu is similar to our appro
     \end{cases}
 \end{equation}
 
-Following \emph{Separation Modes} can be defined with given \emph{separations}:
+\newpage \noindent Following \emph{Separation Modes} can be defined with given \emph{separations}:
 
 \begin{enumerate}
     \item \emph{Horizontal} (ACAS-X defined mode) containing \emph{horizontal} separation. 
