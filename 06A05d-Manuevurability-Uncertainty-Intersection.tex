@@ -1,3 +1,4 @@
+\newpage
 \subsection{\secState{R}Maneuverability Uncertainty Intersection}\label{s:uncertaintyIntersection}
 \paragraph{Idea:} The \emph{intruders} are not bullets they are not sticking to predicted linear paths. The \emph{intruder} maneuverability is given as horizontal and vertical spread. Therefore \emph{intruder reach set} will form a \emph{elliptic cone}. This cone can be transformed into \emph{finite discrete } point-cloud, each \emph{point} should have assigned \emph{severity} impact value.  The point cloud intersection with  \emph{Avoidance Grid} will give us space impact of \emph{uncertain} intruder.
 
@@ -29,6 +30,10 @@ To construct  ellipsoidal space boundary on orthogonal plane $D({x}(t),{v})$ som
     \end{aligned}
 \end{equation}
 
+
+\noindent The \emph{Ellipsoid} $E({x}(t),{v})$ (eq. \ref{eq:baseElipsoidxt}) for fixed intruder position ${x}(t)$ and fixed intruder velocity ${v}$ is given as constrained portion of orthogonal plane $D({x}(t),{v})$. The constraint is defined by an internal coordinate frame ${p}\in \R^2$ which is space reduction of plane $D({x}(t),{v})$. 
+
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{\FIGDIR/TE014ElipticConeIOnePoint}         
@@ -36,7 +41,6 @@ To construct  ellipsoidal space boundary on orthogonal plane $D({x}(t),{v})$ som
     \label{fig:P21ElipticConeIOnePoint}
 \end{figure}
 
-\noindent The \emph{Ellipsoid} $E({x}(t),{v})$ (eq. \ref{eq:baseElipsoidxt}) for fixed intruder position ${x}(t)$ and fixed intruder velocity ${v}$ is given as constrained portion of orthogonal plane $D({x}(t),{v})$. The constraint is defined by an internal coordinate frame ${p}\in \R^2$ which is space reduction of plane $D({x}(t),{v})$. 
 
 The internal coordinate frame ${p}\in\R^2$ has origin in ${x}(t)\to\R^2$. The points of plane ${p}$ are bounded by projection ${p}=({b}-{x}(t))\to\R^2$, where $b\in D({x}(t),v)$. The point of ellipsoidal ${p}$ is then given as standard ellipse boundary with vertical span $d_\theta({x}(t))$ and horizontal span $d_\varphi({x}(t))$. 
 
@@ -47,12 +51,7 @@ The 2D \emph{Ellipsoid} $E({x}(t),{v})$ for specific time $t=10s$ example is por
 \end{equation}
 
 \noindent The expected behaviour of an intruder $i_k$ is to stick to predicted linear trajectory ${x}(t)$ (\ref{eq:vehiclelinearcone}). The probability of deviation should be decreasing with distance from ellipse center (fig. \ref{fig:intruderPassingProbability}.).  
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{\FIGDIR/TE015ProbabilisticDistributionOfEllipsoidCutSideForTE016}
-    \caption{Probability of intruder $i_k$ position in ellipsoid $E({x}(t),{v})$}
-    \label{fig:intruderPassingProbability}
-\end{figure}
+
 
 \noindent \emph{Probability density function} for ellipsoid  $E({x}(t),{v})$defined in (eq. \ref{eq:baseElipsoidxt}) is depending on maximal horizontal spread $d_\theta({x}(t))$, maximal vertical spread $d_\varphi({x}(t))$, defined by (eq. \ref{eq:elipsiodialBoudaryParameters}). 
 
@@ -84,7 +83,14 @@ Final space intersection rate $P({x}(t),d_\theta,d_\varphi)$ needs to be normali
 
 An $P({x}(\tau),c_{i,j,k},\theta,\varphi)$ (\ref{eq:spreadIntersectionProbFixedtau}) is integration of rate density function $P({x}(\tau),d_\theta,d_\varphi)$ (eq. \ref{eq:elipsprobdistCombined}) in surface $E({x}(\tau),{v})$ to cell $c_{i,j,k}$ volume intersection. 
 
-To get a volume integration partial rate in surface intersection must be integrated and normalized in time interval $\tau\in[i_e(c_{i,j,k}),i_l(c_{i,j,k})]$, the \emph{base intersection probability} $P_T(i_k({x}_s,{v},\theta,\varphi),c_{i,j,k})$ is given by (eq. \ref{eq:spreadIntruderIntersectionProb}). Example of intersection of intruder $i_r$ uncertain ellipsoid cone with avoidance grid $\mathscr{A}(t_i)$ is given in (fig. \ref{fig:ellipticConeIntersectionExample}).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{\FIGDIR/TE015ProbabilisticDistributionOfEllipsoidCutSideForTE016}
+    \caption{Probability of intruder $i_k$ position in ellipsoid $E({x}(t),{v})$}
+    \label{fig:intruderPassingProbability}
+\end{figure}
+
+\noindent To get a volume integration partial rate in surface intersection must be integrated and normalized in time interval $\tau\in[i_e(c_{i,j,k}),i_l(c_{i,j,k})]$, the \emph{base intersection probability} $P_T(i_k({x}_s,{v},\theta,\varphi),c_{i,j,k})$ is given by (eq. \ref{eq:spreadIntruderIntersectionProb}). Example of intersection of intruder $i_r$ uncertain ellipsoid cone with avoidance grid $\mathscr{A}(t_i)$ is given in (fig. \ref{fig:ellipticConeIntersectionExample}).
 
 \begin{equation}\label{eq:spreadIntersectionProbFixedtau}
     P({x}(\tau),c_{i,j,k},\theta,\varphi) =\iint_{E({x}(\tau),{v})\cap c_{i,j,k}} P({x}(\tau),d_\theta,d_\varphi)
