@@ -2,9 +2,16 @@
 
 \paragraph{Purpose:} The \emph{core process} of \emph{Avoidance Grid Run} (sec. \ref{s:aviudabceGridRun}) and \emph{Mission Control Run} (sec. \ref{s:missionControlRun}) needs to be enhanced based on  situation. The architecture is based on \emph{aspect oriented approach} \cite{hill2003jess}. The key ideas and concepts are taken from rule engine implementation for multiagent  navigation system \cite{seyboth2013event}.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{\FIGDIR/RE013RuleEngineBasicArchitecture}
+    \caption{Rule engine components overview.}
+    \label{fig:RuleEngineBasicArchitecture}
+\end{figure}
+
 \paragraph{Rule Engine:} The program module to inject and run \emph{rules} modifying standard work-flow based on  triggering events. The \emph{aspect oriented} approach enables to configure rules in \emph{run-time} via predefined process hooks - \emph{Decision Points}. 
 
-The rules in context of this work are pieces of code which have semi-static structure consisting from following parts (fig. \ref{fig:RuleEngineBasicArchitecture}):
+\noindent The rules in context of this work are pieces of code which have semi-static structure consisting from following parts (fig. \ref{fig:RuleEngineBasicArchitecture}):
 
 \begin{enumerate}
     \item \emph{Decision Point} - hook point in process where the rule can be attached/detached. If more than one rule is hooked the priority of execution needs to be defined. 
@@ -17,17 +24,6 @@ The rules in context of this work are pieces of code which have semi-static stru
     
     \item \emph{Rule application} - calculations and data structure changes. Mainly \emph{disabling trajectories} in \emph{Reach Set} in our implementation.     
 \end{enumerate}
-
-\paragraph{Configurability:} The \emph{Rule Engine} enables real time configuration. The \emph{Enabled Rules Table} have been implemented to enforce specific rules in specific context. 
-
-The \emph{Rules} can be invoked from \emph{Rule Application}, this enables effective rule chaining and piece-wise functionality split. 
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\linewidth]{\FIGDIR/RE013RuleEngineBasicArchitecture}
-    \caption{Rule engine components overview.}
-    \label{fig:RuleEngineBasicArchitecture}
-\end{figure}
 
 \paragraph{Example:} The \emph{UAS} is flying in controlled airspace. The \emph{intruder} shows in front of \emph{UAS}. The \emph{UAS} is faster than \emph{intruder}. The \emph{UAS} tries to obtain permission for \emph{Overtake}. The \emph{UTM} does not allow \emph{overtake}, because of \emph{insufficient UAS maneuverability capability}. The \emph{Rule} (fig. \ref{fig:RuleEngineBasicArchitecture}) with:
 \begin{enumerate}
@@ -44,3 +40,7 @@ The \emph{Rules} can be invoked from \emph{Rule Application}, this enables effec
         \item \emph{Application} of \emph{Rule} is last step, in this case the \emph{UAS} will slow down.
     \end{enumerate}
 \end{enumerate}
+
+\paragraph{Configurability:} The \emph{Rule Engine} enables real time configuration. The \emph{Enabled Rules Table} have been implemented to enforce specific rules in specific context. 
+
+The \emph{Rules} can be invoked from \emph{Rule Application}, this enables effective rule chaining and piece-wise functionality split. 

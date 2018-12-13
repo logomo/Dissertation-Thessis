@@ -15,7 +15,7 @@ The \emph{Navigation requirements}, out of this scope, are given in (sec. \ref{s
 
 \noindent The purpose of this section is to show complex scenarios, not unit testing of framework functionality. The focus is on \emph{border line} cases for typical situations in \emph{expected environment}. The \emph{mode switch} between \emph{Navigation} and \emph{Emergency Avoidance}.
 
-The \emph{Tests} are designed to focus on particular functionality in specific \emph{operational environment} with main \emph{obstacle/weather/intruder feature} with environment induced \emph{constraints}. There is also \emph{UTM} factor and \emph{Navigation penalty}.
+\noindent The \emph{Tests} are designed to focus on particular functionality in specific \emph{operational environment} with main \emph{obstacle/weather/intruder feature} with environment induced \emph{constraints}. There is also \emph{UTM} factor and \emph{Navigation penalty}.
 
 \paragraph{Operational Environment} is classified according to:
 
@@ -38,9 +38,9 @@ The \emph{Tests} are designed to focus on particular functionality in specific \
     \end{enumerate}
 \end{enumerate}
 
-\emph{Static obstacles:}  Static obstacles with various features detectable by main \emph{LiDAR} sensor. The main purpose is to show avoidance capabilities combined with heavy restrictions imposed by \emph{soft} and \emph{hard} constraints. The original purpose of our approach was to provide robust framework for static obstacle avoidance. Three tests with increasing obstacle density and navigation complexity are delivered.
+\paragraph{Static obstacles:}  Static obstacles with various features detectable by main \emph{LiDAR} sensor. The main purpose is to show avoidance capabilities combined with heavy restrictions imposed by \emph{soft} and \emph{hard} constraints. The original purpose of our approach was to provide robust framework for static obstacle avoidance. Three tests with increasing obstacle density and navigation complexity are delivered.
 
-\emph{Operational space constraints} depends mainly on \emph{operational environment}.  The standard set of constraints were taken into account for our test cases:
+\paragraph{Operational Space Constraints} depends mainly on \emph{operational environment}.  The standard set of constraints were taken into account for our test cases:
 \begin{enumerate}
     \item \emph{Rural, Urban environment (low altitude)} are: geo-fencing zones, ground (hard constraints), non-controlled airspace altitudes (soft constraints).
     
@@ -71,10 +71,10 @@ The most basic service is \emph{Identity provider} which should be implemented b
 
 Then there is \emph{location services}, which are necessary for coordinated collision avoidance, these were implemented in our solution up to necessary level for \emph{Rules Of the Air} implementation.
 
-\emph{Mission tracking} is service tracking deviations from \emph{declared mission plan} and \emph{actual execution}. This statistics were used in all tests to track deviations from reference trajectory.
+\noindent \emph{Mission tracking} is service tracking deviations from \emph{declared mission plan} and \emph{actual execution}. This statistics were used in all tests to track deviations from reference trajectory.
 
 \emph{Directives} for \emph{Traffic management} and \emph{Collision prevention} are implemented  as functional life cycle of  \emph{Position notification} (sec. \ref{sec:positionNotification}), \emph{Collision Case} (sec. \ref{sec:collisionCase}) for UTM. The directive handling is implemented as \emph{Rule engine} (sec. \ref{sec:ruleImplementation}) on UAS side.
-
+\newpage
 \paragraph{Navigation:} Navigation algorithm is depending on \emph{Navigation mode}. UAS is usually in \emph{Navigation mode} most of the time, despite this fact, UAS was forced into \emph{Emergency Avoidance Mode} most of time in test cases. The navigation complexity have been divined into following categories:
 
 \begin{enumerate}
@@ -84,6 +84,7 @@ Then there is \emph{location services}, which are necessary for coordinated coll
     \item \emph{Rule following} - UAS navigation capabilities are constrained by rule enforcement.
 \end{enumerate}
 
+\newpage
 \subsection{\secState{D}Test Cases Summary}\label{s:testCaseSummary}
 
 \noindent \emph{Test cases} are summarized in (tab. \ref{tab:testCasesSummary}).

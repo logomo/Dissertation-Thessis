@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  9 DEC 2018 19:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 15:29
 entering extended mode
 **./[SB]-07-06-Reduced-Reach-Sets-Testing.tex
 ([SB]-07-06-Reduced-Reach-Sets-Testing.tex
@@ -745,10 +745,6 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
 ([SB]-07-06-Reduced-Reach-Sets-Testing.aux)
 \openout1 = `[SB]-07-06-Reduced-Reach-Sets-Testing.aux'.
 
@@ -773,16 +769,16 @@ LaTeX Font Info:    ... okay on input line 249.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -901,78 +897,85 @@ Non-PDF special ignored!
 LaTeX Warning: Reference `s:chaoticReachSet' on page 2 undefined on input line 
 48.
 
-<./Pics/NS082CoverageRS00010.png, id=39, 944.93025pt x 675.7245pt>
+<./Pics/NS082CoverageRS00010.png, id=43, 944.93025pt x 675.7245pt>
 File: ./Pics/NS082CoverageRS00010.png Graphic file (type png)
 <use ./Pics/NS082CoverageRS00010.png>
 Package pdftex.def Info: ./Pics/NS082CoverageRS00010.png  used on input line 57
 .
-(pdftex.def)             Requested size: 202.93097pt x 145.11296pt.
-<./Pics/NS083CoverageRSAfterPruning.png, id=41, 377.9721pt x 270.2898pt>
+(pdftex.def)             Requested size: 195.67905pt x 139.92667pt.
+<./Pics/NS083CoverageRSAfterPruning.png, id=45, 377.9721pt x 270.2898pt>
 File: ./Pics/NS083CoverageRSAfterPruning.png Graphic file (type png)
 <use ./Pics/NS083CoverageRSAfterPruning.png>
 Package pdftex.def Info: ./Pics/NS083CoverageRSAfterPruning.png  used on input 
 line 63.
-(pdftex.def)             Requested size: 202.93097pt x 145.11708pt.
+(pdftex.def)             Requested size: 195.67905pt x 139.92873pt.
 
 LaTeX Warning: Reference `s:harmonicReachSet' on page 2 undefined on input line
  71.
 
-<./Pics/NS084smoothRS00010.png, id=44, 377.7312pt x 271.0125pt>
+<./Pics/NS084smoothRS00010.png, id=48, 377.7312pt x 271.0125pt>
 File: ./Pics/NS084smoothRS00010.png Graphic file (type png)
 <use ./Pics/NS084smoothRS00010.png>
 Package pdftex.def Info: ./Pics/NS084smoothRS00010.png  used on input line 79.
-(pdftex.def)             Requested size: 202.93097pt x 145.6002pt.
-<./Pics/NS085smoothRSAfterPruning.png, id=45, 944.328pt x 677.53125pt>
+(pdftex.def)             Requested size: 195.67905pt x 140.39798pt.
+<./Pics/NS085smoothRSAfterPruning.png, id=49, 944.328pt x 677.53125pt>
 File: ./Pics/NS085smoothRSAfterPruning.png Graphic file (type png)
 <use ./Pics/NS085smoothRSAfterPruning.png>
 Package pdftex.def Info: ./Pics/NS085smoothRSAfterPruning.png  used on input li
 ne 85.
-(pdftex.def)             Requested size: 202.93097pt x 145.59401pt.
+(pdftex.def)             Requested size: 195.67905pt x 140.39384pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2 <./Pics/NS082CoverageRS00010.png> <./Pics/NS083CoverageRSAfterPruning.png>]
-
-
-LaTeX Warning: Reference `s:combinedReachSet' on page 3 undefined on input line
+LaTeX Warning: Reference `s:combinedReachSet' on page 2 undefined on input line
  93.
 
 
-LaTeX Warning: Reference `s:acasReachSet' on page 3 undefined on input line 95.
+LaTeX Warning: Reference `s:acasReachSet' on page 2 undefined on input line 95.
 
 
-<./Pics/NS080acasLikeRS00010.png, id=65, 377.9721pt x 270.7716pt>
+[2 <./Pics/NS082CoverageRS00010.png> <./Pics/NS083CoverageRSAfterPruning.png> <
+./Pics/NS084smoothRS00010.png> <./Pics/NS085smoothRSAfterPruning.png>]
+<./Pics/NS080acasLikeRS00010.png, id=68, 377.9721pt x 270.7716pt>
 File: ./Pics/NS080acasLikeRS00010.png Graphic file (type png)
 <use ./Pics/NS080acasLikeRS00010.png>
 Package pdftex.def Info: ./Pics/NS080acasLikeRS00010.png  used on input line 10
 1.
-(pdftex.def)             Requested size: 202.93097pt x 145.37576pt.
-<./Pics/NS081acasLikeRSAfterPruning.png, id=66, 944.93025pt x 676.929pt>
+(pdftex.def)             Requested size: 195.67905pt x 140.17816pt.
+<./Pics/NS081acasLikeRSAfterPruning.png, id=69, 944.93025pt x 676.929pt>
 File: ./Pics/NS081acasLikeRSAfterPruning.png Graphic file (type png)
 <use ./Pics/NS081acasLikeRSAfterPruning.png>
 Package pdftex.def Info: ./Pics/NS081acasLikeRSAfterPruning.png  used on input 
 line 107.
-(pdftex.def)             Requested size: 202.93097pt x 145.37163pt.
-[3 <./Pics/NS084smoothRS00010.png> <./Pics/NS085smoothRSAfterPruning.png> <./Pi
-cs/NS080acasLikeRS00010.png> <./Pics/NS081acasLikeRSAfterPruning.png>]
+(pdftex.def)             Requested size: 195.67905pt x 140.1761pt.
 
-LaTeX Warning: Reference `alg:Wavefront Propagation' on page 4 undefined on inp
+
+LaTeX Warning: Reference `alg:Wavefront Propagation' on page 3 undefined on inp
 ut line 124.
 
+[3 <./Pics/NS080acasLikeRS00010.png> <./Pics/NS081acasLikeRSAfterPruning.png>]
 
 LaTeX Warning: Reference `alg:Wavefront Propagation' on page 4 undefined on inp
 ut line 149.
 
-[4]
+
+Underfull \hbox (badness 1629) in paragraph at lines 149--150
+[]\OT1/cmr/m/n/12 The most of \OT1/cmr/m/it/12 waste leaf nodes \OT1/cmr/m/n/12
+ are re-moved dur-ing \OT1/cmr/m/it/12 layer prun-ing\OT1/cmr/m/n/12 : func-tio
+n
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
 
 LaTeX Warning: Reference `def:coverageRatio' on page 5 undefined on input line 
 180.
 
-[5]) ([SB]-07-06-Reduced-Reach-Sets-Testing.bbl [6])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 285.
- [7
+) ([SB]-07-06-Reduced-Reach-Sets-Testing.bbl [5] [6
 
-]
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 285.
+ [7]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 285.
 
 ([SB]-07-06-Reduced-Reach-Sets-Testing.aux)
@@ -988,10 +991,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 285.
  ) 
 Here is how much of TeX's memory you used:
- 24130 strings out of 492973
+ 24129 strings out of 492973
  396608 string characters out of 3135926
- 570749 words of memory out of 3000000
- 27709 multiletter control sequences out of 15000+200000
+ 571709 words of memory out of 3000000
+ 27708 multiletter control sequences out of 15000+200000
  542769 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,16n,63p,699b,487s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1004,7 +1007,7 @@ onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type
 amsfonts/cm/cmsy10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on [SB]-07-06-Reduced-Reach-Sets-Testing.pdf (7 pages, 2166500 b
+Output written on [SB]-07-06-Reduced-Reach-Sets-Testing.pdf (7 pages, 2166405 b
 ytes).
 PDF statistics:
  157 PDF objects out of 1000 (max. 8388607)

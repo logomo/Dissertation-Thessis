@@ -4,11 +4,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {algocf}{\numberline {6.1}{\ignorespaces \emph {Wave-front propagation} of \emph {Rapid Exploration Tree} to form \emph {Reach Set}.\relax }}{128}{algocf.6.1}
-\contentsline {algocf}{\numberline {6.2}{\ignorespaces Expansion Constraint function for \emph {Chaotic Reach Set Approximation}\relax }}{130}{algocf.6.2}
-\contentsline {algocf}{\numberline {6.3}{\ignorespaces Expansion Constraint function for \emph {Harmonic Reach Set Approximation}\relax }}{134}{algocf.6.3}
-\contentsline {algocf}{\numberline {6.4}{\ignorespaces Reach Set Merge Function and Combined Reach Set calculation\relax }}{138}{algocf.6.4}
-\contentsline {algocf}{\numberline {6.5}{\ignorespaces Expansion Constraint function for \emph {ACAS-like Reach Set Approximation}\relax }}{142}{algocf.6.5}
-\contentsline {algocf}{\numberline {6.6}{\ignorespaces Find best \emph {Path} in \emph {Avoidance Grid}\relax }}{182}{algocf.6.6}
+\contentsline {algocf}{\numberline {6.1}{\ignorespaces \emph {Wave-front propagation} of \emph {Rapid Exploration Tree} to form \emph {Reach Set}.\relax }}{125}{algocf.6.1}
+\contentsline {algocf}{\numberline {6.2}{\ignorespaces Expansion Constraint function for \emph {Chaotic Reach Set Approximation}\relax }}{127}{algocf.6.2}
+\contentsline {algocf}{\numberline {6.3}{\ignorespaces Expansion Constraint function for \emph {Harmonic Reach Set Approximation}\relax }}{130}{algocf.6.3}
+\contentsline {algocf}{\numberline {6.4}{\ignorespaces Reach Set Merge Function and Combined Reach Set calculation\relax }}{134}{algocf.6.4}
+\contentsline {algocf}{\numberline {6.5}{\ignorespaces Expansion Constraint function for \emph {ACAS-like Reach Set Approximation}\relax }}{138}{algocf.6.5}
+\contentsline {algocf}{\numberline {6.6}{\ignorespaces Find best \emph {Path} in \emph {Avoidance Grid}\relax }}{175}{algocf.6.6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -18,9 +18,9 @@ The \emph{static constraint} (eq. \ref{eq:staticConstraint}) is defined as struc
     \item \emph{Safety Margin} - the \emph{protection zone} (soft constraint) around constraint body (hard constraints) in meters.
 \end{enumerate}
 
-\begin{multline}\label{eq:staticConstraint}
+\begin{equation}\label{eq:staticConstraint}
     constraint = \{position,boundary, altitude_{start},altitude_{end}, safety Margin\}
-\end{multline}
+\end{equation}
 
 \paragraph{Active constrain selection:} The \emph{active constraints} are constraints which are impacting \emph{UAS active avoidance range}. 
 
@@ -66,7 +66,7 @@ First the \emph{set of contraint edges} (eq. \ref{eq:constraintEdgeSet}) is a en
     \right]
 \end{equation}
 
-\noindent The $(cell_{i,j,k}$ and \emph{constraint} intersection (eq. \ref{eq:contraintToCellIntersection}) is classification function. The \emph{classification} is necessary, because one \emph{constraint} induce: 
+\newpage\noindent The $(cell_{i,j,k}$ and \emph{constraint} intersection (eq. \ref{eq:contraintToCellIntersection}) is classification function. The \emph{classification} is necessary, because one \emph{constraint} induce: 
 \begin{enumerate}
     \item \emph{Body Constraint} (hard constraint) - the distance between $cell_{i,j,k}$ closest border and \emph{circular boundary} center is in interval $[0,radius]$.
     

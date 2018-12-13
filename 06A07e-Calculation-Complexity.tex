@@ -1,3 +1,4 @@
+\newpage
 \subsection{\secState{R}Computation Complexity}\label{sec:MCRcomputationalComplexity}
 \paragraph{Introduction:}The \emph{Computation Complexity} one mission control run assessment is necessary to identify the strong and weak points of approach. Lets get trough modules to assess notable calculations/algorithms complexity on high abstraction level.
 
@@ -19,7 +20,7 @@ Thresholding \emph{Detected Obstacles} is done by simple comparison of \emph{LiD
 
 Any loading of \emph{threats} from \emph{information sources} is depending on clustering. The \emph{Airspace Clustering} is considered as static for our setup. Therefore the \emph{count of active airspace clusters} has main impact on complexity. The \emph{count of information sources} is static and not changing over mission time. Information sources usually implement \emph{Hash search function} with complexity $\mathscr{O}\ln|searched Item Set|$.
 
-The \emph{computation complexity} boundaries for \emph{Data fusion} in  our setup are following:
+\noindent The \emph{computation complexity} boundaries for \emph{Data fusion} in  our setup are following:
 \begin{equation*}
     \begin{aligned}
         \texttt{Select Active Collision Cases: }& \mathscr{O} (|collision Cases|)\\
@@ -34,6 +35,7 @@ The \emph{computation complexity} boundaries for \emph{Data fusion} in  our setu
     The \emph{real-time clustering} is \emph{hard non-polynomial problem} \cite{kleinberg1998microeconomic}.  Usually all information sources and sensor have \emph{polynomial complexity} of processing. The \emph{controlled airspace clusters} are usually set for very long period of time. Therefore \emph{Obstacle Map}, \emph{Airspace Constraints}, and, \emph{Weather Constraints} can be considered as preprocessed
 \end{note}
 
+\newpage
 \paragraph{Situation Assessment:} The \emph{Situation Assessment} is evaluating triggering events. The \emph{evaluation} is usually simple existence question without further calculations. The \emph{complexity} of \emph{event evaluation} for our case is $\mathscr{O}(1)$. There are 8 triggers. The count of \emph{triggers} needs to be accounted in complexity boundary:
 
 \begin{equation*}
@@ -52,13 +54,13 @@ The \emph{threat insertion} is realized in 7\textsuperscript{th} to 10\textsuper
     \texttt{Insert Obstacles: } \mathscr{O}(|cells|)
 \end{equation*}
 
-The \emph{intruders intersection model} type impact the insertion complexity. The \emph{linear intersection} (sec. \ref{s:linearIntersectionModel}) is going trough maximum of \emph{layers count} cells. 
+\noindent The \emph{intruders intersection model} type impact the insertion complexity. The \emph{linear intersection} (sec. \ref{s:linearIntersectionModel}) is going trough maximum of \emph{layers count} cells. 
 
 The \emph{body volume intersection model} (sec. \ref{s:bodyvolumeIntersection}) can check the \emph{simple intersection condition} over all \emph{Avoidance Grid} in worst case, therefore complexity for this check is bounded by \emph{count of cells}. 
 
 The \emph{Maneuverability Uncertainty Intersection} (sec. \ref{s:uncertaintyIntersection}) can hit all cells in \emph{Avoidance Grid}. The calculation complexity boundary is exponential depending on \emph{horizontal/vertical} spread in $[rad]$. The \emph{intersection} implementation was done \emph{ad-hoc}. The impact of \emph{intersection application} is visible only when there is more than \emph{4} concurrence intruders (fig. \ref{fig:emergencyHeadOnMultipleComputationTime}).
 
-The \emph{complexity boundary for \emph{intruder insertion}} is given like follow:
+\noindent The \emph{complexity boundary for \emph{intruder insertion}} is given like follow:
 
 \begin{equation*}
     \texttt{Insert Intruders: }
@@ -77,7 +79,7 @@ The \emph{complexity boundary for \emph{intruder insertion}} is given like follo
     \end{equation*}
 \end{note}
 
-For \emph{Hard/Soft Constraints} The algorithm used for intersection polygons was selected based on study \citep{bentley1979algorithms}, the selected algorithm  \emph{Shamos-Hoey} \cite{shamos1976geometric}. The \emph{calculation complexity} boundary is given like follow:
+\newpage\noindent For \emph{Hard/Soft Constraints} The algorithm used for intersection polygons was selected based on study \citep{bentley1979algorithms}, the selected algorithm  \emph{Shamos-Hoey} \cite{shamos1976geometric}. The \emph{calculation complexity} boundary is given like follow:
 
 \begin{multline*}
     \texttt{Hard Constraints Intersection:}\\ \mathscr{O}(|cells|\times|hard Constraints| \times \max |constraint Points|^2)
@@ -86,7 +88,7 @@ For \emph{Hard/Soft Constraints} The algorithm used for intersection polygons wa
     \texttt{Soft Constraints Intersection:}\\ \mathscr{O}(|cells|\times|soft Constraints| \times \max |constraint Points|^2)
 \end{multline*}
 
-Each \emph{threat} category application in \emph{Mission Control Run} is done after \emph{each intersection} in 7\textsuperscript{th} to 10\textsuperscript{th} step. All ratings (tab. \ref{tab:defuzificationRatings}) expect $Reachibility(cell_{ij,k})$ and $Reachibility(Trajectory)$  are calculated. The \emph{calculation complexity} boundary for one \emph{reachibility rating} is $\mathscr{O}(1)$. (eq. \ref{eq:trajectoryReachibility}, \ref{eq:cellReachibility}). The \emph{Recalculate Reachibility} operation applied $4\times$ have maximal \emph{complexity} boundary given as follow:
+\noindent Each \emph{threat} category application in \emph{Mission Control Run} is done after \emph{each intersection} in 7\textsuperscript{th} to 10\textsuperscript{th} step. All ratings (tab. \ref{tab:defuzificationRatings}) expect $Reachibility(cell_{ij,k})$ and $Reachibility(Trajectory)$  are calculated. The \emph{calculation complexity} boundary for one \emph{reachibility rating} is $\mathscr{O}(1)$. (eq. \ref{eq:trajectoryReachibility}, \ref{eq:cellReachibility}). The \emph{Recalculate Reachibility} operation applied $4\times$ have maximal \emph{complexity} boundary given as follow:
 
 \begin{equation*}
     \texttt{Recalculate Reachibility: } \mathscr{O}(4 \times (|nodes| + |cells|))

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  9 DEC 2018 13:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 17:01
 entering extended mode
 **./[CHB]-04-Problem-Statement.tex
 ([CHB]-04-Problem-Statement.tex
@@ -745,10 +745,6 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
 ([CHB]-04-Problem-Statement.aux)
 \openout1 = `[CHB]-04-Problem-Statement.aux'.
 
@@ -773,16 +769,16 @@ LaTeX Font Info:    ... okay on input line 249.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -871,30 +867,26 @@ Non-PDF special ignored!
 
 
 {C:/Users/H172461/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-[3] [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6])
-(04P03-Basic-Obstacle-Avoidance-Problem.tex
-Overfull \hbox (18.39131pt too wide) in paragraph at lines 15--16
+[3] [4] [5]) (04P03-Basic-Obstacle-Avoidance-Problem.tex [6]
+Overfull \hbox (35.17844pt too wide) in paragraph at lines 15--16
 []\OT1/cmr/m/n/12 Information sources $\OML/cmm/m/it/12 informationSource[]$\OT
 1/cmr/m/n/12 , $\OML/cmm/m/it/12 informationSource[]$\OT1/cmr/m/n/12 , $[] $, $
 \OML/cmm/m/it/12 informationSource[]$
  []
 
-[7]) (04P04-Initial-Assumptions.tex) (04P07-Incremental-Problem-Definition.tex
-[8]
+) (04P04-Initial-Assumptions.tex [7]) (04P07-Incremental-Problem-Definition.tex
 
-LaTeX Warning: Reference `s:missionControlRun' on page 9 undefined on input lin
+LaTeX Warning: Reference `s:missionControlRun' on page 8 undefined on input lin
 e 21.
 
 
-LaTeX Warning: Reference `s:aviudabceGridRun' on page 9 undefined on input line
+LaTeX Warning: Reference `s:aviudabceGridRun' on page 8 undefined on input line
  23.
 
+
+Underfull \vbox (badness 2753) has occurred while \output is active []
+
+ [8]
 
 LaTeX Warning: Reference `s:linearIntersectionModel' on page 9 undefined on inp
 ut line 48.
@@ -911,7 +903,10 @@ ut line 50.
 LaTeX Warning: Reference `s:virtualConstraints' on page 9 undefined on input li
 ne 53.
 
-[9]
+
+Underfull \vbox (badness 4713) has occurred while \output is active []
+
+ [9]
 
 LaTeX Warning: Reference `s:mapObstacles' on page 10 undefined on input line 88
 .
@@ -924,7 +919,10 @@ LaTeX Warning: Reference `fig:hindranceImpactOnVisibility' on page 10 undefined
 LaTeX Warning: Reference `s:virtualConstraints' on page 10 undefined on input l
 ine 90.
 
-[10]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
 
 LaTeX Warning: Reference `s:MovingVirtualConstraints' on page 11 undefined on i
 nput line 117.
@@ -937,16 +935,15 @@ LaTeX Warning: Reference `sec:weatherCase' on page 11 undefined on input line 1
 LaTeX Warning: Reference `sec:UASTrafficManagement' on page 11 undefined on inp
 ut line 144.
 
-[11]
 
-LaTeX Warning: Reference `s:RuleEngineArchitecture' on page 12 undefined on inp
+LaTeX Warning: Reference `s:RuleEngineArchitecture' on page 11 undefined on inp
 ut line 145.
 
 
-LaTeX Warning: Reference `sec:ruleImplementation' on page 12 undefined on input
+LaTeX Warning: Reference `sec:ruleImplementation' on page 11 undefined on input
  line 146.
 
-) (04P05-Avoidance-Requirements.tex [12]
+[11]) (04P05-Avoidance-Requirements.tex [12]
 
 LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 40.
 
@@ -1012,14 +1009,19 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (04P06-Navigation-Requirements.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18])
-([CHB]-04-Problem-Statement.bbl [19] [20
+ [18]
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\OT1/cmr/m/n/12 Constrained space
+ []
+
+) ([CHB]-04-Problem-Statement.bbl [19] [20
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 292.
  [21]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
- ([CHB]-04-Problem-Statement.aux)
+
+([CHB]-04-Problem-Statement.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 292.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 292.
 Package rerunfilecheck Info: File `[CHB]-04-Problem-Statement.out' has not chan
@@ -1032,13 +1034,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 292.
  ) 
 Here is how much of TeX's memory you used:
- 24377 strings out of 492973
+ 24376 strings out of 492973
  400260 string characters out of 3135926
- 576481 words of memory out of 3000000
- 27799 multiletter control sequences out of 15000+200000
+ 576441 words of memory out of 3000000
+ 27798 multiletter control sequences out of 15000+200000
  545336 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,14n,63p,660b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,14n,63p,660b,527s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
 ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/H17
 2461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/H172461/MiK
@@ -1052,7 +1054,7 @@ cmr8.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 s/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/H17246
 1/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/H172461/MiKTeX
  2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on [CHB]-04-Problem-Statement.pdf (21 pages, 281408 bytes).
+Output written on [CHB]-04-Problem-Statement.pdf (21 pages, 282218 bytes).
 PDF statistics:
  527 PDF objects out of 1000 (max. 8388607)
  180 named destinations out of 1000 (max. 500000)

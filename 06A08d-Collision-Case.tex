@@ -104,7 +104,7 @@ The \emph{Movement Automaton} can be used as trajectory prediction for system in
     Then prediction for UAS1 is $Prediction_1$ and for UAS 2 $Prediction_2$, the predictions are synchronized meaning that time at position $i$ is equal in both discrete trajectory matrices.
 \end{note}
 
-The \emph{collision distance} for predictor (eq. \ref{eq:statePredictionCollisionCase}) is given as minimal distance of projected synchronized trajectories for UAS1 and UAS2. In our discrete enviroment the \emph{collision distance} is given as (eq. \ref{eq:TrajectoryPredictionMinimalDistance}).
+\noindent The \emph{collision distance} for predictor (eq. \ref{eq:statePredictionCollisionCase}) is given as minimal distance of projected synchronized trajectories for UAS1 and UAS2. In our discrete enviroment the \emph{collision distance} is given as (eq. \ref{eq:TrajectoryPredictionMinimalDistance}).
 
 \begin{equation}\label{eq:TrajectoryPredictionMinimalDistance}
     collisionDistance = \min\left\{\norm{point_1-point_2}:\forall \left(\begin{gathered}point_1 \in Prediction_1,\\ point_2, \in Prediction_2,\\ t_1 \sim t_2 \end{gathered}\right)\right\} 
@@ -204,6 +204,22 @@ If \emph{Overtake maneuver} is case type of \emph{Head collision case} then \emp
     The \emph{Consistency of Avoidance Manuever} is ensured by enforcing \emph{head collision case} parameters. 
 \end{note}
 
+\begin{tabularx}{\textwidth}{S{0.25}|X}
+     \multicolumn{2}{c}{\textbf{Data for both attendants}}\\\hline
+     adjusted position &  predicted from previous \emph{position notifications} (\ref{tab:positionNotification}) data at time of \emph{UTM decision frame} start.\\
+     adjusted orientation & predicted from previous \emph{position notifications} (\ref{tab:positionNotification}), \emph{mission plan}, and \emph{expected velocity}.\\
+     velocity& proclaimed velocity for given \emph{UTM decision time frame}.\\
+     registration ID &  is unique registration number issued by local aviation authority\\
+     craft category & from \emph{position notifications} (\ref{tab:positionNotification}).\\
+     maneuverability &  from \emph{position notifications} (\ref{tab:positionNotification}).\\
+     mission plan & is acquired from \emph{allowed mission registers} where it has been  registered prior UAS flight\\
+     safety margins & list of all safety margins, derived based or craft categorization or overridden by \emph{position notifications} (\ref{tab:positionNotification}).\\
+     avoidance role & is given based on situation evaluation.\\
+     trajectory prediction & simulated based on \emph{position notification} (\ref{tab:positionNotification}) and \emph{mission plan}.\\
+     \caption{Collision case structure attendant data.}
+    \label{tab:dataForBothAttendants}
+\end{tabularx} 
+
 \paragraph{Collision Cases Merge} also known as \emph{Collision Point Adjustment Procedure} purpose it to \emph{merge} multiple collision cases into one general collision case. The clustering is used to identify \emph{airspace congestion events} \cite{bilimoria2005analysis}. Example of \emph{airspace clustering} is given it \cite{brinton2008airspace}.
 
 The main idea is to \emph{encapsulate multiple collision cases} into one virtual roundabout to ease \emph{traffic load} \cite{fouladvand2004characteristics}. The potential risk on \emph{turbo roundabouts} have been outlined in \cite{mauro2010potential}.
@@ -233,18 +249,9 @@ The \emph{smallest circle problem} defined and solved in \cite{ritter1990efficie
 
 %The parameters of single \emph{Collision Case} are given by (tab. \ref{tab:collisionCase}):
 
+\newpage    
+
 \begin{tabularx}{\textwidth}{S{0.25}|X}
-     \multicolumn{2}{c}{\textbf{Data for both attendants}}\\\hline
-     adjusted position &  predicted from previous \emph{position notifications} (\ref{tab:positionNotification}) data at time of \emph{UTM decision frame} start.\\
-     adjusted orientation & predicted from previous \emph{position notifications} (\ref{tab:positionNotification}), \emph{mission plan}, and \emph{expected velocity}.\\
-     velocity& proclaimed velocity for given \emph{UTM decision time frame}.\\
-     registration ID &  is unique registration number issued by local aviation authority\\
-     craft category & from \emph{position notifications} (\ref{tab:positionNotification}).\\
-     maneuverability &  from \emph{position notifications} (\ref{tab:positionNotification}).\\
-     mission plan & is acquired from \emph{allowed mission registers} where it has been  registered prior UAS flight\\
-     safety margins & list of all safety margins, derived based or craft categorization or overridden by \emph{position notifications} (\ref{tab:positionNotification}).\\
-     avoidance role & is given based on situation evaluation.\\
-     trajectory prediction & simulated based on \emph{position notification} (\ref{tab:positionNotification}) and \emph{mission plan}.\\
      \multicolumn{2}{c}{\textbf{Collision case calculated data}}\\\hline
      linear intersection & is predicted on attendants \emph{position}, \emph{heading},\emph{velocity}, based on \emph{maneuverability} certain thresholds are applied  to determine safety properties.\\
      trajectory intersection & is predicted on attendants \emph{position}, \emph{velocity}, \emph{heading}, and \emph{related mission plans}, based on \emph{maneuverability} certain thresholds are applied  to determine safety properties.\\

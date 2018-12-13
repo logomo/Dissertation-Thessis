@@ -29,7 +29,7 @@ The \emph{point} scanned by \emph{LiDAR}, where \emph{UAS position} is center of
         \item \emph{Vertical Range} - bounded by $vertical^\circ_{start}$ $<$ $vertical^\circ_{start}$ $\in$ $]-\pi,\pi]$.
     \end{enumerate}
     
-    \noindent The \emph{bounded space} for \emph{cell} is defined as:
+    \newpage\noindent The \emph{bounded space} for \emph{cell} is defined as:
     
     \begin{multline}\label{eq:boundedSpaceCell}
         Bounded Space(cell)=\dots\\
@@ -73,12 +73,7 @@ The \emph{point} scanned by \emph{LiDAR}, where \emph{UAS position} is center of
 
 \paragraph{Effective Operation Space - Avoidance Grid:} Let start with example, the UAS  (fig. \ref{fig:LidarSpaceSegmentation}). 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.80\linewidth]{\FIGDIR/TE046LiDARRasterRange} 
-    \caption{Example: The \emph{LiDAR} reading segmentation - cells.}
-    \label{fig:LidarSpaceSegmentation}
-\end{figure}
+
 
 The \emph{full LiDAR Swipe} (cyan and red lines) of \emph{UAS} (blue plane) has \emph{shape} of conical cylinder. Under \emph{ideal circumstances} the \emph{LiDAR swipe} would have \emph{ball shape}, but in real cases the \emph{craft body portion} where \emph{LiDAR} is mounted is unused.
 
@@ -96,6 +91,12 @@ The \emph{frontal portion} (red line) is a set of cells where \emph{UAS} can mak
         \item Airworthiness requirements - the \emph{regulations} can impose some minimal requirements on \emph{effective space boundary}.
 \end{enumerate}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.80\linewidth]{\FIGDIR/TE046LiDARRasterRange} 
+    \caption{Example: The \emph{LiDAR} reading segmentation - cells.}
+    \label{fig:LidarSpaceSegmentation}
+\end{figure}
 
 \begin{definition}{Avoidance Grid}\label{def:AvoidanceGrid} The \emph{effective space boundary} (fig. \ref{fig:LidarSpaceSegmentation} red lines) given by a portion of space in UAS local polar coordinate frame, bounded by:
     \begin{enumerate}
@@ -112,7 +113,7 @@ The \emph{frontal portion} (red line) is a set of cells where \emph{UAS} can mak
     \end{aligned};\quad i\in 1\dots I
 \end{equation}
 
-\noindent Layer horizontal/vertical separations separations defined by horizontal/vertically cell count:
+\newpage\noindent Layer horizontal/vertical separations separations defined by horizontal/vertically cell count:
 
 \begin{equation}\label{eq:avoidanceGridCellHorizontalRange}
     \begin{aligned}
@@ -128,7 +129,7 @@ The \emph{frontal portion} (red line) is a set of cells where \emph{UAS} can mak
     \end{aligned};\quad k\in 1\dots K
 \end{equation}
 
-Then $cell_{i,j,k}$ given by (def. \ref{def:cell}) is member cell of Avoidance Grid for boundaries:
+\noindent Then $cell_{i,j,k}$ given by (def. \ref{def:cell}) is member cell of Avoidance Grid for boundaries:
 \begin{enumerate}
     \item \emph{Cell Distance Range} (eq. \ref{eq:avoidanceGridCellDistanceRange}) depending on layer index $i$.
     

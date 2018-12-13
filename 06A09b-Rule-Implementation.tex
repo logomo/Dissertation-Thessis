@@ -9,11 +9,6 @@
     \label{fig:RuleEngineInstanceLevels}
 \end{figure}
 
-\begin{note}
-    The \emph{Weather Case} (sec. \ref{sec:weatherCase}) is handled in similar manner. The mission control loop (fig. \ref{fig:missionControlRunActivityDiagram}) have rules with separate \emph{Decision Points} to enforce \emph{hard constraints} (before step 9.) and \emph{soft constraints} (before step 10.).
-\end{note}
-
-
 \paragraph{Decision Points:} The \emph{Decisions} are bounded to \emph{Mission Control Run Process} (fig. \ref{fig:missionControlRunActivityDiagram}) in following manner:
 \begin{enumerate}
     \item \emph{Before Avoidance Run} (before step 7.) - Context: \emph{Mission Control} (Received Collision Cases) - the \emph{UTM} can send  directives. It is required to find which ones are impacting our \emph{UAS}.
@@ -23,6 +18,10 @@
     \item \emph{After Avoidance Run} (after step 11.) - Context: \emph{Mission Control} (Collision Case Resolutions) - our \emph{UAS} will update the status of \emph{Collision Cases} then it checks the \emph{avoidance conditions}. The \emph{Resolution Notification} resolution notifications are sent to UTM afterwards.
     
 \end{enumerate}
+
+\begin{note}
+    The \emph{Weather Case} (sec. \ref{sec:weatherCase}) is handled in similar manner. The mission control loop (fig. \ref{fig:missionControlRunActivityDiagram}) have rules with separate \emph{Decision Points} to enforce \emph{hard constraints} (before step 9.) and \emph{soft constraints} (before step 10.).
+\end{note}
 
 \paragraph{Road map:} The \emph{implemented rules}(cyan) are separated into following categories:
 \begin{enumerate}
