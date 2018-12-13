@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  11 DEC 2018 10:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 16:46
 entering extended mode
 **./[SB]-06-02-Model-Automaton.tex
 ([SB]-06-02-Model-Automaton.tex
@@ -745,10 +745,6 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
 ([SB]-06-02-Model-Automaton.aux)
 \openout1 = `[SB]-06-02-Model-Automaton.aux'.
 
@@ -773,16 +769,16 @@ LaTeX Font Info:    ... okay on input line 249.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -871,38 +867,36 @@ Non-PDF special ignored!
 ]
 
 LaTeX Warning: Reference `def:movementAutomaton' on page 2 undefined on input l
-ine 66.
+ine 67.
 
 
 LaTeX Warning: Reference `def:MovementPrimitive' on page 2 undefined on input l
-ine 68.
+ine 69.
 
 
 LaTeX Warning: Reference `eq:movementPrimitive' on page 2 undefined on input li
-ne 68.
+ne 69.
 
 
 LaTeX Warning: Reference `def:movementTransition' on page 2 undefined on input 
-line 74.
+line 75.
 
 
-LaTeX Warning: Reference `def:Movement' on page 2 undefined on input line 80.
+LaTeX Warning: Reference `def:Movement' on page 2 undefined on input line 81.
 
 [2]
-Underfull \vbox (badness 1178) has occurred while \output is active []
 
- [3]
-
-LaTeX Warning: Reference `def:MovementAutomatonTrajectory' on page 4 undefined 
-on input line 178.
+LaTeX Warning: Reference `def:MovementAutomatonTrajectory' on page 3 undefined 
+on input line 179.
 
 
-LaTeX Warning: Reference `def:MovementBuffer' on page 4 undefined on input line
- 178.
+LaTeX Warning: Reference `def:MovementBuffer' on page 3 undefined on input line
+ 179.
 
+[3]
 
 LaTeX Warning: Reference `def:movementAutomaton' on page 4 undefined on input l
-ine 211.
+ine 212.
 
 [4] [5] [6] [7]) ([SB]-06-02-Model-Automaton.bbl [8])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
@@ -924,13 +918,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 24135 strings out of 492973
+ 24134 strings out of 492973
  395990 string characters out of 3135926
- 572275 words of memory out of 3000000
- 27695 multiletter control sequences out of 15000+200000
+ 573235 words of memory out of 3000000
+ 27694 multiletter control sequences out of 15000+200000
  542569 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,15n,63p,518b,437s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,15n,63p,518b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
 ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/H17
 2461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/H172461/MiK
@@ -942,7 +936,7 @@ e1/public/amsfonts/cm/cmmi8.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public
 .pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/
 Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/H1
 72461/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on [SB]-06-02-Model-Automaton.pdf (9 pages, 191756 bytes).
+Output written on [SB]-06-02-Model-Automaton.pdf (9 pages, 191845 bytes).
 PDF statistics:
  243 PDF objects out of 1000 (max. 8388607)
  72 named destinations out of 1000 (max. 500000)
