@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  11 DEC 2018 13:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 15:49
 entering extended mode
 **./[SB]-06-08-UTM.tex
 ([SB]-06-08-UTM.tex
@@ -745,10 +745,6 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
 ([SB]-06-08-UTM.aux)
 \openout1 = `[SB]-06-08-UTM.aux'.
 
@@ -773,16 +769,16 @@ LaTeX Font Info:    ... okay on input line 249.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -874,7 +870,7 @@ File: ./Pics/RE002UTMCommunicationDiagram.png Graphic file (type png)
 <use ./Pics/RE002UTMCommunicationDiagram.png>
 Package pdftex.def Info: ./Pics/RE002UTMCommunicationDiagram.png  used on input
  line 29.
-(pdftex.def)             Requested size: 328.82706pt x 180.63329pt.
+(pdftex.def)             Requested size: 317.07613pt x 174.17697pt.
 )
 (06A08f-Cooperative-Resolution.tex [2 <./Pics/RE002UTMCommunicationDiagram.png>
 ]
@@ -883,9 +879,9 @@ File: ./Pics/RE003CooperativeResolution.png Graphic file (type png)
 <use ./Pics/RE003CooperativeResolution.png>
 Package pdftex.def Info: ./Pics/RE003CooperativeResolution.png  used on input l
 ine 14.
-(pdftex.def)             Requested size: 328.82706pt x 224.67162pt.
- [3 <./Pics/RE003CooperativeResolution.png>])
-(06A08g-Non-Cooperative-Resolution.tex
+(pdftex.def)             Requested size: 317.07613pt x 216.643pt.
+) (06A08g-Non-Cooperative-Resolution.tex [3 <./Pics/RE003CooperativeResolution.
+png>]
 
 LaTeX Warning: Reference `s:bodyvolumeIntersection' on page 4 undefined on inpu
 t line 26.
@@ -900,39 +896,40 @@ File: ./Pics/RE004NonCooperativeResolution.png Graphic file (type png)
 <use ./Pics/RE004NonCooperativeResolution.png>
 Package pdftex.def Info: ./Pics/RE004NonCooperativeResolution.png  used on inpu
 t line 46.
-(pdftex.def)             Requested size: 328.82706pt x 210.56418pt.
- [5 <./Pics/RE004NonCooperativeResolution.png>]
+(pdftex.def)             Requested size: 317.07613pt x 203.03575pt.
 
-LaTeX Warning: Reference `s:testEmergencyMixed' on page 6 undefined on input li
+
+LaTeX Warning: Reference `s:testEmergencyMixed' on page 5 undefined on input li
 ne 61.
 
-) (06A08h-Collision-Case-Resolution.tex
-<./Pics/RE008HeadOnApproach01.png, id=180, 644.6484pt x 328.5876pt>
+) (06A08h-Collision-Case-Resolution.tex [5 <./Pics/RE004NonCooperativeResolutio
+n.png>]
+<./Pics/RE008HeadOnApproach01.png, id=181, 644.6484pt x 328.5876pt>
 File: ./Pics/RE008HeadOnApproach01.png Graphic file (type png)
 <use ./Pics/RE008HeadOnApproach01.png>
 Package pdftex.def Info: ./Pics/RE008HeadOnApproach01.png  used on input line 2
 3.
-(pdftex.def)             Requested size: 186.37273pt x 94.99715pt.
-<./Pics/RE009HeadOnApproach02.png, id=181, 686.0832pt x 410.4936pt>
+(pdftex.def)             Requested size: 183.44144pt x 93.50304pt.
+<./Pics/RE009HeadOnApproach02.png, id=182, 686.0832pt x 410.4936pt>
 File: ./Pics/RE009HeadOnApproach02.png Graphic file (type png)
 <use ./Pics/RE009HeadOnApproach02.png>
 Package pdftex.def Info: ./Pics/RE009HeadOnApproach02.png  used on input line 2
 9.
 (pdftex.def)             Requested size: 158.76941pt x 94.99405pt.
  [6 <./Pics/RE008HeadOnApproach01.png> <./Pics/RE009HeadOnApproach02.png>] [7]
-<./Pics/RE005ConvergingManeuver01.png, id=225, 487.5816pt x 418.2024pt>
+<./Pics/RE005ConvergingManeuver01.png, id=229, 487.5816pt x 418.2024pt>
 File: ./Pics/RE005ConvergingManeuver01.png Graphic file (type png)
 <use ./Pics/RE005ConvergingManeuver01.png>
 Package pdftex.def Info: ./Pics/RE005ConvergingManeuver01.png  used on input li
 ne 95.
 (pdftex.def)             Requested size: 122.4159pt x 104.99702pt.
-<./Pics/RE006ConvergingManuever02.png, id=226, 493.3632pt x 418.2024pt>
+<./Pics/RE006ConvergingManuever02.png, id=230, 493.3632pt x 418.2024pt>
 File: ./Pics/RE006ConvergingManuever02.png Graphic file (type png)
 <use ./Pics/RE006ConvergingManuever02.png>
 Package pdftex.def Info: ./Pics/RE006ConvergingManuever02.png  used on input li
 ne 101.
 (pdftex.def)             Requested size: 123.86746pt x 104.99702pt.
-<./Pics/RE007ConvergingManuever03.png, id=227, 429.7656pt x 359.4228pt>
+<./Pics/RE007ConvergingManuever03.png, id=231, 429.7656pt x 359.4228pt>
 File: ./Pics/RE007ConvergingManuever03.png Graphic file (type png)
 <use ./Pics/RE007ConvergingManuever03.png>
 Package pdftex.def Info: ./Pics/RE007ConvergingManuever03.png  used on input li
@@ -940,51 +937,72 @@ ne 107.
 (pdftex.def)             Requested size: 125.5469pt x 104.99774pt.
  [8 <./Pics/RE005ConvergingManeuver01.png> <./Pics/RE006ConvergingManuever02.pn
 g> <./Pics/RE007ConvergingManuever03.png>]
-<./Pics/RE010OvertakeMAnuever01.png, id=250, 384.4764pt x 446.1468pt>
+<./Pics/RE010OvertakeMAnuever01.png, id=253, 384.4764pt x 446.1468pt>
 File: ./Pics/RE010OvertakeMAnuever01.png Graphic file (type png)
 <use ./Pics/RE010OvertakeMAnuever01.png>
 Package pdftex.def Info: ./Pics/RE010OvertakeMAnuever01.png  used on input line
  145.
 (pdftex.def)             Requested size: 122.37202pt x 142.00063pt.
-<./Pics/RE011OvertakeMAnuever02.png, id=251, 291.9708pt x 444.2196pt>
+<./Pics/RE011OvertakeMAnuever02.png, id=254, 291.9708pt x 444.2196pt>
 File: ./Pics/RE011OvertakeMAnuever02.png Graphic file (type png)
 <use ./Pics/RE011OvertakeMAnuever02.png>
 Package pdftex.def Info: ./Pics/RE011OvertakeMAnuever02.png  used on input line
  150.
 (pdftex.def)             Requested size: 93.33455pt x 142.00406pt.
-<./Pics/RE012OvertakeMAnuever03.png, id=252, 405.6756pt x 437.4744pt>
+<./Pics/RE012OvertakeMAnuever03.png, id=255, 405.6756pt x 437.4744pt>
 File: ./Pics/RE012OvertakeMAnuever03.png Graphic file (type png)
 <use ./Pics/RE012OvertakeMAnuever03.png>
 Package pdftex.def Info: ./Pics/RE012OvertakeMAnuever03.png  used on input line
  155.
-(pdftex.def)             Requested size: 131.67587pt x 141.99725pt.
+(pdftex.def)             Requested size: 130.45642pt x 140.68222pt.
  [9 <./Pics/RE010OvertakeMAnuever01.png> <./Pics/RE011OvertakeMAnuever02.png> <
-./Pics/RE012OvertakeMAnuever03.png>]) (06A08c-Position-Notification.tex
-[10] [11] [12]) (06A08d-Collision-Case.tex [13] [14] [15] [16] [17]
+./Pics/RE012OvertakeMAnuever03.png>]) (06A08c-Position-Notification.tex [10]
+Underfull \hbox (badness 1412) in paragraph at lines 49--50
+[]\OT1/cmr/m/it/12 Full con-trol/No propul-sion \OT1/cmr/m/n/12 (Glid-ers of an
+y sort) - the glid-ers can con-trol
+ []
 
-LaTeX Warning: Reference `sec:ruleEngine' on page 18 undefined on input line 19
-6.
-
-[18] [19]) (06A08e-Weather-Case.tex
-
-LaTeX Warning: Reference `eq:weatherProjection' on page 20 undefined on input l
-ine 2.
+[11]
+Underfull \hbox (badness 4144) in paragraph at lines 85--85
+[]|\OT1/cmr/m/n/12 secondary cat-e-go-riza-tion spec-i-fy-ing size class, hor-i
+-zon-
+ []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
+ [12])
+(06A08d-Collision-Case.tex
+Underfull \hbox (badness 1755) in paragraph at lines 17--18
+ []\OT1/cmr/bx/n/12 Resolution/Mandate En-force-ment:[] \OT1/cmr/m/it/12 En-for
+ce-ment pro-ce-dure \OT1/cmr/m/n/12 is con-sist-ing from
+ []
+
+[13]
+Underfull \vbox (badness 1226) has occurred while \output is active []
+
+ [14]
+[15] [16] [17]
+
+LaTeX Warning: Reference `sec:ruleEngine' on page 18 undefined on input line 19
+6.
+
+[18] [19]) (06A08e-Weather-Case.tex [20]
+
+LaTeX Warning: Reference `eq:weatherProjection' on page 21 undefined on input l
+ine 3.
+
 
 LaTeX Warning: Reference `def:segmentMovementAutomaton' on page 21 undefined on
- input line 5.
+ input line 6.
 
 
 LaTeX Warning: Reference `s:virtualConstraints' on page 21 undefined on input l
-ine 22.
+ine 23.
 
 
 LaTeX Warning: Reference `s:MovingVirtualConstraints' on page 21 undefined on i
-nput line 22.
+nput line 23.
 
 [21]) ([SB]-06-08-UTM.bbl [22] [23
 
@@ -1004,13 +1022,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
  ) 
 Here is how much of TeX's memory you used:
- 24518 strings out of 492973
+ 24517 strings out of 492973
  403883 string characters out of 3135926
- 589706 words of memory out of 3000000
- 27861 multiletter control sequences out of 15000+200000
+ 585666 words of memory out of 3000000
+ 27860 multiletter control sequences out of 15000+200000
  547493 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,14n,63p,640b,555s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,14n,63p,640b,565s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1030,7 +1048,7 @@ s/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmtt10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msam10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb>
-Output written on [SB]-06-08-UTM.pdf (25 pages, 2445400 bytes).
+Output written on [SB]-06-08-UTM.pdf (25 pages, 2445599 bytes).
 PDF statistics:
  632 PDF objects out of 1000 (max. 8388607)
  245 named destinations out of 1000 (max. 500000)

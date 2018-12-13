@@ -104,7 +104,7 @@ The \emph{Movement Automaton} can be used as trajectory prediction for system in
     Then prediction for UAS1 is $Prediction_1$ and for UAS 2 $Prediction_2$, the predictions are synchronized meaning that time at position $i$ is equal in both discrete trajectory matrices.
 \end{note}
 
-The \emph{collision distance} for predictor (eq. \ref{eq:statePredictionCollisionCase}) is given as minimal distance of projected synchronized trajectories for UAS1 and UAS2. In our discrete enviroment the \emph{collision distance} is given as (eq. \ref{eq:TrajectoryPredictionMinimalDistance}).
+\noindent The \emph{collision distance} for predictor (eq. \ref{eq:statePredictionCollisionCase}) is given as minimal distance of projected synchronized trajectories for UAS1 and UAS2. In our discrete enviroment the \emph{collision distance} is given as (eq. \ref{eq:TrajectoryPredictionMinimalDistance}).
 
 \begin{equation}\label{eq:TrajectoryPredictionMinimalDistance}
     collisionDistance = \min\left\{\norm{point_1-point_2}:\forall \left(\begin{gathered}point_1 \in Prediction_1,\\ point_2, \in Prediction_2,\\ t_1 \sim t_2 \end{gathered}\right)\right\} 
@@ -249,7 +249,7 @@ The \emph{smallest circle problem} defined and solved in \cite{ritter1990efficie
 
 %The parameters of single \emph{Collision Case} are given by (tab. \ref{tab:collisionCase}):
 
-    
+\newpage    
 
 \begin{tabularx}{\textwidth}{S{0.25}|X}
      \multicolumn{2}{c}{\textbf{Collision case calculated data}}\\\hline
