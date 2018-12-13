@@ -9,7 +9,7 @@
     uasStatus\times positionNotification\times utmTimeFrame\to UASCollisionCases
 \end{equation}
 
-Then UAS merges \emph{own collision cases} with \emph{UTM collision cases}, if there exist following disparities UAS will take action:
+\noindent Then UAS merges \emph{own collision cases} with \emph{UTM collision cases}, if there exist following disparities UAS will take action:
 \begin{enumerate}
     \item $distamce(ownCollisionPoint,utmCollisionPoint)\ge threshold$, send UTM notificaiton, use \emph{utmCollisionPoint}
     \item $utmMargin \ge ownMargin$, use safety margin from UTM.
@@ -40,6 +40,7 @@ Then UAS merges \emph{own collision cases} with \emph{UTM collision cases}, if t
     During \emph{slow-down} UAS switchs to \emph{emergency avoidance mode} and asks for \emph{divergence order} from UTM.
 \end{itemize}
 
+\newpage
 \noindent The rule is summarized in table \ref{tab:ruleDetectCollisionCases}.
 
 \begin{tabularx}{\textwidth}{|X|X|X|}
@@ -94,7 +95,7 @@ Then UAS merges \emph{own collision cases} with \emph{UTM collision cases}, if t
     \item \emph{UAS avoidance role} - \emph{Head on Approach} is favored upon \emph{Converging maneuver}, due to direct collision severity.
 \end{enumerate}
 
-\emph{Rule engine invocation} for each \emph{active collision case} is then applied on \emph{descending severity sorted} list. 
+\noindent \emph{Rule engine invocation} for each \emph{active collision case} is then applied on \emph{descending severity sorted} list. 
 
 
 
@@ -222,6 +223,7 @@ It is assumed that UAS is in \emph{cooperative avoidance mode}. If previous appl
     \item \emph{Surrounding air-traffic} - contributes to round-abound center median point, determines ideal \emph{ideal avoidance margins} due to \emph{wake turbulence} prevention.
 \end{enumerate}
 
+\newpage
 \begin{tabularx}{\textwidth}{|X|X|X|}
 \hline\multicolumn{3}{|X|}{
     \begin{minipage} [t] {0.95\textwidth} 
@@ -509,6 +511,7 @@ The \emph{first condition} (\ref{eq:ruleTrajectoryPositionCondition}) says that 
 
 \noindent Figure \ref{fig:ruleRightPlaneHeadingGeneral}. shows \emph{enabled} (green line) and \emph{disabled} (red lines) \emph{trajectories} (left sub-figure). These trajectories are divided according to \emph{separation line} (magenta dashed line), given by \emph{vehicle position} and \emph{collision point} (magenta circle). \emph{Space segmentation} (right subfigure) show \emph{reachable} (green fill) \emph{unreachable} (red fill) space. Situation is shown for various \emph{collision point angles of approach} $\alpha$.
 
+\newpage
 \noindent Rule for right plane heading check is summarized in (tab. \ref{tab:ruleRightPlaneHeading}).   
 \begin{tabularx}{\textwidth}{|X|X|X|}
 \hline\multicolumn{3}{|X|}{
@@ -543,7 +546,6 @@ The \emph{first condition} (\ref{eq:ruleTrajectoryPositionCondition}) says that 
 \label{tab:ruleRightPlaneHeading}
 \end{tabularx}     
 
-\newpage
 \subsection{\secState{R}Rule: Enforce safety margin}\label{sec:ruleEnforceSafetyMargin}
 \noindent Rule \ref{tab:ruleRightPlaneHeading}. checks right plane heading for single mass point along \emph{trajectiories}. Rule needs to account \emph{body mass} of \emph{intruder} and UAS, other factors like safe distance, regulations etc. All mentioned factors are included in \emph{safety margin}. \emph{Safety margin} is applied as \emph{radius ball} around \emph{collision point}. 
 
