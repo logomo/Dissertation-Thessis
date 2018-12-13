@@ -64,7 +64,7 @@ The \emph{Map Obstacle} concept is taken from my \emph{master student work} \cit
     \label{fig:exampleExtractedMapObstacles}
 \end{figure} 
 
-\newpage\noindent The space covered by any obstacle  is non-empty by definition. There are following types of map charted obstacles which are implemented in framework:
+\noindent The space covered by any obstacle  is non-empty by definition. There are following types of map charted obstacles which are implemented in framework:
 
 \begin{enumerate}
     \item\emph{Ball obstacle $parameters=\varnothing$} - simple ball with center at $position$, with offset safety margin.
@@ -84,7 +84,7 @@ The \emph{Map Obstacle} concept is taken from my \emph{master student work} \cit
 
 \noindent The \emph{total margin} is combination of \emph{safety margin} and \emph{body margin} (in case of line, plane, cuboid obstacle). The \emph{selection} was implemented as standard cluster select, selecting 26  surrounding clusters around UAS + own UAS cluster.
 
-The \emph{compact obstacle representation} is transformed into \emph homogeneous point-cloud representations:
+\noindent The \emph{compact obstacle representation} is transformed into \emph homogeneous point-cloud representations:
 
 \begin{itemize}
     \item[1.]\emph{Body Point-cloud} - representing obstacle body approximation by geometrical shape (eq. \ref{eq:mapBodyPointCloud}). This point cloud is considered as hard constraints.
@@ -129,7 +129,7 @@ The \emph{intersection set} between \emph{point cloud} and $cell_{i,j,k}$ is def
     intersection(map,cell_{i,j,k}) =\dots\\\dots \{points \in \R^3: (point\to Avoidance Grid Frame) \in cell_{i,j,k}\}
 \end{multline}
 
-\noindent The \emph{map obstacle rating} for $cell_{i,j,k}$ and obstacle for our \emph{information source} is defined in (eq. \ref{eq:mapcellratingourMap}).
+\newpage \noindent The \emph{map obstacle rating} for $cell_{i,j,k}$ and obstacle for our \emph{information source} is defined in (eq. \ref{eq:mapcellratingourMap}).
 
 \begin{equation}\label{eq:mapcellratingourMap}
     map(cell_{i,j,k},obstacle) =\max\left\{ \sum_{\forall point\in intersection(map,cell_{i,j,k})}  point.rate , 1\right\}
