@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  9 DEC 2018 13:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 17:01
 entering extended mode
 **./[CHB]-03-Background-Theory.tex
 ([CHB]-03-Background-Theory.tex
@@ -745,10 +745,6 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
 ([CHB]-03-Background-Theory.aux)
 \openout1 = `[CHB]-03-Background-Theory.aux'.
 
@@ -773,16 +769,16 @@ LaTeX Font Info:    ... okay on input line 249.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -961,38 +957,49 @@ LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.7> not available
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.5> not available
 (Font)              size <5> substituted on input line 146.
 
-[8] [9] [10]
+[8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
 LaTeX Font Info:    Try loading font information for U+eus on input line 265.
- ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
+
+("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
 File: ueus.fd 2013/01/14 v3.01 Euler Script
-))
-(03B06-LiDAR.tex [11]
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10])
+(03B06-LiDAR.tex
 Underfull \hbox (badness 10000) in paragraph at lines 16--18
 
  []
 
-<./Pics/10_Lidar_sets1.PNG, id=334, 359.84438pt x 115.93312pt>
+[11]
+<./Pics/10_Lidar_sets1.PNG, id=340, 359.84438pt x 115.93312pt>
 File: ./Pics/10_Lidar_sets1.PNG Graphic file (type png)
 <use ./Pics/10_Lidar_sets1.PNG>
 Package pdftex.def Info: ./Pics/10_Lidar_sets1.PNG  used on input line 34.
-(pdftex.def)             Requested size: 190.24818pt x 61.29565pt.
-<./Pics/11_Lidar_sets2.PNG, id=336, 358.33875pt x 116.68594pt>
+(pdftex.def)             Requested size: 183.44948pt x 59.10387pt.
+<./Pics/11_Lidar_sets2.PNG, id=342, 358.33875pt x 116.68594pt>
 File: ./Pics/11_Lidar_sets2.PNG Graphic file (type png)
 <use ./Pics/11_Lidar_sets2.PNG>
 Package pdftex.def Info: ./Pics/11_Lidar_sets2.PNG  used on input line 40.
-(pdftex.def)             Requested size: 190.24818pt x 61.95184pt.
-[12 <./Pics/10_Lidar_sets1.PNG> <./Pics/11_Lidar_sets2.PNG>])
-(03B07-Complements-of-Algebra.tex [13] [14] [15]
-<./Pics/80BallSpan.jpg, id=436, 337.26pt x 305.14pt>
+(pdftex.def)             Requested size: 183.44948pt x 59.73692pt.
+) (03B07-Complements-of-Algebra.tex [12 <./Pics/10_Lidar_sets1.PNG> <./Pics/11_
+Lidar_sets2.PNG>] [13] [14]
+<./Pics/80BallSpan.jpg, id=429, 337.26pt x 305.14pt>
 File: ./Pics/80BallSpan.jpg Graphic file (type jpg)
 <use ./Pics/80BallSpan.jpg>
 Package pdftex.def Info: ./Pics/80BallSpan.jpg  used on input line 156.
-(pdftex.def)             Requested size: 140.92793pt x 127.50606pt.
-<./Pics/81BallSpan2.png, id=437, 330.23375pt x 329.23pt>
+(pdftex.def)             Requested size: 135.89174pt x 122.95244pt.
+<./Pics/81BallSpan2.png, id=430, 330.23375pt x 329.23pt>
 File: ./Pics/81BallSpan2.png Graphic file (type png)
 <use ./Pics/81BallSpan2.png>
 Package pdftex.def Info: ./Pics/81BallSpan2.png  used on input line 161.
-(pdftex.def)             Requested size: 140.92793pt x 140.50111pt.
+(pdftex.def)             Requested size: 135.89174pt x 135.4825pt.
+ [15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [16 <./Pics/80BallSpan.jpg> <./Pics/81BallSpan2.png>]
 
 LaTeX Warning: Reference `s:detectedObstacles' on page 17 undefined on input li
@@ -1000,9 +1007,9 @@ ne 211.
 
 ) ([CHB]-03-Background-Theory.bbl [17] [18
 
-] [19] [20] [21])
+] [19] [20])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
- [22]
+ [21]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
 
 ([CHB]-03-Background-Theory.aux)
@@ -1022,13 +1029,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 291.
  ) 
 Here is how much of TeX's memory you used:
- 24544 strings out of 492973
- 403842 string characters out of 3135926
- 575953 words of memory out of 3000000
- 27925 multiletter control sequences out of 15000+200000
+ 24542 strings out of 492973
+ 403835 string characters out of 3135926
+ 578910 words of memory out of 3000000
+ 27924 multiletter control sequences out of 15000+200000
  549705 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,16n,63p,795b,603s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,16n,63p,795b,557s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
 ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/H17
 2461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/H172461/MiK
@@ -1044,9 +1051,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/H172461/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/euler/eusm10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on [CHB]-03-Background-Theory.pdf (22 pages, 377999 bytes).
+Output written on [CHB]-03-Background-Theory.pdf (21 pages, 377558 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 213 named destinations out of 1000 (max. 500000)
+ 573 PDF objects out of 1000 (max. 8388607)
+ 212 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 

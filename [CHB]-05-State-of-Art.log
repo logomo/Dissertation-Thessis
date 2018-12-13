@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  9 DEC 2018 14:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 17:00
 entering extended mode
 **./[CHB]-05-State-of-Art.tex
 ([CHB]-05-State-of-Art.tex
@@ -745,10 +745,6 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
 ([CHB]-05-State-of-Art.aux)
 \openout1 = `[CHB]-05-State-of-Art.aux'.
 
@@ -773,16 +769,16 @@ LaTeX Font Info:    ... okay on input line 249.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -859,7 +855,15 @@ File: ./Pics/TE001BlockSchemeOfControlConcept.png Graphic file (type png)
 <use ./Pics/TE001BlockSchemeOfControlConcept.png>
 Package pdftex.def Info: ./Pics/TE001BlockSchemeOfControlConcept.png  used on i
 nput line 8.
-(pdftex.def)             Requested size: 375.80544pt x 287.6963pt.
+(pdftex.def)             Requested size: 362.37567pt x 277.41621pt.
+
+LaTeX Warning: Reference `s:SensorFusionDefinition' on page 1 undefined on inpu
+t line 23.
+
+
+LaTeX Warning: Reference `s:dataFusionDefinition' on page 1 undefined on input 
+line 23.
+
 [1
 Non-PDF special ignored!
 <special> header=psfrag.pro
@@ -869,14 +873,6 @@ Non-PDF special ignored!
 {C:/Users/H172461/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Pics/TE
 001BlockSchemeOfControlConcept.png>]
 
-LaTeX Warning: Reference `s:SensorFusionDefinition' on page 2 undefined on inpu
-t line 23.
-
-
-LaTeX Warning: Reference `s:dataFusionDefinition' on page 2 undefined on input 
-line 23.
-
-
 LaTeX Warning: Reference `def:movementAutomaton' on page 2 undefined on input l
 ine 45.
 
@@ -885,12 +881,12 @@ LaTeX Warning: Reference `eq:hybridAutomaton' on page 2 undefined on input line
  45.
 
 [2]
-<./Pics/TE030MovementAutomatonFrazzCite.png, id=100, 526.96875pt x 390.258pt>
+<./Pics/TE030MovementAutomatonFrazzCite.png, id=104, 526.96875pt x 390.258pt>
 File: ./Pics/TE030MovementAutomatonFrazzCite.png Graphic file (type png)
 <use ./Pics/TE030MovementAutomatonFrazzCite.png>
 Package pdftex.def Info: ./Pics/TE030MovementAutomatonFrazzCite.png  used on in
 put line 74.
-(pdftex.def)             Requested size: 258.36668pt x 191.34718pt.
+(pdftex.def)             Requested size: 249.13371pt x 184.50505pt.
 
 
 LaTeX Warning: Reference `s:MovementAutomatonDefinitionAndProperties' on page 3
@@ -904,16 +900,16 @@ LaTeX Warning: Reference `s:modelMAImplementation' on page 3 undefined on input
 LaTeX Warning: Reference `tab:testMovementOrientations' on page 3 undefined on 
 input line 81.
 
-[3 <./Pics/TE030MovementAutomatonFrazzCite.png>]
 
-LaTeX Warning: Reference `s:dataFusionDefinition' on page 4 undefined on input 
+LaTeX Warning: Reference `s:dataFusionDefinition' on page 3 undefined on input 
 line 89.
 
-[4]
+[3 <./Pics/TE030MovementAutomatonFrazzCite.png>]
 
-LaTeX Warning: Reference `s:missionControlRun' on page 5 undefined on input lin
+LaTeX Warning: Reference `s:missionControlRun' on page 4 undefined on input lin
 e 121.
 
+[4]
 
 LaTeX Warning: Reference `s:staticObstacles' on page 5 undefined on input line 
 123.
@@ -946,11 +942,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Warning: Reference `eq:hybridAutomaton' on page 5 undefined on input line
  137.
 
-[5]
 
-LaTeX Warning: Reference `s:missionControlRun' on page 6 undefined on input lin
+LaTeX Warning: Reference `s:missionControlRun' on page 5 undefined on input lin
 e 147.
 
+[5]
 
 LaTeX Warning: Reference `s:testRuleMixed' on page 6 undefined on input line 15
 1.
@@ -961,26 +957,27 @@ LaTeX Warning: Reference `s:testMaze' on page 6 undefined on input line 153.
 
 LaTeX Warning: Reference `ch:approach' on page 6 undefined on input line 155.
 
-<./Pics/TE028LattuceMovementSet01.png, id=208, 652.23676pt x 384.2355pt>
+<./Pics/TE028LattuceMovementSet01.png, id=213, 652.23676pt x 384.2355pt>
 File: ./Pics/TE028LattuceMovementSet01.png Graphic file (type png)
 <use ./Pics/TE028LattuceMovementSet01.png>
 Package pdftex.def Info: ./Pics/TE028LattuceMovementSet01.png  used on input li
 ne 172.
-(pdftex.def)             Requested size: 202.93097pt x 119.54562pt.
-<./Pics/TE029LattuceMovementSe02t.png, id=209, 652.23676pt x 384.2355pt>
+(pdftex.def)             Requested size: 195.67905pt x 115.27153pt.
+<./Pics/TE029LattuceMovementSe02t.png, id=214, 652.23676pt x 384.2355pt>
 File: ./Pics/TE029LattuceMovementSe02t.png Graphic file (type png)
 <use ./Pics/TE029LattuceMovementSe02t.png>
 Package pdftex.def Info: ./Pics/TE029LattuceMovementSe02t.png  used on input li
 ne 178.
-(pdftex.def)             Requested size: 202.93097pt x 119.54562pt.
-[6]
+(pdftex.def)             Requested size: 195.67905pt x 115.27153pt.
 
-LaTeX Warning: Reference `def:movementAutomaton' on page 7 undefined on input l
+LaTeX Warning: Reference `def:movementAutomaton' on page 6 undefined on input l
 ine 189.
 
 
-LaTeX Warning: Reference `s:KnownWorld' on page 7 undefined on input line 191.
+LaTeX Warning: Reference `s:KnownWorld' on page 6 undefined on input line 191.
 
+[6 <./Pics/TE028LattuceMovementSet01.png> <./Pics/TE029LattuceMovementSe02t.png
+>]
 
 LaTeX Warning: Reference `s:constrainedTrajectoryExpansion' on page 7 undefined
  on input line 206.
@@ -993,30 +990,27 @@ t line 208.
 LaTeX Warning: Reference `eq:trajectoryTrackingOptimalizaitonProblem' on page 7
  undefined on input line 208.
 
-[7 <./Pics/TE028LattuceMovementSet01.png> <./Pics/TE029LattuceMovementSe02t.png
->]
 
-LaTeX Warning: Reference `def:movementAutomaton' on page 8 undefined on input l
+LaTeX Warning: Reference `def:movementAutomaton' on page 7 undefined on input l
 ine 212.
 
 
-LaTeX Warning: Reference `def:MovementBuffer' on page 8 undefined on input line
+LaTeX Warning: Reference `def:MovementBuffer' on page 7 undefined on input line
  212.
 
-<./Pics/TE036LSTSDeployment.png, id=260, 458.46281pt x 246.1697pt>
+[7]
+<./Pics/TE036LSTSDeployment.png, id=265, 458.46281pt x 246.1697pt>
 File: ./Pics/TE036LSTSDeployment.png Graphic file (type png)
 <use ./Pics/TE036LSTSDeployment.png>
 Package pdftex.def Info: ./Pics/TE036LSTSDeployment.png  used on input line 225
 .
-(pdftex.def)             Requested size: 422.77663pt x 227.01976pt.
-[8 <./Pics/TE036LSTSDeployment.png>]
-Underfull \vbox (badness 1052) has occurred while \output is active []
+(pdftex.def)             Requested size: 407.66832pt x 218.90627pt.
+ [8 <./Pics/TE036LSTSDeployment.png>]
 
- [9]
+LaTeX Warning: Reference `sec:ruleEngine' on page 9 undefined on input line 245
+.
 
-LaTeX Warning: Reference `sec:ruleEngine' on page 10 undefined on input line 24
-5.
-
+[9]
 
 LaTeX Warning: Reference `sec:UTM' on page 10 undefined on input line 254.
 
@@ -1024,24 +1018,23 @@ LaTeX Warning: Reference `sec:UTM' on page 10 undefined on input line 254.
 LaTeX Warning: Reference `sec:UASTrafficManagement' on page 10 undefined on inp
 ut line 254.
 
-[10]
-<./Pics/TE032FreeRoute.png, id=320, 221.628pt x 436.63126pt>
+<./Pics/TE032FreeRoute.png, id=305, 221.628pt x 436.63126pt>
 File: ./Pics/TE032FreeRoute.png Graphic file (type png)
 <use ./Pics/TE032FreeRoute.png>
-Package pdftex.def Info: ./Pics/TE032FreeRoute.png  used on input line 269.
-(pdftex.def)             Requested size: 135.2916pt x 266.53789pt.
-<./Pics/TE034Corridors.png, id=321, 223.43475pt x 436.63126pt>
+Package pdftex.def Info: ./Pics/TE032FreeRoute.png  used on input line 260.
+(pdftex.def)             Requested size: 130.45683pt x 257.01059pt.
+<./Pics/TE034Corridors.png, id=306, 223.43475pt x 436.63126pt>
 File: ./Pics/TE034Corridors.png Graphic file (type png)
 <use ./Pics/TE034Corridors.png>
-Package pdftex.def Info: ./Pics/TE034Corridors.png  used on input line 275.
-(pdftex.def)             Requested size: 135.2916pt x 264.39258pt.
-<./Pics/TE035FixedRoute.png, id=322, 224.037pt x 436.63126pt>
+Package pdftex.def Info: ./Pics/TE034Corridors.png  used on input line 266.
+(pdftex.def)             Requested size: 130.45683pt x 254.94522pt.
+<./Pics/TE035FixedRoute.png, id=307, 224.037pt x 436.63126pt>
 File: ./Pics/TE035FixedRoute.png Graphic file (type png)
 <use ./Pics/TE035FixedRoute.png>
-Package pdftex.def Info: ./Pics/TE035FixedRoute.png  used on input line 281.
-(pdftex.def)             Requested size: 135.2916pt x 263.67303pt.
-) ([CHB]-05-State-of-Art.bbl [11 <./Pics/TE032FreeRoute.png> <./Pics/TE034Corri
-dors.png> <./Pics/TE035FixedRoute.png>] [12
+Package pdftex.def Info: ./Pics/TE035FixedRoute.png  used on input line 272.
+(pdftex.def)             Requested size: 130.45683pt x 254.25233pt.
+[10 <./Pics/TE032FreeRoute.png> <./Pics/TE034Corridors.png> <./Pics/TE035FixedR
+oute.png>]) ([CHB]-05-State-of-Art.bbl [11] [12
 
 ] [13] [14] [15] [16] [17])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
@@ -1060,13 +1053,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 24466 strings out of 492973
+ 24465 strings out of 492973
  403976 string characters out of 3135926
- 571130 words of memory out of 3000000
- 27933 multiletter control sequences out of 15000+200000
+ 570089 words of memory out of 3000000
+ 27932 multiletter control sequences out of 15000+200000
  544602 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,8n,63p,1057b,675s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,8n,63p,1057b,691s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
 ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/H17
 2461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/H172461/MiK
@@ -1077,7 +1070,7 @@ amsfonts/cm/cmsl12.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C
 :/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on [CHB]-05-State-of-Art.pdf (18 pages, 833492 bytes).
+Output written on [CHB]-05-State-of-Art.pdf (18 pages, 833729 bytes).
 PDF statistics:
  436 PDF objects out of 1000 (max. 8388607)
  153 named destinations out of 1000 (max. 500000)
