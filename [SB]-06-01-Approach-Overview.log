@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  11 DEC 2018 09:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 16:48
 entering extended mode
 **./[SB]-06-01-Approach-Overview.tex
 ([SB]-06-01-Approach-Overview.tex
@@ -745,10 +745,6 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
 ([SB]-06-01-Approach-Overview.aux)
 \openout1 = `[SB]-06-01-Approach-Overview.aux'.
 
@@ -773,16 +769,16 @@ LaTeX Font Info:    ... okay on input line 249.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -861,7 +857,7 @@ File: ./Pics/RE001AvoidanceLevelsBasedOnReactionTime.png Graphic file (type png
 <use ./Pics/RE001AvoidanceLevelsBasedOnReactionTime.png>
 Package pdftex.def Info: ./Pics/RE001AvoidanceLevelsBasedOnReactionTime.png  us
 ed on input line 8.
-(pdftex.def)             Requested size: 328.82706pt x 86.94305pt.
+(pdftex.def)             Requested size: 317.07613pt x 83.83412pt.
 
 Package natbib Warning: Citation `prandini2008application' on page 1 undefined 
 on input line 23.
@@ -895,7 +891,7 @@ File: ./Pics/TE037ConceptualSchemeNew.jpg Graphic file (type jpg)
 <use ./Pics/TE037ConceptualSchemeNew.jpg>
 Package pdftex.def Info: ./Pics/TE037ConceptualSchemeNew.jpg  used on input lin
 e 32.
-(pdftex.def)             Requested size: 446.26581pt x 240.97615pt.
+(pdftex.def)             Requested size: 430.3181pt x 232.3635pt.
 
 LaTeX Warning: Reference `s:UASNonlinearModel' on page 2 undefined on input lin
 e 41.
@@ -928,14 +924,26 @@ t line 49.
 LaTeX Warning: Reference `s:uncertaintyIntersection' on page 2 undefined on inp
 ut line 49.
 
+[2 <./Pics/TE037ConceptualSchemeNew.jpg>]
 
-LaTeX Warning: Reference `s:virtualConstraints' on page 2 undefined on input li
+LaTeX Warning: Reference `s:virtualConstraints' on page 3 undefined on input li
 ne 55.
 
-[2 <./Pics/TE037ConceptualSchemeNew.jpg>]
 
 LaTeX Warning: Reference `s:MovingVirtualConstraints' on page 3 undefined on in
 put line 57.
+
+
+Underfull \hbox (badness 7047) in paragraph at lines 57--58
+[]\OT1/cmr/m/it/12 Weather In-for-ma-tion \OT1/cmr/m/n/12 (Static/Dynamic Re-st
+ric-tion Source) - im-pos-ing
+ []
+
+
+Underfull \hbox (badness 1997) in paragraph at lines 57--58
+\OT1/cmr/m/n/12 static/mo-vi-ng soft/hard con-straints on \OT1/cmr/m/it/12 Know
+n World\OT1/cmr/m/n/12 /\OT1/cmr/m/it/12 Operational Space\OT1/cmr/m/n/12 .
+ []
 
 
 LaTeX Warning: Reference `s:sensorFusion' on page 3 undefined on input line 62.
@@ -980,16 +988,15 @@ e 70.
 LaTeX Warning: Reference `sec:UASTrafficManagement' on page 3 undefined on inpu
 t line 74.
 
-[3]
 LaTeX Font Info:    Try loading font information for U+msa on input line 80.
- ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 80.
 
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+) [3])
 
 Package natbib Warning: There were undefined citations.
 
@@ -1009,19 +1016,19 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 269.
  ) 
 Here is how much of TeX's memory you used:
- 24086 strings out of 492973
+ 24085 strings out of 492973
  395225 string characters out of 3135926
- 567010 words of memory out of 3000000
- 27679 multiletter control sequences out of 15000+200000
+ 567970 words of memory out of 3000000
+ 27678 multiletter control sequences out of 15000+200000
  541964 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,63p,662b,568s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,6n,63p,662b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
 ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/H17
 2461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/H172461/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/H172461/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on [SB]-06-01-Approach-Overview.pdf (4 pages, 1096079 bytes).
+Output written on [SB]-06-01-Approach-Overview.pdf (4 pages, 1096154 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  37 named destinations out of 1000 (max. 500000)
