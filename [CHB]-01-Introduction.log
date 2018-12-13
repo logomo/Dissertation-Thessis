@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  9 DEC 2018 13:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 16:49
 entering extended mode
 **./[CHB]-01-Introduction.tex
 ([CHB]-01-Introduction.tex
@@ -745,10 +745,6 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
 ([CHB]-01-Introduction.aux)
 \openout1 = `[CHB]-01-Introduction.aux'.
 
@@ -773,16 +769,16 @@ LaTeX Font Info:    ... okay on input line 249.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -859,7 +855,7 @@ File: ./Pics/I001TrafficManagement.jpg Graphic file (type jpg)
 <use ./Pics/I001TrafficManagement.jpg>
 Package pdftex.def Info: ./Pics/I001TrafficManagement.jpg  used on input line 7
 .
-(pdftex.def)             Requested size: 422.77663pt x 189.39868pt.
+(pdftex.def)             Requested size: 407.66832pt x 182.63374pt.
 
 
 LaTeX Warning: Reference `sec:AirspaceClassification' on page 1 undefined on in
@@ -867,6 +863,13 @@ put line 12.
 
 
 LaTeX Warning: Reference `sec:WellClear' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Reference `sec:UTM' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Reference `sec:EventBasedAvoidance' on page 1 undefined on input
+ line 14.
 
 [1
 Non-PDF special ignored!
@@ -876,13 +879,6 @@ Non-PDF special ignored!
 
 {C:/Users/H172461/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Pics/I0
 01TrafficManagement.jpg>]
-
-LaTeX Warning: Reference `sec:UTM' on page 2 undefined on input line 14.
-
-
-LaTeX Warning: Reference `sec:EventBasedAvoidance' on page 2 undefined on input
- line 14.
-
 
 LaTeX Warning: Reference `sec:AircraftOperationRules' on page 2 undefined on in
 put line 18.
@@ -895,21 +891,17 @@ t line 18.
 LaTeX Warning: Reference `s:RuleEngineArchitecture' on page 2 undefined on inpu
 t line 18.
 
-<./Pics/I002FlightRules.png, id=66, 739.563pt x 421.575pt>
+<./Pics/I002FlightRules.png, id=67, 739.563pt x 421.575pt>
 File: ./Pics/I002FlightRules.png Graphic file (type png)
 <use ./Pics/I002FlightRules.png>
 Package pdftex.def Info: ./Pics/I002FlightRules.png  used on input line 24.
-(pdftex.def)             Requested size: 375.80544pt x 214.22847pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2 <./Pics/I002FlightRules.png>]
-<./Pics/I003DetectAndAvoid.png, id=80, 872.058pt x 466.1415pt>
+(pdftex.def)             Requested size: 362.37567pt x 206.57355pt.
+<./Pics/I003DetectAndAvoid.png, id=72, 872.058pt x 466.1415pt>
 File: ./Pics/I003DetectAndAvoid.png Graphic file (type png)
 <use ./Pics/I003DetectAndAvoid.png>
 Package pdftex.def Info: ./Pics/I003DetectAndAvoid.png  used on input line 33.
-(pdftex.def)             Requested size: 281.85587pt x 150.66199pt.
-
+(pdftex.def)             Requested size: 271.78348pt x 145.27765pt.
+[2 <./Pics/I002FlightRules.png>]
 
 LaTeX Warning: Reference `s:aviudabceGridRun' on page 3 undefined on input line
  47.
@@ -933,27 +925,26 @@ LaTeX Warning: Reference `s:AvoidanceGrid' on page 3 undefined on input line 59
 LaTeX Warning: Reference `sec:MovementAutomatonBackground' on page 3 undefined 
 on input line 59.
 
-[3 <./Pics/I003DetectAndAvoid.png>]
 
-LaTeX Warning: Reference `s:reachSet' on page 4 undefined on input line 61.
+LaTeX Warning: Reference `s:reachSet' on page 3 undefined on input line 61.
 
 
-LaTeX Warning: Reference `s:constrainedTrajectoryExpansion' on page 4 undefined
+LaTeX Warning: Reference `s:constrainedTrajectoryExpansion' on page 3 undefined
  on input line 61.
 
 
-LaTeX Warning: Reference `s:chaoticReachSet' on page 4 undefined on input line 
+LaTeX Warning: Reference `s:chaoticReachSet' on page 3 undefined on input line 
 61.
 
 
-LaTeX Warning: Reference `s:harmonicReachSet' on page 4 undefined on input line
+LaTeX Warning: Reference `s:harmonicReachSet' on page 3 undefined on input line
  61.
 
 
-LaTeX Warning: Reference `sec:collisionCase' on page 4 undefined on input line 
+LaTeX Warning: Reference `sec:collisionCase' on page 3 undefined on input line 
 61.
 
-) (01I03-Goals.tex
+) (01I03-Goals.tex [3 <./Pics/I003DetectAndAvoid.png>]
 
 LaTeX Warning: Reference `s:basicDefinitions' on page 4 undefined on input line
  4.
@@ -999,14 +990,14 @@ ine 8.
 LaTeX Warning: Reference `ch:backGroundTheory' on page 5 undefined on input lin
 e 10.
 
-[5]
 
-LaTeX Warning: Reference `c:problemStatement' on page 6 undefined on input line
+LaTeX Warning: Reference `c:problemStatement' on page 5 undefined on input line
  12.
 
 
-LaTeX Warning: Reference `ch:stateOfArt' on page 6 undefined on input line 14.
+LaTeX Warning: Reference `ch:stateOfArt' on page 5 undefined on input line 14.
 
+[5]
 
 LaTeX Warning: Reference `ch:approach' on page 6 undefined on input line 16.
 
@@ -1075,35 +1066,35 @@ line 32.
 LaTeX Warning: Reference `sec:reducedReachSetPerformance' on page 6 undefined o
 n input line 34.
 
-[6]
 
-LaTeX Warning: Reference `ch:Conclusion' on page 7 undefined on input line 37.
+LaTeX Warning: Reference `ch:Conclusion' on page 6 undefined on input line 37.
 
 ) (01I05-Contributions.tex
 
-LaTeX Warning: Reference `s:HybridAutomaton' on page 7 undefined on input line 
+LaTeX Warning: Reference `s:HybridAutomaton' on page 6 undefined on input line 
 7.
 
 
-LaTeX Warning: Reference `s:MovementAutomatonDefinitionAndProperties' on page 7
+LaTeX Warning: Reference `s:MovementAutomatonDefinitionAndProperties' on page 6
  undefined on input line 7.
 
 
-LaTeX Warning: Reference `s:UASNonlinearModel' on page 7 undefined on input lin
+LaTeX Warning: Reference `s:UASNonlinearModel' on page 6 undefined on input lin
 e 7.
 
 
-LaTeX Warning: Reference `s:movementAutomatonDefinition' on page 7 undefined on
+LaTeX Warning: Reference `s:movementAutomatonDefinition' on page 6 undefined on
  input line 7.
 
 
-LaTeX Warning: Reference `s:referenceTrajectoryGenerator' on page 7 undefined o
+LaTeX Warning: Reference `s:referenceTrajectoryGenerator' on page 6 undefined o
 n input line 7.
 
 
-LaTeX Warning: Reference `s:segmentedMovementAutomaton' on page 7 undefined on 
+LaTeX Warning: Reference `s:segmentedMovementAutomaton' on page 6 undefined on 
 input line 7.
 
+[6]
 
 LaTeX Warning: Reference `eq:ourTrajectoryImplementation' on page 7 undefined o
 n input line 9.
@@ -1156,43 +1147,43 @@ d on input line 17.
 LaTeX Warning: Reference `sec:nonCooperativeConflictResolution' on page 7 undef
 ined on input line 17.
 
-[7]
 
-LaTeX Warning: Reference `s:AvoidanceGrid' on page 8 undefined on input line 23
+LaTeX Warning: Reference `s:AvoidanceGrid' on page 7 undefined on input line 23
 .
 
 
-LaTeX Warning: Reference `fig:LidarSpaceSegmentation' on page 8 undefined on in
+LaTeX Warning: Reference `fig:LidarSpaceSegmentation' on page 7 undefined on in
 put line 23.
 
 
-LaTeX Warning: Reference `fig:P01CountOfLiDARHits' on page 8 undefined on input
+LaTeX Warning: Reference `fig:P01CountOfLiDARHits' on page 7 undefined on input
  line 23.
 
 
-LaTeX Warning: Reference `fig:P02OvershadowedMapobstacle' on page 8 undefined o
+LaTeX Warning: Reference `fig:P02OvershadowedMapobstacle' on page 7 undefined o
 n input line 23.
 
 
-LaTeX Warning: Reference `fig:rapidExplorationTrajectoryTree' on page 8 undefin
+LaTeX Warning: Reference `fig:rapidExplorationTrajectoryTree' on page 7 undefin
 ed on input line 25.
 
 
-LaTeX Warning: Reference `alg:Wavefront Propagation' on page 8 undefined on inp
+LaTeX Warning: Reference `alg:Wavefront Propagation' on page 7 undefined on inp
 ut line 25.
 
 
 LaTeX Warning: Reference `alg:ExpansionConstraintFunctionForChaoticReachSet' on
- page 8 undefined on input line 25.
+ page 7 undefined on input line 25.
 
 
 LaTeX Warning: Reference `alg:ExpansionConstraintFunctionForHarmonicReachSet' o
-n page 8 undefined on input line 25.
+n page 7 undefined on input line 25.
 
 
 LaTeX Warning: Reference `alg:ExpansionConstraintFunctionForACASLikeReachSet' o
-n page 8 undefined on input line 25.
+n page 7 undefined on input line 25.
 
+[7]
 
 LaTeX Warning: Reference `s:staticObstacles' on page 8 undefined on input line 
 27.
@@ -1218,21 +1209,28 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 6.
 
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [8] [9]
+) [8]
+Underfull \vbox (badness 1320) has occurred while \output is active []
+
+ [9]
+Overfull \hbox (2.41861pt too wide) in paragraph at lines 31--31
+[][]\OT1/cmr/m/n/10 Public copy avail-able on-line: []$\OT1/cmtt/m/n/10 https :
+ / / github . com / logomo / Predictive-[]control-[]-[]-[]Final-[]report$[]| 
+ []
+
 
 LaTeX Warning: Reference `sec:MovementAutomatonBackground' on page 10 undefined
  on input line 33.
 
-[10]
 
 LaTeX Warning: Reference `eq:trajectoryTrackingOptimalizaitonProblem' on page 1
-1 undefined on input line 37.
+0 undefined on input line 37.
 
 
-LaTeX Warning: Reference `s:AvoidanceRequirements' on page 11 undefined on inpu
+LaTeX Warning: Reference `s:AvoidanceRequirements' on page 10 undefined on inpu
 t line 37.
 
-) ([CHB]-01-Introduction.bbl [11] [12
+[10]) ([CHB]-01-Introduction.bbl [11] [12
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 25--29
@@ -1268,13 +1266,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 285.
  ) 
 Here is how much of TeX's memory you used:
- 24321 strings out of 492973
+ 24320 strings out of 492973
  399735 string characters out of 3135926
- 568536 words of memory out of 3000000
- 27809 multiletter control sequences out of 15000+200000
+ 569496 words of memory out of 3000000
+ 27808 multiletter control sequences out of 15000+200000
  546757 words of font info for 77 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,8n,63p,1351b,574s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,8n,63p,1351b,507s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1308,7 +1306,7 @@ blic/amsfonts/cm/cmr8.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmsl12.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mti12.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on [CHB]-01-Introduction.pdf (14 pages, 1098845 bytes).
+Output written on [CHB]-01-Introduction.pdf (14 pages, 1098839 bytes).
 PDF statistics:
  306 PDF objects out of 1000 (max. 8388607)
  112 named destinations out of 1000 (max. 500000)
