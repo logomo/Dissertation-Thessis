@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  11 DEC 2018 12:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 16:08
 entering extended mode
 **./[SB]-06-07-Avoidance-Core.tex
 ([SB]-06-07-Avoidance-Core.tex
@@ -745,10 +745,6 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
 ([SB]-06-07-Avoidance-Core.aux)
 \openout1 = `[SB]-06-07-Avoidance-Core.aux'.
 
@@ -773,16 +769,16 @@ LaTeX Font Info:    ... okay on input line 249.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -908,284 +904,291 @@ LaTeX Warning: Reference `eq:setOfPassedCells' on page 3 undefined on input lin
 e 84.
 
 [3]
-Underfull \vbox (badness 3838) has occurred while \output is active []
 
- [4]
-
-LaTeX Warning: Reference `eq:DataFusionFunction' on page 5 undefined on input l
+LaTeX Warning: Reference `eq:DataFusionFunction' on page 4 undefined on input l
 ine 134.
 
-[5]) (06A07a-Avoidance-Grid-Run.tex [6]
-<./Pics/CA001ObstacleDetection.png, id=137, 1069.596pt x 780.516pt>
+[4]
+Underfull \hbox (badness 1210) in paragraph at lines 159--160
+\OT1/cmr/m/n/12 The \OT1/cmr/m/it/12 Free \OT1/cmr/m/n/12 space is the space wh
+ich is \OT1/cmr/m/it/12 Vis-i-ble \OT1/cmr/m/n/12 and $\OMS/cmsy/m/n/12 :\OML/c
+mm/m/it/12 Obstacle$\OT1/cmr/m/n/12 , $\OMS/cmsy/m/n/12 :\OML/cmm/m/it/12 Intru
+der$\OT1/cmr/m/n/12 , and,
+ []
+
+[5]) (06A07a-Avoidance-Grid-Run.tex
+
+LaTeX Warning: Reference `eq:trajectoryTree' on page 6 undefined on input line 
+18.
+
+
+LaTeX Warning: Reference `def:PrunedReachSet' on page 6 undefined on input line
+ 18.
+
+<./Pics/CA001ObstacleDetection.png, id=151, 1069.596pt x 780.516pt>
 File: ./Pics/CA001ObstacleDetection.png Graphic file (type png)
 <use ./Pics/CA001ObstacleDetection.png>
 Package pdftex.def Info: ./Pics/CA001ObstacleDetection.png  used on input line 
-12.
-(pdftex.def)             Requested size: 202.93097pt x 148.0852pt.
-<./Pics/CA002UncertainityAssesment.png, id=139, 1069.596pt x 780.516pt>
+28.
+(pdftex.def)             Requested size: 195.67905pt x 142.78539pt.
+<./Pics/CA002UncertainityAssesment.png, id=153, 1069.596pt x 780.516pt>
 File: ./Pics/CA002UncertainityAssesment.png Graphic file (type png)
 <use ./Pics/CA002UncertainityAssesment.png>
 Package pdftex.def Info: ./Pics/CA002UncertainityAssesment.png  used on input l
-ine 17.
-(pdftex.def)             Requested size: 202.93097pt x 148.0852pt.
-<./Pics/CA003SurveyOfVacantSpace.png, id=140, 1069.596pt x 780.516pt>
+ine 33.
+(pdftex.def)             Requested size: 195.67905pt x 142.78539pt.
+<./Pics/CA003SurveyOfVacantSpace.png, id=154, 1069.596pt x 780.516pt>
 File: ./Pics/CA003SurveyOfVacantSpace.png Graphic file (type png)
 <use ./Pics/CA003SurveyOfVacantSpace.png>
 Package pdftex.def Info: ./Pics/CA003SurveyOfVacantSpace.png  used on input lin
-e 23.
-(pdftex.def)             Requested size: 202.93097pt x 148.0852pt.
-<./Pics/CA004ReachableSpaceAssesment.png, id=141, 1336.995pt x 975.645pt>
+e 39.
+(pdftex.def)             Requested size: 195.67905pt x 142.78539pt.
+<./Pics/CA004ReachableSpaceAssesment.png, id=155, 1336.995pt x 975.645pt>
 File: ./Pics/CA004ReachableSpaceAssesment.png Graphic file (type png)
 <use ./Pics/CA004ReachableSpaceAssesment.png>
 Package pdftex.def Info: ./Pics/CA004ReachableSpaceAssesment.png  used on input
- line 28.
-(pdftex.def)             Requested size: 202.93097pt x 148.08223pt.
- [7 <./Pics/CA001ObstacleDetection.png> <./Pics/CA002UncertainityAssesment.png>
- <./Pics/CA003SurveyOfVacantSpace.png> <./Pics/CA004ReachableSpaceAssesment.png
->]
-
-LaTeX Warning: Reference `eq:trajectoryTree' on page 8 undefined on input line 
-46.
-
-
-LaTeX Warning: Reference `def:PrunedReachSet' on page 8 undefined on input line
- 46.
-
-
-Underfull \hbox (badness 5878) in paragraph at lines 53--53
-[][]\OT1/cmr/m/n/10 Avoidance Run Func-tion Im-ple-men-ta-tion: []$\OT1/cmtt/m/
-n/10 RuleEngine / MissionControl / MissionControl . m ::
- []
-
-LaTeX Font Info:    Try loading font information for U+eus on input line 58.
-("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
+ line 44.
+(pdftex.def)             Requested size: 195.67905pt x 142.78241pt.
+[6]
+LaTeX Font Info:    Try loading font information for U+eus on input line 59.
+ ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
 File: ueus.fd 2013/01/14 v3.01 Euler Script
-) [8]
-Overfull \vbox (17.30435pt too high) has occurred while \output is active []
+) [7 <./Pics/CA001ObstacleDetection.png> <./Pics/CA002UncertainityAssesment.png
+> <./Pics/CA003SurveyOfVacantSpace.png> <./Pics/CA004ReachableSpaceAssesment.pn
+g>]
+Underfull \vbox (badness 3000) has occurred while \output is active []
 
-
-[9]
-<./Pics/TE038AvoidanceRunExample.png, id=214, 217.7736pt x 198.9834pt>
+ [8]
+<./Pics/TE038AvoidanceRunExample.png, id=210, 217.7736pt x 198.9834pt>
 File: ./Pics/TE038AvoidanceRunExample.png Graphic file (type png)
 <use ./Pics/TE038AvoidanceRunExample.png>
 Package pdftex.def Info: ./Pics/TE038AvoidanceRunExample.png  used on input lin
 e 140.
-(pdftex.def)             Requested size: 352.31625pt x 321.95055pt.
- [10 <./Pics/TE038AvoidanceRunExample.png>]
-<./Pics/TE040Visibility.png, id=227, 500.1084pt x 410.4936pt>
+(pdftex.def)             Requested size: 339.7259pt x 310.4432pt.
+<./Pics/TE040Visibility.png, id=212, 500.1084pt x 410.4936pt>
 File: ./Pics/TE040Visibility.png Graphic file (type png)
 <use ./Pics/TE040Visibility.png>
 Package pdftex.def Info: ./Pics/TE040Visibility.png  used on input line 160.
-(pdftex.def)             Requested size: 446.26581pt x 366.30275pt.
- [11 <./Pics/TE040Visibility.png>]
-<./Pics/TE041Reachibility.png, id=238, 491.436pt x 402.303pt>
+(pdftex.def)             Requested size: 430.3181pt x 353.21805pt.
+
+[9 <./Pics/TE038AvoidanceRunExample.png>] [10 <./Pics/TE040Visibility.png>]
+<./Pics/TE041Reachibility.png, id=234, 491.436pt x 402.303pt>
 File: ./Pics/TE041Reachibility.png Graphic file (type png)
 <use ./Pics/TE041Reachibility.png>
 Package pdftex.def Info: ./Pics/TE041Reachibility.png  used on input line 183.
-(pdftex.def)             Requested size: 446.26581pt x 365.34123pt.
-) (06A07b-Mission-Control-Run.tex [12 <./Pics/TE041Reachibility.png>]
+(pdftex.def)             Requested size: 430.3181pt x 352.29048pt.
+)
+(06A07b-Mission-Control-Run.tex [11 <./Pics/TE041Reachibility.png>]
 
-LaTeX Warning: Reference `fig:AvoidanceFrameworkConceptNew' on page 13 undefine
+LaTeX Warning: Reference `fig:AvoidanceFrameworkConceptNew' on page 12 undefine
 d on input line 3.
 
 
-LaTeX Warning: Reference `eq:movementChaining' on page 13 undefined on input li
+LaTeX Warning: Reference `eq:movementChaining' on page 12 undefined on input li
 ne 5.
 
 
-LaTeX Warning: Reference `s:ReachSetPerformanceCriteria' on page 13 undefined o
+LaTeX Warning: Reference `s:ReachSetPerformanceCriteria' on page 12 undefined o
 n input line 18.
 
-<./Pics/CA005PathCalculation.png, id=251, 1063.5735pt x 809.424pt>
+<./Pics/CA005PathCalculation.png, id=247, 1063.5735pt x 809.424pt>
 File: ./Pics/CA005PathCalculation.png Graphic file (type png)
 <use ./Pics/CA005PathCalculation.png>
 Package pdftex.def Info: ./Pics/CA005PathCalculation.png  used on input line 27
 .
-(pdftex.def)             Requested size: 202.93097pt x 154.4344pt.
-<./Pics/CA006FieldOfViewZones.png, id=252, 1069.596pt x 809.424pt>
+(pdftex.def)             Requested size: 195.67905pt x 148.91359pt.
+<./Pics/CA006FieldOfViewZones.png, id=248, 1069.596pt x 809.424pt>
 File: ./Pics/CA006FieldOfViewZones.png Graphic file (type png)
 <use ./Pics/CA006FieldOfViewZones.png>
 Package pdftex.def Info: ./Pics/CA006FieldOfViewZones.png  used on input line 3
 3.
-(pdftex.def)             Requested size: 202.93097pt x 153.56984pt.
-[13 <./Pics/CA005PathCalculation.png> <./Pics/CA006FieldOfViewZones.png>]
-<./Pics/TE042MissionExample.png, id=273, 1186.4325pt x 775.39688pt>
+(pdftex.def)             Requested size: 195.67905pt x 148.07373pt.
+[12 <./Pics/CA005PathCalculation.png> <./Pics/CA006FieldOfViewZones.png>]
+<./Pics/TE042MissionExample.png, id=268, 1186.4325pt x 775.39688pt>
 File: ./Pics/TE042MissionExample.png Graphic file (type png)
 <use ./Pics/TE042MissionExample.png>
 Package pdftex.def Info: ./Pics/TE042MissionExample.png  used on input line 59.
 
-(pdftex.def)             Requested size: 202.93097pt x 132.62027pt.
-<./Pics/TE043AllDecisionDecisionPoint.png, id=274, 1186.4325pt x 775.39688pt>
+(pdftex.def)             Requested size: 195.67905pt x 127.87581pt.
+<./Pics/TE043AllDecisionDecisionPoint.png, id=269, 1186.4325pt x 775.39688pt>
 File: ./Pics/TE043AllDecisionDecisionPoint.png Graphic file (type png)
 <use ./Pics/TE043AllDecisionDecisionPoint.png>
 Package pdftex.def Info: ./Pics/TE043AllDecisionDecisionPoint.png  used on inpu
 t line 65.
-(pdftex.def)             Requested size: 202.93097pt x 132.62027pt.
-<./Pics/TE044WaypointReach.png, id=275, 379.6584pt x 248.127pt>
+(pdftex.def)             Requested size: 195.67905pt x 127.87581pt.
+<./Pics/TE044WaypointReach.png, id=270, 379.6584pt x 248.127pt>
 File: ./Pics/TE044WaypointReach.png Graphic file (type png)
 <use ./Pics/TE044WaypointReach.png>
 Package pdftex.def Info: ./Pics/TE044WaypointReach.png  used on input line 73.
-(pdftex.def)             Requested size: 202.93097pt x 132.62357pt.
-<./Pics/TE045NewWaypointSetup.png, id=276, 1186.4325pt x 775.39688pt>
+(pdftex.def)             Requested size: 195.67905pt x 127.88336pt.
+<./Pics/TE045NewWaypointSetup.png, id=271, 1186.4325pt x 775.39688pt>
 File: ./Pics/TE045NewWaypointSetup.png Graphic file (type png)
 <use ./Pics/TE045NewWaypointSetup.png>
 Package pdftex.def Info: ./Pics/TE045NewWaypointSetup.png  used on input line 7
 9.
-(pdftex.def)             Requested size: 202.93097pt x 132.62027pt.
+(pdftex.def)             Requested size: 195.67905pt x 127.87581pt.
 
-[14 <./Pics/TE042MissionExample.png> <./Pics/TE043AllDecisionDecisionPoint.png>
+[13 <./Pics/TE042MissionExample.png> <./Pics/TE043AllDecisionDecisionPoint.png>
  <./Pics/TE044WaypointReach.png> <./Pics/TE045NewWaypointSetup.png>]
-<./Pics/TE026AvoidanceAlgorithmMainLoopRun.png, id=296, 2127.95pt x 1644.1425pt
+<./Pics/TE026AvoidanceAlgorithmMainLoopRun.png, id=292, 2127.95pt x 1644.1425pt
 >
 File: ./Pics/TE026AvoidanceAlgorithmMainLoopRun.png Graphic file (type png)
 <use ./Pics/TE026AvoidanceAlgorithmMainLoopRun.png>
 Package pdftex.def Info: ./Pics/TE026AvoidanceAlgorithmMainLoopRun.png  used on
- input line 103.
-(pdftex.def)             Requested size: 469.755pt x 362.94176pt.
- [15 <./Pics/TE026AvoidanceAlgorithmMainLoopRun.png>]
-
-LaTeX Warning: Reference `s:AvoidanceGrid' on page 16 undefined on input line 1
-19.
+ input line 104.
+(pdftex.def)             Requested size: 452.96788pt x 349.9715pt.
 
 
-LaTeX Warning: Reference `s:harmonicReachSet' on page 16 undefined on input lin
-e 119.
+LaTeX Warning: Reference `s:AvoidanceGrid' on page 14 undefined on input line 1
+20.
 
 
-LaTeX Warning: Reference `s:chaoticReachSet' on page 16 undefined on input line
- 121.
+LaTeX Warning: Reference `s:harmonicReachSet' on page 14 undefined on input lin
+e 120.
+
+[14 <./Pics/TE026AvoidanceAlgorithmMainLoopRun.png>]
+
+LaTeX Warning: Reference `s:chaoticReachSet' on page 15 undefined on input line
+ 122.
 
 
-LaTeX Warning: Reference `fig:AvoidanceFrameworkConceptNew' on page 16 undefine
-d on input line 133.
+LaTeX Warning: Reference `fig:AvoidanceFrameworkConceptNew' on page 15 undefine
+d on input line 134.
 
+
+LaTeX Warning: Reference `s:UASNonlinearModel' on page 15 undefined on input li
+ne 136.
+
+
+LaTeX Warning: Reference `s:movementAutomatonDefinition' on page 15 undefined o
+n input line 136.
+
+
+LaTeX Warning: Reference `tab:movements1' on page 15 undefined on input line 13
+9.
+
+
+LaTeX Warning: Reference `tab:movements2' on page 15 undefined on input line 13
+9.
+
+
+LaTeX Warning: Reference `eq:rulesOfTheAir' on page 15 undefined on input line 
+148.
+
+
+LaTeX Warning: Reference `fig:AvoidanceFrameworkConceptNew' on page 15 undefine
+d on input line 148.
+
+
+LaTeX Warning: Reference `s:staticObstacles' on page 15 undefined on input line
+ 154.
+
+
+LaTeX Warning: Reference `s:intruders' on page 15 undefined on input line 154.
+
+[15]
 
 LaTeX Warning: Reference `s:UASNonlinearModel' on page 16 undefined on input li
-ne 135.
+ne 161.
 
 
 LaTeX Warning: Reference `s:movementAutomatonDefinition' on page 16 undefined o
-n input line 135.
+n input line 161.
 
 
-LaTeX Warning: Reference `tab:movements1' on page 16 undefined on input line 13
-8.
-
-
-LaTeX Warning: Reference `tab:movements2' on page 16 undefined on input line 13
-8.
-
-
-LaTeX Warning: Reference `eq:rulesOfTheAir' on page 16 undefined on input line 
-147.
-
-
-LaTeX Warning: Reference `fig:AvoidanceFrameworkConceptNew' on page 16 undefine
-d on input line 147.
+LaTeX Warning: Reference `s:mission' on page 16 undefined on input line 196.
 
 [16]
 
-LaTeX Warning: Reference `s:staticObstacles' on page 17 undefined on input line
- 153.
+LaTeX Warning: Reference `tab:movements1' on page 17 undefined on input line 20
+8.
 
 
-LaTeX Warning: Reference `s:intruders' on page 17 undefined on input line 153.
+LaTeX Warning: Reference `tab:movements2' on page 17 undefined on input line 20
+8.
 
 
-LaTeX Warning: Reference `s:UASNonlinearModel' on page 17 undefined on input li
-ne 160.
+LaTeX Warning: Reference `eq:ourTrajectoryImplementation' on page 17 undefined 
+on input line 245.
+
+[17] [18]
+
+LaTeX Warning: Reference `s:mission' on page 19 undefined on input line 295.
 
 
-LaTeX Warning: Reference `s:movementAutomatonDefinition' on page 17 undefined o
-n input line 160.
+LaTeX Warning: Reference `ass:reachableWaypoints' on page 19 undefined on input
+ line 297.
 
 
-LaTeX Warning: Reference `s:mission' on page 17 undefined on input line 195.
-
-[17]
-
-LaTeX Warning: Reference `tab:movements1' on page 18 undefined on input line 20
-6.
+LaTeX Warning: Reference `sec:collisionCase' on page 19 undefined on input line
+ 304.
 
 
-LaTeX Warning: Reference `tab:movements2' on page 18 undefined on input line 20
-6.
+LaTeX Warning: Reference `s:detectedObstacles' on page 19 undefined on input li
+ne 306.
 
-[18]
 
-LaTeX Warning: Reference `eq:ourTrajectoryImplementation' on page 19 undefined 
-on input line 243.
+LaTeX Warning: Reference `s:intruderBehaviourPrediction' on page 19 undefined o
+n input line 308.
+
+
+LaTeX Warning: Reference `s:virtualConstraints' on page 19 undefined on input l
+ine 310.
+
+
+LaTeX Warning: Reference `s:MovingVirtualConstraints' on page 19 undefined on i
+nput line 310.
+
+
+Overfull \hbox (1.3168pt too wide) in paragraph at lines 310--311
+[]\OT1/cmr/m/it/12 Hard or Soft Con-straint Oc-cur-rence \OT1/cmr/m/n/12 ($\OMS
+/cmsy/m/n/12 j\OML/cmm/m/it/12 hardConstraints\OMS/cmsy/m/n/12 j$ $\OML/cmm/m/i
+t/12 >$ $\OT1/cmr/m/n/12 0$ $\OMS/cmsy/m/n/12 _$ $j\OML/cmm/m/it/12 softConstra
+ints\OMS/cmsy/m/n/12 j$
+ []
 
 [19]
 
-LaTeX Warning: Reference `s:mission' on page 20 undefined on input line 293.
-
-
-LaTeX Warning: Reference `ass:reachableWaypoints' on page 20 undefined on input
- line 295.
-
-
-LaTeX Warning: Reference `sec:collisionCase' on page 20 undefined on input line
- 302.
-
-
-LaTeX Warning: Reference `s:detectedObstacles' on page 20 undefined on input li
-ne 304.
-
-
-LaTeX Warning: Reference `s:intruderBehaviourPrediction' on page 20 undefined o
-n input line 306.
-
-
-LaTeX Warning: Reference `s:virtualConstraints' on page 20 undefined on input l
-ine 308.
-
-
-LaTeX Warning: Reference `s:MovingVirtualConstraints' on page 20 undefined on i
-nput line 308.
+LaTeX Warning: Reference `eq:ourTrajectoryImplementation' on page 20 undefined 
+on input line 339.
 
 [20]
 
-LaTeX Warning: Reference `eq:ourTrajectoryImplementation' on page 21 undefined 
-on input line 337.
-
-[21]
-
-LaTeX Warning: Reference `fig:RuleEngineInstanceLevels' on page 22 undefined on
- input line 377.
+LaTeX Warning: Reference `fig:RuleEngineInstanceLevels' on page 21 undefined on
+ input line 379.
 
 
-LaTeX Warning: Reference `ass:reachableWaypoints' on page 22 undefined on input
- line 390.
+LaTeX Warning: Reference `ass:reachableWaypoints' on page 21 undefined on input
+ line 392.
 
-[22]) (06A07e-Calculation-Complexity.tex [23] [24]
+[21]) (06A07e-Calculation-Complexity.tex [22] [23]
 
-LaTeX Warning: Reference `s:linearIntersectionModel' on page 25 undefined on in
-put line 56.
-
-
-LaTeX Warning: Reference `s:bodyvolumeIntersection' on page 25 undefined on inp
-ut line 58.
+LaTeX Warning: Reference `s:linearIntersectionModel' on page 24 undefined on in
+put line 57.
 
 
-LaTeX Warning: Reference `s:uncertaintyIntersection' on page 25 undefined on in
-put line 60.
+LaTeX Warning: Reference `s:bodyvolumeIntersection' on page 24 undefined on inp
+ut line 59.
+
+
+LaTeX Warning: Reference `s:uncertaintyIntersection' on page 24 undefined on in
+put line 61.
 
 
 LaTeX Warning: Reference `fig:emergencyHeadOnMultipleComputationTime' on page 2
-5 undefined on input line 60.
+4 undefined on input line 61.
 
-[25]
+[24]
 
-LaTeX Warning: Reference `tab:computationLoadStatistics' on page 26 undefined o
-n input line 104.
+LaTeX Warning: Reference `tab:computationLoadStatistics' on page 25 undefined o
+n input line 105.
 
-) (06A07c-Safety-Margin-Calculation.tex [26]) ([SB]-06-07-Avoidance-Core.bbl
-[27] [28
-
-])
+) (06A07c-Safety-Margin-Calculation.tex [25]) ([SB]-06-07-Avoidance-Core.bbl
+[26])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 290.
- [29]
+ [27
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
  ([SB]-06-07-Avoidance-Core.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
@@ -1200,13 +1203,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 290.
  ) 
 Here is how much of TeX's memory you used:
- 24461 strings out of 492973
- 403171 string characters out of 3135926
- 574952 words of memory out of 3000000
- 27871 multiletter control sequences out of 15000+200000
+ 24458 strings out of 492973
+ 403157 string characters out of 3135926
+ 574911 words of memory out of 3000000
+ 27870 multiletter control sequences out of 15000+200000
  549198 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,20n,63p,752b,561s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,20n,63p,752b,563s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1230,9 +1233,9 @@ ublic/amsfonts/cm/cmtt10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmtt12.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/e
 uler/eusm10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on [SB]-06-07-Avoidance-Core.pdf (29 pages, 2723983 bytes).
+Output written on [SB]-06-07-Avoidance-Core.pdf (27 pages, 2723314 bytes).
 PDF statistics:
- 551 PDF objects out of 1000 (max. 8388607)
- 173 named destinations out of 1000 (max. 500000)
+ 543 PDF objects out of 1000 (max. 8388607)
+ 171 named destinations out of 1000 (max. 500000)
  135 words of extra memory for PDF output out of 10000 (max. 10000000)
 

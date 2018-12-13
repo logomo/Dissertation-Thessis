@@ -86,6 +86,7 @@ To join the multiple \emph{Avoidance Grids} paths following terminology needs to
 \end{figure}
     
 
+\newpage
 \paragraph{General Concept:}\footnote{Mission Control Run Function Implementation: \url{RuleEngine/MissionControl/MissionControl.m::runOnce(.)}} The \emph{General Concept} is taken from  \cite{sabatini2014navigation,Sabatini2014}, consisting from following main modules:
 \begin{enumerate}
     \item \emph{Navigation Loop} - module responsible for \emph{Navigation} providing \emph{Goal Waypoint}.
@@ -105,7 +106,7 @@ To join the multiple \emph{Avoidance Grids} paths following terminology needs to
     \label{fig:missionControlRunActivityDiagram}
 \end{figure}
 
-\newpage\noindent The main changes to \emph{Navigation architecture} are given in \emph{Mission Control Run} activity diagram (fig. \ref{fig:missionControlRunActivityDiagram}):
+\noindent The main changes to \emph{Navigation architecture} are given in \emph{Mission Control Run} activity diagram (fig. \ref{fig:missionControlRunActivityDiagram}):
 
 \begin{enumerate}
     \item \emph{Situation Assessment} - added event-based mode switching control. 
@@ -113,7 +114,7 @@ To join the multiple \emph{Avoidance Grids} paths following terminology needs to
     \item \emph{Avoidance Run} - added hierarchical evaluation for \emph{Avoidance Path} selection. Prioritizing threat avoidance according to a type. 
 \end{enumerate}
 
-The \emph{Operation Mode} is introduced, based on \emph{Situation assessment} and \emph{Triggering Events} one of following modes are selected in \emph{Avoidance Run}:
+\noindent The \emph{Operation Mode} is introduced, based on \emph{Situation assessment} and \emph{Triggering Events} one of following modes are selected in \emph{Avoidance Run}:
 
 \begin{enumerate}
     \item \emph{Navigation Mode} - the \emph{UAS} is navigating trough \emph{Airspace} following \emph{cost effective patterns} and obeying \emph{Airspace Authority} (UTM). The \emph{Navigation Grid} is a instance of \emph{Avoidance Grid} (sec. \ref{s:AvoidanceGrid}) with initialized \emph{Navigation Reach Set} (ex. \emph{Harmonic Reach Set Approximation} (sec. \ref{s:harmonicReachSet})).
@@ -152,7 +153,7 @@ The \emph{Decisions} are made based on \emph{system} state in \emph{current} tim
 
 \noindent The sensors obstacle assessment into avoidance grid is outlined for static obstacles in (sec. \ref{s:staticObstacles}) and for moving obstacles in (sec. \ref{s:intruders}.)
 
-The \emph{Data Fusion Procedure} is given as follow:
+\noindent The \emph{Data Fusion Procedure} is given as follow:
 \begin{equation}
     DataFusion = \{Rating Based Data Fusion \quad (sec. \ref{s:sensorFusion})\}
 \end{equation}
@@ -196,6 +197,7 @@ The \emph{actual threats} are set as empty sets for \emph{decision time} $t_i=0$
 
 \noindent First start with definition of \emph{waypoint reach condition} (def. \ref{def:waypointReachCondition}) and \emph{Unreachable waypoint} (def. \ref{def:unreachable Waypoint}).
 
+\newpage
 \begin{definition}{Waypoint Reach Condition}\label{def:waypointReachCondition} for \emph{current} decision time $t_i$ for \emph{UAS} position and current \emph{Goal Waypoint} is satisfied only if:
 
 \begin{multline}\label{eq:waypointReachCondition}
