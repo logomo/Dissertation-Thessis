@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  11 DEC 2018 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 15:36
 entering extended mode
 **./[SB]-07-01-Testing-Approach.tex
 ([SB]-07-01-Testing-Approach.tex
@@ -745,10 +745,6 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
 ([SB]-07-01-Testing-Approach.aux)
 \openout1 = `[SB]-07-01-Testing-Approach.aux'.
 
@@ -773,16 +769,16 @@ LaTeX Font Info:    ... okay on input line 249.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -922,13 +918,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 1748) in paragraph at lines 47--48
-\OT1/cmr/m/n/12 straints), re-stricted airspace (hard con-straint), weather (so
-ft/hard con-straint),
- []
-
-[2]
+) [2]
 
 LaTeX Warning: Reference `s:uncertaintyIntersection' on page 3 undefined on inp
 ut line 56.
@@ -937,20 +927,19 @@ ut line 56.
 LaTeX Warning: Reference `s:bodyvolumeIntersection' on page 3 undefined on inpu
 t line 58.
 
-[3]
 
-LaTeX Warning: Reference `sec:positionNotification' on page 4 undefined on inpu
+LaTeX Warning: Reference `sec:positionNotification' on page 3 undefined on inpu
 t line 76.
 
 
-LaTeX Warning: Reference `sec:collisionCase' on page 4 undefined on input line 
+LaTeX Warning: Reference `sec:collisionCase' on page 3 undefined on input line 
 76.
 
 
-LaTeX Warning: Reference `sec:ruleImplementation' on page 4 undefined on input 
+LaTeX Warning: Reference `sec:ruleImplementation' on page 3 undefined on input 
 line 76.
 
-[4]) (07S02a-Test-Performance-Evaluation.tex
+[3] [4]) (07S02a-Test-Performance-Evaluation.tex
 
 LaTeX Warning: Reference `s:AvoidanceRequirements' on page 5 undefined on input
  line 2.
@@ -966,7 +955,10 @@ ne 2.
 LaTeX Warning: Reference `s:EnergyEfficiency' on page 5 undefined on input line
  2.
 
-[5]
+
+Underfull \vbox (badness 8132) has occurred while \output is active []
+
+ [5]
 
 LaTeX Warning: Reference `s:KnownWorld' on page 6 undefined on input line 12.
 
@@ -1025,13 +1017,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 289.
  ) 
 Here is how much of TeX's memory you used:
- 24167 strings out of 492973
+ 24166 strings out of 492973
  396307 string characters out of 3135926
- 578452 words of memory out of 3000000
- 27710 multiletter control sequences out of 15000+200000
+ 578412 words of memory out of 3000000
+ 27709 multiletter control sequences out of 15000+200000
  547894 words of font info for 80 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,20n,63p,729b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,20n,63p,729b,451s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1060,7 +1052,7 @@ rs/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/H17246
 1/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/H172461/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/H172461/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on [SB]-07-01-Testing-Approach.pdf (9 pages, 227541 bytes).
+Output written on [SB]-07-01-Testing-Approach.pdf (9 pages, 227478 bytes).
 PDF statistics:
  221 PDF objects out of 1000 (max. 8388607)
  71 named destinations out of 1000 (max. 500000)

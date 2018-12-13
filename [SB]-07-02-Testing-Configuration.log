@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  11 DEC 2018 14:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 15:35
 entering extended mode
 **./[SB]-07-02-Testing-Configuration.tex
 ([SB]-07-02-Testing-Configuration.tex
@@ -745,10 +745,6 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
 ([SB]-07-02-Testing-Configuration.aux)
 \openout1 = `[SB]-07-02-Testing-Configuration.aux'.
 
@@ -773,16 +769,16 @@ LaTeX Font Info:    ... okay on input line 249.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -874,7 +870,7 @@ LaTeX Warning: Reference `s:AvoidanceGrid' on page 1 undefined on input line 41
 LaTeX Warning: Reference `s:reachSet' on page 1 undefined on input line 41.
 
 
-Overfull \hbox (22.8306pt too wide) in paragraph at lines 43--128
+Overfull \hbox (23.50221pt too wide) in paragraph at lines 43--128
 [][] 
  []
 
@@ -908,10 +904,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 285.
  ) 
 Here is how much of TeX's memory you used:
- 24044 strings out of 492973
+ 24043 strings out of 492973
  394575 string characters out of 3135926
- 576274 words of memory out of 3000000
- 27656 multiletter control sequences out of 15000+200000
+ 576234 words of memory out of 3000000
+ 27655 multiletter control sequences out of 15000+200000
  541964 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,18n,63p,704b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -924,7 +920,7 @@ e1/public/amsfonts/cm/cmr8.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb>
-Output written on [SB]-07-02-Testing-Configuration.pdf (3 pages, 117200 bytes).
+Output written on [SB]-07-02-Testing-Configuration.pdf (3 pages, 117231 bytes).
 
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)

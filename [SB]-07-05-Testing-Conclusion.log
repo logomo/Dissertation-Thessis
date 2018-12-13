@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  9 DEC 2018 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.23)  13 DEC 2018 15:30
 entering extended mode
 **./[SB]-07-05-Testing-Conclusion.tex
 ([SB]-07-05-Testing-Conclusion.tex
@@ -745,11 +745,7 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 129.
 \c@example=\count308
 \c@assumption=\count309
 
-
-LaTeX Warning: Unused global option(s):
-    [a4].
-
-No file [SB]-07-05-Testing-Conclusion.aux.
+([SB]-07-05-Testing-Conclusion.aux)
 \openout1 = `[SB]-07-05-Testing-Conclusion.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 249.
@@ -768,20 +764,21 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 249.
 LaTeX Font Info:    ... okay on input line 249.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 249.
 LaTeX Font Info:    ... okay on input line 249.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(90.3375pt, 469.755pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.755pt
-* \textheight=686.56499pt
+* h-part:(L,W,R)=(90.3375pt, 452.96788pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96788pt
+* \textheight=736.64185pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-45.16873pt
@@ -845,6 +842,8 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 249.
 LaTeX Info: Redefining \pageref on input line 249.
 LaTeX Info: Redefining \nameref on input line 249.
+
+([SB]-07-05-Testing-Conclusion.out) ([SB]-07-05-Testing-Conclusion.out)
 \@outlinefile=\write5
 \openout5 = `[SB]-07-05-Testing-Conclusion.out'.
 
@@ -855,24 +854,12 @@ LaTeX Warning: Reference `s:performanceEvaluation' on page 1 undefined on input
  line 3.
 
 
-LaTeX Warning: Reference `s:adversadialBehaviourImpact' on page 1 undefined on 
-input line 3.
-
-
-LaTeX Warning: Reference `s:ComputaitonFootprint' on page 1 undefined on input 
-line 3.
-
-
 LaTeX Warning: Reference `s:performanceEvaluation' on page 1 undefined on input
  line 6.
 
 
 LaTeX Warning: Reference `tab:testCasesSummary' on page 1 undefined on input li
 ne 6.
-
-
-LaTeX Warning: Reference `tab:testCasesPerformacneEvaluation' on page 1 undefin
-ed on input line 6.
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 11.
 ("C:\Users\H172461\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -1111,21 +1098,13 @@ page 1 undefined on input line 129.
 LaTeX Warning: Reference `fig:ruleBasedOvertake2xPathTrackingUAS2' on page 1 un
 defined on input line 131.
 
-
-Underfull \vbox (badness 2012) has occurred while \output is active []
-
- [1
+[1
 Non-PDF special ignored!
 <special> header=psfrag.pro
 {C:/Users/H172461/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 1215) in paragraph at lines 142--143
-\OT1/cmr/m/n/12 avoided with-out se-cu-rity breach, nav-i-ga-tion al-go-rithm w
-as suf-fi-cient for given
- []
-
 
 LaTeX Warning: Reference `fig:missionControlRunActivityDiagram' on page 2 undef
 ined on input line 147.
@@ -1208,76 +1187,48 @@ LaTeX Warning: Reference `tab:positionNotification' on page 3 undefined on inpu
 t line 178.
 
 
-LaTeX Warning: Reference `fig:adversarialAttackNotableMoments' on page 3 undefi
-ned on input line 182.
-
-
-LaTeX Warning: Reference `fig:adversaryDetectedDeviation' on page 3 undefined o
-n input line 185.
-
-
 LaTeX Warning: Reference `tab:collisionCasesRuleBasedHeadon' on page 3 undefine
 d on input line 185.
 
-
-LaTeX Warning: Reference `fig:adversaryAttacking' on page 3 undefined on input 
-line 187.
-
-
-LaTeX Warning: Reference `fig:adversaryEmergencyAvoidance' on page 3 undefined 
-on input line 189.
-
-
-LaTeX Warning: Reference `fig:adversaryBlindSpot' on page 3 undefined on input 
-line 200.
-
 [3]
-
-LaTeX Warning: Reference `fig:adversaryCollisionDetail' on page 4 undefined on 
-input line 209.
-
-<./Pics/NS086UTMAdversary00011.png, id=50, 436.029pt x 235.6002pt>
+<./Pics/NS086UTMAdversary00011.png, id=82, 436.029pt x 235.6002pt>
 File: ./Pics/NS086UTMAdversary00011.png Graphic file (type png)
 <use ./Pics/NS086UTMAdversary00011.png>
 Package pdftex.def Info: ./Pics/NS086UTMAdversary00011.png  used on input line 
 215.
-(pdftex.def)             Requested size: 202.93097pt x 109.65001pt.
-<./Pics/NS087UTMAdversary-00014.png, id=52, 433.62pt x 234.6366pt>
+(pdftex.def)             Requested size: 195.67905pt x 105.7315pt.
+<./Pics/NS087UTMAdversary-00014.png, id=84, 433.62pt x 234.6366pt>
 File: ./Pics/NS087UTMAdversary-00014.png Graphic file (type png)
 <use ./Pics/NS087UTMAdversary-00014.png>
 Package pdftex.def Info: ./Pics/NS087UTMAdversary-00014.png  used on input line
  221.
-(pdftex.def)             Requested size: 202.93097pt x 109.8102pt.
-<./Pics/NS088UTMAdversary-00017.png, id=53, 434.5836pt x 235.1184pt>
+(pdftex.def)             Requested size: 195.67905pt x 105.88623pt.
+<./Pics/NS088UTMAdversary-00017.png, id=85, 434.5836pt x 235.1184pt>
 File: ./Pics/NS088UTMAdversary-00017.png Graphic file (type png)
 <use ./Pics/NS088UTMAdversary-00017.png>
 Package pdftex.def Info: ./Pics/NS088UTMAdversary-00017.png  used on input line
  228.
-(pdftex.def)             Requested size: 202.93097pt x 109.78812pt.
-<./Pics/NS089UTMAdversary-00020.png, id=54, 433.1382pt x 235.1184pt>
+(pdftex.def)             Requested size: 195.67905pt x 105.86687pt.
+<./Pics/NS089UTMAdversary-00020.png, id=86, 433.1382pt x 235.1184pt>
 File: ./Pics/NS089UTMAdversary-00020.png Graphic file (type png)
 <use ./Pics/NS089UTMAdversary-00020.png>
 Package pdftex.def Info: ./Pics/NS089UTMAdversary-00020.png  used on input line
  234.
-(pdftex.def)             Requested size: 202.93097pt x 110.15764pt.
-<./Pics/NS090UTMAdversaryCrash.png, id=55, 145.5036pt x 105.0324pt>
+(pdftex.def)             Requested size: 195.67905pt x 106.22203pt.
+<./Pics/NS090UTMAdversaryCrash.png, id=87, 145.5036pt x 105.0324pt>
 File: ./Pics/NS090UTMAdversaryCrash.png Graphic file (type png)
 <use ./Pics/NS090UTMAdversaryCrash.png>
 Package pdftex.def Info: ./Pics/NS090UTMAdversaryCrash.png  used on input line 
 241.
-(pdftex.def)             Requested size: 169.10806pt x 122.07324pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-
-LaTeX Warning: Reference `fig:adversaryDistanceToSafetyMargins' on page 5 undef
-ined on input line 249.
+(pdftex.def)             Requested size: 163.06483pt x 117.7108pt.
 
 
-LaTeX Warning: Reference `eq:crashDistance' on page 5 undefined on input line 2
+LaTeX Warning: Reference `eq:crashDistance' on page 4 undefined on input line 2
 52.
 
+[4 <./Pics/NS086UTMAdversary00011.png> <./Pics/NS087UTMAdversary-00014.png> <./
+Pics/NS088UTMAdversary-00017.png> <./Pics/NS089UTMAdversary-00020.png> <./Pics/
+NS090UTMAdversaryCrash.png>]
 
 LaTeX Warning: Reference `eq:crashDistance' on page 5 undefined on input line 2
 54.
@@ -1290,148 +1241,111 @@ d on input line 256.
 LaTeX Warning: Reference `tab:aboidanceParametersForEmergencyHeadOnScenario' on
  page 5 undefined on input line 258.
 
-[5 <./Pics/NS086UTMAdversary00011.png> <./Pics/NS087UTMAdversary-00014.png> <./
-Pics/NS088UTMAdversary-00017.png> <./Pics/NS089UTMAdversary-00020.png> <./Pics/
-NS090UTMAdversaryCrash.png>]
-<./Pics/NS091UTMAdversaryPerformance.png, id=83, 574.3056pt x 233.673pt>
+<./Pics/NS091UTMAdversaryPerformance.png, id=107, 574.3056pt x 233.673pt>
 File: ./Pics/NS091UTMAdversaryPerformance.png Graphic file (type png)
 <use ./Pics/NS091UTMAdversaryPerformance.png>
 Package pdftex.def Info: ./Pics/NS091UTMAdversaryPerformance.png  used on input
  line 263.
-(pdftex.def)             Requested size: 446.26581pt x 181.58318pt.
-
-
-LaTeX Warning: Reference `eq:expectedDistanceCondition' on page 6 undefined on 
-input line 268.
-
-
-LaTeX Warning: Reference `fig:adversaryEmergencyAvoidance' on page 6 undefined 
-on input line 268.
-
-
-LaTeX Warning: Reference `eq:distanceConditionBreach' on page 6 undefined on in
-put line 277.
-
-
-LaTeX Warning: Reference `fig:adversaryDetectedDeviation' on page 6 undefined o
-n input line 289.
-
-
-LaTeX Warning: Reference `fig:adversaryAttacking' on page 6 undefined on input 
-line 289.
-
-
-LaTeX Warning: Reference `fig:adversaryEmergencyAvoidance' on page 6 undefined 
-on input line 291.
-
-
-LaTeX Warning: Reference `tab:computationLoadStatistics' on page 6 undefined on
- input line 297.
-
+(pdftex.def)             Requested size: 430.3181pt x 175.09386pt.
+[5 <./Pics/NS091UTMAdversaryPerformance.png>]
 
 LaTeX Warning: Reference `eq:computationLoad' on page 6 undefined on input line
  297.
 
-[6 <./Pics/NS091UTMAdversaryPerformance.png>]
 
-LaTeX Warning: Reference `eq:computationFeasibilityCriterion' on page 7 undefin
+LaTeX Warning: Reference `eq:computationFeasibilityCriterion' on page 6 undefin
 ed on input line 299.
 
 
-LaTeX Warning: Reference `fig:buildingAvoidanceComputationTime' on page 7 undef
+LaTeX Warning: Reference `fig:buildingAvoidanceComputationTime' on page 6 undef
 ined on input line 307.
 
 
-LaTeX Warning: Reference `fig:slalomComputationTime' on page 7 undefined on inp
+LaTeX Warning: Reference `fig:slalomComputationTime' on page 6 undefined on inp
 ut line 309.
 
 
-LaTeX Warning: Reference `fig:mazeComputationTime' on page 7 undefined on input
+LaTeX Warning: Reference `fig:mazeComputationTime' on page 6 undefined on input
  line 311.
 
 
-LaTeX Warning: Reference `fig:stormComputationTime' on page 7 undefined on inpu
+LaTeX Warning: Reference `fig:stormComputationTime' on page 6 undefined on inpu
 t line 313.
 
 
-LaTeX Warning: Reference `fig:emergencyConvergingComputationTime' on page 7 und
+LaTeX Warning: Reference `fig:emergencyConvergingComputationTime' on page 6 und
 efined on input line 316.
 
 
-LaTeX Warning: Reference `fig:emergencyHeadOnComputationTime' on page 7 undefin
+LaTeX Warning: Reference `fig:emergencyHeadOnComputationTime' on page 6 undefin
 ed on input line 318.
 
 
-LaTeX Warning: Reference `fig:emergencyHeadOnMultipleComputationTime' on page 7
+LaTeX Warning: Reference `fig:emergencyHeadOnMultipleComputationTime' on page 6
  undefined on input line 320.
 
 
-LaTeX Warning: Reference `fig:ruleBasedCConvergingComputationTime' on page 7 un
+LaTeX Warning: Reference `fig:ruleBasedCConvergingComputationTime' on page 6 un
 defined on input line 323.
 
 
-LaTeX Warning: Reference `fig:ruleBasedHeadOnComputationTime' on page 7 undefin
+LaTeX Warning: Reference `fig:ruleBasedHeadOnComputationTime' on page 6 undefin
 ed on input line 325.
 
 
-LaTeX Warning: Reference `fig:ruleBasedMultipleComputationTime' on page 7 undef
+LaTeX Warning: Reference `fig:ruleBasedMultipleComputationTime' on page 6 undef
 ined on input line 327.
 
 
-LaTeX Warning: Reference `fig:ruleBasedOvertakeComputationTime' on page 7 undef
+LaTeX Warning: Reference `fig:ruleBasedOvertakeComputationTime' on page 6 undef
 ined on input line 329.
 
 
-LaTeX Warning: Reference `s:MovingVirtualConstraints' on page 7 undefined on in
+LaTeX Warning: Reference `s:MovingVirtualConstraints' on page 6 undefined on in
 put line 342.
 
 
-LaTeX Warning: Reference `s:bodyvolumeIntersection' on page 7 undefined on inpu
+LaTeX Warning: Reference `s:bodyvolumeIntersection' on page 6 undefined on inpu
 t line 344.
 
 
-LaTeX Warning: Reference `sec:ruleImplementation' on page 7 undefined on input 
+LaTeX Warning: Reference `sec:ruleImplementation' on page 6 undefined on input 
 line 346.
 
 
-LaTeX Warning: Reference `tab:ruleOvertakeDefinition' on page 7 undefined on in
+LaTeX Warning: Reference `tab:ruleOvertakeDefinition' on page 6 undefined on in
 put line 348.
 
+[6]) ([SB]-07-05-Testing-Conclusion.bbl [7] [8
+
+]
+
+Package natbib Warning: Empty `thebibliography' environment on input line 3.
+
 )
-No file [SB]-07-05-Testing-Conclusion.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 285.
-[7]
+ [9]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 285.
  ([SB]-07-05-Testing-Conclusion.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 285.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 285.
+Package rerunfilecheck Info: File `[SB]-07-05-Testing-Conclusion.out' has not c
+hanged.
+(rerunfilecheck)             Checksum: 20F73973ADB694B4B279B7B4E00A599E;971.
 
-
-Package rerunfilecheck Warning: File `[SB]-07-05-Testing-Conclusion.out' has ch
-anged.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `[SB]-07-05-Testing-Conclusion.out':
-
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  0292C3B4C1C9D7281CA14C2BC47C0A8D;866.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 285.
  ) 
 Here is how much of TeX's memory you used:
- 24235 strings out of 492973
- 399589 string characters out of 3135926
- 583700 words of memory out of 3000000
- 27801 multiletter control sequences out of 15000+200000
- 544624 words of font info for 69 fonts, out of 3000000 for 9000
+ 24254 strings out of 492973
+ 400248 string characters out of 3135926
+ 586074 words of memory out of 3000000
+ 27809 multiletter control sequences out of 15000+200000
+ 545230 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,17n,63p,628b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,17n,63p,628b,565s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Us
 ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/H1724
 61/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/H172461/MiKT
@@ -1444,9 +1358,9 @@ b><C:/Users/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Us
 ers/H172461/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/H172
 461/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/H172461/M
 iKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on [SB]-07-05-Testing-Conclusion.pdf (7 pages, 428839 bytes).
+Output written on [SB]-07-05-Testing-Conclusion.pdf (9 pages, 435616 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 PDF objects out of 1000 (max. 8388607)
+ 58 named destinations out of 1000 (max. 500000)
+ 79 words of extra memory for PDF output out of 10000 (max. 10000000)
 
