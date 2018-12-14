@@ -1,0 +1,144 @@
+\subsection{\secState{R}Segmented Movement Automaton}\label{s:segmentedMovementAutomaton}
+\paragraph{Motivation:} Constructing \emph{Movement Automaton} for more complex system can be tedious. Used \emph{Movement Automaton} for \emph{UAS system} (\ref{eq:UASNonlinearModelSimple}) has decoupled control which is not true for most of the copters/planes \cite{fossen2011mathematical}.
+
+\paragraph{Partitioning UAS State Space:} Proposed movement automaton is defined by its Movement set (tab. \ref{tab:movements1},\ref{tab:movements2}). Those can be scaled depending on maneuverability in the  \emph{Initial state} $state(0)$:
+\begin{enumerate}
+    \item \emph{Climb/Descent Rate} $\delta pitch_{max}(k)$ - the maximal climb or descent rate for Up/Down movements.
+    \item \emph{Turn Rate} $\delta yaw_{max}(k)$ - the maximal turn rate for Left/Right movement.
+    \item \emph{Acceleration} $\delta v_{max}(k)$ - the maximal acceleration in cruising speed range.
+\end{enumerate}
+
+\begin{definition}{State Space partition}\label{def:stateSpacePartition}
+    \emph{Maneuverability} is depending on \emph{Initial State}. There can not be the infinite count of \emph{Movement Automatons}.
+    
+    The state space $State Space \in \R^n$ can be separated into two exclusive subsets:
+    \begin{equation}
+        StateSpace = [ImpactStates, NonImpactingStates]
+    \end{equation}
+    
+    The \emph{Impacting states} are states which bounds the \emph{Maneuverability}: $\delta pitch_{max}(k)$, $\delta yaw_{max}(k)$, $\delta v_{max}(k)$. For each \emph{impact state} is possible to define upper and lower boundary:
+    \begin{multline}
+        \forall impactState\in ImpactStates, \exists:\\ lower(impactState) \le value(impactState) \le upper(impactState) 
+    \end{multline}
+    
+	\noindent    The bounded interval of impact state can be separated into distinctive \emph{impact state segments} like follow:
+    \begin{multline}
+        impactState\in [lower,upper]:\\ \{[lower,separator_1[\dots\cup\dots[separator_i,separator_{i+1}[\dots\cup\dots\\\dots\cup\dots[separator_n,upper]\}=\\
+        = impactStateIntervals(impactState)
+    \end{multline}
+    \begin{note}
+        The interval length depends on model dynamics. The rule of thumb is to keep maximal climb/descend/turn/acceleration rates near constant value. 
+    \end{note}
+
+\newpage        
+\noindent When partitioning of \emph{all impact States} finishes, the count of partitions is given as product of \emph{count of partitions} for each member of \emph{Impact States}:
+    
+    \begin{equation}
+        partition Count = \prod_{impactState \in}^{ImpactStates} |impactStateIntervals(impactState)| 
+    \end{equation}
+    
+    \begin{note}
+        Try to keep the count of partitions to minimum, each new interval increases the count of partitions geometrically. 
+    \end{note}
+    
+    There is finite number $n$ of \emph{Impacting States}, these are separated into $impactState-$ $Intervals_i$ with respective index $i \in 1\dots n$. The \emph{segment} with index defining position used \emph{impacting state} intervals is given as \emph{constrained space}:
+    
+    \begin{equation}
+        Segment(index) = \left[
+            \begin{gathered}
+                impactState_1 \in impactStateIntervals_1[index_1],\\
+                \vdots\\
+                impactState_n \in impactStateIntervals_n[index_n],\\
+                \vdots\\
+                NonImpactingStates    
+                \end{gathered}\right]
+    \end{equation}
+    
+    Each \emph{Segment} covers one of impacting state intervals combination, because the original intervals are exclusive, also \emph{Segments} are exclusive. The \emph{union} of all segments covers \emph{State Space}:
+    
+    \begin{equation}\label{eq:segmentedStateSpace}
+        StateSpace = \bigcup_{\forall\quad index \in |impactStateIntervals|^n} Segment(index)
+    \end{equation}
+\end{definition}
+
+\paragraph{Segmented Movement Automaton:} The segmentation of \emph{state space} is done  in (def. \ref{def:stateSpacePartition}) any \emph{state} belongs exactly to \emph{Segment} of \emph{State Space}. For each \emph{Segment} in \emph{State Space}it is possible to assess: \emph{Climb/Descent Rate} $\delta pitch_{max}(k)$, \emph{Turn Rate} $\delta yaw_{max}(k)$, and, \emph{Acceleration} $\delta v_{max}(k)$.
+
+
+\begin{definition}{Movement Automaton for Segment(index)}\label{def:segmentMovementAutomaton}
+    
+
+\noindent For for Model(eq. \ref{eq:uasLinearDiscreteModel}) with State (eq. \ref{eq:ourState}) the input vector (eq. \ref{eq:ourImput}) is for position $[x,y,z]$ and velocity defined like: 
+
+\begin{equation}
+    \begin{aligned}
+        \delta x(k)& = \left(v(k)+\delta v(k)\right) \cos(\delta pitch(k)) \cos(\delta yaw(k))\\
+        \delta y(k)& = \left(v(k)+\delta v(k)\right) \cos(\delta pitch(k)) \sin(\delta yaw(k))\\
+        \delta z(k)& = -\left(v(k)+\delta v(k)\right)\cos(\delta pitch(k))\\
+        \delta v(k)&\in [-\delta v(k)_{max},\delta v(k)_{max}]
+    \end{aligned}
+\end{equation}
+\end{definition}
+
+\newpage
+\noindent The acceleration $\delta v(k)$ is in interval $[-\delta v(k)_{max},\delta v(k)_{max}]$, usually set to 0 $ms^{-1}$. The change of the orientation angles for \emph{Movement Set} (eq. \ref{eq:OurMovementSet}) is given in (tab. \ref{tab:movements3},\ref{tab:movements4}).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r||r|r|r|r|r}
+    
+        $input(movement)$           &    Straight  & Down & Up & Left  & Right   \\\hline\hline
+        $\delta  roll(k) [^\circ]$	   &    0	      & 0	  & 0	  & 0    & 0     \\\hline
+        $\delta pitch(k) [^\circ]$     &    0	      & $\delta pitch_{max}$  & -$\delta pitch_{max}$ & 0	 & 0     \\\hline
+        $\delta   yaw(k) [^\circ]$     &    0	      & 0	  & 0	  & $\delta yaw_{max}$ & -$\delta yaw_{max}$ \\
+    \end{tabular}
+    \caption{Orientation input values for main axes movements.}
+    \label{tab:movements3}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r||r|r|r|r}
+        $input(movement)$             & Down-Left & Down-Right & Up-Left  & Up-Right   \\\hline\hline
+
+        $\delta  roll(k) [^\circ]$	& 0	    & 0	    & 0    & 0     \\\hline
+        $\delta pitch(k) [^\circ]$     & -$\delta pitch_{max}$ & -$\delta pitch_{max}$ & $\delta pitch_{max}$ & $\delta pitch_{max}$     \\\hline
+        $\delta   yaw(k) [^\circ]$    & $\delta yaw_{max}$	& -$\delta yaw_{max}$	& $\delta yaw_{max}$ & -$\delta yaw_{max}$ \\
+    \end{tabular}
+    \caption{Orientation input values for diagonal axes movements.}
+    \label{tab:movements4}
+\end{table}
+
+\begin{note}
+    The \emph{Trajectory} is calculated same as in (eq. \ref{eq:ourTrajectoryImplementation}). The \emph{State Projection} is given as in (eq. \ref{eq:ourStateProjection}).
+\end{note}
+
+\noindent Then the \emph{Movement Automaton} for \emph{Segment} $\in$ \emph{State Space} is defined.
+
+\begin{definition}{Segmented Movement Automaton}\label{def:segmentedMovementAutomaton}
+    For system with segmented state space (eq. \ref{eq:segmentedStateSpace}) there is for each $state(k)$ in $StateSpace$ injection function:
+    \begin{equation} \label{eq:activeMovementAutomaton}
+        ActiveMovementAutomaton:StateSpace\to MovementAutomaton
+    \end{equation}
+    
+\noindent Selecting appropriate \emph{movement automaton} implementation (def. \ref{def:segmentMovementAutomaton}) for \emph{state(k)} $\in$ \emph{Segment} $\subset$ \emph{State Space}. The mapping function (eq. \ref{eq:activeMovementAutomaton}) is injection mapping every state(k) to Segment then \emph{Movement Automaton Implementation}. The trajectory generated is then given:
+    
+    \begin{equation}\label{eq:ourTrajectoryImplementationSegmented}
+        Trajectory\left(\begin{gathered}state(0),\\Buffer\end{gathered}\right)= 
+        \left\{
+            \begin{gathered}
+                state(0)+\dots\\\sum_{j=0}^{i-1} 
+                    \begin{aligned} 
+                        &ActiveMovementAutomaton(state(j-1)).\\
+                        &\quad.input(movement(j))
+                    \end{aligned}:\\
+                i \in\left\{1\dots |Buffer|+1\right\}, \\
+                movement(\cdot) \in Buffer
+            \end{gathered}
+        \right\}
+    \end{equation}
+    
+\end{definition}
+
+\newpage
+
