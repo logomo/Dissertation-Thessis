@@ -1,0 +1,30 @@
+\section{\secState{R}Navigation Algorithms}\label{s:NavigationAlgorithms}
+\paragraph{Idea:} The basic idea is to provide hierarchical\emph{navigation frame} with \emph{some optimal path search capabilities}. 
+
+\paragraph{Standard Navigation:} The standard navigation is given as \emph{expected cost optimization problem} for \emph{future cost function} (eq. \ref{eq:costFunctionReachable}). The key concept of navigation algorithm was fully taken from \cite{gardi2018multi}. The decision was made based on navigation survey \cite{goerzen2010survey}. The \emph{descent} for landing is out of scope in this work, can be found in \cite{lim2018energy}. The navigation principle is roughly described in (sec. \ref{s:missionControlRun}).
+
+
+\paragraph{Maze Solving Capabilities:} The \emph{maze solving capability} is usable in \emph{controlled airspace} where 2D maze solving algorithms are applicable. The notable implementation was for \emph{micro mouse robot} based on right hand rule \cite{mishra2008maze}. Flood fill algorithm is partially usable for 3D environment \cite{elshamarka2012design}. The application of \emph{maze solving} was given in case study \cite{chatelais2014maze}.
+
+\paragraph{Hybrid Automaton Path Planning:} A hybrid automaton path planing based on $A*$ algorithm was given by Richards in \cite{richards2004hybrid}. The key idea was to use \emph{hybrid automaton} (eq. \ref{eq:hybridAutomaton}) as a reference generator. This idea was taken and formulated as \emph{Movement Automaton Predictor mode}. 
+
+The similar idea where \emph{potential fields} were used as \emph{intruder model} and path was re-planned  based on events is given in \cite{dong2011hybrid}.
+
+\paragraph{Mode Switch:} The \emph{Mode Switch Control} idea has been presented in \cite{ryan2005mode}. There were definition of behavioural switch between:
+\begin{enumerate}
+    \item \emph{Navigation Mode} - navigation control and behaviour was used.
+    \item \emph{Task Specific Mode} - mode specific for tasks, authors were using modes for search and rescue. 
+\end{enumerate}
+
+This concept will be reused, the \emph{Task specific mode} will be \emph{Emergency Avoidance Mode} in Our case. The triggering events and switch conditions will be defined in (sec. \ref{s:missionControlRun}).
+
+\paragraph{Used concepts:} The \emph{Following concepts} were used in navigation loop:
+\begin{enumerate}
+    \item \emph{Standard navigation} taken from \cite{gardi2018multi} minor implementation changes using offline optimization. The purpose of navigation loop is to bring us closest to the waypoint, if its reachable. Navigation example (sec. \ref{s:testRuleMixed}).
+    
+    \item \emph{Maze solving capabilities} partially taken as secondary functionality based on \cite{elshamarka2012design}. The purpose is the \emph{looping prevention}. The example was given in (sec. \ref{s:testMaze}) .
+    
+    \item \emph{Mode switch} partially taken as main feature from \cite{ryan2005mode}, the triggering events were identified and defined by author and can be found over (chapter \ref{ch:approach}).
+\end{enumerate}
+
+

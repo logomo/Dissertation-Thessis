@@ -1,0 +1,23 @@
+\subsection{\secState{R}Movement Automaton Background}\label{sec:MovementAutomatonBackground}
+
+    \noindent\emph{Movement Automaton} is basic interface approach for discretization of \emph{trajectory evolution}  or \emph{control input} for any \emph{continuous or discrete system model}.
+    
+    \emph{Main function} of \emph{Movement Automaton is} for system given by equation $\dot{state}=f(time,state,input)$ with initial state $state_0$ to generate \emph{reference trajectory} $\hat{state}(t)$ or \emph{control signal} $input(t)$.
+    
+    Using \emph{Movement Automaton} as \emph{Control Proxy} will provide us with \emph{discrete command chain} interface. This will reduce the \emph{non deterministic} element from \emph{Evasive trajectory} generation, by reducing infinite maneuver set to finite \emph{movement set}.
+    
+    \emph{Non determinism} of \emph{Avoidance Maneuver} have been discussed as an issue in following works:
+    \begin{enumerate}
+        \item Newton gradient method for evasive car maneuvers \cite{vsantin2011combined}.
+        \item Non-holistic methods for trajectory generation \cite{pin1990autonomous}.
+        \item Stochastic approach to elliptic trajectories generation \cite{andrzejak2001epileptic}.
+    \end{enumerate}
+    
+\noindent\emph{Examples} of \emph{Movement Automaton Implementation} as \emph{Control Element} can be mentioned as follows:
+    \begin{enumerate}
+        \item Control of traffic flow \cite{kuwata2009real}.
+        \item Complex air traffic collision situation resolution system  \cite{frazzoli2001robust,frazzoli2000trajectory}.
+        \item SAA/DAA capable avoidance system \cite{gomola2017obstacle}.
+    \end{enumerate}
+
+

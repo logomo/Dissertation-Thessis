@@ -1,0 +1,48 @@
+\subsection{\secState{R}Used UAS Nonlinear Model}\label{s:UASNonlinearModel}
+\paragraph{Motivation:} Simplified rigid body kinematic model will be used. This model have decoupled roll, yaw and pitch angles. The focus is on \emph{reach set approximation methods}, therefore \emph{UAS model} is simplified.
+
+\paragraph{State Vector} (eq. \ref{eq:simple3dStatevector}) defined as positional state in euclidean position in right-hand euclidean space, where \emph{x, y, z} can be abstracted as latitude, longitude, altitude.
+\begin{equation}\label{eq:simple3dStatevector}
+    state = \left [ x,y,z, roll, pitch, yaw \right]^T
+\end{equation}
+
+
+\newpage 
+\paragraph{Input Vector} (eq. \ref{eq:simple3dInputVector}) is defined as linear velocity of UAS $v$ and angular speed of rigid body $\omega_{roll}, \omega_{pitch},\omega_{yaw}$.
+
+\begin{equation}\label{eq:simple3dInputVector}
+    input = \left [ v, \omega_{roll}, \omega_{pitch},\omega_{yaw}\right ]^T
+\end{equation}
+
+
+\noindent Velocity distribution function (eq. \ref{eq:simple3dvelocityDistribution})  is is defined trough standard rotation matrix  and linear velocity $v$, oriented velocity [$v_x$, $v_y$, $v_z$] given by (eq. \ref{eq:UASNonlinearModelSimple}).
+
+\begin{equation}\label{eq:simple3dvelocityDistribution}
+    \begin{bmatrix}
+    v_x\\
+    v_y\\
+    v_z\
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+         v\cos(pitch)\cos(yaw)\\
+         v\cos(pitch)\sin(yaw)\\
+         -v\sin(pitch)\\
+    \end{bmatrix}
+\end{equation}
+
+\paragraph{UAS Nonlinear Model} (eq. \ref{eq:UASNonlinearModelSimple}) is given by \emph{first order equations:}
+
+\begin{equation}\label{eq:UASNonlinearModelSimple}
+    \begin{aligned}
+        \frac{\partial x}{\partial time} &= v\cos(pitch)\cos(yaw);\\
+        \frac{\partial y}{\partial time} &= v\cos(pitch)\sin(yaw);\\
+        \frac{\partial z}{\partial time} &= -v\sin(pitch);\\
+    \end{aligned}\\\quad\quad
+    \begin{aligned}
+        \frac{\partial roll}{\partial time} &= \omega_{roll};\\
+        \frac{\partial pitch}{\partial time} &= \omega_{pitch};\\
+        \frac{\partial yaw}{\partial time} &= \omega_{yaw};\\
+    \end{aligned}
+\end{equation}
+
