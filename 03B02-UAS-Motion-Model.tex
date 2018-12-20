@@ -18,7 +18,7 @@ Frequently, such systems can be defined by differential equations that relate th
 
 A prototypical description of a controlled (there is a control input signal) continuous-time system is:
 \begin{multline}\label{eq:nonlinearsystem}
-    \partial/\partial\text{t state}(time) =\\ f(time,state(time),input(time)), input(time) \in Inputs(time)
+    \text{d}/\text{d}\text{t state}(time) =\\ f(time,state(time),input(time)), input(time) \in Inputs(time)
 \end{multline}
 Where $f:\mathbb{R}\times\mathbb{R}^n\times\mathbb{R}^p\to\mathbb{R}^n$ satisfies the conditions for existence and uniqueness of the ordinary differential equation and $u$ is our control \cite{butcher1987numerical}.
 
@@ -38,7 +38,7 @@ Where $input(k)$, $state(k)$ is a set of discrete-time signals. They can be repr
 \noindent Consider a subclass of continuous time systems where are two sets of control signals $uas(time)$ and $adversary(time)$ which are accommodated in following system:
 \begin{equation}\label{eq:Adversarial}
     \begin{aligned}
-    \partial / \partial \text{t state}(time)&= f(t,state(time),uas(time),adversary(time)), \\
+    \text{d} / \text{d} \text{t state}(time)&= f(t,state(time),uas(time),adversary(time)), \\
     uas(time) &\in UAS Inputs(time) \subset \R^u, \\
     adversary(time) &\in Adversary Inputs(time) \subset \R^v \\
     \end{aligned}
