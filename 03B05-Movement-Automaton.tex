@@ -4,31 +4,40 @@
     \begin{definition}{Hybrid automaton} (\ref{eq:hybridAutomaton}) is given as structure:
         \begin{equation}\label{eq:hybridAutomaton}
         \begin{aligned}
-            HybridAutomaton(&States,SystemState,VectorField,\\
+            HybridAutomaton(&Automaton States, SystemState, VectorField, \\
                             &DiscreteTransition,ResetMap)
         \end{aligned}
         \end{equation}
     
-        \emph{States} ($Q$) is given as set of discrete states, for every time $t\in Domain$ hybrid automaton stays in exactly one of \emph{states}.
+        \noindent \emph{Automaton States} is given as set of discrete states, for every time $time\in Domain$ hybrid automaton stays in exactly one of \emph{states}.
     
-        \emph{SystemState} ($x$), is given in domain $x\in\R^n,n\in\N^+$, representing the trajectory evolution.
+        \emph{System State}, is given in domain $x\in\R^n,n\in\N^+$, representing the trajectory evolution.
         
-        \emph{VectorField} ($f$) (\ref{eq:vectorField}) is bounded to single $State\in States$ and represents local SystemState evolution, when given automaton State is Active.
+        emph{Vector Field} (\ref{eq:vectorField}) is bounded to single $Automaton State$ and represents local System State evolution, when given automaton State is Active.
         
         \begin{equation}\label{eq:vectorField}
-            VectorField: State\times SystemState \to SystemState
+            VectorField: Automaton StateState\times SystemState \to SystemState
         \end{equation}
         
-        \emph{DiscreteTransition} ($\varphi$) (eq. \ref{eq:discreteTransition}) indicates changes of states in automaton, the changes are triggered by satisfying specific condition given by State and SystemState. 
+        \noindent\emph{DiscreteTransition} (eq. \ref{eq:discreteTransition}) indicates changes of states in automaton, the changes are triggered by satisfying specific condition given by Automaton State and System State. 
         
         \begin{equation}\label{eq:discreteTransition}
-            DiscreteTransition:State\times SystemState \to State
+            DiscreteTransition:Automaton State\times SystemState \to Automaton State
         \end{equation}
         
-        \emph{ResetMap} ($\rho$) (eq. \ref{eq:resetMap}) defines changes of State to some default value, this change is triggered by specific automaton State and SystemState.
+        \noindent \emph{ResetMap} (eq. \ref{eq:resetMap}) defines changes of State to some default value, this change is triggered by specific automaton State and System State.
         
         \begin{equation}\label{eq:resetMap}
             ResetMap:State\times SystemState \to SystemState
         \end{equation}
     
     \end{definition}
+
+\paragraph{Hybrid Automaton Example:} An example of \emph{hybrid automaton} is given in (fig. \ref{fig:hybridAtomatonExample}). The automaton is used to control \emph{UAS system} to perform simple level up (increase altitude) maneuver \cite{casau2011uav}. The automaton has three discrete states representing \emph{hover}, \emph{transition}, and, \emph{level} portion of the maneuver.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.60\linewidth]{\FIGDIR/BC001HybridAutomatonExample} 
+    \caption{Example: The hybrid automaton example for UAS manuever \cite{casau2011uav}.}
+    \label{fig:hybridAtomatonExample}
+\end{figure}
