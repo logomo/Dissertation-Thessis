@@ -1,5 +1,6 @@
 \section{\secState{D}Reach Sets}\label{s:ReachSets}
-    \noindent Informally, the \emph{Reach Set} of a UAS system described by a differential equation is the \emph{set of all states that can be reached from an initial state within a given time interval}.
+    \noindent Informally, the \emph{Reach Set} of a system described by a differential equation is the \emph{set of all states that can be reached from an initial state within a given time interval}. Similar definitions applies to the systems with different representation and control, such as \emph{hybrid automaton}.
+
 
 \subsection{\secState{D}Definitions}\label{sec:reachSetIncrementalDefinition}
     \paragraph{For following definitions} consider \emph{nonlinear UAS system} described in (sec. \ref{s:uavMotionModel}).
@@ -34,7 +35,7 @@
         \end{equation}
     \end{definition}
 
-    \paragraph{Reach set under constraints} are usable to define state constrained systems in terms of dynamics and technical capabilities.
+    \paragraph{Reach set under state constraints} are usable to define state constrained systems in terms of dynamics and technical capabilities.
     
     \begin{definition}[Reach set under state constraints]
         Suppose the initial position and time $(state_0, time_0)$ and $state$ constraints are given $state(t) \in \mathbb{A} \subset \R^n, \dot{x}(t) \in \mathbb{B} \subset \R^n$. The reach set $ReachSet[\tau, time_0, \vec{state}_0]$ of \emph{nonlinear UAS system} at time $\tau \ge time_0$, starting at position and time $(state_0, time_0)$ is given by:
