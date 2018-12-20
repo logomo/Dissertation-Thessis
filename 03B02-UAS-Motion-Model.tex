@@ -39,8 +39,8 @@ Where $input(k)$, $state(k)$ is a set of discrete-time signals. They can be repr
 \begin{equation}\label{eq:Adversarial}
     \begin{aligned}
     \text{d} / \text{d} \text{t state}(time)&= f(t,state(time),uas(time),adversary(time)), \\
-    uas(time) &\in UAS Inputs(time) \subset \R^u, \\
-    adversary(time) &\in Adversary Inputs(time) \subset \R^v \\
+    uasControl(time) &\in UAS Inputs(time) \subset \R^u, \\
+    adversaryControl(time) &\in Adversary Inputs(time) \subset \R^v \\
     \end{aligned}
 \end{equation}
 This system representation is often used in definition of problem of pursuit/evasion problem. Krasovskii developed a solution approach to this problem in \cite{game1987}. A complex example of can be found in article \cite{game1988}.
