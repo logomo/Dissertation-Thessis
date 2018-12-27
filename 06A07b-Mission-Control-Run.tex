@@ -419,6 +419,13 @@ If the \emph{Operation Mode} is set as \emph{Navigation Mode} the algorithm cont
 
 The key idea is to explain what happen in one \emph{decision frame}. The \emph{mission control run} is implemented as multi-thread application which sends the signals between threads. Each thread is semi-independent process with forced synchronization on \emph{decision frame switch}.
 
+\noindent The notable threads and their roles \& responsibilities are summarized like follow:
+\begin{itemize}
+    \item[1.] \emph{Sensor Fusion} - responsible for processing real time sensor array (sec. \ref{s:SensorFusionDefinition}). The output is partial known world assessment (sec. \ref{s:KnownWorld}). An \emph{obstacle detection} and \emph{intruder detection} events can be risen by this thread. 
+    
+    \item[2.] \emph{Data Fusion} - responsible for enhancing data from \emph{sensor fusion} by mixing data originating from \emph{information sources} (sec. \ref{s:dataFusionDefinition}). The information sources used in this work contains constraints originating from \emph{geo-fencing}, \emph{weather}, \emph{airspace restrictions}. This thread is delayed by \emph{sensor fusion}. A \emph{data fusion procedure} strongly depends on \emph{operational space context} (controlled/non-controlled airspace). The output of \emph{data fusion} is full \emph{known world assessment} (sec. \ref{s:KnownWorld}, \ref{s:sensorFusion}). The \emph{UTM-related} and \emph{constraint related} events can arise from \emph{data fusion}.
+    
+    
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{\FIGDIR/TE064DecisonFrameExplained}
@@ -426,12 +433,6 @@ The key idea is to explain what happen in one \emph{decision frame}. The \emph{m
     \label{fig:misisonControlRunOrchestrationDiagram}
 \end{figure}
 
-\noindent The notable threads and their roles \& responsibilities are summarized like follow:
-\begin{itemize}
-    \item[1.] \emph{Sensor Fusion} - responsible for processing real time sensor array (sec. \ref{s:SensorFusionDefinition}). The output is partial known world assessment (sec. \ref{s:KnownWorld}). An \emph{obstacle detection} and \emph{intruder detection} events can be risen by this thread. 
-    
-    \item[2.] \emph{Data Fusion} - responsible for enhancing data from \emph{sensor fusion} by mixing data originating from \emph{information sources} (sec. \ref{s:dataFusionDefinition}). The information sources used in this work contains constraints originating from \emph{geo-fencing}, \emph{weather}, \emph{airspace restrictions}. This thread is delayed by \emph{sensor fusion}. A \emph{data fusion procedure} strongly depends on \emph{operational space context} (controlled/non-controlled airspace). The output of \emph{data fusion} is full \emph{known world assessment} (sec. \ref{s:KnownWorld}, \ref{s:sensorFusion}). The \emph{UTM-related} and \emph{constraint related} events can arise from \emph{data fusion}.
-    
     \item[3.] \emph{Event Buffer} -  special data structure to store, raise, handle, prioritize events raised by other threads. 
     
     The \emph{implemented events} are listed in 5\textsuperscript{th}-6\textsuperscript{th} step of \emph{mission control run}. The events can be categorized like follow:
