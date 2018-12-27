@@ -2,7 +2,7 @@
 
 \paragraph{Motivation:} \emph{Purpose} of \emph{Navigation} is to move forward to \emph{Goal Waypoint} in \emph{Mission}. \emph{Structure} of \emph{Avoidance Grid} is designed to enable \emph{forward} and \emph{turning} maneuvers. The \emph{Avoidance Grid} is organized in \emph{Layers} characteristic by same distance from \emph{Avoidance Grid Origin}. 
 
-Survey of motion planning algorithm was given in \cite{goerzen2009survey}. The ideal candidate for propagation algorithm is \emph{Wave-front} algorithm propagating \emph{Trajectory tree} trough Layers. Due the \emph{Avoidance Grid} onion like layers, there is possibility to implement turn maneuver trough layers iterative and effectively .
+Survey of motion planning algorithm was given in \cite{goerzen2009survey}. The ideal candidate for propagation algorithm is \emph{Wave-front} algorithm propagating \emph{Trajectory tree} through Layers. Due the \emph{Avoidance Grid} onion like layers, there is possibility to implement turn maneuver through layers iterative and effectively .
 
 \begin{figure}[H]
     \centering
@@ -18,7 +18,7 @@ Survey of motion planning algorithm was given in \cite{goerzen2009survey}. The i
 \paragraph{Rapid Exploration Tree Node} will contain following information:
 \begin{enumerate}
     \item \emph{Initial state} - root entry point, used in state evolution calculation.
-    \item \emph{Trajectory (state evolution)} - trajectory passing trough \emph{state space} in local coordinate frame of \emph{Avoidance Grid}.
+    \item \emph{Trajectory (state evolution)} - trajectory passing through \emph{state space} in local coordinate frame of \emph{Avoidance Grid}.
     \item \emph{Buffer} (applied movements) - ordered list of \emph{executed movements} applied on \emph{initial state} to obtain \emph{state evolution}.
     \item \emph{Cost} - calculated for \emph{state evolution} based on \emph{predefined cost function}. 
     \item \emph{Footprint} - ordered set of \emph{passing cells} in \emph{Avoidance Grid}.
@@ -70,7 +70,7 @@ The \emph{Avoidance Grid} have UAS with \emph{position $\in$ Initial State} at t
     grid=AvoidanceGrid, automaton=MovementAutomaton, root = Node\;
     reachSet = initializeReachSet(root,stack,grid,automaton)\;
     \BlankLine
-    \# Main Expansion trough, layers (i), rows (j), cells(k)\;
+    \# Main Expansion through, layers (i), rows (j), cells(k)\;
     \For{layer($1\dots i$) \emph{in} grid}{
         \For{row($1\dots j$ \emph{in} layer)}{
             \For{cell($1 \dots k$) \emph{in} row}{

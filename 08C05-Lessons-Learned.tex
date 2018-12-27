@@ -67,7 +67,7 @@ The \emph{input interface} represented as \emph{data fusion} (theory sec. \ref{s
 
 \paragraph{Probabilistic approach:} The technical report \cite{gomola2017probabilistic} introduced the \emph{intruders} and \emph{map obstacles} \cite{cernamaria2018}. This imposes an requirement to \emph{probabilistic implementation}. The probabilistic density functions with all that theoretical apparatus are established in order to cover the processes of the data fusion and decision making. The problem was the formalization level, a lot of \emph{effort} is wasted to formalize very simple calculations and thresholds. The tuning parameters were nonexistent, preventing the customization.
 
-\paragraph{Final Approach as a Synthesis:} The benefits of both approaches for data fusion are used in final implementation (sec. \ref{s:sensorFusion}), the useful aspects of probabilistic approach like ratings and addition rules persisted. The useful aspects of deterministic, like threshold is kept trough predicates (tab. \ref{tab:defuzificationRatings}). The concept is following:
+\paragraph{Final Approach as a Synthesis:} The benefits of both approaches for data fusion are used in final implementation (sec. \ref{s:sensorFusion}), the useful aspects of probabilistic approach like ratings and addition rules persisted. The useful aspects of deterministic, like threshold is kept through predicates (tab. \ref{tab:defuzificationRatings}). The concept is following:
 
 \begin{enumerate}
         \item \emph{Ratings reflects probabilities} - the property of visibility (eq. \ref{eq:visibilityForCell}), obstacle encounter in cell (eq. \ref{eq:detectedObstacleRatingForCell}), map obstacle in cell (eq. \ref{eq:mapObstacleRatingForCell}), intruder intersection with cell (eq. \ref{eq:intruderRatingForCell}), constraint intersection of the cell (eq. \ref{eq:constraintRatingForCell}) are formalized as threat property (def. \ref{def:threat}). 
@@ -84,7 +84,7 @@ The \emph{input interface} represented as \emph{data fusion} (theory sec. \ref{s
  	        
 	        \item \emph{Free} (eq. \ref{eq:freeDataFusion}) - these cells are free of any threat, this fact is verified by sensors and prior knowledge.
 	        
-	        \item \emph{Reachable} (eq. \ref{eq:ReachableDataFusion}) - these cells are free and moreover there exists at least one \emph{safe trajectory} leading there, the safe trajectory is a trajectory from \emph{reach set approximation} which goes trough free space.
+	        \item \emph{Reachable} (eq. \ref{eq:ReachableDataFusion}) - these cells are free and moreover there exists at least one \emph{safe trajectory} leading there, the safe trajectory is a trajectory from \emph{reach set approximation} which goes through free space.
 	    \end{enumerate}
 \end{enumerate}	    
 

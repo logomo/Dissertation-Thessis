@@ -1,8 +1,8 @@
 \newpage
 \subsection{\secState{R}Computation Complexity}\label{sec:MCRcomputationalComplexity}
-\paragraph{Introduction:}The \emph{Computation Complexity} one mission control run assessment is necessary to identify the strong and weak points of approach. Lets get trough modules to assess notable calculations/algorithms complexity on high abstraction level.
+\paragraph{Introduction:}The \emph{Computation Complexity} one mission control run assessment is necessary to identify the strong and weak points of approach. Lets get through modules to assess notable calculations/algorithms complexity on high abstraction level.
 
-\paragraph{Navigation Loop:} I the navigation loop, the \emph{waypoint reach condition} (eq. \ref{eq:waypointReachCondition}) is checked, this is unitary operation with worst complexity $\mathscr{O}(1)$. The selection process of the next \emph{Goal Waypoint} can get trough all waypoints in the mission if they are all unreachable the complexity is $\mathscr{O}(|waypoints|)$.
+\paragraph{Navigation Loop:} I the navigation loop, the \emph{waypoint reach condition} (eq. \ref{eq:waypointReachCondition}) is checked, this is unitary operation with worst complexity $\mathscr{O}(1)$. The selection process of the next \emph{Goal Waypoint} can get through all waypoints in the mission if they are all unreachable the complexity is $\mathscr{O}(|waypoints|)$.
 
 The \emph{notable steps} complexity is following:
 \begin{equation*}
@@ -54,7 +54,7 @@ The \emph{threat insertion} is realized in 7\textsuperscript{th} to 10\textsuper
     \texttt{Insert Obstacles: } \mathscr{O}(|cells|)
 \end{equation*}
 
-\noindent The \emph{intruders intersection model} type impact the insertion complexity. The \emph{linear intersection} (sec. \ref{s:linearIntersectionModel}) is going trough maximum of \emph{layers count} cells. 
+\noindent The \emph{intruders intersection model} type impact the insertion complexity. The \emph{linear intersection} (sec. \ref{s:linearIntersectionModel}) is going through maximum of \emph{layers count} cells. 
 
 The \emph{body volume intersection model} (sec. \ref{s:bodyvolumeIntersection}) can check the \emph{simple intersection condition} over all \emph{Avoidance Grid} in worst case, therefore complexity for this check is bounded by \emph{count of cells}. 
 
@@ -94,7 +94,7 @@ The \emph{Maneuverability Uncertainty Intersection} (sec. \ref{s:uncertaintyInte
     \texttt{Recalculate Reachibility: } \mathscr{O}(4 \times (|nodes| + |cells|))
 \end{equation*}
 
-\noindent Each time at the end of in 7\textsuperscript{th} to 10\textsuperscript{th} step the \emph{Avoidance Path is Selected}. The \emph{Worst Case} (expected) scenario is to \emph{select} four paths for each \emph{treath} application. The algorithm for \emph{best path selection} (alg. \ref{alg:FindBestPathAvoidanceGrid}) iterates over all \emph{cells} in avoidance grid and over all \emph{trajectories} passing trough that cell. The complexity boundary for \emph{path selection} is given as follow:
+\noindent Each time at the end of in 7\textsuperscript{th} to 10\textsuperscript{th} step the \emph{Avoidance Path is Selected}. The \emph{Worst Case} (expected) scenario is to \emph{select} four paths for each \emph{treath} application. The algorithm for \emph{best path selection} (alg. \ref{alg:FindBestPathAvoidanceGrid}) iterates over all \emph{cells} in avoidance grid and over all \emph{trajectories} passing through that cell. The complexity boundary for \emph{path selection} is given as follow:
 
 \begin{equation*}
     \texttt{Select Path: } \mathscr{O}\left(4 \times \left(|cells|+\frac{|nodes|}{|cells|}\right)\right)

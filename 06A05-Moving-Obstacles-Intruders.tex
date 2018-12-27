@@ -2,7 +2,7 @@
 \section{\secState{R}Intruders and Moving Constraints}\label{s:intruders}
 \paragraph{Intruder behaviour:} \emph{Adversarial behaviour} of moving obstacle is trying to destroy avoiding our UAS.  The \emph{Intruder} UAS \cite{fiorini1998motion} is not trying to hurt our \emph{UAS} actively. The \emph{Adversarial behaviour} is neglected in this work. The non-cooperative avoidance is assumed, it can be relaxed to \emph{cooperative avoidance} in \emph{UTM controlled airspace}.
 
-\paragraph{Intruder information:} The \emph{observable intruder information set} for any kind of intruder, obtained trough sensor/C2 line, is following:
+\paragraph{Intruder information:} The \emph{observable intruder information set} for any kind of intruder, obtained through sensor/C2 line, is following:
 \begin{enumerate}
     \item\emph{Position} - position of intruder in \emph{local} or \emph{global} coordinate frame, which can be transformed into \emph{avoidance grid coordinate frame}.
     
@@ -34,7 +34,7 @@
 \end{enumerate}
     
 \begin{note}
-    Our approach considers only \emph{UAS} intruders, because \emph{Data Fusion} considers data received trough \emph{ADS-B} messages. The \emph{Intruders} extracted from \emph{LiDAR} scan were not considered (ex. birds). The proposed \emph{intruder intersection models} are reusable for other \emph{intruder sources}.
+    Our approach considers only \emph{UAS} intruders, because \emph{Data Fusion} considers data received through \emph{ADS-B} messages. The \emph{Intruders} extracted from \emph{LiDAR} scan were not considered (ex. birds). The proposed \emph{intruder intersection models} are reusable for other \emph{intruder sources}.
 \end{note}
 
 \paragraph{Approach Overview:} The \emph{Avoidance Grid} (def. \ref{def:AvoidanceGrid}) is adapted to \emph{LiDAR} sensor. The \emph{euclidean grid intersections} are fairly simple. The \emph{polar coordinates grid} are not. The need to keep \emph{polar coordinates grid} is prevalent, because of fast \emph{LiDAR} reading assessment.  There are following commonly known methods to address this issue:
