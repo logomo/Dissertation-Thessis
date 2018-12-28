@@ -1,45 +1,12 @@
-\section{\secState{R}Sensor (Data) Fusion}\label{s:dataFusionProbabilisticModelTheory}
-\paragraph{Idea:}  There is \emph{Need for abstract representation} of \emph{operational space}, which is independent of used sensors, technologies, information sources. The universal obstacle avoidance system should have \emph{portability property}. Our previous work \emph{Obstacle avoidance framework based on reach sets} \cite{gomola2017obstacle} have introduced similar concept of \emph{control interface}.
+\section{\secState{R}Surveliance}\label{s:dataFusionProbabilisticModelTheory}
+\paragraph{Idea:}  There is \emph{Need for abstract representation} of \emph{operational space}, which is independent of used sensors, technologies, information sources. The universal obstacle avoidance system should be \emph{portable} between various platforms. Our previous work \emph{Obstacle avoidance framework based on reach sets} \cite{gomola2017obstacle} have introduced concept of \emph{control interface}. The concept of \emph{control interface} increases portability of solution.
 
-The original concept was using cell status interpretation, which was hardwired to LiDAR technology.  The new demand is to incorporate concepts of \emph{visibility}, \emph{reachibility} and \emph{obstacle probability}. The base methodst for \emph{Statistical Sensor Fusion} were outlined in \cite{gustafsson2010statistical}.
-
-\paragraph{Key Concept:} \emph{Data fusion interface} (sec. \ref{s:dataFusionDefinition}) - interface to fuse sense data from various online, offline, cooperative, non-cooperative sources into single scalable {space and trajectory evaluation procedure}.
+The original concept used cell status interpretation (boolean values), which is hardwired to LiDAR technology. The basic methods for \emph{Statistical Sensor Fusion} were outlined in \cite{gustafsson2010statistical}. The result of the methods application is \emph{data fusion interface} (sec. \ref{s:dataFusionDefinition}) - interface to fuse sense data from various online, offline, cooperative, non-cooperative sources into single scalable {space and trajectory evaluation procedure}.
     
 \paragraph{Related work:} \noindent UAS specific sensor fusion has been proposed by Ramsay in \cite{ramasamy2014avionics}. \emph{Next generation avoidance concept} \cite{ramasamy2014next} is introducing concept of higher level sensor fusion called \emph{data fusion}. 
 
 The uncertainty and properties in \emph{Remotely Piloted Systems} have been discussed in \cite{chynchenko2016remotely}. The work provided concept of various performance ratings like visibility and obstacle rating, more details have been given in \cite{shmelova2016modeling}. This ratings were modeled only for operator decision making \cite{kharchenko2017modelling}, results are usable for automated decision making and space assessment. 
 
-\emph{Probabilistic trajectory assessment} has been firstly proposed in \cite{kim2007uav} where trajectory was tracking and predicting \emph{safety properties} along. 
-
-\emph{Game theory} viewpoint is firstly used in \cite{vidal2002probabilistic}. Probabilistic path planning using safety zones similar to cell classification of this work have been used in \cite{pfeiffer2005path}.
-
-Probabilistic path search similar to our reach set representation using rapidly exploring path trees have been used in \cite{kothari2013probabilistically,blackmore2006probabilistic}. Relationship between classic grid search and probabilistic lattice search have been established in \cite{lavalle2004relationship}. A probabilistic approach for trajectory estimation via reduced lattice search is known from 1986 from work of Gessel \cite{gessel1986probabilistic} lattice paths were enumerated via movement sequences and similar technique is used in our reach set estimation method using movement automaton.  Pruning methods comparison and complexity can be found in \cite{esposito1997comparative}.
-
-Overall concepts of probabilistic sets have been given by Hirota in \cite{hirota1981concepts}.  Free flight safety rating similar to our reachability concept have been presented in \cite{hoekstra2002designing}.
-
-\paragraph{Shortcomings:} 
-
-\begin{enumerate}
-    \item \emph{Hierarchical calculation} - there is need to calculate \emph{avoidance trajectory} for incremental constraint applications. For example:
-    \begin{enumerate}[a.]
-        \item Calculate \emph{Minimal escape path} covering physical obstacles and intruders.
-        \item Apply next level of constraints, like airspace restrictions and some virtual constraints. Then calculate path if exists, continue.
-        \item Apply nice to have constraints, like non lethal weather, recalculate path.
-    \end{enumerate}
-    
-    \item \emph{Source Reliability Evaluation} -  reliability evaluation is empirical process usually done by hand. The result aggregation is not standardized. There can be multiple sources of same rating, for example visibility, which needs to be aggregated into one.  
-    
-    \item \emph{Ambiguous rating definition} - There is multiple definitions especially for \emph{Reachibility rating} in works \cite{kothari2013probabilistically,blackmore2006probabilistic,gessel1986probabilistic}.
-    
-\end{enumerate}
-
-\paragraph{Improvements in Our Work:}
-
-\emph{Hierarchical calculation} is addressed in \emph{Mission Control run} (sec: \ref{s:missionControlRun}) where threats are hierarchically applied based on \emph{severity}.
-
-\emph{Source reliability evaluation} is addressed in \emph{Static Obstacles} (sec. \ref{s:staticObstacles}) and \emph{Moving Obstacles} \ref{s:intruders}). The main rating for \emph{Detected obstacle, Map Obstacle} and \emph{Visibility} of space are established there. 
-
-\emph{Clear rating definition} - the \emph{Reachibility} of space portion and \emph{Safety} rating for trajectory are established in \emph{Avoidance Grid Run} (sec. \ref{s:aviudabceGridRun})
 
 
 
