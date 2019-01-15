@@ -1,15 +1,16 @@
-\noindent Este trabalho aborda uma questão de prevenção de obstáculos reativa / baseada em eventos para sistemas autônomos não tripulados (UAS) operando em espaço aéreo não-segregado.
+\noindent Esse trabalho aborda o \textit{problema de desviar de obstáculos baseado em eventos e de forma reactiva} para um sistema autónomo não tripulado que opera em \textit{espaço aéreo não segregado}. O sistema é controlado através de um autômato de movimento, dessa forma é possível d\textit{iscretizar a trajetória e controlar o veículo de forma independente}. O autômato actua como uma interface  para controlar o sistema autónomo e gerar referências de trajetórias para um controlador de baixo nível.
 
-O UAS é controlado por meio de autômato de movimento, isso permite a discretização da trajetória e a independência do controle. O autômato de movimento atua como uma interface consumindo cadeia de comando de movimento para controlar UAS ou gerar uma trajetória de referência para controle de baixo nível.
+As leituras do sensor e outras fontes de informações são combinadas através de uma técnica de fusão de dados baseado em escala, dessa forma o método é independente da plataforma. A avaliação situacional é projetada no espaço operacional.
 
-As leituras do sensor e as fontes de informação são fundidas através da fusão de dados baseada em classificação, o que proporciona independência da plataforma do sensor. A avaliação situacional é projetada no espaço operacional.
 
-O espaço operacional UAS é representado como uma grade planar, isso é separado em células não uniformes. As ameaças são rastreadas para cada célula, ou seja, presença de obstáculos ou intrusos, geofencing ou impacto climático.
+O espaço operacional do sistema autónomo é representado em uma grelha planar, separada em células não uniformes. Os riscos são rastreados para cada célula, nomeadamente obstáculos e a presença de intrusos, geo-fencing ou distúrbios atmosféricos.
 
-A estratégia de evitação ou navegação do UAS é representada como um conjunto de alcance no espaço operacional. O conjunto de alcance é aproximado como uma árvore onde a raiz é o estado inicial do sistema, os nós são estados esperados após a aplicação de movimentos. O conjunto de alcance é calculado para uma gama de estados iniciais antes do voo, dando uma baixa pegada computacional, permitindo a implementação da abordagem em plataformas incorporadas.
 
-A aproximação do conjunto de alcance pode incluir várias propriedades de manobra, como alta cobertura de espaço ou suavidade de trajetória, para evitar tarefas de navegação. A personalização é usada para integrar o UAS no espaço aéreo controlado, onde os requisitos de separação são incluídos no conjunto de alcance.
+A\textit{ estratégia de evasão ou navegação} do sistema autônomo é representada como um conjunto alcançável no espaço operacional. O conjunto alcançável é aproximado como uma árvore na qual a raiz representa o estado inicial do sistema e os nós são os estados esperados após aplicar os movimentos. O conjunto alcançável é calculado para um conjunto de estados iniciais antes da execução da missão. Devido a baixa carga computacional, é possível implementar a estratégia em plataformas embarcadas.
 
-Os serviços básicos de Gerenciamento de Tráfego da UAS, como notificação de posição, restrição de espaço aéreo, diretivas e microgestão, são implementados para comprovar a viabilidade operacional da abordagem em espaço aéreo controlado.
+A \textit{aproximação do conjunto alcançável} inclui diversas propriedades de manobra, como grande cobertura de regiões ou suavidade de trajetórias, para tarefas de navegação e evasão. A customização é utilizada para integrar o sistema autónomo no espaço de controlo aéreo, onde os requisitos de separação estão incluídos no conjunto alcançável.
 
-A verificação da viabilidade da abordagem foi comprovada através de cenários de teste de caso de linha de fronteira, retirados das práticas e da experiência da aviação geral. 
+Os \textit{serviços básicos do sistema de controlo de tráfego aéreo} como posição, como notificação da posição, restrição do espaço aéreo, diretivas e administração local são implementadas para provar a possibilidade da estratégia ser implementada no espaço de controlo aéreo.
+
+
+A verificação da \textit{estratégia foi comprovada através} de cenários chaves obtidos de exercícios de  aviação e experiências. O ambiente de simulação completo com uma vasta gama de opções de customização é apresentado.

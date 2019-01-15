@@ -1,9 +1,9 @@
 \cleardoublepage
 \section{\secState{R}Test Cases Conclusion}\label{s:testCasesConclusion}
-\noindent This section contains summary of performance evaluation (sec. \ref{s:performanceEvaluation}), adversary behaviour impact on our approach (sec. \ref{s:adversadialBehaviourImpact}), \emph{calculation load} in (sec. \ref{s:ComputaitonFootprint}).
+\noindent This section contains summary of performance evaluation (sec. \ref{s:performanceEvaluation}), adversary behavior impact on our approach (sec. \ref{s:adversadialBehaviourImpact}), \emph{calculation load} in (sec. \ref{s:ComputaitonFootprint}).
 
 \subsection{\secState{R}Performance Evaluation}\label{s:performanceEvaluationTable}
-\noindent Performance of test cases were evaluated according to criteria given by (sec. \ref{s:performanceEvaluation}). The performance for \emph{test cases} from test plan (tab. \ref{tab:testCasesSummary}) have been summarized in (tab. \ref{tab:testCasesPerformacneEvaluation}).
+\noindent Performance of test cases was evaluated according to criteria given by (sec. \ref{s:performanceEvaluation}). The performance for \emph{test cases} from test plan (tab. \ref{tab:testCasesSummary}) has been summarized in (tab. \ref{tab:testCasesPerformacneEvaluation}).
 
 \begin{table}[H]
     \scriptsize
@@ -135,26 +135,26 @@
     \label{tab:testCasesPerformacneEvaluation}
 \end{table}
 
-\paragraph{Highlights:} Each \emph{scenario} contains reference to notable simulation moments and results. The scenarios were grouped according to \emph{Operational Space} category and each category is separated by strike line.
+\paragraph{Highlights:} Each \emph{scenario} contains the reference to notable simulation moments and results. The scenarios were grouped according to the \emph{Operational Space} category, and each category is separated by strike line.
 
-\noindent\emph{Non cooperative test cases for Rural/Urban environment:}
+\noindent\emph{Non-cooperative test cases for the Rural/Urban environment:}
 \begin{enumerate}
-    \item\emph{Static obstacle avoidance} (Building/Slalom/Maze) - the buildings were correctly avoided without security breach, navigation algorithm was sufficient for given scenarios and obstacle density.
+    \item\emph{Static obstacle avoidance} (Building/Slalom/Maze) - the buildings were correctly avoided without security breach; navigation algorithm was sufficient for given scenarios and obstacle density.
     
     \item\emph{Weather avoidance} (Storm) - the moving \emph{storm} have been avoided in both \emph{soft constraint} and \emph{hard constraint} state. The assumption of \emph{early detection/notification} is key in successful weather avoidance.
 \end{enumerate}
 
-\noindent\emph{Non cooperative test cases for Intruder Avoidance} - the key assumptions are early intruder detection in \emph{Avoidance Grid} and \emph{non-adversarial} behaviour. Each UAS was running own instance of \emph{Navigation loop} (fig. \ref{fig:missionControlRunActivityDiagram}). The summary of test cases is going like follow:
+\noindent\emph{Non-cooperative test cases for Intruder Avoidance} - the key assumptions are early intruder detection in \emph{Avoidance Grid} and \emph{non-adversarial} behavior. Each UAS was running own instance of \emph{Navigation loop} (fig. \ref{fig:missionControlRunActivityDiagram}). The summary of test cases is going like follow:
 
 \begin{enumerate}
-    \item\emph{Emergency converging} - both UAS identified correct roles according rules of the air. The UAS 2 kept \emph{right of the way}.
+    \item\emph{Emergency converging} - both UAS identified correct roles according to the rules of the air. The UAS 2 kept \emph{right of the way}.
     
     \item\emph{Emergency head on} - both UAS identified correct roles according rules of the air, both of them uses full separation with \emph{Combined Reach Set Approximation} (sec. \ref{s:combinedReachSet}).
     
     \item\emph{Emergency mixed} -  all four UAS enters into emergency avoidance mode intermediately after intruders detection. The \emph{non-cooperative} consensus of separation is reached (fig. \ref{fig:NonCooperativeConflictResolutionUTM})
 \end{enumerate}
 
-\noindent\emph{Cooperative test cases with UTM supervision} are working according to \emph{UTM architecture} (fig. \ref{fig:UTMArchitectureOverview}), where the \emph{UTM} is considered as main authority. The key assumptions are UTM Resolution fulfillment and \emph{non-adversary behaviour}. Each UAS was running own instance of \emph{Navigation loop} (fig. \ref{fig:missionControlRunActivityDiagram}) with enabled \emph{Rule Engine} (sec. \ref{sec:ruleEngine}). The summary of test cases is going like follow:
+\noindent\emph{Cooperative test cases with UTM supervision} are working according to \emph{UTM architecture} (fig. \ref{fig:UTMArchitectureOverview}), where the \emph{UTM} is considered as main authority. The key assumptions are UTM Resolution fulfillment and \emph{non-adversary behavior}. Each UAS was running own instance of \emph{Navigation loop} (fig. \ref{fig:missionControlRunActivityDiagram}) with enabled \emph{Rule Engine} (sec. \ref{sec:ruleEngine}). The summary of test cases is going like follow:
 
 \begin{enumerate}
     \item \emph{Rule-based converging} - correct handling of \emph{converging maneuver} (fig. \ref{fig:ConvergingManeuverTheoretical}), proper rule invocation (rule \ref{tab:ruleConvergingManuever}) on UAS side.
@@ -163,47 +163,47 @@
     
     \item \emph{Rule-based multiple} - proper \emph{Collision case Merge} (tab. \ref{tab:collisionCasesRuleBasedMixed}) with new collision point (eq. \ref{eq:aggregatedCollisionCaseCenter}) and \emph{safety margin calculation} (eq. \ref{eq:naiveSafetyMarginAgregation}).
     
-    \item \emph{Rule-based overtake} - correct handling of \emph{overtake maneuver} (fig. \ref{fig:OvertakeManeuverTheoretical}), proper rule invocation (rule \ref{tab:ruleOvertakeDefinition}). Divergence/Convergence (eq. \ref{eq:overtakeDivergenceLocal},\ref{eq:overtakeConvergenceLocal}) for multiple waypoints calculation works for various speed difference (fig. \ref{fig:testRuleBasedOvertakeSafetyMarginForDifferentSpeedPerformance}).
+    \item \emph{Rule-based overtake} - correct handling of \emph{overtaking maneuver} (fig. \ref{fig:OvertakeManeuverTheoretical}), proper rule invocation (rule \ref{tab:ruleOvertakeDefinition}). Divergence/Convergence (eq. \ref{eq:overtakeDivergenceLocal},\ref{eq:overtakeConvergenceLocal}) for multiple waypoints calculation works for various speed difference (fig. \ref{fig:testRuleBasedOvertakeSafetyMarginForDifferentSpeedPerformance}).
 \end{enumerate}
 
 \subsection{\secState{R}Adversary Behaviour Impact}\label{s:adversadialBehaviourImpact}
 
-\noindent The \emph{abuse} of UAS for \emph{ill intentions} realization is expected. The \emph{UAS} is cheap, disposable and does not have an ethic boundaries. 
+\noindent The \emph{abuse} of UAS for \emph{ill intentions} realization is expected. The \emph{UAS} is cheap, disposable and does not have ethic boundaries. 
 
-One of the \emph{assumptions} was that there are only intruders whom does not actively look to harm our \emph{UAS}. Breaking this assumption can be lethal for our system and also for other systems. 
+One of the \emph{assumptions} was that there are only intruders who do not actively look to harm our \emph{UAS}. Breaking this assumption can be lethal for our system and also for other systems. 
 
 Let us take \emph{Rule-based Head on} test case (sec. \ref{s:testRuleHeadOn}), changing only following aspects:
 \begin{enumerate}
-	\item \emph{UAS 2 position spoofing} - the adversarial vehicle is \emph{faking its position} according to expected behaviour.
+	\item \emph{UAS 2 position spoofing} - the adversarial vehicle is \emph{faking its position} according to expected behavior.
 	\item \emph{UAS 2 Navigation goal} - set as \emph{UAS 1 position} from intercepted \emph{position notifications} (tab. \ref{tab:positionNotification}).
 \end{enumerate}
 
 
-\paragraph{Simulation:} The \emph{simulation} (fig. \ref{fig:adversarialAttackNotableMoments}) have been run with defined condition. UAS 2 (magenta) has been chosen as the \emph{adversary}. UTM sees expected trajectory of UAS 2 (grey plane/trajectory) based on spoofed \emph{position notifications}. The \emph{navigation/avoidance grid} range (black dashed line boundary) is shown. The notable moment of simulation are: 
+\paragraph{Simulation:} The \emph{simulation} (fig. \ref{fig:adversarialAttackNotableMoments}) have been run with defined condition. UAS 2 (magenta) has been chosen as the \emph{adversary}. UTM sees the expected trajectory of UAS 2 (grey plane/trajectory) based on spoofed \emph{position notifications}. The \emph{navigation/avoidance grid} range (black dashed line boundary) is shown. The notable moment of the simulation are: 
 
 \begin{enumerate}
     \item \emph{Deviation detection ($UAS2\leftrightarrow UTM$)} (fig. \ref{fig:adversaryDetectedDeviation}) - the \emph{collision case} (tab. \ref{tab:collisionCasesRuleBasedHeadon}) is active and \emph{enforced} by UTM. The \emph{adversary} UAS 2 (magenta) starts deviating from expected trajectory (grey). UAS 1 (blue) does not register any foreign object in \emph{avoidance grid range} (black dashed line). 
     
-    \item \emph{Adversary attacking ($UAS 2 \to UAS 1$)} (fig. \ref{fig:adversaryAttacking}) - the adversary UAS 2 (magenta) starts actively pursuing UAS 1 (blue) by changing original heading. This can be considered as beginning of \emph{active pursuit}. UAS 1 (blue) does not detect any foreign object in \emph{avoidance grid} (black dashed line boundary). \emph{UTM} is receiving expected UAS position (grey plane/line).
+    \item \emph{Adversary attacking ($UAS 2 \to UAS 1$)} (fig. \ref{fig:adversaryAttacking}) - the adversary UAS 2 (magenta) starts actively pursuing UAS 1 (blue) by changing the original heading. This can be considered as the beginning of \emph{active pursuit}. UAS 1 (blue) does not detect any foreign object in \emph{avoidance grid} (black dashed line boundary). \emph{UTM} is receiving expected UAS position (grey plane/line).
     
     \item \emph{Emergency avoidance} ($UAS 1 \to UAS 2$) (fig. \ref{fig:adversaryEmergencyAvoidance}) following happens:
     \begin{enumerate}[a.]
         \item \emph{Adversary UAS 2} (magenta) is spotted by \emph{UAS 1}(blue), it entered into UAS 1 avoidance grid (black dashed line boundary).
         
-        \item \emph{UAS 1} (blue) enters into \emph{Emergency Avoidance Mode}, because there is an \emph{foreign object}in \emph{avoidance grid}.
+        \item \emph{UAS 1} (blue) enters into \emph{Emergency Avoidance Mode} because there is a \emph{foreign object} in \emph{avoidance grid}.
         
-        \item \emph{UTM} notices a warning to \emph{UAS 1} (blue), because it entered into \emph{Emergency Avoidance Mode}. UTM is not aware of any breach, because of expected UAS 2 position (grey plane/line)
+        \item \emph{UTM} notices a warning to \emph{UAS 1} (blue) because it entered into \emph{Emergency Avoidance Mode}. UTM is not aware of any breach, because of expected UAS 2 position (grey plane/line)
         
-        \item \emph{Adversary UAS 2} (magenta) has UAS 1 (blue) locked in \emph{navigation grid} as goal (which guarantees optimal path).
+        \item \emph{Adversary UAS 2} (magenta) has UAS 1 (blue) locked in \emph{navigation grid} as thegoal (which guarantees optimal pursuit).
     \end{enumerate}
     
     \item \emph{Blind spot ($\circlearrowright UAS 1$)} (fig. \ref{fig:adversaryBlindSpot}) following happens:
     \begin{enumerate}[a.]
-        \item \emph{UAS 1} (blue) returns to \emph{Navigation Mode}, because there is no \emph{foreign object} in \emph{avoidance grid} (black dashed line boundary).
+        \item \emph{UAS 1} (blue) returns to \emph{Navigation Mode} because there is no \emph{foreign object} in \emph{avoidance grid} (black dashed line boundary).
         
-        \item \emph{UTM} receives the mode change and it starts enforcing \emph{resolutions} for \emph{collision case}, Adversary \emph{UAS 2} is considered clear due \emph{expected position} (grey plane/line) compliance with resolution.
+        \item \emph{UTM} receives the mode change, and it starts enforcing \emph{resolutions} for \emph{collision case}, Adversary \emph{UAS 2} is considered clear due to \emph{expected position} (grey plane/line) compliance with the resolution.
         
-        \item \emph{Adversary UAS 2} (magenta) is on UAS 1 blind spot. The target UAS 1 (blue) is locked in UAS 2 navigation grid (black dashed line boundary).
+        \item \emph{Adversary UAS 2} (magenta) is on UAS 1 blind spot. The target UAS 1 (blue) is locked in the UAS 2 navigation grid (black dashed line boundary).
     \end{enumerate}
     
     \item \emph{Collision detail ($UAS1\leftrightarrow UAS2$)}(fig. \ref{fig:adversaryCollisionDetail}) - Target \emph{UAS 1} (blue) is hit by \emph{Adversary UAS 2} (magenta) on left wing tip. Both UAS are going down. UTM will detect sudden loss of both UAS systems. 
@@ -253,19 +253,19 @@ Let us take \emph{Rule-based Head on} test case (sec. \ref{s:testRuleHeadOn}), c
     
     \item \emph{Crash distance} (blue line) - defined  as (eq . \ref{eq:crashDistance}) between UAS 1 (blue) and real UAS 2 position (magenta plane/line) over mission time $t\in[0,22]$.
     
-    \item \emph{Safety margin} (yellow line) - constant value according to \emph{collision case}  (tab. \ref{tab:collisionCasesRuleBasedHeadon}) as value of \emph{10 m}. The safety margin is considered as \emph{soft constraint}.
+    \item \emph{Safety margin} (yellow line) - constant value according to \emph{collision case}  (tab. \ref{tab:collisionCasesRuleBasedHeadon}) as the value of \emph{10 m}. The safety margin is considered as a \emph{soft constraint}.
     
-    \item \emph{Body margin} (red line) - constant value according to (tab. \ref{tab:aboidanceParametersForEmergencyHeadOnScenario}) as value of  \emph{1.2 m}. The body margin is considered as \emph{hard constraint}. The breaking of \emph{body} margin means an effective \emph{collision} UAS 1 and UAS 2.
+    \item \emph{Body margin} (red line) - constant value according to (tab. \ref{tab:aboidanceParametersForEmergencyHeadOnScenario}) as value of  \emph{1.2 m}. The body margin is considered as a \emph{hard constraint}. The breaking of \emph{body} margin means an effective \emph{collision} UAS 1 and UAS 2.
 \end{enumerate}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\linewidth]{\FIGDIR/NS091UTMAdversaryPerformance} 
-    \caption{Expected/Real Distance to body/safety margin evolution for \emph{adversarial behaviour} of UAS 2.}
+    \caption{Expected/Real Distance to body/safety margin evolution for \emph{adversarial behavior} of UAS 2.}
     \label{fig:adversaryDistanceToSafetyMargins}
 \end{figure}
 
-\noindent\emph{Safety criteria} for both \emph{body} and \emph{safety margins} in case of \emph{expected behaviour} are satisfied (eq. \ref{eq:expectedDistanceCondition}). This means that \emph{UAS 1} fulfilled the \emph{UTM directive} despite the fact that it entered \emph{Emergency Avoidance Mode} (fig. \ref{fig:adversaryEmergencyAvoidance}).
+\noindent\emph{Safety criteria} for both \emph{body} and \emph{safety margins} in case of \emph{expected behavior} are satisfied (eq. \ref{eq:expectedDistanceCondition}). This means that \emph{UAS 1} fulfilled the \emph{UTM directive} even though it entered \emph{Emergency Avoidance Mode} (fig. \ref{fig:adversaryEmergencyAvoidance}).
 
 \begin{equation}\label{eq:expectedDistanceCondition}
     \begin{aligned}
@@ -284,9 +284,9 @@ Let us take \emph{Rule-based Head on} test case (sec. \ref{s:testRuleHeadOn}), c
 \end{equation}
 
 \begin{note}
-    An \emph{adversary behaviour} needs to be addressed on:
+    An \emph{adversary behavior} needs to be addressed on:
     \begin{enumerate}
-        \item  \emph{UAS Traffic Management Level} -  our UTM implementation failed to detect \emph{deviation} (fig. \ref{fig:adversaryDetectedDeviation}) and \emph{start of attack} (fig. \ref{fig:adversaryAttacking}). UAS 2 (magenta) had clean intention from beginning and did not change pursuit even when \emph{safety margin} was breached. 
+        \item  \emph{UAS Traffic Management Level} -  our UTM implementation failed to detect \emph{deviation} (fig. \ref{fig:adversaryDetectedDeviation}) and \emph{start of attack} (fig. \ref{fig:adversaryAttacking}). UAS 2 (magenta) had clean intention from the beginning and did not change pursuit even when \emph{safety margin} was breached. 
         
         \item  \emph{Emergency Avoidance Level} - our \emph{navigation loop implementation} does not consider the \emph{ill-intentions}. The UAS 1 (blue) properly switched to \emph{Emergency avoidance mode} (fig. \ref{fig:adversaryEmergencyAvoidance}) after detection of UAS2 (magenta). UAS 2 (magenta) then used the blind spot to exploit UAS 1 vulnerability.   
     \end{enumerate}
@@ -294,7 +294,7 @@ Let us take \emph{Rule-based Head on} test case (sec. \ref{s:testRuleHeadOn}), c
 
 \subsection{\secState{R}Computation Footprint}\label{s:ComputaitonFootprint}
 
-\noindent The \emph{computation footprint} is summarized in computation  load (tab. \ref{tab:computationLoadStatistics}). The \emph{computation load} (eq. \ref{eq:computationLoad}) was calculated for each \emph{time-frame} in scenarios. There is summary of \emph{minimal, maximal, average} and \emph{median} values.
+\noindent The \emph{computation footprint} is summarized in computation  load (tab. \ref{tab:computationLoadStatistics}). The \emph{computation load} (eq. \ref{eq:computationLoad}) was calculated for each \emph{time-frame} in scenarios. There is the summary of \emph{minimal, maximal, average} and \emph{median} values.
 
 The \emph{computational load} never exceed more than $55.95\%$ in case of  \emph{emergency Head On} (eq. \ref{eq:computationFeasibilityCriterion}), which means that \emph{every path} was calculated on time.
 
@@ -337,13 +337,13 @@ The \emph{computational load} never exceed more than $55.95\%$ in case of  \emph
 \noindent \emph{Following observations can be made:}
 
 \begin{enumerate}
-    \item \emph{Building avoidance}, \emph{Slalom}, and \emph{Maze} scenarios - the computation load is increasing with the \emph{amount of static obstacles}. The \emph{average load} for \emph{Emergency avoidance mode} in \emph{clustered environment} is $31.51\%$ (Maze).
+    \item \emph{Building avoidance}, \emph{Slalom}, and \emph{Maze} scenarios - the computation load is increasing with the \emph{number of static obstacles}. The \emph{average load} for \emph{Emergency avoidance mode} in \emph{clustered environment} is $31.51\%$ (Maze).
     
-    \item \emph{Storm scenario} - the overall \emph{computation load} is very low due the \emph{moving constraint implementation} (sec. \ref{s:MovingVirtualConstraints}).
+    \item \emph{Storm scenario} - the overall \emph{computation load} is very low due to the \emph{moving constraint implementation} (sec. \ref{s:MovingVirtualConstraints}).
     
-    \item\emph{Emergency Converging/Head On/Multiple} scenarios - the \emph{overall computation load} is quite high due the ineffective \emph{body volume intersection} (sec. \ref{s:bodyvolumeIntersection}) implementation.
+    \item\emph{Emergency Converging/Head On/Multiple} scenarios - the \emph{overall computation load} is quite high due to the ineffective \emph{body volume intersection} (sec. \ref{s:bodyvolumeIntersection}) implementation.
     
     \item \emph{Rule-based Converging/Head On/Multiple} scenarios - the \emph{median computational} load is low, because of the linear \emph{rule implementation} (sec. \ref{sec:ruleImplementation})
     
-    \item \emph{Rule-based Overtake} - the \emph{average computation load} is very low, because only \emph{divergence/convergence} (rule. \ref{tab:ruleOvertakeDefinition}) waypoints are calculated and UAS stays in \emph{navigation mode}.
+    \item \emph{Rule-based Overtake} - the \emph{average computation load} is very low because only \emph{divergence/convergence} (rule. \ref{tab:ruleOvertakeDefinition}) waypoints are calculated and UAS stays in \emph{navigation mode}.
 \end{enumerate}

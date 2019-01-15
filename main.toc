@@ -4,7 +4,7 @@
 \contentsline {paragraph}{Acknowledgements:}{iv}{section*.5}
 \contentsline {chapter}{\numberline {1} Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1} Motivation}{1}{section.1.1}
-\contentsline {paragraph}{UAS integraiton into Air Traffic:}{1}{section*.14}
+\contentsline {paragraph}{UAS integration into Air Traffic:}{1}{section*.14}
 \contentsline {paragraph}{Detect \& Avoid:}{2}{section*.16}
 \contentsline {paragraph}{Challenge Motivation:}{3}{section*.18}
 \contentsline {paragraph}{Reach Sets:}{3}{section*.19}
@@ -171,7 +171,7 @@
 \contentsline {paragraph}{Controllability:}{82}{section*.142}
 \contentsline {paragraph}{Other Properties:}{82}{section*.143}
 \contentsline {paragraph}{Example:}{83}{section*.144}
-\contentsline {section}{\numberline {5.2} Surveliance}{83}{section.5.2}
+\contentsline {section}{\numberline {5.2} Surveillance}{83}{section.5.2}
 \contentsline {paragraph}{Idea:}{83}{section*.146}
 \contentsline {paragraph}{Related work:}{84}{section*.147}
 \contentsline {section}{\numberline {5.3} Navigation Algorithms}{84}{section.5.3}
@@ -195,7 +195,7 @@
 \contentsline {paragraph}{Used concepts:}{89}{section*.165}
 \contentsline {section}{\numberline {5.6} UTM Services}{89}{section.5.6}
 \contentsline {paragraph}{Idea:}{89}{section*.166}
-\contentsline {paragraph}{UTM Operation Modes:}{90}{section*.168}
+\contentsline {paragraph}{UTM Operation Modes:}{89}{section*.168}
 \contentsline {paragraph}{Used Concepts:}{90}{section*.169}
 \contentsline {chapter}{\numberline {6} Approach}{91}{chapter.6}
 \contentsline {paragraph}{Basic Idea:}{91}{section*.171}
@@ -581,7 +581,7 @@
 \contentsline {paragraph}{Path Tracking Deviations:}{278}{section*.584}
 \contentsline {paragraph}{Computation Load:}{278}{section*.586}
 \contentsline {section}{\numberline {7.4} Cooperative Test Cases}{281}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1} Rule Based Converging}{281}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.1} Rule-Based Converging}{281}{subsection.7.4.1}
 \contentsline {paragraph}{Scenario:}{281}{section*.588}
 \contentsline {paragraph}{Assumptions:}{282}{section*.590}
 \contentsline {paragraph}{Main Goal:}{282}{section*.591}
@@ -594,7 +594,7 @@
 \contentsline {paragraph}{Path Tracking Performance:}{285}{section*.602}
 \contentsline {paragraph}{Path Tracking Deviations:}{286}{section*.604}
 \contentsline {paragraph}{Computation Load:}{286}{section*.606}
-\contentsline {subsection}{\numberline {7.4.2} Rule Based Head-On}{287}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.2} Rule-Based Head-On}{287}{subsection.7.4.2}
 \contentsline {paragraph}{Scenario:}{287}{section*.608}
 \contentsline {paragraph}{Assumptions:}{288}{section*.610}
 \contentsline {paragraph}{Main Goal:}{288}{section*.611}
@@ -607,7 +607,7 @@
 \contentsline {paragraph}{Path Tracking Performance:}{292}{section*.622}
 \contentsline {paragraph}{Path Tracking Deviations:}{292}{section*.624}
 \contentsline {paragraph}{Computation Load:}{292}{section*.626}
-\contentsline {subsection}{\numberline {7.4.3} Rule Based Mixed Head-On with Converging}{293}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.3} Rule-Based Mixed Head-On with Converging}{293}{subsection.7.4.3}
 \contentsline {paragraph}{Scenario:}{293}{section*.628}
 \contentsline {paragraph}{Assumptions:}{294}{section*.630}
 \contentsline {paragraph}{Main Goal:}{294}{section*.631}
@@ -620,13 +620,13 @@
 \contentsline {paragraph}{Path Tracking Performance:}{298}{section*.642}
 \contentsline {paragraph}{Path Tracking Deviations:}{299}{section*.644}
 \contentsline {paragraph}{Computation Load:}{300}{section*.646}
-\contentsline {subsection}{\numberline {7.4.4} Rule Based Overtake}{300}{subsection.7.4.4}
+\contentsline {subsection}{\numberline {7.4.4} Rule-Based Overtake}{300}{subsection.7.4.4}
 \contentsline {paragraph}{Scenario:}{300}{section*.648}
 \contentsline {paragraph}{Assumptions:}{301}{section*.650}
 \contentsline {paragraph}{Main Goal:}{301}{section*.651}
 \contentsline {paragraph}{Acceptance Criteria:}{301}{section*.652}
-\contentsline {paragraph}{Testing Setup:}{301}{section*.653}
-\contentsline {paragraph}{Simulation Run:}{301}{section*.654}
+\contentsline {paragraph}{Testing Setup:}{302}{section*.653}
+\contentsline {paragraph}{Simulation Run:}{302}{section*.654}
 \contentsline {paragraph}{Collision Case Calculation:}{303}{section*.656}
 \contentsline {paragraph}{Overtake Speed: Divergence/Convergence Waypoints}{304}{section*.658}
 \contentsline {paragraph}{Overtake Speed: Impact on Trajectory}{304}{section*.660}
@@ -656,7 +656,7 @@
 \contentsline {chapter}{\numberline {8} Conclusion and Future Work}{323}{chapter.8}
 \contentsline {section}{\numberline {8.1} Summary}{323}{section.8.1}
 \contentsline {paragraph}{Reactive Avoidance Test Coverage:}{323}{section*.693}
-\contentsline {paragraph}{Event Based Avoidance Coverage:}{324}{section*.694}
+\contentsline {paragraph}{Event-Based Avoidance Coverage:}{324}{section*.694}
 \contentsline {subsection}{\numberline {8.1.1} Hierarchical Decision Making}{324}{subsection.8.1.1}
 \contentsline {subsection}{\numberline {8.1.2} Use of Developed Reach Set Approximations}{325}{subsection.8.1.2}
 \contentsline {section}{\numberline {8.2} Comparison to Other Methods}{325}{section.8.2}
@@ -664,7 +664,7 @@
 \contentsline {paragraph}{Testing scenario:}{326}{section*.695}
 \contentsline {paragraph}{Scenario example:}{326}{section*.698}
 \contentsline {paragraph}{Conservative Method Performance Margin:}{327}{section*.700}
-\contentsline {paragraph}{Conservative Method Performance Margin}{327}{section*.701}
+\contentsline {paragraph}{Conservative Method Performance Margin:}{327}{section*.701}
 \contentsline {paragraph}{Distance to Body Margin Evolution:}{327}{section*.702}
 \contentsline {paragraph}{Disclaimer:}{328}{section*.704}
 \contentsline {subsection}{\numberline {8.2.2} Scalability}{328}{subsection.8.2.2}
@@ -675,7 +675,7 @@
 \contentsline {section}{\numberline {8.3} Approach Reusability}{329}{section.8.3}
 \contentsline {paragraph}{UTM Services:}{330}{section*.709}
 \contentsline {paragraph}{Emergency Avoidance Functionality:}{330}{section*.710}
-\contentsline {paragraph}{Event Based Avoidance Functionality:}{330}{section*.711}
+\contentsline {paragraph}{Event-Based Avoidance Functionality:}{330}{section*.711}
 \contentsline {paragraph}{Reusability for More Complex Systems:}{330}{section*.712}
 \contentsline {paragraph}{Reach Set Approximations:}{331}{section*.713}
 \contentsline {section}{\numberline {8.4} Lessons Learned}{331}{section.8.4}

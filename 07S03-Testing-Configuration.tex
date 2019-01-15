@@ -1,28 +1,30 @@
 \cleardoublepage
 \section{\secState{D}Testing Configuration}\label{sec:testingConfiguration}
 
-    \noindent All \emph{simulations} are run with configuration described in this \emph{section}. The UAS used for the purposes is given by \emph{model and control} (sec. \ref{s:modelMAImplementation}). 
+    \noindent All \emph{simulations} are run with the configuration described in this \emph{section}. The UAS used for the purposes is given by \emph{model and control} (sec. \ref{s:modelMAImplementation}). 
     
-    \emph{UAS parameters:} An \emph{UAS system} (tab. \ref{tab:testUASBasicParameters}) is modeled after small scale toy model with: maximal body radius $30$ $cm$, maximal speed $4$ $m.s^{-1}$,weight $450$ $g$., maximal flight duration $20$ $min$, maximal turning rate $15$ $deg.s^{-1}$. The \emph{body margin} is set to $0.3 m$, the \emph{near miss radius} is double of \emph{body margin}, thus $0.6$ $m$, the \emph{well clear radius} is set to $5$ $m$. Margins can be set to any value if they are complaint with condition (\ref{eq:marginsBoundary}).
+    \emph{UAS parameters:} An \emph{UAS system} (tab. \ref{tab:testUASBasicParameters}) is modeled after small scale toy model with maximal body radius $30$ $cm$, maximal speed $4$ $m.s^{-1}$, weight $450$ $g$., maximal flight duration $20$ $min$, maximal turning rate $15$ $deg.s^{-1}$. The \emph{body margin} is set to $0.3 m$; the \emph{near-miss radius} is double of \emph{body margin}; thus $0.6$ $m$, the \emph{well clear radius} is set to $5$ $m$. Margins can be set to any value if they are complaint with condition (\ref{eq:marginsBoundary}).
     
     \begin{equation}\label{eq:marginsBoundary}
         0 < bodyMargin \le nearMissRadius \le wellClearRadius \le gridDistance
     \end{equation}   
     
     \begin{note}
-        \emph{Safety margin} is broad term used to describe \emph{minimal distance} between UAS and \emph{adversarial object}. The \emph{Safety margin} is:
+        The \emph{safety margin} is broad term used to describe the \emph{minimal distance} between UAS and \emph{adversarial object}. The \emph{Safety margin} is:
+        
         \begin{enumerate}
-            \item \emph{near miss radius} in case of \emph{non-controlled airspace} or \emph{emergency avoidance mode}.
-            \item \emph{well clear radius} in case of \emph{controlled airspace} and \emph{navigation mode}.
+            \item \emph{Near miss radius} in case of \emph{non-controlled airspace} or \emph{emergency avoidance mode}.
+            
+            \item \emph{Well clear radius} in case of \emph{controlled airspace} and \emph{navigation mode}.
         \end{enumerate}
     \end{note}
     
-	\paragraph{Decision time:} Decision time can be set by the user to any positive non-zero value (\ref{eq:decisionTimeBoundary}). The \emph{Decision time} is equal $1$ $s$ and \emph{Decision frames} are synchronized.
+	\paragraph{Decision time:} Decision time can be set by the user to any positive non-zero value (\ref{eq:decisionTimeBoundary}). The \emph{Decision time} is equal $1$ $s$, and \emph{Decision frames} are synchronized.
     \begin{equation}\label{eq:decisionTimeBoundary}
         maxAlrogithmCalculationTime \le decisionTome \le \infty
     \end{equation}
     
-    \paragraph{Speed:} For \emph{all movements} constant speed $1$ $m.s^{-1}$ is used. Speed can be changed to any value in given boundary (\ref{eq:speedBoundary}).
+    \paragraph{Speed:} For \emph{all movements} constant speed $1$ $m.s^{-1}$ is used. Speed can be changed to any value in the given boundary (\ref{eq:speedBoundary}).
         \begin{equation}\label{eq:speedBoundary}
             0 \le speed    \le 
             \min\left(
@@ -38,7 +40,7 @@
     
     \paragraph{Grids:} Used \emph{Navigation grid parameters} are given in (tab. \ref{tab:testNavigationGridBasic}).Selected \emph{Navigation Reach set} is \emph{ACAS-like} with enabled horizontal/vertical separation. Used \emph{Avoidance grid parameters} are given in (tab. \ref{tab:testAvoidanceGridBasic}). Selected \emph{Avoidance Reach set} is \emph{combined} because of high \emph{coverage ratio}. 
     
-    User can define own grid parameters according to the \emph{space discretization rules} (sec. \ref{s:AvoidanceGrid}) and chose own \emph{reach set type} according to preference (sec. \ref{s:reachSet}).
+    The user can define own grid parameters according to the \emph{space discretization rules} (sec. \ref{s:AvoidanceGrid}) and chose own \emph{reach set type} according to preference (sec. \ref{s:reachSet}).
     
     \begin{tabular}{cc}
     
