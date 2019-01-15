@@ -2,19 +2,19 @@
 
 \noindent The future work needs to address issues of \emph{adversarial avoidance} (sec. \ref{s:adversadialBehaviourImpact}) and \emph{practical implementation} (sec. \ref{s:TestingFrameworkTheory}).
 
-\paragraph{Adversarial Avoidance:} The counter example (sec. \ref{fig:adversarialAttackNotableMoments}) showed that the approach is vulnerable to \emph{adversarial behaviour}. The adversarial UAS just simply avoided our field of the vision to proceed with side-hit.
+\paragraph{Adversarial Avoidance:} The counterexample (sec. \ref{fig:adversarialAttackNotableMoments}) showed that the approach is vulnerable to \emph{adversarial behavior}. The adversarial UAS just simply avoided our field of the vision to proceed with side-hit.
 
-This opens the possibility to solve the problem as \emph{differential game} \cite{game1987,game1988}. Our UAS should pose as the \emph{defender}, adversary should pose as \emph{attacker}. The \emph{reach set} of the system given as:
+This opens the possibility to solve the problem as \emph{differential game} \cite{game1987,game1988}. Our UAS should pose as the \emph{defender}; adversary should pose as the \emph{attacker}. The \emph{reach set} of the system given as:
 
 \begin{equation*}
     differential Game = model(positions, defender, attacker)
 \end{equation*}
 
-\noindent This reach set  will give us the options in our decision making process to avoid the pursuer. This will bring additional scientific challenges which can yield interesting results.
+\noindent This reach set  will give us the options in our decision-making process to avoid the pursuer. This adversarial will bring additional scientific challenges which can yield interesting results.
 
-\paragraph{Real System Implementation:} The testing proved \emph{capability of approach} for wide range of applications (tab. \ref{tab:testCasesPerformacneEvaluation}). To proceed further with comparative testing, beyond theoretical implementations (sec. \ref{s:conservativeComparison}), it is necessary to deploy it in real environment.
+\paragraph{Real System Implementation:} The testing proved the \emph{capability of approach} for wide range of applications (tab. \ref{tab:testCasesPerformacneEvaluation}). To proceed further with comparative testing, beyond theoretical implementations (sec. \ref{s:conservativeComparison}), it is necessary to deploy it in real environment.
 
-The \emph{ideal candidate} is \emph{LSTS-tooolchain} \cite{pinto2013lsts}. The LSTS offers all necessary base for \emph{approach software architecture} (fig. \ref{fig:AvoidanceFrameworkConceptNew}). The parts of our approach can be distributed over LSTS-toolchain in following manner:
+The \emph{ideal candidate} is \emph{LSTS-tooolchain} \cite{pinto2013lsts}. The LSTS offers all necessary base for \emph{approach software architecture} (fig. \ref{fig:AvoidanceFrameworkConceptNew}). The parts of our approach can be distributed over LSTS-toolchain in the following manner:
 
 \begin{enumerate}
     \item \emph{LSTS Dune} (UAS on-board control) - the implementation of main \emph{navigation loop} (sec. \ref{s:missionControlRun}), including sensor integration with data fusion (sec. \ref{s:sensorFusion}). The \emph{rule engine} (sec. \ref{s:RuleEngineArchitecture}) can be deployed after UTM services implementation, to support \emph{cooperative maneuvers}.
@@ -29,9 +29,9 @@ The \emph{ideal candidate} is \emph{LSTS-tooolchain} \cite{pinto2013lsts}. The L
 
 \noindent The real system implementation will enable to:
 \begin{enumerate}
-    \item \emph{Compare approach performance} - the theoretical performance of approach is good, only the real challenges can show the flaws and aves of approach. 
+    \item \emph{Compare approach performance} - the theoretical performance of approach is good, only the real challenges can show the flaws and strengths of approach. 
     
     \item \emph{Develop fault-tolerant and recovery procedures} - the process of \emph{event-based} and \emph{reactive} avoidance have been developed and tested in theoretical environment. The real implementation can improve the process weak points by \emph{"learning by doing"} method
     
-    \item \emph{Advertise the approach benefits} - the successful implementation on real system will increase the outreach and visibility of the approach significantly.
+    \item \emph{Advertise the approach benefits} - the successful implementation on a real system will increase the outreach and visibility of the approach significantly.
 \end{enumerate}
