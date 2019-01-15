@@ -1,9 +1,9 @@
-\subsection{\secState{D}Rule Based Head-On}\label{s:testRuleHeadOn}
+\subsection{\secState{D}Rule-Based Head-On}\label{s:testRuleHeadOn}
 
-\paragraph{Scenario:} Two \emph{UAS} are going on same \emph{airway} in same \emph{flight level} in opposite direction in \emph{controlled airspace} (over 500 feet Above the Ground Level). The \emph{mutual position} of UAS can be classified as \emph{Side Approach}. Following \emph{collision hazard} is present:
+\paragraph{Scenario:} Two \emph{UAS} are going on the same \emph{airway} in same \emph{flight level} in the opposite direction in \emph{controlled airspace} (over 500 feet Above the Ground Level). The \emph{mutual position} of UAS can be classified as \emph{Side Approach}. Following \emph{collision hazard} is present:
 
 \begin{enumerate}
-    \item \emph{Head on Collision Hazard} - There is an \emph{UAS} approaching from opposite direction which invokes need to actively avoid \emph{Collision Point}.
+    \item \emph{Head-on Collision Hazard} - An \emph{UAS} is approaching from opposite direction which invokes need to avoid \emph{Collision Point} actively.
 \end{enumerate}
       
 \noindent\emph{Head on Collision Hazard} must be addressed by \emph{UTM} service in the following manner:
@@ -13,7 +13,7 @@
     
     \item \emph{UTM} service receives \emph{Position Notifications} and manages \emph{Collision Cases} (tab. \ref{tab:collisionCase}) in \emph{Controlled Space}. 
     
-    \item \emph{UTM} detects single \emph{Head on Collision Cases} with \emph{Collision Point} in  vicinity.
+    \item \emph{UTM} detects single \emph{Head on Collision Cases} with \emph{Collision Point} in the vicinity.
     
     \item \emph{UTM} service creates \emph{Virtual Roundabout} and implements \emph{Normative Directive} on both \emph{UAS}.
 \end{enumerate}
@@ -28,14 +28,14 @@
         1 & $[0,20,0]^T $       & $[0^\circ,0^\circ,0^\circ]^T$    & $[45,20,0]^T$\\\hline 
         2 & $[40,20,0]^T $       & $[0^\circ,0^\circ,180^\circ]^T$    & $[-5,20,0]^T$\\
     \end{tabular}
-    \caption{Mission setup for \emph{Rule based head on} scenario.}
+    \caption{Mission setup for \emph{Rule-based head-on} scenario.}
     \label{tab:missionSetupRuleBasedHeadOnScenario}
 \end{table}
 
 \paragraph{Assumptions:} Following assumptions are valid for this test:
     
 \begin{enumerate}
-    \item \emph{Controlled Airspace Airworthiness} - UAS system is equipped with necessary controlled airspace equipment like ADS-B In/Out, Radar, Transponder, etc. Moreover airworthy \emph{UAS} has capability to precisely follow \emph{UTM directives} (max. 5 $\%$ deviation).
+    \item \emph{Controlled Airspace Airworthiness} - UAS system is equipped with necessary controlled airspace equipment like ADS-B In/Out, Radar, Transponder, etc. Moreover, airworthy \emph{UAS} can precisely follow \emph{UTM directives} (max. 5 $\%$ deviation).
     
     \item \emph{C2 (Command \& control) Link Established} - necessary for (UAS $\leftrightarrow$ UAS) and (UAS $\leftrightarrow$ UTM) communication. If \emph{C2} link is lost the \emph{UAS} will enter into \emph{Emergency avoidance mode}.
     
@@ -44,7 +44,7 @@
     \item \emph{Both UAS have identical cruising speed} - simplification impacting \emph{UTM} service implementation. \emph{Obstacle Avoidance Framework} can comprehend various intruders speed, with proper \emph{UAS} directives.
 \end{enumerate}
 
-\paragraph{Main Goal:} Show possibility of \emph{Head on situation resolution} with \emph{forced safety margin} by \emph{UAS Traffic Management} system.  The \emph{Obstacle Avoidance Framework based on Reach Sets} is used as \emph{Navigation Module}.
+\paragraph{Main Goal:} Show possibility of \emph{Head-on situation resolution} with \emph{forced safety margin} by \emph{UAS Traffic Management} system.  The \emph{Obstacle Avoidance Framework based on Reach Sets} is used as a \emph{Navigation Module}.
 
 
 \paragraph{Acceptance  Criteria:} Following criteria must be met:
@@ -52,24 +52,24 @@
 \begin{enumerate}
     \item \emph{Well Clear Condition valid for both UAS} - Both \emph{UAS} must have \emph{minimal required distance} from \emph{other UAS} for all \emph{Virtual Roundabout} enforcement time.
     
-    \item \emph{Fulfillment of UTM Directives} - Both UAS must stay in \emph{Navigation mode} for all \emph{Virtual Roundabout} enforcement time. Both \emph{UAS} must stay on \emph{Virtual Roundabout} for necessary time, before leaving for \emph{Original Navigation waypoint $\mathscr{WP}_1$}.
+    \item \emph{Fulfillment of UTM Directives} - Both UAS must stay in a \emph{Navigation mode} for all \emph{Virtual Roundabout} enforcement time. Both \emph{UAS} must stay on \emph{Virtual Roundabout} for the necessary time, before leaving for \emph{Original Navigation waypoint $\mathscr{WP}_1$}.
 \end{enumerate}
 
 \paragraph{Testing Setup:} The \emph{standard test setup} for each UAS defined in (tab. \ref{tab:testMovementOrientations}, \ref{tab:testUASBasicParameters}, \ref{tab:testNavigationGridBasic}, \ref{tab:testAvoidanceGridBasic}, \ref{tab:testUASColoring}) is used with following parameter override:
 \begin{enumerate}
-    \item \emph{Navigation grid - type} - \emph{ACAS-like} with enabled \emph{Horizontal maneuvers}
+    \item \emph{Navigation grid - type} - \emph{ACAS-like} with \emph{horizontal enabled maneuvers}.
 \end{enumerate}
 
-This \emph{configuration} is based on assumption that both UAS is in \emph{controlled airspace} in \emph{FL450} (flight level 45000 feet Above Sea Level), without permission for \emph{climb or descent maneuver}. \emph{Rule engine} is initialized in standard \emph{Rules of the air} configuration (fig. \ref{fig:RuleEngineInstanceLevels}).
+This \emph{configuration} is based on the assumption that both UAS is in \emph{controlled airspace} in \emph{FL450} (flight level 45000 feet Above Sea Level), without permission for a \emph{climb or descent maneuver}. The \emph{rule engine} is initialized in standard \emph{Rules of the air} configuration (fig. \ref{fig:RuleEngineInstanceLevels}).
 
 There is \emph{UTM} service for given \emph{airspace cluster} calculating \emph{collision cases} (tab. \ref{tab:collisionCase}) based on incoming \emph{UAS position notifications} (tab. \ref{tab:positionNotification}).
 
-\paragraph{Simulation Run:} Notable moments from the \emph{simulation run} (fig. \ref{fig:testCaseRuleBasedHeadOnApproach}) are following:
+\paragraph{Simulation Run:} Notable moments from the \emph{simulation run} (fig. \ref{fig:testCaseRuleBasedHeadOnApproach}) are the following:
 
 \begin{enumerate}
     \item\emph{Collision Case creation} (fig. \ref{fig:ruleBasedHeadOnSituationCollisionCaseCreation}) following events happens in this step:
     \begin{enumerate}[a.]
-        \item Two UAS are on same airway approaching each other from opposite direction, UAS 1 (blue) from the left, UAS 2 (cyan) from the right.
+        \item Two UAS are on the same airway approaching each other from the opposite direction, UAS 1 (blue) from the left, UAS 2 (cyan) from the right.
         
         \item They are going to \emph{collide} at point $\mathscr{C}=[20,20,0]^T$ of \emph{Flight Level} (Elevation is 45, 000 feet Above Mean Sea Level).
         
@@ -77,7 +77,7 @@ There is \emph{UTM} service for given \emph{airspace cluster} calculating \emph{
         
         \item \emph{Virtual Roundabout} is created at \emph{collision point} with radius $10 m$. UTM issues directive for both UAS to avoid collision point from different sides.
         
-        \item UAS 1 (blue) receives directive to avoid \emph{Collision Point} from \emph{right side} (Down side in GCS). UAS 2 (cyan) receives directive to avoid \emph{Collision Point} from \emph{right side} (Up side in GCS).
+        \item UAS 1 (blue) receives a directive to avoid \emph{Collision Point} from the \emph{right side} (downside in GCS). UAS 2 (cyan) receives a directive to avoid \emph{Collision Point} from the \emph{right side} (upside in GCS).
 
         \item Both UAS enters into \emph{Virtual Roundabout}.
     \end{enumerate}
@@ -118,19 +118,19 @@ There is \emph{UTM} service for given \emph{airspace cluster} calculating \emph{
         \caption{Waypoints reach.}
         \label{fig:ruleBasedHeadOnWaypointsReach}
     \end{subfigure}
-    \caption{Test scenario for \emph{Rule based head on approach} (virtual roundabout). }
+    \caption{Test scenario for the \emph{rule-based head-on approach} (virtual roundabout). }
     \label{fig:testCaseRuleBasedHeadOnApproach}
 \end{figure}
 
-\paragraph{Collision Case Calculation: } For test scenario in (fig. \ref{fig:testCaseRuleBasedHeadOnApproach}) where UAS 1 (blue) have head on collision with UAS 2 (cyan), \emph{Collision Case} have been calculated (tab. \ref{tab:collisionCasesRuleBasedHeadon}).
+\paragraph{Collision Case Calculation: } For test scenario in (fig. \ref{fig:testCaseRuleBasedHeadOnApproach}) where UAS 1 (blue) have head-on collision with UAS 2 (cyan), \emph{Collision Case} have been calculated (tab. \ref{tab:collisionCasesRuleBasedHeadon}).
 
 The \emph{Collision point} is at $[20,20,0]^T$ in Flight Level $FL450$ coordinate frame.
 
-The \emph{angle of approach} was evaluated as $180^{\circ}$ which indicates \emph{Head on Approach} due the $130^\circ \le angle of Approach \le 180^\circ$ condition.
+The \emph{angle of approach} was evaluated as $180^{\circ}$ which indicates \emph{Head-on Approach} due to the $130^\circ \le angle of Approach \le 180^\circ$ conditions.
 
 The \emph{mutual position} of UAS 1 (blue) and UAS 2 (cyan) is giving the roles of \emph{Roundabout} to \emph{both} UAS.
 
-The \emph{safety margin} for \emph{Well Clear} was determined as $5m$ for UAS 1 and UAS 2. The combined \emph{Case Margin} is 10 m, which is sum of both. The \emph{mutual distance} can not go below this threshold.
+The \emph{safety margin} for \emph{Well Clear} was determined as $5m$ for UAS 1 and UAS 2. The combined \emph{Case Margin} is 10 m, which is sum of both. The \emph{mutual distance} cannot go below this threshold.
 
 
 \begin{table}[H]
@@ -141,7 +141,7 @@ The \emph{safety margin} for \emph{Well Clear} was determined as $5m$ for UAS 1 
         % Case 1-2
         \multirow{2}{*}{1-2} & 1   & Roundabout & \multirow{2}{*}{$[20,20,0]^T$} & \multirow{2}{*}{$180^\circ$} & \multirow{2}{*}{Head on} & 5 & \multirow{2}{*}{10} \\ \cline{2-3} \cline{7-7} & 2   & Roundabout & & & & 5 & 
     \end{tabular}
-    \caption{Collision case for \emph{Rule-based head on} scenario.}
+    \caption{Collision case for the \emph{rule-based head-on} scenario.}
     \label{tab:collisionCasesRuleBasedHeadon}
 \end{table}
 
@@ -155,12 +155,12 @@ The mutual \emph{UAS distance} (blue line) does not go over \emph{Safety Margin}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.55\linewidth]{\FIGDIR/NS059UtmCooperativeHeadOnPerformance} 
-    \caption{Distance to safety margin evolution for \emph{rule based head on scenario}.}
+    \caption{Distance to safety margin evolution for the \emph{rule-based head-on scenario}.}
     \label{fig:testCaseRuleBasedHeadOnAvoidancePerformance}
 \end{figure}
 
 
-\paragraph{Distance to Safety Margin Peaks:} Given by (tab. \ref{tab:testCaseRuleBasedHeadOnSafetyMarginDistances}) represents the proximity on UAS mutual distance to \emph{well clear condition} breach. The breach of \emph{well clear condition} was not achieved. The \emph{minimal distance to safety margin} was $0.2084$ $m$. The \emph{maximal distance to safety margin} was $36.3253 m$ which represents distance at \emph{Collision Case} closing. 
+\paragraph{Distance to Safety Margin Peaks:} Given by (tab. \ref{tab:testCaseRuleBasedHeadOnSafetyMarginDistances}) represents the proximity on UAS mutual distance to \emph{well clear condition} breach. The breach of \emph{well clear condition} was not achieved. The \emph{minimal distance to the safety margin} was $0.2084$ $m$. The \emph{maximal distance to safety margin} was $36.3253 m$ which represents distance at \emph{Collision Case} closing. 
 
 \begin{table}[H]
     \centering
@@ -169,11 +169,11 @@ The mutual \emph{UAS distance} (blue line) does not go over \emph{Safety Margin}
                   & min          & max         & breach         \\ \hline\hline
             1-2   & 0.2084       & 36.3253     & false          \\ 
     \end{tabular}
-    \caption{\emph{Rule based head on} safety margin distances.}
+    \caption{\emph{Rule-based head-on} safety margin distances.}
     \label{tab:testCaseRuleBasedHeadOnSafetyMarginDistances}
 \end{table}
 
-\paragraph{Path Tracking Performance:} \emph{Path tracking} is displayed in (fig. \ref{fig:ruleBasedHeadOnTrajectoryTrackingPerformance}). The \emph{UAS} trajectory is divined into \emph{X, Y, Z axis tracking over UTM Time}. The \emph{Reference Trajectory} (green dashed line) interconnect starting position of UAS (green square marked S) an goal waypoint (green square marked 1). The \emph{Executed Trajectory} (blue solid line) reflects real UAS trajectory. 
+\paragraph{Path Tracking Performance:} \emph{Path tracking} is displayed in (fig. \ref{fig:ruleBasedHeadOnTrajectoryTrackingPerformance}). The \emph{UAS} trajectory is divided into \emph{X, Y, Z axis tracking over UTM Time}. The \emph{Reference Trajectory} (green dashed line) interconnect starting position of UAS (green square marked S) a goal waypoint (green square marked 1). The \emph{Executed Trajectory} (solid blue line) reflects real UAS trajectory. 
 
 \begin{enumerate}
     \item UAS 1. (fig, \ref{fig:ruleBasedHeadOnUAS1PathTracking}) do steady right side \emph{roundabout maneuver} (y-axis).
@@ -195,7 +195,7 @@ The mutual \emph{UAS distance} (blue line) does not go over \emph{Safety Margin}
         \caption{UAS 2.}
         \label{fig:ruleBasedHeadOnUAS2PathTracking}
     \end{subfigure}
-    \caption{\emph{Trajectory tracking} for \emph{Rule based head on} test case. }
+    \caption{\emph{Trajectory tracking} for \emph{rule-based head-on} test case. }
     \label{fig:ruleBasedHeadOnTrajectoryTrackingPerformance}
 \end{figure}
 
@@ -211,7 +211,7 @@ The mutual \emph{UAS distance} (blue line) does not go over \emph{Safety Margin}
           $\max |z|$    & 0                 & 0                  \\\hline
           $\max dist.$  & 5.40              & 5.40              \\
     \end{tabular}
-    \caption{Path tracking properties for \emph{Rule based head on} scenario.}
+    \caption{Path tracking properties for \emph{rule-based head-on} scenario.}
     \label{tab:pathTrackingParametersForRuleBasedHeadOn}
 \end{table}
 
@@ -221,6 +221,6 @@ The mutual \emph{UAS distance} (blue line) does not go over \emph{Safety Margin}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.65\linewidth]{\FIGDIR/NS100RuleBasedHeadOnComputationTime} 
-    \caption{Computation time for \emph{Rule-based head on} scenario.}
+    \caption{Computation time for \emph{rule-based head-on} scenario.}
     \label{fig:ruleBasedHeadOnComputationTime}
 \end{figure}
