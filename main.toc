@@ -517,7 +517,7 @@
 \contentsline {paragraph}{Acceptance Criteria}{250}{section*.481}
 \contentsline {paragraph}{Testing setup:}{250}{section*.482}
 \contentsline {paragraph}{Simulation run:}{251}{section*.483}
-\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{251}{section*.485}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{252}{section*.485}
 \contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{252}{section*.487}
 \contentsline {paragraph}{Path tracking performance:}{252}{section*.489}
 \contentsline {paragraph}{Path Tracking Deviations:}{253}{section*.491}
@@ -538,11 +538,11 @@
 \contentsline {paragraph}{Scenario:}{259}{section*.514}
 \contentsline {paragraph}{Constraints:}{259}{section*.516}
 \contentsline {paragraph}{Assumption:}{259}{section*.518}
-\contentsline {paragraph}{Main Goal:}{259}{section*.519}
-\contentsline {paragraph}{Acceptance criteria:}{259}{section*.520}
+\contentsline {paragraph}{Main Goal:}{260}{section*.519}
+\contentsline {paragraph}{Acceptance criteria:}{260}{section*.520}
 \contentsline {paragraph}{Testing setup:}{260}{section*.521}
 \contentsline {paragraph}{Simulation run:}{260}{section*.522}
-\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{260}{section*.524}
+\contentsline {paragraph}{Distance to Body/Safety Margin Evolution:}{261}{section*.524}
 \contentsline {paragraph}{Distance to Body/Safety Margin Peaks:}{261}{section*.526}
 \contentsline {paragraph}{Path Tracking Performance:}{261}{section*.528}
 \contentsline {paragraph}{Path Tracking Deviations:}{262}{section*.530}
