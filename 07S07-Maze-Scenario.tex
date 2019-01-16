@@ -110,12 +110,12 @@ The purpose of these \emph{Obstacles} except \emph{Square building} type is to c
 
 \paragraph{Distance to Body/Safety Margin Evolution:}  The evolution of \emph{body and safety margin} over time (x-axis, sec) given in  meters distance (y-axis, m) is given in (fig. \ref{fig:testCaseMazeAvoidancePerformance}).
 
-The \emph{UAS} center distance to the nearest obstacle (blue line) does not break any \emph{Safety Margin} (yellow line) of a closest obstacle. \emph{Body Margin} of the closest obstacle (red line) has not been broken, because it always lies below of \emph{Safety Margin} (yellow).
+The \emph{UAS} center distance to the nearest obstacle (blue line) does not break any \emph{Safety Margin} (yellow line) of the closest obstacle. \emph{Body Margin} of the closest obstacle (red line) has not been broken, because it always lies below of \emph{Safety Margin} (yellow).
 
-For \emph{UTM time period} $37$ to $68$ $s$ there is a \emph{margin spike}  due avoidance of bloated \emph{Rectangle buildings} (fig. \ref{fig:mazeSecondTurn}) during $2^{nd}$ turn. The \emph{acceptance criterion} for \emph{Safety Margin} is satisfied.
+For \emph{UTM period} $37$ to $68$ $s$, there is a \emph{margin spike}  due to avoidance of bloated \emph{Rectangle buildings} (fig. \ref{fig:mazeSecondTurn}) during the $2^{nd}$ turn. The \emph{acceptance criterion} for \emph{Safety Margin} is satisfied.
 
 \begin{note}
-The \emph{body} and \emph{safety margin} are changing  depending on \emph{UAS position} and \emph{orientation}. The changes are reflected in (tab. \ref{tab:testCaseMazeSafetyAndBodyMarginDistances}).
+The \emph{body} and \emph{safety margin} is changing  depending on \emph{UAS position} and \emph{orientation}. The changes are reflected in (tab. \ref{tab:testCaseMazeSafetyAndBodyMarginDistances}).
 \end{note}
 
 
@@ -128,7 +128,7 @@ The \emph{body} and \emph{safety margin} are changing  depending on \emph{UAS po
 
 \paragraph{Distance to Body/Safety Margin Peaks:} The minimal and maximal values for \emph{UAS distance} to \emph{safety margin} based on performance (fig. \ref{fig:testCaseMazeAvoidancePerformance}) is summarized in (tab. \ref{tab:testCaseMazeSafetyAndBodyMarginDistances}).
 
-The \emph{minimal distance to safety margin} is $0.0131 m$ which can be taken as $\sim 0m$ due the numerical error. The \emph{maximal distance to safety margin} is $2.9513 m$ which is $5 \times$ \emph{UAS radius}. The safety margin distance is $\le 3 m$ which means the scenario is tightly packed with obstacles. The \emph{UAS} never left \emph{Emergency Avoidance Mode} because condition: $safety Margin Distance \ge avoidance Grid Length$ was never satisfied. 
+The \emph{minimal distance to safety margin} is $0.0131 m$ which can be taken as $\sim 0m$ due to the numerical error. The \emph{maximal distance to safety margin} is $2.9513 m$ which is $5 \times$ \emph{UAS radius}. The safety margin distance is $\le 3 m$ which means the scenario is tightly packed with obstacles. The \emph{UAS} never left \emph{Emergency Avoidance Mode} because of the condition: $safety Margin Distance \ge avoidance Grid Length$ was never satisfied. 
 
 The \emph{minimal body} distance is $5.0131 m$, while the \emph{maximal body} distance is $8.7117 m$. The difference between minimal and maximal body distance is $\sim 4 m$ which also indicates scenario packed with obstacles. 
 
@@ -145,14 +145,14 @@ The \emph{minimal body} distance is $5.0131 m$, while the \emph{maximal body} di
     \label{tab:testCaseMazeSafetyAndBodyMarginDistances}
 \end{table}
 
-\paragraph{Path Tracking Performance:} Reference path (green dashed) line is given as direct interconnection of \emph{initial position} (green square with S marker) and \emph{hidden waypoint} (green square with 1 marker). The \emph{UTM Reference Time} is given on x-axis. The evolution of real trajectory (blue solid line) for each axis is given as follow:
+\paragraph{Path Tracking Performance:} Reference path (green dashed) line is given as direct interconnection of \emph{initial position} (green square with S marker) and \emph{hidden waypoint} (green square with 1 marker). The \emph{UTM Reference Time} is given on x-axis. The evolution of the real trajectory (solid blue line) for each axis is given as follow:
 
 \begin{enumerate}
     \item \emph{X-axis path tracking} - reflects the maneuvering in the curves of the maze.
     
-    \item \emph{Y-axis path tracking} - shows horizontal progress to the \emph{hidden goal waypoint}. The expected linear tracking is not achievement due the manuevering delays on X-axis.
+    \item \emph{Y-axis path tracking} - shows horizontal progress to the \emph{hidden goal waypoint}. The expected linear tracking is not achievement due to the maneuvering delays on X-axis.
     
-    \item \emph{Z-axis path tracking} - shows perfect linear tracking of reference trajectory. The \emph{altitude acceptance criterion}: $-5m \le altitude \le 5m$ have been fulfilled.
+    \item \emph{Z-axis path tracking} - shows perfect linear tracking of the reference trajectory. The \emph{altitude acceptance criterion}: $-5m \le altitude \le 5m$ have been fulfilled.
 \end{enumerate}
 
 \begin{figure}[H]
@@ -163,7 +163,7 @@ The \emph{minimal body} distance is $5.0131 m$, while the \emph{maximal body} di
 \end{figure}
 
 
-\paragraph{Path Tracking Deviations:} Deviations (tab. \ref{tab:pathTrackingParametersForMazeAvoidance}) from \emph{reference trajectory} are in expected ranges considering \emph{mission plan} (tab. \ref{tab:missionSetupMazeScenario}) and \emph{obstacle properties} (tab. \ref{tab:obstacleSetMaze}).
+\paragraph{Path Tracking Deviations:} Deviations (tab. \ref{tab:pathTrackingParametersForMazeAvoidance}) from \emph{reference trajectory} are in expected ranges considering the \emph{mission plan} (tab. \ref{tab:missionSetupMazeScenario}) and \emph{obstacle properties} (tab. \ref{tab:obstacleSetMaze}).
 
 \begin{table}[H]
     \centering
@@ -183,7 +183,7 @@ The \emph{minimal body} distance is $5.0131 m$, while the \emph{maximal body} di
 % 03 Maze scenario
 \paragraph{Computation Load:} The \emph{computation load} for \emph{scenario} (fig.\ref{fig:mazeComputationTime}) shows used time (y-axis) over decision frame (x-axis).
 
-The UAS is constantly in \emph{Emergency Avoidance Mode}, the \emph{operational environment} is \emph{clustered} with obstacles. This causes very high \emph{computation load}.
+The UAS is constantly in \emph{Emergency Avoidance Mode}; the \emph{operational environment} is \emph{cluttered} with obstacles. This causes very high \emph{computation load}.
 
 \begin{figure}[H]
     \centering
