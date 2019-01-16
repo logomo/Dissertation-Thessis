@@ -9,12 +9,12 @@
         Space \subseteq \R^3:\text{main axes:} X^+,Y^+,Z^+\text{, center} [x_0,y_0,z_0] 
     \end{equation}
 
-    \emph{Object} (\ref{eq:ObjectDefinition}) is generic subset of \emph{Space} which has \emph{Boundary}.
+    \emph{Object} (\ref{eq:ObjectDefinition}) is a generic subset of \emph{Space} which has \emph{Boundary}.
     \begin{equation}\label{eq:ObjectDefinition}
         Object \subset Space: \forall point \in Object, point \text{ is solid}
     \end{equation}
 
-    The dynamic model of the \emph{UAV} is given by a nonlinear first order state-space model:
+    A nonlinear first order state-space model gives the dynamic model of the UAS:
     \begin{equation}\label{eq:vehicleModelAbstract}
         \dot{x} = f(t,x,u)
     \end{equation}
@@ -26,7 +26,7 @@
         TerrainMap: (x,y) \rightarrow z 
     \end{equation}
    
-    \noindent\emph{Weather} (\ref{eq:weatherProjection}) can impact the performance of the \emph{UAV}. \emph{wind} can decrease flying capabilities and maneuverability, \emph{visibility} can impair the performance of sensors such as LiDAR and cameras, \emph{humidity} can be serious danger to electronic equipment and in combination low \emph{temperature} it can cause icing on vehicle, and \emph{air pressure} can impact ranging sensor and flight performance. 
+    \noindent\emph{Weather} (\ref{eq:weatherProjection}) can impact the performance of the \emph{UAS}. \emph{wind} can decrease flying capabilities and maneuverability, \emph{visibility} can impair the performance of sensors such as LiDAR and cameras, \emph{humidity} can be serious danger to electronic equipment and in combination low \emph{temperature} it can cause icing on vehicle, and \emph{air pressure} can impact ranging sensor and flight performance. 
     \begin{equation}\label{eq:weatherProjection}
         Weather:\left(position\in Space\right) \times time \to
         \left[
@@ -41,7 +41,7 @@
     \end{equation}
 
 \subsection{\secState{D}Mission}\label{s:mission}
-    \emph{Mission} (\ref{eq:missionAbstractSet}) which UAV should fly is given as set of \emph{ordered, feasible in terms of vehicle dynamic (\ref{eq:vehicleModelAbstract}), waypoints} in subspace of $Space$ (\ref{eq:SpaceDefinition}).
+    \emph{Mission} (\ref{eq:missionAbstractSet}) which UAS should fly is given as set of \emph{ordered, feasible in terms of vehicle dynamic (\ref{eq:vehicleModelAbstract}), waypoints} in subspace of $Space$ (\ref{eq:SpaceDefinition}).
     
     \begin{equation}\label{eq:missionAbstractSet}
         Mission = \left\{
@@ -74,7 +74,7 @@
         HFlightConstraints=\left\{HFlightConstraint_1, \dots, HFlightConstraint_H \right\}
     \end{equation}
 
-    The union of all \emph{$HFlightConstraint_i$} is the set \emph{$HFlightConstraint$}. \emph{Example:} turning radius of UAV, climb rate etc. 
+    The union of all \emph{$HFlightConstraint_i$} is the set \emph{$HFlightConstraint$}. \emph{Example:} turning radius of UAS, climb rate etc. 
     
     There are $S$ sets of soft flight constraints expressed as subsets of \emph{Space}:
 
@@ -139,7 +139,7 @@
     \noindent\emph{Vehicle} is equiped with single \emph{Sensor}, which returns \emph{Space} classification for given \emph{observation position} and observation time.
 
 
-    Observation (\ref{eq:observationClassification}) at given UAV \emph{position}, \emph{time}, and for given \emph{sensor} sorts points from \emph{sensor reading} into following distinguish sets (\ref{eq:observationClassification}):
+    Observation (\ref{eq:observationClassification}) at given UAS \emph{position}, \emph{time}, and for given \emph{sensor} sorts points from \emph{sensor reading} into following distinguish sets (\ref{eq:observationClassification}):
     
     \begin{enumerate}
         \item $Free_O(position,sensor,time)$ - observable space by sensor and considered as $Free$ by sensor reading,
@@ -251,7 +251,7 @@
 
 
 \subsection{\secState{D}Safety Margin}\label{s:SafetyMarginDefinition}
-    \noindent Let say that \emph{mission} was executed in \emph{time} interval $t\in [missionStart,missionEnd]$ in \emph{Known world} (\ref{eq:knownWorldSet}). For every $position$, extracted from \emph{UAV model state} $x(t)$, keeps distance from any point in $Occupied(t)$  with greater or equal to $safetyMargin$ $(s_m)$ (\ref{eq:safetyMarginAbstract}).  
+    \noindent Let say that \emph{mission} was executed in \emph{time} interval $t\in [missionStart,missionEnd]$ in \emph{Known world} (\ref{eq:knownWorldSet}). For every $position$, extracted from \emph{UAS model state} $x(t)$, keeps distance from any point in $Occupied(t)$  with greater or equal to $safetyMargin$ $(s_m)$ (\ref{eq:safetyMarginAbstract}).  
     
     \begin{multline}\label{eq:safetyMarginAbstract}
         \forall t\in [missionStart,missionEnd]:\\distance(x(t),Occupied(t),t) \ge safetyMargin
