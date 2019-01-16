@@ -35,7 +35,7 @@
 \begin{enumerate}
 	\item Proper \emph{algorithm mode switch}:
 	\begin{enumerate}[a]
-		\item \emph{Avoidance mode} is active when the \emph{UAS} is nearby to obstacle ($distance$ $(obstacleCenter,$ $UASPosition)$ $\le$ $20m$).
+		\item \emph{Avoidance mode} is active when the \emph{UAS} is nearby to the obstacle ($distance$ $(obstacleCenter,$ $UASPosition)$ $\le$ $20m$).
 		
 		\item \emph{Navigation mode} is active when the \emph{UAS} is further away from any obstacle (UAS is actively converging to \emph{goal waypoint}).
 	\end{enumerate}
@@ -60,7 +60,7 @@
 \begin{enumerate}
 	\item \emph{$1^{st}$ building avoidance.} (fig. \ref{fig:firstBuildingAvoidance}) - UAS avoids the building from the left side because overall trajectory cost is cheaper. The first building is a convex obstacle.
 	
-	\item \emph{$2^{nd}$ building avoidance.} (fig. \ref{fig:secondBuildingAvoidance}) - UAS avoids the building from the right side while avoiding active non-convex portion of the building.  
+	\item \emph{$2^{nd}$ building avoidance.} (fig. \ref{fig:secondBuildingAvoidance}) - UAS avoids the building from the right side while avoiding an active non-convex portion of the building.  
 	
 	\item \emph{$3^{rd}$ building avoidance.} (fig. \ref{fig:thirdBuidlingAvoidance}) - UAS avoids the building from the right side, missing both traps from it.  
 	
@@ -140,7 +140,7 @@ The \emph{body} and \emph{safety margins} are changing depending on \emph{UAS po
 
 
 
-\noindent\paragraph{Path Tracking Deviations:} Deviations (tab. \ref{tab:pathTrackingParametersForBuildingAvoidance}) from \emph{reference trajectory} are in expected ranges considering the  \emph{mission plan} (tab. \ref{tab:missionSetupForBuildingAvoidanceScenario}) and \emph{obstacle properties} (tab. \ref{tab:obstacleSetBuildingAvoidance}).
+\noindent\paragraph{Path Tracking Deviations:} Deviations (tab. \ref{tab:pathTrackingParametersForBuildingAvoidance}) from the  \emph{reference trajectory} are in expected ranges considering the  \emph{mission plan} (tab. \ref{tab:missionSetupForBuildingAvoidanceScenario}) and \emph{obstacle properties} (tab. \ref{tab:obstacleSetBuildingAvoidance}).
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c||c|c|c|c}
