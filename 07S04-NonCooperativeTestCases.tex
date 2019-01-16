@@ -4,14 +4,20 @@
 
     Test avoidance capabilities against \emph{static obstacles}, \emph{non-cooperative intruders}, \emph{moving hard constraints} are covered. 
     
-    Coverage of the \emph{soft constraints}, \emph{map obstacles} and \emph{detected obstacles} are implicitly covered due the properties of \emph{safety} and \emph{body} margins (tab. \ref{tab:uncontrolledAirspaceViolations}).
+    Coverage of the \emph{soft constraints}, \emph{map obstacles}, and \emph{detected obstacles} are implicitly covered due to the properties of \emph{safety} and \emph{body} margins (tab. \ref{tab:uncontrolledAirspaceViolations}).
     
     \begin{enumerate}
         \item \emph{Building Avoidance} (sec. \ref{s:testBuildingAvoidance}) covers \emph{static obstacles} explicitly and \emph{map obstacles, hard constraints, ground avoidance} implicitly.
+        
         \item \emph{Slalom} (sec. \ref{s:testSlalom}) covers \emph{open space navigation capabilities}, showing the determinism of the \emph{avoidance loop run}, in addition to \emph{building avoidance}.
-        \item \emph{Maze} (sec. \ref{s:testMaze}) covers \emph{closed space navigation capabilities}, showing the higher level navigation properties of primitive \emph{right-side} 2D maze solver. The main point is to show possibility to enrich the \emph{Navigation loop algorithm} (fig. \ref{fig:missionControlRunActivityDiagram}).
+        
+        \item \emph{Maze} (sec. \ref{s:testMaze}) covers \emph{closed space navigation capabilities}, showing the higher level navigation properties of primitive \emph{right-side} 2D maze solver. The main point is to show the possibility to enrich the \emph{Navigation loop algorithm} (fig. \ref{fig:missionControlRunActivityDiagram}).
+        
         \item \emph{Storm} (sec. \ref{s:testStorm}) covers \emph{hard moving constraints avoidance} explicitly and \emph{hard static constraints}, \emph{soft static constraints}, \emph{soft moving constraints} implicitly.
-        \item \emph{Emergency converging} scenario (sec. \ref{s:testEmergencyConverging}) covers \emph{non cooperative intruder with right of the way} avoidance capability.
-        \item \emph{Emergency head on} scenario covers (sec. \ref{s:testEmergencyHeadOn}) \emph{non cooperative intruder without right of the way} avoidance capability
+        
+        \item \emph{Emergency converging} scenario (sec. \ref{s:testEmergencyConverging}) covers \emph{non-cooperative intruder with the right of way} avoidance capability.
+        
+        \item \emph{Emergency head-on} scenario covers (sec. \ref{s:testEmergencyHeadOn}) \emph{non-cooperative intruder without right of way} avoidance capability
+        
         \item \emph{Emergency mixed} scenario (sec. \ref{s:testEmergencyMixed}) covers \emph{multiple intruders with/without right of the way} avoidance capability.
     \end{enumerate}
