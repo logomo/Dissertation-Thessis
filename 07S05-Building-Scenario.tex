@@ -13,7 +13,7 @@
 	\label{tab:missionSetupForBuildingAvoidanceScenario}
 \end{table}
 
-\noindent \paragraph{Obstacle set:} Obstacles are discovered during a flight by \emph{UAS LiDAR sensor}, the set of obstacle is defined in (tab. \ref{tab:obstacleSetBuildingAvoidance}). 
+\noindent \paragraph{Obstacle set:} Obstacles are discovered during a flight by \emph{UAS LiDAR sensor}, the set of obstacles is defined in (tab. \ref{tab:obstacleSetBuildingAvoidance}). 
 
 \begin{table}[H]
 	\centering
@@ -29,37 +29,42 @@
 	\label{tab:obstacleSetBuildingAvoidance}
 \end{table}
 
-\noindent \paragraph{Main Goal:} Show \emph{static obstacle avoidance capability} in \emph{open space environment}, using \emph{LiDAR scanning} and \emph{obstacle map} as    the \emph{information sources}. 
+\noindent \paragraph{Main Goal:} Show \emph{static obstacle avoidance capability} in an \emph{open space environment}, using \emph{LiDAR scanning} and \emph{obstacle map} as    the \emph{information sources}. 
 
 \noindent\paragraph{Acceptance criteria:}
 \begin{enumerate}
 	\item Proper \emph{algorithm mode switch}:
 	\begin{enumerate}[a]
-		\item \emph{Avoidance mode} is active when the \emph{UAS} is in close proximity of obstacle ($distance$ $(obstacleCenter,$ $UASPosition)$ $\le$ $20m$).
-		\item \emph{Navigation mode} is active when the \emph{UAS} is further away from any obstacle (UAS is actively converging to \emph{goal waypoint});
+		\item \emph{Avoidance mode} is active when the \emph{UAS} is nearby to obstacle ($distance$ $(obstacleCenter,$ $UASPosition)$ $\le$ $20m$).
+		
+		\item \emph{Navigation mode} is active when the \emph{UAS} is further away from any obstacle (UAS is actively converging to \emph{goal waypoint}).
 	\end{enumerate}
 	
 	\item \emph{Minimal safety margin distance} $\ge$ $0 m$
 	
-	\item \emph{Reach each waypoint} (tab. \ref{tab:missionSetupForBuildingAvoidanceScenario}) in given order.
+	\item \emph{Reach each waypoint} (tab. \ref{tab:missionSetupForBuildingAvoidanceScenario}) in the given order.
 \end{enumerate}
 
 
 \noindent\paragraph{Testing Setup:} The \emph{standard test setup} defined in (tab. \ref{tab:testMovementOrientations}, \ref{tab:testUASBasicParameters}, \ref{tab:testNavigationGridBasic}, \ref{tab:testAvoidanceGridBasic}, \ref{tab:testUASColoring}) is used with following parameter override:
 \begin{enumerate}
-	\item \emph{Avoidance grid - type} - \emph{ACAS-like} with enabled \emph{Horizontal maneuvers}
+	\item \emph{Avoidance grid - type} - \emph{ACAS-like} with  \emph{horizontal enabled maneuvers}
 \end{enumerate}
 
 \begin{note}
 	Enforced \emph{safety margin} does not exceed the \emph{avoidance grid range} ($10$ $m$).  The concept of \emph{Static obstacle avoidance} is in detail discussed in the \emph{progress report} \cite{gomola2017probabilistic}.
 \end{note}
 
-\noindent\paragraph{Simulation Run:} Notable moments from the \emph{simulation run} (fig. \ref{fig:testCaseBuildingAvoidanceSituation}) are following:
+\noindent\paragraph{Simulation Run:} Notable moments from the \emph{simulation run} (fig. \ref{fig:testCaseBuildingAvoidanceSituation}) are the following:
+
 \begin{enumerate}
-	\item \emph{$1^{st}$ building avoidance.} (fig. \ref{fig:firstBuildingAvoidance}) - UAS avoids the building from left side, because overall trajectory cost is cheaper. The first building is convex obstacle.
-	\item \emph{$2^{nd}$ building avoidance.} (fig. \ref{fig:secondBuildingAvoidance}) - UAS avoids the building from right side, while avoiding active non convex portion of the building.  
-	\item \emph{$3^{rd}$ building avoidance.} (fig. \ref{fig:thirdBuidlingAvoidance}) - UAS avoids the building from right side, missing both traps from it.  
-	\item \emph{$4^{th}$ building avoidance.} (fig. \ref{fig:fourthBuildingAvoidance}) - UAS avoids the building from right side. This building is also convex obstacle. 
+	\item \emph{$1^{st}$ building avoidance.} (fig. \ref{fig:firstBuildingAvoidance}) - UAS avoids the building from the left side because overall trajectory cost is cheaper. The first building is a convex obstacle.
+	
+	\item \emph{$2^{nd}$ building avoidance.} (fig. \ref{fig:secondBuildingAvoidance}) - UAS avoids the building from the right side while avoiding active non-convex portion of the building.  
+	
+	\item \emph{$3^{rd}$ building avoidance.} (fig. \ref{fig:thirdBuidlingAvoidance}) - UAS avoids the building from the right side, missing both traps from it.  
+	
+	\item \emph{$4^{th}$ building avoidance.} (fig. \ref{fig:fourthBuildingAvoidance}) - UAS avoids the building from the right side. This building is also a convex obstacle. 
 \end{enumerate} 
 
 \begin{figure}[H]
@@ -73,7 +78,7 @@
 	\begin{subfigure}{0.48\textwidth}
 		\centering
 		\includegraphics[width=0.9\linewidth]{\FIGDIR/NS002ConstraintsBuildingObstacles00161} 
-		\caption{$1^{nd}$ building avoidance.}
+		\caption{$2^{nd}$ building avoidance.}
 		\label{fig:secondBuildingAvoidance}
 	\end{subfigure}
 	\\
@@ -94,7 +99,7 @@
 \end{figure}
 
 
-\noindent\paragraph{Distance to Body/Safety Margin Evolution:} The distance of \emph{UAS} center to nearest obstacle (blue) does not broke a \emph{safety margin} (of closest obstacle (yellow)  nor \emph{body margin} of closest obstacle (red) as it can be seen in (fig. \ref{fig:testCaseBuildingAvoidancePerformance}). \emph{Acceptance condition} for \emph{algorithm mode switch} can be shown by UAS \emph{active avoidance of obstacles}.
+\noindent\paragraph{Distance to Body/Safety Margin Evolution:} The distance of \emph{UAS} center to the nearest obstacle (blue) does not break a \emph{safety margin} (of the closest obstacle (yellow)  nor \emph{body margin} of the closest obstacle (red) as it can be seen in (fig. \ref{fig:testCaseBuildingAvoidancePerformance}). \emph{Acceptance condition} for \emph{algorithm mode switch} can be shown by UAS \emph{active avoidance of obstacles}.
 
 \begin{note}
 The \emph{body} and \emph{safety margins} are changing depending on \emph{UAS position and orientation}, is changing reflecting (tab. \ref{tab:obstacleSetBuildingAvoidance}) margins. 
@@ -109,7 +114,7 @@ The \emph{body} and \emph{safety margins} are changing depending on \emph{UAS po
 \end{figure}
 
 
-\noindent\paragraph{Distance to Body/Safety Margin Peaks:} Minimal distance to \emph{safety margin} is $0.69$ $m$. The \emph{minimal distance to obstacle body} is $4.69$ $m$ which is more than sufficient for tested UAS type. \emph{Safety margin acceptance criteria} have been achieved, because minimal distance is greater than zero. The minimal \emph{body margin distance} is $4.69$ $m$ for obstacle no. $4$ (tab. \ref{tab:obstacleSetBuildingAvoidance}).
+\noindent\paragraph{Distance to Body/Safety Margin Peaks:} Minimal distance to \emph{safety margin} is $0.69$ $m$. The \emph{minimal distance to obstacle body} is $4.69$ $m$ which is more than sufficient for tested UAS type. \emph{Safety margin acceptance criteria} have been achieved because the minimal distance is greater than zero. The minimal \emph{body margin distance} is $4.69$ $m$ for obstacle no. $4$ (tab. \ref{tab:obstacleSetBuildingAvoidance}).
 
 \begin{table}[H]
 	\centering
@@ -120,11 +125,11 @@ The \emph{body} and \emph{safety margins} are changing depending on \emph{UAS po
 	\multirow{2}{*}{Distance to Body Margin}   & min & 4.69  \\\cline{2-3}
 											& max & 29.98 
 	\end{tabular}
-	\caption{Distance to Body/Satety Margin Peaks for \emph{Building avoidance scenario}.}
+	\caption{Distance to Body/Safety Margin Peaks for \emph{Building avoidance scenario}.}
 	\label{tab:testCaseBuildingAvoidanceSafetyAndBodyMarginDistances}
 \end{table}
 
-\noindent\paragraph{Path Tracking Performance:} Reference path (green dashed line) is given as direct interconnection between waypoints (green numbered square).  The real trajectory (blue solid line) is split into its XYZ components. \emph{All mission waypoints} (fig. \ref{fig:testCaseBuildingAvoidancePathTracking}) have been reached in given order. There are some deviations on $X-Y$ horizontal axes, while the UAS was in the \emph{avoidance mode}.
+\noindent\paragraph{Path Tracking Performance:} Reference path (green dashed line) is given as direct interconnection between waypoints (green numbered square).  The real trajectory (solid blue line) is split into its XYZ components. \emph{All mission waypoints} (fig. \ref{fig:testCaseBuildingAvoidancePathTracking}) have been reached in the given order. There are some deviations on $X-Y$ horizontal axes, while the UAS was in the \emph{avoidance mode}.
 
 \begin{figure}[H]
 	\centering
@@ -135,7 +140,7 @@ The \emph{body} and \emph{safety margins} are changing depending on \emph{UAS po
 
 
 
-\noindent\paragraph{Path Tracking Deviations:} Deviations (tab. \ref{tab:pathTrackingParametersForBuildingAvoidance}) from \emph{reference trajectory} are in expected ranges considering \emph{mission plan} (tab. \ref{tab:missionSetupForBuildingAvoidanceScenario}) and \emph{obstacle properties} (tab. \ref{tab:obstacleSetBuildingAvoidance}).
+\noindent\paragraph{Path Tracking Deviations:} Deviations (tab. \ref{tab:pathTrackingParametersForBuildingAvoidance}) from \emph{reference trajectory} are in expected ranges considering the  \emph{mission plan} (tab. \ref{tab:missionSetupForBuildingAvoidanceScenario}) and \emph{obstacle properties} (tab. \ref{tab:obstacleSetBuildingAvoidance}).
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c||c|c|c|c}
@@ -153,7 +158,7 @@ The \emph{body} and \emph{safety margins} are changing depending on \emph{UAS po
 % 01-Building Avoidance Scenario:
 \paragraph{Computation Load:} The \emph{computation load} for \emph{scenario} (fig.\ref{fig:buildingAvoidanceComputationTime}) shows used time (y-axis) over decision frame (x-axis).
 
-There is slight increase in \emph{computation time} when UAS is in \emph{Emergency Avoidance Mode}.
+There is a slight increase in \emph{computation time} when UAS is in \emph{Emergency Avoidance Mode}.
 
 \begin{figure}[H]
     \centering
