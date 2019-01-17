@@ -99,7 +99,7 @@ The deltas are posed in \emph{UAS body-fixed coordinate frame} (ap. \ref{sec:com
 
 The discrete trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states bounded to discrete time $0\dots n$, where $n$ is movement count of \emph{Buffer}. Trajectory set has $n+1$ members defined like the following:
 
-\begin{equation}
+\begin{equation}\label{eq:ourTrajectoryEvolution}
     \begin{aligned}
     T&rajectory(state(0),Buffer)=\\
         &\left\{
@@ -115,4 +115,8 @@ The discrete trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered se
     \end{aligned}
 \end{equation}
 
-\noindent The $apply Movement$ (eq. \ref{eq:uasLinearDiscreteModel}) is concatenation function for discrete UAS model.
+\noindent The $apply Movement$ (eq. \ref{eq:uasLinearDiscreteModel}) is concatenation function for discrete UAS model. The input$(k)$ vector is selected from movement tables (tab. \ref{tab:movements1}, \ref{tab:movements2}).
+
+\begin{note}
+	Parameter movement($\cdot$) (eq. \ref{eq:ourTrajectoryEvolution}) is movement order index in buffer (eq. \ref{eq:ourBuffer}).
+\end{note}
