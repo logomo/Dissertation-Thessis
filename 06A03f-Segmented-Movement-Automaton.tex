@@ -118,6 +118,11 @@
     \begin{equation} \label{eq:activeMovementAutomaton}
         ActiveMovementAutomaton:StateSpace\to MovementAutomaton
     \end{equation}
+
+\noindent Trajectory of non-segmented movement automaton (eq. \ref{eq:ourTrajectoryImplementation}) is then given as the time-series of discrete states:
+\begin{equation}\label{eq:ourTrajectoryImplementation}
+    Trajectory(state(0),Buffer)= \left\{\begin{gathered}state(0)+\sum_{j=0}^{i-1} input(movement(j)):\\i \in\left\{1\dots |Buffer|+1\right\}, \\movement(\cdot) \in Buffer\end{gathered}\right\}
+\end{equation}
     
 \noindent Selecting appropriate \emph{movement automaton} implementation (def. \ref{def:segmentMovementAutomaton}) for \emph{state(k)} $\in$ \emph{Segment} $\subset$ \emph{State Space}. The mapping function (eq. \ref{eq:activeMovementAutomaton}) is injection mapping every state(k) to Segment then \emph{Movement Automaton Implementation}. The trajectory generated is then given:
     
