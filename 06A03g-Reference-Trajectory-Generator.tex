@@ -22,3 +22,12 @@ The \emph{Reference trajectory} (eq. \ref{eq:generatedReferenceTrajectory}) for 
 \begin{note}
     The \emph{Segmented Movement Automaton} (def. \ref{def:segmentedMovementAutomaton}) is used in this work with one Segment equal to State space with input function given by (\ref{tab:movements1}, \ref{tab:movements2}). The predictor used in \emph{Reach set computation} is given by (eq. \ref{eq:generatedReferenceTrajectory}).
 \end{note}
+
+\paragraph{State Projection} (eq. \ref{eq:ourStateProjection}) for the \emph{Trajectory} (eq. \ref{eq:ourTrajectoryImplementation}) is given as follow:
+\begin{equation}\label{eq:ourStateProjection}
+    StateProjection(Trajectory,time) = Trajectory.getMemberByIndex(time+1)
+\end{equation}
+
+\begin{note}
+    \emph{Movement Automaton} for system (eq. \ref{eq:UASNonlinearModelSimple}) with given (as. \ref{ass:transitionTime}) is established with all related properties (sec. \ref{def:movementAutomaton}).
+\end{note}
