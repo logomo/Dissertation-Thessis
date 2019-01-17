@@ -2,79 +2,39 @@
 
 \paragraph{Motivation:} An \emph{UAS Nonlinear Model} (eq. \ref{eq:UASNonlinearModelSimple}) can be modeled by \emph{Movement Automaton} (def. \ref{def:movementAutomaton}). 
 
-\paragraph{Movement Primitives} by (def. \ref{def:MovementPrimitive})  are given as (eq. \ref{eq:movementPrimitive}). To define primitives the \emph{minimal time} is $1 s$. The \emph{maximal duration} is also $1s$. 
+\paragraph{Movement Primitives} by (def. \ref{def:MovementPrimitive})  are given as (eq. \ref{eq:movementPrimitive}). To define primitives the \emph{minimal time} is $1 s$. The \emph{maximal duration} is also $1s$.
+
+\begin{note}
+	Each movement primitive will last for fixed duration $1s$.
+\end{note} 
 
 \begin{assumption}\label{ass:transitionTime}
     Let assume that \emph{transition time} of \emph{roll, pitch, yaw, linear velocity} is $0 s$.
 \end{assumption}
 
-Under the assumption (as. \ref{ass:transitionTime}) the \emph{movement transitions} (def. \ref{def:movementTransition}) have $0$ duration.
+Under the assumption (as. \ref{ass:transitionTime}) the \emph{movement transitions} (def. \ref{def:movementTransition}) have zero duration. Therefore movement primitives can be considered as movements.
 
 \begin{note}
     The assumption (as. \ref{ass:transitionTime}) can be relaxed under condition that \emph{path tracking controller exists}.
 \end{note}
 
-\paragraph{Movements} (def. \ref{def:Movement}) for \emph{fixed step} $k$ we start with discretization of the input variables.
-
-\noindent The \emph{linear velocity} in text step is given:
-\begin{equation}\label{eq:applyMovement}
-    v(k+1) = v(k) +\delta v(k)
-\end{equation}
-
-\noindent The \emph{roll, pitch, yaw} for next step are given 
-
-\begin{equation}\label{eq:applyMovement1}
-    \begin{aligned}
-        roll(k+1)  &= roll(k) + \delta roll(k)\\
-        pitch(k+1) & = pitch(k) + \delta pitch(k)\\
-        yaw(k+1) & = yaw(k) + \delta yaw(k)\\
-    \end{aligned}    
-\end{equation}
-
-\noindent The $\delta v(k)$ is \emph{velocity change}, $\delta roll(k)$, $\delta pitch(k)$, $\delta yaw(k)$, are \emph{orientation changes} for current discrete step $k$. If the duration of \emph{transition} is $0 s$ (as. \ref{ass:transitionTime}) then 3D trajectory evolution in discrete time is given as: 
-
-\begin{equation}\label{eq:applyMovement2}
-    \begin{aligned}
-        x(k+1)&= x(k) + v(k+1) \cos(pitch(k+1)) \cos(yaw(k+1)) & = \delta x(k)\\
-        y(k+1)&= y(k) + v(k+1) \cos(pitch(k+1)) \sin(yaw(k+1)) & = \delta y(k)\\
-        z(k+1)&= z(k) - v(k+1) \sin(pitch(k+1))                & = \delta z(k)\\
-        time(k+1)& = time(k)+1                                & = \delta time(k)
-    \end{aligned}    
-\end{equation}
-
-\noindent The $\delta x(k)$, $\delta y(k)$, $\delta z(k)$ are positional differences depending on \emph{input vector} for given discrete time $k$:
-\begin{equation}\label{eq:ourImput}
-    input(k) = \left[
-                    \begin{gathered}
-                    \delta x(k), \delta y(k), \delta z(k), \delta v (k),\\
-                    \delta roll (k), \delta pitch(k), \delta yaw(k),\delta time (k)
-                    \end{gathered} 
-                \right]^T
-\end{equation}
-
-\noindent The \emph{state vector} for discrete time is given:
-\begin{equation}\label{eq:ourState}
-    state(k) = \left[
-                    \begin{gathered}
-                     x(k),  y(k),  z(k),  v (k),\\
-                     roll (k),  pitch(k),  yaw(k), time (k)
-                    \end{gathered} 
-                \right]^T
-\end{equation}
-
-\noindent The nonlinear model (eq. \ref{eq:UASNonlinearModelSimple}) is then reduced to \emph{linear discrete model} (eq. \ref{eq:uasLinearDiscreteModel}) given by \emph{apply movements} function (eq. \ref{eq:applyMovement}, \ref{eq:applyMovement1}, \ref{eq:applyMovement2}).
+\paragraph{Movements} satisfying (def. \ref{def:Movement}), for the nonlinear model (eq. \ref{eq:UASNonlinearModelSimple}) reduced to \emph{discrete model} (eq. \ref{eq:uasLinearDiscreteModel}), are given by \emph{apply movements} function (eq. \ref{eq:applyMovement}, \ref{eq:applyMovement1}, \ref{eq:applyMovement2}).
 
 \begin{equation}\label{eq:uasLinearDiscreteModel}
     state(k+1) = applyMovement(state(k), input(k)) 
 \end{equation}
 
-\paragraph{Movement Set} for linear discrete model (eq. \ref{eq:uasLinearDiscreteModel}) is defined as set of extreme unitary movements on main axes (tab. \ref{tab:movements1}) and diagonal axes (tab. \ref{tab:movements2}).
+\paragraph{Movement Set} for discrete model (eq. \ref{eq:uasLinearDiscreteModel}) is defined as set of unitary movements on main axes (tab. \ref{tab:movements1}) and diagonal axes (tab. \ref{tab:movements2}). 
+
+The maneuvering capability of several commercial small fixed wing UAS were merged together. The turning rate on horizontal/vertical is defined as $15^\circ$.
+
+The deltas are posed in \emph{UAS body-fixed coordinate frame} (ap. \ref{sec:complementsOfAlgebra}) for discrete time $k$. 
 
 \begin{table}[H]
     \centering
     \begin{tabular}{r||r|r|r|r|r}
-    
-        $input(movement)$           &    Straight  & Down & Up & Left  & Right   \\\hline\hline
+    	\multirow{2}{*}{Parameter} & \multicolumn{5}{c}{Movement} \\\cline{2-6} 
+                &    Straight  & Down & Up & Left  & Right   \\\hline\hline
         $\delta     x(k)[m]$           &    1.00	  & 0.98  & 0.98  & 0.98 & 0.98  \\\hline
         $\delta     y(k)[m]$           &    0	      & 0	  & 0	  & 0.13 & -0.13 \\\hline
         $\delta     z(k)[m]$           &    0	      & -0.13 & 0.13  &	0	 & 0     \\\hline
@@ -88,7 +48,8 @@ Under the assumption (as. \ref{ass:transitionTime}) the \emph{movement transitio
 \begin{table}[H]
     \centering
     \begin{tabular}{r||r|r|r|r}
-        $input(movement)$             & Down-Left & Down-Right & Up-Left  & Up-Right   \\\hline\hline
+    	\multirow{2}{*}{Parameter} & \multicolumn{4}{c}{Movement} \\\cline{2-5} 
+                    & Down-Left & Down-Right & Up-Left  & Up-Right   \\\hline\hline
         $\delta     x(k)[m]$           & 0.76  & 0.76  & 0.76 & 0.76  \\\hline
         $\delta     y(k)[m]$           & -0.13	& 0.13	& 0.13 & -0.13 \\\hline
         $\delta     z(k)[m]$           & -0.13 & -0.13 & 0.13 & 0.13  \\\hline
@@ -114,36 +75,44 @@ Under the assumption (as. \ref{ass:transitionTime}) the \emph{movement transitio
 
 \paragraph{Trajectory} by (def. \ref{def:MovementAutomatonTrajectory}) for initial time $time = 0$ , initial state $state(0)$ and \emph{Movement Buffer} (from def. \ref{def:MovementBuffer}):
 \begin{equation}\label{eq:ourBuffer}
-    Buffer \in Movement Set^* (eq. \ref{eq:OurMovementSet}), \quad  |Buffer| \in \N
+    Buffer = \left\{
+                movement(j):
+                \begin{aligned}
+                    &movement(j)\in Movement Set (eq. \ref{eq:OurMovementSet}),\\
+                    & j \in 1\dots n, n \in N^+
+                \end{aligned}
+            \right\}
 \end{equation}
 
-\noindent Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is then given as the time-series of discrete states:
-\begin{equation}\label{eq:ourTrajectoryImplementation}
-    Trajectory(state(0),Buffer)= \left\{\begin{gathered}state(0)+\sum_{j=0}^{i-1} input(movement(j)):\\i \in\left\{1\dots |Buffer|+1\right\}, \\movement(\cdot) \in Buffer\end{gathered}\right\}
-\end{equation}
+\begin{assumption}
+    The buffer is always non-empty, ordered, finite list of \emph{movements}.
+\end{assumption}
 
-\noindent Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states bounded to discrete time $0\dots n$ , where $n$ is member count of \emph{Buffer}. Trajectory set has $n+1$ members:
+\begin{note}
+  The buffer have finite count $n$ of movements stored. The buffer is the planning instrument used by higher level navigation/avoidance algorithm to control UAS (Control/Command interface) (fig. \ref{fig:AvoidanceFrameworkConceptNew}).
+\end{note}
+
+%\noindent Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is then %given as the time-series of discrete states:
+%\begin{equation}\label{eq:ourTrajectoryImplementation}
+%    Trajectory(state(0),Buffer)= \left\{\begin{gathered}state(0)+\sum_{j=0}%^{i-1} input(movement(j)):\\i \in\left\{1\dots |Buffer|+1\right\}, \%\movement(\cdot) \in Buffer\end{gathered}\right\}
+%\end{equation}
+
+The discrete trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states bounded to discrete time $0\dots n$, where $n$ is movement count of \emph{Buffer}. Trajectory set has $n+1$ members defined like the following:
 
 \begin{equation}
     \begin{aligned}
     T&rajectory(state(0),Buffer)=\\
         &\left\{
         \begin{aligned}
-            state(0) &= state(0) + \{\}\\
-            state(1) &= state(0) + input(movement(1))\\
-            state(2) &= state(0) + input(movement(1)) +input(movement(2))\\
+            state(0) &= state(0),\\
+            state(1) &= apply Movement\left(state(0), movement(1)\right),  \\
+            state(2) &= apply Movement\left(state(1), movement(2)\right),  \\
              \vdots  &= \vdots\\
-            state(n) &= state(0) + input(movement(1))+\dots+input(movement(n))\\
+            state(n-1) &= apply Movement\left(state(n-2), movement(n-1)\right),  \\
+            state(n)   &= apply Movement\left(state(n-1), movement(n)\right)  \\
         \end{aligned}
         \right\}
     \end{aligned}
 \end{equation}
 
-\paragraph{State Projection} (eq. \ref{eq:ourStateProjection}) for the \emph{Trajectory} (eq. \ref{eq:ourTrajectoryImplementation}) is given as follow:
-\begin{equation}\label{eq:ourStateProjection}
-    StateProjection(Trajectory,time) = Trajectory.getMemberByIndex(time+1)
-\end{equation}
-
-\begin{note}
-    \emph{Movement Automaton} for system (eq. \ref{eq:UASNonlinearModelSimple}) with given (as. \ref{ass:transitionTime}) is established with all related properties (sec. \ref{def:movementAutomaton}).
-\end{note}
+\noindent The $apply Movement$ (eq. \ref{eq:uasLinearDiscreteModel}) is concatenation function for discrete UAS model.
