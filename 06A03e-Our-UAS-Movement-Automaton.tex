@@ -62,7 +62,7 @@ The deltas are posed in \emph{UAS body-fixed coordinate frame} (ap. \ref{sec:com
 \end{table}
 
 \begin{note}
-    \emph{Movement set} in shorten form is given as
+    \emph{Movement set} in shorten form is given as:
     \begin{equation}\label{eq:OurMovementSet}
         Movement Set= \left\{
         \begin{gathered}
@@ -72,6 +72,23 @@ The deltas are posed in \emph{UAS body-fixed coordinate frame} (ap. \ref{sec:com
         \right\}
     \end{equation}
 \end{note}
+
+\emph{Implemented movement set example} (fig. \ref{fig:implementedMovementSetExample}) shows the movement used as basic building blocs of the trajectory for fixed wing UAS
+\begin{enumerate}
+    \item \emph{Initial position} (red plane) - the initial position, before any movement execution.
+    
+    \item \emph{Straight movement application} (blue plane) - the \emph{neutral movement application} brings plane forward. 
+    
+    \item \emph{Main axes movements} (cyan planes) - the application of movements from (tab. \ref{tab:movements1}) $\{Up,$ $Down,$ $Left,$ $Right\}$.
+    
+    \item \emph{Diagonal axes movements} (magenta planes) - the application of movements from (tab. \ref{tab:movements2}) $\{Down Left,$ $Down Right,$  $Up Left,$   $Up Right\}$.
+ \end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{\FIGDIR/TE065MovementSet}
+    \caption{Implemented movement set example.}
+    \label{fig:implementedMovementSetExample}
+\end{figure}
 
 \paragraph{Trajectory} by (def. \ref{def:MovementAutomatonTrajectory}) for initial time $time = 0$ , initial state $state(0)$ and \emph{Movement Buffer} (from def. \ref{def:MovementBuffer}):
 \begin{equation}\label{eq:ourBuffer}
