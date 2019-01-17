@@ -45,3 +45,51 @@
     \end{aligned}
 \end{equation}
 
+\paragraph{Discretization} for \emph{fixed step} $k$ we start with discretization of the input variables:
+
+\noindent The \emph{linear velocity} in text step is given:
+\begin{equation}\label{eq:applyMovement}
+    v(k+1) = v(k) +\delta v(k)
+\end{equation}
+
+\noindent The \emph{roll, pitch, yaw} for next step are given 
+
+\begin{equation}\label{eq:applyMovement1}
+    \begin{aligned}
+        roll(k+1)  &= roll(k) + \delta roll(k)\\
+        pitch(k+1) & = pitch(k) + \delta pitch(k)\\
+        yaw(k+1) & = yaw(k) + \delta yaw(k)\\
+    \end{aligned}    
+\end{equation}
+
+\noindent The $\delta v(k)$ is \emph{velocity change}, $\delta roll(k)$, $\delta pitch(k)$, $\delta yaw(k)$, are \emph{orientation changes} for current discrete step $k$. If the duration of \emph{transition} is $0 s$ (as. \ref{ass:transitionTime}) then 3D trajectory evolution in discrete time is given as: 
+
+\begin{equation}\label{eq:applyMovement2}
+    \begin{aligned}
+        x(k+1)&= x(k) + v(k+1) \cos(pitch(k+1)) \cos(yaw(k+1)) & = \delta x(k)\\
+        y(k+1)&= y(k) + v(k+1) \cos(pitch(k+1)) \sin(yaw(k+1)) & = \delta y(k)\\
+        z(k+1)&= z(k) - v(k+1) \sin(pitch(k+1))                & = \delta z(k)\\
+        time(k+1)& = time(k)+1                                & = \delta time(k)
+    \end{aligned}    
+\end{equation}
+
+\noindent The $\delta x(k)$, $\delta y(k)$, $\delta z(k)$ are positional differences depending on \emph{input vector} for given discrete time $k$:
+\begin{equation}\label{eq:ourImput}
+    input(k) = \left[
+                    \begin{gathered}
+                    \delta x(k), \delta y(k), \delta z(k), \delta v (k),\\
+                    \delta roll (k), \delta pitch(k), \delta yaw(k),\delta time (k)
+                    \end{gathered} 
+                \right]^T
+\end{equation}
+
+\noindent The \emph{state vector} for discrete time is given:
+\begin{equation}\label{eq:ourState}
+    state(k) = \left[
+                    \begin{gathered}
+                     x(k),  y(k),  z(k),  v (k),\\
+                     roll (k),  pitch(k),  yaw(k), time (k)
+                    \end{gathered} 
+                \right]^T
+\end{equation}
+
