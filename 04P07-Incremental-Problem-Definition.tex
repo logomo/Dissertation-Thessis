@@ -2,7 +2,7 @@
 
 \noindent This section contains \emph{incremental problem definition} as increments of (sec. \ref{s:BasicProblemDefinition}). Each problem contains definition and references to addressed issues.
 
-\begin{problem}{Basic Avoidance}\label{pro:knownWorldEvolution} (sec. \ref{s:BasicProblemDefinition}) is to navigate through \emph{KnownWorld} under assumption that every \emph{waypoint} in \emph{Mission} is reachable.The \emph{KnownWorld} is fed through \emph{SensorFusion} function which is joining \emph{LiDAR} scanning into \emph{Free(t), Occupied(t),} and, \emph{Unknown(t)} sets in \emph{discrete scan times} $t$. 
+\begin{problem}{Basic Avoidance}\label{pro:knownWorldEvolution} (sec. \ref{s:BasicProblemDefinition}) is to navigate through \emph{KnownWorld} under the assumption that every \emph{waypoint} in \emph{Mission} is reachable. The \emph{KnownWorld} is fed through \emph{SensorFusion} function which is joining \emph{LiDAR} scanning into \emph{Free(t), Occupied(t),} and, \emph{Unknown(t)} sets in \emph{discrete scan times} $t$. 
 
     \begin{equation}\label{eq:basicProblemDefinition}
         \begin{aligned}
@@ -26,7 +26,7 @@
 
 
 \begin{problem}{Intruder Problem}\label{pro:intruderDetection}
-    in addition to \emph{Known world evolution} (pr.\ref{pro:knownWorldEvolution}) the \emph{ADS-B} sensor is introduced into \emph{Sensors} array, this imposes \emph{HardConstraint} of \emph{Flight corridor} for detected intruders impacting the evolution of \emph{Free}(t) and \emph{Occupied}(t) sets significantly.
+    in addition to \emph{Known world evolution} (pr.\ref{pro:knownWorldEvolution}) the \emph{ADS-B} sensor is introduced into \emph{Sensors} array, this imposes \emph{HardConstraint} of \emph{Flight corridor} for detected intruders impacting the evolution of \emph{Free}(t), and \emph{Occupied}(t) sets significantly.
     
     \begin{equation}\label{eq:intruderDetectionProblemdefinition}
         \begin{aligned}
@@ -60,12 +60,12 @@
 
 
 \begin{problem}{Static restrictions}\label{pro:staticRestrictions},
-    in addition to \emph{Intruder} problem (pr. \ref{pro:intruderDetection}) the \emph{InformationSources} are expanded by \emph{static restriction} sources: 
+    in addition to the \emph{Intruder} problem (pr. \ref{pro:intruderDetection}) the \emph{InformationSources} are expanded by \emph{static restriction} sources: 
     \begin{enumerate}
-        \item \emph{ObstacleMap} - database containing notable landmarks, buildings, structures, with well defined \emph{protection zones}.
-        \item \emph{FlightRestrictions} - database containing ATM flight restrictions in non-segregated airspace for UAS relevant airspace categories. 
+        \item \emph{ObstacleMap} - a database containing notable landmarks, buildings, structures, with well-defined \emph{protection zones}.
+        \item \emph{FlightRestrictions} - a database containing ATM flight restrictions in non-segregated airspace for UAS relevant airspace categories. 
     \end{enumerate}
-    \noindent This change impacts \emph{DataFusion} by splitting \emph{Free(t)} set into \emph{Free(t)} and \emph{Restricted(t)} disjoint sets. In addition \emph{SoftConstraints} are introduced which contain restricted areas from relevant information sources.  
+    \noindent This change impacts \emph{DataFusion} by splitting \emph{Free(t)} set into \emph{Free(t)} and \emph{Restricted(t)} disjoint sets. Also \emph{SoftConstraints} are introduced which contain restricted areas from relevant information sources.  
     
     \begin{equation}\label{eq:staticRestrictionsProblemDefinition}
         \begin{aligned}
@@ -150,5 +150,5 @@
 \end{problem}
 
 \begin{note}
-    The assumptions \ref{ass:filteredSensors}.for \emph{filtered sensor output} and \ref{ass:reachableWaypoints} \emph{Reachable waypoints} holds for all  \emph{problem increments.}
+    The assumptions \ref{ass:filteredSensors}. for \emph{filtered sensor output} and \ref{ass:reachableWaypoints}. \emph{Reachable waypoints} hold for all \emph{problem increments.}
 \end{note}

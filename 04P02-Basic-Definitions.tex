@@ -19,14 +19,14 @@
         \dot{x} = f(t,x,u)
     \end{equation}
 
-    \noindent Where $x\in\R^{6+n}, n\in\N^{0+}$ is \emph{system state} containing minimal information about vehicle position $[x,y,z]$ and orientation $[\theta,\varphi,\rho]$ (roll, pitch yaw), and $u(t)$ is \emph{control signal} belonging to $R^k,k\in\N^+ $, bounded by control set $u(t)\in U$.
+    \noindent Where $x\in\R^{6+n}, n\in\N^{0+}$ is \emph{system state} containing minimal information about UAS position $[x,y,z]$ and orientation $[\theta,\varphi,\rho]$ (roll, pitch yaw), and $u(t)$ is \emph{control signal} belonging to $R^k,k\in\N^+ $, bounded by control set $u(t)\in U$.
     
     The map of the terrain is given by \emph{TerrainMap} mapping $(x,y)$ to the terrain elevation
     \begin{equation}\label{eq:TerrainMap}
         TerrainMap: (x,y) \rightarrow z 
     \end{equation}
    
-    \noindent\emph{Weather} (\ref{eq:weatherProjection}) can impact the performance of the \emph{UAS}. \emph{wind} can decrease flying capabilities and maneuverability, \emph{visibility} can impair the performance of sensors such as LiDAR and cameras, \emph{humidity} can be serious danger to electronic equipment and in combination low \emph{temperature} it can cause icing on vehicle, and \emph{air pressure} can impact ranging sensor and flight performance. 
+    \noindent\emph{Weather} (\ref{eq:weatherProjection}) can impact the performance of the \emph{UAS}. \emph{Wind} can decrease flying capabilities and maneuverability, \emph{visibility} can impair the performance of sensors such as LiDAR and cameras, \emph{humidity} can be a serious danger to electronic equipment, and in combination low \emph{temperature} it can cause icing on the UAS body, and \emph{air pressure} can impact ranging sensor and flight performance. 
     \begin{equation}\label{eq:weatherProjection}
         Weather:\left(position\in Space\right) \times time \to
         \left[
@@ -41,7 +41,7 @@
     \end{equation}
 
 \subsection{\secState{D}Mission}\label{s:mission}
-    \emph{Mission} (\ref{eq:missionAbstractSet}) which UAS should fly is given as set of \emph{ordered, feasible in terms of vehicle dynamic (\ref{eq:vehicleModelAbstract}), waypoints} in subspace of $Space$ (\ref{eq:SpaceDefinition}).
+    \noindent\emph{Mission} (\ref{eq:missionAbstractSet}) which UAS should fly is given as a set of \emph{ordered, feasible regarding UAS dynamic (\ref{eq:vehicleModelAbstract}), waypoints} in a subspace of $Space$ (\ref{eq:SpaceDefinition}).
     
     \begin{equation}\label{eq:missionAbstractSet}
         Mission = \left\{
@@ -59,14 +59,14 @@
     \end{equation}
 
     \begin{note}
-        The \emph{Mission} (\ref{eq:missionAbstractSet}) is considered as successfully completed if and only if $\forall$ waypoints are reached and in given order (check output of \ref{eq:waypointPassingFunction}).
+        The \emph{Mission} (\ref{eq:missionAbstractSet}) is considered as completed if and only if $\forall$ waypoints are reached and in the given order (check the output of \ref{eq:waypointPassingFunction}).
     \end{note}
 
 
 
 \subsection{\secState{D}Flight Constraints}\label{s:FlightConstraints}
 
-    \noindent Flight constraints arise from aviation rules and from ATM. 
+    \noindent Flight constraints arise from aviation rules and ATM/UTM. 
 
     There are $H$ sets of hard flight constraints expressed as subsets of \emph{Space}:
 
@@ -74,7 +74,7 @@
         HFlightConstraints=\left\{HFlightConstraint_1, \dots, HFlightConstraint_H \right\}
     \end{equation}
 
-    The union of all \emph{$HFlightConstraint_i$} is the set \emph{$HFlightConstraint$}. \emph{Example:} turning radius of UAS, climb rate etc. 
+    The union of all \emph{$HFlightConstraint_i$} is the set \emph{$HFlightConstraint$}. \emph{Example:} turning radius of UAS, climb rate, etc. 
     
     There are $S$ sets of soft flight constraints expressed as subsets of \emph{Space}:
 
@@ -99,7 +99,7 @@
     \end{equation}
 
     \begin{note}
-        \emph{SpaceClassification} (\ref{eq:spaceCassificationFunction}) is \emph{total} function mapping each element of \emph{Space}. Other followup \emph{classifications} are considered as \emph{total} functions. 
+        \emph{SpaceClassification} (\ref{eq:spaceCassificationFunction}) is a \emph{total} function mapping each element of \emph{Space}. Other followup \emph{classifications} are considered as \emph{total} functions. 
     \end{note}
 
     There is set of \emph{Space} Hard constraints, where one \emph{HardConstraint} (\ref{eq:hardSpaceConstraints}) is given as:
@@ -124,19 +124,21 @@
     \end{definition}
 
     \begin{definition}{Landmark}\label{def:Landmark} 
-        is partition of \emph{Space} (\ref{eq:SpaceDefinition}) which is notable in context of \emph{society} or \emph{law} given properties. Landmark can be: notable buildings, notable natural structures or crucial infrastructure. Landmark is part of terrain map, but it special status can induce additional properties.
+        is a partition of \emph{Space} (\ref{eq:SpaceDefinition}) which is notable in the context of \emph{society} or \emph{law} given properties. Landmark can be notable buildings, notable natural structures or crucial infrastructure. Landmark is part of terrain map, but it`s special status can induce additional properties.
     \end{definition}
 
     \noindent For obstacle avoidance problem following \emph{Information sources} are available:
     
     \begin{enumerate}
-        \item\emph{Terrain map} - map of terrain with notable landmarks.
-        \item\emph{Object map} - map of notable structures with \emph{protection zones} considered as \emph{occupied} or \emph{restricted} space.
-        \item\emph{Fly zones restriction map} - map of restricted flight areas considered as \emph{restricted} constraints.
+        \item\emph{Terrain map} - a map of terrain with notable landmarks.
+        
+        \item\emph{Object map} - a map of notable structures with \emph{protection zones} considered as \emph{occupied} or \emph{restricted} space.
+        
+        \item\emph{Fly zones restriction map} - a map of restricted flight areas considered as \emph{restricted} constraints.
     \end{enumerate}
 
 \subsection{\secState{D}Single Observation by Single Sensor Classification} \label{singleObservationSingle sensor}
-    \noindent\emph{Vehicle} is equiped with single \emph{Sensor}, which returns \emph{Space} classification for given \emph{observation position} and observation time.
+    \noindent The\emph{UAS} is equipped with single \emph{Sensor}, which returns \emph{Space} classification for given \emph{observation position} and observation time.
 
 
     Observation (\ref{eq:observationClassification}) at given UAS \emph{position}, \emph{time}, and for given \emph{sensor} sorts points from \emph{sensor reading} into following distinguish sets (\ref{eq:observationClassification}):
@@ -161,13 +163,13 @@
     \noindent Let Let add pairs of \emph{observation position} and \emph{observation time} in manner $\{(position_1,t_1),$ $(position_2,t_2),$ $\dots(position_k,t_k)\}, k\in\N^+$ that point position is independent and time is ordered in fashion $t_1 < t_2 < \dots < t_k$.
  
  
-    \emph{Free space} from multiple sensor \emph{reading} over multiple \emph{positions} is inclusive space, because we are obtaining additional information regarding to space reachability by sensor reading independent on sensor space and orientation limitation. Therefore the union of single instances of observations are used to represent \emph{Combined free space} $Free_O(sensor)$ (\ref{eq:freeObservableSpaceForOneSensor}).
+    \emph{Free space} from multiple sensor \emph{reading} over multiple \emph{positions} is inclusive space because we are obtaining additional information regarding space reachability by sensor reading independent on sensor space and orientation limitation. Therefore the union of single instances of observations is used to represent \emph{Combined free space} $Free_O(sensor)$ (\ref{eq:freeObservableSpaceForOneSensor}).
 
     \begin{equation}\label{eq:freeObservableSpaceForOneSensor}
         Free_O(sensor)= \bigcup_{i=\{1,\dots,k\}}Free_O(sensor,position_i,time_i)
     \end{equation}
  
-    \emph{Occupied space} (\ref{eq:occupiedObservableSpaceForOneSensor}) from multiple sensor \emph{reading} over multiple \emph{positions} is inclusive space, because of increased information, therefore it has similar handling to \emph{Free space}.
+    \emph{Occupied space} (\ref{eq:occupiedObservableSpaceForOneSensor}) from multiple sensor \emph{reading} over multiple \emph{positions} is inclusive space, because of increased information; therefore it has similar handling to \emph{Free space}.
     \begin{equation}\label{eq:occupiedObservableSpaceForOneSensor}
         Occupied_O(sensor)= \bigcup_{i=\{1,\dots,k\}}Occupied_O(sensor,position_i,time_i)
     \end{equation}
@@ -206,9 +208,9 @@
     \end{equation}
 
 \subsection{\secState{D}Data Fusion}\label{s:dataFusionDefinition}
-    \noindent Multiple \emph{Information Sources}: \emph{InformationSource}$_1$, \emph{InformationSource}$_2$, $\dots$, \emph{InformationSource}$_l$, $l\in\N$, where $l$ is count of information sources needs to be fused with \emph{Sensor Fusion} function (\ref{eq:SensorFusionFunction}) outcome at \emph{fixed time} $t_{fix}$.
+    \noindent Multiple \emph{Information Sources}: \emph{InformationSource}$_1$, \emph{InformationSource}$_2$, $\dots$, \emph{InformationSource}$_l$, $l\in\N$, where $l$ is the count of information sources needs to be fused with \emph{Sensor Fusion} function (\ref{eq:SensorFusionFunction}) outcome at \emph{fixed time} $t_{fix}$.
 
-    \emph{Data fusion} function (\ref{eq:DataFusionFunction}) combines the classification from various \emph{Information Sources} with classification from \emph{Sensor Fusion} function (\ref{eq:SensorFusionFunction}) for vehicle position at \emph{fixed time} $t_{fix}$, under given \emph{Data Fusion Parameters}. 
+    \emph{Data fusion} function (\ref{eq:DataFusionFunction}) combines the classification from various \emph{Information Sources} with classification from \emph{Sensor Fusion} function (\ref{eq:SensorFusionFunction}) for UAS position at \emph{fixed time} $t_{fix}$, under given \emph{Data Fusion Parameters}. 
 
     \begin{equation}\label{eq:DataFusionFunction}
         DataFusion:
@@ -242,7 +244,7 @@
     \end{note}
 
 \subsection{\secState{D}Known World}\label{s:KnownWorld}
-   \noindent \emph{Known world} (\ref{eq:knownWorldSet}) for some \emph{fixed time}$t_{fix}$ is given as joint set of points which belongs to one of \emph{Data Fusion} (\ref{eq:DataFusionFunction}) output sets $Free(t_{fix})$ or $Occupied(t_{fix})$ or $Restricted(t_{fix})$. The \emph{Known World} is compact set with existing boundary.
+   \noindent \emph{Known world} (\ref{eq:knownWorldSet}) for some \emph{fixed time}$t_{fix}$ is given as the joint set of points which belongs to one of \emph{Data Fusion} (\ref{eq:DataFusionFunction}) output sets $Free(t_{fix})$ or $Occupied(t_{fix})$ or $Restricted(t_{fix})$. The \emph{Known World} is compact set with existing boundary.
     
     \begin{equation}\label{eq:knownWorldSet}
         KnownWorld(t_{fix})= Free(t_{fix}) \cup Occupied(t_{fix}) \cup Restricted(t_{fix})
