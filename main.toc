@@ -142,17 +142,17 @@
 \contentsline {subsection}{\numberline {4.1.9} Data Fusion}{65}{subsection.4.1.9}
 \contentsline {subsection}{\numberline {4.1.10} Known World}{66}{subsection.4.1.10}
 \contentsline {subsection}{\numberline {4.1.11} Safety Margin}{66}{subsection.4.1.11}
-\contentsline {section}{\numberline {4.2} Basic Obstacle Avoidance Problem}{66}{section.4.2}
-\contentsline {section}{\numberline {4.3} Initial Assumptions}{67}{section.4.3}
-\contentsline {section}{\numberline {4.4} Incremental Problem Definition}{68}{section.4.4}
+\contentsline {section}{\numberline {4.2} Basic Obstacle Avoidance Problem}{67}{section.4.2}
+\contentsline {section}{\numberline {4.3} Initial Assumptions}{68}{section.4.3}
+\contentsline {section}{\numberline {4.4} Incremental Problem Definition}{69}{section.4.4}
 \contentsline {section}{\numberline {4.5} Avoidance Requirements}{72}{section.4.5}
 \contentsline {paragraph}{SAA systems}{72}{section*.126}
 \contentsline {subsection}{\numberline {4.5.1} Energy Efficiency}{72}{subsection.4.5.1}
 \contentsline {paragraph}{Energy efficiency}{72}{section*.127}
 \contentsline {paragraph}{Cost of flown trajectory}{73}{section*.128}
 \contentsline {paragraph}{Expected reach cost}{73}{section*.129}
-\contentsline {subsection}{\numberline {4.5.2} Trajectory Tracking}{73}{subsection.4.5.2}
-\contentsline {paragraph}{Trajectory Tracking}{73}{section*.130}
+\contentsline {subsection}{\numberline {4.5.2} Trajectory Tracking}{74}{subsection.4.5.2}
+\contentsline {paragraph}{Trajectory Tracking}{74}{section*.130}
 \contentsline {paragraph}{Motivation:}{74}{section*.131}
 \contentsline {paragraph}{Movement Automaton trajectory tracking:}{74}{section*.132}
 \contentsline {paragraph}{Reference Trajectory Deviation}{75}{section*.133}
