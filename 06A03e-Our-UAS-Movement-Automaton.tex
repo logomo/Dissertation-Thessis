@@ -114,7 +114,7 @@ The deltas are posed in \emph{UAS body-fixed coordinate frame} (ap. \ref{sec:com
 %    Trajectory(state(0),Buffer)= \left\{\begin{gathered}state(0)+\sum_{j=0}%^{i-1} input(movement(j)):\\i \in\left\{1\dots |Buffer|+1\right\}, \%\movement(\cdot) \in Buffer\end{gathered}\right\}
 %\end{equation}
 
-The discrete trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is ordered set of states bounded to discrete time $0\dots n$, where $n$ is movement count of \emph{Buffer}. Trajectory set has $n+1$ members defined like the following:
+The discrete trajectory (eq. \ref{eq:ourTrajectoryEvolution}) is ordered set of states bounded to discrete time $0\dots n$, where $n$ is movement count of \emph{Buffer}. Trajectory set has $n+1$ members defined like the following:
 
 \begin{equation}\label{eq:ourTrajectoryEvolution}
     \begin{aligned}
