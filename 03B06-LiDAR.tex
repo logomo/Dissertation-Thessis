@@ -1,31 +1,32 @@
 \section{\secState{R}LiDAR}\label{sec:LiDARStateOfArt}
-\noindent \paragraph{LiDAR(Light Detection And Ranging)} is active form of remote sensing: information is obtained from a signal which is sent from a transmitter and reflected by a target, and detected by a receiver back at the source. Following types of information can be obtained:
+\noindent \paragraph{LiDAR(Light Detection And Ranging)} is an active form of remote sensing: information is obtained from a signal which is sent from a transmitter and reflected by a target and detected by a receiver back at the source. Following types of information can be obtained:
 \begin{enumerate}
 \item \textit{Range to target} - topographic LiDAR or laser altimeter.
 \item \textit{Chemical properties of target} - differential absorption LiDAR.
-\item \textit{Velocity of target} - Doppler LiDAR.
+\item \textit{The velocity of target} - Doppler LiDAR.
 \end{enumerate}
 
-\noindent Chemical properties of target are out of scope. Velocity of  target seems as interesting property to investigate, but this type of LiDAR is usually used for meteorological measurements of wind currents \cite{martin2011meteorological}. Extended research in LiDAR as obstacle detection sensor has been executed by research group around Sabatini \cite{sabatini2014lidar} and Ramasy \cite{ramasamy2016lidar}. 
+\noindent Chemical properties of the target are out of scope. The velocity of  target seems as interesting property to investigate, but this type of LiDAR is usually used for meteorological measurements of wind currents \cite{martin2011meteorological}. Extended research in LiDAR as obstacle detection sensor has been executed by research group around Sabatini \cite{sabatini2014lidar} and Ramasy \cite{ramasamy2016lidar}. 
 
-LiDAR output is represented as point cloud it is described by following definition.
+A LiDAR output is represented as point cloud it is described by the definition:
+
 \begin{definition}[Scanned point and Point-cloud]
-Consider viewpoint as origin of $\R^3$ space,  Let  $point \in Polar Coordinates$ be defined as:
+Consider viewpoint as the origin of $\R^3$ space,  Let  $point \in Polar Coordinates$ be defined as:
     \begin{equation}
         point = [ distance, horizontal^\circ, vertical^\circ, time ]^T
     \end{equation}
-    Where $horizontal^\circ$ is horizontal angle from origin, $vertical^\circ$ is vertical angle to origin, and, $time$ is time of retrieval.\\
+    Where $horizontal^\circ$ is the horizontal angle from the origin, $vertical^\circ$ is a vertical angle to the origin, and, $time$ is a time of retrieval.\\
 
     \noindent Point-cloud is set of points scanned in small enough time-frame, based on processing raw point data it can have following representations:
     
     \begin{enumerate}
-        \item Local point-cloud - position of sensor is used as origin of space and points can be represented in orthogonal or planar representation. 
+        \item \emph{Local point-cloud} - position of the sensor is used as the origin of space and points can be represented in orthogonal or planar representation. 
         
-        \item Global point-cloud -global position of sensor is used as reference to calculate global position of points.
+        \item \emph{Global point-cloud} -global position of the sensor is used as a reference to calculate the global position of points.
     \end{enumerate}
 \end{definition}
 
-\paragraph{Point-cloud} is usually addressed as \textit{raw point-cloud} in case if its represented in Local planar coordinates. Other forms of point cloud require further processing and they are not feasible for real-time obstacle detection and avoidance \cite{chen2007airborne}.
+\paragraph{Point-cloud} is usually addressed as \textit{raw point-cloud} in case if it is represented in Local planar coordinates. Other forms of point cloud require further processing, and they are not feasible for real-time obstacle detection and avoidance \cite{chen2007airborne}.
 
 \begin{figure}[H]
     
@@ -46,21 +47,21 @@ Consider viewpoint as origin of $\R^3$ space,  Let  $point \in Polar Coordinates
     \label{fig:Spaces of interests}
  \end{figure}
  
-\noindent  Because of real-time obstacle avoidance it is necessary to introduce following terminology:
+\noindent  Because of real-time obstacle avoidance, it is necessary to introduce the following terminology:
 \begin{enumerate}
     \item \textit{Occupied points} - points which have been detected by LiDAR (also addressed as visible points).
-    \item \textit{Hidden space} - space which is hidden behind occupied points, from viewpoint it is uncertain what is in that space. 
+    \item \textit{Hidden space} - space which is hidden behind occupied points, from the viewpoint it is uncertain what is in that space. 
     \item \textit{Free space} - space which is visible from viewpoint and it is not occupied by known objects.
     \item \textit{Object surface} - detected and undetected object surface
-    \item \textit{Object interior} - occupied space by object.
+    \item \textit{Object interior} - occupied space by the object.
     \item \textit{Object exterior} - free space around known objects.
 \end{enumerate}
 
-\noindent Existing method for space segregation \cite{yapo2008probabilistic} leads to following definition:
+\noindent The existing method for space segregation \cite{yapo2008probabilistic} leads to the following definition:
 
 \begin{definition}[Accessible space]\label{def:accessibleSpace}
     Consider known space as space explored by sensor (it can have different viewpoint along previous 3D trajectory).
-    Intersection between \textit{object exterior} ($Exterior$) and \textit{free space} $Free$ gives us \textit{Accessible space} ($Accessible$).
+    The intersection between \textit{object exterior} ($Exterior$) and \textit{free space} $Free$ gives us \textit{Accessible space} ($Accessible$).
     \begin{equation}
         Accessible = Exterior(object) \cap Free(object)
     \end{equation}
