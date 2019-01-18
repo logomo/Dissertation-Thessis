@@ -69,7 +69,7 @@
 \contentsline {paragraph}{Dynamic Airspace Management:}{27}{section*.70}
 \contentsline {subsection}{\numberline {2.4.2} Airborne Collision Avoidance System X}{28}{subsection.2.4.2}
 \contentsline {paragraph}{Overview:}{28}{section*.72}
-\contentsline {paragraph}{AcAS-X variants:}{28}{section*.73}
+\contentsline {paragraph}{ACAS-X variants:}{28}{section*.73}
 \contentsline {paragraph}{ACAS-X Concept:}{29}{section*.74}
 \contentsline {paragraph}{Advisories:}{30}{section*.76}
 \contentsline {paragraph}{Example Overview of the Incident:}{30}{section*.77}
@@ -90,13 +90,13 @@
 \contentsline {paragraph}{Class VII.:}{38}{section*.91}
 \contentsline {subsection}{\numberline {2.5.1} U-Space}{39}{subsection.2.5.1}
 \contentsline {paragraph}{Small UAS Classification:}{39}{section*.92}
-\contentsline {paragraph}{Separation Minima:}{40}{section*.94}
-\contentsline {paragraph}{Flight Rules:}{41}{section*.96}
-\contentsline {paragraph}{Geo-fencing Modes:}{43}{section*.98}
+\contentsline {paragraph}{Separation Minima:}{41}{section*.94}
+\contentsline {paragraph}{Flight Rules:}{42}{section*.96}
+\contentsline {paragraph}{Geo-fencing Modes:}{44}{section*.98}
 \contentsline {paragraph}{Actively maintaining separation during flight:}{45}{section*.100}
 \contentsline {subsection}{\numberline {2.5.2} NASA UTM}{45}{subsection.2.5.2}
 \contentsline {paragraph}{Useful concepts:}{45}{section*.101}
-\contentsline {section}{\numberline {2.6} Event Based Avoidance}{45}{section.2.6}
+\contentsline {section}{\numberline {2.6} Event-Based Avoidance}{45}{section.2.6}
 \contentsline {paragraph}{Avoidance Urgency:}{45}{section*.102}
 \contentsline {paragraph}{Notification Event Resolution:}{46}{section*.103}
 \contentsline {paragraph}{Threat Hierarchy:}{47}{section*.104}
