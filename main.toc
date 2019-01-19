@@ -1,6 +1,6 @@
 \babel@toc {english}{}
-\contentsline {paragraph}{This thesis was developed under:}{iv}{section*.3}
-\contentsline {paragraph}{This project has received funding from:}{iv}{section*.4}
+\contentsline {paragraph}{This thesis was developed under}{iv}{section*.3}
+\contentsline {paragraph}{This project has received funding from}{iv}{section*.4}
 \contentsline {paragraph}{Acknowledgements:}{iv}{section*.5}
 \contentsline {chapter}{\numberline {1} Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1} Motivation}{1}{section.1.1}
