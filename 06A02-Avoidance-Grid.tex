@@ -3,36 +3,64 @@
 
 \paragraph{Operation Space:} The \emph{Operation Space} is a space where UAS can effectively surveillance its surroundings.
 
-The\emph{Discrete Situation Evaluation} is bounded to\emph{UAS} specific\emph{position} and\emph{orientation} in fixed\emph{time} $t_i$. To enable\emph{deterministic evaluation} the\emph{operation space} needs to be segmented into\emph{finite set} of space portions. The\emph{finite operation space segmentation} is usually done by\emph{Grid} segmentation, which distributes space into portions with solid boundary.
+\paragraph{Motivation for Discretization:} The UAS surroundings needs to be represented in \emph{avoidance-friendly manner}, following principles matters:
 
-The \emph{Main Sensor} is \emph{LiDAR} (problems \ref{eq:basicProblemDefinition}.-\ref{pro:rulesOfTheAir}.). The \emph{effective occupancy computation} \cite{homm2010efficient} is given by clustering \emph{LiDAR} field of vision into \emph{polar coordinates grid}.
+\begin{enumerate}
+	\item \emph{Discrete representation} - the space around UAS should be segmented into finite and exclusive portions which are considered as one point of the grid. This enables fast situation assessment. 
+	
+	\item \emph{Threat proximity} - threat in any form is getting more important with decreasing distance to UAS.
+	
+	\item \emph{LiDAR swipe density} - one LiDAR swipe scans a lot of points, the grid need to be customized to swipe characteristics.
+\end{enumerate}
 
-The \emph{point} scanned by \emph{LiDAR}, where \emph{UAS position} is center of \emph{local coordinate frame} and \emph{UAS heading is defining the main axes} is given as:
 
-\begin{equation*}
-    point = [distance,horizontal^\circ,vertical^\circ].
-\end{equation*}
+The \emph{Main Sensor} is \emph{LiDAR} (problems \ref{eq:basicProblemDefinition}.-\ref{pro:rulesOfTheAir}).  The \emph{effective occupancy computation} needs to be done for all problems; the inspiration is taken from \cite{homm2010efficient}.  The \emph{effective occupancy computation} is done in \emph{LiDAR} scan  clustered into \emph{polar coordinates grid}. The\emph{operation space} is going to be segmented into \emph{grid} where \emph{space portions} are represented as points in the grid.
 
 \begin{note}
-    For polar/euclidean transformations and local/global coordinate frames refer to background theory (sec. \ref{sec:complementsOfAlgebra}). 
-    
-    The \emph{right side} of UAS $horizontal^\circ$ $]-\pi,0[$, the \emph{left side} of UAS $horizontal^\circ$ $\in$ $[0,\pi]$, the \emph{down side} of UAS $vertical^\circ$ $]-\pi,0[$, the \emph{top side} of UAS $vertical^\circ$ $\in$ $[0,\pi]$
+	Each member of the grid is a cell, represented as a point with shared properties, like threat level, visibility.
 \end{note}
 
-\paragraph{LiDAR Reading Space Segmentation:} The \emph{polar space} can be separated into cells, which bounds the portion the space, similar to \emph{euclidean} space grid. The \emph{reason} for this segmentation is \emph{LiDAR} reading density\footnote{Example rotary LiDAR Velodyne VL-16 specs: \url{https://www.cadden.fr/wp-content/uploads/2017/02/Velodyne_VLP-16-Puck.pdf}}. The \emph{polar space portions} state can be assessed directly, the \emph{polar $\to$ euclidean} coordinate frame transformation is not time-effective. The \emph{polar space} assessment of \emph{Lidar Data} has minimal complexity and it is cost effective. \cite{gupta2010comparative}.
+The \emph{Discrete Situation Evaluation} is executed for \emph{UAS} local coordinate frame in fixed \emph{time}.  The goal is to enable \emph{fast situation assessment}. 
 
-\begin{definition}{Space partition - cell}\label{def:cell}
-    The \emph{cell} is a portion of space in UAS local polar coordinate frame, given by:
+
+\paragraph{LiDAR Swipe:} The \emph{point} scanned by \emph{LiDAR}, where \emph{UAS position} is center of \emph{local coordinate frame} and \emph{UAS heading is defining the main axes} is given as:
+
+\begin{equation}\label{eq:LiDARPoint}
+    point = [distance,horizontal^\circ,vertical^\circ].
+\end{equation}
+
+\begin{note}
+    For polar/euclidean transformations and local/global coordinate frames refer to background theory (app. \ref{sec:complementsOfAlgebra}). 
+    
+    The \emph{right side} of UAS $horizontal^\circ$ $\in$ $]-\pi,0[$, the \emph{left side} of UAS $horizontal^\circ$ $\in$ $[0,\pi]$, the \emph{down side} of UAS $vertical^\circ$ $\in$ $]-\pi,0[$, the \emph{top side} of UAS $vertical^\circ$ $\in$ $[0,\pi]$
+\end{note}
+
+\paragraph{LiDAR Swipe Portioning:} The \emph{polar coordinate space} can be portioned into distingtive cells, which contains the portion the space. This cell then represents one point in the grid.
+
+The \emph{reason} for this swipe portioning is \emph{LiDAR} scanning density\footnote{Example rotary LiDAR Velodyne VL-16 specs: \url{https://www.cadden.fr/wp-content/uploads/2017/02/Velodyne_VLP-16-Puck.pdf}}, which is extremly dense. The \emph{threat} state in the cell can be assessed with linear complexity. 
+
+The \emph{polar $\to$ euclidean} coordinate frame transformation is not amenable  for LiDAR swipe. The \emph{threath} assessment based on \emph{LiDAR swipe} in \emph{planar space portions}
+has minimal complexity and it is cost effective. \cite{gupta2010comparative}.
+
+
+\paragraph{Cell:} To discretize operational space into grid of points there is a need to define cell space, which will bound the portion of \emph{local planar coordinate frame}. The point (eq. \ref{eq:LiDARPoint}) is defined by distance, horizontal$^\circ$ offset angle, and vertical$^\circ$ offset angle. The cell is a closed compact set of such points. There is a need to define boundaries like follow: 
+
+\begin{definition}{Cell}\label{def:cell}
+	
+    The \emph{cell} bounds a portion of space in UAS local polar coordinate frame, defined by boundary ranges:
     \begin{enumerate}
-        \item \emph{Distance Range} -  bounded by $distance_{start}$ $<$ $distance_{end}$ $in$ $\R^+$.
-        \item \emph{Horizontal Range} - bounded by $horizontal^\circ_{start}$ $<$ $horizontal^\circ_{start}$ $\in$ $]-\pi,\pi]$.
-        \item \emph{Vertical Range} - bounded by $vertical^\circ_{start}$ $<$ $vertical^\circ_{start}$ $\in$ $]-\pi,\pi]$.
+        
+        \item \emph{Distance Range} -  starts and ends: $distance_{start}$ $<$ $distance_{end}$ $in$ $\R^+$.
+        
+        \item \emph{Horizontal Range} - starts and ends: $horizontal^\circ_{start}$ $<$ $horizontal^\circ_{end}$ $\in$ $]-\pi,\pi]$.
+        
+        \item \emph{Vertical Range} - starts and ends: by $vertical^\circ_{start}$ $<$ $vertical^\circ_{start}$ $\in$ $]-\pi,\pi]$.
     \end{enumerate}
     
-    \newpage\noindent The \emph{bounded space} for \emph{cell} is defined as:
+    \noindent The \emph{bounded space} of \emph{cell} is given by function as:
     
     \begin{multline}\label{eq:boundedSpaceCell}
-        Bounded Space(cell)=\dots\\
+        cell.space Portion\dots\\
             \left \{
                 \begin{aligned}
                 point& \in \R^3 \text{ where}:\\
@@ -45,62 +73,66 @@ The \emph{point} scanned by \emph{LiDAR}, where \emph{UAS position} is center of
             \right\}
     \end{multline}
     
-    \noindent For one \emph{LiDAR Scan} the \emph{hits set} is given as \emph{set} of \emph{all points} which lands in bounded cell space:
+    \noindent For one \emph{LiDAR Scan} the \emph{hits set} is given as \emph{set} of \emph{all points} which lands into cell space portion:
     \begin{equation}\label{eq:LidarHitsCell}
-        Lidar Hits (cell) = \left\{point \in Lidar Scan:  point \in Bounded Space(cell)\right\}    
+        cell. LiDAR Hits = \left\{point \in Lidar Scan:  point \in cell. space Portion\right\}    
     \end{equation}
     
-    \noindent The \emph{passing hits} for cell are hits which are going through the cell (passing), but it lands in distance greater than $cell.distance_{end}$, defined as:
-    \begin{multline}\label{eq:passingHitsCell}
-        Passing Hits(cell)=
-        \dots\\
-            \left \{
-                \begin{aligned}
-                point& \in Lidar Scan \text{ where}:\\
-                    &\left(\begin{aligned}
-                        cell.distance_{end}&<& point.distance &&,\\
-                        cell.horizontal^\circ_{start} &<& point.horizontal^\circ &\le&  cell.horizontal^\circ_{end},\\
-                        cell.vertical^\circ_{start} &<& point.vertical^\circ &\le& cell.vertical^\circ_{end}\\
-                    \end{aligned}\right)
-                \end{aligned}
-            \right\}
-    \end{multline}
+    %\noindent The \emph{passing hits} for cell are hits which are going through the cell (passing), but it lands in distance greater than $cell.distance_{end}$, defined as:
+%    \begin{multline}\label{eq:passingHitsCell}
+%        Passing Hits(cell)=
+%        \dots\\
+%            \left \{
+%                \begin{aligned}
+%                point& \in Lidar Scan \text{ where}:\\
+%                    &\left(\begin{aligned}
+%                        cell.distance_{end}&<& point.distance &&,\\
+%                        cell.horizontal^\circ_{start} &<& point.horizontal^\circ &\le&  %cell.horizontal^\circ_{end},\\
+%                        cell.vertical^\circ_{start} &<& point.vertical^\circ &\le& %cell.vertical^\circ_{end}\\
+%                    \end{aligned}\right)
+%                \end{aligned}
+%            \right\}
+%    \end{multline}
 \end{definition}
 
 \begin{note}
-    The \emph{cells} with same \emph{distance} range form \emph{layers}. The \emph{greater} the distance from \emph{coordinate frame} origin the \emph{greater} volume of the cell.     
+    The \emph{cell} space portion volume is increasing with distance. This satisfy the requirement for threat-distance importance.  The cell is considered as a point of grid with common properties abstraction valid for all cell space portion.    
 \end{note}
 
-\paragraph{Effective Operation Space - Avoidance Grid:} Let start with example, the UAS  (fig. \ref{fig:LidarSpaceSegmentation}). 
-
-
-
-The \emph{full LiDAR Swipe} (cyan and red lines) of \emph{UAS} (blue plane) has \emph{shape} of conical cylinder. Under \emph{ideal circumstances} the \emph{LiDAR swipe} would have \emph{ball shape}, but in real cases the \emph{craft body portion} where \emph{LiDAR} is mounted is unused.
-
-The \emph{frontal portion} (red line) is a set of cells where \emph{UAS} can make maneuver. The \emph{red portion} size is determined by \cite{zaiane2002clustering}:
+\paragraph{Effective Operation Space:} The goal is to determine which of the operation space is going to be considered in our avoidance grid.  The effective operation space determination according to \cite{zaiane2002clustering} is influenced by the following factors:
 
 \begin{enumerate}
-        \item \emph{Sensors ranges} - the union of \emph{effective sensor ranges} defines the maximal \emph{effective space boundary}, because there is no reason to asses situation over effective \emph{sensor range}.
+        \item \emph{Sensors ranges} -  there is no reason to assess situation over effective \emph{sensor range}.
         
         \item \emph{Information sources} impact - there is no real impact on \emph{effective space boundary}.
         
-        \item \emph{UAS maneuverability} - the \emph{Reach Set} (sec. \ref{s:ReachSets}) gives optimal \emph{effective space boundary}, because there is no need to assess the situation out of \emph{reachable space} or its vicinity. 
+        \item \emph{UAS maneuverability} - the space where UAS can maneuver, bounded by space-time (reach set boundary). 
         
-        \item Computation power - the \emph{Reach Set Evaluation} and \emph{Intersection} algorithms are \emph{scaling} with \emph{effective space boundary}.
+        \item \emph{Computation power} - the situation evaluation and threat assessment capabilities of onboard computer.
         
-        \item Airworthiness requirements - the \emph{regulations} can impose some minimal requirements on \emph{effective space boundary}.
+        \item \emph{Airworthiness requirements} - the \emph{regulations} can impose some minimal requirements on \emph{effective operation space boundary}.
 \end{enumerate}
+
+Let show an example of \emph{effective operation space} for the UAS  (fig. \ref{fig:LidarSpaceSegmentation}).  The \emph{full LiDAR Swipe} (cyan and red lines) of \emph{UAS} (blue plane) has \emph{shape} of conical cylinder. 
+
+\begin{note}
+Under \emph{ideal circumstances} the \emph{LiDAR swipe} would have \emph{ball shape}, but in real cases the \emph{craft body portion} where \emph{LiDAR} is mounted is unused.
+\end{note}
+
+The \emph{frontal portion} (red line) is a set of cells where \emph{UAS} can make maneuvers. According to the \emph{previous conditions}, there is no reason to consider space portion out of the maneuverable area. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.80\linewidth]{\FIGDIR/TE046LiDARRasterRange} 
-    \caption{Example: The \emph{LiDAR} reading segmentation - cells.}
+    \caption{Example: The \emph{LiDAR} reading portioning - cells.}
     \label{fig:LidarSpaceSegmentation}
 \end{figure}
 
-\begin{definition}{Avoidance Grid}\label{def:AvoidanceGrid} The \emph{effective space boundary} (fig. \ref{fig:LidarSpaceSegmentation} red lines) given by a portion of space in UAS local polar coordinate frame, bounded by:
+\paragraph{Avoidance Grid Definition:} The \emph{effective operation space} is going to be portioned into cells. The set of these cells is going to be called \emph{Avoidance Grid}. The idea is to split operational space into cells with even distance, horizontal angle, and vertical angle ranges. 
+
+\begin{definition}{Avoidance Grid}\label{def:AvoidanceGrid} The \emph{effective space portion} (fig. \ref{fig:LidarSpaceSegmentation} red lines) given by a portion of space in UAS local polar coordinate frame, bounded by:
     \begin{enumerate}
-        \item \emph{Distance Range} -  bounded by $distance_{start}$ $<$ $distance_{end}$ $in$ $\R^+$.
+        \item \emph{Distance Range} -  start-end: $distance_{start}$ $<$ $distance_{end}$ $in$ $\R^+$.
         \item \emph{Horizontal Range} - bounded by $horizontal^\circ_{start}$ $<$ $horizontal^\circ_{start}$ $\in$ $]-\pi,\pi]$.
         \item \emph{Vertical Range} - bounded by $vertical^\circ_{start}$ $<$ $vertical^\circ_{start}$ $\in$ $]-\pi,\pi]$.
     \end{enumerate}
@@ -113,7 +145,7 @@ The \emph{frontal portion} (red line) is a set of cells where \emph{UAS} can mak
     \end{aligned};\quad i\in 1\dots I
 \end{equation}
 
-\newpage\noindent Layer horizontal/vertical separations separations defined by horizontal/vertically cell count:
+\noindent Layer horizontal/vertical separations separations defined by horizontal/vertically cell count:
 
 \begin{equation}\label{eq:avoidanceGridCellHorizontalRange}
     \begin{aligned}
