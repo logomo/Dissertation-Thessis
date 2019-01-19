@@ -54,7 +54,7 @@ has minimal complexity and it is cost effective. \cite{gupta2010comparative}.
         
         \item \emph{Horizontal Range} - starts and ends: $horizontal^\circ_{start}$ $<$ $horizontal^\circ_{end}$ $\in$ $]-\pi,\pi]$.
         
-        \item \emph{Vertical Range} - starts and ends: by $vertical^\circ_{start}$ $<$ $vertical^\circ_{start}$ $\in$ $]-\pi,\pi]$.
+        \item \emph{Vertical Range} - starts and ends: by $vertical^\circ_{start}$ $<$ $vertical^\circ_{end}$ $\in$ $]-\pi,\pi]$.
     \end{enumerate}
     
     \noindent The \emph{bounded space} of \emph{cell} is given by function as:
@@ -130,126 +130,84 @@ The \emph{frontal portion} (red line) is a set of cells where \emph{UAS} can mak
 
 \paragraph{Avoidance Grid Definition:} The \emph{effective operation space} is going to be portioned into cells. The set of these cells is going to be called \emph{Avoidance Grid}. The idea is to split operational space into cells with even distance, horizontal angle, and vertical angle ranges. 
 
-\begin{definition}{Avoidance Grid}\label{def:AvoidanceGrid} The \emph{effective space portion} (fig. \ref{fig:LidarSpaceSegmentation} red lines) given by a portion of space in UAS local polar coordinate frame, bounded by:
+\begin{definition}{Avoidance Grid}\label{def:AvoidanceGrid} \\The \emph{effective space portion} (fig. \ref{fig:LidarSpaceSegmentation} red lines) given by a portion of space in UAS local polar coordinate frame, bounded by:
     \begin{enumerate}
-        \item \emph{Distance Range} -  start-end: $distance_{start}$ $<$ $distance_{end}$ $in$ $\R^+$.
-        \item \emph{Horizontal Range} - bounded by $horizontal^\circ_{start}$ $<$ $horizontal^\circ_{start}$ $\in$ $]-\pi,\pi]$.
-        \item \emph{Vertical Range} - bounded by $vertical^\circ_{start}$ $<$ $vertical^\circ_{start}$ $\in$ $]-\pi,\pi]$.
+        \item \emph{Distance Range} -  in range $distance_{start}$ $<$ $distance_{end}$ $in$ $\R^+$.
+        \item \emph{Horizontal Range} - in range by $horizontal^\circ_{start}$ $<$ $horizontal^\circ_{end}$ $\in$ $]-\pi,\pi]$.
+        \item \emph{Vertical Range} -in range $vertical^\circ_{start}$ $<$ $vertical^\circ_{end}$ $\in$ $]-\pi,\pi]$.
     \end{enumerate}
 
-\noindent Separated into \emph{layers} depending on the distance and \emph{layer count}:
+\noindent The goal is to separate the \emph{effective operation space} into cells (def. \ref{def:cell}). The idea is to split distance range into multiple distinctive distance ranges with count $layerCount \in \N^+$.  The ranges for \emph{distance layers} are given as follow:
 \begin{equation}\label{eq:avoidanceGridCellDistanceRange}
     \begin{aligned}
         layer^i_{start} & = (i-1)\times\frac{distance_{end}-distance_{start}}{layer Count}\\
         layer^i_{end} & = i\times\frac{distance_{end}-distance_{start}}{layer Count}
-    \end{aligned};\quad i\in 1\dots I
+    \end{aligned};\quad i\in 1\dots layer Count
 \end{equation}
 
-\noindent Layer horizontal/vertical separations separations defined by horizontal/vertically cell count:
+\noindent The same separation Layer horizontal/vertical separations separations defined by $horizontal Count \in \N^+$/$vertical Count \in \N^+$:
 
 \begin{equation}\label{eq:avoidanceGridCellHorizontalRange}
     \begin{aligned}
         horizontal^j_{start} & = (j-1)\times\frac{horizontal^\circ_{end}-horizontal^\circ_{start}}{horizontal Count}\\
         horizontal^j_{end} & = j\times\frac{horizontal^\circ_{end}-horizontal^\circ_{start}}{horizontal Count}
-    \end{aligned};\quad j\in 1\dots J
+    \end{aligned};\quad j\in 1\dots horizontal Count
 \end{equation}
+
 
 \begin{equation}\label{eq:avoidanceGridCellVerticalRange}
     \begin{aligned}
         vertical^k_{start} & = (k-1)\times\frac{vertical^\circ_{end}-vertical^\circ_{start}}{vertical Count}\\
         vertical^k_{end} & = k\times\frac{vertical^\circ_{end}-vertical^\circ_{start}}{vertical Count}
-    \end{aligned};\quad k\in 1\dots K
+    \end{aligned};\quad k\in 1\dots vertical Count
 \end{equation}
 
-\noindent Then $cell_{i,j,k}$ given by (def. \ref{def:cell}) is member cell of Avoidance Grid for boundaries:
+
+\noindent Then $cell_{i,j,k}$ space portion by (def. \ref{def:cell}) has following ranges:
 \begin{enumerate}
     \item \emph{Cell Distance Range} (eq. \ref{eq:avoidanceGridCellDistanceRange}) depending on layer index $i$.
     
-    \item \emph{Cell Horizontal Range} (eq. \ref{eq:avoidanceGridCellHorizontalRange}) depending on horizontal index $j$.
+    \item \emph{Cell Horizontal Angle Range} (eq. \ref{eq:avoidanceGridCellHorizontalRange}) depending on horizontal angle index $j$.
     
-    \item \emph{Cell Vertical Range} (eq. \ref{eq:avoidanceGridCellVerticalRange}) depending on horizontal index $k$.
+    \item \emph{Cell Vertical Angle Range} (eq. \ref{eq:avoidanceGridCellVerticalRange}) depending on vertical index $k$.
 \end{enumerate}
 
-\noindent The example of \emph{Avoidance Grid Cells} is given in (fig. \ref{fig:LidarSpaceSegmentation} red boundary). 
+\begin{note}
+	The example of \emph{Avoidance Grid Cells} is given in (fig. \ref{fig:LidarSpaceSegmentation} red boundary).
+\end{note} 
 
-The \emph{Avoidance Grid} is then given as set of cells:
+The \emph{Avoidance Grid} is the set of cells:
 
 \begin{equation}\label{eq:avoidanceGridCellSpace}
-    Avoidance Grid = \bigcup cell_{i,j,k} \forall i \in 1\dots I, j\in 1\dots J, k\in 1\dots K
+    Avoidance Grid = \left\{
+    					cell_{i,j,k}:
+    					\begin{aligned}
+    						& i \in 1 \dots layer Count\\
+    						& j \in 1 \dots horizontal Count\\
+    						& k \in 1 \dots vertical Count
+    					\end{aligned} 
+                     \right\}
 \end{equation}
+
+\begin{note}
+	For any distinctive cells $cell_{i,j,k}$, $cell_{m,n,o}$ their \emph{space portion intersection} is empty set:
+	\begin{equation}
+		\forall cell_{i,j,k}, cell_{m,n,o}:
+		\begin{aligned}
+		    &cell_{i,j,k}\cap cell_{m,n,o} = \varnothing,
+		    i \neq o \lor j \neq n \lor k \neq o
+		\end{aligned}
+	\end{equation}
+\end{note}
 \end{definition}
 
-\paragraph{Trajectory Intersection:} The \emph{trajectory} intersection with \emph{Avoidance Grid} is solved in context of \emph{Reach Set Approximation} (def. \ref{def:ContainedReducedReachSet}). 
-\begin{note}
-    The \emph{trajectory intersection} function does not have an impact on \emph{Reach Set Approximation}, because its done prior the flight.
-\end{note}
+%\paragraph{Trajectory Intersection:} The \emph{trajectory} intersection with \emph{Avoidance Grid} is solved in context of \emph{Reach Set Approximation} (def. \ref{def:ContainedReducedReachSet}). 
+%\begin{note}
+%    The \emph{trajectory intersection} function does not have an impact on \emph{Reach Set Approximation}, because its done prior the flight.
+%\end{note}
 
+\paragraph{Grid Sizing Approach:} The sizing approach used in this work is outlined in (app. \ref{app:gridSizeCalculation}).
 
-\paragraph{Grid Scaling:} For \emph{Sensor Field} there is \emph{effective sensor boundary} given as set:
-\begin{equation}
-    Boundary(Sensor \in Sensor Field) = \{points \in \R^3: \text{where reliable}\}
-\end{equation}
-
-\noindent The \emph{Boundary} for sensor fields is then given as \emph{union of all singe sensor boundaries}:
-
-\begin{equation}
-     Boundary(Sensor Field) = \bigcap_{\forall Sensors} Boundary(Sensor \in Sensor Field)
-\end{equation}
-
-\noindent Depending on boundary properties it can be projected into maximal avoidance grid boundary values:
-\begin{equation}
-    Boundary(Sensor Field) \to Avoidance Grid : 
-    \begin{gathered}
-        \max(distanceRange)\\
-        \max(horizontalRange)\\
-        \max(verticalRange)\\
-    \end{gathered}
-\end{equation}
-
-\noindent Our approach taken worst LiDAR performance into account \cite{sabatini2014lidar} and following parameters for avoidance grid were calculated:
-
-\begin{enumerate}
-    \item distance range $[0m,10m]$,
-    \item horizontal range $]-180^\circ,180^\circ]$,
-    \item vertical range $[-30^\circ,30^\circ]$.
-\end{enumerate}
-
-\noindent The \emph{count of layers} is derived from \emph{average distance traveled by one movement application}:
-
-\begin{equation}
-    layer Count = \frac{|distance Range|}{\text{avg.}\quad length(movement\in Movement Set)}
-\end{equation}
-
-\noindent The \emph{layer length} is based on \emph{our movement set} (tab. \ref{tab:movements1}, \ref{tab:movements2}) the average movement length is 1 m, therefore the \emph{layer count} is 10.
-
-The \emph{efficient boundary} is given by  \emph{Reach Set}. Estimate reach set coverage space using \emph{ellipsoidal toolbox} \cite{kurzhanskiy2006ellipsoidal} up to given \emph{sensor field} maximal distance:
-
-\begin{equation}
-    Boundary(Reach Set) = Ellipsoid(UAS System,distance)
-\end{equation}
-
-The values for \emph{Reach Set Boundary} with distance 10 m was following:
-\begin{enumerate}
-    \item distance range $[0m,10m]$,
-    \item horizontal range $[-45^\circ,45^\circ]$,
-    \item vertical range $[-45^\circ,45^\circ]$,
-\end{enumerate}
-
-\noindent The \emph{Avoidance Grid} boundary is given as \emph{intersection} of all boundaries:
-
-\begin{equation}
-    Boundary(Avoidance Grid) =  Boundary(Reach Set) \cap Boundary(Sensor Field)
-\end{equation}
-
-\noindent The values for \emph{Avoidance Grid Boundary} for our UAS system (sec. \ref{s:UASNonlinearModel}) following:
-\begin{enumerate}
-    \item distance range $[0m,10m]$,
-    \item horizontal range $[-45^\circ,45^\circ]$,
-    \item vertical range $[-45^\circ,45^\circ]$,
-    \item layer count $10$, layer distance 1m.
-\end{enumerate}
-
-The \emph{horizontal cell count} and \emph{vertical cell count} was estimated by \emph{rule of thumb} to have value 7 and 5.
 
 \paragraph{Cell in Avoidance Grid Properties:}\noindent For each cell $\vec{p}\in\R^3$ in the there are properties to be checked:
 
