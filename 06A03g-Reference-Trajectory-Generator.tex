@@ -1,8 +1,8 @@
 \section{\secState{R}Reference Trajectory Generator}\label{s:referenceTrajectoryGenerator}
 
-\paragraph{Reference Trajectory Generator:} Segmented Movement Automaton (def.  \ref{def:segmentedMovementAutomaton}) with \emph{trajectory function} (eq. \ref{eq:ourTrajectoryImplementationSegmented}) is used as \emph{reference trajectory generator} for \emph{complex systems}. 
+\paragraph{Reference Trajectory Generator:} Segmented Movement Automaton (def.  \ref{def:segmentedMovementAutomaton}) with \emph{trajectory function} (eq. \ref{eq:ourTrajectoryImplementationSegmented}) is used as a \emph{reference trajectory generator} for \emph{complex systems}. 
 
-There is assumption that precise \emph{path tracking} implementation exist for such system which with \emph{thick reference trajectory} gives similar results to \emph{plain movement automaton control}.
+There is an assumption that precise \emph{path tracking} implementation exist for such system which with \emph{thick reference trajectory} gives similar results to \emph{plain movement automaton control}.
 
 The \emph{Reference trajectory} (eq. \ref{eq:generatedReferenceTrajectory}) for \emph{Planned} movement set is given as projection  of \emph{Trajectory} time series to position time series $[x,y,z,t]$:
 
@@ -17,7 +17,7 @@ The \emph{Reference trajectory} (eq. \ref{eq:generatedReferenceTrajectory}) for 
     \end{bmatrix}
 \end{equation}
 
-\paragraph{Predictor:} The \emph{Reference Trajectory Generator} (eq. \ref{eq:generatedReferenceTrajectory}) can be also used as predictor. 
+\paragraph{Predictor:} The \emph{Reference Trajectory Generator} (eq. \ref{eq:generatedReferenceTrajectory}) can also be used as a predictor. 
 
 \begin{note}
     The \emph{Segmented Movement Automaton} (def. \ref{def:segmentedMovementAutomaton}) is used in this work with one Segment equal to State space with input function given by (\ref{tab:movements1}, \ref{tab:movements2}). The predictor used in \emph{Reach set computation} is given by (eq. \ref{eq:generatedReferenceTrajectory}).

@@ -1,8 +1,8 @@
 \section{\secState{D}Specialization of Hybrid Automaton}\label{s:MovementAutomatonBuidlingBlocks}
 
-\paragraph{Idea:} There is  a need for \emph{fast trajectory approximation} method. The basic idea is taken from pilot steering an plane. The pilot is issued a commands from an navigator in very short and precise manner. The movement has its primitive phase when steering is static and its transition phase when steering is moving from one static position to another. 
+\paragraph{Idea:} There is  a need for \emph{fast trajectory approximation} method. The basic idea is taken from the pilot steering a plane. The pilot has issued commands from a navigator in a very short and precise manner. The movement has its primitive phase when steering is static, and its transition phase when steering is moving from one static position to another. 
 
-Imagine having vertical and horizontal flaps on airplane (fig. \ref{fig:movementsExample}). The \emph{navigator} is issuing a command every second to a pilot. Each command is translated by hands of the pilot to an input signal (blue line). The command validity period (black frame) is split into \emph{transition period} (red frame) when input signal is changing and primitive period (magenta frame) when the position of input signal is static.
+Imagine having vertical and horizontal flaps an on airplane (fig. \ref{fig:movementsExample}). The \emph{navigator} is issuing a command every second to a pilot. Hands of the pilot translate each command to an input signal (blue line). The command validity period (black frame) is split into \emph{transition period} (red frame) when the input signal is changing and primitive period (magenta frame) when the position of the input signal is static.
  
 \begin{figure}[H]
     \centering
@@ -12,14 +12,14 @@ Imagine having vertical and horizontal flaps on airplane (fig. \ref{fig:movement
 \end{figure}
 
 \begin{note}
-    The hybrid automaton (sec. \ref{s:HybridAutomaton}) can be used as the base for simple control mechanism imitating navigators command execution by pilot. The automaton states can be mapped to primitives and transitions. The reset map needs to be replaced with external order issuer to ensure smooth execution of commands.
+    The hybrid automaton (sec. \ref{s:HybridAutomaton}) can be used as the base for simple control mechanism imitating navigators command execution by the pilot. The automaton states can be mapped to primitives and transitions. The reset map needs to be replaced with external order issuer to ensure smooth execution of commands.
     
-    The future commands will be stacked in the buffer from which they will be picked for an execution.
+    The future commands will be stacked in the buffer from which they will be picked for execution.
 \end{note}
 
 
 
-    \begin{definition}{Movement Primitive:}\label{def:MovementPrimitive}\\\emph{States} from \emph{Hybrid automaton} can be taken as \emph{Movements} in \emph{Movement Automaton}. \emph{MovementPrimitive} (eq. \ref{eq:movementPrimitive}) is describing the \emph{Movement} behaviour as transfer function \emph{VectorField} enriched with parameters. 
+    \begin{definition}{Movement Primitive:}\label{def:MovementPrimitive}\\\emph{States} from \emph{Hybrid automaton} can be taken as \emph{Movements} in \emph{Movement Automaton}. \emph{MovementPrimitive} (eq. \ref{eq:movementPrimitive}) is describing the \emph{Movement} behavior as transfer function \emph{VectorField} enriched with parameters. 
 
     \begin{equation}\label{eq:movementPrimitive}
         \begin{aligned}
@@ -48,10 +48,10 @@ Imagine having vertical and horizontal flaps on airplane (fig. \ref{fig:movement
         \end{cases}
     \end{equation}
 
-    The \emph{example} given by (eq. \ref{eq:trajectoryExample}) is fairly primitive, but imagine UAS system given by nonlinear dynamics \cite{fossen2011mathematical}. Then defining transfer function for given command chain can be impossible.
+    The \emph{example} given by (eq. \ref{eq:trajectoryExample}) is fairly primitive, but imagine UAS system given by nonlinear dynamics \cite{fossen2011mathematical}. Then defining transfer function for a given command chain can be impossible.
 
     \begin{definition}{Movement Transition:}\label{def:movementTransition}\\
-        \emph{System state} can be different than intended movement application, the notion of \emph{Transition} is therefore introduced as stabilizing element in movement chaining (eq. \ref{eq:movementTransition}).
+        \emph{System state} can be different from intended movement application, the notion of \emph{Transition} is therefore introduced as stabilizing element in movement chaining (eq. \ref{eq:movementTransition}).
         \begin{equation}\label{eq:movementTransition}
             Transition:MovementPrimitive\times SystemState \to MovementPrimitive    
         \end{equation}
@@ -65,10 +65,10 @@ Imagine having vertical and horizontal flaps on airplane (fig. \ref{fig:movement
         Transition(Stay,Move), Move(7s,4m/s)
     \end{multline}.
 
-    \begin{note} There are two types of \emph{MovementPrimitives}:
+    \begin{note} There are two types of \emph{movement primitives}:
     \begin{enumerate}
-        \item \emph{Stationary} - when system state is considered neutral and they are considered as entry point for automaton.
-        \item \emph{Dynamic} - when the system state is considered evolving and they needs to be terminated with \emph{stationary} transition.
+        \item \emph{Stationary} - when the system state is considered neutral, and they are considered an entry point for automaton.
+        \item \emph{Dynamic} - when the system state is considered evolving, and they need to be terminated with a \emph{stationary} transition.
     \end{enumerate}
     \end{note}
 
@@ -107,10 +107,10 @@ Imagine having vertical and horizontal flaps on airplane (fig. \ref{fig:movement
             \right)
         \end{equation}
         
-        \emph{Chain function} connects multiple \emph{initial Transitions} which are appliead at \emph{initialState} at \emph{initialTime}. Then own \emph{MovementPrimitive} (eq. \ref{eq:movementPrimitive}) is invoked with \emph{transitionnsState}. \emph{Transitions state} is state changed by \emph{Initial Transitions}. After \emph{Movement Primitive} there can be \emph{Leave Transitions Movement}
+        \emph{Chain function} connects multiple \emph{initial Transitions} which are applied at \emph{initialState} at \emph{initialTime}. Then own \emph{MovementPrimitive} (eq. \ref{eq:movementPrimitive}) is invoked with \emph{transitionnsState}. \emph{Transitions state} is state changed by \emph{Initial Transitions}. After \emph{Movement Primitive} there can be \emph{Leave Transitions Movement}
     \end{definition}
 
-    \paragraph{Minimal Movement Time:} Given by (eq. \ref{eq:minimalMovementTime}) for \emph{movement} is given as sum of \emph{MovementPrimitive} (eq. \ref{eq:movementPrimitive}) minimal time, and \emph{Transition} (eq. \ref{eq:movementTransition}) in/out combined minimal time.
+    \paragraph{Minimal Movement Time:} Given by (eq. \ref{eq:minimalMovementTime}) for \emph{movement} is given as the sum of \emph{MovementPrimitive} (eq. \ref{eq:movementPrimitive}) minimal time, and \emph{Transition} (eq. \ref{eq:movementTransition}) in/out combined minimal time.
     
     \begin{equation}\label{eq:minimalMovementTime}
         minimalTime(Movement)=
@@ -119,7 +119,7 @@ Imagine having vertical and horizontal flaps on airplane (fig. \ref{fig:movement
         \end{aligned}
     \end{equation}
    
-    \paragraph{Movement Chaining:}\emph{Movements} can be \emph{chained} and applied to initial \emph{system state} to generate \emph{system trajectory}. Example of trajectory is given by (eq. \ref{eq:trajectoryExample}). Movements are reversibly obtained by participation such \emph{trajectory} into \emph{Movement primitives} and \emph{Transitions}. Then sample \emph{Trajectory} for $n\in \N^+$ movements looks like (eq. \ref{eq:movementChaining}).
+    \paragraph{Movement Chaining:}\emph{Movements} can be \emph{chained} and applied to initial \emph{system state} to generate \emph{system trajectory}. Example of the trajectory is given by (eq. \ref{eq:trajectoryExample}). Movements are reversibly obtained by participation such a \emph{trajectory} into \emph{Movement primitives} and \emph{Transitions}. Then sample \emph{Trajectory} for $n\in \N^+$ movements looks like (eq. \ref{eq:movementChaining}).
     \begin{equation}\label{eq:movementChaining}
         \begin{aligned}
         &Trajectory(t_0)=State(t_0)\\
@@ -131,10 +131,10 @@ Imagine having vertical and horizontal flaps on airplane (fig. \ref{fig:movement
         \end{aligned}
     \end{equation}
 
-    Given \emph{Trajectory} at time $t_0$ is given as initial \emph{State} of \emph{System}. For time interval $(t_0,t_1)$, which length is equal to $duration_1$, the \emph{State} is given by $Movement_1$ with $parameters_1$ and base time $t_0$. This behaviour continues for movements $2,\dots,n$. 
+    Given \emph{Trajectory} at time $t_0$ is given as the initial \emph{State} of \emph{System}. For time interval $(t_0,t_1)$, which length is equal to $duration_1$, the \emph{State} is given by $Movement_1$ with $parameters_1$ and base time $t_0$. This behavior continues for movements $2,\dots,n$. 
 
     \begin{definition}{Movement Buffer:}\label{def:MovementBuffer}\\
-        \noindent\emph{Movements} can be chained into \emph{Buffer} with assumption of \emph{continuous movement execution}. \emph{Continuous movement executions} each movement in chain (eq. \ref{eq:movementChaining}) is executed in time interval $\tau_i=(t_{i-1},t_{i}]$ where $i$ is movement order and $\forall$ $Movement_i$ starting time is $t_0$ or $t_{i-1}$ from previous movement. With given assumption \emph{Buffer} is given as (eq. \ref{eq:movementBuffer}) with parameters $t_{i-1},t_{i}$ omitted, due $t_0$ and $duration_i$ dependency.
+        \noindent\emph{Movements} can be chained into \emph{Buffer} with the assumption of \emph{continuous movement execution}. \emph{Continuous movement executions} each movement in the chain (eq. \ref{eq:movementChaining}) is executed in time interval $\tau_i=(t_{i-1},t_{i}]$ where $i$ is movement order and $\forall$ $Movement_i$ starting time is $t_0$ or $t_{i-1}$ from the previous movement. With given assumption \emph{Buffer} is given as (eq. \ref{eq:movementBuffer}) with parameters $t_{i-1},t_{i}$ omitted, due $t_0$ and $duration_i$ dependency.
         
         \begin{equation}\label{eq:movementBuffer}
             Buffer = \left\{Movement_i(duration_i,parameters_i)\right\}i\in\N^+
@@ -156,7 +156,7 @@ Imagine having vertical and horizontal flaps on airplane (fig. \ref{fig:movement
         \noindent The transformation from \emph{transfer function} (eq. \ref{eq:trajectoryExample}) to \emph{trajectory} (eq. \ref{eq:TrajectoryDefinition}) is natural, only set of \emph{Movement primitives} (eq. \ref{eq:movementPrimitive}) and set of \emph{Transitions} (eq. \ref{eq:movementTransition}) is required.
     \end{note}
 
-    \paragraph{State Projection:} \emph{Trajectory} (eq. \ref{eq:TrajectoryDefinition})is naturally evolution of space over time, then there exists \emph{StateProjection} function (eq. \ref{eq:stateprojection}) which returns \emph{State} for specific \emph{Time}.
+    \paragraph{State Projection:} \emph{Trajectory} (eq. \ref{eq:TrajectoryDefinition}) is natural evolution of space over time, then there exists \emph{StateProjection} function (eq. \ref{eq:stateprojection}) which returns \emph{State} for specific \emph{Time}.
     
     \begin{equation}\label{eq:stateprojection}
         StateProjection:Trajectory\times Time \to State(Time)
