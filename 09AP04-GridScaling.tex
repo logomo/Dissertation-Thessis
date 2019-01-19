@@ -1,6 +1,6 @@
 \chapter{Grid Size Calculation}\label{app:gridSizeCalculation}
 
-The grid size calculation is done by hand. The following approach has been used in our work. 
+\noindent The grid size calculation is done by hand. The following approach has been used in our work. 
 
 For \emph{Sensor Field} there is \emph{effective sensor boundary} given as set:
 \begin{equation}
@@ -37,9 +37,9 @@ For \emph{Sensor Field} there is \emph{effective sensor boundary} given as set:
     layer Count = \frac{|distance Range|}{\text{avg.}\quad length(movement\in Movement Set)}
 \end{equation}
 
-\noindent The \emph{layer length} is based on \emph{our movement set} (tab. \ref{tab:movements1}, \ref{tab:movements2}) the average movement length is 1 m, therefore the \emph{layer count} is 10.
+\noindent The \emph{layer length} is based on \emph{our movement set} (tab. \ref{tab:movements1}, \ref{tab:movements2}) the average movement length is 1 m; therefore the \emph{layer count} is 10.
 
-The \emph{efficient boundary} is given by  \emph{Reach Set}. Estimate reach set coverage space using \emph{ellipsoidal toolbox} \cite{kurzhanskiy2006ellipsoidal} up to given \emph{sensor field} maximal distance:
+\noindent The \emph{efficient boundary} is given by  \emph{Reach Set}. Estimate reach set coverage space using \emph{ellipsoidal toolbox} \cite{kurzhanskiy2006ellipsoidal} up to given \emph{sensor field} maximal distance:
 
 \begin{equation}
     Boundary(Reach Set) = Ellipsoid(UAS System,distance)
@@ -66,5 +66,5 @@ The values for \emph{Reach Set Boundary} with distance 10 m was following:
     \item layer count $10$, layer distance 1m.
 \end{enumerate}
 
-The \emph{horizontal cell count} and \emph{vertical cell count} was estimated by \emph{rule of thumb} to have value 7 and 5.
+The \emph{horizontal cell count} and \emph{vertical cell count} was estimated by the  \emph{rule of thumb} to have value 7 and 5.
 
