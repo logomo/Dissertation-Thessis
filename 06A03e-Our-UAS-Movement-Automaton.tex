@@ -2,11 +2,8 @@
 
 \paragraph{Motivation:} An \emph{UAS Nonlinear Model} (eq. \ref{eq:UASNonlinearModelSimple}) can be modeled by \emph{Movement Automaton} (def. \ref{def:movementAutomaton}). 
 
-\paragraph{Movement Primitives} by (def. \ref{def:MovementPrimitive})  are given as (eq. \ref{eq:movementPrimitive}). To define primitives the \emph{minimal time} is $1 s$. The \emph{maximal duration} is also $1s$.
-
-\begin{note}
-	Each movement primitive will last for fixed duration $1s$.
-\end{note} 
+\paragraph{Movement Primitives} by (def. \ref{def:MovementPrimitive})  are given as (eq. \ref{eq:movementPrimitive}). Each movement primitive will last for fixed duration $1s$.
+ 
 
 \begin{assumption}\label{ass:transitionTime}
     Let assume that \emph{transition time} of \emph{roll, pitch, yaw, linear velocity} is $0 s$.
@@ -26,7 +23,7 @@ Under the assumption (as. \ref{ass:transitionTime}) the \emph{movement transitio
 
 \paragraph{Movement Set} for discrete model (eq. \ref{eq:uasLinearDiscreteModel}) is defined as set of unitary movements on main axes (tab. \ref{tab:movements1}) and diagonal axes (tab. \ref{tab:movements2}). 
 
-The maneuvering capability of several commercial small fixed wing UAS were merged together. The turning rate on horizontal/vertical is defined as $15^\circ$.
+The maneuvering capability of several commercial small fixed wing UAS were abstracted together. The turning rate on horizontal/vertical is defined as $15^\circ$.
 
 The deltas are posed in \emph{UAS body-fixed coordinate frame} (ap. \ref{sec:complementsOfAlgebra}) for discrete time $k$. 
 
@@ -132,7 +129,7 @@ The discrete trajectory (eq. \ref{eq:ourTrajectoryEvolution}) is ordered set of 
     \end{aligned}
 \end{equation}
 
-\noindent The $apply Movement$ (eq. \ref{eq:uasLinearDiscreteModel}) is concatenation function for discrete UAS model. The input$(k)$ vector is selected from movement tables (tab. \ref{tab:movements1}, \ref{tab:movements2}).
+\noindent The movement$(k)$ vector is selected from movement tables (tab. \ref{tab:movements1}, \ref{tab:movements2}).
 
 \begin{note}
 	Parameter movement($\cdot$) (eq. \ref{eq:ourTrajectoryEvolution}) is movement order index in buffer (eq. \ref{eq:ourBuffer}).
