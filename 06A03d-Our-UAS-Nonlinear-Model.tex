@@ -1,21 +1,20 @@
-\subsection{\secState{R}Used UAS Nonlinear Model}\label{s:UASNonlinearModel}
-\paragraph{Motivation:} Simplified rigid body kinematic model will be used. This model have decoupled roll, yaw and pitch angles. The focus is on \emph{reach set approximation methods}, therefore \emph{UAS model} is simplified.
+\subsection{\secState{R}UAS Model}\label{s:UASNonlinearModel}
+\paragraph{Motivation:} Simplified rigid body kinematic model will be used. This model has decoupled roll, yaw and pitch angles. The focus is on \emph{reach set approximation methods}; therefore the \emph{UAS model} is simplified.
 
-\paragraph{State Vector} (eq. \ref{eq:simple3dStatevector}) defined as positional state in euclidean position in right-hand euclidean space, where \emph{x, y, z} can be abstracted as latitude, longitude, altitude.
+\paragraph{State Vector} (eq. \ref{eq:simple3dStatevector}) defined as a positional state in euclidean position in right-hand euclidean space, where \emph{x, y, z} can be abstracted as latitude, longitude, altitude.
 \begin{equation}\label{eq:simple3dStatevector}
     state = \left [ x,y,z, roll, pitch, yaw \right]^T
 \end{equation}
 
 
-\newpage 
-\paragraph{Input Vector} (eq. \ref{eq:simple3dInputVector}) is defined as linear velocity of UAS $v$ and angular speed of rigid body $\omega_{roll}, \omega_{pitch},\omega_{yaw}$.
+\paragraph{Input Vector} (eq. \ref{eq:simple3dInputVector}) is defined as the linear velocity of UAS $v$ and angular speed of rigid body $\omega_{roll}, \omega_{pitch},\omega_{yaw}$.
 
 \begin{equation}\label{eq:simple3dInputVector}
     input = \left [ v, \omega_{roll}, \omega_{pitch},\omega_{yaw}\right ]^T
 \end{equation}
 
 
-\noindent Velocity vector function (eq. \ref{eq:simple3dvelocityDistribution})  is is defined through standard rotation matrix  and linear velocity $v$, oriented velocity [$v_x$, $v_y$, $v_z$] given by (eq. \ref{eq:UASNonlinearModelSimple}).
+\noindent Velocity vector function (eq. \ref{eq:simple3dvelocityDistribution}) is defined through the standard rotation matrix  and linear velocity $v$, oriented velocity [$v_x$, $v_y$, $v_z$] given by (eq. \ref{eq:UASNonlinearModelSimple}).
 
 \begin{equation}\label{eq:simple3dvelocityDistribution}
     \begin{bmatrix}
@@ -44,5 +43,53 @@
         \frac{\text{d} pitch}{\text{d} time} &= \omega_{pitch};\\
         \frac{\text{d} yaw}{\text{d} time} &= \omega_{yaw};\\
     \end{aligned}
+\end{equation}
+
+\paragraph{Discretization} for \emph{fixed step} $k$ we start with discretization of the model:
+
+\noindent The \emph{linear velocity} in text step is given:
+\begin{equation}\label{eq:applyMovement}
+    v(k+1) = v(k) +\delta v(k)
+\end{equation}
+
+\noindent The \emph{roll, pitch, yaw} for next step are given 
+
+\begin{equation}\label{eq:applyMovement1}
+    \begin{aligned}
+        roll(k+1)  &= roll(k) + \delta roll(k)\\
+        pitch(k+1) & = pitch(k) + \delta pitch(k)\\
+        yaw(k+1) & = yaw(k) + \delta yaw(k)\\
+    \end{aligned}    
+\end{equation}
+
+\noindent The $\delta v(k)$ is \emph{velocity change}, $\delta roll(k)$, $\delta pitch(k)$, $\delta yaw(k)$, are \emph{orientation changes} for current discrete step $k$. If the duration of \emph{transition} is $0 s$ (as. \ref{ass:transitionTime}) then 3D trajectory evolution in discrete time is given as: 
+
+\begin{equation}\label{eq:applyMovement2}
+    \begin{aligned}
+        x(k+1)&= x(k) + v(k+1) \cos(pitch(k+1)) \cos(yaw(k+1)) & = \delta x(k)\\
+        y(k+1)&= y(k) + v(k+1) \cos(pitch(k+1)) \sin(yaw(k+1)) & = \delta y(k)\\
+        z(k+1)&= z(k) - v(k+1) \sin(pitch(k+1))                & = \delta z(k)\\
+        time(k+1)& = time(k)+1                                & = \delta time(k)
+    \end{aligned}    
+\end{equation}
+
+\noindent The $\delta x(k)$, $\delta y(k)$, $\delta z(k)$ are positional differences depending on \emph{input vector} for given discrete time $k$:
+\begin{equation}\label{eq:ourImput}
+    input(k) = \left[
+                    \begin{gathered}
+                    \delta x(k), \delta y(k), \delta z(k), \delta v (k),\\
+                    \delta roll (k), \delta pitch(k), \delta yaw(k),\delta time (k)
+                    \end{gathered} 
+                \right]^T
+\end{equation}
+
+\noindent The \emph{state vector} for discrete time is given:
+\begin{equation}\label{eq:ourState}
+    state(k) = \left[
+                    \begin{gathered}
+                     x(k),  y(k),  z(k),  v (k),\\
+                     roll (k),  pitch(k),  yaw(k), time (k)
+                    \end{gathered} 
+                \right]^T
 \end{equation}
 

@@ -1,6 +1,6 @@
 \subsection{\secState{D}Emergency Converging}\label{s:testEmergencyConverging}
 
-\paragraph{Scenario:} Two \emph{UAS} are flying in an \emph{uncontrolled airspace} (altitude $\le$ 500 ft. Above the Ground Level) with missions defined in (tab. \ref{tab:missionSetupEmergencyConvergingScenario}). Both \emph{UAS} are in the \emph{Navigation mode} with active \emph{ADSB-In/Out}, receiving position notification from each other. Cruising altitude is sufficient for horizontal separation (50-100 ft. Above the Ground Level). \emph{Horizontal separation} is preferred separation type for both \emph{UAS}.
+\paragraph{Scenario:} Two \emph{UAS} are flying in  \emph{uncontrolled airspace} (altitude $\le$ 500 ft. Above the Ground Level) with missions defined in (tab. \ref{tab:missionSetupEmergencyConvergingScenario}). Both \emph{UAS} are in the \emph{Navigation mode} with active \emph{ADSB-In/Out}, receiving position notification from each other. Cruising altitude is sufficient for horizontal separation (50-100 ft. Above the Ground Level). \emph{Horizontal separation} is the preferred separation type for both \emph{UAS}.
 
 \begin{table}[H]
     \centering
@@ -15,7 +15,7 @@
 \end{table}
 
 \begin{note}
-\emph{Collision point} is expected at $\mathscr{C} = [20,20,0]^T$. The \emph{angle of approach} is $90^{\circ}$ which classifies situation as \emph{Converging maneuver} (fig. \ref{fig:OvertakeManeuverTheoretical}).
+\emph{Collision point} is expected at $\mathscr{C} = [20,20,0]^T$. The \emph{angle of approach} is $90^{\circ}$ which classifies the  situation as \emph{Converging maneuver} (fig. \ref{fig:OvertakeManeuverTheoretical}).
 \end{note}
 
 \paragraph{Main Goal:} Show two \emph{non-cooperative} UAS avoidance capability for \emph{Converging maneuver} scenario in \emph{uncontrolled airspace}.
@@ -23,26 +23,30 @@
 
 \paragraph{Acceptance criteria:}
 \begin{enumerate}
-    \item \emph{Proper mode invocation} - when an intruder intersects the UAS  with \emph{Right of the Way} navigation grid, both UAS will swith into \emph{Emergency Avoidance Mode}.
+    \item \emph{Proper mode invocation} - when an intruder intersects the UAS  with \emph{Right of the Way} navigation grid, both UAS will switch into \emph{Emergency Avoidance Mode}.
     
     \item \emph{Minimal safety margin distance} $\ge$ $0 m$.
     
     \item \emph{Each UAS} will reach own goal waypoint (tab. \ref{tab:missionSetupEmergencyConvergingScenario}).
 \end{enumerate}
 
-\paragraph{Testing setup:} The \emph{standard test setup} for each UAS defined in (tab \ref{tab:testMovementOrientations}, \ref{tab:testUASBasicParameters}, \ref{tab:testNavigationGridBasic}, \ref{tab:testAvoidanceGridBasic}, \ref{tab:testUASColoring}) is used with following without parameter override.
+\paragraph{Testing setup:} The \emph{standard test setup} for each UAS defined in (tab \ref{tab:testMovementOrientations}, \ref{tab:testUASBasicParameters}, \ref{tab:testNavigationGridBasic}, \ref{tab:testAvoidanceGridBasic}, \ref{tab:testUASColoring}) is used with the following without parameter override.
 
-\emph{Intruder intersection} model has been chosen depending on UAS (tab. \ref{tab:aboidanceParametersForEmergencyConvergingScenario}). Each UAS is equipped with \emph{ADS-B In/Out} sensor obtaining/distributing following information:
+\emph{Intruder intersection} model has been chosen depending on UAS (tab. \ref{tab:aboidanceParametersForEmergencyConvergingScenario}). Each UAS is equipped with \emph{ADS-B In/Out} sensor obtaining/distributing the following information:
+
 \begin{enumerate}
     \item \emph{Position} - in operational section coordinate frame.
-    \item \emph{Velocity} - vector representation in given coordinate frame.
+
+    \item \emph{Velocity} - vector representation in the given coordinate frame.
+
     \item \emph{Class size} - class body radius based on UAS propulsion and size.
+
     \item \emph{Safety margin set} - set of safety margins for different collision cases.
 \end{enumerate}
 
-\noindent \emph{Avoidance parameters} for \emph{Emergency converging scenario} are given in (tab. \ref{tab:aboidanceParametersForEmergencyConvergingScenario}). Each UAS has same speed set to $1 m s^{-1}$. Second UAS has the \emph{Right of The Way}. 
+\noindent \emph{Avoidance parameters} for the \emph{Emergency converging scenario} are given in (tab. \ref{tab:aboidanceParametersForEmergencyConvergingScenario}). Each UAS has the same speed set to $1 m s^{-1}$. Second UAS has the \emph{Right of Way}. 
 
-\emph{Safety margin} is considered as sum of both participants \emph{near miss margins}. In this case default safety margin is considered as $1.2$ $m$.
+The \emph{safety margin} is considered as sum of both participants \emph{near miss margins}. In this case, the default safety margin is considered as $1.2$ $m$.
 
 \begin{table}[H]
     \centering
@@ -62,15 +66,15 @@
 
 \paragraph{Simulation Run:} Notable moments from the simulation run (fig. \ref{fig:testCaseEmergencyConverging}) are following
 \begin{enumerate}
-    \item \emph{Detection} (fig. \ref{fig:emergencyConvergingSituationDetection}) - Intruder (UAS2 cyan) is approaching (UAS 1 blue) from right side, Intruder (UAS2 cyan) has the right of the way, because $70^{\circ}$ $\le$ $angleOfApproach$ $<$ $130^{\circ}$. \emph{Intruder intersection model} (for UAS 2) is created and propagated in \emph{avoidance grid} (for UAS 1). 
+    \item \emph{Detection} (fig. \ref{fig:emergencyConvergingSituationDetection}) - Intruder (UAS2 cyan) is approaching (UAS 1 blue) from the right side, Intruder (UAS2 cyan) has the right of way, because of $70^{\circ}$ $\le$ $angleOfApproach$ $<$ $130^{\circ}$. \emph{Intruder intersection model} (for UAS 2) is created and propagated in \emph{avoidance grid} (for UAS 1). 
             
     \item \emph{Start Converging} (fig. \ref{fig:emergencyConvergingStart}) - when \emph{UAS 2 (cyan) parametric intruder intersection model} disables \emph{trajectories}, converging maneuver for UAS 1 (blue) starts.
     
     \item \emph{Near miss case} (fig. \ref{fig:emergencyConvergingEnd}) - UAS 1 (blue) to UAS 2 (cyan) closest distance. The safety margin for \emph{near miss} has not been breached. The safety margin for \emph{well clear} in uncontrolled airspace is invalid.
     
-    \item \emph{Waypoint reached} (fig. \ref{fig:emergencyConvergingWaypointReach}) - the intruder intersection model for \emph{UAS 2} (cyan) is removed from UAS 1 (blue) \emph{avoidance grid} after \emph{converging maneuver competition}, standard navigation procedure is applied afterwards.
+    \item \emph{Waypoint reached} (fig. \ref{fig:emergencyConvergingWaypointReach}) - the intruder intersection model for \emph{UAS 2} (cyan) is removed from UAS 1 (blue) \emph{avoidance grid} after \emph{converging maneuver competition}, standard navigation procedure is applied afterward.
     
-    \item Note that \emph{UAS 2} (cyan) has \emph{Right of the way} in (tab. \ref{tab:aboidanceParametersForEmergencyConvergingScenario}).
+    \item Note that \emph{UAS 2} (cyan) has the\emph{Right of way} in (tab. \ref{tab:aboidanceParametersForEmergencyConvergingScenario}).
     
     \item Note that \emph{UAS 1} (blue) used only horizontal separation (priority) in (fig. \ref{fig:emergencyConvergingUAS1PathTracking}).
 \end{enumerate}
@@ -108,9 +112,9 @@
 \end{figure}
 
 
-\paragraph{Distance to Safety Margin Evolution:} There is need to compare mutual distance between both UAS (y-axis [m]) and its evolution over UTM time (x-axis [s]). The \emph{mutual} distance of \emph{UAS 1} to \emph{UAS 2} is given by \emph{blue line}. The \emph{Safety margin} value is denoted by red line at \emph{constant value} of $1.2$ $m$.
+\paragraph{Distance to Safety Margin Evolution:} There is a need to compare the mutual distance between both UAS (y-axis [m]) and its evolution over UTM time (x-axis [s]). The \emph{mutual} distance of \emph{UAS 1} to \emph{UAS 2} is given by \emph{blue line}. The \emph{Safety margin} value is denoted by the red line at a  \emph{constant value} of $1.2$ $m$.
 
-The \emph{Proper avoidance Invocation} is shown when UAS systems are getting closer to each other and they enter (Emergency Avoidance Mode) to provide \emph{active separation}. The \emph{Mutual distance evolution} (blue line) does not cross \emph{safety margin} (red line).
+The \emph{Proper avoidance Invocation} is shown when UAS systems are getting closer to each other, and they enter (Emergency Avoidance Mode) to provide \emph{active separation}. The \emph{Mutual distance evolution} (blue line) does not cross \emph{safety margin} (red line).
 
 \begin{figure}[H]
     \centering
@@ -119,9 +123,9 @@ The \emph{Proper avoidance Invocation} is shown when UAS systems are getting clo
     \label{fig:testCaseEmergencyConvergingAvoidancePerformance}
 \end{figure}
 
-\paragraph{Distance to Safety Margin Peaks:} Minimal and Maximal mutual distance to safety margin is summarized in (tab. \ref{tab:testCaseEmergencyConvergingSafetyMarginDistances}). The closest to collision are UAS systems when the distance to safety margin is $1.6676m$.
+\paragraph{Distance to Safety Margin Peaks:} Minimal and Maximal mutual distance to safety margin is summarized in (tab. \ref{tab:testCaseEmergencyConvergingSafetyMarginDistances}). The closest to the collision are UAS systems when the distance to safety margin is $1.6676m$.
 
-The \emph{minimal distance to safety margin  $\ge$ 0} which means that the \emph{safety acceptance criterion} is fullfilled. 
+The \emph{minimal distance to safety margin  $\ge$ 0} which means that the \emph{safety acceptance criterion} is fulfilled. 
 
 \begin{table}[H]
     \centering
@@ -130,17 +134,18 @@ The \emph{minimal distance to safety margin  $\ge$ 0} which means that the \emph
     \multirow{2}{*}{Distance to Safety Margin} & min & 1.6676 \\\cline{2-3}
                                             & max & 27.0843 \\
     \end{tabular}
-    \caption{Distance to safety margin peaks for \emph{emergency converging scenario}.}
+    \caption{Distance to safety margin peaks for the \emph{emergency converging scenario}.}
     \label{tab:testCaseEmergencyConvergingSafetyMarginDistances}
 \end{table}
 
-\paragraph{Path Tracking Performance:} All waypoints (green numbered squares) for both  UAS have been reached (fig. \ref{fig:emergencyConvergingTrajectoryTrackingPerformance}). \emph{Reference trajectories} (green dashed lines), between initial position (green square marked S) and goal waypoint (green square marked 1) are split into three XYZ values with respective figures. The tracked value is on y-axis [m] and time on x-axis [s]. The blue lines represents real parameter evolution over time.
+\paragraph{Path Tracking Performance:} All waypoints (green numbered squares) for both  UAS have been reached (fig. \ref{fig:emergencyConvergingTrajectoryTrackingPerformance}). \emph{Reference trajectories} (green dashed lines), between the initial position (green square marked S) and goal waypoint (green square marked 1) are split into three XYZ values with respective figures. The tracked value is on y-axis [m] and time on x-axis [s]. The blue lines represent real parameter evolution over time.
 
 Following observations can be made from path tracking (fig. \ref{fig:emergencyConvergingTrajectoryTrackingPerformance}) and preferred separations (tab. \ref{tab:aboidanceParametersForEmergencyConvergingScenario}):
 
 \begin{enumerate}
-    \item UAS 1 (fig. \ref{fig:emergencyConvergingUAS1PathTracking}) is using \emph{horizontal separation} (y-axis). The UAS diverges from reference trajectory to minimal necessary time.
-    \item UAS 2 (fig. \ref{fig:emergencyCovnergingUAS2PathTracking}) has the right of the way and is not using any active avoidance mechanism. 
+    \item UAS 1 (fig. \ref{fig:emergencyConvergingUAS1PathTracking}) is using \emph{horizontal separation} (y-axis). The UAS diverges from the reference trajectory to minimum necessary time.
+    
+    \item UAS 2 (fig. \ref{fig:emergencyCovnergingUAS2PathTracking}) has the right of way and is not using any active avoidance mechanism. 
 \end{enumerate}
 
 \begin{figure}[H]
@@ -173,14 +178,14 @@ Following observations can be made from path tracking (fig. \ref{fig:emergencyCo
           $\max |z|$    & 0                 & 0 \\\hline
           $\max dist.$  & 3.25              & 0 \\
     \end{tabular}
-    \caption{Path tracking properties for \emph{Emergency converging} scenario.}
+    \caption{Path tracking properties for the\emph{Emergency converging} scenario.}
     \label{tab:pathTrackingParametersForEmergencyConverging}
 \end{table}
 
 % 05 Emergency Converging
 \paragraph{Computation Load:} The \emph{computation load} for \emph{scenario} (fig.\ref{fig:emergencyConvergingComputationTime}) shows used time (y-axis) over decision frame (x-axis).
 
-The \emph{computation time} is increased only for UAS 1 during avoidance period. The UAS 2 remains unaffected because it has a right of the way.
+The \emph{computation time} is increased only for UAS 1 during the avoidance period. The UAS 2 remains unaffected because it has the right of way.
 
 \begin{figure}[H]
     \centering

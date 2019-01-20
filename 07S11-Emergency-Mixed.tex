@@ -1,6 +1,6 @@
 \subsection{\secState{D}Emergency Mixed Head-On with Converging}\label{s:testEmergencyMixed}
 
-    \noindent\paragraph{Scenario:} \emph{Four UAS} are flying in an \emph{uncontrolled airspace} (altitude $\le$ 500 ft. Above the Ground Level) missions defined in (tab. \ref{tab:missionSetupEmergencyMixedScenario}). All UAS are in the \emph{Navigation mode} with active \emph{ADS-B In}, receiving \emph{position notifications} from each other. Cruising altitude is sufficient for \emph{horizontal separation} (50-100 ft. Above the Ground Level).
+    \noindent\paragraph{Scenario:} \emph{Four UAS} are flying in \emph{uncontrolled airspace} (altitude $\le$ 500 ft. Above the Ground Level) missions defined in (tab. \ref{tab:missionSetupEmergencyMixedScenario}). All UAS are in the \emph{Navigation mode} with active \emph{ADS-B In}, receiving \emph{position notifications} from each other. Cruising altitude is sufficient for \emph{horizontal separation} (50-100 ft. Above the Ground Level).
     
     
     \begin{table}[H]
@@ -13,7 +13,7 @@
             3 & $[20,0,0]^T $       & $[0^\circ,0^\circ,90^\circ]^T$    & $[20,45,0]^T$\\\hline 
             4 & $[20,40,0]^T $       & $[0^\circ,0^\circ,-90^\circ]^T$  & $[45,20,0]^T$\\ 
         \end{tabular}
-        \caption{Mission setup for \emph{Emergency mixed} scenario.}
+        \caption{Mission setup for the \emph{Emergency mixed} scenario.}
         \label{tab:missionSetupEmergencyMixedScenario}
     \end{table}
     
@@ -33,19 +33,22 @@
     \end{enumerate}
     
     
-    \noindent\paragraph{Testing setup:} The \emph{standard test setup} for each UAS defined in (tab \ref{tab:testMovementOrientations}, \ref{tab:testUASBasicParameters}, \ref{tab:testNavigationGridBasic}, \ref{tab:testAvoidanceGridBasic}, \ref{tab:testUASColoring}) is used with following without parameter override.
+    \noindent\paragraph{Testing setup:} The \emph{standard test setup} for each UAS defined in (tab \ref{tab:testMovementOrientations}, \ref{tab:testUASBasicParameters}, \ref{tab:testNavigationGridBasic}, \ref{tab:testAvoidanceGridBasic}, \ref{tab:testUASColoring}) is used with the following without parameter override.
 
-    \emph{Intruder intersection} model has been chosen depending on UAS (tab. \ref{tab:aboidanceParametersForEmergencyMixedScenario}). Each UAS is equipped with \emph{ADS-B In/Out} sensor obtaining/distributing following information:
+    \emph{Intruder intersection} model has been chosen depending on UAS (tab. \ref{tab:aboidanceParametersForEmergencyMixedScenario}). Each UAS is equipped with \emph{ADS-B In/Out} sensor obtaining/distributing the following information:
     \begin{enumerate}
         \item \emph{Position} - in operational section coordinate frame.
-        \item \emph{Velocity} - vector representation in given coordinate frame.
+        
+        \item \emph{Velocity} - vector representation in the given coordinate frame.
+        
         \item \emph{Class size} - class body radius based on UAS propulsion and size.
+        
         \item \emph{Safety margin set} - set of safety margins for different collision cases.
     \end{enumerate}
     
-    \emph{Avoidance parameters} for \emph{Emergency mixed scenario} are given in (tab. \ref{tab:aboidanceParametersForEmergencyMixedScenario}). Each UAS has different \emph{intruder model} and separation combination. Each UAS has same speed set to $1 m s^{-1}$. None of UAS has the \emph{Right of The Way}. 
+    \emph{Avoidance parameters} for the \emph{Emergency mixed scenario} are given in (tab. \ref{tab:aboidanceParametersForEmergencyMixedScenario}). Each UAS has different \emph{intruder model} and separation combination. Each UAS has same the speed set to $1 m s^{-1}$. None of UAS has the \emph{Right of Way}. 
     
-    \emph{Safety margin} is considered as sum of both participants \emph{near miss margins}. In this case default safety margin is considered as $1.2$  $m$.
+    The \emph{safety margin} is considered as the sum of both participants \emph{near miss margins}. In this case, the default safety margin is considered as $1.2$  $m$.
     
     \begin{table}[H]
         \centering
@@ -62,17 +65,17 @@
     \end{table}
     
     \begin{note}
-        Each \emph{UAS} use different intruder intersection models and primary \emph{separations} (defined in tab. \ref{tab:aboidanceParametersForEmergencyMixedScenario}).  UAS reactions are based on primary \emph{Separation} mode, intruders intersection models this is reflected on major axial deviations in (fig. \ref{fig:testCaseEmergencyMixedTrajectoryTracking}) and summarized in \emph{path tracking} deviation (tab. \ref{tab:pathTrackingParametersForEmergencyMixed}).
+        Each \emph{UAS} use different intruder intersection models and primary \emph{separations} (defined in the tab. \ref{tab:aboidanceParametersForEmergencyMixedScenario}).  UAS reactions are based on primary \emph{Separation} mode, intruders intersection models this is reflected on major axial deviations in (fig. \ref{fig:testCaseEmergencyMixedTrajectoryTracking}) and summarized in \emph{path tracking} deviation (tab. \ref{tab:pathTrackingParametersForEmergencyMixed}).
     \end{note}
     
-    \noindent\paragraph{Simulation Run:} Notable moments from the simulation run (fig. \ref{fig:testCaseEmergencyMixed}) are following:
+    \noindent\paragraph{Simulation Run:} Notable moments from the simulation run (fig. \ref{fig:testCaseEmergencyMixed}) are the  following:
     
     \begin{enumerate}
-        \item \emph{Situation detection} (fig. \ref{fig:emergencyMultipleSituationDetection}) - UAS 1 (blue) is detecting UAS 2 (cyan), UAS 3 (green), and UAS 4 (black) as possible intruders. There are multiple converging and head on approaches depending on mutual positions (UAS and \emph{angle of approach}). There exist at least one \emph{converging case} where each UAS has \emph{Right of the way}. Each UAS creates intruder intersection models depending on the intruder configuration (tab. \ref{tab:aboidanceParametersForEmergencyMixedScenario}). Each UAS enters into the \emph{Emergency avoidance mode} independently, when at least one trajectory is constrained in the \emph{avoidance grid}. 
+        \item \emph{Situation detection} (fig. \ref{fig:emergencyMultipleSituationDetection}) - UAS 1 (blue) is detecting UAS 2 (cyan), UAS 3 (green), and UAS 4 (black) as possible intruders. There are multiple converging and head on approaches depending on mutual positions (UAS and \emph{angle of approach}). There exist at least one \emph{converging case} where each UAS has the \emph{Right of way}. Each UAS creates intruder intersection models depending on the intruder configuration (tab. \ref{tab:aboidanceParametersForEmergencyMixedScenario}). Each UAS enters into the \emph{Emergency avoidance mode} independently, when at least one trajectory is constrained in the \emph{avoidance grid}. 
         
-        \item \emph{Before near miss} (fig. \ref{fig:emergencyMultipleBeforeNearMiss}) - all \emph{UAS} are in \emph{emergency avoidance mode}, using various \emph{separation modes} and \emph{intruder intersection models}. Each UAS is performing its own avoidance maneuver, constantly checking other intruders. If same separation and same intruder model was used, there will be virtual roundabout.
+        \item \emph{Before near-miss} (fig. \ref{fig:emergencyMultipleBeforeNearMiss}) - all \emph{UAS} are in \emph{emergency avoidance mode}, using various \emph{separation modes} and \emph{intruder intersection models}. Each UAS is performing its own avoidance maneuver, constantly checking other intruders. If the same separation and the same intruder model were used, there would be a virtual roundabout.
             
-        \item \emph{After near miss} (fig. \ref{fig:emergencyMultipleAfterNearMiss}) - all \emph{UAS} avoided each other which is covered in \emph{safety margin performance} (fig. \ref{fig:testCaseMultipleAvoidancePerformance}) and (tab. \ref{tab:testCaseEmergencyMixedSafetyMarginDistances}).
+        \item \emph{After near-miss} (fig. \ref{fig:emergencyMultipleAfterNearMiss}) - all \emph{UAS} avoided each other which is covered in \emph{safety margin performance} (fig. \ref{fig:testCaseMultipleAvoidancePerformance}) and (tab. \ref{tab:testCaseEmergencyMixedSafetyMarginDistances}).
         
         \item \emph{Situation resolution} (fig. \ref{fig:emergencyMultipleSituationReslution}) - all \emph{UAS}
         returns to \emph{Navigation mode} correcting \emph{altitude} first and continuing to assigned waypoints.
@@ -105,18 +108,18 @@
             \caption{Situation resolution.}
             \label{fig:emergencyMultipleSituationReslution}
         \end{subfigure}
-        \caption{Test scenario for \emph{Emergency mixed} situation with \emph{self-separation mode}.}
+        \caption{Test scenario for the \emph{Emergency mixed} situation with the \emph{self-separation mode}.}
         \label{fig:testCaseEmergencyMixed}
     \end{figure}
     
-    \paragraph{Distance to Safety Margin Evolution:} There is need to compare mutual distance between each UAS. The graph (fig. \ref{fig:testCaseMultipleAvoidancePerformance}) shows six figures for each \emph{UAS systems} mutual distance (blue line) in this scenario. The \emph{Safety Margin} (red line) ($1.2$ $m$) was not breached for any pair (case). 
+    \paragraph{Distance to Safety Margin Evolution:} There is a need to compare the mutual distance between each UAS. The graph (fig. \ref{fig:testCaseMultipleAvoidancePerformance}) shows six figures for each \emph{UAS systems} mutual distance (blue line) in this scenario. The \emph{Safety Margin} (red line) ($1.2$ $m$) was not breached for any pair (case). 
     
-    The \emph{Proper avoidance invocation} is shown when UAS systems are getting closer to each other and then they start separation phase (Emergency avoidance mode).
+    The \emph{Proper avoidance invocation} is shown when UAS systems are getting closer to each other, and then they start separation phase (Emergency avoidance mode).
             
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\linewidth]{\FIGDIR/NS043UtmEmergencyHeadOnMultiplePerformance} 
-        \caption{Distance to safety margin evolution for \emph{emergency mixed scenario}.}
+        \caption{Distance to safety margin evolution for the  \emph{emergency mixed scenario}.}
         \label{fig:testCaseMultipleAvoidancePerformance}
     \end{figure}
     
@@ -138,22 +141,22 @@
                 2-4   & 0.2019       & 31.7282     & false          \\ \hline
                 3-4   & 2.5171       & 45.4257     & false          \\ 
         \end{tabular}
-        \caption{Distance to safety margin peaks for \emph{emergency mixed scenario}.}
+        \caption{Distance to safety margin peaks for the \emph{emergency mixed scenario}.}
         \label{tab:testCaseEmergencyMixedSafetyMarginDistances}
     \end{table}
     
-    \noindent\paragraph{Path Tracking Performance:} All waypoints (Green numbered squares) for all UAS have been reached (fig. \ref{fig:testCaseEmergencyMixedTrajectoryTracking}). \emph{Reference trajectories} (green dashed line) have been tracked by \emph{UAS real path} (blue solid line) almost all time. 
+    \noindent\paragraph{Path Tracking Performance:} All waypoints (Green numbered squares) for all UAS have been reached (fig. \ref{fig:testCaseEmergencyMixedTrajectoryTracking}). \emph{Reference trajectories} (green dashed line) have been tracked by \emph{UAS real path} (solid blue line) almost all time. 
     
     Following observations can be made from \emph{path tracking} (fig. \ref{fig:testCaseEmergencyMixedTrajectoryTracking}) and \emph{preferred separations} (tab. \ref{tab:aboidanceParametersForEmergencyMixedScenario}):
     
     \begin{enumerate}
-        \item UAS 1 (fig. \ref{fig:emergencyMixedPathTrackingUAS1}) is using \emph{horizontal separation} (y axis right) having \emph{preferred horizontal separation}.
+        \item UAS 1 (fig. \ref{fig:emergencyMixedPathTrackingUAS1}) is using \emph{horizontal separation} (y-axis right) having \emph{preferred horizontal separation}.
         
-        \item UAS 2 (fig. \ref{fig:emergencyMixedPathTrackingUAS2}) is using vertical separation (z axis up-down), having preferred vertical separation.
+        \item UAS 2 (fig. \ref{fig:emergencyMixedPathTrackingUAS2}) is using vertical separation (z-axis up-down), having preferred vertical separation.
         
-        \item UAS 3 (fig. \ref{fig:emergencyMixedPathTrackingUAS3}) is using horizontal/vertical separation (x right, z down), having preferred horizontal separation.  This UAS has used other than preferred separation type.
+        \item UAS 3 (fig. \ref{fig:emergencyMixedPathTrackingUAS3}) is using horizontal/vertical separation (x-right, z-down), having preferred horizontal separation.  This UAS has used other than the  preferred separation type.
         
-        \item UAS 4 (fig. \ref{fig:emergencyMixedPathTrackingUAS4}) is using horizontal separation (x-axis right/left), having preferred vertical separation. This UAS has used opposite separation type, than preferred.
+        \item UAS 4 (fig. \ref{fig:emergencyMixedPathTrackingUAS4}) is using horizontal separation (x-axis right/left), having preferred vertical separation. This UAS has used opposite separation type to preferred.
     \end{enumerate}
     
     
@@ -184,7 +187,7 @@
             \caption{UAS 4.}
             \label{fig:emergencyMixedPathTrackingUAS3}
         \end{subfigure}
-        \caption{Trajectory tracking for \emph{Emergency mixed} situation test case.}
+        \caption{Trajectory tracking for the \emph{Emergency mixed} situation test case.}
         \label{fig:testCaseEmergencyMixedTrajectoryTracking}
     \end{figure}
     
@@ -200,7 +203,7 @@
               $\max |z|$    & 0                 & 1.23              & 2.43              & 0\\\hline
               $\max dist.$  & 4.84              & 1.23              & 3.45              & 2.05\\
         \end{tabular}
-        \caption{Path tracking properties for \emph{Emergency mixed} scenario.}
+        \caption{Path tracking properties for the \emph{Emergency mixed} scenario.}
         \label{tab:pathTrackingParametersForEmergencyMixed}
     \end{table}    
 
