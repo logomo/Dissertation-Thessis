@@ -222,8 +222,8 @@
 \contentsline {paragraph}{LiDAR Swipe:}{101}{section*.190}
 \contentsline {paragraph}{LiDAR Swipe Portioning:}{101}{section*.191}
 \contentsline {paragraph}{Cell:}{102}{section*.192}
-\contentsline {paragraph}{Effective Operation Space:}{102}{section*.193}
-\contentsline {paragraph}{Avoidance Grid Definition:}{103}{section*.195}
+\contentsline {paragraph}{Effective Operation Space:}{103}{section*.193}
+\contentsline {paragraph}{Avoidance Grid Definition:}{104}{section*.195}
 \contentsline {paragraph}{Grid Sizing Approach:}{105}{section*.196}
 \contentsline {paragraph}{Cell in Avoidance Grid Properties:}{105}{section*.197}
 \contentsline {section}{\numberline {6.4} Reach Set Approximation}{107}{section.6.4}
