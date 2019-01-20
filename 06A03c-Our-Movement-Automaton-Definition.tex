@@ -1,4 +1,5 @@
-\subsection{\secState{D}Formal Movement Automaton Definition}\label{s:MovementAutomatonDefinitionAndProperties}
+\newpage
+\section{\secState{D}Formal Movement Automaton Definition}\label{s:MovementAutomatonDefinitionAndProperties}
 
     \begin{definition}\label{def:movementAutomaton}Movement Automaton is given as follow:
     
@@ -44,9 +45,9 @@
     
     \emph{Movements} (eq. \ref{eq:movementChaining}) are defined as sequence of necessary \emph{initial transitions} (eq. \ref{eq:madTransitions}), \emph{movement primitive} (eq. \ref{eq:madMovementPrimitive}), and, \emph{leave transitions} (\ref{eq:madTransitions}).
     
-    \emph{Buffer} contains a set of \emph{movement primitives} (eq. \ref{eq:madMovementPrimitive}) to be executed in order to achieve desired goal. \emph{Builder} (eq. \ref{eq:madBuilder}) assures that first \emph{movement primitive} (eq. \ref{eq:movementPrimitive})from \emph{Buffer} (eq. \ref{eq:madBuffer}) is transformed into \emph{next movement} (eq. \ref{eq:madMovements}) based on \emph{current movement} (eq.\ref{eq:madMovements}).
+    The \emph{Buffer} contains a set of \emph{movement primitives} (eq. \ref{eq:madMovementPrimitive}) to be executed in order to achieve the desired goal. \emph{Builder} (eq. \ref{eq:madBuilder}) assures that first \emph{movement primitive} (eq. \ref{eq:movementPrimitive})from \emph{Buffer} (eq. \ref{eq:madBuffer}) is transformed into \emph{next movement} (eq. \ref{eq:madMovements}) based on \emph{current movement} (eq.\ref{eq:madMovements}).
     
-    \newpage\noindent The system \emph{trajectory} (eq. \ref{eq:madTrajectory}) is defined in (eq. \ref{eq:TrajectoryDefinition}). \emph{State projection} (eqs. \ref{eq:stateprojection},\ref{eq:madStateProjection}) is giving \emph{State} variable for time $t\in[t_0,t_{max}]$ where $t_max$ is given by:
+    \noindent The system \emph{trajectory} (eq. \ref{eq:madTrajectory}) is defined in (eq. \ref{eq:TrajectoryDefinition}). \emph{State projection} (eqs. \ref{eq:stateprojection},\ref{eq:madStateProjection}) is giving \emph{State} variable for time $t\in[t_0,t_{max}]$ where $t_max$ is given by:
     \begin{equation}
     t_{max}=t_0+\sum_{i=1,u}Buffer.Movement(i).movementDuration    
     \end{equation}
@@ -68,7 +69,7 @@
 
 \begin{note}{Weak Invariance:}
 
-When the UAS is under the control of the movement automaton  for the obstacle avoidance problem,  by design of the avoidance algorithm, the trajectories of the UAV will not intersect any threat. This means that the controlled system $\text{d}/\text{d} \text{t state} =model(state,input)$ is \emph{weakly invariant} with respect to the complement of the threats, and with respect to the free space. A pair $(state, SafeSpace)$, where $\text{d}/\text{d} \text{t state} =model(state,input)$ and $SafeSpace$ is a closed set, is weakly invariant if there exist controls such that a trajectory starting inside $State_0\in SafeSpace$ remains inside $State (t)\in SafeSpace$ \cite{blanchini1999set}.
+When the UAS is under the control of the movement automaton  for the obstacle avoidance problem,  by design of the avoidance algorithm, the trajectories of the UAS will not intersect any threat. This means that the controlled system $\text{d}/\text{d} \text{t state} =model(state,input)$ is \emph{weakly invariant} to the complement of the threats, and with respect to the free space. A pair $(state, SafeSpace)$, where $\text{d}/\text{d} \text{t state} =model(state,input)$ and $SafeSpace$ is a closed set, is weakly invariant if there exist controls such that a trajectory starting inside $State_0\in SafeSpace$ remains inside $State (t)\in SafeSpace$ \cite{blanchini1999set}.
  \end{note}
 
 

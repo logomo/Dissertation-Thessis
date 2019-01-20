@@ -1,8 +1,8 @@
 \subsection{\secState{D}Maze}\label{s:testMaze}
 
-\paragraph{Scenario:} The UAS is flying a mission given by (tab. \ref{tab:missionSetupMazeScenario}) in \emph{closed space} constrained by ground from bottom, airspace constraint from top and building from sides. The maneuverable space is \emph{maze-like} with  \emph{hidden goal waypoint}.
+\paragraph{Scenario:} The UAS is flying a mission given by (tab. \ref{tab:missionSetupMazeScenario}) in \emph{closed space} constrained by ground from the bottom, airspace constraint from top and building from sides. The maneuverable space is \emph{maze-like} with  \emph{hidden goal waypoint}.
 
-There exists a \emph{Obstacle map} with defined \emph{safety} and \emph{body margins}. \emph{Reference trajectories} (direct interconnection of initial position and \emph{goal waypoint}) is going through \emph{partially known space} with some charted obstacles.
+There exists an \emph{Obstacle map} with defined \emph{safety} and \emph{body margins}. \emph{Reference trajectories} (direct interconnection of the initial position and \emph{goal waypoint}) is going through \emph{partially known space} with some charted obstacles.
 
 \begin{table}[H]
     \centering
@@ -15,19 +15,19 @@ There exists a \emph{Obstacle map} with defined \emph{safety} and \emph{body mar
     \label{tab:missionSetupMazeScenario}
 \end{table}
 
-\paragraph{Obstacle set:} \emph{Obstacles} are discovered during a flight by \emph{UAS LiDAR} sensor. The \emph{Obstacle set} is defined in (tab. \ref{tab:obstacleSetMaze}). the obstacles are placed in \emph{virtual grid} with \emph{cell size} $10 \times 10 m$. There are following obstacles:
+\paragraph{Obstacle set:} \emph{Obstacles} are discovered during a flight by \emph{UAS LiDAR} sensor. The \emph{Obstacle set} is defined in (tab. \ref{tab:obstacleSetMaze}). The obstacles are placed in a \emph{virtual grid} with \emph{cell size} $10 \times 10 m$. There are following obstacles:
 
 \begin{enumerate}
-    \item $5\times$  \emph{Hospital building} - H-shaped, with two open traps, with minimal body margin in range $0.5 - 1m$, with maximal body margin in range $2.2 - 3.1 m$ and variable \emph{safety margin} in range $1-3 m$.
+    \item $5\times$  \emph{Hospital building} - H-shaped, with two open traps, with minimal body margin in the range $0.5 - 1m$, with maximal body margin in the range $2.2 - 3.1 m$ and variable \emph{safety margin} in the range $1-3 m$.
     
-    \item $12\times$ \emph{Unusual trap building} - square shaped building with two traps on neighbouring side, with minimal body margin in range $0.3 - 1m$, with maximal body margin in range $2.3 - 3.5 m$ and variable \emph{safety margin} in range $1-4 m$.
+    \item $12\times$ \emph{Unusual trap building} - square-shaped building with two traps on the neighbouring side, with minimal body margin in the range $0.3 - 1m$, with maximal body margin in the range $2.3 - 3.5 m$ and variable \emph{safety margin} in the range $1-4 m$.
     
-    \item $6\times$  \emph{Square building} - square shaped building with minimal body margin in range $3-4 m$, with maximal body margin in range $4-5 m$ and variable \emph{safety margin} in range $1-4m$.
+    \item $6\times$  \emph{Square building} - square-shaped building with minimal body margin in the range $3-4 m$, with maximal body margin in the range $4-5 m$ and variable \emph{safety margin} in the range $1-4m$.
     
-    \item $7\times$  \emph{U-shaped Trap} - thin walled U shaped trap designed to catch incoming flying objects, with minimal body margin in range $2-4m$, maximal body margin in range $3-5 m$ and various \emph{safety margin} in range $1-2 m$.
+    \item $7\times$  \emph{U-shaped Trap} - thin walled U shaped trap designed to catch incoming flying objects, with minimal body margin in the range $2-4m$, maximal body margin in the range $3-5 m$ and various \emph{safety margin} in the range $1-2 m$.
 \end{enumerate}
 
-The purpose of these \emph{Obstacles} except \emph{Square building} type is to create false positive path diversions. These diversions are designed to take \emph{UAS} into unsolvable situation. \emph{Avoidance} of traps is possible due \emph{Reach set properties}, because many scenarios for avoidance can be evaluated at once.
+The purpose of these \emph{Obstacles} except \emph{Square building} type is to create false positive path diversions. These diversions are designed to take \emph{UAS} into an unsolvable situation. \emph{Avoidance} of traps is possible due \emph{Reach set properties} because many scenarios for avoidance can be evaluated at once.
 
 \begin{table}[H]
     \centering
@@ -47,7 +47,7 @@ The purpose of these \emph{Obstacles} except \emph{Square building} type is to c
 
 \paragraph{Acceptance Criteria:}
 \begin{enumerate}
-    \item \emph{Do not break top/bottom boundaries} - the \emph{UAS} Z coordinate should not leave range $-5$ to $5 m$. The boundary break occurs when there is no feasible horizontal path and UAS needs to climb up to resolve situation.
+    \item \emph{Do not break top/bottom boundaries} - the \emph{UAS} Z coordinate should not leave range $-5$ to $5 m$. The boundary break occurs when there is no feasible horizontal path, and UAS needs to climb up to resolve the situation.
     
     \item{Minimal safety margin distance} $\ge$ $0m$.
     
@@ -57,23 +57,23 @@ The purpose of these \emph{Obstacles} except \emph{Square building} type is to c
 \paragraph{Testing Setup:} The \emph{standard test setup} defined in (tab.  \ref{tab:testMovementOrientations}, \ref{tab:testUASBasicParameters}, \ref{tab:testNavigationGridBasic}, \ref{tab:testAvoidanceGridBasic}, \ref{tab:testUASColoring}) is used with following parameter override:
 
 \begin{enumerate}
-    \item \emph{Avoidance grid - type} - \emph{ACAS-like} with enabled \emph{Horizontal maneuvers}
+    \item \emph{Avoidance grid - type} - \emph{ACAS-like} with \emph{horizontal enabled maneuvers}
 \end{enumerate}
 
-\paragraph{Simulation Run:} Notable moments from  the simulation run (fig. \ref{fig:testCaseMazeSolver}) are following:
+\paragraph{Simulation Run:} Notable moments from  the simulation run (fig. \ref{fig:testCaseMazeSolver}) are the following:
 
 \begin{enumerate}
-    \item \emph{The Maze} consist from heavy constrained turns: $1^{st}$ turn (fig. \ref{fig:mazeFirstTurn}), $2^{nd}$ turn (fig. \ref{fig:mazeSecondTurn}), and $3^{rd}$ turn (fig. \ref{fig:mazeThirdTurn}). The hidden waypoint reach is given by (fig. \ref{fig:mazeWaypointReach}).
+    \item \emph{The Maze} consists from heavy constrained turns: $1^{st}$ turn (fig. \ref{fig:mazeFirstTurn}), $2^{nd}$ turn (fig. \ref{fig:mazeSecondTurn}), and $3^{rd}$ turn (fig. \ref{fig:mazeThirdTurn}). The hidden waypoint reach is given by (fig. \ref{fig:mazeWaypointReach}).
         
-    \item UAS is constantly in \emph{Emergency Avoidance mode}, because there is always a presence of obstacle,
+    \item UAS is constantly in \emph{Emergency Avoidance mode} because there is always a presence of an obstacle.
         
-    \item \emph{Navigation path} is located in slim corridor with width only 3-6 meters. Mutual distance of obstacles is 20 meters and combined margins takes 14-17 meters.
+    \item \emph{The Navigation path} is located in a slim corridor with width only 3-6 meters. Mutual distance of obstacles is 20 meters, and combined margins take 14-17 meters.
         
-    \item \emph{Maze scenario} was very close to urban environment in terms of obstacle density and computation complexity.
+    \item \emph{Maze scenario} was very close to the urban environment concerning obstacle density and computation complexity.
         
-    \item \emph{Avoidance run} computation complexity scaled linearly with count of active obstacles in Field of View.
+    \item \emph{Avoidance run} computation complexity scaled linearly with a count of active obstacles in Field of View.
     
-    \item \emph{Hidden Goal Waypoint} have been reached as shown in (fig. \ref{fig:mazeWaypointReach}). This satisfy \emph{reach hidden waypoint} acceptance criterion. 
+    \item \emph{Hidden Goal Waypoint} has been reached as shown in (fig. \ref{fig:mazeWaypointReach}). This satisfy \emph{reach hidden waypoint} acceptance criterion. 
 \end{enumerate}
 
 
@@ -110,12 +110,12 @@ The purpose of these \emph{Obstacles} except \emph{Square building} type is to c
 
 \paragraph{Distance to Body/Safety Margin Evolution:}  The evolution of \emph{body and safety margin} over time (x-axis, sec) given in  meters distance (y-axis, m) is given in (fig. \ref{fig:testCaseMazeAvoidancePerformance}).
 
-The \emph{UAS} center distance to nearest obstacle (blue line) does not break any \emph{Safety Margin} (yellow line) of closest obstacle. \emph{Body Margin} of closest obstacle (red line) has not been break, because it always lies below of \emph{Safety Margin} (yellow).
+The \emph{UAS} center distance to the nearest obstacle (blue line) does not break any \emph{Safety Margin} (yellow line) of the closest obstacle. \emph{Body Margin} of the closest obstacle (red line) has not been broken, because it always lies below of \emph{Safety Margin} (yellow).
 
-For \emph{UTM time period} $37$ to $68$ sec there is a \emph{margin spike}  due avoidance of bloated \emph{Rectangle buildings} (fig. \ref{fig:mazeSecondTurn}) during $2^{nd}$ turn. The \emph{acceptance criterion} for \emph{Safety Margin} is satisfied.
+For \emph{UTM period} $37$ to $68$ $s$, there is a \emph{margin spike}  due to avoidance of bloated \emph{Rectangle buildings} (fig. \ref{fig:mazeSecondTurn}) during the $2^{nd}$ turn. The \emph{acceptance criterion} for \emph{Safety Margin} is satisfied.
 
 \begin{note}
-The \emph{body} and \emph{safety margin} are changing  depending on \emph{UAS position} and \emph{orientation}. The changes are reflected in (tab. \ref{tab:testCaseMazeSafetyAndBodyMarginDistances}).
+The \emph{body} and \emph{safety margin} is changing  depending on \emph{UAS position} and \emph{orientation}. The changes are reflected in (tab. \ref{tab:testCaseMazeSafetyAndBodyMarginDistances}).
 \end{note}
 
 
@@ -128,7 +128,7 @@ The \emph{body} and \emph{safety margin} are changing  depending on \emph{UAS po
 
 \paragraph{Distance to Body/Safety Margin Peaks:} The minimal and maximal values for \emph{UAS distance} to \emph{safety margin} based on performance (fig. \ref{fig:testCaseMazeAvoidancePerformance}) is summarized in (tab. \ref{tab:testCaseMazeSafetyAndBodyMarginDistances}).
 
-The \emph{minimal distance to safety margin} is $0.0131 m$ which can be taken as $\sim 0m$ due the numerical error. The \emph{maximal distance to safety margin} is $2.9513 m$ which is $5 \times$ \emph{UAS radius}. The safety margin distance is $\le 3 m$ which means the scenario is tightly packed with obstacles. The \emph{UAS} never left \emph{Emergency Avoidance Mode} because condition: $safety Margin Distance \ge avoidance Grid Length$ was never satisfied. 
+The \emph{minimal distance to safety margin} is $0.0131 m$ which can be taken as $\sim 0m$ due to the numerical error. The \emph{maximal distance to safety margin} is $2.9513 m$ which is $5 \times$ \emph{UAS radius}. The safety margin distance is $\le 3 m$ which means the scenario is tightly packed with obstacles. The \emph{UAS} never left \emph{Emergency Avoidance Mode} because of the condition: $safety Margin Distance \ge avoidance Grid Length$ was never satisfied. 
 
 The \emph{minimal body} distance is $5.0131 m$, while the \emph{maximal body} distance is $8.7117 m$. The difference between minimal and maximal body distance is $\sim 4 m$ which also indicates scenario packed with obstacles. 
 
@@ -145,14 +145,14 @@ The \emph{minimal body} distance is $5.0131 m$, while the \emph{maximal body} di
     \label{tab:testCaseMazeSafetyAndBodyMarginDistances}
 \end{table}
 
-\paragraph{Path Tracking Performance:} Reference path (green dashed) line is given as direct interconnection of \emph{initial position} (green square with S marker) and \emph{hidden waypoint} (green square with 1 marker). The \emph{UTM Reference Time} is given on x-axis. The evolution of real trajectory (blue solid line) for each axis is given as follow:
+\paragraph{Path Tracking Performance:} Reference path (green dashed) line is given as direct interconnection of \emph{initial position} (green square with S marker) and \emph{hidden waypoint} (green square with 1 marker). The \emph{UTM Reference Time} is given on x-axis. The evolution of the real trajectory (solid blue line) for each axis is given as follow:
 
 \begin{enumerate}
     \item \emph{X-axis path tracking} - reflects the maneuvering in the curves of the maze.
     
-    \item \emph{Y-axis path tracking} - shows horizontal progress to the \emph{hidden goal waypoint}. The expected linear tracking is not achievement due the manuevering delays on X-axis.
+    \item \emph{Y-axis path tracking} - shows horizontal progress to the \emph{hidden goal waypoint}. The expected linear tracking is not achievement due to the maneuvering delays on X-axis.
     
-    \item \emph{Z-axis path tracking} - shows perfect linear tracking of reference trajectory. The \emph{altitude acceptance criterion}: $-5m \le altitude \le 5m$ have been fulfilled.
+    \item \emph{Z-axis path tracking} - shows perfect linear tracking of the reference trajectory. The \emph{altitude acceptance criterion}: $-5m \le altitude \le 5m$ have been fulfilled.
 \end{enumerate}
 
 \begin{figure}[H]
@@ -163,7 +163,7 @@ The \emph{minimal body} distance is $5.0131 m$, while the \emph{maximal body} di
 \end{figure}
 
 
-\paragraph{Path Tracking Deviations:} Deviations (tab. \ref{tab:pathTrackingParametersForMazeAvoidance}) from \emph{reference trajectory} are in expected ranges considering \emph{mission plan} (tab. \ref{tab:missionSetupMazeScenario}) and \emph{obstacle properties} (tab. \ref{tab:obstacleSetMaze}).
+\paragraph{Path Tracking Deviations:} Deviations (tab. \ref{tab:pathTrackingParametersForMazeAvoidance}) from \emph{reference trajectory} are in expected ranges considering the \emph{mission plan} (tab. \ref{tab:missionSetupMazeScenario}) and \emph{obstacle properties} (tab. \ref{tab:obstacleSetMaze}).
 
 \begin{table}[H]
     \centering
@@ -183,7 +183,7 @@ The \emph{minimal body} distance is $5.0131 m$, while the \emph{maximal body} di
 % 03 Maze scenario
 \paragraph{Computation Load:} The \emph{computation load} for \emph{scenario} (fig.\ref{fig:mazeComputationTime}) shows used time (y-axis) over decision frame (x-axis).
 
-The UAS is constantly in \emph{Emergency Avoidance Mode}, the \emph{operational environment} is \emph{clustered} with obstacles. This causes very high \emph{computation load}.
+The UAS is constantly in \emph{Emergency Avoidance Mode}; the \emph{operational environment} is \emph{cluttered} with obstacles. This causes very high \emph{computation load}.
 
 \begin{figure}[H]
     \centering

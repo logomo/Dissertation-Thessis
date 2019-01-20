@@ -1,6 +1,6 @@
 \subsection{\secState{R}U-Space}\label{sec:USpace}
 
-\noindent The \emph{Concept Of OpeRations of U-Space} (CORUS) \cite{corus2018} have been released recently. This concept describes the difference between the standard ATM and proposed European UTM solution. This section will get through the interesting part of this pivotal document.
+\noindent The \emph{Concept Of OpeRations of U-Space} (CORUS) \cite{corus2018} has been released recently. This concept describes the difference between the standard ATM and proposed European UTM solution. This section will get through the interesting part of this pivotal document.
 
 \noindent The \emph{U-space} is separated into following functionality based phases:
 \begin{itemize}
@@ -13,17 +13,13 @@
     \item[\texttt{U4}] (year $<$ 2035) brings safe interoperation with manned aviation.
 \end{itemize}
 
-The \emph{Aspects} important for \emph{Obstacle avoidance} will be oultined and discussed over this section. Our work focuses on \emph{European Airspace} (EASA), therefore more focus will be on \emph{U-space}
+The \emph{Aspects} important for \emph{Obstacle avoidance} will be outlined and discussed over this section. Our work focuses on \emph{European Airspace} (EASA); therefore more focus will be on \emph{U-space}
 
 \paragraph{Small UAS Classification:} Manned aviation is covered by existing rules, for example \cite{icaoAnnex2,ec201208ref5}. Excluding some specific situations, manned aviation does not fly below VFR airspace, do not enter \emph{very low level} (VLL) altitudes \cite{ec200802ref4}. 
 
-The certified airworthiness is mandatory for \emph{airspace attendants} with \emph{Maximum Take-Off Mass} (MTOM) over $150 kg$. The other \emph{airspace attendants} needs to fulfill only \emph{Minimal Operation Performance Specification} (MOPS). 
+The certified airworthiness is mandatory for \emph{airspace attendants} with \emph{Maximum Take-Off Mass} (MTOM) over $150 kg$. The other \emph{airspace attendants} need to fulfill only \emph{Minimal Operation Performance Specification} (MOPS). 
 
-In \cite{easa201801op} EASA proposed several classes for UAS below $150kg$ MTOM; see Appendix 1 of the annex to
-Opinion 1-2018 entitled …on making available on the market of unmanned aircraft intended for use in
-the ‘open’ category and on third-country UAS operators. In that text, the next smaller mass mentioned
-below 150kg is 25kg MTOM. A similar break is proposed in some national legislation, for example in
-the UK at 20kg. As a working definition this little chart shows a possible breakdown by MTOM. Note
+In \cite{easa201801op} EASA proposed several classes for UAS below $150kg$ MTOM; see Appendix 1 of the annex to Opinion 1-2018 entitled "…on making available on the market of unmanned aircraft intended for use in the ‘open’ category" and on third-country UAS operators. In that text, the next smaller mass mentioned below 150kg is 25kg MTOM. A similar break is proposed in some national legislation, for example in the UK at 20kg. As a working definition, this little chart shows a possible breakdown by MTOM. Note
 that EASA classes depend on many factors, not only MTOM.
 
 \begin{table}[H]
@@ -31,26 +27,26 @@ that EASA classes depend on many factors, not only MTOM.
     \begin{tabular}{c||c|l}
     \begin{tabular}[c]{@{}c@{}}EASA\\ class\end{tabular} & \begin{tabular}[c]{@{}c@{}}Maximum \\ take-off mass\end{tabular} & Remarks \\\hline\hline
      C0 & $\le 250 g$   & "Child`s Toy" with very limited capabilities \\\hline
-     C1 & $\le 900 g$   & "Adult`s Toy", small flying camera \\\hline
-     C2 & $\le 4 kg$    & "Small UAS" with package \\\hline
-     C3 & $\le 25 kg$   & "Standard UAS", attainable AGL altitude $\le 120m$ \\\hline
-     C4 & $\le 25 kg$   & "Standard UAS", no automatic control mode  altitude $> 120m$\\\hline
+     C1 & $\le 900 g$   & "Adult`s Toy" small flying camera \\\hline
+     C2 & $\le 4 kg$    & "Small UAS" with the package \\\hline
+     C3 & $\le 25 kg$   & "Standard UAS" attainable AGL altitude $\le 120m$ \\\hline
+     C4 & $\le 25 kg$   & "Standard UAS" no automatic control mode  altitude $> 120m$\\\hline
      -  & $\le 150 kg$  & "Heavy UAS", not defined in \cite{easa201801op} \\\hline
-     -  & $> 150 kg kg$ & Regulated by EASA in same manner than manned aircraft \cite{ec200802ref4} 
+     -  & $> 150 kg kg$ & Regulated by EASA like the manned aircraft \cite{ec200802ref4} 
     \end{tabular}
     \caption{Small UAS Classes according to EASA. \cite{corus2018}}
     \label{tab:smallDroneClessesAccordingtoEASA}
 \end{table}
 
 \begin{note}
-    The class C3 and C4 are different in operational restrictions. This work focuses mainly on UAS classes C2/C3/C4, because they have enabled \emph{automatic control mode} 
+    The class C3 and C4 are different in operational restrictions. This work focuses mainly on UAS classes C2/C3/C4 because they have enabled \emph{automatic control mode} 
 \end{note}
-
-\paragraph{Separation Minima:} The \emph{Separation Minima} defines \emph{minimal distances} between airspace attendants to ensure secure \emph{operation}.  The separation minima is taken from Corus \cite{corus2018}. 
+\newpage
+\paragraph{Separation Minima:} The \emph{Separation Minima} defines \emph{minimal distances} between airspace attendants to ensure secure \emph{operation}.  The separation minima are taken from Corus \cite{corus2018}. 
 
 All ideas for safe concurrent operation of UAS are based on the idea of keeping the UAS systems apart or physically distant from some risk source. 
 
-A geo-fence for example is simply a method of providing separation. There will need to be separation minima for UAS just as there are for manned aircraft and these will be needed by services such as Monitoring which seeks to warn about loss of separation and Tactical Conflict Resolution which may act to avoid loss of separation.
+A geo-fence, for example, is simply a method of providing separation. There will need to be separation minima for UAS just as there are for manned aircraft and these will be needed by services such as Monitoring which seeks to warn about loss of separation and Tactical Conflict Resolution which may act to avoid the loss of separation.
 
 Separation minima will be different from those for manned aircraft as small UAS systems are generally much smaller and often slower moving than manned aircraft. CORUS proposes the following as separation minima (tab. \ref{tab:proposedseparationMinimaforUAS})
 
@@ -135,13 +131,13 @@ Separation minima will be different from those for manned aircraft as small UAS 
 \end{table}
 
 \begin{note}
-    The \emph{BVLOS – BVLOS} separation minima are interesting us, because the \emph{autonomous mode} is considered as BVLOS to  BVLOS avoidance in case of autonomous UAS.
+    The \emph{BVLOS – BVLOS} separation minima are interesting because the \emph{autonomous mode} is considered as BVLOS to  BVLOS avoidance in case of autonomous UAS.
     
-    The \emph{separation minima} for \emph{UAS - Manned aviation} is unreasonably huge (2 nautical miles) and in current it should be considered as moving constraint.
+    The \emph{separation minima} for \emph{UAS - Manned aviation} is unreasonably huge (2 nautical miles), and in current it should be considered as moving constraint.
 \end{note}
 
-
-\paragraph{Flight Rules:} The \emph{aspects} of UAS flight rules for U-SPACE concept is summarized in table:
+\newpage
+\paragraph{Flight Rules:} The \emph{aspects} of UAS flight rules for U-SPACE concept is summarized in the table:
 \begin{table}[H]
     \centering
     \begin{tabular}{l||l}
@@ -251,32 +247,32 @@ Separation minima will be different from those for manned aircraft as small UAS 
             tracked).
         \end{tabular}\\
     \end{tabular}
-    \caption{Aspects for UAS flight rules.\cite{corus2018}}
+    \caption{Aspects of UAS flight rules.\cite{corus2018}}
     \label{tab:aspectsOfUasFlightRules}
 \end{table}
 
 \noindent Following \emph{detect and avoid} requirements can be outlined based on (tab. \ref{tab:aspectsOfUasFlightRules}).
 \begin{enumerate}
-    \item \emph{Separation in U1} - only \emph{identification services} are provided in this phase. The \emph{Detect And Avoid} support can be provided only to UAS pilot in form of visual or sound advisories. 
+    \item \emph{Separation in U1} - only \emph{identification services} are provided in this phase. The \emph{Detect And Avoid} support can be provided only to UAS pilot in the form of visual or sound advisories. 
     
     \item \emph{Separation in U2} - the \emph{position notifications} are added, enabling, preemptive collision avoidance by flight planning (mission control). The \emph{traffic information} can be added to pilot software for better situation awareness.  
 
 
     \item \emph{Separation in U3 \& U4} - the \emph{advanced} avoidance concepts, from our perspective following aspects are interesting: 
     \begin{enumerate}[a]
-        \item \emph{Cooperative Tactical Conflict Resolution} - The UTM infrastructure and hierarchy for \emph{cooperative conflict} resolution must be established. in form of UTM \emph{directives} and UAS \emph{fulfillment}.
+        \item \emph{Cooperative Tactical Conflict Resolution} - The UTM infrastructure and hierarchy for \emph{cooperative conflict} resolution must be established. In form of UTM \emph{directives} and UAS \emph{fulfillment}.
         
-        \item \emph{Detect and Avoid} - reactive obstacle/intruder avoidance and situation awareness on very high level.
+        \item \emph{Detect and Avoid} - reactive obstacle/intruder avoidance and situation awareness on a very high level.
     \end{enumerate}
     
     \item \emph{Separation from Manned Aviation} - the \emph{well clear threshold} (fig. \ref{fig:WellClearTreshold}) for manned aviation  (tab.\ref{tab:proposedseparationMinimaforUAS}) are too big. The \emph{effective} application of \emph{reactive obstacle avoidance} is not reasonable, because the manned aviation will be out of range for most sensors (except ADS-B).
 \end{enumerate}
 
 \begin{note}
-    Our work covers \emph{cooperative conflict resolution} and \emph{detect and avoid}.
+    Our work covers \emph{cooperative conflict resolution} and \emph{detect \& avoid}.
 \end{note}
-
-\paragraph{Geo-fencing Modes:} A Geo-fencing appears in U1, U2 and U3 and is successively refined. It is supported by aeronautical information for UAS systems. This table summarizes the different features by level:
+\newpage
+\paragraph{Geo-fencing Modes:} A Geo-fencing appears in U1, U2, and U3 and is successively refined. It is supported by aeronautical information for UAS systems. This table summarizes the different features by level:
 
 \begin{table}[H]
     \centering
@@ -358,17 +354,17 @@ Separation minima will be different from those for manned aircraft as small UAS 
 
 \noindent The \emph{impact of geo-fencing} on \emph{Detect and Avoid} system is following:
 \begin{enumerate}
-    \item \emph{Pre tactical} - The \emph{flight plan} (mission) is prepared to avoid all \emph{known forbidden areas}. In this phase the geo-fence covers static space constraints.
+    \item \emph{Pre tactical} - The \emph{flight plan} (mission) is prepared to avoid all \emph{known forbidden areas}. In this phase, the geo-fence covers static space constraints.
     
-    \item \emph{On board} - The \emph{flight plan} (mission) specification does not contain all static space constraints. These constraints are known prior the flight. If UAS approaches such constraints it needs to avoid them. The concept of soft constraints - restricted, but breakable space constraints emerges. 
+    \item \emph{Onboard} - The \emph{flight plan} (mission) specification does not contain all static space constraints. These constraints are known prior the flight. If UAS approaches such constraints, it needs to avoid them. The concept of soft constraints - restricted, but breakable space constraints emerge. 
     
-    \item \emph{Tactical} - The \emph{space constraints} ar updated during the flight. This can be used also for notifying the weather situations, restricted airspace and all sort of \emph{static or moving constraints}.
+    \item \emph{Tactical} - The \emph{space constraints} are updated during the flight. This can also be used for notifying the weather situations, restricted airspace, and all sort of \emph{static or moving constraints}.
     
     \item \emph{Dynamic} - The \emph{space constraints} the updates are real time.
 \end{enumerate}
 
 \begin{note}
-    The work covers on dynamic and tactical \emph{Geo-fencing}.
+    The work covers dynamic and tactical \emph{Geo-fencing}.
 \end{note}
 
 \paragraph{Actively maintaining separation during flight:} The standard ATM functionality \cite{icao4444} and \emph{Rules Of the Air} \cite{icaoAnnex2,icaoAnnex11} are covered and to be implemented for \emph{U-Space}.

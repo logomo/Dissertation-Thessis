@@ -1,28 +1,29 @@
+\newpage
 \section{\secState{D}Initial Assumptions} \label{s:initialAssumptions}
-    \noindent\emph{Initial assumptions} are following:
+    \noindent\emph{Initial assumptions} are the following:
 
     \begin{assumption}
         {Filtered sensor readings are available}\label{ass:filteredSensors}.\\
-        \emph{SensorObservation} (\ref{eq:observationClassification}) for given \emph{position}, \emph{time} returns classification of \emph{Space} which is corresponding with real situation.
+        \emph{SensorObservation} (\ref{eq:observationClassification}) for a given \emph{position}, \emph{time} returns classification of \emph{Space} which is corresponding with the real situation.
     \end{assumption}
     
     \begin{assumption}
         {There are no moving obstacles}\label{ass:noMovingObstacles}.\\
-        The initial \emph{Space Classification Function} (\ref{eq:spaceCassificationFunction}) is static for all observation times $t \in (-\infty,\infty)$. Moreover there are no \emph{intruders} or \emph{adversaries} present. 
+        The initial \emph{Space Classification Function} (\ref{eq:spaceCassificationFunction}) is static for all observation times $t \in (-\infty,\infty)$. Moreover, there are no \emph{intruders} or \emph{adversaries} present. 
     \end{assumption}
 
     \begin{assumption}
-        {The movement takes place in the unrestricted airspace }\label{ass:openAir}.
+        {The movement takes place in the unrestricted airspace.}\label{ass:openAir}
     \end{assumption}
 
     \begin{assumption}
-        {Mission consists of set of reachable waypoints}\label{ass:reachableWaypoints}.\\
-        For specific \emph{UAV system} (\ref{eq:vehicleModelAbstract}) and  \emph{Mission} (\ref{eq:missionAbstractSet}), there exists control signal $u(t)$ which satisfies \emph{Waypoint passing} (\ref{eq:waypointPassingFunction}) criterion and \emph{SafetyMargin} (\ref{eq:safetyMarginAbstract}) condition.
+        {The mission consists of a set of reachable waypoints}\label{ass:reachableWaypoints}.\\
+        For specific \emph{UAS system} (\ref{eq:vehicleModelAbstract}) and  \emph{Mission} (\ref{eq:missionAbstractSet}), there exists a control which satisfies \emph{Waypoint passing} (\ref{eq:waypointPassingFunction}) criterion and \emph{SafetyMargin} (\ref{eq:safetyMarginAbstract}) condition.
     \end{assumption}
     
     \begin{assumption}
-        {The UAV is moving with constant velocity}\label{ass:constantVelocity}.\\
-        For given \emph{UAV system} (\ref{eq:vehicleModelAbstract}) there is a subset of state $velocity(t)\subset x(t)$ which contains velocity parameters. Then there exist transformation function $LinearVelocity(\circ)$ which maps $velocity(t)$  to \emph{linear velocity} $\in\R^1$. For time $t$ in \emph{missionStart} and \emph{missionEnd} in \emph{Mission} (\ref{eq:missionAbstractSet}) constraint (\ref{eq:constantVelocityAssmunption}) with some $constantVelocity \in \R^+$ holds.
+        {The UAS is moving with constant velocity}\label{ass:constantVelocity}.\\
+        For given \emph{UAS system} (\ref{eq:vehicleModelAbstract}) there is a subset of state $velocity(t)\subset x(t)$ which contains velocity parameters. Then there exist transformation function $LinearVelocity(\circ)$ which maps $velocity(t)$  to \emph{linear velocity} $\in\R^1$. For time $t$ in \emph{missionStart} and \emph{missionEnd} in \emph{Mission} (\ref{eq:missionAbstractSet}) constraint (\ref{eq:constantVelocityAssmunption}) with some $constantVelocity \in \R^+$ holds.
 
         \begin{equation}\label{eq:constantVelocityAssmunption}
             \forall t \in \left[\begin{aligned}&missionStart,\\&missionEnd\end{aligned}\right]: LinearVelocity(velocity(t))=constantVelocity

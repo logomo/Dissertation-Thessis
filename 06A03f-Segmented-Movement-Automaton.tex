@@ -1,5 +1,5 @@
-\subsection{\secState{R}Segmented Movement Automaton}\label{s:segmentedMovementAutomaton}
-\paragraph{Motivation:} Constructing \emph{Movement Automaton} for more complex system can be tedious. Used \emph{Movement Automaton} for \emph{UAS system} (\ref{eq:UASNonlinearModelSimple}) has decoupled control which is not true for most of the copters/planes \cite{fossen2011mathematical}.
+\section{\secState{R}Segmented Movement Automaton}\label{s:segmentedMovementAutomaton}
+\paragraph{Motivation:} Constructing \emph{Movement Automaton} for the more complex system can be tedious. Used \emph{Movement Automaton} for \emph{UAS system} (\ref{eq:UASNonlinearModelSimple}) has decoupled control which is not true for most of the copters/planes \cite{fossen2011mathematical}.
 
 \paragraph{Partitioning UAS State Space:} Proposed movement automaton is defined by its Movement set (tab. \ref{tab:movements1},\ref{tab:movements2}). Those can be scaled depending on maneuverability in the  \emph{Initial state} $state(0)$:
 \begin{enumerate}
@@ -29,16 +29,15 @@
     \begin{note}
         The interval length depends on model dynamics. The rule of thumb is to keep maximal climb/descend/turn/acceleration rates near constant value. 
     \end{note}
-
-\newpage        
-\noindent When partitioning of \emph{all impact States} finishes, the count of partitions is given as product of \emph{count of partitions} for each member of \emph{Impact States}:
+      
+\noindent When partitioning of \emph{all impact States} finishes, the count of partitions is given as the product of \emph{count of partitions} for each member of \emph{Impact States}:
     
     \begin{equation}
         partition Count = \prod_{impactState \in}^{ImpactStates} |impactStateIntervals(impactState)| 
     \end{equation}
     
     \begin{note}
-        Try to keep the count of partitions to minimum, each new interval increases the count of partitions geometrically. 
+        Try to keep the count of partitions to a minimum; each new interval increases the count of partitions geometrically. 
     \end{note}
     
     There is finite number $n$ of \emph{Impacting States}, these are separated into $impactState-$ $Intervals_i$ with respective index $i \in 1\dots n$. The \emph{segment} with index defining position used \emph{impacting state} intervals is given as \emph{constrained space}:
@@ -54,7 +53,7 @@
                 \end{gathered}\right]
     \end{equation}
     
-    Each \emph{Segment} covers one of impacting state intervals combination, because the original intervals are exclusive, also \emph{Segments} are exclusive. The \emph{union} of all segments covers \emph{State Space}:
+    Each \emph{Segment} covers one of impacting state intervals combination because the original intervals are exclusive, also \emph{Segments} are exclusive. The \emph{union} of all segments covers \emph{State Space}:
     
     \begin{equation}\label{eq:segmentedStateSpace}
         StateSpace = \bigcup_{\forall\quad index \in |impactStateIntervals|^n} Segment(index)
@@ -79,7 +78,6 @@
 \end{equation}
 \end{definition}
 
-\newpage
 \noindent The acceleration $\delta v(k)$ is in interval $[-\delta v(k)_{max},\delta v(k)_{max}]$, usually set to 0 $ms^{-1}$. The change of the orientation angles for \emph{Movement Set} (eq. \ref{eq:OurMovementSet}) is given in (tab. \ref{tab:movements3},\ref{tab:movements4}).
 
 \begin{table}[H]
@@ -110,7 +108,7 @@
 \end{table}
 
 \begin{note}
-    The \emph{Trajectory} is calculated same as in (eq. \ref{eq:ourTrajectoryImplementation}). The \emph{State Projection} is given as in (eq. \ref{eq:ourStateProjection}).
+    The \emph{Trajectory} is calculated the same as in (eq. \ref{eq:ourTrajectoryImplementation}). The \emph{State Projection} is given as in (eq. \ref{eq:ourStateProjection}).
 \end{note}
 
 \noindent Then the \emph{Movement Automaton} for \emph{Segment} $\in$ \emph{State Space} is defined.
@@ -120,6 +118,11 @@
     \begin{equation} \label{eq:activeMovementAutomaton}
         ActiveMovementAutomaton:StateSpace\to MovementAutomaton
     \end{equation}
+
+\noindent Trajectory of non-segmented movement automaton (eq. \ref{eq:ourTrajectoryImplementation}) is then given as the time-series of discrete states:
+\begin{equation}\label{eq:ourTrajectoryImplementation}
+    Trajectory(state(0),Buffer)= \left\{\begin{gathered}state(0)+\sum_{j=0}^{i-1} input(movement(j)):\\i \in\left\{1\dots |Buffer|+1\right\}, \\movement(\cdot) \in Buffer\end{gathered}\right\}
+\end{equation}
     
 \noindent Selecting appropriate \emph{movement automaton} implementation (def. \ref{def:segmentMovementAutomaton}) for \emph{state(k)} $\in$ \emph{Segment} $\subset$ \emph{State Space}. The mapping function (eq. \ref{eq:activeMovementAutomaton}) is injection mapping every state(k) to Segment then \emph{Movement Automaton Implementation}. The trajectory generated is then given:
     
@@ -140,5 +143,4 @@
     
 \end{definition}
 
-\newpage
 
