@@ -1,20 +1,20 @@
 \subsection{\secState{R}UAS Model}\label{s:UASNonlinearModel}
-\paragraph{Motivation:} Simplified rigid body kinematic model will be used. This model have decoupled roll, yaw and pitch angles. The focus is on \emph{reach set approximation methods}, therefore \emph{UAS model} is simplified.
+\paragraph{Motivation:} Simplified rigid body kinematic model will be used. This model has decoupled roll, yaw and pitch angles. The focus is on \emph{reach set approximation methods}; therefore the \emph{UAS model} is simplified.
 
-\paragraph{State Vector} (eq. \ref{eq:simple3dStatevector}) defined as positional state in euclidean position in right-hand euclidean space, where \emph{x, y, z} can be abstracted as latitude, longitude, altitude.
+\paragraph{State Vector} (eq. \ref{eq:simple3dStatevector}) defined as a positional state in euclidean position in right-hand euclidean space, where \emph{x, y, z} can be abstracted as latitude, longitude, altitude.
 \begin{equation}\label{eq:simple3dStatevector}
     state = \left [ x,y,z, roll, pitch, yaw \right]^T
 \end{equation}
 
 
-\paragraph{Input Vector} (eq. \ref{eq:simple3dInputVector}) is defined as linear velocity of UAS $v$ and angular speed of rigid body $\omega_{roll}, \omega_{pitch},\omega_{yaw}$.
+\paragraph{Input Vector} (eq. \ref{eq:simple3dInputVector}) is defined as the linear velocity of UAS $v$ and angular speed of rigid body $\omega_{roll}, \omega_{pitch},\omega_{yaw}$.
 
 \begin{equation}\label{eq:simple3dInputVector}
     input = \left [ v, \omega_{roll}, \omega_{pitch},\omega_{yaw}\right ]^T
 \end{equation}
 
 
-\noindent Velocity vector function (eq. \ref{eq:simple3dvelocityDistribution})  is is defined through standard rotation matrix  and linear velocity $v$, oriented velocity [$v_x$, $v_y$, $v_z$] given by (eq. \ref{eq:UASNonlinearModelSimple}).
+\noindent Velocity vector function (eq. \ref{eq:simple3dvelocityDistribution}) is defined through the standard rotation matrix  and linear velocity $v$, oriented velocity [$v_x$, $v_y$, $v_z$] given by (eq. \ref{eq:UASNonlinearModelSimple}).
 
 \begin{equation}\label{eq:simple3dvelocityDistribution}
     \begin{bmatrix}

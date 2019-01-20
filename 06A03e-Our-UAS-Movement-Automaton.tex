@@ -6,13 +6,13 @@
  
 
 \begin{assumption}\label{ass:transitionTime}
-    Let assume that \emph{transition time} of \emph{roll, pitch, yaw, linear velocity} is $0 s$.
+    Let assume that \emph{transition time} of \emph{roll, pitch, yaw, and the linear velocity} is $0 s$.
 \end{assumption}
 
 Under the assumption (as. \ref{ass:transitionTime}) the \emph{movement transitions} (def. \ref{def:movementTransition}) have zero duration. Therefore movement primitives can be considered as movements.
 
 \begin{note}
-    The assumption (as. \ref{ass:transitionTime}) can be relaxed under condition that \emph{path tracking controller exists}.
+    The assumption (as. \ref{ass:transitionTime}) can be relaxed under the condition that \emph{path tracking controller exists}.
 \end{note}
 
 \paragraph{Movements} satisfying (def. \ref{def:Movement}), for the nonlinear model (eq. \ref{eq:UASNonlinearModelSimple}) reduced to \emph{discrete model} (eq. \ref{eq:uasLinearDiscreteModel}), are given by \emph{apply movements} function (eq. \ref{eq:applyMovement}, \ref{eq:applyMovement1}, \ref{eq:applyMovement2}).
@@ -21,9 +21,9 @@ Under the assumption (as. \ref{ass:transitionTime}) the \emph{movement transitio
     state(k+1) = applyMovement(state(k), input(k)) 
 \end{equation}
 
-\paragraph{Movement Set} for discrete model (eq. \ref{eq:uasLinearDiscreteModel}) is defined as set of unitary movements on main axes (tab. \ref{tab:movements1}) and diagonal axes (tab. \ref{tab:movements2}). 
+\paragraph{Movement Set} for the discrete model (eq. \ref{eq:uasLinearDiscreteModel}) is defined as a set of unitary movements on main axes (tab. \ref{tab:movements1}) and diagonal axes (tab. \ref{tab:movements2}). 
 
-The maneuvering capability of several commercial small fixed wing UAS were abstracted together. The turning rate on horizontal/vertical is defined as $15^\circ$.
+The maneuvering capability of several commercial small fixed-wing UAS was abstracted together. The turning rate on horizontal/vertical is defined as $15^\circ$.
 
 The deltas are posed in \emph{UAS body-fixed coordinate frame} (ap. \ref{sec:complementsOfAlgebra}) for discrete time $k$. 
 
@@ -59,7 +59,7 @@ The deltas are posed in \emph{UAS body-fixed coordinate frame} (ap. \ref{sec:com
 \end{table}
 
 \begin{note}
-    \emph{Movement set} in shorten form is given as:
+    \emph{Movement set} in shortened form is given as:
     \begin{equation}\label{eq:OurMovementSet}
         Movement Set= \left\{
         \begin{gathered}
@@ -70,7 +70,7 @@ The deltas are posed in \emph{UAS body-fixed coordinate frame} (ap. \ref{sec:com
     \end{equation}
 \end{note}
 
-\emph{Implemented movement set example} (fig. \ref{fig:implementedMovementSetExample}) shows the movement used as basic building blocs of the trajectory for fixed wing UAS
+The \emph{implemented movement set example} (fig. \ref{fig:implementedMovementSetExample}) shows the movement used as basic building blocs of the trajectory for fixed-wing UAS:
 \begin{enumerate}
     \item \emph{Initial position} (red plane) - the initial position, before any movement execution.
     
@@ -103,7 +103,7 @@ The deltas are posed in \emph{UAS body-fixed coordinate frame} (ap. \ref{sec:com
 \end{assumption}
 
 \begin{note}
-  The buffer have finite count $n$ of movements stored. The buffer is the planning instrument used by higher level navigation/avoidance algorithm to control UAS (Control/Command interface) (fig. \ref{fig:AvoidanceFrameworkConceptNew}).
+  The buffer has finite count $n$ of movements stored. The buffer is the planning instrument used by higher level navigation/avoidance algorithm to control UAS (Control/Command interface) (fig. \ref{fig:AvoidanceFrameworkConceptNew}).
 \end{note}
 
 %\noindent Trajectory (eq. \ref{eq:ourTrajectoryImplementation}) is then %given as the time-series of discrete states:
@@ -132,5 +132,5 @@ The discrete trajectory (eq. \ref{eq:ourTrajectoryEvolution}) is ordered set of 
 \noindent The movement$(k)$ vector is selected from movement tables (tab. \ref{tab:movements1}, \ref{tab:movements2}).
 
 \begin{note}
-	Parameter movement($\cdot$) (eq. \ref{eq:ourTrajectoryEvolution}) is movement order index in buffer (eq. \ref{eq:ourBuffer}).
+	Parameter movement($\cdot$) (eq. \ref{eq:ourTrajectoryEvolution}) is a movement order index in buffer (eq. \ref{eq:ourBuffer}).
 \end{note}
