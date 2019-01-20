@@ -218,7 +218,7 @@
 \contentsline {paragraph}{Trajectory}{99}{section*.187}
 \contentsline {section}{\numberline {6.3} Space Discretization - Avoidance Grid}{101}{section.6.3}
 \contentsline {paragraph}{Operation Space:}{101}{section*.188}
-\contentsline {paragraph}{Motivation for Discretization:}{101}{section*.189}
+\contentsline {paragraph}{A Motivation for Discretization:}{101}{section*.189}
 \contentsline {paragraph}{LiDAR Swipe:}{101}{section*.190}
 \contentsline {paragraph}{LiDAR Swipe Portioning:}{101}{section*.191}
 \contentsline {paragraph}{Cell:}{102}{section*.192}
