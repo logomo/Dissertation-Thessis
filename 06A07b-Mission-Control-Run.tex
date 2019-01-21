@@ -209,7 +209,7 @@ The \emph{actual threats} are set as empty sets for \emph{decision time} $t_i=0$
     \end{note}
 \end{definition}
 
-\begin{definition}{Unreachable Waypoint}\label{def:unreachable Waypoint}. The \emph{Goal Waypoint} is evaluated as unreachable in decision time $t_i$ when \emph{Avoidance Grid Run} (alg. \ref{alg:FindBestPathAvoidanceGrid}) can not find the \emph{navigation/avoidance path} leading to it.
+\begin{definition}{Unreachable Waypoint}\label{def:unreachable Waypoint}. The \emph{Goal Waypoint} is evaluated as unreachable in decision time $t_i$ when \emph{Avoidance Grid Run} (alg. \ref{alg:FindBestPathAvoidanceGrid}) cannot find the \emph{navigation/avoidance path} leading to it.
 
 \noindent Formally: The \emph{Avoidance/Navigation Grid} has range defined as \emph{final layer distance}. When the \emph{Goal Waypoint} is in  \emph{range} of \emph{Grid}:
 
@@ -450,7 +450,7 @@ The key idea is to explain what happen in one \emph{decision frame}. The \emph{m
         
         \item[c.] \emph{Handling} - the events are handled by invoking the \emph{situation assessment} or by rule engine invocation (sec. \ref{s:RuleEngineArchitecture}).
         
-        \item[d.] \emph{Prioritizing} - the multiple events can be risen during one \emph{decision frame}. Some events can not be merged and needs to have proper prioritization before handling, like the \emph{obstacle detection} events before \emph{intruder detection event}.
+        \item[d.] \emph{Prioritizing} - the multiple events can be risen during one \emph{decision frame}. Some events cannot be merged and needs to have proper prioritization before handling, like the \emph{obstacle detection} events before \emph{intruder detection event}.
     \end{itemize}
     
     \item[4.] \emph{Situation Assessment} - invoked by \emph{event buffer} o assess situation, responsible for proper \emph{avoidance run} (sec. \ref{s:aviudabceGridRun}) dataset preparation and invocation. The main responsibility is to check \emph{planned trajectory feasibility} stored in \emph{movement buffer} as \emph{planned movements}.
@@ -461,7 +461,7 @@ The key idea is to explain what happen in one \emph{decision frame}. The \emph{m
     \begin{itemize}
         \item[a.] \emph{Past movements} - already executed movements in \emph{past decision frames}.
         
-        \item[b.] \emph{Executed movement} - actually executed movement in current decision frame, this movement can not be changed.
+        \item[b.] \emph{Executed movement} - actually executed movement in current decision frame, this movement cannot be changed.
         
         \item[c.] \emph{Future movements} - future planned movements to be executed after \emph{current decision frame} expires. These movements outlines planned trajectory (predictor mode sec. \ref{s:referenceTrajectoryGenerator}).
     \end{itemize}

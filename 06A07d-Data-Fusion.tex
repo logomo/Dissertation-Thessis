@@ -2,17 +2,17 @@
 
 \noindent The data fusion interfaces \emph{Sensor Field} and \emph{Information Sources} from \emph{cell/trajectory properties}. The \emph{Data Fusion Function} is outlined in (\ref{eq:DataFusionFunction}). 
 
-First there will be an outline of \emph{Partial Ratings} commutation. Then these ratings will be discredited into Boolean values as properties of \emph{Avoidance Grid/Trajectory}. Then these Boolean values will be used for further classification of  space into \emph{Free(t), Occupied(t), Restricted(t)} and \emph{Uncertain(t)}.
+First, there will be an outline of \emph{Partial Rating} commutation. Then these ratings will be discredited into Boolean values as properties of \emph{Avoidance Grid/Trajectory}. Then these Boolean values will be used for further classification of  space into \emph{Free(t), Occupied(t), Restricted(t)} and \emph{Uncertain(t)}.
 
-All mentioned ratings are result of \emph{Filtered Sensor Readings} from \emph{Sensor Field} and \emph{Information Sources} with prior processing. This section will focus on \emph{final fuzzy value calculation} and \emph{discretization}. 
+All mentioned ratings are the result of \emph{Filtered Sensor Readings} from \emph{Sensor Field} and \emph{Information Sources} with prior processing. This section will focus on \emph{final fuzzy value calculation} and \emph{discretization}. 
 \begin{note}
-    All rating values are in \emph{range:} $[0,1]$ and they were introduced in previous sections.
+    All rating values are in the \emph{range:} $[0,1]$, and they were introduced in previous sections.
 \end{note}
 
 
 \paragraph{Visibility:} The \emph{sensor reading} of \emph{sensor} if \emph{Sensor field} returns a value of \emph{visibility} for cell space in time of decision $t_i$.
 
-The \emph{visibility} for cell is given in (eq. \ref{eq:visibilityForCell}) as minimal visibility calculated from all capable sensors in \emph{Sensor Field}.
+The \emph{visibility} for the cell is given in (eq. \ref{eq:visibilityForCell}) as minimal visibility calculated from all capable sensors in \emph{Sensor Field}.
 
 \begin{equation}\label{eq:visibilityForCell}
     visibility(cell_{i,j,k}) = \min \left\{\begin{aligned}visibility(cell_{i,j,k},&sensor_i):\\&\forall sensor_i \in Sensor Field\end{aligned}\right\}
@@ -21,10 +21,10 @@ The \emph{visibility} for cell is given in (eq. \ref{eq:visibilityForCell}) as m
 \noindent The example of \emph{visibility} calculation for \emph{LiDAR} sensor is given in (sec. \ref{s:mapObstacles}).
 
 \begin{note}
-    Sensor reliability for \emph{visibility} is already accounted prior \emph{data fusion}. If not \emph{weighted average} should be used instead. 
+    Sensor reliability for \emph{visibility} is already accounted for prior \emph{data fusion}. If not \emph{weighted average} should be used instead. 
 \end{note}
 
-\paragraph{Detected Obstacle:} The \emph{physical obstacles} are detected by \emph{sensors} is \emph{Sensor Field}. Each \emph{sensor} returns \emph{detected obstacle rating} in  range $[0,1]$ reflecting the probability of obstacle occurrence in given cell.
+\paragraph{Detected Obstacle:} The \emph{physical obstacles} are detected by \emph{sensors} is \emph{Sensor Field}. Each \emph{sensor} returns \emph{detected obstacle rating} in the range $[0,1]$ reflecting the probability of obstacle occurrence in a given  cell.
 
 The \emph{maximal value} of \emph{detected obstacle} rating is selected from readings multiplied by \emph{visibility rating} to enforce \emph{visibility bias}.
 
@@ -34,9 +34,9 @@ The \emph{maximal value} of \emph{detected obstacle} rating is selected from rea
 
 \noindent The example of \emph{detected obstacle rating} calculation for \emph{LiDAR} sensor is given in (sec. \ref{s:detectedObstacles}).
 
-\paragraph{Map Obstacle:} The \emph{Information Sources} are feeding \emph{Avoidance Grid} with partial information of \emph{Map obstacle rating}. \emph{Map Obstacle Rating} shows the certainty that \emph{charted obstacle} is in given cell. This property is bound to \emph{Information Source} and it has \emph{range} in  $[0,1]$.
+\paragraph{Map Obstacle:} The \emph{Information Sources} are feeding \emph{Avoidance Grid} with partial information of \emph{Map obstacle rating}. \emph{Map Obstacle Rating} shows the certainty that \emph{charted obstacle} is in a given cell. This property is bound to \emph{Information Source}, and it has the \emph{range} in  $[0,1]$.
 
-The \emph{Map Obstacle Rating} for cell (eq. \ref{eq:mapObstacleRatingForCell}) is calculated as product of maximal \emph{Map Obstacle Rating} and \emph{inverse visibility}. This gives \emph{visibility biased} certainty of \emph{Map Obstacle}.
+The \emph{Map Obstacle Rating} for a cell (eq. \ref{eq:mapObstacleRatingForCell}) is calculated as the product of maximal \emph{Map Obstacle Rating} and \emph{inverse visibility}. This gives \emph{visibility biased} certainty of \emph{Map Obstacle}.
 
 \begin{multline}\label{eq:mapObstacleRatingForCell}
     map(cell_{i,j,k}) = \max 
@@ -46,9 +46,9 @@ The \emph{Map Obstacle Rating} for cell (eq. \ref{eq:mapObstacleRatingForCell}) 
 \noindent The example of \emph{Map Obstacle Rating} calculation is given in (sec. \ref{s:mapObstacles}).
 
 
-\paragraph{Intruder:} There is a set of \emph{Active Intruders}, each intruder is using its own \emph{parametric intersection model}. This parametric \emph{intersection} model calculates \emph{partial intersection ratings} representing \emph{intersection certainty} ranging in $[0,1]$. The more \emph{partial intersection rating} is closer to 1 the higher is the probability of aerial collision with that intruder in that cell. 
+\paragraph{Intruder:} There is a set of \emph{Active Intruders}, each intruder is using its \emph{parametric intersection model}. This parametric \emph{intersection} model calculates \emph{partial intersection ratings} representing \emph{intersection certainty} ranging in $[0,1]$. The more \emph{partial intersection rating} is closer to 1 the higher is the probability of aerial collision with that intruder in that cell. 
 
-The \emph{geometrical bias} is used for cumulative of multiple intruders, the \emph{intruders are not cooperative}, therefore their occurrence can not be addressed by simple \emph{maximum}. The proposed formula (eq. \ref{eq:intruderRatingForCell}) is simply bypassing the intruder rating if there is one intruder. If there  is more intruders the geometrical bias is applied.
+The \emph{geometrical bias} is used for cumulative of multiple intruders; the \emph{intruders are not cooperative}; therefore their occurrence cannot be addressed by the simple \emph{maximum}. The proposed formula (eq. \ref{eq:intruderRatingForCell}) is simply bypassing the intruder rating if there is one intruder. If there  is more intruders the geometrical bias is applied.
 
 
 \begin{equation}\label{eq:intruderRatingForCell}
@@ -133,7 +133,7 @@ The high values of \emph{Visibility} (eq. \ref{eq:visibilityForCell}) and \emph{
 
 \paragraph{Space Classification:} The \emph{Data Fusion Function} is outlined in (\ref{eq:DataFusionFunction}). This classification is resulting into four distinct space sets.
 
-The \emph{Uncertain} space for decision time $t_i$ is a portion of \emph{Avoidance Grid} which \emph{UAS} can not \emph{read} with \emph{Sensor Field}. The \emph{cells} with $\neg Visible$ property. The \emph{Uncertain} space is given by (eq. \ref{eq:UncertainDataFusion}).
+The \emph{Uncertain} space for decision time $t_i$ is a portion of \emph{Avoidance Grid} which \emph{UAS} cannot \emph{read} with \emph{Sensor Field}. The \emph{cells} with $\neg Visible$ property. The \emph{Uncertain} space is given by (eq. \ref{eq:UncertainDataFusion}).
 
 \begin{equation}\label{eq:UncertainDataFusion}
     Uncertain(t_i) = \left\{cell_{i,j,k}:cell_{i,j,k}\in AvoidanceGrid(t_i),cell_{i,j,k}.\neg Visible \right\}
