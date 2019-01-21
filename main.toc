@@ -348,10 +348,10 @@
 \contentsline {paragraph}{Reachability:}{161}{section*.313}
 \contentsline {paragraph}{Discretization:}{162}{section*.314}
 \contentsline {paragraph}{Space Classification:}{163}{section*.316}
-\contentsline {subsection}{\numberline {6.7.2} Avoidance Grid Run}{165}{subsection.6.7.2}
-\contentsline {paragraph}{Main Goal:}{165}{section*.317}
-\contentsline {paragraph}{Space Assessment Principle:}{165}{section*.318}
-\contentsline {paragraph}{Finding Best Path:}{166}{section*.320}
+\contentsline {subsection}{\numberline {6.7.2} Avoidance Grid Run}{164}{subsection.6.7.2}
+\contentsline {paragraph}{Main Goal:}{164}{section*.317}
+\contentsline {paragraph}{Space Assessment Principle:}{164}{section*.318}
+\contentsline {paragraph}{Finding Best Path:}{165}{section*.320}
 \contentsline {paragraph}{Space Assessment Example:}{168}{section*.321}
 \contentsline {paragraph}{Visibility Assessment:}{168}{section*.323}
 \contentsline {paragraph}{Reachability Assessment:}{169}{section*.325}
