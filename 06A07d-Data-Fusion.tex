@@ -48,7 +48,7 @@ The \emph{Map Obstacle Rating} for a cell (eq. \ref{eq:mapObstacleRatingForCell}
 
 \paragraph{Intruder:} There is a set of \emph{Active Intruders}, each intruder is using its \emph{parametric intersection model}. This parametric \emph{intersection} model calculates \emph{partial intersection ratings} representing \emph{intersection certainty} ranging in $[0,1]$. The more \emph{partial intersection rating} is closer to 1 the higher is the probability of aerial collision with that intruder in that cell. 
 
-The \emph{geometrical bias} is used for cumulative of multiple intruders; the \emph{intruders are not cooperative}; therefore their occurrence cannot be addressed by the simple \emph{maximum}. The proposed formula (eq. \ref{eq:intruderRatingForCell}) is simply bypassing the intruder rating if there is one intruder. If there  is more intruders the geometrical bias is applied.
+The \emph{geometrical bias} is used for cumulative of multiple intruders; the \emph{intruders are not cooperative}; therefore their occurrence cannot be addressed by the simple \emph{maximum}. The proposed formula (eq. \ref{eq:intruderRatingForCell}) is simply bypassing the intruder rating if there is one intruder. If there  are more intruders, the geometrical bias is applied.
 
 
 \begin{equation}\label{eq:intruderRatingForCell}
@@ -59,7 +59,7 @@ The \emph{geometrical bias} is used for cumulative of multiple intruders; the \e
 
 \paragraph{Constraint:} The \emph{constraints} are coming from various \emph{Information Sources}, the \emph{hierarchical constraint application} is resolved by higher level logic. All \emph{constraints} in this context are considered as \emph{hard}.
 
-The \emph{Constraints rating} (eq. \ref{eq:constraintRatingForCell}) is in \emph{range} $[0,1]$ reflecting certainty of constraint application in cell (usually 1).
+The \emph{Constraints rating} (eq. \ref{eq:constraintRatingForCell}) is in the \emph{range} $[0,1]$ reflecting certainty of constraint application in the cell (usually 1).
 
 \begin{equation}\label{eq:constraintRatingForCell}
     constraint(cell_{i,j,k}) = \max \left\{\begin{aligned}constraint(&cell_{i,j,k},source_i):\\&\forall source_i \in InformationSources\end{aligned}\right\}
@@ -68,22 +68,22 @@ The \emph{Constraints rating} (eq. \ref{eq:constraintRatingForCell}) is in \emph
 \noindent The \emph{Constraint Rating} calculation example for \emph{static} constraints is given in (sec. \ref{s:virtualConstraints}), the example for \emph{moving} constraints is given in (sec. \ref{s:MovingVirtualConstraints}).
 
 \begin{note}{Weather}
-    is already considered in constraints, the weather is handled as soft/hard static/moving constraints.
+    is already considered in constraints; the weather is handled as soft/hard static/moving constraints.
 \end{note}
 
-\paragraph{Threat:} The concept of threat is \emph{rating of expected harm} to receive in given segment of space. The threat can be time-bound to \emph{decision time $t_i$} (time sensitive \emph{intruder intersection models}).
+\paragraph{Threat:} The concept of threat is a \emph{rating of expected harm} to receive in a given portion of space. The threat can be time-bound to \emph{decision time $t_i$} (time sensitive \emph{intruder intersection models}).
 
-The \emph{harm prioritization} is addressed by higher navigation logic (fig. \ref{fig:missionControlRunActivityDiagram}). All \emph{sources of harm} are considered as equal. Threat is formalized in \emph{following definition}:
+The \emph{harm prioritization} is addressed by higher navigation logic (fig. \ref{fig:missionControlRunActivityDiagram}). All \emph{sources of harm} are considered as equal. The threat is formalized in the \emph{following definition}:
 
-\begin{definition}{Threat}\label{def:threat} is considered as any source of harm. The threat is \emph{maximal aggregation} of various harm ratings. Our \emph{threat} for specific cell is defined by (eq. \ref{eq:threatRatingForCell}).
+\begin{definition}{The Threat}\label{def:threat} is considered as any source of harm. The threat is a \emph{maximal aggregation} of various harm ratings. Our \emph{threat} for a  specific cell is defined by (eq. \ref{eq:threatRatingForCell}).
     \begin{equation}\label{eq:threatRatingForCell}
         threat(cell_{i,j,k}) = \max\left\{\begin{gathered}obstacle(cell_{i,j,k}),map(cell_{i,j,k}),\\intruder(cell_{i,j,k}),constraint(cell_{i,j,k})\end{gathered}\right\}
     \end{equation}
 \end{definition}
 
-\paragraph{Reachibility:} The \emph{Reachibility} for trajectory reflects how safe is \emph{path along}. The \emph{Threat} (def. \ref{def:threat}) for each cell has been already assessed.  The set of \emph{Passing Cells} is defined in \emph{Trajectory Footprint} (eq. \ref{eq:setOfPassedCells}).
+\paragraph{Reachability:} The \emph{Reachability} for trajectory reflects how safe is \emph{path along}. The \emph{Threat} (def. \ref{def:threat}) for each cell has been already assessed.  The set of \emph{Passing Cells} is defined in \emph{Trajectory Footprint} (eq. \ref{eq:setOfPassedCells}).
 
-\noindent The \emph{Trajectory Reachibility} is given as product of \emph{Threats} along the trajectory (eq. \ref{eq:trajectoryReachibility}). The \emph{Trajectory Reachibility} can be calculated for each \emph{trajectory segment} given as $\{movement_1,\dots,movement_i\}$ $\subset$ $Buffer$ originating from $state_0$.
+\noindent The \emph{Trajectory Reachability} is given as product of \emph{Threats} along the trajectory (eq. \ref{eq:trajectoryReachibility}). The \emph{Trajectory Reachability} can be calculated for each \emph{trajectory segment} given as $\{movement_1,\dots,movement_i\}$ $\subset$ $Buffer$ originating from $state_0$.
 
 
 \begin{equation}\label{eq:trajectoryReachibility}
@@ -91,20 +91,20 @@ The \emph{harm prioritization} is addressed by higher navigation logic (fig. \re
 \end{equation}
 
 \begin{note}
-    The \emph{Reachibility} of \emph{trajectory} segment gives the property of \emph{safety} of route from beginning, until last point of segment. There can be a very unsafe trajectory which is very safe from beginning.
+    The \emph{Reachability} of \emph{trajectory} segment gives the property of \emph{safety} of route from beginning, until last point of segment. There can be a very unsafe trajectory which is very safe from beginning.
 \end{note}
 
 
-The \emph{Reachibility} of \emph{cell} is given by best trajectory segment passing through the \emph{given cell}. This is given by property, that every trajectory is originating from root $state_0$, which means that one safe route is sufficient to reach space in cell.
+The \emph{Reachability} of \emph{cell} is given by best trajectory segment passing through the \emph{given cell}. This is given by property, that every trajectory is originating from root $state_0$, which means that one safe route is sufficient to reach space in cell.
 
 The \emph{Trajectory segment} reachability is sufficient, because the overall performance is not interesting, the \emph{local reachability} is sufficient. The cell reachibility is formally defined in (eq. \ref{eq:cellReachibility}).
 
 \begin{multline}\label{eq:cellReachibility}
-    reachibility(cell_{i,j,k}) = \max\{Trajectory.Segment(cell_{i,j,k}).Reachibility: \\\forall Trajectory \in Passing Trajectories (cell{i,j,k})\}
+    reachability(cell_{i,j,k}) = \max\{Trajectory.Segment(cell_{i,j,k}). Reachability: \\\forall Trajectory \in Passing Trajectories (cell{i,j,k})\}
 \end{multline}
     
 \begin{note}
-    Function Trajectory.Segment($cell_{i,j,k}$).Reachibility gives same results for any segment in $cell_{i,j,k}$, because (eq. \ref{eq:trajectoryReachibility}) accounts each cell $threat$ only once.
+    Function Trajectory.Segment($cell_{i,j,k}$). Reachability gives same results for any segment in $cell_{i,j,k}$, because (eq. \ref{eq:trajectoryReachibility}) accounts each cell $threat$ only once.
 \end{note}
 
 \paragraph{Discretization:} The \emph{fault tolerant} implementation needs to implement sharp Boolean values of properties mentioned before. The \emph{fuzzy values} are usually threshold to Boolean equivalent. The \emph{operational standards} for \emph{Manned Aviation} \cite{icao4444} demands the fail rate below $10^{-7}$, because there is no definition for \emph{UAS} the \emph{minimal fail rate} is expected to be at similar level.
@@ -133,7 +133,7 @@ The high values of \emph{Visibility} (eq. \ref{eq:visibilityForCell}) and \emph{
 
 \paragraph{Space Classification:} The \emph{Data Fusion Function} is outlined in (\ref{eq:DataFusionFunction}). This classification is resulting into four distinct space sets.
 
-The \emph{Uncertain} space for decision time $t_i$ is a portion of \emph{Avoidance Grid} which \emph{UAS} cannot \emph{read} with \emph{Sensor Field}. The \emph{cells} with $\neg Visible$ property. The \emph{Uncertain} space is given by (eq. \ref{eq:UncertainDataFusion}).
+The \emph{Uncertain} space for decision time $t_i$ is a portion of \emph{Avoidance Grid} which \emph{UAS} can not \emph{read} with \emph{Sensor Field}. The \emph{cells} with $\neg Visible$ property. The \emph{Uncertain} space is given by (eq. \ref{eq:UncertainDataFusion}).
 
 \begin{equation}\label{eq:UncertainDataFusion}
     Uncertain(t_i) = \left\{cell_{i,j,k}:cell_{i,j,k}\in AvoidanceGrid(t_i),cell_{i,j,k}.\neg Visible \right\}

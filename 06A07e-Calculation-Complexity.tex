@@ -88,10 +88,10 @@ The \emph{Maneuverability Uncertainty Intersection} (sec. \ref{s:uncertaintyInte
     \texttt{Soft Constraints Intersection:}\\ \mathscr{O}(|cells|\times|soft Constraints| \times \max |constraint Points|^2)
 \end{multline*}
 
-\noindent Each \emph{threat} category application in \emph{Mission Control Run} is done after \emph{each intersection} in 7\textsuperscript{th} to 10\textsuperscript{th} step. All ratings (tab. \ref{tab:defuzificationRatings}) expect $Reachibility(cell_{ij,k})$ and $Reachibility(Trajectory)$  are calculated. The \emph{calculation complexity} boundary for one \emph{reachibility rating} is $\mathscr{O}(1)$. (eq. \ref{eq:trajectoryReachibility}, \ref{eq:cellReachibility}). The \emph{Recalculate Reachibility} operation applied $4\times$ have maximal \emph{complexity} boundary given as follow:
+\noindent Each \emph{threat} category application in \emph{Mission Control Run} is done after \emph{each intersection} in 7\textsuperscript{th} to 10\textsuperscript{th} step. All ratings (tab. \ref{tab:defuzificationRatings}) expect $Reachability(cell_{ij,k})$ and $Reachability(Trajectory)$  are calculated. The \emph{calculation complexity} boundary for one \emph{reachability rating} is $\mathscr{O}(1)$. (eq. \ref{eq:trajectoryReachibility}, \ref{eq:cellReachibility}). The \emph{Recalculate Reachability} operation applied $4\times$ have maximal \emph{complexity} boundary given as follow:
 
 \begin{equation*}
-    \texttt{Recalculate Reachibility: } \mathscr{O}(4 \times (|nodes| + |cells|))
+    \texttt{Recalculate Reachability: } \mathscr{O}(4 \times (|nodes| + |cells|))
 \end{equation*}
 
 \noindent Each time at the end of in 7\textsuperscript{th} to 10\textsuperscript{th} step the \emph{Avoidance Path is Selected}. The \emph{Worst Case} (expected) scenario is to \emph{select} four paths for each \emph{treath} application. The algorithm for \emph{best path selection} (alg. \ref{alg:FindBestPathAvoidanceGrid}) iterates over all \emph{cells} in avoidance grid and over all \emph{trajectories} passing through that cell. The complexity boundary for \emph{path selection} is given as follow:

@@ -294,7 +294,7 @@ The \emph{intruders} source are valid \emph{active intruders notifications} rece
         
         \item \emph{Waypoint Reached} (2\textsuperscript{nd} step) - the \emph{Navigation Loop} run is forced to set goal \emph{Goal Waypoint}. If \emph{last waypoint} from \emph{Mission} (sec. \ref{s:mission}) the \emph{Landing Procedure} is enforced.
         
-        \item \emph{Waypoint Unreachable} - this type of event is very situations based. The \emph{Waypoint Reachibility} (assumption. \ref{ass:reachableWaypoints}) has not been relaxed, therefore this event is not properly handled in approach. The \emph{implementation} considers \emph{selecting next waypoint in mission} as a goal waypoint of \emph{first waypoint} if \emph{unreached/unreachable waypoints} are exhausted. 
+        \item \emph{Waypoint Unreachable} - this type of event is very situations based. The \emph{Waypoint Reachability} (assumption. \ref{ass:reachableWaypoints}) has not been relaxed, therefore this event is not properly handled in approach. The \emph{implementation} considers \emph{selecting next waypoint in mission} as a goal waypoint of \emph{first waypoint} if \emph{unreached/unreachable waypoints} are exhausted. 
     \end{enumerate}
     
     \item \emph{Navigation Mode Events} are triggered if \emph{Operation Mode} is set as \emph{Navigation}:
@@ -389,7 +389,7 @@ If the \emph{Operation Mode} is set as \emph{Navigation Mode} the algorithm cont
         \item[4.] \emph{Obstacle Avoidance Path} - continue with 12\textsuperscript{th} step.
     \end{itemize}
     \begin{note}
-        The \emph{Waypoint Reachibility} (assumption \ref{ass:reachableWaypoints}) is weakened to the point that it is necessary for waypoint to be \emph{Reachable} only in static obstacle environment. The \emph{Constrained} and \emph{Occupied} spaces are shrunk in following matter to increase UAS survival chances. There are following relaxations with their conditions:
+        The \emph{Waypoint Reachability} (assumption \ref{ass:reachableWaypoints}) is weakened to the point that it is necessary for waypoint to be \emph{Reachable} only in static obstacle environment. The \emph{Constrained} and \emph{Occupied} spaces are shrunk in following matter to increase UAS survival chances. There are following relaxations with their conditions:
         \begin{itemize}
             \item[1.] \emph{Soft Constraint Relaxation} - they are breakable by default.  This kind of situation is allowed to happen under any circumstances. 
             
