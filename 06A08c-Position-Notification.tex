@@ -3,18 +3,18 @@
 \paragraph{Motivation:} The \emph{position notification} (tab. \ref{tab:positionNotification}) is designed for further \emph{collision case resolution} (sec. \ref{sec:collisionCase}). It is similar to ADS-B\footnote{ADS-B versions and message containment: \url{https://mode-s.org/decode/adsb/version.html}.} message information. 
 
 
-The main purpose is to broadcast the \emph{position notification} in \emph{controlled aerospace}. The broadcast for \emph{non-controlled} airspace needs to contain \emph{intruder properties}, \emph{preferred separation mode} and \emph{near miss margin}.
+The main purpose is to broadcast the \emph{position notification} in \emph{controlled aerospace}. The broadcast for \emph{non-controlled} airspace needs to contain \emph{intruder properties}, \emph{preferred separation mode} and \emph{near-miss margin}.
 
 \paragraph{Position:} The position is defined in \emph{Global Coordinate System} using GPS for latitude and longitude. The barometric altitude is required for controlled airspace, preferred for non-controlled airspace.
 
 \paragraph{Heading:} The \emph{Linear Velocity} combined with heading in standard \emph{North-East} coordinate frame is used.
 
-\paragraph{Flight Levels:} The \emph{flight level} is notified to UTM for \emph{collision detection} purposes. There is \emph{main flight level} where \emph{aircraft} belong physically. There is \emph{passing flight level} form which/to which is aircraft emerging \cite{icao4444}. 
+\paragraph{Flight Levels:} The \emph{flight level} is notified to UTM for \emph{collision detection} purposes. There is a \emph{main flight level} where \emph{aircraft} belong physically. There is a \emph{passing flight level} form which/to which is aircraft emerging \cite{icao4444}. 
 
 \paragraph{Aircraft Category:} The aircraft category impacts the prioritization of \emph{role assessment} by UTM/ATM. The following categorization is proposed by \emph{manned aviation pilot community}, from the highest to the lowest right of the way priority:
 
 \begin{enumerate}
-    \item \emph{Manned aviation in distress} \cite{icaoAnnex2} -  the aircraft with impaired capability switched to emergency mode. The emergency mode is usually acknowledged by authority in controlled airspace. 
+    \item \emph{Manned aviation in distress} \cite{icaoAnnex2} -  the aircraft with impaired capability switched to emergency mode. The emergency mode is usually acknowledged by the authority in controlled airspace. 
     
     \item \emph{Balloon} (manned) \cite{icaoAnnex2} - the aircraft with \emph{altitude} control and very slow dynamics implying very low maneuverability.  
     
@@ -24,7 +24,7 @@ The main purpose is to broadcast the \emph{position notification} in \emph{contr
     
     \item \emph{Airship} (manned) \cite{icaoAnnex2} - the airship have \emph{own propulsion} and full maneuverability, the constraint is low acceleration/deceleration and huge turning radius.
     
-    \item \emph{Other manned aviation} \cite{icaoAnnex2} - containing all vehicles with required level of \emph{airworthiness} for given operational \emph{altitude}. They usually have required maneuverability.
+    \item \emph{Other manned aviation} \cite{icaoAnnex2} - containing all vehicles with the required level of \emph{airworthiness} for given operational \emph{altitude}. They usually have required maneuverability.
     
     \item \emph{UAS Autonomous} (proposed) \cite{santiago2015pilot} - containing all autonomous UAS, the lower flexibility is expected at beginning of integration.
     
