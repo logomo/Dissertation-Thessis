@@ -2,22 +2,22 @@
 \paragraph{Main Goal:} The main goal of this section is to introduce the trajectory selection process, based on a \emph{situation assessment}, originating from \emph{Data Fusion Procedure} (sec. \ref{s:sensorFusion}). 
 
 \begin{note}
-    The \emph{rating calculation} is outlined in (sec. \ref{s:sensorFusion}). Low cost sensor fusion example usable to feed our data fusion procedure is given in \cite{sabatini2013low}. Semi-optimal concatenation trajectory search  like ours can be found in \cite{shaw1998using}.
+    The \emph{rating calculation} is outlined in (sec. \ref{s:sensorFusion}). Low-cost sensor fusion example usable to feed our data fusion procedure is given in \cite{sabatini2013low}. Semi-optimal concatenation trajectory search  like ours can be found in \cite{shaw1998using}.
 \end{note}
 
 \begin{note}
-    The \emph{Sensor Fusion Procedure} is solving all following steps (sec. \ref{s:sensorFusion}). The \emph{main purpose} of \emph{Avoidance Run} is finding best path under certain conditions.
+    The \emph{Sensor Fusion Procedure} is solving all the following steps (sec. \ref{s:sensorFusion}). The \emph{main purpose} of \emph{Avoidance Run} is finding the best path under certain conditions.
 \end{note}
 
-\paragraph{Space Assessment Principle:} The \emph{Avoidance Grid} is fed through \emph{Data Fusion} (sec. \ref{s:sensorFusion}). The process of \emph{ratings assessment} (tab. \ref{tab:defuzificationRatings}) is given in (fig. \ref{fig:significantStepsofAvoidanceGridRun}):
+\paragraph{Space Assessment Principle:} The \emph{Avoidance Grid} is fed through \emph{Data Fusion} (sec. \ref{s:sensorFusion}). The process of \emph{rating assessment} (tab. \ref{tab:defuzificationRatings}) is given in (fig. \ref{fig:significantStepsofAvoidanceGridRun}):
 \begin{enumerate}
     \item \emph{Obstacle detection} (fig. \ref{fig:obstacleDetectionAvoidanceGrid}) - assessment of \emph{detected obstacles} (eq. \ref{eq:detectedObstacleRatingForCell}). The red (O) $cells$ have Detected obstacle set as \emph{true}. The other threats: \emph{map obstacles} (eq. \ref{eq:mapObstacleRatingForCell}), \emph{intruders} (eq. \ref{eq:intruderRatingForCell}), \emph{constraints} (eq. \ref{eq:constraintRatingForCell}) are false. The red (0) $cells$ are representing $Occupied(t_i)$ (eq. \ref{eq:ocuupiedDataFusion}) space in \emph{Avoidance Grid} at decision time $t_i$.
     
     \item \emph{Uncertainty assessment} (fig. \ref{fig:uncertainityAssesmentAvoidanceGrid}) - the uncertain cells are cells which status cannot be \emph{assessed}. The \emph{Visibility} (eq. \ref{eq:visibilityForCell}) is low. The \emph{Uncertain} cells (yellow (U) mark) are equal to $Uncertain(t_i)$ (eq. \ref{eq:UncertainDataFusion}) in \emph{Avoidance Grid} in \emph{decision time} $t_i$. The $Constrained(t_i)$ (eq. \ref{eq:ocuupiedDataFusion}) space is equal to $\varnothing$ in this example.
     
-    \item \emph{Trajectory reachibility evaluation} (fig. \ref{fig:trajectoriesSafetyEvaluationAvoidanceGrid}) - the \emph{Reach Set} given as \emph{Trajectory Set} (eq. \ref{eq:trajectoryTree}). is then projected through \emph{Avoidance Grid} and pruned according to (def. \ref{def:PrunedReachSet}). \emph{Reachable Trajectories} (eq. \ref{eq:trajectoryReachibility}) are only those contained in $Free(t_i)$ space (eq. \ref{eq:freeDataFusion}). The \emph{Reachable Trajectories} are denoted as \emph{green lines}. The \emph{Unreachable} trajectory segments are denoted as \emph{red lines}. 
+    \item \emph{Trajectory reachability evaluation} (fig. \ref{fig:trajectoriesSafetyEvaluationAvoidanceGrid}) - the \emph{Reach Set} given as \emph{Trajectory Set} (eq. \ref{eq:trajectoryTree}). is then projected through \emph{Avoidance Grid} and pruned according to (def. \ref{def:PrunedReachSet}). \emph{Reachable Trajectories} (eq. \ref{eq:trajectoryReachibility}) are only those contained in $Free(t_i)$ space (eq. \ref{eq:freeDataFusion}). The \emph{Reachable Trajectories} are denoted as \emph{green lines}. The \emph{Unreachable} trajectory segments are denoted as \emph{red lines}. 
     
-    \item \emph{Cell reachibility evaluation} (fig. \ref{fig:reachibilityAssessmentAvoidanceGrid}) - the evaluation of $cells$ reachibility is going according to (eq. \ref{eq:cellReachibility}). The \emph{Reachable cells} are those which \emph{contains} at least one \emph{Reachable Trajectory Segment}.
+    \item \emph{Cell reachability evaluation} (fig. \ref{fig:reachibilityAssessmentAvoidanceGrid}) - the evaluation of $cells$ reachability is going according to (eq. \ref{eq:cellReachibility}). The \emph{Reachable cells} are those which \emph{contains} at least one \emph{Reachable Trajectory Segment}.
 \end{enumerate}
 
 
@@ -37,12 +37,12 @@
     \\
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=0.9\linewidth]{\FIGDIR/CA003SurveyOfVacantSpace} 
-        \caption{Trajectories reachibility evaluation.}
+        \caption{Trajectories reachability evaluation.}
         \label{fig:trajectoriesSafetyEvaluationAvoidanceGrid}
     \end{subfigure}
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=0.9\linewidth]{\FIGDIR/CA004ReachableSpaceAssesment} 
-        \caption{Cell reachibility evaluation.}
+        \caption{Cell reachibality evaluation.}
         \label{fig:reachibilityAssessmentAvoidanceGrid}
     \end{subfigure}
     \caption{Significant steps of \emph{Avoidance grid run} (inner loop).}
@@ -51,19 +51,23 @@
 
 
 
-\paragraph{Finding Best Path:} \footnote{Avoidance Run Function Implementation: \url{RuleEngine/MissionControl/MissionControl.m::findBestPath(avoidanceGrid)}} Each $cell_{i,j,k}$ in \emph{Avoidance Grid} at \emph{decision time} $t_i$ has assessed ratings according to \emph{data fusion procedure} (tab. \ref{tab:defuzificationRatings}). The following properties are know prior the \emph{trajectory} selection:
+\paragraph{Finding Best Path:} \footnote{Avoidance Run Function Implementation: \url{RuleEngine/MissionControl/MissionControl.m::findBestPath(avoidanceGrid)}} Each $cell_{i,j,k}$ in \emph{Avoidance Grid} at \emph{decision time} $t_i$ has assessed ratings according to \emph{data fusion procedure} (tab. \ref{tab:defuzificationRatings}). The following properties are known prior the \emph{trajectory} selection:
+
 \begin{enumerate}
     \item \emph{Reachability} for each  $cell_{i,j,k}$ (eq. \ref{eq:cellReachibility}).
+
     \item \emph{Reachability} for each  $Trajectory(\circ)$ (eq. \ref{eq:trajectoryReachibility}).
-    \item \emph{Free Space} as non empty set of $cells$ in \emph{Avoidance Grid} (eq. \ref{eq:freeDataFusion}), with \emph{Reachable Space} (eq. \ref{eq:ReachableDataFusion}).
+
+    \item \emph{Free Space} as non-empty set of $cells$ in \emph{Avoidance Grid} (eq. \ref{eq:freeDataFusion}), with \emph{Reachable Space} (eq. \ref{eq:ReachableDataFusion}).
+
     \item \emph{Goal Waypoint} $\mathscr{WP}_G$ from \emph{Mission Control Run} (sec. \ref{s:missionControlRun}).
 \end{enumerate}
 
-The \emph{Algorithm} (alg. \ref{alg:FindBestPathAvoidanceGrid}) is based on \emph{shortest path} search. Navigation is trying to reach \emph{goal waypoint}, therefore it tries to shorter distance between \emph{trajectory final cell} and \emph{goal waypoint}. If there is \emph{reachable space} two situations can occur:
+The \emph{Algorithm} (alg. \ref{alg:FindBestPathAvoidanceGrid}) is based on \emph{shortest path} search. Navigation is trying to reach \emph{goal waypoint};  therefore it tries to shorten the distance between \emph{final trajectory cell} and \emph{goal waypoint}. If there is \emph{reachable space} two situations can occur:
 \begin{enumerate}
     \item \emph{Goal waypoint is inside the Avoidance Grid} - the \emph{avoidance cell} is cell$_{i,j,k}$ containing \emph{goal waypoint} if reachable. 
     
-    \item \emph{Goal waypoint is outside the Avoidance Grid} - the \emph{avoidance cell} is closest cell considered as \emph{outer cell} to \emph{goal waypoint}.
+    \item \emph{Goal waypoint is outside the Avoidance Grid} - the \emph{avoidance cell} is the closest cell considered as an \emph{outer cell} to \emph{goal waypoint}.
 \end{enumerate}
 
 The \emph{Avoidance Path} selection is simple lowest cost selection of \emph{Trajectory} $\in$ cell$_{i,j,k}$.
@@ -128,12 +132,12 @@ The \emph{Avoidance Path} selection is simple lowest cost selection of \emph{Tra
     \emph{Outer cell} is a cell$_{i,j,k}$ which has at least one \emph{wall} directly neighbouring with \emph{outer space} ($Universe - Known World (t_i)$). The \emph{outer cell} is selected to prevent navigation to the \emph{trap}.
 \end{note}
 
-\paragraph{Space Assessment Example:} For better understanding there is following example of \emph{space assessment} and \emph{Best Path Selection}. 
+\paragraph{Space Assessment Example:} For better understanding, there is the following example of \emph{space assessment} and \emph{Best Path Selection}. 
 
 
-The \emph{UAS} (blue plane) is following \emph{mission plan} in open space. Then there is a detection of an \emph{collision situation} (fig. \ref{fig:exampleSituationAvoidanceRun}). The \emph{Obstacle} is detected in \emph{top-right} Avoidance Grid corner. 
+The \emph{UAS} (blue plane) is following a \emph{mission plan} in open space. Then there is a detection of a \emph{collision situation} (fig. \ref{fig:exampleSituationAvoidanceRun}). The \emph{Obstacle} is detected in the \emph{top-right} Avoidance Grid corner. 
 
-The \emph{LiDAR hits} are denoted as red filled circles. The \emph{Avoidance Grid} space is constrained by black dashed line. The \emph{Avoidance Grid} is separated into 5 layers going from top to \emph{bottom}. The \emph{Reach Set} is projected as a set of \emph{Trajectories} with colorization. 
+The \emph{LiDAR hits} are denoted as red filled circles. The \emph{Avoidance Grid} space is constrained by the black dashed line. The \emph{Avoidance Grid} is separated into five layers going from top to \emph{bottom}. The \emph{Reach Set} is projected as a set of \emph{Trajectories} with colorization. 
 
 \begin{figure}[H]
 \centering
@@ -150,7 +154,7 @@ The \emph{LiDAR hits} are denoted as red filled circles. The \emph{Avoidance Gri
 \end{enumerate}
  
  \begin{note}
-     The \emph{detected obstacle cells} are part of \emph{visible space}, because there is certainty about its containment.
+     The \emph{detected obstacle cells} are part of \emph{visible space} because there is certainty about its containment.
  \end{note}
  
 \noindent The \emph{Reach Set} trajectories are colored based on their visibility, blue for \emph{uncertain} trajectories and \emph{green} for visible trajectories.
@@ -162,7 +166,7 @@ The \emph{LiDAR hits} are denoted as red filled circles. The \emph{Avoidance Gri
     \label{fig:exampleVisibilityEvaluation}
 \end{figure}
 
-\paragraph{Reachability Assessment:} For Each trajectory the \emph{Reachability} is assessed (fig. \ref{fig:exampleReachibilityEvaluation}). The \emph{Obstacle Space} and \emph{Uncertain Space} are rendering \emph{reachability}, effectively separating \emph{trajectories} into two categories:
+\paragraph{Reachability Assessment:} For Each trajectory, the \emph{Reachability} is assessed (fig. \ref{fig:exampleReachibilityEvaluation}). The \emph{Obstacle Space} and \emph{Uncertain Space} are rendering \emph{reachability}, effectively separating \emph{trajectories} into two categories:
 
 \begin{enumerate}
     \item \emph{Unreachable Trajectories} (red lines) - there is at least one trajectory segment leading through \emph{Obstacle} or \emph{Uncertain} space.
@@ -170,7 +174,7 @@ The \emph{LiDAR hits} are denoted as red filled circles. The \emph{Avoidance Gri
     \item \emph{Reachable Trajectories} (green lines) -  all trajectory segments are lying in \emph{Free} space.
 \end{enumerate}
 
-\newpage\noindent Cells in Avoidance grid are divided in similar matter, depending on count of \emph{reachable trajectories} passing through them:
+\newpage\noindent Cells in Avoidance grid are divided in a similar matter, depending on the count of \emph{reachable trajectories} passing through them:
 
 \begin{enumerate}
     \item \emph{Unreachable Cells} (red fill) - there is no trajectory through \emph{free space} or the \emph{cell} is not in \emph{free space}.
