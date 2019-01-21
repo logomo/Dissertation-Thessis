@@ -1,24 +1,24 @@
 \newpage
 \subsection{\secState{R}Weather Case}\label{sec:weatherCase}
-\paragraph{Motivation:}  The weather, as defined in (eq. \ref{eq:weatherProjection}), impacts flight and system dynamics, therefore it impacts the \emph{reach set} is impacted. The \emph{weather impact} can be solved by policy application:
+\paragraph{Motivation:}  The weather, as defined in (eq. \ref{eq:weatherProjection}), impacts flight and system dynamics; therefore it impacts the \emph{reach set} is impacted. The \emph{weather impact} can be solved by policy application:
 
 \begin{enumerate}
-    \item \emph{Weather Acceptance} - for bigger \emph{UAS} the normal weather impact does not pose significant risk.  The \emph{segmented movement automaton} (def. \ref{def:segmentMovementAutomaton}) with \emph{Weather situation} as discrete state is used.
+    \item \emph{Weather Acceptance} - for bigger \emph{UAS} the normal weather impact does not pose a significant risk.  The \emph{segmented movement automaton} (def. \ref{def:segmentMovementAutomaton}) with \emph{Weather situation} as the discrete state is used.
     
-    \item \emph{Weather Avoidance} - all \emph{weather} impact zones are considered as hard constraints with protective \emph{soft constraint} around.
+    \item \emph{Weather Avoidance} - all \emph{weather} impact zones are considered as hard constraints with protective \emph{soft-constraint} around.
     
-    \item \emph{Combined approach} - depending on type of impact and declared UAS impact resistance the zones are divined into \emph{soft} and \emph{hard} constraints.
+    \item \emph{Combined approach} - depending on the type of impact and declared UAS impact resistance the zones are divined into \emph{soft} and \emph{hard} constraints.
 \end{enumerate}
 
 \begin{note}
-    This work handles small \emph{UAS} avoidance, these are very sensitive to any weather impact, therefore \emph{Weather impacted areas} will be considered as \emph{hard constraints with soft constraint protection zone}. 
+    This work handles small \emph{UAS} avoidance; these are very sensitive to any weather impact; therefore \emph{Weather impacted areas} will be considered as \emph{hard constraints with soft constraint protection zone}. 
     
     The original \emph{weather impact zone} is considered as obstacle body and enforces the body margin.
     
-    The surroundings of \emph{weather impact zone} up to \emph{safety margin} distance is considered as \emph{soft constraint zone} (implemented as bloated polygon).
+    The surroundings of \emph{weather impact zone} up to \emph{safety margin} distance are considered as \emph{soft constraint zone} (implemented as a bloated polygon).
 \end{note}
 
-\paragraph{Purpose:} The \emph{weather case} (tab. \ref{tab:weatherConstraint}) is broadcast ed by \emph{Airspace Authority} to \emph{impacted area}, each \emph{UAS} then change their mission according to \emph{their maneuvering capabilities}.  Each trajectory must lead away from \emph{constrained area}. The algorithm used for intersection selected based on \citep{bentley1979algorithms} the selected algorithm  \emph{Shamos-Hoey} \cite{shamos1976geometric}.
+\paragraph{Purpose:} The \emph{weather case} (tab. \ref{tab:weatherConstraint}) is broadcasted by \emph{Airspace Authority} to \emph{impacted area}, each \emph{UAS} then change their mission according to \emph{their maneuvering capabilities}.  Each trajectory must lead away from the \emph{constrained area}. The algorithm used for intersection selected based on \citep{bentley1979algorithms} the selected algorithm  \emph{Shamos-Hoey} \cite{shamos1976geometric}.
 
 \paragraph{Constrained Area:} Constrained area can be defined as \emph{static} (sec. \ref{s:virtualConstraints}) or dynamic constraint (sec. \ref{s:MovingVirtualConstraints}).  The \emph{constraint center} is defined on horizontal plane like follow:
 
@@ -43,7 +43,7 @@
 \begin{enumerate}
     \item \emph{Type} - defines required resistance - moisture, temperature, wind.
     
-    \item \emph{Severity} - defines impact for each \emph{aircraft category}, this is used in soft/hard type assessment. 
+    \item \emph{Severity} - defines the impact for each \emph{aircraft category}, this is used in soft/hard type assessment. 
     
     \item \emph{Duration} - start and end of \emph{constraint} validity, if not defined valid for all \emph{UAS mission time}.
     
@@ -51,26 +51,26 @@
 \end{enumerate}
 
 \begin{note}
-    Our implementation does not consider the \emph{type} or \emph{severity}. All \emph{weather impact} is considered as \emph{hard constraint}. The velocity differentiates \emph{static} ($=0$)/\emph{moving} ($>0$) \emph{constraints}. 
+    Our implementation does not consider the \emph{type} or \emph{severity}. All \emph{weather impact} is considered as a \emph{hard constraint}. The velocity differentiates \emph{static} ($=0$)/\emph{moving} ($>0$) \emph{constraints}. 
 \end{note}
 
-\paragraph{Avoidance System:} Resolve similar to \emph{Converging/Overtake Maneuver} depending on the \emph{angle of approach}. The \emph{virtual roundabout} is utilized for \emph{static constraints}, the \emph{intruder model} is utilized for \emph{dynamic constraints}.
+\paragraph{Avoidance System:} Resolve similar to \emph{Converging/Overtake Maneuver} depending on the \emph{angle of approach}. The \emph{virtual roundabout} is utilized for \emph{static constraints}; the \emph{intruder model} is utilized for \emph{dynamic constraints}.
 
 \begin{tabularx}{\textwidth}{S{0.25}|X}
      \multicolumn{2}{c}{\textbf{Constrained area}}\\\hline
-     center position & is given as geometrical \emph{center point of boundary}.  \\
-     boundary & is represented as \emph{convex polygon} on latitude-longitude plane.\\
-     start altitude & is lover boundary barometric altitude given at above mean sea level, where given weather factor have significant impact.\\
-     end altitude & is upper boundary barometric altitude given at above mean sea level, where given weather factor have significant impact.\\
+     center position & is given as a geometrical \emph{center point of the boundary}.  \\
+     boundary & is represented as a \emph{convex polygon} on the latitude-longitude plane.\\
+     start altitude & is lover boundary barometric altitude given at above mean sea level, where given weather factor has a significant impact.\\
+     end altitude & is upper boundary barometric altitude given at above mean sea level, where given weather factor has a significant impact.\\
      \multicolumn{2}{c}{\textbf{Additional parameters}}\\\hline
-     type(s) & lists weather events occurring in \emph{constrained area}.\\
+     type(s) & lists weather events occurring in the \emph{constrained area}.\\
      severity list & is recorded for each plane \emph{category}\\
      start & indicates when weather constraint was established. \\
      expected end & of weather constraint.\\
      velocity & indicates if weather phenomenon is moving.\\
      \multicolumn{2}{c}{\textbf{Miscellaneous}}\\\hline
      previous & reference to \emph{weather constraint} decision time-frame data.\\
-     impacted & list of possibly impacted attendees (planes whom obtained divergence order or warning from UTM).\\
+     impacted & list of possibly impacted attendees (planes which obtained divergence order or warning from UTM).\\
     \caption{Static/Dynamic weather constraint for given decision time-frame.}
     \label{tab:weatherConstraint} 
 \end{tabularx}
