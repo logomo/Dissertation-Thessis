@@ -345,41 +345,41 @@
 \contentsline {paragraph}{Intruder:}{160}{section*.310}
 \contentsline {paragraph}{Constraint:}{161}{section*.311}
 \contentsline {paragraph}{Threat:}{161}{section*.312}
-\contentsline {paragraph}{Reachibility:}{161}{section*.313}
+\contentsline {paragraph}{Reachability:}{161}{section*.313}
 \contentsline {paragraph}{Discretization:}{162}{section*.314}
 \contentsline {paragraph}{Space Classification:}{163}{section*.316}
-\contentsline {subsection}{\numberline {6.7.2} Avoidance Grid Run}{164}{subsection.6.7.2}
-\contentsline {paragraph}{Main Goal:}{164}{section*.317}
-\contentsline {paragraph}{Space Assessment Principle:}{164}{section*.318}
-\contentsline {paragraph}{Finding Best Path:}{165}{section*.320}
-\contentsline {paragraph}{Space Assessment Example:}{167}{section*.321}
-\contentsline {paragraph}{Visibility Assessment:}{167}{section*.323}
-\contentsline {paragraph}{Reachibility Assessment:}{168}{section*.325}
-\contentsline {subsection}{\numberline {6.7.3} Mission Control Run}{170}{subsection.6.7.3}
-\contentsline {paragraph}{Introduction and Motivation:}{170}{section*.327}
-\contentsline {paragraph}{General Concept:}{172}{section*.330}
-\contentsline {paragraph}{Decision Time Frame ($[t_i,t_{i+1}[$):}{173}{section*.332}
-\contentsline {paragraph}{Initialization:}{173}{section*.333}
-\contentsline {paragraph}{Navigation Loop (1\textsuperscript {st}-3\textsuperscript {rd} step):}{174}{section*.334}
-\contentsline {paragraph}{Data Fusion (4\textsuperscript {th} step)}{176}{section*.335}
-\contentsline {paragraph}{Invoke Navigation/Avoidance based on Situation Assessment (5\textsuperscript {th}-6\textsuperscript {th} step):}{176}{section*.336}
-\contentsline {paragraph}{Avoidance Run (7\textsuperscript {th}-15\textsuperscript {th} step):}{178}{section*.337}
-\contentsline {paragraph}{Decision Frame:}{180}{section*.338}
-\contentsline {subsection}{\numberline {6.7.4} Computation Complexity}{184}{subsection.6.7.4}
-\contentsline {paragraph}{Introduction:}{184}{section*.340}
-\contentsline {paragraph}{Navigation Loop:}{184}{section*.341}
-\contentsline {paragraph}{Data Fusion:}{184}{section*.342}
-\contentsline {paragraph}{Situation Assessment:}{185}{section*.343}
-\contentsline {paragraph}{Avoidance Run:}{185}{section*.344}
-\contentsline {paragraph}{Conclusion:}{186}{section*.345}
-\contentsline {subsection}{\numberline {6.7.5} Safety Margin Calculation}{187}{subsection.6.7.5}
-\contentsline {paragraph}{Safety Margin Determination:}{187}{section*.346}
-\contentsline {paragraph}{Safety Margin Bloating:}{187}{section*.347}
-\contentsline {paragraph}{Own Position Uncertainty Bloat:}{187}{section*.348}
-\contentsline {paragraph}{Intruder Position Uncertainty Bloat:}{187}{section*.349}
-\contentsline {paragraph}{Weather bloat:}{187}{section*.350}
-\contentsline {paragraph}{Airspace bloat:}{187}{section*.351}
-\contentsline {paragraph}{UTM Synchronization Bloat:}{187}{section*.352}
+\contentsline {subsection}{\numberline {6.7.2} Avoidance Grid Run}{165}{subsection.6.7.2}
+\contentsline {paragraph}{Main Goal:}{165}{section*.317}
+\contentsline {paragraph}{Space Assessment Principle:}{165}{section*.318}
+\contentsline {paragraph}{Finding Best Path:}{166}{section*.320}
+\contentsline {paragraph}{Space Assessment Example:}{168}{section*.321}
+\contentsline {paragraph}{Visibility Assessment:}{168}{section*.323}
+\contentsline {paragraph}{Reachability Assessment:}{169}{section*.325}
+\contentsline {subsection}{\numberline {6.7.3} Mission Control Run}{171}{subsection.6.7.3}
+\contentsline {paragraph}{Introduction and Motivation:}{171}{section*.327}
+\contentsline {paragraph}{General Concept:}{173}{section*.330}
+\contentsline {paragraph}{Decision Time Frame ($[t_i,t_{i+1}[$):}{174}{section*.332}
+\contentsline {paragraph}{Initialization:}{174}{section*.333}
+\contentsline {paragraph}{Navigation Loop (1\textsuperscript {st}-3\textsuperscript {rd} step):}{175}{section*.334}
+\contentsline {paragraph}{Data Fusion (4\textsuperscript {th} step)}{177}{section*.335}
+\contentsline {paragraph}{Invoke Navigation/Avoidance based on Situation Assessment (5\textsuperscript {th}-6\textsuperscript {th} step):}{177}{section*.336}
+\contentsline {paragraph}{Avoidance Run (7\textsuperscript {th}-15\textsuperscript {th} step):}{179}{section*.337}
+\contentsline {paragraph}{Decision Frame:}{181}{section*.338}
+\contentsline {subsection}{\numberline {6.7.4} Computation Complexity}{185}{subsection.6.7.4}
+\contentsline {paragraph}{Introduction:}{185}{section*.340}
+\contentsline {paragraph}{Navigation Loop:}{185}{section*.341}
+\contentsline {paragraph}{Data Fusion:}{185}{section*.342}
+\contentsline {paragraph}{Situation Assessment:}{186}{section*.343}
+\contentsline {paragraph}{Avoidance Run:}{186}{section*.344}
+\contentsline {paragraph}{Conclusion:}{187}{section*.345}
+\contentsline {subsection}{\numberline {6.7.5} Safety Margin Calculation}{188}{subsection.6.7.5}
+\contentsline {paragraph}{Safety Margin Determination:}{188}{section*.346}
+\contentsline {paragraph}{Safety Margin Bloating:}{188}{section*.347}
+\contentsline {paragraph}{Own Position Uncertainty Bloat:}{188}{section*.348}
+\contentsline {paragraph}{Intruder Position Uncertainty Bloat:}{188}{section*.349}
+\contentsline {paragraph}{Weather bloat:}{188}{section*.350}
+\contentsline {paragraph}{Airspace bloat:}{188}{section*.351}
+\contentsline {paragraph}{UTM Synchronization Bloat:}{188}{section*.352}
 \contentsline {section}{\numberline {6.8} UAS Traffic Management}{189}{section.6.8}
 \contentsline {subsection}{\numberline {6.8.1} Architecture}{189}{subsection.6.8.1}
 \contentsline {paragraph}{UTM Concept}{189}{section*.353}
