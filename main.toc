@@ -396,7 +396,7 @@
 \contentsline {paragraph}{Conflict Resolution:}{192}{section*.364}
 \contentsline {paragraph}{Special Cases in Manned Aviation:}{193}{section*.365}
 \contentsline {paragraph}{Response mode scenario example:}{193}{section*.367}
-\contentsline {subsection}{\numberline {6.8.4} Handling Head on Approach}{194}{subsection.6.8.4}
+\contentsline {subsection}{\numberline {6.8.4} Handling Head-on Approach}{194}{subsection.6.8.4}
 \contentsline {paragraph}{Goal:}{194}{section*.368}
 \contentsline {paragraph}{VFR:}{194}{section*.369}
 \contentsline {paragraph}{IFR:}{194}{section*.370}
