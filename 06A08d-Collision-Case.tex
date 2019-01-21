@@ -1,31 +1,31 @@
 \subsection{\secState{R}Collision Case}\label{sec:collisionCase}
 
 
-\paragraph{Collision Case Purpose:} There is a need for detection and tracking of possible \emph{controlled airspace traffic attendants} collisions.  The presented \emph{collision case structure} (tab. \ref{tab:collisionCase}) is minimalist reflection of \emph{ATM} requirements. Following aspects of  \emph{collision case} life cycle are explained in this section:
+\paragraph{Collision Case Purpose:} There is a need for detection and tracking of possible \emph{controlled airspace traffic attendants} collisions.  The presented \emph{collision case structure} (tab. \ref{tab:collisionCase}) is a minimalist reflection of \emph{ATM} requirements. Following aspects of  \emph{collision case} life cycle are explained in this section:
 \begin{enumerate}
     \item \emph{Base terminology} - the definition of \emph{enforcement procedure} and difference between \emph{Resolution} and \emph{Mandate} from UTM authority. The \emph{severity issue} is open.
     
-    \item \emph{Calculation of single case for single decision frame} - step by step calculation and threat evaluation. Prequel to \emph{life cycle}.
+    \item \emph{Calculation of single case for single decision frame} - step by step calculation and threat evaluation. Prequel to the \emph{life-cycle}.
     
-    \item \emph{Life cycle} gives outlook how collision case data are handled through longer period of time, notably: \emph{Opening}, \emph{collision point handling}, \emph{safety margin handling}, and, \emph{Closure}.
+    \item \emph{Life cycle} gives outlook on how collision case data are handled through a longer period, notably: \emph{Opening}, \emph{collision point handling}, \emph{safety margin handling}, and, \emph{Closure}.
     
-    \item \emph{Merge procedure for multiple cases in single cluster} - the naive \emph{merge procedure} to solve \emph{multiple collision cases} via \emph{virtual roundabout}.
+    \item \emph{Merge procedure for multiple cases in a single cluster} - the naive \emph{merge procedure} to solve \emph{multiple collision cases} via the \emph{virtual roundabout}.
 \end{enumerate}
 
 
 \paragraph{Resolution/Mandate Enforcement:}
-\emph{Enforcement procedure} is consisting from \emph{Threat detection phase} and \emph{Mitigation phase}. The \emph{mitigation phase} is a time interval when \emph{UTM} decision is enforced. The decision the UTM is enforcing is delivered in form of \emph{Resolutions} and \emph{Mandates}.
+\emph{Enforcement procedure} is consisting from \emph{Threat detection phase} and \emph{Mitigation phase}. The \emph{mitigation phase} is a time interval when \emph{UTM} decision is enforced. The decision the UTM is enforcing is delivered in the form of \emph{Resolutions} and \emph{Mandates}.
 
 
-\emph{Resolution} is an order from the \emph{UTM} authority which is followed by subjected UAS. The \emph{subjected UAS} can determine own behaviour to some extent. When there is emerging threat or other destructive event, like new non-cooperative adversary, the UAS is allowed to broke \emph{resolution}.  
+A \emph{Resolution} is an order from the \emph{UTM} authority which is followed by subjected UAS. The \emph{subjected UAS} can determine own behavior to some extent. When there is an emerging threat or another destructive event, like a new non-cooperative adversary, the UAS is allowed to broke \emph{resolution}.  
 
-\emph{Mandate} is an order from the \emph{UTM} authority which can not be broken at any cost. The example of the \emph{mandate}: UAS is flying in airspace, the passenger in distress needs it to safely land. The UAS must obey mandate even at event of own destruction.
+A \emph{Mandate} is an order from the \emph{UTM} authority which can not be broken at any cost. The example of the \emph{mandate}: UAS is flying in the airspace, the passenger in distress needs it to safely land. The UAS must obey mandate even at the event of own destruction.
 
-\paragraph{Threat Severity Evaluation:} The threat severity evaluation is omitted partialy, all threats are considered as equal. All commands from \emph{UTM authority} will be considered as \emph{resolutions}.
+\paragraph{Threat Severity Evaluation:} The threat severity evaluation is omitted partially, all threats are considered as equal. All commands from \emph{UTM authority} will be considered as \emph{resolutions}.
 
-\paragraph{Calculation procedure:} Collision case is calculated for two \emph{Registered UAS systems} in \emph{Unified UTM time-frame}. The \emph{unified UTM time-frame} is a short period of time in future when the anticipated situations are predicted. 
+\paragraph{Calculation procedure:} Collision case is calculated for two \emph{Registered UAS systems} in \emph{Unified UTM time-frame}. The \emph{unified UTM time-frame} is a short period in future when the anticipated situations are predicted. 
 
-\paragraph{1\textsuperscript{st}} The \emph{position} and \emph{orientation} is adjusted according to \emph{mission plan}. Our implementation uses \emph{Movement Automaton} as a predictor:
+\paragraph{1\textsuperscript{st}} The \emph{position} and \emph{orientation} are adjusted according to the \emph{mission plan}. Our implementation uses \emph{Movement Automaton} as a predictor:
 \begin{equation}
 \begin{gathered}
     adjustedPosition = Position(Trajectory(notifiedState, futureMovements))\\
@@ -47,10 +47,10 @@
 \begin{enumerate}
     \item \emph{Operation space checks} - the controlled airspace and flight level must match for proceeding.
     
-    \item \emph{Maneuverability/Category check} - the maneuverability and UAS category must match. If there is mismatch then right of the way is forced to vehicle with higher priority.
+    \item \emph{Maneuverability/Category check} - the maneuverability and UAS category must match. If there is mismatch, then the right of the way is forced to the vehicle with higher priority.
 \end{enumerate}
 
-\paragraph{4\textsuperscript{th}} \emph{Linear Intersection test} is designed to calculate \emph{closest distance} and \emph{time} of \emph{linear trajectory projections},  First for given \emph{velocity} and \emph{position} for UAS1 and UAS2 the helper variables are calculated:
+\paragraph{4\textsuperscript{th}} \emph{Linear Intersection test} is designed to calculate \emph{closest distance} and \emph{time} of \emph{linear trajectory projections}.  First, for given \emph{velocity} and \emph{position} for UAS1 and UAS2 the helper variables are calculated:
 \begin{equation}
     \begin{aligned}
         A&=\norm{velocity_1}^2\\
@@ -71,9 +71,9 @@
     \end{aligned}
 \end{equation}
 
-\noindent If $time < 0$ the trajectories are diverging from each other (because the closest points already occurred). The procedure ends, \emph{collision flag} is not raised.
+\noindent If $time < 0$ the trajectories are diverging from each other (because the closest points already occurred). The procedure ends, the \emph{collision flag} is not raised.
 
-If $time > time Margin$ the trajectories will get close to each other, but in further future and changes are anticipated. The procedure ends, \emph{collision flag} is not raised.
+If $time > time Margin$ the trajectories will get close to each other, but in further future and changes are anticipated. The procedure ends, the \emph{collision flag} is not raised.
 
 If $0 \le time \le timeMargin$ the trajectories are converging to each other and distance needs to be checked. If $distance \le collisionMargin$ then \emph{collision flag} is raised and \emph{collision point} is set.
 
@@ -83,28 +83,28 @@ If $0 \le time \le timeMargin$ the trajectories are converging to each other and
         collisionMargin = \forall situation : \max\left\{\begin{gathered}safetyMargin(situation,UAS1)\\ +safetyMargin(situation,UAS2) \end{gathered}\right\}
     \end{equation}
     
-    Where \emph{safety margin} for every possible situation is evaluated for both \emph{UAS}.
+    Where the \emph{safety margin} for every possible situation is evaluated for both \emph{UAS}.
 \end{note}
 
-\paragraph{5\textsuperscript{th}} The \emph{trajectory} intersection is \emph{Movement Automaton} specific collision detection method. Its based on the assumption that \emph{UTM} have following information from \emph{mission plan}:
+\paragraph{5\textsuperscript{th}} The \emph{trajectory} intersection is \emph{Movement Automaton} specific collision detection method. Its based on the assumption that \emph{UTM} has the following information from \emph{mission plan}:
 \begin{enumerate}
     \item \emph{UAS state} - not only \emph{position}, \emph{orientation}, and, \emph{velocity} vectors, but other mathematical model parameters mandatory for \emph{movement automaton}.
     
-    \item \emph{Movement Automaton} - movement automaton for our UAS system, so UTM can use it in predictor mode.
+    \item \emph{Movement Automaton} - movement automaton for our UAS system, so that UTM can use it in predictor mode.
     
     \item \emph{Future Movements set} - up to reasonable prediction horizon $timeMargin$. 
 \end{enumerate}
 
-The \emph{Movement Automaton} can be used as trajectory prediction for system initial state and future movements.  The prediction function (eq. \ref{eq:statePredictionCollisionCase}).
+The \emph{Movement Automaton} can be used as trajectory prediction for initialsystem state and future movements.  The prediction function (eq. \ref{eq:statePredictionCollisionCase}).
 \begin{equation}\label{eq:statePredictionCollisionCase}
     Prediction: UAS \times state \times future Movements \to [x,y,z,t] \in \R^4
 \end{equation}
 
 \begin{note}
-    Then prediction for UAS1 is $Prediction_1$ and for UAS 2 $Prediction_2$, the predictions are synchronized meaning that time at position $i$ is equal in both discrete trajectory matrices.
+    Then prediction for UAS1 is $Prediction_1$, and for UAS 2 $Prediction_2$, the predictions are synchronized meaning that time at position $i$ is equal in both discrete trajectory matrices.
 \end{note}
 
-\noindent The \emph{collision distance} for predictor (eq. \ref{eq:statePredictionCollisionCase}) is given as minimal distance of projected synchronized trajectories for UAS1 and UAS2. In our discrete enviroment the \emph{collision distance} is given as (eq. \ref{eq:TrajectoryPredictionMinimalDistance}).
+\noindent The \emph{collision distance} for predictor (eq. \ref{eq:statePredictionCollisionCase}) is given as minimal distance of projected synchronized trajectories for UAS1 and UAS2. In our discrete enviroment, the \emph{collision distance} is given as (eq. \ref{eq:TrajectoryPredictionMinimalDistance}).
 
 \begin{equation}\label{eq:TrajectoryPredictionMinimalDistance}
     collisionDistance = \min\left\{\norm{point_1-point_2}:\forall \left(\begin{gathered}point_1 \in Prediction_1,\\ point_2, \in Prediction_2,\\ t_1 \sim t_2 \end{gathered}\right)\right\} 

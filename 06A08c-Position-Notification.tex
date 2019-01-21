@@ -26,34 +26,34 @@ The main purpose is to broadcast the \emph{position notification} in \emph{contr
     
     \item \emph{Other manned aviation} \cite{icaoAnnex2} - containing all vehicles with the required level of \emph{airworthiness} for given operational \emph{altitude}. They usually have required maneuverability.
     
-    \item \emph{UAS Autonomous} (proposed) \cite{santiago2015pilot} - containing all autonomous UAS, the lower flexibility is expected at beginning of integration.
+    \item \emph{UAS Autonomous} (proposed) \cite{santiago2015pilot} - containing all autonomous UAS, the lower flexibility is expected at the beginning of integration.
     
-    \item \emph{Remotely Piloted Aerial System (RPAS)} (proposed)  \cite{santiago2015pilot} - has lesser priority due the higher response rate of the pilot.
+    \item \emph{Remotely Piloted Aerial System (RPAS)} (proposed)  \cite{santiago2015pilot} - has lesser priority due to the higher response rate of the pilot.
 \end{enumerate}
 
 \begin{note}
-    This categorization reflects only Pilot community statement, the general priority rule is broken, because maneuverability and vulnerability  should be always considered as key decision factor. 
+    This categorization reflects only Pilot community statement; the general priority rule is broken, because maneuverability and vulnerability  should always be considered as a key decision factor. 
 \end{note}
 
 
-\paragraph{Maneuverability:} The maneuverability is the real key factor in priority assessment.  The components of maneuverability are \emph{maximal/mean acceleration/deceleration}, \emph{climb/ descent rate} and \emph{turning ratio/radius}. The comparison can be done by solving \emph{pursuit problem} using \emph{Reach Sets} \cite{game1987,game1988}.
+\paragraph{Maneuverability:} The maneuverability is the real key factor in priority assessment.  The components of maneuverability are \emph{maximal/mean acceleration/deceleration}, \emph{climb/ descent rate} and \emph{turning ratio/radius}. The comparison can be made by solving \emph{pursuit problem} using \emph{Reach Sets} \cite{game1987,game1988}.
 
 \noindent The \emph{Maneuverability categorization} is based on \emph{original aircraft priority categorization} \cite{icaoAnnex2} accounting UAS/RPAS as equal to \emph{manned aviation}. The ordered list from the highest to the lowest priority goes as follows:
 
 \begin{enumerate}
     \item \emph{Impaired control} (Distress aircraft) - any aviation attendant in distress has the priority in case of the conflict occurrence.
     
-    \item \emph{Altitude control/No} (Balloon, Hovering aircraft) - the balloon type crafts does not have any type of propulsion and horizontal movements follows the airflow in given altitude. 
+    \item \emph{Altitude control/No} (Balloon, Hovering aircraft) - the balloon type crafts do not have any type of propulsion, and horizontal movements follow the airflow in given altitude. 
     
     
     \item \emph{Full control/No propulsion} (Gliders of any sort) - the gliders can control their horizontal position, but there are limits to altitude control and acceleration/deceleration. 
     
-    \item \emph{Full control/Linear propulsion} (Any aircraft of plane type) - the \emph{towing aircraft's} and \emph{airplanes} belong there, the difference is the \emph{flexibility} of \emph{maneuvering}.
+    \item \emph{Full control/Linear propulsion} (Any aircraft of plane type) - the \emph{towing aircraft's} and \emph{airplanes} belong there; the difference is the \emph{flexibility} of \emph{maneuvering}.
     
-    \item \emph{Full control/VTOL capability} (Any aircraft with VTOL) - the \emph{other aircraft} capable to do on spot turn. The typical representative is \emph{quad-rotor copter}.
+    \item \emph{Full control/VTOL capability} (Any aircraft with VTOL) - the \emph{other aircraft} capable of doing on-spot-turn. The typical representative is \emph{quad-rotor copter}.
 \end{enumerate}
 
-There are other aspects like \emph{minimal required} acceleration/deceleration/turn ratio to operate in selected segment of the \emph{airspace}. These should be specified later by \emph{Minimum Operational Performance Standards} (MOPS).
+There are other aspects like \emph{minimal required} acceleration/deceleration/turn ratio to operate in a selected segment of the \emph{airspace}. These should be specified later by \emph{Minimum Operational Performance Standards} (MOPS).
 
 \begin{tabularx}{\textwidth}{S{0.25}|X}
      \multicolumn{2}{c}{\textbf{Position}}  \\\hline
@@ -65,18 +65,18 @@ There are other aspects like \emph{minimal required} acceleration/deceleration/t
      velocity & relative UAS velocity.\\
      \multicolumn{2}{c}{\textbf{Flight Levels}}\\\hline
      main & flight level, where UAS mass center belongs\\
-     passing & flight level, during climb/ascend, or when distance of UAS mass center to flight level boundary $\le 250 ft.$ .\\
+     passing & flight level, during climb/ascend, or when distance of UAS mass center to flight level boundary $\le 250 ft$ .\\
      \multicolumn{2}{c}{\textbf{Registration}}\\\hline
      registration ID& is unique registration number \emph{to be issued} by local aviation authority for UTM communications purposes.\\
-     flight code& or mission code is unique identification number for approved mission plan which is going to be flown by UAS.\\
+     flight code& or mission code is a unique identification number for approved mission plan which is going to be flown by UAS.\\
      UAS name & optional UAS identifier to increase human recognition. \\
      \multicolumn{2}{c}{\textbf{Categorization}}\\\hline
      craft category & ICAO main category, based on vehicle type.\\
-     maneuverability& secondary categorization specifying size class, horizontal/vertical turning radius, minimal and maximal cruising speed.\\
+     maneuverability& secondary categorization is specifying size class, horizontal/vertical turning radius, minimal and maximal cruising speed.\\
      \multicolumn{2}{c}{\textbf{Safety margins}}\\\hline
      universal & minimal safety margin for any avoidance situation\\
-     head on & minimal distance from other similar maneuverability class aircraft in case of head on approach.\\
-     converging & minimal distance from other similar maneuverability class aircraft in case of head of converging maneuver.\\
+     head-on & minimal distance from other similar maneuverability class aircraft in case of a head-on approach.\\
+     converging & minimal distance from other similar maneuverability class aircraft in case of the converging maneuver.\\
      overtake & minimal distance from other similar maneuverability class aircraft in case of overtake maneuver.\\
      wake angle & for wake turbulence cone.\\
      wake radius & for wake turbulence cone.\\
@@ -84,10 +84,10 @@ There are other aspects like \emph{minimal required} acceleration/deceleration/t
     \label{tab:positionNotification}
 \end{tabularx}
 
-\paragraph{Safety Margins:} The \emph{Safety Margin} for \emph{Well Clear Condition} value is based on \emph{situation}. There is also an \emph{universal safety margin} which guarantees the minimal safety for encountering intruder. 
+\paragraph{Safety Margins:} The \emph{Safety Margin} for \emph{Well Clear Condition} value is based on the \emph{situation}. There is also a \emph{universal safety margin} which guarantees the minimal safety for encountering intruder. 
 
-The most prevalent effect is \emph{Wake turbulence} therefore \emph{wake turbulence cone} angle $[0\circ -90\circ ]$ and radius. 
+The most prevalent effect is \emph{Wake turbulence}, therefore, \emph{wake turbulence cone} angle $[0\circ -90\circ ]$ and radius. 
 
-The \emph{safety Margin} for situation-based avoidance is given by list of supported manuevers maneuvers, there is converging (sec. \ref{sec:handlingConvergingManuever}), head on (sec. \ref{sec:handlingHeadOnApproach}), overtake (sec. \ref{sec:handlingOvertakeManuever}) safety margins
+The \emph{safety Margin} for situation-based avoidance is given by the list of supported  maneuvers; there is converging (sec. \ref{sec:handlingConvergingManuever}), head-on (sec. \ref{sec:handlingHeadOnApproach}), overtake (sec. \ref{sec:handlingOvertakeManuever}) safety margins.
 
 
