@@ -81,9 +81,9 @@ The \emph{harm prioritization} is addressed by higher navigation logic (fig. \re
     \end{equation}
 \end{definition}
 
-\paragraph{Reachability:} The \emph{Reachability} for trajectory reflects how safe is \emph{path along}. The \emph{Threat} (def. \ref{def:threat}) for each cell has been already assessed.  The set of \emph{Passing Cells} is defined in \emph{Trajectory Footprint} (eq. \ref{eq:setOfPassedCells}).
+\paragraph{Reachability:} The \emph{Reachability} for trajectory reflects how safe is the \emph{path along}. The \emph{Threat} (def. \ref{def:threat}) for each cell has been already assessed.  The set of \emph{Passing Cells} is defined in \emph{Trajectory Footprint} (eq. \ref{eq:setOfPassedCells}).
 
-\noindent The \emph{Trajectory Reachability} is given as product of \emph{Threats} along the trajectory (eq. \ref{eq:trajectoryReachibility}). The \emph{Trajectory Reachability} can be calculated for each \emph{trajectory segment} given as $\{movement_1,\dots,movement_i\}$ $\subset$ $Buffer$ originating from $state_0$.
+The \emph{Trajectory Reachability} is given as a product of \emph{Threats} along the trajectory (eq. \ref{eq:trajectoryReachibility}). The \emph{Trajectory Reachability} can be calculated for each \emph{trajectory segment} given as $\{movement_1,\dots,movement_i\}$ $\subset$ $Buffer$ originating from $state_0$.
 
 
 \begin{equation}\label{eq:trajectoryReachibility}
@@ -91,11 +91,11 @@ The \emph{harm prioritization} is addressed by higher navigation logic (fig. \re
 \end{equation}
 
 \begin{note}
-    The \emph{Reachability} of \emph{trajectory} segment gives the property of \emph{safety} of route from beginning, until last point of segment. There can be a very unsafe trajectory which is very safe from beginning.
+    The \emph{Reachability} of \emph{trajectory} segment gives the property of \emph{safety} of route from the beginning, until the last point of the segment. There can be a very unsafe trajectory which is very safe from the beginning.
 \end{note}
 
 
-The \emph{Reachability} of \emph{cell} is given by best trajectory segment passing through the \emph{given cell}. This is given by property, that every trajectory is originating from root $state_0$, which means that one safe route is sufficient to reach space in cell.
+The \emph{Reachability} of the \emph{cell} is given by the best trajectory segment passing through the \emph{given cell}. This is given by property, that every trajectory is originating from root $state_0$, which means that one safe route is sufficient to reach space in the cell.
 
 The \emph{Trajectory segment} reachability is sufficient, because the overall performance is not interesting, the \emph{local reachability} is sufficient. The cell reachibility is formally defined in (eq. \ref{eq:cellReachibility}).
 
@@ -107,12 +107,12 @@ The \emph{Trajectory segment} reachability is sufficient, because the overall pe
     Function Trajectory.Segment($cell_{i,j,k}$). Reachability gives same results for any segment in $cell_{i,j,k}$, because (eq. \ref{eq:trajectoryReachibility}) accounts each cell $threat$ only once.
 \end{note}
 
-\paragraph{Discretization:} The \emph{fault tolerant} implementation needs to implement sharp Boolean values of properties mentioned before. The \emph{fuzzy values} are usually threshold to Boolean equivalent. The \emph{operational standards} for \emph{Manned Aviation} \cite{icao4444} demands the fail rate below $10^{-7}$, because there is no definition for \emph{UAS} the \emph{minimal fail rate} is expected to be at similar level.
+\paragraph{Discretization:} The \emph{fault tolerant} implementation needs to implement sharp Boolean values of properties mentioned before. The \emph{fuzzy values} are usually threshold to Boolean equivalent. The \emph{operational standards} for \emph{Manned Aviation} \cite{icao4444} demands the fail rate below $10^{-7}$ because there is no definition for \emph{UAS} the \emph{minimal fail rate} is expected to be at a similar level.
 
-The \emph{fuzzy values} $[0,1]$ are projected to \emph{Boolean} properties of \emph{cell} and \emph{Trajectory} in following manner (tab. \ref{tab:defuzificationRatings}).
+The \emph{fuzzy values} $[0,1]$ are projected to \emph{Boolean} properties of \emph{cell} and \emph{Trajectory} in the following manner (tab. \ref{tab:defuzificationRatings}).
 
 
-The high values of \emph{Visibility} (eq. \ref{eq:visibilityForCell}) and \emph{Reachability} (eq. \ref{eq:cellReachibility}, \ref{eq:trajectoryReachibility}) are expected. The low \emph{threshold} for \emph{threaths} values is expected. The error margin is solved by \emph{Sensor Fusion} therefore initial \emph{false positive} cases have low rate. The \emph{Detected Obstacle Rate} (eq. \ref{eq:detectedObstacleRatingForCell}), \emph{Map Obstacle Rate} (eq. \ref{eq:mapObstacleRatingForCell}), \emph{Intruder Rate} (eq. \ref{eq:intruderRatingForCell}), and \emph{Constraint Rate} (eq. \ref{eq:constraintRatingForCell}) thresholds are considered low.
+The high values of \emph{Visibility} (eq. \ref{eq:visibilityForCell}) and \emph{Reachability} (eq. \ref{eq:cellReachibility}, \ref{eq:trajectoryReachibility}) are expected. The low \emph{threshold} for \emph{threats} values is expected. The error margin is solved by \emph{Sensor Fusion}, therefore, initial \emph{false positive} cases have a low rate. The \emph{Detected Obstacle Rate} (eq. \ref{eq:detectedObstacleRatingForCell}), \emph{Map Obstacle Rate} (eq. \ref{eq:mapObstacleRatingForCell}), \emph{Intruder Rate} (eq. \ref{eq:intruderRatingForCell}), and \emph{Constraint Rate} (eq. \ref{eq:constraintRatingForCell}) thresholds are considered low.
 
 \begin{table}[H]
     \centering
@@ -123,7 +123,7 @@ The high values of \emph{Visibility} (eq. \ref{eq:visibilityForCell}) and \emph{
         Map Obstacle &  $map(cell_{i,j,k})$&$\ge$&$threshold$\\\hline
         Intruder &  $intruder(cell_{i,j,k})$&$\ge$&$threshold$\\\hline
         Constraint &  $constraint(cell_{i,j,k})$&$\ge$&$threshold$\\\hline\hline
-        Reachable Trajectory &  $reachibility(trajectory)$&$\ge$&$(1-threshold)$\\\hline
+        Reachable Trajectory &  $reachability(trajectory)$&$\ge$&$(1-threshold)$\\\hline
         Reachable Cell &  $reachibility(cell_{i,j,k})$&$\ge$&$(1-threshold)$
     \end{tabular}
     \caption{Changing ratings from fuzzy to Boolean parameters.}
@@ -131,15 +131,15 @@ The high values of \emph{Visibility} (eq. \ref{eq:visibilityForCell}) and \emph{
 \end{table}
 
 
-\paragraph{Space Classification:} The \emph{Data Fusion Function} is outlined in (\ref{eq:DataFusionFunction}). This classification is resulting into four distinct space sets.
+\paragraph{Space Classification:} The \emph{Data Fusion Function} is outlined in (\ref{eq:DataFusionFunction}). This classification is resulting in four distinct cell sets.
 
-The \emph{Uncertain} space for decision time $t_i$ is a portion of \emph{Avoidance Grid} which \emph{UAS} can not \emph{read} with \emph{Sensor Field}. The \emph{cells} with $\neg Visible$ property. The \emph{Uncertain} space is given by (eq. \ref{eq:UncertainDataFusion}).
+The \emph{Uncertain} space for decision time $t_i$ is a portion of \emph{Avoidance Grid} which \emph{UAS} cannot \emph{read} with \emph{Sensor Field}. The \emph{cells} with a $\neg Visible$ property. The \emph{Uncertain} space is given by (eq. \ref{eq:UncertainDataFusion}).
 
 \begin{equation}\label{eq:UncertainDataFusion}
     Uncertain(t_i) = \left\{cell_{i,j,k}:cell_{i,j,k}\in AvoidanceGrid(t_i),cell_{i,j,k}.\neg Visible \right\}
 \end{equation}
 
-\noindent The \emph{Occupied} space for decision time $t_i$ is a set of cell which are classified as \emph{Detected Obstacles}. The \emph{Visibility} is not an issue, due the initial damping in (eq. \ref{eq:detectedObstacleRatingForCell}). The formal definition is the space portion where it is possible to detect \emph{obstacle bodies} or their portions (eq. \ref{eq:ocuupiedDataFusion}).
+\noindent The \emph{Occupied} space for decision time $t_i$ is the set of cells which are classified as \emph{Detected Obstacles}. The \emph{Visibility} is not an issue, due to the initial damping in (eq. \ref{eq:detectedObstacleRatingForCell}). The formal definition is the space portion where it is possible to detect \emph{obstacle bodies} or their portions (eq. \ref{eq:ocuupiedDataFusion}).
 
 \begin{equation}\label{eq:ocuupiedDataFusion}
     Occupied(t_i) = \left\{cell_{i,j,k}:\begin{aligned}&cell_{i,j,k}\in AvoidanceGrid(t_i),\\&cell_{i,j,k}.DetectedObstacle\end{aligned}\right\}
@@ -169,8 +169,8 @@ The \emph{Uncertain} space for decision time $t_i$ is a portion of \emph{Avoidan
 \end{equation}
 
 \newpage
-\begin{note}{The Reachable Space at decision time $t_i$:}
-The \emph{Reachable space} is non-empty set and its a subset of \emph{Free($t_i$)} space:    
+\begin{note}{The Reachable Space at decision time $t_i$:} 
+The \emph{Reachable space} is a non-empty set and its a subset of \emph{Free($t_i$)} space:    
 
 \begin{equation}\label{eq:reachableDataFusionConstraints}
     |Reachable(t_i)| > 0, \quad Reachable(t_i) \subset Free(t)
