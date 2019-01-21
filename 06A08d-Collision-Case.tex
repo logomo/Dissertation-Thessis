@@ -95,7 +95,7 @@ If $0 \le time \le timeMargin$ the trajectories are converging to each other and
     \item \emph{Future Movements set} - up to reasonable prediction horizon $timeMargin$. 
 \end{enumerate}
 
-The \emph{Movement Automaton} can be used as trajectory prediction for initialsystem state and future movements.  The prediction function (eq. \ref{eq:statePredictionCollisionCase}).
+The \emph{Movement Automaton} can be used as trajectory prediction for initial system state and future movements.  The prediction function (eq. \ref{eq:statePredictionCollisionCase}).
 \begin{equation}\label{eq:statePredictionCollisionCase}
     Prediction: UAS \times state \times future Movements \to [x,y,z,t] \in \R^4
 \end{equation}
@@ -112,30 +112,30 @@ The \emph{Movement Automaton} can be used as trajectory prediction for initialsy
 
 If $collisionDistance \le collision Margin$  condition is met, \emph{collision flag} is set.  
 
-The collision point is then calculated  as mean of \emph{UAS positions} in prediction at time when distance is minimal.  The final collision point is arithmetic mean of two positions (eq. \ref{eq:collisionPointTrajectoryPrediction}).
+The collision point is then calculated  as mean of \emph{UAS positions} in prediction at a time when the distance is minimal.  The final collision point is arithmetic mean of two positions (eq. \ref{eq:collisionPointTrajectoryPrediction}).
 \begin{equation}\label{eq:collisionPointTrajectoryPrediction}
     collisionPoint= \frac{point_1 - point_2}{2}:\left(\begin{gathered}point_1 \in Prediction_1,\\ point_2, \in Prediction_2,\\ t_1 \sim t_2 \text{ at minimal distance}\end{gathered}\right)
 \end{equation}
 
 \begin{note}
-    Collision point is overwritten by trajectory intersection (specific) method, the \emph{linear intersection} is considered \emph{general collision detection method}. The collision detection method in future UTM system needs to be determined. The \emph{Trajectory intersection} method presented in this work is one of the possible candidates. 
+    Collision point is overwritten by trajectory intersection (specific) method; the \emph{linear intersection} is considered a \emph{general collision detection method}. The collision detection method in future UTM system needs to be determined. The \emph{Trajectory intersection} method presented in this work is one of the possible candidates. 
 \end{note}
 
 \paragraph{6\textsuperscript{th}} \emph{Role determination} phase is invoked if and only if previous conditions are met and \emph{collision flag} with \emph{collision point} exists.
 
-There is \emph{adjusted position} of each UAS used as verticals and \emph{collision point} used as center. First step is normalization of adjusted position around collision point for both UAS:
+There is \emph{adjusted position} of each UAS used as verticals and \emph{collision point} used as a center. The first step is normalization of adjusted position around collision point for both UAS:
 \begin{equation}
     normalized_i =  adjustedPosition_i - collisionPoint,\quad i \in \{1, 2\}
 \end{equation}
 
-Then the right hand coordinate system internal angle calculation method is used:
+Then the right-hand coordinate system internal angle calculation method is used:
 
 
 \begin{equation}
     angleOfApproach = \left|\text{atan2}\left(\begin{gathered}normalized_1 \times normalized_2, \\normalized_1 \circ normalized_2\end{gathered}\right)\right|
 \end{equation}
 
-\noindent Based on \emph{angle of approach} the \emph{scenario type} is  decided like follows:
+\noindent Based on the \emph{angle of approach} the \emph{scenario type} is  decided like follows:
 \begin{enumerate}
     \item $130^\circ \le angle Of Approach  \le 180^\circ$ - the scenario type is set as \emph{Head On Approach} (sec.\ref{sec:handlingHeadOnApproach})
     \item $70^\circ \le angle Of Approach  < 130^\circ$ - the scenario type is set as \emph{Converging Maneuver} (sec.\ref{sec:handlingConvergingManuever})
@@ -144,21 +144,21 @@ Then the right hand coordinate system internal angle calculation method is used:
 
 \noindent Based on \emph{relative position} and \emph{scenario type}, the \emph{avoidance role} like follows:
 \begin{enumerate}
-    \item \emph{Head On Approach} enforces following:
+    \item \emph{Head On Approach} enforces the following:
     \begin{enumerate}[a.]
-        \item The \emph{avoidance role} us set as \emph{RoundAbounting} for both UAS.
+        \item The \emph{avoidance role} is set as \emph{RoundAbounting} for both UAS.
         
-        \item None of the \emph{UAS} does not have the \emph{Right Of the Way}.
+        \item None of the \emph{UAS} does have the \emph{Right Of the Way}.
     \end{enumerate}
     
-    \item \emph{Converging Maneuver} enforces following:
+    \item \emph{Converging Maneuver} enforces the following:
     \begin{enumerate}[a.]
-        \item \emph{UAS} without free right side have role set as \emph{Converging}.
+        \item \emph{UAS} without free right side has a role set as \emph{Converging}.
         
-        \item \emph{UAS} with free right side have the \emph{Right Of the Way}.
+        \item \emph{UAS} with free right side has the \emph{Right Of the Way}.
     \end{enumerate}
     
-    \item \emph{Overtake Maneuver}  enforces following:
+    \item \emph{Overtake Maneuver}  enforces the following:
     \begin{enumerate}[a.]
         \item \emph{Slower UAS} has \emph{Overtaken} role with \emph{Right Of the Way}.
         
@@ -171,12 +171,12 @@ Then the right hand coordinate system internal angle calculation method is used:
 
 \paragraph{7\textsuperscript{th}} \emph{Safety Margin Calculation} Is invoked when the collision case is \emph{Active}. The \emph{Active Collision Case} in this time-frame means that \emph{Collision Flag} is raised. The \emph{avoidance role} determines \emph{safety margin calculation}.
 
-If \emph{Head On Approach} is case type of \emph{Head collision case} then \emph{safety margin} is calculated as maximum of sum of \emph{default} margins or \emph{head on} margins:
+If \emph{Head-On Approach} is case type of \emph{Head collision case} then \emph{safety margin} is calculated as the maximum of the sum of \emph{default} margins or \emph{head on} margins:
 \begin{equation}
     safetyMargin = \max\left\{\begin{aligned}&default(UAS1)+default(UAS2),\\ &headOn(UAS_1)+headOn(UAS_2)\end{aligned}\right\}
 \end{equation}
 
-If \emph{Converging Maneuver} is case type of \emph{Head collision case} then \emph{safety margin} is calculated based on \emph{avoiding UAS} as maximum of opposing UAS \emph{default margin} and avoiding \emph{converging margin}:
+If \emph{Converging Maneuver} is case type of \emph{Head collision case} then \emph{safety margin} is calculated based on \emph{avoiding UAS} as the maximum of opposing UAS \emph{default margin} and avoiding \emph{converging margin}:
 \begin{equation}
     safetyMargin = 
     \begin{cases}
@@ -185,7 +185,7 @@ If \emph{Converging Maneuver} is case type of \emph{Head collision case} then \e
     \end{cases}
 \end{equation}
 
-If \emph{Overtake maneuver} is case type of \emph{Head collision case} then \emph{safety margin} is calculated as maximumo of \emph{default, overtaking, overtaken} margins of both UAS:
+If \emph{Overtake maneuver} is case type of \emph{Head collision case} then \emph{safety margin} is calculated as the maximum of \emph{default, overtaking, overtaken} margins of both UAS:
 
 \begin{equation}
     safetyMargin = \max\left\{\begin{aligned}&default(UAS1),default(UAS2),\\ &overtaken(UAS_1),overtaking(UAS_2),\\&overtaking(UAS_1),overtaken(UAS_2)\end{aligned}\right\}
@@ -193,7 +193,7 @@ If \emph{Overtake maneuver} is case type of \emph{Head collision case} then \emp
 
 \paragraph{Collision Case Chaining} is procedure when multiple active collision cases for different \emph{time-frame} are chained and creates the time ordered series of \emph{collision cases}. There are two notable instances in the \emph{chain}:
 \begin{enumerate}
-    \item \emph{Head Collision Case} - Collision case when the first danger was detected. The notable parameters are \emph{collision point} and UAS \emph{avoidance roles}, because these are enforced by \emph{Rule engine} (sec. \ref{sec:ruleEngine}). The \emph{head collision case} is first in chain.
+    \item \emph{Head Collision Case} - Collision case when the first danger was detected. The notable parameters are \emph{collision point} and UAS \emph{avoidance roles} because these are enforced by the \emph{Rule engine} (sec. \ref{sec:ruleEngine}). The \emph{head collision case} is first in the chain.
     
     \item \emph{Tail Collision Case} -  Collision case when the \emph{collision danger} was not detected. The \emph{tail collision case} is last in the chain.  
 \end{enumerate}
@@ -201,19 +201,19 @@ If \emph{Overtake maneuver} is case type of \emph{Head collision case} then \emp
 \begin{note}
     The \emph{Chaining} of \emph{collision cases} is rather primitive and sensitive for errors/noise.
     
-    The \emph{Consistency of Avoidance Manuever} is ensured by enforcing \emph{head collision case} parameters. 
+    The \emph{Consistency of Avoidance Maneuver} is ensured by enforcing \emph{head collision case} parameters. 
 \end{note}
 
 \begin{tabularx}{\textwidth}{S{0.25}|X}
      \multicolumn{2}{c}{\textbf{Data for both attendants}}\\\hline
-     adjusted position &  predicted from previous \emph{position notifications} (\ref{tab:positionNotification}) data at time of \emph{UTM decision frame} start.\\
+     adjusted position &  predicted from previous \emph{position notifications} (\ref{tab:positionNotification}) data at the time of \emph{UTM decision frame} start.\\
      adjusted orientation & predicted from previous \emph{position notifications} (\ref{tab:positionNotification}), \emph{mission plan}, and \emph{expected velocity}.\\
      velocity& proclaimed velocity for given \emph{UTM decision time frame}.\\
-     registration ID &  is unique registration number issued by local aviation authority\\
+     registration ID &  is unique registration number issued by the local aviation authority\\
      craft category & from \emph{position notifications} (\ref{tab:positionNotification}).\\
      maneuverability &  from \emph{position notifications} (\ref{tab:positionNotification}).\\
      mission plan & is acquired from \emph{allowed mission registers} where it has been  registered prior UAS flight\\
-     safety margins & list of all safety margins, derived based or craft categorization or overridden by \emph{position notifications} (\ref{tab:positionNotification}).\\
+     safety margins & list of all safety margins derived based or craft categorization or overridden by \emph{position notifications} (\ref{tab:positionNotification}).\\
      avoidance role & is given based on situation evaluation.\\
      trajectory prediction & simulated based on \emph{position notification} (\ref{tab:positionNotification}) and \emph{mission plan}.\\
      \caption{Collision case structure attendant data.}
@@ -224,19 +224,19 @@ If \emph{Overtake maneuver} is case type of \emph{Head collision case} then \emp
 
 The main idea is to \emph{encapsulate multiple collision cases} into one virtual roundabout to ease \emph{traffic load} \cite{fouladvand2004characteristics}. The potential risk on \emph{turbo roundabouts} have been outlined in \cite{mauro2010potential}.
 
-There are \emph{active collision cases} in focused \emph{cluster} in \emph{controlled airspace}. The multiple collision cases can pop up in different \emph{start times} and they can be active for different \emph{time period}. 
+There are \emph{active collision cases} in a focused \emph{cluster} in \emph{controlled airspace}. The multiple collision cases can pop up at different \emph{start times}, and they can be active for a different \emph{period}. 
 
-The \emph{Collision point} is replaced with \emph{roundabout center} point (eq. \ref{eq:aggregatedCollisionCaseCenter}). The \emph{roundabout center} is calculated as weighted average of \emph{active collision cases} collision points. The $weight \in [0,1]$ depending on severity rating of collision case.
+The \emph{Collision point} is replaced with the \emph{roundabout center} point (eq. \ref{eq:aggregatedCollisionCaseCenter}). The \emph{roundabout center} is calculated as weighted average of \emph{active collision cases} collision points. The $weight \in [0,1]$ depending on severity rating of collision case.
 
 \begin{equation}\label{eq:aggregatedCollisionCaseCenter}
     roundaboutCenter=\frac{\sum_{ \in Cluster}^{\forall collisionCase} collisionCase.collisionPoint \times weight}{\left | collisionCase \in Cluster \right |}
 \end{equation}
 
 \begin{note}
-    The weight in (eq. \ref{eq:aggregatedCollisionCaseCenter}) is set to 1 for all time, the weight calculation needs to be determined in future works. 
+    The weight in (eq. \ref{eq:aggregatedCollisionCaseCenter}) is set to 1 for all time; the weight calculation needs to be determined in future works. 
 \end{note}
 
-The \emph{smallest circle problem} defined and solved in \cite{ritter1990efficient,welzl1991smallest} is used to determine safety margin in our approach. The \emph{naive approach} determining \emph{roundabout safety margin} is to take the maximum of all open case \emph{safety margins} including default ones (eq. \ref{eq:naiveSafetyMarginAgregation}).
+The \emph{smallest circle problem} defined and solved in \cite{ritter1990efficient,welzl1991smallest} is used to determine the safety margin in our approach. The \emph{naive approach} determining \emph{roundabout safety margin} is to take the maximum of all open case \emph{safety margins} including default ones (eq. \ref{eq:naiveSafetyMarginAgregation}).
 
 \begin{multline}\label{eq:naiveSafetyMarginAgregation}
     safetyMargin = \max \left\{\begin{aligned}&case.UAS_i.roundabout Safety Margin,\\&case.UAS_i.default Safety Margin\\\end{aligned}\right \},\\
@@ -253,20 +253,20 @@ The \emph{smallest circle problem} defined and solved in \cite{ritter1990efficie
 
 \begin{tabularx}{\textwidth}{S{0.25}|X}
      \multicolumn{2}{c}{\textbf{Collision case calculated data}}\\\hline
-     linear intersection & is predicted on attendants \emph{position}, \emph{heading},\emph{velocity}, based on \emph{maneuverability} certain thresholds are applied  to determine safety properties.\\
+     linear intersection & is predicted on attendants \emph{position}, \emph{heading}, \emph{velocity}, based on \emph{maneuverability} certain thresholds are applied  to determine safety properties.\\
      trajectory intersection & is predicted on attendants \emph{position}, \emph{velocity}, \emph{heading}, and \emph{related mission plans}, based on \emph{maneuverability} certain thresholds are applied  to determine safety properties.\\
-     collision point & is created if there is risk of medium/short time period collision, if head collision case has not been closed, collision point is inherited.\\
-     adj. collision point & is created if there exists at least one active collision case in nearby surroundings of this case collision point (cluster). \\
-     angle of approach($\alpha$) & is calculated based on attendants \emph{velocity} and \emph{position}, range is $[0^\circ,180^\circ]$, it determines \emph{primary avoidance roles}.\\
+     collision point & is created if there is the risk of medium/short period collision, if head collision case has not been closed, collision point is inherited.\\
+     adj. collision point & is created if there exists at least one active collision case in the nearby surroundings of this case collision point (cluster). \\
+     angle of approach($\alpha$) & is calculated based on attendants \emph{velocity} and \emph{position}, the range is $[0^\circ,180^\circ]$, it determines \emph{primary avoidance roles}.\\
      safety margin & is calculated based on \emph{avoidance roles}, \emph{maneuverability}, collision indicators, and \emph{angle of approach}.\\
      margin adjustment & is calculated based on \emph{linked collision cases}, \emph{estimation errors} and \emph{weather}.\\
-     linked cases & contains list of collision cases which are active and can have impact on this \emph{collision case}.\\
-     head case & is reference to collision case in time frame when it was first opened.\\
+     linked cases & contains a list of collision cases which are active and can have an  impact on this \emph{collision case}.\\
+     head case & is a reference to collision case in the time frame when it was first opened.\\
      \multicolumn{2}{c}{\textbf{Collision case indicators}}\\\hline
-     linear intersection & indicates if there was safety breach on linear trajectories estimation with risk of direct collision.\\
-     trajectory intersection & indicates if there was breach on trajectory estimation, with risk of direct collision.\\
+     linear intersection & indicates if there was a safety breach on linear trajectories estimation with the risk of direct collision.\\
+     trajectory intersection & indicates if there was a breach on trajectory estimation, with the risk of direct collision.\\
      well clear breach & indicates if \emph{linear projection} or \emph{trajectory projection} breaches \emph{well clear barrel} in \emph{controlled airspace}.\\
-     active case & indicates if case is still open.\\
+     active case & indicates if the case is still open.\\
     \caption{Collision case structure for given decision time-frame.}
     \label{tab:collisionCase} 
 \end{tabularx}
