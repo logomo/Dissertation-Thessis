@@ -222,15 +222,15 @@
 \contentsline {paragraph}{LiDAR Swipe:}{101}{section*.190}
 \contentsline {paragraph}{LiDAR Swipe Portioning:}{101}{section*.191}
 \contentsline {paragraph}{Cell:}{102}{section*.192}
-\contentsline {paragraph}{Effective Operation Space:}{103}{section*.193}
-\contentsline {paragraph}{Avoidance Grid Definition:}{104}{section*.195}
+\contentsline {paragraph}{Effective Operation Space:}{102}{section*.193}
+\contentsline {paragraph}{Avoidance Grid Definition:}{103}{section*.195}
 \contentsline {paragraph}{Grid Sizing Approach:}{105}{section*.196}
 \contentsline {paragraph}{Cell in Avoidance Grid Properties:}{105}{section*.197}
 \contentsline {section}{\numberline {6.4} Reach Set Approximation}{107}{section.6.4}
 \contentsline {paragraph}{Motivation:}{107}{section*.198}
 \contentsline {paragraph}{Proposed Solution Features:}{107}{section*.199}
 \contentsline {paragraph}{Discretization of Reach set:}{107}{section*.200}
-\contentsline {paragraph}{The Complete Reach Set}{107}{section*.201}
+\contentsline {paragraph}{The Complete Reach Set}{108}{section*.201}
 \contentsline {paragraph}{The Reach Set Approximation by Movement Automaton}{108}{section*.202}
 \contentsline {paragraph}{Approximated Reach Set Containment:}{108}{section*.203}
 \contentsline {paragraph}{Properties:}{108}{section*.204}
@@ -241,53 +241,53 @@
 \contentsline {paragraph}{Motivation:}{109}{section*.208}
 \contentsline {paragraph}{Core Performance Criteria:}{110}{section*.209}
 \contentsline {paragraph}{Trajectory footprint:}{110}{section*.210}
-\contentsline {paragraph}{Coverage set:}{110}{section*.211}
-\contentsline {paragraph}{Coverage set properties:}{111}{section*.212}
-\contentsline {paragraph}{Trajectory smoothness:}{111}{section*.213}
-\contentsline {subsection}{\numberline {6.4.2} Constrained Trajectory Expansion}{112}{subsection.6.4.2}
-\contentsline {paragraph}{Motivation:}{112}{section*.214}
-\contentsline {paragraph}{Rapid Exploration Tree}{113}{section*.216}
-\contentsline {paragraph}{The example}{113}{section*.217}
-\contentsline {paragraph}{Rapid Exploration Tree Node}{113}{section*.218}
-\contentsline {paragraph}{Wave-front propagation of Rapid Exploration Tree}{114}{section*.219}
-\contentsline {paragraph}{Step: Initialization}{114}{section*.220}
-\contentsline {paragraph}{Step: Wave-front Propagation}{114}{section*.221}
-\contentsline {paragraph}{Step: After Layer Propagation Purge}{114}{section*.222}
-\contentsline {subsection}{\numberline {6.4.3} Chaotic Reach set}{116}{subsection.6.4.3}
-\contentsline {paragraph}{Motivation:}{116}{section*.223}
-\contentsline {paragraph}{Background:}{116}{section*.224}
-\contentsline {paragraph}{Expansion Constraint Function Implementation}{116}{section*.225}
-\contentsline {paragraph}{Tuning Parameters}{116}{section*.226}
-\contentsline {paragraph}{Step: Initialization}{116}{section*.227}
-\contentsline {paragraph}{Step: Evaluate best trajectories with unique Footprints}{116}{section*.228}
-\contentsline {paragraph}{Step: Select candidates}{117}{section*.229}
-\contentsline {paragraph}{Example:}{118}{section*.230}
-\contentsline {paragraph}{Pros and Cons:}{118}{section*.232}
-\contentsline {subsection}{\numberline {6.4.4} Harmonic Reach set}{119}{subsection.6.4.4}
-\contentsline {paragraph}{Motivation:}{119}{section*.233}
-\contentsline {paragraph}{Background:}{119}{section*.234}
-\contentsline {paragraph}{Expansion Constraint Function Implementation}{119}{section*.235}
-\contentsline {paragraph}{Tuning Parameter:}{119}{section*.236}
-\contentsline {paragraph}{Step: Initialization}{120}{section*.237}
-\contentsline {paragraph}{Step: Evaluate smoothest trajectories with unique Footprints}{120}{section*.238}
-\contentsline {paragraph}{Step: Select candidates}{121}{section*.239}
-\contentsline {paragraph}{Example:}{121}{section*.240}
-\contentsline {paragraph}{Pros and Cons:}{122}{section*.242}
-\contentsline {subsection}{\numberline {6.4.5} Combined Reach Set}{122}{subsection.6.4.5}
-\contentsline {paragraph}{Motivation:}{122}{section*.243}
-\contentsline {paragraph}{Background:}{122}{section*.244}
-\contentsline {paragraph}{Combined Reach Set Calculation Function}{123}{section*.245}
-\contentsline {paragraph}{Merge Tree Function}{124}{section*.246}
-\contentsline {paragraph}{Example:}{124}{section*.247}
-\contentsline {paragraph}{Pros and Cons:}{125}{section*.249}
-\contentsline {subsection}{\numberline {6.4.6} ACAS-X like Reach set}{125}{subsection.6.4.6}
-\contentsline {paragraph}{Motivation:}{125}{section*.250}
-\contentsline {paragraph}{Background:}{126}{section*.251}
-\contentsline {paragraph}{Expansion Constraint Function Implementation}{127}{section*.252}
-\contentsline {paragraph}{Step: Initialization}{127}{section*.253}
-\contentsline {paragraph}{Step: Candidate Selection Process}{127}{section*.254}
-\contentsline {paragraph}{Example:}{128}{section*.255}
-\contentsline {paragraph}{Pros and Cons:}{129}{section*.257}
+\contentsline {paragraph}{Coverage set:}{111}{section*.211}
+\contentsline {paragraph}{Coverage set properties:}{112}{section*.212}
+\contentsline {paragraph}{Trajectory smoothness:}{112}{section*.213}
+\contentsline {subsection}{\numberline {6.4.2} Constrained Trajectory Expansion}{113}{subsection.6.4.2}
+\contentsline {paragraph}{Motivation:}{113}{section*.214}
+\contentsline {paragraph}{Rapid Exploration Tree}{114}{section*.216}
+\contentsline {paragraph}{The example}{114}{section*.217}
+\contentsline {paragraph}{Rapid Exploration Tree Node}{114}{section*.218}
+\contentsline {paragraph}{Wave-front propagation of Rapid Exploration Tree}{115}{section*.219}
+\contentsline {paragraph}{Step: Initialization}{115}{section*.220}
+\contentsline {paragraph}{Step: Wave-front Propagation}{115}{section*.221}
+\contentsline {paragraph}{Step: After Layer Propagation Purge}{115}{section*.222}
+\contentsline {subsection}{\numberline {6.4.3} Chaotic Reach set}{117}{subsection.6.4.3}
+\contentsline {paragraph}{Motivation:}{117}{section*.223}
+\contentsline {paragraph}{Background:}{117}{section*.224}
+\contentsline {paragraph}{Expansion Constraint Function Implementation}{117}{section*.225}
+\contentsline {paragraph}{Tuning Parameters}{117}{section*.226}
+\contentsline {paragraph}{Step: Initialization}{117}{section*.227}
+\contentsline {paragraph}{Step: Evaluate best trajectories with unique Footprints}{117}{section*.228}
+\contentsline {paragraph}{Step: Select candidates}{118}{section*.229}
+\contentsline {paragraph}{Example:}{119}{section*.230}
+\contentsline {paragraph}{Pros and Cons:}{119}{section*.232}
+\contentsline {subsection}{\numberline {6.4.4} Harmonic Reach set}{120}{subsection.6.4.4}
+\contentsline {paragraph}{Motivation:}{120}{section*.233}
+\contentsline {paragraph}{Background:}{120}{section*.234}
+\contentsline {paragraph}{Expansion Constraint Function Implementation}{120}{section*.235}
+\contentsline {paragraph}{Tuning Parameter:}{120}{section*.236}
+\contentsline {paragraph}{Step: Initialization}{121}{section*.237}
+\contentsline {paragraph}{Step: Evaluate smoothest trajectories with unique Footprints}{121}{section*.238}
+\contentsline {paragraph}{Step: Select candidates}{122}{section*.239}
+\contentsline {paragraph}{Example:}{122}{section*.240}
+\contentsline {paragraph}{Pros and Cons:}{123}{section*.242}
+\contentsline {subsection}{\numberline {6.4.5} Combined Reach Set}{123}{subsection.6.4.5}
+\contentsline {paragraph}{Motivation:}{123}{section*.243}
+\contentsline {paragraph}{Background:}{123}{section*.244}
+\contentsline {paragraph}{Combined Reach Set Calculation Function}{124}{section*.245}
+\contentsline {paragraph}{Merge Tree Function}{125}{section*.246}
+\contentsline {paragraph}{Example:}{125}{section*.247}
+\contentsline {paragraph}{Pros and Cons:}{126}{section*.249}
+\contentsline {subsection}{\numberline {6.4.6} ACAS-X like Reach set}{126}{subsection.6.4.6}
+\contentsline {paragraph}{Motivation:}{126}{section*.250}
+\contentsline {paragraph}{Background:}{127}{section*.251}
+\contentsline {paragraph}{Expansion Constraint Function Implementation}{128}{section*.252}
+\contentsline {paragraph}{Step: Initialization}{128}{section*.253}
+\contentsline {paragraph}{Step: Candidate Selection Process}{128}{section*.254}
+\contentsline {paragraph}{Example:}{129}{section*.255}
+\contentsline {paragraph}{Pros and Cons:}{130}{section*.257}
 \contentsline {section}{\numberline {6.5} Static Obstacles and Constraints}{131}{section.6.5}
 \contentsline {paragraph}{Introduction:}{131}{section*.258}
 \contentsline {paragraph}{Changing Scanning Density of LiDAR:}{131}{section*.259}
