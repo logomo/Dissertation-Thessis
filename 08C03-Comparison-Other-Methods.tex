@@ -117,7 +117,7 @@ The constraints for safety margin calculation and some guidelines were outlined 
 
 \paragraph{Intruders:} The \emph{intruders} (sec. \ref{s:intruders}) are limited by \emph{detection range} and intersection models parameters ranges. 
 
-The \emph{body volume intersection} (sec. \ref{s:bodyvolumeIntersection}) has a following constraint:
+The \emph{body volume intersection} (app. \ref{s:bodyvolumeIntersection}) has a following constraint:
 
 \begin{equation*}
     intruder Radius < body Radius \le minimal Detection Range - 2 \times our UAS radius
@@ -127,7 +127,7 @@ The \emph{body volume intersection} (sec. \ref{s:bodyvolumeIntersection}) has a 
     The \emph{body radius} does not need to fit exactly on the intruder real body radius; usually, some padding space is added.
 \end{note}
 
-The \emph{maneuverability uncertainty intersection} (sec. \ref{s:uncertaintyIntersection}) is tuned through the uncertainty spread on the horizontal and vertical plane. This spread cannot be infinite, and the only limitation is given by implementation:
+The \emph{maneuverability uncertainty intersection} (app. \ref{s:uncertaintyIntersection}) is tuned through the uncertainty spread on the horizontal and vertical plane. This spread cannot be infinite, and the only limitation is given by implementation:
 
 \begin{equation*}
     \begin{aligned}

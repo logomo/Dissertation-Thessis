@@ -54,11 +54,11 @@ The \emph{threat insertion} is realized in 7\textsuperscript{th} to the  10\text
     \texttt{Insert Obstacles: } \mathscr{O}(|cells|)
 \end{equation*}
 
-\noindent The \emph{intruders intersection model} type impact the insertion complexity. The \emph{linear intersection} (sec. \ref{s:linearIntersectionModel}) is going through the maximum of \emph{layers count} cells. 
+\noindent The \emph{intruders intersection model} type impact the insertion complexity. The \emph{linear intersection} (app. \ref{s:linearIntersectionModel}) is going through the maximum of \emph{layers count} cells. 
 
-The \emph{body volume intersection model} (sec. \ref{s:bodyvolumeIntersection}) can check the \emph{simple intersection condition} overall \emph{Avoidance Grid} in the worst case; therefore complexity for this check is bounded by a \emph{count of cells}. 
+The \emph{body volume intersection model} (app. \ref{s:bodyvolumeIntersection}) can check the \emph{simple intersection condition} overall \emph{Avoidance Grid} in the worst case; therefore complexity for this check is bounded by a \emph{count of cells}. 
 
-The \emph{Maneuverability Uncertainty Intersection} (sec. \ref{s:uncertaintyIntersection}) can hit all cells in \emph{Avoidance Grid}. The calculation complexity boundary is exponential depending on the \emph{horizontal/vertical} spread in $[rad]$. The \emph{intersection} implementation was done \emph{ad-hoc}. The impact of \emph{intersection application} is visible only when there are more than \emph{four} concurrence intruders (fig. \ref{fig:emergencyHeadOnMultipleComputationTime}).
+The \emph{Maneuverability Uncertainty Intersection} (app. \ref{s:uncertaintyIntersection}) can hit all cells in \emph{Avoidance Grid}. The calculation complexity boundary is exponential depending on the \emph{horizontal/vertical} spread in $[rad]$. The \emph{intersection} implementation was done \emph{ad-hoc}. The impact of \emph{intersection application} is visible only when there are more than \emph{four} concurrence intruders (fig. \ref{fig:emergencyHeadOnMultipleComputationTime}).
 
 \noindent The \emph{complexity boundary for \emph{intruder insertion}} is given like follow:
 

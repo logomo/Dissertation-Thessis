@@ -160,7 +160,7 @@ It is assumed that UAS is in \emph{cooperative avoidance mode}. If the previous 
 
     \item UAS broadcasts \emph{warning message} to all nearby aircraft, and \emph{separation message(s)} to conflicting aircraft. \emph{Separation message} contains an \emph{expected collision point} and \emph{preferred separation type}. Each conflicting aircraft then reacts and sends \emph{action notification} to UTM.
 
-    \item If UAS switches into \emph{emergency mode}, non-cooperative avoidance using \emph{avoidance grid} is induced. Each relevant intruder is projected as \emph{timed body volume intruder} (sec. \ref{s:bodyvolumeIntersection}), where \emph{safety margin} is used as \emph{body radius}.
+    \item If UAS switches into \emph{emergency mode}, non-cooperative avoidance using \emph{avoidance grid} is induced. Each relevant intruder is projected as \emph{timed body volume intruder} (app. \ref{s:bodyvolumeIntersection}), where \emph{safety margin} is used as \emph{body radius}.
 \end{enumerate}
 
 \noindent\emph{UAS} notifies \emph{UTM} with \emph{course change}, \emph{planned avoidance trajectory}, \emph{avoidance mode}. \emph{UTM} approves planned changes or sends \emph{plan corrections} (out of scope). The rule summary is given in table \ref{tab:ruleCloseCollisionCase}. 

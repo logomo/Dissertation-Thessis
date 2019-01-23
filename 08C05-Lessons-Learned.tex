@@ -17,9 +17,9 @@ The other issue was with wavefront algorithm (alg. \ref{alg:Wavefront Propagatio
 
 \paragraph{Euclidean Grid Benefits:} The intersection model performance was good because of most of the numeric/analytically intersection solutions for:
 \begin{enumerate}
-    \item \emph{Line} - used in \emph{linear intruder intersection model} (sec. \ref{s:linearIntersectionModel}).
+    \item \emph{Line} - used in \emph{linear intruder intersection model} (app. \ref{s:linearIntersectionModel}).
     
-    \item \emph{Tunnel} - used in \emph{body-volume intersection model} (sec. \ref{s:bodyvolumeIntersection}).
+    \item \emph{Tunnel} - used in \emph{body-volume intersection model} (app. \ref{s:bodyvolumeIntersection}).
     
     \item \emph{Polygon} - used in constraints (sec. \ref{s:virtualConstraints}, \ref{s:MovingVirtualConstraints})
 \end{enumerate}
@@ -53,9 +53,9 @@ The other issue was with wavefront algorithm (alg. \ref{alg:Wavefront Propagatio
 \paragraph{Intruder Intersection Models:} The \emph{implemented intruder intersection models} (sec. \ref{s:intruderBehaviourPrediction}) are basic and sufficient. There are few ideas which do not make it into the final concept:
 
 \begin{enumerate}
-    \item \emph{Intruder as line/curve intersection} - the idea is to use a parametric curve instead of the \emph{linear intersection model} (sec. \ref{s:linearIntersectionModel}). The problem is those curve parameters are hard to obtain; they are not mandatory part of any position notification proposal so far.
+    \item \emph{Intruder as line/curve intersection} - the idea is to use a parametric curve instead of the \emph{linear intersection model} (app. \ref{s:linearIntersectionModel}). The problem is those curve parameters are hard to obtain; they are not mandatory part of any position notification proposal so far.
 	
-	\item \emph{Intruder as movement automaton simulated trajectory} - the idea is to have access to movement automaton of an intruder in \emph{predictor mode} (sec. \ref{s:referenceTrajectoryGenerator}) to generate future expected trajectory. The problem is in some situations the trajectory of intruder changes a lot and \emph{maneuverability uncertainty intersection} (sec. \ref{s:uncertaintyIntersection}) outperforms this approach significantly. The other problem is that most of the \emph{general aviation} does not want to share this kind of information due to security reasons.  This concept makes it into the final solution, but not in \emph{avoidance framework}, but as \emph{UTM collision case intersection calculation} (sec. \ref{sec:collisionCase}).
+	\item \emph{Intruder as movement automaton simulated trajectory} - the idea is to have access to movement automaton of an intruder in \emph{predictor mode} (sec. \ref{s:referenceTrajectoryGenerator}) to generate future expected trajectory. The problem is in some situations the trajectory of intruder changes a lot and \emph{maneuverability uncertainty intersection} (app. \ref{s:uncertaintyIntersection}) outperforms this approach significantly. The other problem is that most of the \emph{general aviation} does not want to share this kind of information due to security reasons.  This concept makes it into the final solution, but not in \emph{avoidance framework}, but as \emph{UTM collision case intersection calculation} (sec. \ref{sec:collisionCase}).
 	
 	\item \emph{Intruder well clear implementation as a rule} - the idea is to implement \emph{potential fields principle} as core mechanism of avoidance. The problem is determinism of this approach, and the idea was scrapped.
 \end{enumerate}
