@@ -1,4 +1,4 @@
-\subsection{Reach Set Performance Criteria}\label{s:ReachSetPerformanceCriteria}
+\subsection{Distinctive Properties of the Trajectories}\label{s:ReachSetPerformanceCriteria}
 
 \paragraph{Motivation:} The need to Make \emph{Reach Set} scalable approach. This may be a problem due the \emph{Expansion rate}. \emph{Reach set} represented as a \emph{Trajectory Tree} (eq. \ref{eq:trajectoryTree}) for Avoidance Grid with $layerCount$ and Movement automaton with $movementCount$, the \emph{Node count} is given as:
 
@@ -8,7 +8,7 @@
 
 \noindent \emph{This scaling} is not feasible for \emph{Avoidance Grid} with many layers ($< 10$) or \emph{Movement Set} with many movements ($< 9$). There is need for \emph{Reduced Reach set calculation}.
 
-\paragraph{Core Performance Criteria:} The scaling factor (eq. \ref{eq:fullReachSetNodeCount}) shows that there are going to be many trajectories. The main point is that not every trajectory in \emph{Reach Set} are giving us \emph{maneuverability advantage}. Our expectations lies in following \emph{Performance Requirements}:
+\paragraph{Performance Criteria:} The scaling factor (eq. \ref{eq:fullReachSetNodeCount}) shows that there are going to be many trajectories. The main point is that not every trajectory in \emph{Reach Set} are giving us \emph{maneuverability advantage}. Our expectations lies in following \emph{Performance Requirements}:
 
 \begin{enumerate}
     \item \emph{Reach set} must \emph{Cover} maximum of the \emph{possible unique maneuvers} in  \emph{Avoidance Grid}.
@@ -63,7 +63,6 @@ Each trajectory passes through space in \emph{Avoidance Grid}. If there exists a
 \emph{equality function} (eq. \ref{eq:TrajectoryEquality}).
 \emph{Coverage set} is sufficient for now.
 
-\newpage
 \begin{definition}[Coverage Set]\label{def:CoverageSet}
     \emph{Coverage set} (\ref{eq:CoverageSet}) is defined for \emph{Avoidance Grid} and \emph{Reach Set} pair as set of unique \emph{Trajectory footprints}:
     
