@@ -138,7 +138,7 @@ The \emph{maneuverability uncertainty intersection} (app. \ref{s:uncertaintyInte
 
 
 
-\paragraph{Constraints:} The constraints are considered as \emph{airspace restrictions}, \emph{weather zones}, \emph{geo-fencing zones} in this work. The constraints have two implementations \emph{Static constraints} (sec. \ref{s:virtualConstraints}) and \emph{Moving constraints} (sec. \ref{s:MovingVirtualConstraints}). The only real constraint is the detection range; the constraint must be detected before making any impact on \emph{grid}:
+\paragraph{Constraints:} The constraints are considered as \emph{airspace restrictions}, \emph{weather zones}, \emph{geo-fencing zones} in this work. The constraints have two implementations \emph{Static constraints} (sec. \ref{s:virtualConstraints}) and \emph{Moving constraints} (def. \ref{def:movingConstraint}). The only real constraint is the detection range; the constraint must be detected before making any impact on \emph{grid}:
 
 \begin{equation*}
     impact(uasPosition,constraintCenter) < detection Range - grid Range
