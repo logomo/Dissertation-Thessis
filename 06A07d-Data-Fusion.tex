@@ -18,7 +18,7 @@ The \emph{visibility} for the cell is given in (eq. \ref{eq:visibilityForCell}) 
     visibility(cell_{i,j,k}) = \min \left\{\begin{aligned}visibility(cell_{i,j,k},&sensor_i):\\&\forall sensor_i \in Sensor Field\end{aligned}\right\}
 \end{equation}
 
-\noindent The example of \emph{visibility} calculation for \emph{LiDAR} sensor is given in (sec. \ref{s:mapObstacles}).
+\noindent The example of \emph{visibility} calculation for \emph{LiDAR} sensor is given in (fig. \ref{fig:mapObstacleStatesAfterDataFusion}).
 
 \begin{note}
     Sensor reliability for \emph{visibility} is already accounted for prior \emph{data fusion}. If not \emph{weighted average} should be used instead. 
@@ -32,7 +32,7 @@ The \emph{maximal value} of \emph{detected obstacle} rating is selected from rea
     obstacle(cell_{i,j,k}) = \max \left\{\begin{aligned}obstacle(cell_{i,j,k},&sensor_i):\\&\forall sensor_i \in SensorField\end{aligned}\right\}\times\dots\\\dots\times visibility(cell_{i,j,k})
 \end{multline}
 
-\noindent The example of \emph{detected obstacle rating} calculation for \emph{LiDAR} sensor is given in (sec. \ref{s:detectedObstacles}).
+\noindent The example of \emph{detected obstacle rating} calculation for \emph{LiDAR} sensor is given in (eq. \ref{eq:naiveObstacleRate}).
 
 \paragraph{Map Obstacle:} The \emph{Information Sources} are feeding \emph{Avoidance Grid} with partial information of \emph{Map obstacle rating}. \emph{Map Obstacle Rating} shows the certainty that \emph{charted obstacle} is in a given cell. This property is bound to \emph{Information Source}, and it has the \emph{range} in  $[0,1]$.
 
@@ -43,7 +43,7 @@ The \emph{Map Obstacle Rating} for a cell (eq. \ref{eq:mapObstacleRatingForCell}
     \left\{\begin{aligned}map(&cell_{i,j,k},source_i):\\&\forall source_i \in InformationSources\end{aligned}\right\}\times\dots\\\dots\times \left(1-visibility(cell_{i,j,k})\right)
 \end{multline}
 
-\noindent The example of \emph{Map Obstacle Rating} calculation is given in (sec. \ref{s:mapObstacles}).
+\noindent The example of \emph{Map Obstacle Rating} calculation is given in (fig. \ref{fig:mapObstacleStatesAfterDataFusion}).
 
 
 \paragraph{Intruder:} There is a set of \emph{Active Intruders}, each intruder is using its \emph{parametric intersection model}. This parametric \emph{intersection} model calculates \emph{partial intersection ratings} representing \emph{intersection certainty} ranging in $[0,1]$. The more \emph{partial intersection rating} is closer to 1 the higher is the probability of aerial collision with that intruder in that cell. 
