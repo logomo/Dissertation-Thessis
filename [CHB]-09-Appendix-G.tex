@@ -248,74 +248,16 @@
 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  Put your Chapters here; the easiest way to do this is to keep     %%
-%%  each chapter in a separate file and `\include' all the files.     %%
-%%  Each chapter file should start with "\chapter{ChapterName}".      %%
-%%  Note that using `\include' instead of `\input' will make each     %%
-%%  chapter start on a new page, and allow you to format only parts   %%
-%%  of your thesis at a time by using `\includeonly'.                 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%% *** Include chapter files here. ***
-\setcounter{chapter}{5}
-%06-Approach
-    \input{06A01-Approach}
-
-    %06-03 Movement Automaton
-    \input{06A03-UAS-Model-MA-Implementation}
-    	\input{06A03a-Movement-Automaton-Background}
-		\input{06A03d-Our-UAS-Nonlinear-Model}
-		\input{06A03e-Our-UAS-Movement-Automaton} 
-	
-	%06-02 Avoidance Grid
-	\input{06A02-Avoidance-Grid}    
-	
-	%06-06 Reach Set
-    	\input{06A06a-Reach-Set-Approximation}
-    	\input{06A06b-Reach-Set-Performance-Criteria}
-    	\input{06A06c-Contrained-Trajectory-Expansion}
-    	%\input{06A06d-Avoidance-Grid-Scaling}
-    	\input{06A06e-Reach-Set-Approximations}
-	
-    %06-04 Static Obstacles and Constraints
-    \input{06A04-Static-Obstace-Constraints}
-    	\input{06A04a-Detected-Obstacles}
-		\input{06A04b-Map-Obstacles}
-		\input{06A04c-Static-Contraints}
+%09-Apendixes
+	\appendix
+	\setcounter{chapter}{6}
+	% Confict resolution schemes
+	\input{09AP07-AdditionalUTMFunctionality}
+		\input{06A08e-Weather-Case}
+		\input{06A09c-Rule-Definition}
 		
-	%06-05 Moving Obstacles and Intruders	
-    \input{06A05-Moving-Obstacles-Intruders}
-    	\input{06A05a-Intruder-Behaviour-Prediction}
-    	\input{06A05e-Moving-Contraints}
-   
-    %06-07 Avoidance Concept	
-    \input{06A07-Avodiance-Concept}
-    	\input{06A07d-Data-Fusion}
-    	\input{06A07a-Avoidance-Grid-Run}
-    	\input{06A07b-Mission-Control-Run}
-    	\input{06A07e-Calculation-Complexity}
-    	
-    
-    %06-08 UTM implementation
-		\input{06A08a-UAS-Traffic-Management}
-		\input{06A08b-Architecture}
-		\input{06A08h-Collision-Case-Resolution}
-		\input{06A08c-Position-Notification}
-		\input{06A08d-Collision-Case}
-		
-    
-    %06-09 Rule Engine Implementation
-    \input{06A09-Rule-Engine}
-    	\input{06A09a-Rule-Engine-Architecture}
-    	\input{06A09b-Rule-Implementation}
-    	
-    
-
-
-	
 %% This adds a line for the Bibliography in the Table of Contents.
-\addcontentsline{toc}{chapter}{Bibliography}
+%\addcontentsline{toc}{chapter}{Bibliography}
 %% *** Set the bibliography style. ***
 %% (change according to your preference/requirements)
 %\bibliographystyle{plain}

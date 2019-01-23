@@ -1,5 +1,4 @@
-\newpage
-\subsection{\secState{R}Weather Case}\label{sec:weatherCase}
+\section{Weather Case}\label{sec:weatherCase}
 \paragraph{Motivation:}  The weather, as defined in (eq. \ref{eq:weatherProjection}), impacts flight and system dynamics; therefore it impacts the \emph{reach set} is impacted. The \emph{weather impact} can be solved by policy application:
 
 \begin{enumerate}
@@ -38,7 +37,6 @@
     Vertical Constraint = \left [ start Altitude, end Altitude \right ]
 \end{equation}
 
-\newpage
 \paragraph{Additional parameters}: Following additional parameters with additional purpose can be attached to \emph{Weather Constraint}.
 \begin{enumerate}
     \item \emph{Type} - defines required resistance - moisture, temperature, wind.
@@ -62,6 +60,7 @@
      boundary & is represented as a \emph{convex polygon} on the latitude-longitude plane.\\
      start altitude & is lover boundary barometric altitude given at above mean sea level, where given weather factor has a significant impact.\\
      end altitude & is upper boundary barometric altitude given at above mean sea level, where given weather factor has a significant impact.\\
+	
      \multicolumn{2}{c}{\textbf{Additional parameters}}\\\hline
      type(s) & lists weather events occurring in the \emph{constrained area}.\\
      severity list & is recorded for each plane \emph{category}\\
