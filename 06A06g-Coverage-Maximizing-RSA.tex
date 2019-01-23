@@ -63,7 +63,7 @@ The \emph{Cell} $cell_{i,j,k}$ has a center and walls from UAS viewpoint: front 
     \Return{[candidates,leftovers]}
     
     
-    \caption{Expansion Constraint function for \emph{Chaotic Reach Set Approximation}}
+    \caption{Expansion Constraint function for \emph{Coverage-Maximizing Reach Set Approximation}}
     \label{alg:ExpansionConstraintFunctionForChaoticReachSet}
 \end{algorithm}
 
@@ -73,12 +73,12 @@ The \emph{Cell} $cell_{i,j,k}$ has a center and walls from UAS viewpoint: front 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{\FIGDIR/RS002ChaoticReachSetEstimationMethod} 
-    \caption{\emph{Chaotic \emph{reach set} approximation}.}
+    \caption{\emph{Coverage-Maximizing \emph{reach set} approximation}.}
     \label{fig:chaoticReachSetApproximation}
 \end{figure}
 
 
-\paragraph{Pros and Cons:} It can be seen from example (fig. \ref{fig:chaoticReachSetApproximation}) that \emph{Chaotic Reach Set Approximation Method} (alg. \ref{alg:ExpansionConstraintFunctionForChaoticReachSet}) generates a lot of \emph{turning} and \emph{shaky} \emph{trajectories}. 
+\paragraph{Pros and Cons:} It can be seen from example (fig. \ref{fig:chaoticReachSetApproximation}) that \emph{Coverage-Maximizing Reach Set Approximation Method} (alg. \ref{alg:ExpansionConstraintFunctionForChaoticReachSet}) generates a lot of \emph{turning} and \emph{shaky} \emph{trajectories}. 
 
 \emph{High Coverage Ratio} ($\sim 0.9$) is provided, while keeping \emph{medium node count}. The calculation complexity scales linearly with grid size. The \emph{upper limit of trajectories} is given as follow:
 
@@ -93,6 +93,6 @@ The \emph{Cell} $cell_{i,j,k}$ has a center and walls from UAS viewpoint: front 
     \times size(Movements) \times spreadLimit  
 \end{multline}
 
-\noindent\emph{Absence} of \emph{Smooth Trajectories} disqualifies \emph{Chaotic Reach Set Approximation} to be used for \emph{Navigation}. This type of reach set is feasible for \emph{Avoidance}, because it contains variety of maneuvers.
+\noindent\emph{Absence} of \emph{Smooth Trajectories} disqualifies \emph{Coverage Maximizing -RSA} to be used for \emph{Navigation}. This type of reach set is feasible for \emph{Avoidance}, because it contains variety of maneuvers.
 
 

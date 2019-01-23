@@ -68,7 +68,7 @@ The \emph{Avoidance Grid} (fig. \ref{fig:LidarSpaceSegmentation}) cell centers f
     \Return{[candidates,leftovers]}
     
     
-    \caption{Expansion Constraint function for \emph{Harmonic Reach Set Approximation}}
+    \caption{Expansion Constraint function for \emph{Turn-Minimizing Reach Set Approximation}}
     \label{alg:ExpansionConstraintFunctionForHarmonicReachSet}    
 \end{algorithm}
 
@@ -82,7 +82,7 @@ The \emph{Avoidance Grid} (fig. \ref{fig:LidarSpaceSegmentation}) cell centers f
 
 \noindent Distance of \emph{Trajectory} is \emph{enumerator}, because its considered as \emph{base value} and is defined in interval $[0,maximalWallDistance]$. The \emph{Smoothness Rate} is in denominator, because it is a penalization coefficient defined in interval $[0,1]$. 
 
-\emph{Second criterion} is \emph{trajectory uniqueness} This is provided by \emph{Best Performance Map}, where best performing \emph{Node} belongs to one unique \emph{trajectory footprint}. The implementation is identical to \emph{chaotic reach set expansion} (alg. \ref{alg:ExpansionConstraintFunctionForChaoticReachSet}).
+\emph{Second criterion} is \emph{trajectory uniqueness} This is provided by \emph{Best Performance Map}, where best performing \emph{Node} belongs to one unique \emph{trajectory footprint}. The implementation is identical to \emph{coverage-maximizing set expansion} (alg. \ref{alg:ExpansionConstraintFunctionForChaoticReachSet}).
 
 \paragraph{Step: Select candidates} is executed  on \emph{Best Performance Map} records using \emph{Penalized Cell Center Distance} as pivot parameter, ordered in ascending order and limited by \emph{Spread Limit} tuning parameter. The \emph{Leftovers} are difference set between \emph{Passing Nodes} and \emph{Candidate Nodes}.
 
@@ -98,11 +98,11 @@ The \emph{Avoidance Grid} (fig. \ref{fig:LidarSpaceSegmentation}) cell centers f
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{\FIGDIR/RS003HarmonicReachSetEstimationMethod} 
-    \caption{\emph{Harmonic \emph{reach set} approximation}.}
+    \caption{\emph{Turn-minimizing \emph{reach set} approximation}.}
     \label{fig:harmonicReachSetApproximation}
 \end{figure}
 
-\paragraph{Pros and Cons:} It can bee seen from example (fig. \ref{fig:harmonicReachSetApproximation}) that \emph{Harmonic Reach Set Approximation Method} (alg. \ref{alg:ExpansionConstraintFunctionForHarmonicReachSet}) generates \emph{smooth evenly spread trajectories}.
+\paragraph{Pros and Cons:} It can bee seen from example (fig. \ref{fig:harmonicReachSetApproximation}) that \emph{Turn-Minimizing Reach Set Approximation Method} (alg. \ref{alg:ExpansionConstraintFunctionForHarmonicReachSet}) generates \emph{smooth evenly spread trajectories}.
     
 High smoothness ratio ($\ge 0.9$) is provided, while keeping low node count for UAS systems. The calculation complexity scales linearly with grid size. The upper limit of trajectories is given as follow:
 
@@ -116,7 +116,7 @@ High smoothness ratio ($\ge 0.9$) is provided, while keeping low node count for 
     countNodes(ReachSet) \le layerCount \times layerCellCount \times spreadLimit
 \end{equation}
 
-\noindent Absence of \emph{High Coverage Ratio} disqualifies \emph{Harmonic Reach Set Approximation} to be used for \emph{Emergency Avoidance}. This type of \emph{Reach Set} is feasible for \emph{Open Space Navigation} or \emph{Controlled Airspace Navigation}. Its low turning rate in contained \emph{Trajectories} are desired for such tasks. 
+\noindent Absence of \emph{High Coverage Ratio} disqualifies \emph{Turn-Minimizing Reach Set Approximation} to be used for \emph{Emergency Avoidance}. This type of \emph{Reach Set} is feasible for \emph{Open Space Navigation} or \emph{Controlled Airspace Navigation}. Its low turning rate in contained \emph{Trajectories} are desired for such tasks. 
 
 
 

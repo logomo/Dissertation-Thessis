@@ -1,5 +1,5 @@
 \subsection{Combined Reach Set Approximation - Tree Merge}\label{s:combinedReachSet}
-\paragraph{Motivation:} Harmonic reach set (sec. \ref{s:harmonicReachSet}) is \emph{efficient} for \emph{Navigation in \emph{Controlled Airspace}}. Chaotic reach set (sec. \ref{s:chaoticReachSet}) is good for \emph{Emergency avoidance}. The need to differentiation between \emph{Navigation} and \emph{Emergency Avoidance} mode is necessary in \emph{Controlled Airspace}. but not in \emph{Non-controlled Airspace}. The combination of \emph{Harmonic} and \emph{Chaotic} reach sets is obvious solution. 
+\paragraph{Motivation:} Turn-Minimizing Reach Set Approximation (sec. \ref{s:harmonicReachSet}) is \emph{efficient} for \emph{Navigation in \emph{Controlled Airspace}}. Coverage-Maximizing Reach Set Approximation (sec. \ref{s:chaoticReachSet}) is good for \emph{Emergency avoidance}. The need to differentiation between \emph{Navigation} and \emph{Emergency Avoidance} mode is necessary in \emph{Controlled Airspace}. but not in \emph{Non-controlled Airspace}. The combination of \emph{Turning-Minimizing} and \emph{Coverage-Maximizing} reach set aproximations is obvious solution. 
 
 \emph{Automatic mode switch} can be provided by combination of \emph{Navigation Reach Set} and \emph{Avoidance Reach Set} with elevated cost function. Overall having a method to merge multiple trees would be beneficial.
 
@@ -69,9 +69,9 @@ The \emph{Reach Set Approximation} is \emph{tree} with \emph{Root Node} in \emph
     The combined tree \cite{o1996log} does not need to have combined amount of original \emph{Reach Sets} trajectories. There can be \emph{Duplicity} which means that any bounded property like \emph{Cost} must be \emph{calculated} again.
 \end{note}
 
-\paragraph{Combined Reach Set Calculation Function} (alg. \ref{alg:ReachSetMerge}) is implemented as function $Node combinedReachSet(\dots)$ which takes root Node with \emph{initial State}, \emph{Avoidance Grid} and respective parameters for each calculation method. \emph{Harmonic spread} for \emph{Harmonic Reach set calculation} and \emph{Chaotic Spread}, \emph{Footprint Length} for \emph{Chaotic Reach set calculation}.
+\paragraph{Combined Reach Set Calculation Function} (alg. \ref{alg:ReachSetMerge}) is implemented as function $Node combinedReachSet(\dots)$ which takes root Node with \emph{initial State}, \emph{Avoidance Grid} and respective parameters for each calculation method. \emph{turn-minimizing spread} for \emph{Turn-Minimizing Reach set calculation} and \emph{coverage spread}, \emph{Footprint Length} for \emph{Coverage-Maximizing Reach Set Approximation}.
 
-\emph{Separate Reach Sets} are calculated using \emph{Wave-front propagation} (alg. \ref{alg:Wavefront Propagation}) using respective \emph{Constrained Expansion} functions for \emph{Harmonic} (alg. \ref{alg:ExpansionConstraintFunctionForHarmonicReachSet}) and \emph{Chaotic} (alg. \ref{alg:ExpansionConstraintFunctionForChaoticReachSet}) reach sets.
+\emph{Separate Reach Sets} are calculated using \emph{Wave-front propagation} (alg. \ref{alg:Wavefront Propagation}) using respective \emph{Constrained Expansion} functions for \emph{Turn-Minimizing} (alg. \ref{alg:ExpansionConstraintFunctionForHarmonicReachSet}) and \emph{Coverage-Maximizing} (alg. \ref{alg:ExpansionConstraintFunctionForChaoticReachSet}) reach sets.
 
 \emph{Combined Reach Set} is created using \emph{Node mergeTree($\dots$)} function. Because different cost function or \emph{Bounded Parameters Calculation} may be applied on \emph{Original Reach Sets}.
 
@@ -80,7 +80,7 @@ The \emph{Reach Set Approximation} is \emph{tree} with \emph{Root Node} in \emph
 The Goal is to have penalization for \emph{Chaotic behaviour}, implementation of \emph{Automatic Mode Switch} can be done like follows:
 \begin{enumerate}
     \item \emph{Calculate Normal Cost} for Node $Cost(Node)$ for associated trajectory:\\ $Cost(Node.Trajectory)$.
-    \item \emph{Calculate Penalization for \emph{Chaotic Behaviour}}, calculate \emph{Smoothness Rating for Trajectory} (def. \ref{def:SmoothnessRatingForTrajectory}) in interval $[0,1]$, introduce penalization with base $100 \%$.
+    \item \emph{Calculate Penalization for \emph{additional manuevering}}, calculate \emph{Smoothness Rating for Trajectory} (def. \ref{def:SmoothnessRatingForTrajectory}) in interval $[0,1]$, introduce penalization with base $100 \%$.
 \end{enumerate}
 
 \noindent The final $Cost(Node)$ function is applied on each \emph{Combined Reach Set Node} and look like follows:
@@ -119,10 +119,10 @@ Function is applied on \emph{root Node} iterating over \emph{Movements in Moveme
     
     \BlankLine
     \# Combined Reach Set calculation function\;
-    \Fn(){\FMain{Node root, AvoidanceGrid grid,int$^+$ chaoticSpread, int$^+$ harmonicSpread, int$^+$ footprintLength}}{
-        Node chaotic = chaoticReachSet(root,grid, footprintLength,chaoticSpread)\;
-        Node harmonic = harmonicReachSet(root,grid, harmonicSpread)\;
-        Node combined = mergeTree(chaotic,harmonic)\;
+    \Fn(){\FMain{Node root, AvoidanceGrid grid,int$^+$ coverageSpread, int$^+$ turnSpread, int$^+$ footprintLength}}{
+        Node cmrsa = chaoticReachSet(root,grid, footprintLength,coverageSpread)\;
+        Node tmrsa = harmonicReachSet(root,grid, turnSpread)\;
+        Node combined = mergeTree(cmrsa,tmrsa)\;
         combined.applyCostFunction()\;
         \Return{combined}
     }
@@ -132,10 +132,10 @@ Function is applied on \emph{root Node} iterating over \emph{Movements in Moveme
     \label{alg:ReachSetMerge}
 \end{algorithm}
 
-\paragraph{Example:} for \emph{Avoidance Grid} with \emph{Distance 10 m}, \emph{Layer count 10}, \emph{Horizontal range $[-45^\circ,+45^\circ]$}, \emph{Horizontal Cell Count 7}, \emph{Vertical range $[-30^\circ,+30^\circ]$}, and \emph{Vertical Cell Count 5}. Is given in (fig. \ref{fig:combinedReachSetApproximation}). The UAS is at \emph{Back-side} of \emph{Figure} (initial state is at all \emph{Trajectory Origins}). The \emph{black dashed line} marks \emph{Avoidance Grid} space boundary. Each trajectory has its own color and ends at \emph{Front-side} of \emph{Avoidance Grid Boundary}. The \emph{Chaotic Spread} was set to 8, \emph{Footprint Length} to 3 and \emph{Harmonic Spread} to 1.
+\paragraph{Example:} for \emph{Avoidance Grid} with \emph{Distance 10 m}, \emph{Layer count 10}, \emph{Horizontal range $[-45^\circ,+45^\circ]$}, \emph{Horizontal Cell Count 7}, \emph{Vertical range $[-30^\circ,+30^\circ]$}, and \emph{Vertical Cell Count 5}. Is given in (fig. \ref{fig:combinedReachSetApproximation}). The UAS is at \emph{Back-side} of \emph{Figure} (initial state is at all \emph{Trajectory Origins}). The \emph{black dashed line} marks \emph{Avoidance Grid} space boundary. Each trajectory has its own color and ends at \emph{Front-side} of \emph{Avoidance Grid Boundary}. The \emph{Coverage-Maximizing Spread} was set to 8, \emph{Footprint Length} to 3 and \emph{Turn-Minimizing Spread} to 1.
 
 \begin{note}
-    Notice there are typical trajectories from both \emph{Harmonic} (fig. \ref{fig:harmonicReachSetApproximation}) and \emph{Chaotic} (fig. \ref{fig:chaoticReachSetApproximation}) \emph{Reach Set Approximations}.
+    Notice there are typical trajectories from both \emph{Turn-Minimizing} (fig. \ref{fig:harmonicReachSetApproximation}) and \emph{Coverage-Maximizing} (fig. \ref{fig:chaoticReachSetApproximation}) \emph{Reach Set Approximations}.
 \end{note}
 
 \begin{figure}[H]
@@ -146,18 +146,18 @@ Function is applied on \emph{root Node} iterating over \emph{Movements in Moveme
 \end{figure}
 
 
-\paragraph{Pros and Cons:} It can bee seen from example (fig. \ref{fig:combinedReachSetApproximation}) that \emph{Combined Reach Set Approximation} (alg. \ref{alg:ReachSetMerge}) contains both types of maneuvers. \emph{Cheaper Smooth} for navigation and \emph{More Expensive Chaotic} for \emph{Emergency Avoidance}. The upper limit of trajectories is given as follow:
+\paragraph{Pros and Cons:} It can bee seen from example (fig. \ref{fig:combinedReachSetApproximation}) that \emph{Combined Reach Set Approximation} (alg. \ref{alg:ReachSetMerge}) contains both types of maneuvers. \emph{Cheaper turn-minimizing} for navigation and \emph{More Expensive Coverage-Maximizing} for \emph{Emergency Avoidance}. The upper limit of trajectories is given as follow:
 
 \begin{multline}
-    countTrajectories(ReachSet) \le countTrajectories(Chaotic) \\+ countTrajectories(Harmonic)
+    countTrajectories(ReachSet) \le countTrajectories(CM-RSA) \\+ countTrajectories(TM-RSA)
 \end{multline}
 
 \noindent The \emph{upper limit of nodes} is given as follow:
 
 \begin{equation}
-    countNodes(ReachSet) \le countNodes(Chaotic)+ countNodes(Harmonic)
+    countNodes(ReachSet) \le countNodes(CM-RSA)+ countNodes(TM-RSA)
 \end{equation}
 
-\noindent \emph{Harmonic Reach Set} is ideal for \emph{Non-controlled Airspace} missions, because it contains \emph{Automatic Mode Switch} between \emph{Navigation} and \emph{Emergency Avoidance}.
+\noindent \emph{Turn-Minimizing Reach Set} is ideal for \emph{Non-controlled Airspace} missions, because it contains \emph{Automatic Mode Switch} between \emph{Navigation} and \emph{Emergency Avoidance}.
 
 

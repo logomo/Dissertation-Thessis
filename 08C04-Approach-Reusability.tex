@@ -48,11 +48,11 @@
 \paragraph{Reach Set Approximations:} The \emph{wave-front} approach (alg. \ref{alg:Wavefront Propagation}) can be used with \emph{Constrained expansion function} (sec. \ref{s:constrainedTrajectoryExpansion}) to create own \emph{Reach set Approximation Method}. Existing  reach set approximation methods are always following a different goal; they can be reused for other tasks (perf. \ref{sec:reducedReachSetPerformance}):
 
 \begin{enumerate}
-    \item \emph{Chaotic} (def. \ref{s:chaoticReachSet}) - high space coverage, ideal for unpredictable and complex avoidance maneuvers.
+    \item \emph{Coverage-maximizing} (sec. \ref{s:chaoticReachSet}) - high space coverage, ideal for unpredictable and complex avoidance maneuvers.
     
-    \item \emph{Harmonic} (def. \ref{s:harmonicReachSet}) - smooth trajectories, medium space coverage, ideal for navigation maneuvers.
+    \item \emph{Turn-minimizing} (sec. \ref{s:harmonicReachSet}) - smooth trajectories, medium space coverage, ideal for navigation maneuvers.
     
-    \item \emph{Combined} (def. \ref{s:combinedReachSet}) - a combination of the \emph{harmonic} and \emph{chaotic} approximations, the cost function defines preferred trajectories. The procedure is reusable for any reach set approximation types ($2^+$) combination.
+    \item \emph{Combined} (sec. \ref{s:combinedReachSet}) - a combination of the \emph{CM-RSA} and \emph{TM-RSA}, the cost function defines preferred trajectories. The procedure is reusable for any reach set approximation types ($2^+$) combination.
     
     \item \emph{ACAS-X Like} (def. \ref{s:acasReachSet}) - following \emph{TCAS/ACAS separation modes}, can be used as an alternative for \emph{controlled avoidance} and \emph{navigation}.
 \end{enumerate}

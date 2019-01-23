@@ -46,7 +46,7 @@ The \emph{Leftover Nodes} are thrown away every expansion. The \emph{Leftover No
 
 The UAS is at \emph{Back-side} of \emph{figure} (the initial state is at all \emph{Trajectory Origins}). The \emph{black dashed line} marks \emph{Avoidance Grid} space boundary. Each trajectory has own color and ends at \emph{Front-side} of \emph{Avoidance Grid Boundary}.
 
-\paragraph{Chaotic Reach Set} (sec. \ref{s:chaoticReachSet}) is used in \emph{Emergency Avoidance Mode} for \emph{Non-Controlled Airspace}. The \emph{full} set of trajectories is given in (fig. \ref{fig:chaoticComputed}). The \emph{Pruned} set of trajectories is given in (fig. \ref{fig:chaoticPruned}).
+\paragraph{Coverage-Maximizing Reach Set} (sec. \ref{s:chaoticReachSet}) is used in \emph{Emergency Avoidance Mode} for \emph{Non-Controlled Airspace}. The \emph{full} set of trajectories is given in (fig. \ref{fig:chaoticComputed}). The \emph{Pruned} set of trajectories is given in (fig. \ref{fig:chaoticPruned}).
 
 \emph{Tuning parameters} were selected like follow: \emph{Spread Ratio} is 15 (unique footprint trajectories in the cell), and \emph{trajectory footprint length} is $3$ (last three unique passing cells). 
 
@@ -65,13 +65,13 @@ The UAS is at \emph{Back-side} of \emph{figure} (the initial state is at all \em
         \caption{Pruned.}
         \label{fig:chaoticPruned}
     \end{subfigure}
-    \caption{Chaotic reach set computation example.}
+    \caption{Coverage-maximizing reach set computation example.}
     \label{fig:chaoticReachSetComputationExample}
 \end{figure}
 
-\paragraph{Harmonic Reach Set} (sec. \ref{s:harmonicReachSet}) is used in \emph{Navigation Mode} for \emph{Non Controlled Airspace}. The \emph{full set} of trajectories is given in (fig. \ref{fig:harmonicComputed}). The \emph{Pruned} set of trajectories is given in (fig. \ref{fig:harmonicPruned}).
+\paragraph{Turn-Minimizing Reach Set} (sec. \ref{s:harmonicReachSet}) is used in \emph{Navigation Mode} for \emph{Non Controlled Airspace}. The \emph{full set} of trajectories is given in (fig. \ref{fig:harmonicComputed}). The \emph{Pruned} set of trajectories is given in (fig. \ref{fig:harmonicPruned}).
 
-\emph{Tuning parameter} for \emph{harmonic spread ratio} was set to 9 (which implies high coverage).
+\emph{Tuning parameter} for \emph{harmonic spread ratio} was set to 9 (which implies low coverage).
 
 \begin{figure}[H]
     \centering
@@ -87,11 +87,11 @@ The UAS is at \emph{Back-side} of \emph{figure} (the initial state is at all \em
         \caption{Pruned.}
         \label{fig:harmonicPruned}
     \end{subfigure}
-    \caption{Harmonic reach set computation example.}
+    \caption{Turn-minimizing reach set computation example.}
     \label{fig:harmonicReachSetComputationExample}
 \end{figure}
 
-\paragraph{Combined Reach Set} (sec. \ref{s:combinedReachSet}) is combination of \emph{Chaotic Reach Set} (fig. \ref{fig:chaoticReachSetComputationExample}) and \emph{Harmonic Reach Set} (fig. \ref{fig:harmonicReachSetComputationExample}). The \emph{tuning parameters} are the same for the respective methods. It is used for both \emph{Emergency Avoidance} and \emph{Navigation}. 
+\paragraph{Combined Reach Set} (sec. \ref{s:combinedReachSet}) is combination of \emph{Coverage-Maximizing Reach Set} (fig. \ref{fig:chaoticReachSetComputationExample}) and \emph{Turn-Minimizing Reach Set} (fig. \ref{fig:harmonicReachSetComputationExample}). The \emph{tuning parameters} are the same for the respective methods. It is used for both \emph{Emergency Avoidance} and \emph{Navigation}. 
 
 \paragraph{ACAS-like Reach Set} (sec. \ref{s:acasReachSet}) is used in \emph{Navigation Mode} for \emph{Controlled Airspace}. The separations used are \emph{Horizontal}, \emph{Vertical}, \emph{Slash}, and, \emph{Backslash}, to give the worst possible nodes and trajectories count. The \emph{full} set of trajectories is given in (fig. \ref{fig:acasLikeComputed}). The \emph{Pruned} set of trajectories is given in (fig. \ref{fig:acasLikePruned}).
 
@@ -127,8 +127,8 @@ The UAS is at \emph{Back-side} of \emph{figure} (the initial state is at all \em
 \begin{equation}\label{eq:NodeWasteRate}
     \begin{aligned}
         \texttt{No} & \texttt{des } \texttt{pruned}\\
-        &chaotic   &: 78.93 \%\\
-        &harmonic  &: 18.50 \%\\
+        &CM-RSA   &: 78.93 \%\\
+        &TM-RSA  &: 18.50 \%\\
         &ACAS-like &: 79.05 \%
     \end{aligned}
 \end{equation}
@@ -136,9 +136,9 @@ The UAS is at \emph{Back-side} of \emph{figure} (the initial state is at all \em
 \noindent The \emph{interpretation of results} for each reach set estimation method is like follow: 
 
 \begin{enumerate}
-    \item \emph{Chaotic} - the main exploration drive  is \emph{Coverage Rate}, the \emph{Trajectory} segments are not usually smooth. For our \emph{Movement Automaton}, there is only one \emph{Smooth Movement}: Straight. Other eight are considered \emph{Chaotic Movements}. Impact of this fact is significant because $4/5$ of nodes were pruned.
+    \item \emph{Coverage-Maximizing} - the main exploration drive  is \emph{Coverage Rate}, the \emph{Trajectory} segments are not usually smooth. For our \emph{Movement Automaton}, there is only one \emph{Smooth Movement}: Straight. Other eight are considered \emph{Chaotic Movements}. Impact of this fact is significant because $4/5$ of nodes were pruned.
     
-    \item \emph{Harmonic} - the main exploration drive is \emph{Smoothness} of contained \emph{Trajectories}. The \emph{Trajectory segments} which are getting further away from \emph{cell center} are not feasible. If \emph{Smooth Movements} set size is considered, the Smooth/Chaotic ratio is $1/8$ for our \emph{Movement Automaton} implementation. The low node count was expected in this approach. Another Contributing factor is \emph{Trajectory Footprint Length} for uniqueness selection, which is not a tuning parameter in this method, and it is set to the most strict selection.
+    \item \emph{Turn-Minimizing} - the main exploration drive is \emph{Smoothness} of contained \emph{Trajectories}. The \emph{Trajectory segments} which are getting further away from \emph{cell center} are not feasible. If \emph{Smooth Movements} set size is considered, the Smooth/Chaotic movement ratio is $1/8$ for our \emph{Movement Automaton} implementation. The low node count was expected in this approach. Another Contributing factor is \emph{Trajectory Footprint Length} for uniqueness selection, which is not a tuning parameter in this method, and it is set to the most strict selection.
     
     \item \emph{ACAS-like} - the main drive is to create set consisting from \emph{multiple 2D separation planes}. The expansion method applies full movement set on the \emph{candidate node}. The \emph{Separation plane movement subset} is determining, which node will be selected for further expansion. The size of separation plane subset to the size of movement set rate is $1:3$. There are four separation planes: horizontal, vertical, slash and backslash each containing full 2D plane reach set approximation which caused high node prune rate. Nodes used rate should get lower with increasing grid size.
     
@@ -153,8 +153,8 @@ The most of \emph{waste leaf nodes} are removed during \emph{layer pruning}: fun
 \begin{equation}\label{eq:trajectoriesWasted}
     \begin{aligned}
         \texttt{  Tr} & \texttt{ajectories } \texttt{pruned}\\
-        &chaotic   &: 91.24 \%\\
-        &harmonic  &: 88.21 \%\\
+        &CM-RSA   &: 91.24 \%\\
+        &TM-RSA  &: 88.21 \%\\
         &ACAS-like &: 89.43 \%
     \end{aligned}
 \end{equation}
@@ -166,10 +166,10 @@ The most of \emph{waste leaf nodes} are removed during \emph{layer pruning}: fun
         \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Calculation\\ method\end{tabular}} & \multicolumn{2}{c||}{Node count} & \multicolumn{2}{c||}{Trajectories} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Coverage \\ ratio\end{tabular}} & \multirow{2}{*}{Parameters}\\ \cline{2-5}
         % Header line 2
         & full & pruned & full & pruned & & \\ \hline\hline
-        % Chaotic reach set parameters
-        chaotic  & 6727 & 1417 & 4557 & 399 & 90\% & spread:15 \\ \hline
-        % Harmonic reach set parameters
-        harmonic & 1724 & 1405 & 1528 & 180 & 30\%  & spread:9  \\ \hline
+        % CM-RSA parameters
+        CM-RSA  & 6727 & 1417 & 4557 & 399 & 90\% & spread:15 \\ \hline
+        % TM-RSA reach set parameters
+        TM-RSA & 1724 & 1405 & 1528 & 180 & 30\%  & spread:9  \\ \hline
         % Combined reach set parameters
         combined & - & 2405 & - & 435 & 95\% & \begin{tabular}[c]{@{}c@{}}CH spread:15\\ H spread:9\\ tree comb.\end{tabular}\\ \hline
         % ACASLike
@@ -181,12 +181,12 @@ The most of \emph{waste leaf nodes} are removed during \emph{layer pruning}: fun
 
 \paragraph{Coverage ratio:} (def. \ref{def:coverageRatio}) is showing how much maneuvering versatility of \emph{Reach Set}. \emph{Full Reach Set Approximation} have coverage ratio of $100$ $\%$. It is possible to construct \emph{Reference Reach Set} without constrained expansion method which contains all possible \emph{trajectory footprints}. Following observations for \emph{coverage ratio} can be made:
 \begin{enumerate}
-    \item \emph{Chaotic} reach set estimation method by design select \emph{Nodes} which have the high probability of \emph{trajectory footprint} diversification. The high coverage ratio was achieved at values around 90 $\%$.
+    \item \emph{Coverage-maximizing} reach set estimation method by design select \emph{Nodes} which have the high probability of \emph{trajectory footprint} diversification. The high coverage ratio was achieved at values around 90 $\%$.
     
-    \item \emph{Harmonic} reach set estimation method by design selects most smooth trajectories which cause low \emph{trajectory footprint} diversity. The fairly high coverage ratio of $30$ $\%$ has been achieved.
+    \item \emph{Turn-Minimizing} reach set estimation method by design selects most smooth trajectories which cause low \emph{trajectory footprint} diversity. The fairly high coverage ratio of $30$ $\%$ has been achieved.
     
     \item \emph{Combined} reach set estimation method takes two reach set and combines their trajectory trees into a single trajectory tree. It is given that \emph{Coverage ratio} will achieve at least maximal coverage ratio of original reach sets. Harmonic reach set supplemented narrow smooth trajectories which were throw away previously; this increased overall \emph{coverage ratio} to $95$ $\%$. 
     
-    \item \emph{ACAS-like} reach set estimation method contained four separation planes, which caused that it was similar to \emph{Chaotic Reach Set Approximation} for given \emph{Avoidance Grid}, concerning of performance. The coverage ratio For 2D plane was $100$ $\%$.
+    \item \emph{ACAS-like} reach set estimation method contained four separation planes, which caused that it was similar to \emph{Coverage-Maximizing Reach Set Approximation} for given \emph{Avoidance Grid}, concerning of performance. The coverage ratio For 2D plane was $100$ $\%$.
 \end{enumerate}
 
