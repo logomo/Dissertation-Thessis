@@ -63,16 +63,6 @@
     \item \emph{Goal Waypoint} $\mathscr{WP}_G$ from \emph{Mission Control Run} (sec. \ref{s:missionControlRun}).
 \end{enumerate}
 
-The \emph{Algorithm} (alg. \ref{alg:FindBestPathAvoidanceGrid}) is based on \emph{shortest path} search. Navigation is trying to reach \emph{goal waypoint};  therefore it tries to shorten the distance between \emph{final trajectory cell} and \emph{goal waypoint}. If there is \emph{reachable space} two situations can occur:
-\begin{enumerate}
-    \item \emph{Goal waypoint is inside the Avoidance Grid} - the \emph{avoidance cell} is cell$_{i,j,k}$ containing \emph{goal waypoint} if reachable. 
-    
-    \item \emph{Goal waypoint is outside the Avoidance Grid} - the \emph{avoidance cell} is the closest cell considered as an \emph{outer cell} to \emph{goal waypoint}.
-\end{enumerate}
-
-The \emph{Avoidance Path} selection is simple lowest cost selection of \emph{Trajectory} $\in$ cell$_{i,j,k}$.
-
-
 \begin{algorithm}[H]
 \SetKwInOut{Input}{Input}
 \SetKwInOut{Output}{Output}
@@ -127,6 +117,16 @@ The \emph{Avoidance Path} selection is simple lowest cost selection of \emph{Tra
     \caption{Find best \emph{Path} in \emph{Avoidance Grid}}
     \label{alg:FindBestPathAvoidanceGrid}    
 \end{algorithm}
+
+
+The \emph{Algorithm} (alg. \ref{alg:FindBestPathAvoidanceGrid}) is based on \emph{shortest path} search. Navigation is trying to reach \emph{goal waypoint};  therefore it tries to shorten the distance between \emph{final trajectory cell} and \emph{goal waypoint}. If there is \emph{reachable space} two situations can occur:
+\begin{enumerate}
+    \item \emph{Goal waypoint is inside the Avoidance Grid} - the \emph{avoidance cell} is cell$_{i,j,k}$ containing \emph{goal waypoint} if reachable. 
+    
+    \item \emph{Goal waypoint is outside the Avoidance Grid} - the \emph{avoidance cell} is the closest cell considered as an \emph{outer cell} to \emph{goal waypoint}.
+\end{enumerate}
+
+The \emph{Avoidance Path} selection is simple lowest cost selection of \emph{Trajectory} $\in$ cell$_{i,j,k}$.
 
 \begin{note}
     \emph{Outer cell} is a cell$_{i,j,k}$ which has at least one \emph{wall} directly neighbouring with \emph{outer space} ($Universe - Known World (t_i)$). The \emph{outer cell} is selected to prevent navigation to the \emph{trap}.
