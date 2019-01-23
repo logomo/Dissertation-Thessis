@@ -1,4 +1,4 @@
-\section{\secState{D}Avoidance Requirements}\label{s:AvoidanceRequirements}
+\section{Avoidance Requirements}\label{s:AvoidanceRequirements}
 
 \paragraph{SAA systems} have the following conflicting performance criteria:
 \begin{enumerate}
@@ -11,7 +11,7 @@
     \emph{Energy efficiency} and \emph{Trajectory Tracking} an optional criteria, while \emph{the safety} is mandatory.
 \end{note}
 
-\subsection{\secState{D}Energy Efficiency}\label{s:EnergyEfficiency}
+\subsection{Energy Efficiency}\label{s:EnergyEfficiency}
 \paragraph{Energy efficiency} can be measured by \emph{cost function} (eq. \ref{eq:consFunctionMeta}), consisting from the \emph{cost of flown trajectory} (eq. \ref{eq:costFunctionExecuted}) and the \emph{expected reach cost} (eq. \ref{eq:costFunctionReachable}) portions. There are optimalizaiton techniques based on \emph{Reach sets} \cite{kurzhanski2001dynamic}. The inputs for the \emph{cost function} are:
 \begin{enumerate}
     \item \emph{Time} - current mission time.
@@ -70,7 +70,7 @@
     The tuning parameters are set up $verticalPenalizaiton \le horizontalPenalizaiton < \infty$ for \emph{copter} UAS in an \emph{uncontrolled airspace}
 \end{note}
 
-\subsection{\secState{D}Trajectory Tracking}\label{s:trajectoryTracking}
+\subsection{Trajectory Tracking}\label{s:trajectoryTracking}
 \paragraph{Trajectory Tracking} is a crucial parameter for \emph{controlled airspace} and is expected to be important in \emph{upcoming UTM systems}. There is a \emph{mission plan} which is compared with \emph{real-time airspace situation} obtained from UAS \emph{Position notifications}. The optimalization based on \emph{Reach Set} is given in \cite{varaiya2000reach}.
 
 \paragraph{Motivation:} \emph{Situation awareness} for modern DAA systems depends on planned trajectory tracking. The main conflict is between \emph{navigation precision} and \emph{situation evaluation}. If the planned trajectory is defined for the \emph{continuous domain}, it takes much effort to calculate collision points. 
@@ -165,7 +165,7 @@ The \emph{reference trajectory} is given by \emph{mission} set of \emph{waypoint
 Feasible trajectory condition (eq. \ref{feasibleTrajectoryCondition}) is used as \emph{margin} for airworthiness, and \emph{Deviation} is used as a performance indicator further in this work.
 
 
-\subsection{\secState{D}Safety}\label{s:Safety}
+\subsection{Safety}\label{s:Safety}
 \noindent \emph{Safety} is very broad term there are following incidents which can occur and will be discussed in (app. \ref{s:safetyMarginCalculation}) \emph{Safety margin} is a broad term describing minimal distance to the center of intruder/adversary, a surface of the obstacle, a boundary of the protected area.
 
 \paragraph{Controlled airspace safety}

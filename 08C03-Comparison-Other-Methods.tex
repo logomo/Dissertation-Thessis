@@ -1,9 +1,9 @@
-\section{\secState{R}Comparison to Other Methods}\label{s:OtherMethodsComparison}
+\section{Comparison to Other Methods}\label{s:OtherMethodsComparison}
 \noindent The \emph{testing} (sec. \ref{s:testPlan}) is strongly \emph{capability} oriented, some performance testing regrading computational load (sec. \ref{s:ComputaitonFootprint}) is on the place. The advantages of our approach regarding scalability are outlined in (sec. \ref{s:conclusionScalability}).
 
 This section summarizes the results achieved by one of the master students \cite{hrdlik2018}. Who compares other avoidance methods concerning performance. The  \emph{conservative }vector field avoidance \cite{borenstein1991vector} and \emph{adaptive} potential field \cite{koren1991potential} methods are compared to our approach (sec. \ref{s:conservativeComparison}).
 
-\subsection{\secState{R}Conservative and Adaptive Method Comparison}\label{s:conservativeComparison}
+\subsection{Conservative and Adaptive Method Comparison}\label{s:conservativeComparison}
 \paragraph{Testing scenario:} The testing scenario is similar to \emph{building avoidance} (sec. \ref{s:testBuildingAvoidance}), using the default framework testing configuration (sec. \ref{sec:testingConfiguration}). The \emph{reach set approximation} used is a \emph{combination of harmonic and chaotic} (fig. \ref{fig:combinedReachSetApproximation}) filling the role for \emph{navigation/avoidance} in non controlled airspace. The \emph{mission} is given by waypoints defined in (tab. \ref{tab:missionSetupForPErformanceTest}), the UAS is starting at $\mathscr{WP}_1$.
 
 \begin{table}[H]
@@ -93,7 +93,7 @@ One can say that reach set method outperforms selected conservative and adaptive
 
 \paragraph{Disclaimer:} Further investigation regarding \emph{cost-effectiveness} is required, the approach needs to be tested in real environment and on the multiple scenarios. The testing concerning approach feasibility have been proven (tab. \ref{tab:testCasesPerformacneEvaluation}).
 
-\subsection{\secState{R}Scalability}\label{s:conclusionScalability}
+\subsection{Scalability}\label{s:conclusionScalability}
 \noindent The \emph{many methods} do not offer \emph{scalability}. The scalability means that method applies to multiple problems with different scale or there is a sufficient amount of tune-able parameter to make it work in different environments. Many avoidance concepts have hardwired margins. 
 
 The \emph{Detect and Avoid} system must offer scalability to some extent, because of changing regulations and performance criteria on the UAS systems.
