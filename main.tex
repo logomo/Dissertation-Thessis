@@ -403,50 +403,47 @@
 	\input{06A02-Avoidance-Grid}    
 	
 	%06-06 Reach Set
-    	\input{06A06a-Reach-Set-Approximation}
+    \input{06A06a-Reach-Set-Approximation}
+    	\input{06A06f-Trajectory-Set-Approximation}
     	\input{06A06b-Reach-Set-Performance-Criteria}
     	\input{06A06c-Contrained-Trajectory-Expansion}
-    	%\input{06A06d-Avoidance-Grid-Scaling}
+    	\input{06A06g-Coverage-Maximizing-RSA}
+    	\input{06A06h-Turning-Minimizing-RSA}
+    	\input{06A06i-ACAS-like-RSA}
     	\input{06A06e-Reach-Set-Approximations}
 	
-    %06-04 Static Obstacles and Constraints
-    \input{06A04-Static-Obstace-Constraints}
+    \input{06A05f-Situation-Assessment}
+    	%Obstacles
+    	\input{06A04-Static-Obstace-Constraints}
     	\input{06A04a-Detected-Obstacles}
 		\input{06A04b-Map-Obstacles}
-		\input{06A04c-Static-Contraints}
-		
-	%06-05 Moving Obstacles and Intruders	
-    \input{06A05-Moving-Obstacles-Intruders}
+	    %Intruders
+    	\input{06A05-Moving-Obstacles-Intruders}
     	\input{06A05a-Intruder-Behaviour-Prediction}
-    	\input{06A05b-Linear-Intersection-Model}
-    	\input{06A05c-Body-Volume-Intersection}
-    	\input{06A05d-Manuevurability-Uncertainty-Intersection}
+		%Constraints    	
+    	\input{06A04c-Static-Contraints}
     	\input{06A05e-Moving-Contraints}
+    	%Data Fusion
+    	\input{06A07d-Data-Fusion}
    
     %06-07 Avoidance Concept	
     \input{06A07-Avodiance-Concept}
-    	\input{06A07d-Data-Fusion}
     	\input{06A07a-Avoidance-Grid-Run}
     	\input{06A07b-Mission-Control-Run}
     	\input{06A07e-Calculation-Complexity}
-    	\input{06A07c-Safety-Margin-Calculation}
     
     %06-08 UTM implementation
 		\input{06A08a-UAS-Traffic-Management}
 		\input{06A08b-Architecture}
-		\input{06A08f-Cooperative-Resolution}
-		\input{06A08g-Non-Cooperative-Resolution}
 		\input{06A08h-Collision-Case-Resolution}
 		\input{06A08c-Position-Notification}
 		\input{06A08d-Collision-Case}
-		\input{06A08e-Weather-Case}
 		
     
     %06-09 Rule Engine Implementation
     \input{06A09-Rule-Engine}
     	\input{06A09a-Rule-Engine-Architecture}
     	\input{06A09b-Rule-Implementation}
-    	\input{06A09c-Rule-Definition}
     	
     
 
@@ -486,16 +483,42 @@
 	
 %09-Apendixes
 	%\input{09AP00-AppendixTemplate}
+	% Complements of algebra 
 	\input{09AP01-Complements-of-Algebra}
-	\input{09AP02-Conceptual-Scheme}
 	
+	
+	%Movement Automaton theory appendix
 	\input{09AP03-Movement-Automaton}   
     	\input{06A03b-From-Hybrid-To-Movement-Automaton}
     	\input{06A03c-Our-Movement-Automaton-Definition}
 		\input{06A03f-Segmented-Movement-Automaton}
 		\input{06A03g-Reference-Trajectory-Generator}
 	
-	\input{09AP04-GridScaling} 
+	
+	% Intruder intersection models
+	\input{09AP05-IntruderProbabilisticModels}   
+		\input{06A05b-Linear-Intersection-Model}
+    	\input{06A05c-Body-Volume-Intersection}
+    	\input{06A05d-Manuevurability-Uncertainty-Intersection}
+    	
+    	
+    % Confict resolution schemes
+	\input{09AP06-ConflictResolutionSchemes}   
+		\input{06A08f-Cooperative-Resolution}
+		\input{06A08g-Non-Cooperative-Resolution}
+    
+    % Additional UTM Functionality appendix	
+    \input{09AP07-AdditionalUTMFunctionality}
+		\input{06A08e-Weather-Case}
+		\input{06A09c-Rule-Definition}
+
+	% Related work and improvements
+	\input{09AP02-Conceptual-Scheme}
+	
+		
+	%Guidelines appendix
+	\input{09AP04-GridScaling}
+		\input{06A07c-Safety-Margin-Calculation} 
 		
 %% This adds a line for the Bibliography in the Table of Contents.
 %\addcontentsline{toc}{chapter}{Bibliography}

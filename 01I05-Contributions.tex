@@ -1,4 +1,4 @@
-\section{\secState{R}Contributions}\label{s:Contributions} 
+\section{Contributions}\label{s:Contributions} 
 \noindent The \emph{contributions} of this work can be divided into two categories:
     
 \paragraph{Conceptual Contributions:} The contributions are enhancing and enriching the conceptual level of \emph{Detect \& Avoid} systems, namely:
@@ -8,13 +8,13 @@
     
     \item \emph{Trajectory as a discrete command chain} -  the \emph{movement automaton} as a control interface consuming the discrete command chain enabled the \emph{finite discrete representation} of trajectory (eq. \ref{eq:ourTrajectoryImplementation}).
     
-    \item \emph{Reach set discretization} - the \emph{infinite reach set} (def. \ref{def:reachset01}) can be represented as a tree of movements from system initial state (def. \ref{def:ReachSetApproximationByMovementAutomaton}). This tree can have associated properties, like reachability of each trajectory segment (eq. \ref{eq:trajectoryReachibility}).  The advantage of having finite maneuver set, with little precision sacrifice, which can be calculated prior the flight have a huge impact on \emph{computation complexity} (sec. \ref{sec:MCRcomputationalComplexity}). The interfaces enable to use the approach on different platforms with small computational power. 
+    \item \emph{Reach set discretization} - the \emph{infinite reach set} (def. \ref{def:reachset01}) can be represented as a tree of movements from system initial state (def. \ref{def:ReachSetApproximationByMovementAutomaton}). This tree can have associated properties, like reachability of each trajectory segment (eq. \ref{eq:trajectoryReachibility}).  The advantage of having finite maneuver set, with little precision sacrifice, which can be calculated prior the flight have a huge impact on \emph{computational complexity} (sec. \ref{sec:MCRcomputationalComplexity}). The interfaces enable to use the approach on different platforms with small computational power. 
     
     \item \emph{Operational space assessment} - the operational space is separated by a grid into finite set of the cells. Each cell has properties to track like the occurrence of an obstacle, the presence of intruder or impact of constraint. The \emph universal data fusion procedure (sec. \ref{s:sensorFusion}) is enabling accumulation of treat information from various sources.
     
     \item \emph{Hierarchical threat assessment} -  the \emph{various threat} sources (obstacles, intruders, constraints) are categorized according to operational environment/rules, and their avoidance priority is handled according to that (fig. \ref{fig:missionControlRunActivityDiagram}).
     
-    \item \emph{UAS Traffic Management} - the architecture proposal for traffic management  as the cooperative authority (sec. \ref{sec:utmArchitecture}) covers some basic maneuvers (sec. \ref{sec:handlingHeadOnApproach}, \ref{sec:handlingConvergingManuever},\ref{sec:handlingOvertakeManuever}), the more important is the adaptability of presented approach to cooperative (sec. \ref{sec:cooperativeConflictResolution}) and non-cooperative (sec. \ref{sec:nonCooperativeConflictResolution}) avoidance modes, showing adaptability. 
+    \item \emph{UAS Traffic Management} - the architecture proposal for traffic management  as the cooperative authority (sec. \ref{sec:utmArchitecture}) covers some basic maneuvers (sec. \ref{sec:handlingHeadOnApproach}, \ref{sec:handlingConvergingManuever},\ref{sec:handlingOvertakeManuever}), the more important is the adaptability of presented approach to cooperative (app. \ref{sec:cooperativeConflictResolution}) and non-cooperative (app. \ref{sec:nonCooperativeConflictResolution}) avoidance modes, showing adaptability. 
 \end{enumerate}
 
 \paragraph{Implementation Contributions:} The concepts, which solve implementation issues of \emph{Detect \& Avoid} systems, namely:
@@ -22,7 +22,7 @@
 \begin{enumerate}
     \item \emph{Operational space segmentation} - the \emph{planar grid} (sec. \ref{s:AvoidanceGrid}) slice (fig. \ref{fig:LidarSpaceSegmentation}) have been selected, because it can be used for fast assessment of LiDAR scan data to estimate, obstacle (\ref{fig:P01CountOfLiDARHits}) or visibility (\ref{fig:P02OvershadowedMapobstacle}). The cell volume is increasing with distance from UAS, and this gives us decreased space status assessment complexity.
     
-    \item \emph{Wave-front algorithm for avoidance estimation} - to estimate reach set the space exploration method has been developed. The \emph{rapid exploration tree} (fig. \ref{fig:rapidExplorationTrajectoryTree}) is employed as \emph{wave-front} expansion (alg. \ref{alg:Wavefront Propagation}). Various shapes and properties of \emph{reach set estimation} can be achieved employing the \emph{constrained expansion functions} for \emph{chaotic} (alg. \ref{alg:ExpansionConstraintFunctionForChaoticReachSet}), harmonic (alg. \ref{alg:ExpansionConstraintFunctionForHarmonicReachSet}), and, \emph{ACAS-like} (alg. \ref{alg:ExpansionConstraintFunctionForACASLikeReachSet}) reach set approximations.
+    \item \emph{Wave-front algorithm for avoidance estimation} - to estimate reach set the space exploration method has been developed. The \emph{rapid exploration tree} (fig. \ref{fig:rapidExplorationTrajectoryTree}) is employed as \emph{wave-front} expansion (alg. \ref{alg:Wavefront Propagation}). Various shapes and properties of \emph{reach set estimation} can be achieved employing the \emph{constrained expansion functions} for \emph{coverage-maximizing} (alg. \ref{alg:ExpansionConstraintFunctionForChaoticReachSet}), turn-minimizing (alg. \ref{alg:ExpansionConstraintFunctionForHarmonicReachSet}), and, \emph{ACAS-like} (alg. \ref{alg:ExpansionConstraintFunctionForACASLikeReachSet}) reach set approximations.
     
     \item \emph{Encounter and constraints models} - the planar grid used in solution required the development of encounter models for static obstacles, constraints (sec. \ref{s:staticObstacles}), intruders, moving constraints (sec. \ref{s:intruders}). The intersection algorithms can be reused in other approaches using an unusual grid.
     

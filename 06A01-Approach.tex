@@ -1,5 +1,5 @@
 \cleardoublepage
-\chapter{\secState{R}Approach}\label{ch:approach}
+\chapter{Approach}\label{ch:approach}
 
 \noindent The levels of \emph{Avoidance} depending on \emph{reaction time} are summarized in (fig. \ref{s:approachOverview}).
 
@@ -23,7 +23,7 @@ The \emph{Preemptive Avoidance} is trying to remove any possible threat before t
 The \emph{Discretization} is the key to ensure calculation in finite time. Finite \emph{partition} of \emph{operational space (Known World)} and finite representation of \emph{Reach set} guarantees finite count of calculation steps. Aircraft conflict prediction mentioned in \cite{prandini2008application}.
 
 \newpage    
-\section{\secState{R}Overview}\label{s:approachOverview}
+\section{Overview}\label{s:approachOverview}
 
 \noindent The \emph{Overview} is based on \emph{Existing} Emergency avoidance framework \cite{gomola2017obstacle} (fig. \ref{fig:avoidanceConcept}). To achieve goals defined in \emph{Problem Definition} (sec. \ref{s:BasicProblemDefinition}, \ref{s:IncrementalProblemDefinition}) following \emph{Avoidance Framework Concept} (fig. \ref{fig:AvoidanceFrameworkConceptNew}) is proposed:
 
@@ -44,9 +44,9 @@ The \emph{Discretization} is the key to ensure calculation in finite time. Finit
     
     \item \emph{Sensor Field} (Role: Surveillance Providers), the following sensors, were considered in this work:
         \begin{enumerate}[a.]
-            \item \emph{LiDAR} (Static obstacle detection) - detection of physical obstacles (sec. \ref{s:detectedObstacles})
+            \item \emph{LiDAR} (Static obstacle detection) - detection of physical obstacles (eq. \ref{eq:naiveObstacleRate})
             
-            \item \emph{ADS-B} (Intruder UAS/Plane detection) - detection of intruders who are broadcasting their position and sometimes heading with plans and additional parameters. The \emph{intersection models} are given in (sec. \ref{s:intruderBehaviourPrediction}, \ref{s:linearIntersectionModel}, \ref{s:bodyvolumeIntersection}, \ref{s:uncertaintyIntersection}).
+            \item \emph{ADS-B} (Intruder UAS/Plane detection) - detection of intruders who are broadcasting their position and sometimes heading with plans and additional parameters. The \emph{intersection models} are given in (sec. \ref{s:intruders}, app. \ref{s:linearIntersectionModel}, \ref{s:bodyvolumeIntersection}, \ref{s:uncertaintyIntersection}).
         \end{enumerate}
 
     \newpage
@@ -54,7 +54,7 @@ The \emph{Discretization} is the key to ensure calculation in finite time. Finit
         \begin{enumerate}[a.]
             \item \emph{Obstacle Map} (Static Restriction Source) - imposing static soft/hard constraints on \emph{Known Word}/\emph{Operational Space}. Static constraints are given in (sec. \ref{s:virtualConstraints}).
             
-            \item \emph{Weather Information} (Static/Dynamic Restriction Source) - imposing static/mo\-vi\-ng soft/hard constraints on \emph{Known World}/\emph{Operational Space}. Moving constraints are given in (sec. \ref{s:MovingVirtualConstraints}).
+            \item \emph{Weather Information} (Static/Dynamic Restriction Source) - imposing static/mo\-vi\-ng soft/hard constraints on \emph{Known World}/\emph{Operational Space}. Moving constraints are given by (def. \ref{def:movingConstraint}).
             
             \item \emph{Other Airspace Restrictions} - like restricted airspace, geo-fencing, and other future constraint sources, all of them are covered by \emph{Static/Dynamic Constraints} for now.
         \end{enumerate}

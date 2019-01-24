@@ -1,0 +1,16 @@
+\cleardoublepage
+\section{Situation Representation in the Avoidance Grid}\label{sec:situationAssessment}
+
+\paragraph{Summary:} There is a need to have a safety assessment of the operational space in the form of the Avoidance Grid. Each type of threat coming from different sources (sensors, maps) like obstacles, intruders, and constraints is handled separately. The data fusion procedure provides a unified representation of sourced threats.  
+
+This section gives an overview how different types of threat are projected into \emph{avoidance grid}:
+
+\begin{enumerate}
+	\item\emph{Obstacles} (sec. \ref{s:staticObstacles}) - how static obstacles are represented, how to map data are processed and represented, how the concept of visibility impact certainty of an obstacle in space.
+	
+	\item\emph{Intruders} (sec. \ref{s:intruders}) - how intruders are projected into avoidance grid, how great is probability to encounter a specific intruder in given space and time.
+	
+	\item\emph{Constraints} (sec. \ref{s:virtualConstraints}) - how are constraints like geo-fencing or weather represented, how is their impact on space calculated.
+	
+	\item\emph{Data Fusion} (sec. \ref{s:sensorFusion}) - how is the final threat in cell calculated, how this threat impacts the safety of passing trajectories, how we know which cells in the grid are safe.
+\end{enumerate}

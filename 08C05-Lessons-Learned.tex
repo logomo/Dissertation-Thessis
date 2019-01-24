@@ -1,4 +1,4 @@
-\section{\secState{R}Lessons Learned}\label{s:lessonsLearned}
+\section{Lessons Learned}\label{s:lessonsLearned}
 \noindent During the approach development, some mistakes were made. This section summarizes the most notable design choices with the reasoning behind them.
 
 \paragraph{Euclidean vs. Planar Space Partitioning:} The \emph{operational space discretization} was planned from the beginning. The initial approach was to use a \emph{uniform Euclidean  grid} where the smallest space portion was represented as cubic cell.
@@ -10,18 +10,18 @@ The other issue was with wavefront algorithm (alg. \ref{alg:Wavefront Propagatio
 \begin{enumerate}
     \item \emph{An exponential growth of trajectory count} - the \emph{trajectory footprint} (def. \ref{def:trajectoryFootprint}) is almost always unique in Euclidean Grid. The problem is that two very similar trajectories concerning avoidance were considered unique.
     
-    \item \emph{Low avoidance strategies variability} - the generated trajectories by \emph{harmonic} (sec. \ref{s:harmonicReachSet}) or \emph{chaotic} (sec. \ref{s:chaoticReachSet}) reach set approximation did not follow the desired properties of coverage.
+    \item \emph{Low avoidance strategies variability} - the generated trajectories by \emph{TM-RSA} (sec. \ref{s:harmonicReachSet}) or \emph{CM-RSA} (sec. \ref{s:chaoticReachSet}) reach set approximation did not follow the desired properties of coverage.
     
     \item \emph{Threat impact reflection} - the space which is closer to UAS needs to be surveillance with greater detail than space which is further away from UAS. The Euclidean grid does not reflect this.
 \end{enumerate}
 
 \paragraph{Euclidean Grid Benefits:} The intersection model performance was good because of most of the numeric/analytically intersection solutions for:
 \begin{enumerate}
-    \item \emph{Line} - used in \emph{linear intruder intersection model} (sec. \ref{s:linearIntersectionModel}).
+    \item \emph{Line} - used in \emph{linear intruder intersection model} (app. \ref{s:linearIntersectionModel}).
     
-    \item \emph{Tunnel} - used in \emph{body-volume intersection model} (sec. \ref{s:bodyvolumeIntersection}).
+    \item \emph{Tunnel} - used in \emph{body-volume intersection model} (app. \ref{s:bodyvolumeIntersection}).
     
-    \item \emph{Polygon} - used in constraints (sec. \ref{s:virtualConstraints}, \ref{s:MovingVirtualConstraints})
+    \item \emph{Polygon} - used in constraints (sec. \ref{s:virtualConstraints}, def. \ref{def:movingConstraint})
 \end{enumerate}
 
 \paragraph{Planar Grid Deployment:} The shortcomings and benefits of \emph{Euclidean grid} are obvious, the main reason why the \emph{planar gird} was employed is the \emph{performance of the wave-front algorithm} (alg. \ref{alg:Wavefront Propagation}) for UAS system dynamic. The main focus of this work lies on \emph{Reach Set} properties, the planar grid (fig. \ref{fig:LidarSpaceSegmentation}) properties:
@@ -50,12 +50,12 @@ The other issue was with wavefront algorithm (alg. \ref{alg:Wavefront Propagatio
     The count of intruder and constraints is not so great concerning \emph{aerial transpiration}; the situation is opposite in case of \emph{ground transportation} especially road vehicles. 
 \end{note}
 
-\paragraph{Intruder Intersection Models:} The \emph{implemented intruder intersection models} (sec. \ref{s:intruderBehaviourPrediction}) are basic and sufficient. There are few ideas which do not make it into the final concept:
+\paragraph{Intruder Intersection Models:} The \emph{implemented intruder intersection models} (app. \ref{app:IntruderProbabilisticModels}) are basic and sufficient. There are few ideas which do not make it into the final concept:
 
 \begin{enumerate}
-    \item \emph{Intruder as line/curve intersection} - the idea is to use a parametric curve instead of the \emph{linear intersection model} (sec. \ref{s:linearIntersectionModel}). The problem is those curve parameters are hard to obtain; they are not mandatory part of any position notification proposal so far.
+    \item \emph{Intruder as line/curve intersection} - the idea is to use a parametric curve instead of the \emph{linear intersection model} (app. \ref{s:linearIntersectionModel}). The problem is those curve parameters are hard to obtain; they are not mandatory part of any position notification proposal so far.
 	
-	\item \emph{Intruder as movement automaton simulated trajectory} - the idea is to have access to movement automaton of an intruder in \emph{predictor mode} (sec. \ref{s:referenceTrajectoryGenerator}) to generate future expected trajectory. The problem is in some situations the trajectory of intruder changes a lot and \emph{maneuverability uncertainty intersection} (sec. \ref{s:uncertaintyIntersection}) outperforms this approach significantly. The other problem is that most of the \emph{general aviation} does not want to share this kind of information due to security reasons.  This concept makes it into the final solution, but not in \emph{avoidance framework}, but as \emph{UTM collision case intersection calculation} (sec. \ref{sec:collisionCase}).
+	\item \emph{Intruder as movement automaton simulated trajectory} - the idea is to have access to movement automaton of an intruder in \emph{predictor mode} (sec. \ref{s:referenceTrajectoryGenerator}) to generate future expected trajectory. The problem is in some situations the trajectory of intruder changes a lot and \emph{maneuverability uncertainty intersection} (app. \ref{s:uncertaintyIntersection}) outperforms this approach significantly. The other problem is that most of the \emph{general aviation} does not want to share this kind of information due to security reasons.  This concept makes it into the final solution, but not in \emph{avoidance framework}, but as \emph{UTM collision case intersection calculation} (sec. \ref{sec:collisionCase}).
 	
 	\item \emph{Intruder well clear implementation as a rule} - the idea is to implement \emph{potential fields principle} as core mechanism of avoidance. The problem is determinism of this approach, and the idea was scrapped.
 \end{enumerate}

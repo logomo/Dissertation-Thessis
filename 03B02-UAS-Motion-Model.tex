@@ -1,8 +1,8 @@
-\section{\secState{R}UAS System Model}\label{s:uavMotionModel}
+\section{UAS System Model}\label{s:uavMotionModel}
 \noindent
 This section strongly follows \cite{lee2011structure}.
 
-\subsection{\secState{D}Continuous-time Systems}\noindent
+\subsection{Continuous-time Systems}\noindent
 
 \noindent Consider a class of systems given by functions:
 \begin{equation}
@@ -22,7 +22,7 @@ A prototypical description of a controlled (there is a control input signal) con
 \end{multline}
 Where $f:\mathbb{R}\times\mathbb{R}^n\times\mathbb{R}^p\to\mathbb{R}^n$ satisfies the conditions for existence and uniqueness of the ordinary differential equation and $u$ is our control \cite{butcher1987numerical}.
 
-\subsection{\secState{D}Discrete-time Systems}
+\subsection{Discrete-time Systems}
 \noindent
 \noindent Consider another class of systems given by functions
 \begin{equation}\label{eq:Discretegenericuavmodel}
@@ -34,7 +34,7 @@ Where $f:\mathbb{R}\times\mathbb{R}^n\times\mathbb{R}^p\to\mathbb{R}^n$ satisfie
 \end{equation}
 Where $input(k)$, $state(k)$ is a set of discrete-time signals. They can be represented by a function $f$ like $f:\{0, t_s, 2.t_s, 3.t_s, \dots i.t_s\} \to \R^n,  i \in \N^+$ where $t_s$ is sampling time and $i$ is discrete step \cite{shampine1997matlab}.
 
-\subsection{\secState{D}Adversarial Behavior in Continuous-time Systems}
+\subsection{Adversarial Behavior in Continuous-time Systems}
 \noindent Consider a subclass of continuous time systems where are two sets of control signals $uas(time)$ and $adversary(time)$ which are accommodated in following system:
 \begin{equation}\label{eq:Adversarial}
     \begin{aligned}

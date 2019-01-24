@@ -1,8 +1,8 @@
 \cleardoublepage
-\section{\secState{R}Test Cases Conclusion}\label{s:testCasesConclusion}
+\section{Test Cases Conclusion}\label{s:testCasesConclusion}
 \noindent This section contains summary of performance evaluation (sec. \ref{s:performanceEvaluation}), adversary behavior impact on our approach (sec. \ref{s:adversadialBehaviourImpact}), \emph{calculation load} in (sec. \ref{s:ComputaitonFootprint}).
 
-\subsection{\secState{R}Performance Evaluation}\label{s:performanceEvaluationTable}
+\subsection{Performance Evaluation}\label{s:performanceEvaluationTable}
 \noindent Performance of test cases was evaluated according to criteria given by (sec. \ref{s:performanceEvaluation}). The performance for \emph{test cases} from test plan (tab. \ref{tab:testCasesSummary}) has been summarized in (tab. \ref{tab:testCasesPerformacneEvaluation}).
 
 \begin{table}[H]
@@ -166,7 +166,7 @@
     \item \emph{Rule-based overtake} - correct handling of \emph{overtaking maneuver} (fig. \ref{fig:OvertakeManeuverTheoretical}), proper rule invocation (rule \ref{tab:ruleOvertakeDefinition}). Divergence/Convergence (eq. \ref{eq:overtakeDivergenceLocal},\ref{eq:overtakeConvergenceLocal}) for multiple waypoints calculation works for various speed difference (fig. \ref{fig:testRuleBasedOvertakeSafetyMarginForDifferentSpeedPerformance}).
 \end{enumerate}
 
-\subsection{\secState{R}Adversary Behaviour Impact}\label{s:adversadialBehaviourImpact}
+\subsection{Adversary Behaviour Impact}\label{s:adversadialBehaviourImpact}
 
 \noindent The \emph{abuse} of UAS for \emph{ill intentions} realization is expected. The \emph{UAS} is cheap, disposable and does not have ethic boundaries. 
 
@@ -292,7 +292,7 @@ Let us take \emph{Rule-based Head on} test case (sec. \ref{s:testRuleHeadOn}), c
     \end{enumerate}
 \end{note}
 
-\subsection{\secState{R}Computation Footprint}\label{s:ComputaitonFootprint}
+\subsection{Computation Footprint}\label{s:ComputaitonFootprint}
 
 \noindent The \emph{computation footprint} is summarized in computation  load (tab. \ref{tab:computationLoadStatistics}). The \emph{computation load} (eq. \ref{eq:computationLoad}) was calculated for each \emph{time-frame} in scenarios. There is the summary of \emph{minimal, maximal, average} and \emph{median} values.
 
@@ -339,9 +339,9 @@ The \emph{computational load} never exceed more than $55.95\%$ in case of  \emph
 \begin{enumerate}
     \item \emph{Building avoidance}, \emph{Slalom}, and \emph{Maze} scenarios - the computation load is increasing with the \emph{number of static obstacles}. The \emph{average load} for \emph{Emergency avoidance mode} in \emph{clustered environment} is $31.51\%$ (Maze).
     
-    \item \emph{Storm scenario} - the overall \emph{computation load} is very low due to the \emph{moving constraint implementation} (sec. \ref{s:MovingVirtualConstraints}).
+    \item \emph{Storm scenario} - the overall \emph{computation load} is very low due to the \emph{moving constraint implementation} (def. \ref{def:movingConstraint}).
     
-    \item\emph{Emergency Converging/Head On/Multiple} scenarios - the \emph{overall computation load} is quite high due to the ineffective \emph{body volume intersection} (sec. \ref{s:bodyvolumeIntersection}) implementation.
+    \item\emph{Emergency Converging/Head On/Multiple} scenarios - the \emph{overall computation load} is quite high due to the ineffective \emph{body volume intersection} (app. \ref{s:bodyvolumeIntersection}) implementation.
     
     \item \emph{Rule-based Converging/Head On/Multiple} scenarios - the \emph{median computational} load is low, because of the linear \emph{rule implementation} (sec. \ref{sec:ruleImplementation})
     

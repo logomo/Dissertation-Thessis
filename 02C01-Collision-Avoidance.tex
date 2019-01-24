@@ -1,5 +1,5 @@
 \cleardoublepage
-\chapter{\secState{R}Collision Avoidance}\label{ch:CollisionAvoidance}
+\chapter{Collision Avoidance}\label{ch:CollisionAvoidance}
 \noindent The context of Collision Avoidance is introduced in (tab. \ref{tab:CASContext}), the structure was taken from Gardi \cite{gardi2015automated}. The \emph{state of art} changes was incorporated into the table.
 
 \begin{tabularx}{\textwidth}{S{0.20}||S{0.55}} 
@@ -13,7 +13,7 @@
     \label{tab:CASContext}
 \end{tabularx}
 
-\section{\secState{R}Overview}\label{s:collisionAvoidanceOverview}
+\section{Overview}\label{s:collisionAvoidanceOverview}
 \noindent The \emph{Detect and Avoid}, as a part of \emph{Collision Avoidance}, impacts all collision avoidance aspects (tab. \ref{tab:CASContext}). This work focuses on the \emph{Reach Sets} which gives us the following focus area:
 
 \begin{enumerate}
@@ -55,7 +55,7 @@ This mechanism needs to be changed to increase the determinism of UAS behavior. 
 
 \paragraph{Situation awareness:} The aspect of the situation awareness of surroundings has been introduced in \cite{blaskovich2007declutter}. \emph{LiDAR}-based \emph{SAA} system has been introduced by Sabatini \cite{sabatini2014lidar} further enhanced by Ramasay \cite{ramasamy2016lidar}. Other \emph{Non-Cooperative} sensors and their feasibility have been outlined in Ramasay work \cite{ramasamy2014avionics}. 
 
-The common ground of these works is an operational space discretization into various forms of finite discrete sets to enable deterministic decision making. The key issue is to find a good rate between space democratization and solution precision. The large cells in the grid usually hide many escape routes. The small cells in grid usually increase the computation complexity and diminish computation time optimal solution.
+The common ground of these works is an operational space discretization into various forms of finite discrete sets to enable deterministic decision making. The key issue is to find a good rate between space democratization and solution precision. The large cells in the grid usually hide many escape routes. The small cells in grid usually increase the computational complexity and diminish computation time optimal solution.
 
 Examples of \emph{situation awareness:} implementation can be found mainly in \emph{human-centered} systems, \emph{Early Warning System} has been proposed by Lee \cite{lee2002collision} and an adaptive version by Miller \cite{miller2002adaptive}. Effects of \emph{CDTI Display} visualization and human decision impact have been examined by Thomas \cite{thomas2005effects}. \emph{Self Separation} aspect has been examined by Williams \cite{williams1983self}.
 

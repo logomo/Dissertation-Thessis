@@ -1,5 +1,8 @@
-\subsection{\secState{R}Architecture}\label{sec:utmArchitecture}
-\paragraph{UTM Concept} is based on \emph{asynchronous event-based control} \cite{zimmer2011rule}. \emph{Event} in \emph{controlled airspace} is handled in form of \emph{cases} \cite{prevot2016uas}. There are following \emph{event sources}:
+\subsection{UTM Architecture}\label{sec:utmArchitecture}
+
+\paragraph{Summary:} The UTM authority needs to communicate with the UAS attendants. The communication scheme is asynchronous notification(UAS)-directive(UTM). 
+
+\paragraph{UTM Concept} is based on \emph{asynchronous event-based control} \cite{zimmer2011rule}. \emph{Event} in \emph{controlled airspace} is handled in the form of \emph{cases} \cite{prevot2016uas}. There are following \emph{event sources}:
 
 \begin{enumerate}
     \item \emph{Weather Information Service} (from \cite{zimmer2014selective}) - used to create \emph{weather case} (tab. \ref{tab:weatherConstraint}).
@@ -18,9 +21,9 @@
 \begin{enumerate}
     \item \emph{Planning} - the detection phase, when the hazardous situations are assessed.
     
-    \item \emph{Fulfillment} - the monitoring phase, when the state of affairs for directives and mandates is full filled by controlled UAS systems. 
+    \item \emph{Fulfillment} - the monitoring phase, controlled UAS systems fulfill the state of affairs for directives and mandates. 
     
-    \item \emph{Acknowledgement} - the closing phase, when UTM assess and acknowledges the performance of controlled UAS systems.
+    \item \emph{Acknowledgment} - the closing phase, when UTM assess and acknowledges the performance of controlled UAS systems.
 \end{enumerate}
 
 
@@ -37,4 +40,4 @@ Depending on the \emph{airspace cluster} decision time frame they are sending \e
 
 The \emph{UAS Traffic Management} (UTM) collects the event data from \emph{Weather Information Service} and \emph{Position Notifications} calculating respective \emph{cases}. 
 
-If there is an \emph{active collision/weather case} the \emph{UTM} will send \emph{resolutions} to respective airspace attendants. 
+If there is an \emph{active collision/weather case}, the \emph{UTM} will send \emph{resolutions} to respective airspace attendants. 

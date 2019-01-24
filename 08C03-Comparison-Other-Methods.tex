@@ -1,10 +1,10 @@
-\section{\secState{R}Comparison to Other Methods}\label{s:OtherMethodsComparison}
+\section{Comparison to Other Methods}\label{s:OtherMethodsComparison}
 \noindent The \emph{testing} (sec. \ref{s:testPlan}) is strongly \emph{capability} oriented, some performance testing regrading computational load (sec. \ref{s:ComputaitonFootprint}) is on the place. The advantages of our approach regarding scalability are outlined in (sec. \ref{s:conclusionScalability}).
 
 This section summarizes the results achieved by one of the master students \cite{hrdlik2018}. Who compares other avoidance methods concerning performance. The  \emph{conservative }vector field avoidance \cite{borenstein1991vector} and \emph{adaptive} potential field \cite{koren1991potential} methods are compared to our approach (sec. \ref{s:conservativeComparison}).
 
-\subsection{\secState{R}Conservative and Adaptive Method Comparison}\label{s:conservativeComparison}
-\paragraph{Testing scenario:} The testing scenario is similar to \emph{building avoidance} (sec. \ref{s:testBuildingAvoidance}), using the default framework testing configuration (sec. \ref{sec:testingConfiguration}). The \emph{reach set approximation} used is a \emph{combination of harmonic and chaotic} (fig. \ref{fig:combinedReachSetApproximation}) filling the role for \emph{navigation/avoidance} in non controlled airspace. The \emph{mission} is given by waypoints defined in (tab. \ref{tab:missionSetupForPErformanceTest}), the UAS is starting at $\mathscr{WP}_1$.
+\subsection{Conservative and Adaptive Method Comparison}\label{s:conservativeComparison}
+\paragraph{Testing scenario:} The testing scenario is similar to \emph{building avoidance} (sec. \ref{s:testBuildingAvoidance}), using the default framework testing configuration (sec. \ref{sec:testingConfiguration}). The \emph{reach set approximation} used is a \emph{combination of TM-RSA and CM-RSA} (fig. \ref{fig:combinedReachSetApproximation}) filling the role for \emph{navigation/avoidance} in non controlled airspace. The \emph{mission} is given by waypoints defined in (tab. \ref{tab:missionSetupForPErformanceTest}), the UAS is starting at $\mathscr{WP}_1$.
 
 \begin{table}[H]
 	\centering
@@ -93,7 +93,7 @@ One can say that reach set method outperforms selected conservative and adaptive
 
 \paragraph{Disclaimer:} Further investigation regarding \emph{cost-effectiveness} is required, the approach needs to be tested in real environment and on the multiple scenarios. The testing concerning approach feasibility have been proven (tab. \ref{tab:testCasesPerformacneEvaluation}).
 
-\subsection{\secState{R}Scalability}\label{s:conclusionScalability}
+\subsection{Scalability}\label{s:conclusionScalability}
 \noindent The \emph{many methods} do not offer \emph{scalability}. The scalability means that method applies to multiple problems with different scale or there is a sufficient amount of tune-able parameter to make it work in different environments. Many avoidance concepts have hardwired margins. 
 
 The \emph{Detect and Avoid} system must offer scalability to some extent, because of changing regulations and performance criteria on the UAS systems.
@@ -113,11 +113,11 @@ The \emph{tuning parameter} for static obstacles is \emph{safety margin} is then
 \end{equation*}
 
 
-The constraints for safety margin calculation and some guidelines were outlined in (sec. \ref{s:safetyMarginCalculation}).
+The constraints for safety margin calculation and some guidelines were outlined in (app. \ref{s:safetyMarginCalculation}).
 
 \paragraph{Intruders:} The \emph{intruders} (sec. \ref{s:intruders}) are limited by \emph{detection range} and intersection models parameters ranges. 
 
-The \emph{body volume intersection} (sec. \ref{s:bodyvolumeIntersection}) has a following constraint:
+The \emph{body volume intersection} (app. \ref{s:bodyvolumeIntersection}) has a following constraint:
 
 \begin{equation*}
     intruder Radius < body Radius \le minimal Detection Range - 2 \times our UAS radius
@@ -127,7 +127,7 @@ The \emph{body volume intersection} (sec. \ref{s:bodyvolumeIntersection}) has a 
     The \emph{body radius} does not need to fit exactly on the intruder real body radius; usually, some padding space is added.
 \end{note}
 
-The \emph{maneuverability uncertainty intersection} (sec. \ref{s:uncertaintyIntersection}) is tuned through the uncertainty spread on the horizontal and vertical plane. This spread cannot be infinite, and the only limitation is given by implementation:
+The \emph{maneuverability uncertainty intersection} (app. \ref{s:uncertaintyIntersection}) is tuned through the uncertainty spread on the horizontal and vertical plane. This spread cannot be infinite, and the only limitation is given by implementation:
 
 \begin{equation*}
     \begin{aligned}
@@ -138,7 +138,7 @@ The \emph{maneuverability uncertainty intersection} (sec. \ref{s:uncertaintyInte
 
 
 
-\paragraph{Constraints:} The constraints are considered as \emph{airspace restrictions}, \emph{weather zones}, \emph{geo-fencing zones} in this work. The constraints have two implementations \emph{Static constraints} (sec. \ref{s:virtualConstraints}) and \emph{Moving constraints} (sec. \ref{s:MovingVirtualConstraints}). The only real constraint is the detection range; the constraint must be detected before making any impact on \emph{grid}:
+\paragraph{Constraints:} The constraints are considered as \emph{airspace restrictions}, \emph{weather zones}, \emph{geo-fencing zones} in this work. The constraints have two implementations \emph{Static constraints} (sec. \ref{s:virtualConstraints}) and \emph{Moving constraints} (def. \ref{def:movingConstraint}). The only real constraint is the detection range; the constraint must be detected before making any impact on \emph{grid}:
 
 \begin{equation*}
     impact(uasPosition,constraintCenter) < detection Range - grid Range

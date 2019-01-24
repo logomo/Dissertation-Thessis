@@ -1,4 +1,5 @@
-\subsection{\secState{R}Body-volume Intersection}\label{s:bodyvolumeIntersection}
+\newpage
+\section{Notable-Body Direct-Movement Intruder Intersection}\label{s:bodyvolumeIntersection}
 \paragraph{Idea:} The \emph{Intruder} has \empty body volume greater than \emph{average} $cell_{i,j,k}$ volume. The \emph{intruder body} is considered as the ball moving along \emph{intruder position}. The \emph{intersection} of the intruder body is realized as sufficiently thick \emph{point-cloud intersection}.
 
 \paragraph{Space Intersection Rate - Body Volume:} The \emph{body volume mass} with center at $position(t)$ is moving along intruder trajectory prediction (eq. \ref{eq:linearintersectionmodelVehicleVolume}) in time interval $[0,\infty[$:
@@ -32,6 +33,6 @@ The \emph{space intersection rate for vehicle body} $space(Intruder, cell_{i,j,k
 \paragraph{Intersection Time:} The \emph{intersection time} id depending on point cloud (eq. \ref{eq:plannarCoordinateTransformationVolumeBall}) where each point \emph{have intersection time} given as \emph{body-center position} time (eq. \ref{eq:linearintersectionmodelVehicleVolume}). 
 
 \begin{note}
-    The \emph{body-volume} intersection model, can insert the \emph{multiple intersection times} into one $cell_{i,j,k}$. the \emph{interval length} considers all of these for intersection rates (eq. \ref{eq:timeIntersectionRate}).
+    The \emph{body-volume} intersection model can insert the \emph{multiple intersection times} into one $cell_{i,j,k}$. The \emph{interval length} considers all of these for intersection rates (eq. \ref{eq:timeIntersectionRate}).
 \end{note}
     

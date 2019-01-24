@@ -1,4 +1,4 @@
-\section{\secState{R}Summary}\label{s:conclusionSummary}
+\section{Summary}\label{s:conclusionSummary}
 \noindent The approach presented in (ch. \ref{ch:approach}) is covering the challenges (fig. \ref{fig:AvoidanceLevels}) related to:
 
 \begin{enumerate}
@@ -40,7 +40,7 @@
 \end{enumerate}
 
 
-\subsection{\secState{R} Hierarchical Decision Making}\label{s:conclusionAvoidanceNavigationRun}
+\subsection{Hierarchical Decision Making}\label{s:conclusionAvoidanceNavigationRun}
 \noindent The key feature of the approach is hierarchical decision making. The hierarchy is introduced not only to threat prioritization but also to the time sequence of the decisions. The framework scheme (fig. \ref{fig:AvoidanceFrameworkConceptNew}) shows that situational assessment in the form of \emph{data fusion} is done in (sec. \ref{s:sensorFusion}). The trajectory selection process is separated from the final avoidance strategy pick-up process. The decision making separation is done like follows:
 
 \begin{itemize}
@@ -51,29 +51,29 @@
 
 The decision making process on threat assessment level (fig. \ref{fig:missionControlRunActivityDiagram}) is the configuration of threat type application in 7\textsuperscript{th}-10\textsuperscript{th} step. The idea is that UAS:
 \begin{enumerate}
-    \item must avoid any \emph{static obstacles} (sec. \ref{s:detectedObstacles}),
+    \item must avoid any \emph{static obstacles} (sec. \ref{s:staticObstacles}),
     
     \item can skip \emph{intruders} (sec. \ref{s:intruders}) if there are no other options
     
-    \item can enter into \emph{hard constraints} (sec. \ref{s:virtualConstraints}, \ref{s:MovingVirtualConstraints}) area if its necessary,
+    \item can enter into \emph{hard constraints} (sec. \ref{s:virtualConstraints}, def. \ref{def:movingConstraint}) area if its necessary,
     
-    \item can enter into \emph{soft constraints} (sec. \ref{s:virtualConstraints}, \ref{s:MovingVirtualConstraints}) area if its necessary.
+    \item can enter into \emph{soft constraints} (sec. \ref{s:virtualConstraints}, def. \ref{def:movingConstraint}) area if its necessary.
 \end{enumerate}
 
 \begin{note}
     The \emph{implementation} of \emph{soft/hard constraints} and their evaluation process is same in \emph{avoidance run}; the only difference is when they are applied by \emph{navigation run}.
 \end{note}
     
-\subsection{\secState{R}Use of Developed Reach Set Approximations}\label{s:conclusionReachSet}
+\subsection{Use of Developed Reach Set Approximations}\label{s:conclusionReachSet}
 
 \noindent The reach set approximation (sec. \ref{s:reachSet}) represents a set of  \emph{maneuvering} strategies (avoidance/movement) which can be used in a different context. The properties of the trajectories are given based on \emph{constrained expansion} (sec. \ref{s:constrainedTrajectoryExpansion}) and performance parameters priority (sec. \ref{s:ReachSetPerformanceCriteria}).
 
 The conditions and priorities are changing with the operational environment, to successful integration into nonsegregated airspace is necessary to reflect this.  For this purpose, the multiple reach set approximation approaches were developed. The performance tests and longer summary can be found in (sec. \ref{sec:reducedReachSetPerformance}). The summary of each reach set approximation method is given like follow:
 
 \begin{itemize}
-    \item[$\to$] \emph{Chaotic reach set approximation} (sec. \ref{s:chaoticReachSet}) - contains a lot of \emph{curved trajectories} with high space coverage ratio, used for \emph{emergency reactive avoidance} in non-controlled/controlled airspace, \emph{last resort reach set}.
+    \item[$\to$] \emph{Coverage-maximizing reach set approximation} (sec. \ref{s:chaoticReachSet}) - contains a lot of \emph{curved trajectories} with high space coverage ratio, used for \emph{emergency reactive avoidance} in non-controlled/controlled airspace, \emph{last resort reach set}.
     
-    \item[$\to$] \emph{Harmonic reach set approximation} (sec. \ref{s:harmonicReachSet}) -  contains a lot of \emph{straight} trajectories with low space coverage ratio, used for navigation in \emph{non-controller airspace}.
+    \item[$\to$] \emph{Turn-minimizing reach set approximation} (sec. \ref{s:harmonicReachSet}) -  contains a lot of \emph{straight} trajectories with low space coverage ratio, used for navigation in \emph{non-controller airspace}.
     
     \item[$\to$] \emph{Combined reach set approximation} (sec. \ref{s:combinedReachSet}) - the reach set approximation is represented as a tree, there is a possibility to combine two or more reach sets with the same initial state, the outcome of such merge is a new reach state with different properties.
     

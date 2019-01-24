@@ -1,7 +1,7 @@
-\section{\secState{D}Basic Definitions}\label{s:basicDefinitions}
+\section{Basic Definitions}\label{s:basicDefinitions}
 \noindent A few definitions are needed.
 
-\subsection{\secState{D}World}\label{s:World} 
+\subsection{World}\label{s:World} 
     \noindent The world of interest consists of:
 
     \emph{Space} has a Global Reference Frame with three axes $X^+,Y^+,Z^+$. 
@@ -40,7 +40,7 @@
         \right]
     \end{equation}
 
-\subsection{\secState{D}Mission}\label{s:mission}
+\subsection{Mission}\label{s:mission}
     \noindent\emph{Mission} (\ref{eq:missionAbstractSet}) which UAS should fly is given as a set of \emph{ordered, feasible regarding UAS dynamic (\ref{eq:vehicleModelAbstract}), waypoints} in a subspace of $Space$ (\ref{eq:SpaceDefinition}).
     
     \begin{equation}\label{eq:missionAbstractSet}
@@ -64,7 +64,7 @@
 
 
 
-\subsection{\secState{D}Flight Constraints}\label{s:FlightConstraints}
+\subsection{Flight Constraints}\label{s:FlightConstraints}
 
     \noindent Flight constraints arise from aviation rules and ATM/UTM. 
 
@@ -88,7 +88,7 @@
 
 
 
-\subsection{\secState{D}Partition of Space}\label{s:partitionOfSpace}
+\subsection{Partition of Space}\label{s:partitionOfSpace}
 
     \noindent In what follows it is convenient at each time $t$ to partition the \emph{Space} into four disjoint subsets \emph{Free(t)}, \emph{Restricted(t)}, \emph{Occupied(t)} and \emph{Uncertain(t)}.
 
@@ -114,7 +114,7 @@
         \emph{SoftConstraint} = \{point \in \emph{Space}: \emph{SpaceClassification}(point) = Restricted \}
     \end{equation}
 
-\subsection{\secState{D}Information Source}\label{s:informationSources}
+\subsection{Information Source}\label{s:informationSources}
     \begin{definition}{Information source} \label{def:InformationSurceDefinition}         
         (\ref{eq:InformationSurceDefinition}) represents a priori information for each \emph{point} in \emph{Space} at time prior mission execution mapping it into one of distinctive categories \emph{Free, Occupied, Restriced}, and \emph{Uncertain}.
         
@@ -137,7 +137,7 @@
         \item\emph{Fly zones restriction map} - a map of restricted flight areas considered as \emph{restricted} constraints.
     \end{enumerate}
 
-\subsection{\secState{D}Single Observation by Single Sensor Classification} \label{singleObservationSingle sensor}
+\subsection{Single Observation by Single Sensor Classification} \label{singleObservationSingle sensor}
     \noindent The\emph{UAS} is equipped with single \emph{Sensor}, which returns \emph{Space} classification for given \emph{observation position} and observation time.
 
 
@@ -159,7 +159,7 @@
     \end{equation}
 
 
-\subsection{\secState{D}Multiple Observations by Single Sensor Classification}\label{multipleObservationsBySingleSensor}
+\subsection{Multiple Observations by Single Sensor Classification}\label{multipleObservationsBySingleSensor}
     \noindent Let Let add pairs of \emph{observation position} and \emph{observation time} in manner $\{(position_1,t_1),$ $(position_2,t_2),$ $\dots(position_k,t_k)\}, k\in\N^+$ that point position is independent and time is ordered in fashion $t_1 < t_2 < \dots < t_k$.
  
  
@@ -180,7 +180,7 @@
          Uncertain_O(sensor)= \bigcap_{i=\{1,\dots,k\}}Uncertain_O(sensor,position_i,time_i)
     \end{equation}
 
-\subsection{\secState{D}Sensor Fusion}\label{s:SensorFusionDefinition}
+\subsection{Sensor Fusion}\label{s:SensorFusionDefinition}
     \noindent The observation at fixed time $t_{fix}$ can be made by multiple sensors $sensor_1,$ $sensor_2,$ $\dots,$ $sensor_k,$ $k\in\N^k$, for $k$ sensors execute observations $Observation_1$ $(sensor_1,$ $position_1,$ $t_{fix}),$ $Observation_2$ $(sensor_2,$ $position_2,$ $t_{fix}),$ $\dots,$ $Observation_k($ $sensor_k,$ $position_k,$ $t_{fix})$. 
 
     \emph{Sensor Fusion} (\ref{eq:SensorFusionFunction}) function with \emph{data fusion parameters} is introduced which combines \emph{Observations} for each \emph{sensor} and \emph{Weather}, then  uniquely maps each point into four distinguish sets: \emph{$Free(t_{fix})$, $Occupied(t_{fix})$, $Restricted(t_{fix})$, and $Uncertain(t_{fix})$} (special case of (\ref{eq:spaceCassificationFunction})).
@@ -207,7 +207,7 @@
         \end{cases}
     \end{equation}
 
-\subsection{\secState{D}Data Fusion}\label{s:dataFusionDefinition}
+\subsection{Data Fusion}\label{s:dataFusionDefinition}
     \noindent Multiple \emph{Information Sources}: \emph{InformationSource}$_1$, \emph{InformationSource}$_2$, $\dots$, \emph{InformationSource}$_l$, $l\in\N$, where $l$ is the count of information sources needs to be fused with \emph{Sensor Fusion} function (\ref{eq:SensorFusionFunction}) outcome at \emph{fixed time} $t_{fix}$.
 
     \emph{Data fusion} function (\ref{eq:DataFusionFunction}) combines the classification from various \emph{Information Sources} with classification from \emph{Sensor Fusion} function (\ref{eq:SensorFusionFunction}) for UAS position at \emph{fixed time} $t_{fix}$, under given \emph{Data Fusion Parameters}. 
@@ -243,7 +243,7 @@
     Moreover \emph{Data Fusion} function is covering the case of \emph{Multiple information sources, combined with multiple sensor readings over multiple times}, including \emph{Weather} as \emph{sensor impact factor} and \emph{information source}. 
     \end{note}
 
-\subsection{\secState{D}Known World}\label{s:KnownWorld}
+\subsection{Known World}\label{s:KnownWorld}
    \noindent \emph{Known world} (\ref{eq:knownWorldSet}) for some \emph{fixed time}$t_{fix}$ is given as the joint set of points which belongs to one of \emph{Data Fusion} (\ref{eq:DataFusionFunction}) output sets $Free(t_{fix})$ or $Occupied(t_{fix})$ or $Restricted(t_{fix})$. The \emph{Known World} is compact set with existing boundary.
     
     \begin{equation}\label{eq:knownWorldSet}
@@ -252,7 +252,7 @@
 
 
 
-\subsection{\secState{D}Safety Margin}\label{s:SafetyMarginDefinition}
+\subsection{Safety Margin}\label{s:SafetyMarginDefinition}
     \noindent Let say that \emph{mission} was executed in \emph{time} interval $t\in [missionStart,missionEnd]$ in \emph{Known world} (\ref{eq:knownWorldSet}). For every $position$, extracted from \emph{UAS model state} $x(t)$, keeps distance from any point in $Occupied(t)$  with greater or equal to $safetyMargin$ $(s_m)$ (\ref{eq:safetyMarginAbstract}).  
     
     \begin{multline}\label{eq:safetyMarginAbstract}

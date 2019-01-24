@@ -1,17 +1,20 @@
-\subsection{\secState{R}Static Constraints}\label{s:virtualConstraints}
-\paragraph{Idea:} The \emph{constraints} (ex. weather, airspace) usually covers large portion of the \emph{operation airspace}. 
+\subsection{Constraints}\label{s:virtualConstraints}
 
-Converting constraints into valued \emph{point-cloud} is not feasible, due the \emph{huge amount of created points} and low \emph{intersection rate}. The \emph{polygon intersection} or \emph{circular boundary of 2D polygon} is simple and effective solution \cite{ritter1990efficient,welzl1991smallest}. 
+\paragraph{Summary:} There are different constraints from various sources with different impacts. There is a need for constraint impact assessment on the cells in the Avoidance Grid. 
 
-The key idea is to create \emph{constraint barrels} around dangerous areas. Each \emph{constraint barrel} is defined by circle on \emph{horizontal plane} and \emph{vertical limit range}.
+\paragraph{Static Constraints:} The \emph{constraints} (ex. weather, airspace) usually covers a large portion of the \emph{operation airspace}. 
+
+Converting constraints into valued \emph{point-cloud} is not feasible, due to the \emph{huge amount of created points} and low \emph{intersection rate}. The \emph{polygon intersection} or \emph{circular boundary of a 2D polygon} is a simple and effective solution \cite{ritter1990efficient,welzl1991smallest}. 
+
+The key idea is to create \emph{constraint barrels} around dangerous areas. Each \emph{constraint barrel} is defined by a circle on the \emph{horizontal plane} and the \emph{vertical limit range}.
 
 \paragraph{Representation:} The \emph{minimal representation} is based on (sec. \ref{sec:WellClear}, \ref{sec:WeatherImpact}) and geo-fencing principle. The \emph{horizontal-vertical separation} is ensured by \emph{projecting boundary} as 2D polygon oh horizontal plane and \emph{vertical boundary} (barrel height) as \emph{altitude limit}. 
 
-The \emph{static constraint} (eq. \ref{eq:staticConstraint}) is defined as structure vector including:
+The \emph{static constraint} (eq. \ref{eq:staticConstraint}) is defined as a structure vector including:
 \begin{enumerate}
-    \item \emph{Position} - the center position in global coordinates\emph{2D horizontal plane}.
+    \item \emph{Position} - the center position in the global coordinates\emph{2D horizontal plane}.
     
-    \item \emph{Boundary} - the ordered set of boundary points forming edges in global coordinates\emph{2D horizontal plane}.
+    \item \emph{Boundary} - the ordered set of boundary points forming edges in the global coordinates\emph{2D horizontal plane}.
     
     \item \emph{Altitude Range} - the \emph{barometric altitude} range $[altitude_{start},$ $altitude_{end}]$.
     
@@ -24,7 +27,7 @@ The \emph{static constraint} (eq. \ref{eq:staticConstraint}) is defined as struc
 
 \paragraph{Active constrain selection:} The \emph{active constraints} are constraints which are impacting \emph{UAS active avoidance range}. 
 
-The \emph{active constraints set} (eq. \ref{eq:activeConstraintSet}) is defined as set of \emph{constraints} from all \emph{reliable Information Sources} where the \emph{the distance} between UAS and constraint body (including safety margin) is lesser than the avoidance grid range. The \emph{horizontal altitude range} of avoidance grid musts also intersect with \emph{constraint altitude range}.
+The \emph{active constraints set} (eq. \ref{eq:activeConstraintSet}) is defined as a set of \emph{constraints} from all \emph{reliable Information Sources} where the \emph{distance} between UAS and constraint body (including safety margin) is lesser than the avoidance grid range. The \emph{horizontal altitude range} of avoidance grid must also intersect with \emph{constraint altitude range}.
 
 \begin{multline}\label{eq:activeConstraintSet}
     Active Constraints = \dots\\\dots =
@@ -36,7 +39,7 @@ The \emph{active constraints set} (eq. \ref{eq:activeConstraintSet}) is defined 
 
 \paragraph{Cell Intersection:} The \emph{importance of constraints} is on their impact on \emph{avoidance grid} $cells$. The \emph{most of the constraints} (weather, ATC) are represented as 2D convex polygons. Even the \emph{irregularly shaped constraints} are usually split into smaller convex 2D polygons.
 
-The idea is to represent convex polygon boundary as sufficiently large circle to cover polygon. The Welzl algorithm to find \emph{minimal polygon cover circle} \cite{welzl1991smallest} is used.
+The idea is to represent convex polygon boundary as a sufficiently large circle to cover polygon. The Welzl algorithm to find \emph{minimal polygon cover circle} \cite{welzl1991smallest} is used.
 
 First the \emph{set of contraint edges} (eq. \ref{eq:constraintEdgeSet}) is a enclosed set of 2D edges between neighboring points defined as follow:
 
@@ -54,7 +57,7 @@ First the \emph{set of contraint edges} (eq. \ref{eq:constraintEdgeSet}) is a en
     \right\}
 \end{equation}
 
-\noindent The \emph{constraint circle boundary} with calculated center on 2D horizontal plane and radius (representing body margin) is defined in (eq. \ref{eq:constraintCircleBoundary}).
+\noindent The \emph{constraint circle boundary} with calculated center on the  2D horizontal plane and radius (representing body margin) is defined in (eq. \ref{eq:constraintCircleBoundary}).
 
 \begin{equation}\label{eq:constraintCircleBoundary}
     circle(constraint)=
@@ -66,7 +69,7 @@ First the \emph{set of contraint edges} (eq. \ref{eq:constraintEdgeSet}) is a en
     \right]
 \end{equation}
 
-\newpage\noindent The $(cell_{i,j,k}$ and \emph{constraint} intersection (eq. \ref{eq:contraintToCellIntersection}) is classification function. The \emph{classification} is necessary, because one \emph{constraint} induce: 
+\noindent The $(cell_{i,j,k}$ and \emph{constraint} intersection (eq. \ref{eq:contraintToCellIntersection}) is classification function. The \emph{classification} is necessary, because one \emph{constraint} induce: 
 \begin{enumerate}
     \item \emph{Body Constraint} (hard constraint) - the distance between $cell_{i,j,k}$ closest border and \emph{circular boundary} center is in interval $[0,radius]$.
     
@@ -99,7 +102,7 @@ First the \emph{set of contraint edges} (eq. \ref{eq:constraintEdgeSet}) is a en
 
 \noindent The \emph{intersection impact} of constraint is handled separately for \emph{soft} and  \emph{hard} constraints. The \emph{avoidance} of hard constraints is \emph{mandatory}, the \emph{avoidance} of soft constraints is \emph{voluntary}.
 
-The constraints which have an \emph{soft intersection with cell} are added to cells impacting constraints set: 
+The constraints which have a \emph{soft intersection with the cell} are added to cells impacting constraints set: 
 \begin{equation}\label{eq:softConstraintsCellIntersections}
     cell_{i,j,k}. soft Constraints = 
     \left\{
@@ -110,7 +113,7 @@ The constraints which have an \emph{soft intersection with cell} are added to ce
     \right\}
 \end{equation}
 
-\noindent The constraints which have an \emph{hard intersection with cell} are added to cells impacting constraints set:
+\noindent The constraints which have a \emph{hard intersection with the cell} are added to cells impacting constraints set:
 
 \begin{equation}\label{eq:hardConstraintsCellIntersections}
     cell_{i,j,k}. hard Constraints = 
@@ -123,6 +126,6 @@ The constraints which have an \emph{soft intersection with cell} are added to ce
 \end{equation}
 
 \begin{note}
-    The final \emph{constraint rate value} (eq. \ref{eq:constraintRatingForCell}) is determined based on \emph{mission control run} feed to \emph{avoidance grid} (fig. \ref{fig:missionControlRunActivityDiagram}) defined in 7\textsuperscript{th} to 10\textsuperscript{th} step.
+    The final \emph{constraint rate value} (eq. \ref{eq:constraintRatingForCell}) is determined based on \emph{mission control run} feed to \emph{avoidance grid} (fig. \ref{fig:missionControlRunActivityDiagram}) defined in  7\textsuperscript{th} to the 10\textsuperscript{th} step.
 \end{note}
     

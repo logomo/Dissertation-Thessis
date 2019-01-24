@@ -1,10 +1,13 @@
-\subsection{\secState{R}Moving Constraints}\label{s:MovingVirtualConstraints}
-\paragraph{Idea:} The basic ideas is the same as in case \emph{static constraints} (sec. \ref{s:virtualConstraints}). There is horizontal constraint and altitude constraint outlining the constrained space. The only additional concept is moving of \emph{constraint} on horizontal plane in global coordinate system. 
+%\subsection{Moving Constraints}\label{s:MovingVirtualConstraints}
+\paragraph{Moving Constraints:} The basic ideas is the same as in case \emph{static constraints} (sec. \ref{s:virtualConstraints}). Horizontal constraint and altitude constraint is outlining the constrained space. The only additional concept is moving of \emph{constraint} on the horizontal plane in a global coordinate system. 
 
 The constraint intersection  with \emph{avoidance grid} is done in \emph{fixed decision Time}, for cell in \emph{fixed cell leave time} (eq. \ref{eq:cellLeaveTime}), which means concept from static obstacles can be fully reused.
 
+
 \paragraph{Definition:} The \emph{moving constraint definition} (eq. \ref{eq:movingConstraintDefinition}) covers minimal data scope for  moving constraint, assuming linear constraint movement. 
 
+
+\begin{definition}{Moving Constraints}\label{def:movingConstraint}
 The original definition (eq. \ref{eq:staticConstraint}) is enhanced with additional parameters to support constraint moving:
 
 \begin{enumerate}
@@ -17,9 +20,10 @@ The original definition (eq. \ref{eq:staticConstraint}) is enhanced with additio
     constraint = \{position,boundary,\dots\\\dots, velocity, detection Time, \dots \\\dots altitude_{start},altitude_{end}, safety Margin\}
 \end{multline}
 
+\end{definition}
 \paragraph{Cell Intersection:} The \emph{intersection algorithm} follows (eq. \ref{eq:contraintToCellIntersection}), only shift of the \emph{center and boundary points} is required. 
 
-First let us introduce $\Delta time$ (eq. \ref{eq:deltatimeMovingconst}), which represents difference between the constraint detection time and expected cell leave time (eq. \ref{eq:cellLeaveTime}).
+First let us introduce $\Delta time$ (eq. \ref{eq:deltatimeMovingconst}), which represents the difference between the constraint detection time and expected cell leave time (eq. \ref{eq:cellLeaveTime}).
 
 \begin{equation}\label{eq:deltatimeMovingconst}
     \Delta time = UAS_{leave}(cell_{i,j,k}) - detection Time
@@ -43,4 +47,4 @@ First let us introduce $\Delta time$ (eq. \ref{eq:deltatimeMovingconst}), which 
 
 \paragraph{Alternative Intersection Implementation:} The alternative used for intersection selected based on polygon intersection algorithms review \citep{bentley1979algorithms}, the selected algorithm  is \emph{Shamos-Hoey} \cite{shamos1976geometric}.
 
-The implementation was tested on \emph{Storm scenario} (sec. \ref{s:testStorm}) and it yelds same results.
+The implementation was tested on \emph{Storm scenario} (sec. \ref{s:testStorm}) and it yields the same results.

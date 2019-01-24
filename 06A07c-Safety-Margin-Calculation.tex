@@ -1,27 +1,27 @@
 \newpage
-\subsection{\secState{R}Safety Margin Calculation}\label{s:safetyMarginCalculation}
+\section{Guideline - Safety Margin Calculation}\label{s:safetyMarginCalculation}
 \paragraph{Safety Margin Determination:} To determine \emph{safety Margin} the \emph{Rule of Thumb} is used:
 
 \begin{equation}
     maximal Body Radius \le safety Margin \le 2 \times turning Radius
 \end{equation}
 
-\noindent The \emph{lower boundary} is given by \emph{UAS} construction. because the \emph{UAS} body is considered as \emph{unit ball} with radius given as \emph{maximal body radius}. 
+\noindent The \emph{lower boundary} is given by \emph{UAS} construction because the \emph{UAS} body is considered as a \emph{unit ball} with the radius given as \emph{maximal body radius}. 
 
 The \emph{upper boundary} is optional, The \emph{double of \emph{turning radius}} is used by the \emph{conservative approach} \cite{borenstein1991vector}.
 
 
-\paragraph{Safety Margin Bloating:}  The \emph{discretization} of \emph{Reach Set}, \emph{Operation Space} and \emph{Decisions} imposes standard \emph{mixed integer} problem in terms of \emph{safety}. This section covers \emph{non-exhaustive} list of possible \emph{Safety Margin Bloats} in our approach.
+\paragraph{Safety Margin Bloating:}  The \emph{discretization} of \emph{Reach Set}, \emph{Operation Space} and \emph{Decisions} imposes standard \emph{mixed integer} problem considering \emph{safety}. This section covers a \emph{non-exhaustive} list of possible \emph{Safety Margin Bloats} in our approach.
 
-\paragraph{Own Position Uncertainty Bloat:} The \emph{sensor fusion} is precise, but not \emph{exact} in own UAS position determination. The maximal usual disparity needs to be accounted into \emph{Safety Margin}.
+\paragraph{Own Position Uncertainty Bloat:} The \emph{sensor fusion} is precise, but not \emph{exact} in own UAS position determination. The usual maximal disparity needs to be accounted into \emph{Safety Margin}.
 
-\paragraph{Intruder Position Uncertainty Bloat:} The \emph{sensor fusion} of Intruder is precise, but not \emph{exact} in own UAS position determination. The maximal usual disparity needs to be accounted into \emph{Safety Margin}.
+\paragraph{Intruder Position Uncertainty Bloat:} The \emph{sensor fusion} of Intruder is precise, but not \emph{exact} in own UAS position determination. The usual maximal disparity needs to be accounted into \emph{Safety Margin}.
 
-\paragraph{Weather bloat:} The \emph{Weather} impact type may result to increased \emph{safety margin}. Example: UAS is not humidity resistant, the clouds will be avoided from greater distance.
+\paragraph{Weather bloat:} The \emph{Weather} impact type may result in increased \emph{safety margin}. Example: UAS is not humidity resistant, the clouds will be avoided from a greater distance.
 
 \paragraph{Airspace bloat:} The \emph{Airspace} depending on cluster or \emph{country} may require greater separation distances, depending on circumstances. The example can be UAS directive to keep minimal separation from obstacles. The \emph{Safety Margin} is usually overridden by UTM directive value.
 
-\paragraph{UTM Synchronization Bloat:} \emph{Both UAS} decision times were \emph{synchronized}. The \emph{intruder} can be offset for \emph{full decision frame}. This is not an assumption, but it shows critical performance. Usually safety margin is bloated for (worst case offset):
+\paragraph{UTM Synchronization Bloat:} \emph{Both UAS} decision times were \emph{synchronized}. The \emph{intruder} can be offset for the \emph{full decision frame}. This is not an assumption, but it shows critical performance. Usually, safety margin is bloated for (worst case offset):
 \begin{equation}\label{safetyMarginBloat}
     safetyMarginBloat = \left( \begin{aligned}
     &intruderVelocity \times\dots \\ &intruderDecisionFrame \end{aligned}\right)[m,ms^{-1},s]
