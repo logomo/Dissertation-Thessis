@@ -1,6 +1,10 @@
 \cleardoublepage
 \section{Avoidance Concept}\label{s:avoidanceConcept}
-\noindent This section introduces \emph{Platform Independent Avoidance Concept} core functionality (fig. \ref{fig:AvoidanceFrameworkConceptNew}) modules responsible for \emph{pathfinding} and \emph{navigation}. The sections are organized like follow:
+
+\paragraph{Summary:} There is a need for a functional orchestration of previous concepts to achieve avoidance and navigation capabilities. The avoidance grid threat assessment done in (sec. \ref{s:sensorFusion}) needs to be applied on the RSA of choice to produce a safe trajectory for one fixed time. This procedure is described in the avoidance grid run. There is a need to join output multiple avoidances runs over the time to achieve the required avoidance/navigation capabilities.  This procedure is described in the navigation run. There is a need to assess the computational complexity of the approach to show implementation feasibility. 
+
+
+This section introduces \emph{Platform Independent Avoidance Concept} core functionality (fig. \ref{fig:AvoidanceFrameworkConceptNew}) modules responsible for \emph{pathfinding} and \emph{navigation}. The sections are organized like follow:
 
 \begin{enumerate}
     %\item \emph{Data Fusion} (sec. \ref{s:sensorFusion}) - implementation details of \emph{input interface} responsible for \emph{processing partial known world data} into final visibility, obstacle, intruder, and, constraints ratings.

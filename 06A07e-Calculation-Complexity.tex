@@ -1,5 +1,8 @@
 \newpage
 \subsection{Computational Complexity}\label{sec:MCRcomputationalComplexity}
+
+\paragraph{Summary:} Brief approach computational complexity analysis considering navigation/control/data fusion in support of real-time application feasibility.
+
 \paragraph{Introduction:}The \emph{Computational Complexity} one mission control run assessment is necessary to identify the strong and weak points of approach. Let us get through modules to assess notable calculations/algorithms complexity on high abstraction level.
 
 \paragraph{Navigation Loop:} On the navigation loop, the \emph{waypoint reach condition} (eq. \ref{eq:waypointReachCondition}) is checked, this is a unitary operation with worst complexity $\mathscr{O}(1)$. The selection process of the next \emph{Goal Waypoint} can get through all waypoints in the mission if they are all unreachable the complexity is $\mathscr{O}(|waypoints|)$.
