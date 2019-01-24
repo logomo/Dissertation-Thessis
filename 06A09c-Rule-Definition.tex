@@ -550,7 +550,7 @@ The \emph{first condition} (\ref{eq:ruleTrajectoryPositionCondition}) says that 
 \label{tab:ruleRightPlaneHeading}
 \end{tabularx}     
 
-\section{Rule: Enforce safety margin}\label{sec:ruleEnforceSafetyMargin}
+\section{Rule: Enforce Safety Margin}\label{sec:ruleEnforceSafetyMargin}
 \noindent Rule \ref{tab:ruleRightPlaneHeading}. checks right plane heading for a single mass point along \emph{trajectories}. The rule needs to account \emph{body mass} of \emph{intruder} and UAS, other factors like safe distance, regulations, etc. All mentioned factors are included in the \emph{safety margin}. The \emph{safety margin} is applied as \emph{radius ball} around \emph{collision point}. 
 
 \emph{Collision point} can be mapped from \emph{global coordinate frame} to \emph{reach set coordinate frame}, based on UAS \emph{position and orientation} in a \emph{decision time}. Then a comparison of distance between \emph{collision point} and every \emph{trajectory decision point} is trivial. 
