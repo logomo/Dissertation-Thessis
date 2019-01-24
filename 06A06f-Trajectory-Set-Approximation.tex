@@ -1,9 +1,9 @@
 \subsection{Trajectory Set Approximation of Reach Set}\label{sec:trajectory set Reach set approximation}
-    \paragraph{Discretization of Reach set:} There is a need for a discrete finite \emph{Reach Set approximation} to enable \emph{Avoidance Strategy Evaluation} in finite time. Replacing \emph{Continuous Control Set} \emph{Inputs(t)} by \emph{Movement Automaton} is feasible:
+    \paragraph{Discretization of Reach set:} There is a need for a discrete finite \emph{Reach Set approximation} to enable \emph{Avoidance Strategy Evaluation} in finite-time. Replacing \emph{Continuous Control Set} \emph{Inputs(t)} by \emph{Movement Automaton} is feasible:
     
     
     \begin{definition}[Reach set Approximation by Movement Automaton]\label{def:ReachSetApproximationByMovementAutomaton}
-        \emph{A trajectory} (def. \ref{def:MovementAutomatonTrajectory}) for system $\dot{state}=f(time,state,input)$ under control of the movement automaton $\mathscr{MA}$ is given as execution of movement buffer (def. \ref{def:MovementBuffer}) with initial state of system $state_0$.  Therefore notation $Trajectory(state_0,buffer)$ is used.
+        \emph{A trajectory} (def. \ref{def:MovementAutomatonTrajectory}) for system $\dot{state}=f(time,state,input)$ under control of the movement automaton $\mathscr{MA}$ is given as execution of movement buffer (def. \ref{def:MovementBuffer}) with an initial state of system $state_0$.  Therefore notation $Trajectory(state_0,buffer)$ is used.
     
         
         \paragraph{The Complete Reach Set} (\ref{eq:reachSetFormalDefintion}) for system with initial state $state_0$ with existing \emph{control strategy} $control(time)\in Controls(time)$. for time  $\tau > time_0$.
@@ -22,15 +22,15 @@
     \end{definition}
     
     \begin{note}
-        \emph{Reach Set Approximation} (def. \ref{def:ReachSetApproximationByMovementAutomaton}) is subset of \emph{Full Reach Set} (def. \ref{def:ReachSetBasic}) in continuous space $\R^n$ it inherits all important properties, like \emph{Invariance} \cite{blanchini1999set}.
+        \emph{Reach Set Approximation} (def. \ref{def:ReachSetApproximationByMovementAutomaton}) is a subset of \emph{Full Reach Set} (def. \ref{def:ReachSetBasic}) in continuous space $\R^n$ it inherits all important properties, like \emph{Invariance} \cite{blanchini1999set}.
         
-        \emph{Discretization} of \emph{Reach Set} have been achieved leaving us with \emph{finite count} of \emph{Trajectories}, instead of \emph{Infinite subspace or $\R^N$}
+        \emph{Discretization} of \emph{Reach Set} have been achieved leaving us with a \emph{finite count} of \emph{Trajectories}, instead of \emph{Infinite subspace or $\R^N$}
     \end{note}
 
     \paragraph{Approximated Reach Set Containment:} The \emph{Approximated Reach Set} introduced in (def. \ref{def:ReachSetApproximationByMovementAutomaton}) is constrained only by \emph{future expansion time} $\tau$. UAS makes space assessment in \emph{Avoidance Grid}. There is no point to consider Trajectories outside of \emph{Avoidance Grid}
     
-    \begin{definition}[Contained Aproximated Reach Set]\label{def:ContainedReducedReachSet}
-        For pair ($state_0$, $AvoidanceGrid_0$) at time $time_0$ and \emph{prediction horizon} $\tau=\infty$ there is \emph{Contained Reduced Reach Set:}
+    \begin{definition}[Contained Approximated Reach Set]\label{def:ContainedReducedReachSet}
+        For a pair ($state_0$, $AvoidanceGrid_0$) at time $time_0$ and \emph{prediction horizon} $\tau=\infty$ there is \emph{Contained Reduced Reach Set:}
         \begin{equation}\label{eq:containedReachSet}
             ReachSet\left(\begin{gathered}time_0,\\state_0,\\AvoidanceGrid_0\end{gathered}\right) = 
             \left\{
@@ -44,26 +44,26 @@
             \right\}
         \end{equation}
         
-        \paragraph{Properties:} \emph{Container Aproximated Reach Set} contains only trajectories where all segments belongs to \emph{Avoidance Grid}, there are following functions:
+        \paragraph{Properties:} \emph{Container Approximated Reach Set} contains only trajectories where all segments belong to \emph{Avoidance Grid}, there are following functions:
         \begin{enumerate}
-            \item \emph{Membership function} for any \emph{Trajectory} in \emph{Constrained Reduced Reach set} returns \emph{Ordered Set} of \emph{Passing Cells}. 
+            \item The \emph{membership function} for any \emph{Trajectory} in \emph{Constrained Reduced Reach set} returns \emph{Ordered Set} of \emph{Passing Cells}. 
             
-            \item \emph{Cost function} for any \emph{Trajectory Portion} in \emph{Constrained Reduced Reach Set} return \emph{Cost of Execution}
+            \item The \emph{cost function} for any \emph{Trajectory Portion} in \emph{Constrained Reduced Reach Set} return \emph{Cost of Execution}
         \end{enumerate}
         
         \paragraph{Passing cell:} \emph{Cell} of \emph{Avoidance Grid} which has some intersection with {Trajectory}.
     \end{definition}
     
     \begin{note}
-        \emph{Contained Reduced Reach Set} (eq. \ref{eq:containedReachSet}) which is contained in \emph{Avoidance Grid} and have an \emph{Membership Function} enable Property transition between Reach set and \emph{Avoidance grid}. 
+        \emph{Contained Reduced Reach Set} (eq. \ref{eq:containedReachSet}) which is contained in the \emph{Avoidance Grid} and have a \emph{Membership Function} enable Property transition between Reach set and \emph{Avoidance grid}. 
         
         \emph{Example:} Visibility from cells along \emph{Trajectory} can be gathered to calculate \emph{Trajectory`s} feasibility.
     \end{note}
     
     \paragraph{Reach Set Pruning:} There is a need to implement \emph{Set Difference} between \emph{Reach Set} and 
-    \emph{Constraint Set}. Constraint Set cam be \emph{Obstacle Set} from \emph{Known World} (sec. \ref{s:KnownWorld}) and other different constraints.
+    \emph{Constraint Set}. Constraint Set can be an \emph{Obstacle Set} from \emph{Known World} (sec. \ref{s:KnownWorld}) and other different constraints.
     
-    \paragraph{Reach Set Trajectory Tree:} (\ref{eq:trajectoryTree}) \emph{Any Reach Set} where \emph{Control Strategy Constraint} is implemented as \emph{Movement Automaton}, with defined \emph{Movements} set and for singe initial $state_0$. The \emph{Reach Set} is given as discrete tree with root $Trajectory(state_0,\varnothing)$. 
+    \paragraph{Reach Set Trajectory Tree:} (\ref{eq:trajectoryTree}) \emph{Any Reach Set} where \emph{Control Strategy Constraint} is implemented as \emph{Movement Automaton}, with defined \emph{Movements} set and for single initial $state_0$. The \emph{Reach Set} is given as discrete tree with root $Trajectory(state_0,\varnothing)$. 
     
     \begin{equation}\label{eq:trajectoryTree}
         ReachSet(state_0,\dots) = \left\{Trajectory(state_0,buffer):
@@ -98,7 +98,7 @@
     
     
     \begin{note} 
-        Pruning(def. \ref{def:PrunedReachSet}) \cite{birmingham1988tree} is applicable multiple times for various \emph{Constraints Set}. 
+        Pruning(def. \ref{def:PrunedReachSet}) \cite{birmingham1988tree} is applied multiple times for various \emph{Constraints Set}. 
     
         Example of \emph{Approximated Reach set Calculation} (def. \ref{def:ReachSetApproximationByMovementAutomaton}), \emph{Reach Set Containment} (def. \ref{def:ContainedReducedReachSet}), and, \emph{Pruning} is given in \cite{gomola2017obstacle}.
     \end{note}

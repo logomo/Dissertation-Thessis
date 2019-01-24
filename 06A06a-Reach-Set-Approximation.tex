@@ -1,24 +1,24 @@
 \cleardoublepage
 \section{Reach Set Approximation}\label{s:reachSet}
 
-    \noindent\paragraph{Motivation:} \emph{Reach set} is strong tool for \emph{Obstacle Avoidance} because it contains all possible \emph{avoidance maneuvers}. The current implementations (sec. \ref{sec:ReachSetComputationMethodsASIS}) have following flaws:
+    \noindent\paragraph{Motivation:} \emph{Reach set} is a strong tool for \emph{Obstacle Avoidance} because it contains all possible \emph{avoidance maneuvers}. The current implementations (sec. \ref{sec:ReachSetComputationMethodsASIS}) have the following flaws:
     
     \begin{enumerate}
         \item \emph{Realistic approximation} - \emph{nonlinear systems} or \emph{heavily constrained systems} cannot be approximated well by \emph{linear continuous-time Reach Sets}.
         
-        \item \emph{Finite count of possibilities} - continuous-time \emph{Reach Set} contains  infinite possibilities for \emph{avoidance maneuvers}, the SAA system demands conflict resolution in finite time.
+        \item \emph{Finite count of possibilities} - continuous-time \emph{Reach Set} contains  infinite possibilities for \emph{avoidance maneuvers}; the DAA system demands conflict resolution in finite-time.
         
-        \item \emph{Computationally feasible data structures} - binding related properties seems problematic, because \emph{continuous- time reach sets} does not have unique identifier of maneuver, trajectory nor segment. 
+        \item \emph{Computationally feasible data structures} - binding related properties seem problematic because \emph{continuous- time reach sets} do not a have unique identifier of maneuver, trajectory nor segment. 
     \end{enumerate}
     
-    \paragraph{Proposed Solution Features:} Our Reach set Estimation method will provide following features:
+    \paragraph{Proposed Solution Features:} Our Reach set Estimation method will provide the following features:
     
     \begin{enumerate}
-        \item \emph{System Control Interface} - implemented via \emph{Movement Automaton}, requiring only \emph{discrete command chain} to approximate system behaviour.
+        \item \emph{System Control Interface} - implemented via \emph{Movement Automaton}, requiring only a \emph{discrete command chain} to approximate system behavior.
         
         \item \emph{Finite count of possibilities} - finite number of elements in \emph{Reach set} will enable \emph{scalable} calculation.
         
-        \item \emph{Computationally feasible data structures} - approximation of Reach set as a set of trajectories, each trajectory can be split into finite number of segments. Each element will have unique identifier enabling both-side  property binding.
+        \item \emph{Computationally feasible data structures} - approximation of Reach set as a set of trajectories, each trajectory can be split into a finite number of segments. Each element will have a unique identifier enabling both-side  property binding.
         
-        \item \emph{Computationally feasible data-structures} - some specific behavior, like horizontal/vertical separation, or maneuver shape can be encoded into a different types of the reach set approximation algorithms.
+        \item \emph{Computationally feasible data-structures} - some specific behavior, like horizontal/vertical separation, or maneuver shape can be encoded into  different types of the reach set approximation algorithms.
     \end{enumerate}

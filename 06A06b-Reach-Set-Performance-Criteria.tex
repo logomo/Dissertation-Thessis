@@ -1,21 +1,21 @@
 \subsection{Distinctive Properties of the Trajectories}\label{s:ReachSetPerformanceCriteria}
 
-\paragraph{Motivation:} The need to Make \emph{Reach Set} scalable approach. This may be a problem due the \emph{Expansion rate}. \emph{Reach set} represented as a \emph{Trajectory Tree} (eq. \ref{eq:trajectoryTree}) for Avoidance Grid with $layerCount$ and Movement automaton with $movementCount$, the \emph{Node count} is given as:
+\paragraph{Motivation:} The need to Make \emph{Reach Set} scalable approach. This may be a problem due to the \emph{Expansion rate}. \emph{Reach set} represented as a \emph{Trajectory Tree} (eq. \ref{eq:trajectoryTree}) for Avoidance Grid with $layer-count$ and Movement automaton with $movement-count$, the \emph{Node count} is given as:
 
 \begin{equation}\label{eq:fullReachSetNodeCount}
     1+ \left(\sum_{i\in\{1\dots layerCount\}} (movementCount)^i\right)
 \end{equation}
 
-\noindent \emph{This scaling} is not feasible for \emph{Avoidance Grid} with many layers ($< 10$) or \emph{Movement Set} with many movements ($< 9$). There is need for \emph{Reduced Reach set calculation}.
+\noindent \emph{This scaling} is not feasible for \emph{Avoidance Grid} with many layers ($< 10$) or \emph{Movement Set} with many movements ($< 9$). There is a need for \emph{Reduced Reach set calculation}.
 
-\paragraph{Performance Criteria:} The scaling factor (eq. \ref{eq:fullReachSetNodeCount}) shows that there are going to be many trajectories. The main point is that not every trajectory in \emph{Reach Set} are giving us \emph{maneuverability advantage}. Our expectations lies in following \emph{Performance Requirements}:
+\paragraph{Performance Criteria:} The scaling factor (eq. \ref{eq:fullReachSetNodeCount}) shows that there are going to be many trajectories. The main point is that not every trajectory in \emph{Reach Set} is giving us \emph{maneuverability advantage}. Our expectations lie in following \emph{Performance Requirements}:
 
 \begin{enumerate}
     \item \emph{Reach set} must \emph{Cover} maximum of the \emph{possible unique maneuvers} in  \emph{Avoidance Grid}.
     \item \emph{Trajectories} in \emph{Reach Set} should be smoothest possible to prevent cargo damage / UAS wear.
 \end{enumerate}
 
-\paragraph{Trajectory footprint:} Discrete space of \emph{Avoidance Grid} is organized in cells. \emph{Cell} is minimal space portion accessible by \emph{property binding}. There is need to know if two trajectories contribution to \emph{Maneuverability} in this environment. 
+\paragraph{Trajectory footprint:} Discrete space of \emph{Avoidance Grid} is organized in cells. The \emph{cell} is a minimal space portion accessible by \emph{property binding}. There is a need to know if two trajectories contribution to \emph{Maneuverability} in this environment. 
 
 Each trajectory passes through space in \emph{Avoidance Grid}. If there exists a method to extract unique identifier for each \emph{trajectory passed cells}, we can compare two trajectories \emph{Coverage} in \emph{Avoidance Grid}.
 
@@ -37,7 +37,7 @@ Each trajectory passes through space in \emph{Avoidance Grid}. If there exists a
         \right\}
     \end{equation}
     
-    \noindent Then we can define equality function for $Trajectory_1$ and $Trajectory_2$, as comparison of their footprints in common \emph{Avoidance Grid} as follow:
+    \noindent Then we can define equality function for $Trajectory_1$ and $Trajectory_2$, as the  comparison of their footprints in common \emph{Avoidance Grid} as follow:
     
     \begin{equation}\label{eq:TrajectoryEquality}
         isEqual\left(\begin{gathered}
@@ -59,12 +59,12 @@ Each trajectory passes through space in \emph{Avoidance Grid}. If there exists a
     Depending on \emph{Movement Automaton`s} movement set and \emph{Avoidance Grid} parameters, there can be multiple \emph{trajectories} which are equal.
 \end{note}
 
-\paragraph{Coverage set:} Now it is possible to create set of unique \emph{trajectory footprints} due to \emph{footprint function} (eq. \ref{eq:setOfPassedCells}). Similarly there is a possibility to create \emph{Reach set skeleton} containing unique trajectories, by using 
+\paragraph{Coverage set:} Now it is possible to create a set of unique \emph{trajectory footprints} due to \emph{footprint function} (eq. \ref{eq:setOfPassedCells}). Similarly, there is a possibility to create \emph{Reach set skeleton} containing unique trajectories, by using 
 \emph{equality function} (eq. \ref{eq:TrajectoryEquality}).
 \emph{Coverage set} is sufficient for now.
 
 \begin{definition}[Coverage Set]\label{def:CoverageSet}
-    \emph{Coverage set} (\ref{eq:CoverageSet}) is defined for \emph{Avoidance Grid} and \emph{Reach Set} pair as set of unique \emph{Trajectory footprints}:
+    \emph{Coverage set} (\ref{eq:CoverageSet}) is defined for \emph{Avoidance Grid} and \emph{Reach Set} pair as a set of unique \emph{Trajectory footprints}:
     
     \begin{equation}\label{eq:CoverageSet}
         CoverageSet\left(\begin{gathered}AvoidanceGrid,\\ReachSet\end{gathered}\right)= \left\{
@@ -77,21 +77,21 @@ Each trajectory passes through space in \emph{Avoidance Grid}. If there exists a
     \end{equation}
 \end{definition}
 
-\paragraph{Coverage set properties:} Trajectory footprint (eq. \ref{eq:setOfPassedCells})is not \emph{bijection}, neither \emph{injection} for $ReachSet \to CoverageSet$. This implies following properties:
+\paragraph{Coverage set properties:} Trajectory footprint (eq. \ref{eq:setOfPassedCells})is not a \emph{bijection}, neither \emph{injection} for $ReachSet \to CoverageSet$. This implies the following properties:
 
 \begin{enumerate}
     \item Equal \emph{Reach Sets} in same \emph{Avoidance Grid} have equal \emph{Coverage Sets}.
     
     \item Equal \emph{Coverage Sets} does not imply \emph{Reach Set} equality.
     
-    \item For two {Coverage Sets} there is a possibility to compare their member count to create coverage ratio.
+    \item For two {Coverage Sets}, there is a possibility to compare their member count to create coverage ratio.
 \end{enumerate}
 
-The second \emph{Property} gives us a preposition that there is a possibility of \emph{Reach Set Reduction} without loosing 
+The second \emph{Property} gives us a proposition that there is a possibility of \emph{Reach Set Reduction} without losing 
 \emph{Coverage}.  
 
 \begin{definition}[Coverage Ratio]\label{def:coverageRatio}
-    \emph{Coverage Ratio} is a ratio of \emph{Coverage Set Member Count} between two \emph{Reach Sets}. Reach set with \emph{lesser count of unique Trajectories} is considered as \emph{Reduced Reach Set}.  Reach set with \emph{greater Count of unique Trajectories} is considered as \emph{Reference Reach Set}.
+    \emph{Coverage Ratio} is a ratio of \emph{Coverage Set Member Count} between two \emph{Reach Sets}. Reach set with a \emph{lesser count of unique Trajectories} is considered as \emph{Reduced Reach Set}.  Reach set with \emph{greater Count of unique Trajectories} is considered as \emph{Reference Reach Set}.
     
     \begin{equation}\label{eq:CoverageRatio} 
         \begin{gathered}
@@ -112,10 +112,10 @@ The goal is to minimize \emph{Maneuvering} of UAS, because:
 \begin{enumerate}
     \item \emph{Every Heading Change} needs to be reported to \emph{UTM}.
     \item \emph{Sharp Maneuvering} can damage cargo/wear UAS.
-    \item \emph{Often course changes} makes \emph{Intruder prediction} harder for other Civil General Aviation.
+    \item \emph{Often course changes} make \emph{Intruder prediction} harder for other Civil General Aviation.
 \end{enumerate}
 
-\noindent For this purpose \emph{Smoothness Metric} needs to be applied for \emph{Reach Set} or \emph{Trajectory}.  In case of \emph{Movement Automaton Control} two distinguish \emph{Movement Sets} can be introduced:\emph{Smooth} nad \emph{Chaotic} movements set with following properties:
+\noindent For this purpose, \emph{Smoothness Metric} needs to be applied for \emph{Reach Set} or \emph{Trajectory}.  In the case of \emph{Movement Automaton Control}, two distinguish \emph{Movement Sets} are introduced: \emph{Smooth} and \emph{Chaotic} movements set with the following properties:
 
 \begin{equation}\label{eq:ChaoticSmoothMovementSetDefinition}
     \begin{gathered}
@@ -142,7 +142,7 @@ Then \emph{Smoothnes clasificator} for $Trajectory(initialState,buffer)$ can be 
 \end{equation}
 
 \begin{definition}[Smoothness Rating for Trajectory]\label{def:SmoothnessRatingForTrajectory} 
-    \emph{Smoothness} for trajectory generated by \emph{Movement Automaton} for some \emph{Initial State} with some \emph{Movement Buffer}, under assumption of \emph{Smooth and Chaotic Movement Set} split (eq. \ref{eq:ChaoticSmoothMovementSetDefinition}), with existing \emph{classification} and \emph{counter} functionals (eq. \ref{eq:SmoothnesClasificatorCounter}) is given as follows:
+    \emph{Smoothness} for trajectory generated by \emph{Movement Automaton} for some \emph{Initial State} with some \emph{Movement Buffer}, under the assumption of \emph{Smooth and Chaotic Movement Set} split (eq. \ref{eq:ChaoticSmoothMovementSetDefinition}), with existing \emph{classification} and \emph{counter} functionals (eq. \ref{eq:SmoothnesClasificatorCounter}) is given as follows:
 
     \begin{equation}
         Smoothness(Trajectory(\dots,buffer)) = \frac{isSmooth(Trajectory)}{movementCount(Trajectory)} \in [0,1] 
