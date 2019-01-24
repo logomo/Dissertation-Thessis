@@ -1,11 +1,11 @@
 \subsection{Combined Reach Set Approximation - Tree Merge}\label{s:combinedReachSet}
-\paragraph{Motivation:} Turn-Minimizing Reach Set Approximation (sec. \ref{s:harmonicReachSet}) is \emph{efficient} for \emph{Navigation in \emph{Controlled Airspace}}. Coverage-Maximizing Reach Set Approximation (sec. \ref{s:chaoticReachSet}) is good for \emph{Emergency avoidance}. The need to differentiation between \emph{Navigation} and \emph{Emergency Avoidance} mode is necessary in \emph{Controlled Airspace}. but not in \emph{Non-controlled Airspace}. The combination of \emph{Turning-Minimizing} and \emph{Coverage-Maximizing} reach set aproximations is obvious solution. 
+\paragraph{Motivation:} Turn-Minimizing Reach Set Approximation (sec. \ref{s:harmonicReachSet}) is \emph{efficient} for \emph{Navigation in \emph{Controlled Airspace}}. Coverage-Maximizing Reach Set Approximation (sec. \ref{s:chaoticReachSet}) is good for \emph{Emergency avoidance}. The need for the differentiation between \emph{Navigation} and \emph{Emergency Avoidance} mode is necessary for \emph{Controlled Airspace}, but not for \emph{Non-controlled Airspace}. The combination of \emph{Turning-Minimizing} and \emph{Coverage-Maximizing} reach set approximations is an obvious solution. 
 
-\emph{Automatic mode switch} can be provided by combination of \emph{Navigation Reach Set} and \emph{Avoidance Reach Set} with elevated cost function. Overall having a method to merge multiple trees would be beneficial.
+\emph{Automatic mode switch} can be provided by a combination of \emph{Navigation Reach Set} and \emph{Avoidance Reach Set} with an elevated cost function. Overall having a method to merge multiple trees would be beneficial.
 
-\paragraph{Background:} If two \emph{Reach Set Approximation} were calculated for same \emph{Avoidance Grid} and \emph{Initial State}, using same \emph{Movement Automaton} and \emph{UAS model} are possible to merge. 
+\paragraph{Background:} If two \emph{Reach Set Approximation} were calculated for the same \emph{Avoidance Grid} and \emph{Initial State}, using same \emph{Movement Automaton} and \emph{UAS model} are possible to merge. 
 
-The \emph{Reach Set Approximation} is \emph{tree} with \emph{Root Node} in \emph{initail state} with movement buffer = $\varnothing$. The \emph{movement buffer} in each node can be used as \emph{route trace} during merging procedure. The example two reach set merge can be given as follow, where only \emph{latest} applied movement is taken into account.
+The \emph{Reach Set Approximation} is a \emph{tree} with \emph{Root Node} in \emph{initial state} with movement buffer = $\varnothing$. The \emph{movement buffer} in each node can be used as \emph{route trace} during the merging procedure. The example two reach set merge can be given as follow, where only the \emph{latest} applied movement is taken into account.
 
 \begin{equation}\label{eq:mergeTreeFunctionExample}
     \left[
@@ -66,24 +66,25 @@ The \emph{Reach Set Approximation} is \emph{tree} with \emph{Root Node} in \emph
 \noindent\emph{First Reach Set} contains two trajectories given by buffers \emph{\{left,left\}} and \emph{\{left,right\}}. \emph{Second Reach Set} contains two trajectories given by buffers \emph{\{right,left\}} and \emph{\{right,right\}}. The \emph{Combined Reach Set} contains all four trajectories.
 
 \begin{note}
-    The combined tree \cite{o1996log} does not need to have combined amount of original \emph{Reach Sets} trajectories. There can be \emph{Duplicity} which means that any bounded property like \emph{Cost} must be \emph{calculated} again.
+    The combined tree \cite{o1996log} does not need to a have combined amount of original \emph{Reach Sets} trajectories. There can be \emph{Duplicity} which means that any bounded property like \emph{Cost} must be \emph{calculated} again.
 \end{note}
 
 \paragraph{Combined Reach Set Calculation Function} (alg. \ref{alg:ReachSetMerge}) is implemented as function $Node combinedReachSet(\dots)$ which takes root Node with \emph{initial State}, \emph{Avoidance Grid} and respective parameters for each calculation method. \emph{turn-minimizing spread} for \emph{Turn-Minimizing Reach set calculation} and \emph{coverage spread}, \emph{Footprint Length} for \emph{Coverage-Maximizing Reach Set Approximation}.
 
 \emph{Separate Reach Sets} are calculated using \emph{Wave-front propagation} (alg. \ref{alg:Wavefront Propagation}) using respective \emph{Constrained Expansion} functions for \emph{Turn-Minimizing} (alg. \ref{alg:ExpansionConstraintFunctionForHarmonicReachSet}) and \emph{Coverage-Maximizing} (alg. \ref{alg:ExpansionConstraintFunctionForChaoticReachSet}) reach sets.
 
-\emph{Combined Reach Set} is created using \emph{Node mergeTree($\dots$)} function. Because different cost function or \emph{Bounded Parameters Calculation} may be applied on \emph{Original Reach Sets}.
+\emph{Combined Reach Set} is created using \emph{Node mergeTree($\dots$)} function, because different cost function or \emph{Bounded Parameters Calculation} may be applied on \emph{Original Reach Sets}.
 
 \emph{Cost} for \emph{each node} needs to be recalculated due to original reach sets disparity. Function \emph{combined.applyCostFunction()} will recalculate the new cost for each node. 
 
-The Goal is to have penalization for \emph{Chaotic behaviour}, implementation of \emph{Automatic Mode Switch} can be done like follows:
+The Goal is to have a penalization for \emph{non-turn-minimizing behavior}, implementation of \emph{Automatic Mode Switch} can be done like follows:
 \begin{enumerate}
-    \item \emph{Calculate Normal Cost} for Node $Cost(Node)$ for associated trajectory:\\ $Cost(Node.Trajectory)$.
-    \item \emph{Calculate Penalization for \emph{additional manuevering}}, calculate \emph{Smoothness Rating for Trajectory} (def. \ref{def:SmoothnessRatingForTrajectory}) in interval $[0,1]$, introduce penalization with base $100 \%$.
+    \item \emph{Calculate Normal Cost} for Node $Cost(Node)$ for the associated trajectory:\\ $Cost(Node.Trajectory)$.
+    
+    \item \emph{Calculate Penalization for \emph{additional maneuvering}}, calculate \emph{Smoothness Rating for Trajectory} (def. \ref{def:SmoothnessRatingForTrajectory}) in the interval $[0,1]$, introduce penalization with base $100 \%$.
 \end{enumerate}
 
-\noindent The final $Cost(Node)$ function is applied on each \emph{Combined Reach Set Node} and look like follows:
+\noindent The final $Cost(Node)$ function is applied to each \emph{Combined Reach Set Node} and look like follows:
 
 \begin{multline}
     Cost(Node) = Cost(Node.Trajectory) \times\dots\\\dots\times \left(1+ \left(1-SmoothnessRate(N ode.T rajectory)\right)\right)
@@ -146,7 +147,7 @@ Function is applied on \emph{root Node} iterating over \emph{Movements in Moveme
 \end{figure}
 
 
-\paragraph{Pros and Cons:} It can bee seen from example (fig. \ref{fig:combinedReachSetApproximation}) that \emph{Combined Reach Set Approximation} (alg. \ref{alg:ReachSetMerge}) contains both types of maneuvers. \emph{Cheaper turn-minimizing} for navigation and \emph{More Expensive Coverage-Maximizing} for \emph{Emergency Avoidance}. The upper limit of trajectories is given as follow:
+\paragraph{Pros and Cons:} It can be seen from example (fig. \ref{fig:combinedReachSetApproximation}) that \emph{Combined Reach Set Approximation} (alg. \ref{alg:ReachSetMerge}) contains both types of maneuvers. \emph{Cheaper turn-minimizing} for navigation and \emph{More Expensive Coverage-Maximizing} for \emph{Emergency Avoidance}. The upper limit of trajectories is given as follow:
 
 \begin{multline}
     countTrajectories(ReachSet) \le countTrajectories(CM-RSA) \\+ countTrajectories(TM-RSA)
@@ -158,6 +159,6 @@ Function is applied on \emph{root Node} iterating over \emph{Movements in Moveme
     countNodes(ReachSet) \le countNodes(CM-RSA)+ countNodes(TM-RSA)
 \end{equation}
 
-\noindent \emph{Turn-Minimizing Reach Set} is ideal for \emph{Non-controlled Airspace} missions, because it contains \emph{Automatic Mode Switch} between \emph{Navigation} and \emph{Emergency Avoidance}.
+\noindent \emph{Turn-Minimizing Reach Set} is ideal for \emph{Non-controlled Airspace} missions because it contains \emph{Automatic Mode Switch} between \emph{Navigation} and \emph{Emergency Avoidance}.
 
 
