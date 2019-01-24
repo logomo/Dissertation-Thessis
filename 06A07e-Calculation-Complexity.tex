@@ -1,6 +1,6 @@
 \newpage
-\subsection{Computation Complexity}\label{sec:MCRcomputationalComplexity}
-\paragraph{Introduction:}The \emph{Computation Complexity} one mission control run assessment is necessary to identify the strong and weak points of approach. Let us get through modules to assess notable calculations/algorithms complexity on high abstraction level.
+\subsection{Computational Complexity}\label{sec:MCRcomputationalComplexity}
+\paragraph{Introduction:}The \emph{Computational Complexity} one mission control run assessment is necessary to identify the strong and weak points of approach. Let us get through modules to assess notable calculations/algorithms complexity on high abstraction level.
 
 \paragraph{Navigation Loop:} On the navigation loop, the \emph{waypoint reach condition} (eq. \ref{eq:waypointReachCondition}) is checked, this is a unitary operation with worst complexity $\mathscr{O}(1)$. The selection process of the next \emph{Goal Waypoint} can get through all waypoints in the mission if they are all unreachable the complexity is $\mathscr{O}(|waypoints|)$.
 
@@ -20,7 +20,7 @@ Thresholding \emph{Detected Obstacles} is done by simple comparison of \emph{LiD
 
 Any loading of \emph{threats} from \emph{information sources} depends on clustering. The \emph{Airspace Clustering} is considered as static for our setup. Therefore the \emph{count of active airspace clusters} has the main impact on complexity. The \emph{count of information sources} is static and not changing over mission time. Information sources usually implement \emph{Hash search function} with complexity $\mathscr{O}\ln|searched Item Set|$.
 
-\noindent The \emph{computation complexity} boundaries for \emph{Data fusion} in  our setup are following:
+\noindent The \emph{computational complexity} boundaries for \emph{Data fusion} in  our setup are following:
 \begin{equation*}
     \begin{aligned}
         \texttt{Select Active Collision Cases: }& \mathscr{O} (|collision Cases|)\\
