@@ -15,15 +15,6 @@ To join the multiple \emph{Avoidance Grids} paths following terminology needs to
     \item \emph{Next Decision} - the point when the next \emph{Avoidance Grid Run} is applied. The outline of events and triggers is required. The \emph{decision} will be made in the \emph{next decision time} $t_{i+1}$.
 \end{enumerate}
 
-\noindent The \emph{Avoidance Grid} from \emph{UAS} viewpoint can be separated into following zones (fig. \ref{fig:gridZonesMissionControl}):
-\begin{enumerate}
-    \item \emph{Crash Area} (last layers) - there is no place for safe return and the \emph{border} of \emph{Avoidance Grid} is near. The \emph{Decision Point} needs to lie before this zone.
-    
-    \item \emph{Avoidance Area} (middle layers) - the area of \emph{Active Avoidance Maneuvering}. The \emph{Reach Set Approximation} performance (sec. \ref{s:ReachSetPerformanceCriteria}) is important in this area.
-    
-    \item \emph{Safe Zone} (first layers) - there is space for safe return or damage mitigation.
-\end{enumerate}
-
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.48\textwidth}
@@ -41,6 +32,17 @@ To join the multiple \emph{Avoidance Grids} paths following terminology needs to
     \caption{Definitions for \emph{Mission Control Run} (outer loop).}
     \label{fig:definitionsForMissionControlRun}
 \end{figure}
+
+\noindent The \emph{Avoidance Grid} from \emph{UAS} viewpoint can be separated into following zones (fig. \ref{fig:gridZonesMissionControl}):
+\begin{enumerate}
+    \item \emph{Crash Area} (last layers) - there is no place for safe return and the \emph{border} of \emph{Avoidance Grid} is near. The \emph{Decision Point} needs to lie before this zone.
+    
+    \item \emph{Avoidance Area} (middle layers) - the area of \emph{Active Avoidance Maneuvering}. The \emph{Reach Set Approximation} performance (sec. \ref{s:ReachSetPerformanceCriteria}) is important in this area.
+    
+    \item \emph{Safe Zone} (first layers) - there is space for safe return or damage mitigation.
+\end{enumerate}
+
+
 
 \noindent Joining \emph{Avoidance Grid Runs} (fig. \ref{fig:joiningMultipleAGRS})  example portrays \emph{Avoidance Grid Runs} invoked on various \emph{Decision Points} to achieve \emph{Navigation} functionality. The UAS (blue plane) is flying Mission (green numbered waypoints). The \emph{Avoidance Grid} boundary (black dashed line) for each \emph{Decision Point} (UAS position at time $t_i$). Following the example of \emph{Navigation} (fig. \ref{fig:missionControlRunActivityDiagram}) run is shown:
 
