@@ -37,23 +37,6 @@
     Vertical Constraint = \left [ start Altitude, end Altitude \right ]
 \end{equation}
 
-\paragraph{Additional parameters}: Following additional parameters with additional purpose can be attached to \emph{Weather Constraint}.
-\begin{enumerate}
-    \item \emph{Type} - defines required resistance - moisture, temperature, wind.
-    
-    \item \emph{Severity} - defines the impact for each \emph{aircraft category}, this is used in soft/hard type assessment. 
-    
-    \item \emph{Duration} - start and end of \emph{constraint} validity, if not defined valid for all \emph{UAS mission time}.
-    
-    \item \emph{Velocity} - velocity and last position assessment time.
-\end{enumerate}
-
-\begin{note}
-    Our implementation does not consider the \emph{type} or \emph{severity}. All \emph{weather impact} is considered as a \emph{hard constraint}. The velocity differentiates \emph{static} ($=0$)/\emph{moving} ($>0$) \emph{constraints}. 
-\end{note}
-
-\paragraph{Avoidance System:} Resolve similar to \emph{Converging/Overtake Maneuver} depending on the \emph{angle of approach}. The \emph{virtual roundabout} is utilized for \emph{static constraints}; the \emph{intruder model} is utilized for \emph{dynamic constraints}.
-
 \begin{tabularx}{\textwidth}{S{0.25}|X}
      \multicolumn{2}{c}{\textbf{Constrained area}}\\\hline
      center position & is given as a geometrical \emph{center point of the boundary}.  \\
@@ -73,3 +56,20 @@
     \caption{Static/Dynamic weather constraint for given decision time-frame.}
     \label{tab:weatherConstraint} 
 \end{tabularx}
+
+\paragraph{Additional parameters}: Following additional parameters with additional purpose can be attached to \emph{Weather Constraint}.
+\begin{enumerate}
+    \item \emph{Type} - defines required resistance - moisture, temperature, wind.
+    
+    \item \emph{Severity} - defines the impact for each \emph{aircraft category}, this is used in soft/hard type assessment. 
+    
+    \item \emph{Duration} - start and end of \emph{constraint} validity, if not defined valid for all \emph{UAS mission time}.
+    
+    \item \emph{Velocity} - velocity and last position assessment time.
+\end{enumerate}
+
+\begin{note}
+    Our implementation does not consider the \emph{type} or \emph{severity}. All \emph{weather impact} is considered as a \emph{hard constraint}. The velocity differentiates \emph{static} ($=0$)/\emph{moving} ($>0$) \emph{constraints}. 
+\end{note}
+
+\paragraph{Avoidance System:} Resolve similar to \emph{Converging/Overtake Maneuver} depending on the \emph{angle of approach}. The \emph{virtual roundabout} is utilized for \emph{static constraints}; the \emph{intruder model} is utilized for \emph{dynamic constraints}.

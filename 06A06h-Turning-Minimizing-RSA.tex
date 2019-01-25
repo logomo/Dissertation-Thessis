@@ -1,3 +1,4 @@
+\newpage
 \subsection{Turn-Minimizing Reach Set Approximation}\label{s:harmonicReachSet}
 
 \paragraph{Summary:} This procedure will produce trajectories minimizing aggressive maneuvering, ideal for navigation tasks.
@@ -27,13 +28,6 @@ The \emph{Avoidance Grid} (fig. \ref{fig:LidarSpaceSegmentation}) cell centers f
 \begin{note}
     \emph{Cell center} can be closely reached by \emph{smooth movement} from a previous cell or \emph{chaotic movement} from a neighboring cell from the current or previous layer. These trajectories are usually equivalent in \emph{Smoothness}.
 \end{note}
-
-\paragraph{Tuning Parameter:} \emph{Proximity to Cell Center} gives a good chance to keep trajectory smooth or \emph{smooth after one correction maneuver}. It has been mentioned that \emph{Cell Center} can be reached by various trajectories. In this method full footprint length is always considered; therefore only one tuning parameter can be offered:
-\begin{enumerate}
-    \item \emph{Spread Limit} - the upper limit of candidates which are going to be selected for further expansion, minimal value 1, default value \emph{Count of unique Moves in Movement set}, the maximal value $\infty$. If maximal value $\infty$ is selected, the algorithm will generate the skeleton of \emph{Reach Set} with full Coverage and with the smoothest \emph{Trajectories}.
-\end{enumerate}
-
-\paragraph{Step: Initialization} sets candidate \emph{Nodes} as empty set, leftover \emph{Nodes} as empty set. and selects all \emph{Nodes} from \emph{Stack} which represents  \emph{Finishing Trajectories} in working cell $cell_{i,j,k}$.
 
 \begin{algorithm}[H]
 \SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}\SetKwInOut{TuningParameters}{Tuning Parameters}
@@ -73,6 +67,14 @@ The \emph{Avoidance Grid} (fig. \ref{fig:LidarSpaceSegmentation}) cell centers f
     \caption{Expansion Constraint function for \emph{Turn-Minimizing Reach Set Approximation}}
     \label{alg:ExpansionConstraintFunctionForHarmonicReachSet}    
 \end{algorithm}
+
+
+\paragraph{Tuning Parameter:} \emph{Proximity to Cell Center} gives a good chance to keep trajectory smooth or \emph{smooth after one correction maneuver}. It has been mentioned that \emph{Cell Center} can be reached by various trajectories. In this method full footprint length is always considered; therefore only one tuning parameter can be offered:
+\begin{enumerate}
+    \item \emph{Spread Limit} - the upper limit of candidates which are going to be selected for further expansion, minimal value 1, default value \emph{Count of unique Moves in Movement set}, the maximal value $\infty$. If maximal value $\infty$ is selected, the algorithm will generate the skeleton of \emph{Reach Set} with full Coverage and with the smoothest \emph{Trajectories}.
+\end{enumerate}
+
+\paragraph{Step: Initialization} sets candidate \emph{Nodes} as empty set, leftover \emph{Nodes} as empty set. and selects all \emph{Nodes} from \emph{Stack} which represents  \emph{Finishing Trajectories} in working cell $cell_{i,j,k}$.
 
 \paragraph{Step: Evaluate smoothest trajectories with unique Footprints} is implemented as \emph{multi-criteria filtration}. 
 

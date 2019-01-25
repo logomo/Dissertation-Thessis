@@ -18,6 +18,16 @@ The parameter values are useless due to the UAS scaling factor; the following pa
     \item \emph{Safety margin} - during avoidance all aircraft keeps mutual distance at least the value of safety margin.
 \end{enumerate}
 
+\paragraph{Triggering Events:} The \emph{head-on approach} (fig. \ref{fig:HeadOnApproachTheoretical}) \emph{triggering events} are the following:
+\begin{enumerate}
+    \item \emph{Detection} (fig. \ref{fig:HeadOnApproachTheoreticalDetection}) - the \emph{collision case} is open when \emph{collision point} with the respective angle of approach is detected. This must happen until the \emph{point of no return} is achieved. 
+    
+    \item \emph{Resolution} (fig. \ref{fig:HeadOnApproachTheoreticalResolution}) - the \emph{virtual} roundabout is enforced until the closing condition is met. 
+    
+    \item \emph{Closing} (fig. \ref{fig:HeadOnApproachTheoreticalResolution}) - based on the condition that all vehicles are heading away from \emph{collision point} and their mutual heading is neutral or opposite.
+\end{enumerate} 
+
+
 \begin{figure}[H]
 	\centering
     \begin{subfigure}{0.45\textwidth}
@@ -35,15 +45,6 @@ The parameter values are useless due to the UAS scaling factor; the following pa
     \caption{Head-on approach detection/resolution/Closing}
     \label{fig:HeadOnApproachTheoretical}
 \end{figure}
-
-\paragraph{Triggering Events:} The \emph{head-on approach} (fig. \ref{fig:HeadOnApproachTheoretical}) \emph{triggering events} are the following:
-\begin{enumerate}
-    \item \emph{Detection} (fig. \ref{fig:HeadOnApproachTheoreticalDetection}) - the \emph{collision case} is open when \emph{collision point} with the respective angle of approach is detected. This must happen until the \emph{point of no return} is achieved. 
-    
-    \item \emph{Resolution} (fig. \ref{fig:HeadOnApproachTheoreticalResolution}) - the \emph{virtual} roundabout is enforced until the closing condition is met. 
-    
-    \item \emph{Closing} (fig. \ref{fig:HeadOnApproachTheoreticalResolution}) - based on the condition that all vehicles are heading away from \emph{collision point} and their mutual heading is neutral or opposite.
-\end{enumerate} 
 
 \paragraph{Virtual roundabout:} The \emph{flight levels} can be abstracted as the  \emph{virtual 2D surface}. The \emph{airspace attendants} are moving on virtual routes which can cross each other. The idea is to create virtual roundabout with enforced velocity to enable smooth collision avoidance.
 
@@ -145,6 +146,22 @@ The \emph{wake turbulence} is represented as a droplet at the back of the plane.
     This rule is applied only when both aircraft have the same maneuverability class \cite{icaoAnnex2}. The overtake is considered \emph{borderline emergency maneuver} in controlled airspace because the aircraft tend to keep similar velocity in similar cruising altitude. The overtake is usual in \emph{non-controlled airspace}.
 \end{note}
 
+\paragraph{IFR:} The \emph{Instrument Fight Rules} in annex 2. \cite{icaoAnnex2} and 11. \cite{icaoAnnex11} are defining the converging manual in detail:
+
+\begin{enumerate}
+    \item 0$^\circ \le$ the \emph{Angle of Approach} $<$ 130$^\circ$ - the minimal planar angle between aircraft position and expected collision point is in the interval $[0^\circ,70^\circ[$
+    
+    \item \emph{Minimal Detection Range} - given as $2 \times  reaction Time \times speed Difference$. 
+    
+    \item \emph{Safety Margin} - during avoidance the overtaking aircraft keeps the minimal distance of \emph{wake turbulence} of overtaken aircraft in own flight altitude. 
+\end{enumerate}
+
+\begin{note}
+    The \emph{Safety Margin} is sufficiently small because speed difference is usually much lesser than in case of  \emph{Head-on approach}. The \emph{Wake turbulence} can be avoided completely by taking the higher altitude level than overtaken aircraft.
+\end{note}
+
+
+
 \begin{figure}[H]
 	\centering
     \begin{subfigure}{0.32\textwidth}
@@ -165,20 +182,6 @@ The \emph{wake turbulence} is represented as a droplet at the back of the plane.
     \caption{Overtake maneuver Detection/Resolution/Closing}
     \label{fig:OvertakeManeuverTheoretical}
 \end{figure}
-
-\paragraph{IFR:} The \emph{Instrument Fight Rules} in annex 2. \cite{icaoAnnex2} and 11. \cite{icaoAnnex11} are defining the converging manual in detail:
-
-\begin{enumerate}
-    \item 0$^\circ \le$ the \emph{Angle of Approach} $<$ 130$^\circ$ - the minimal planar angle between aircraft position and expected collision point is in the interval $[0^\circ,70^\circ[$
-    
-    \item \emph{Minimal Detection Range} - given as $2 \times  reaction Time \times speed Difference$. 
-    
-    \item \emph{Safety Margin} - during avoidance the overtaking aircraft keeps the minimal distance of \emph{wake turbulence} of overtaken aircraft in own flight altitude. 
-\end{enumerate}
-
-\begin{note}
-    The \emph{Safety Margin} is sufficiently small because speed difference is usually much lesser than in case of  \emph{Head-on approach}. The \emph{Wake turbulence} can be avoided completely by taking the higher altitude level than overtaken aircraft.
-\end{note}
 
 
 \paragraph{Triggering events:}
