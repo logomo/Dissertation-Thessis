@@ -137,7 +137,7 @@
 
 \paragraph{Highlights:} Each \emph{scenario} contains the reference to notable simulation moments and results. The scenarios were grouped according to the \emph{Operational Space} category, and each category is separated by strike line.
 
-\noindent\emph{Non-cooperative test cases for the Rural/Urban environment:}
+\newpage\noindent\emph{Non-cooperative test cases for the Rural/Urban environment:}
 \begin{enumerate}
     \item\emph{Static obstacle avoidance} (Building/Slalom/Maze) - the buildings were correctly avoided without security breach; navigation algorithm was sufficient for given scenarios and obstacle density.
     
@@ -172,7 +172,7 @@
 
 One of the \emph{assumptions} was that there are only intruders who do not actively look to harm our \emph{UAS}. Breaking this assumption can be lethal for our system and also for other systems. 
 
-Let us take \emph{Rule-based Head on} test case (sec. \ref{s:testRuleHeadOn}), changing only following aspects:
+\newpage\noindent Let us take \emph{Rule-based Head on} test case (sec. \ref{s:testRuleHeadOn}), changing only following aspects:
 \begin{enumerate}
 	\item \emph{UAS 2 position spoofing} - the adversarial vehicle is \emph{faking its position} according to expected behavior.
 	\item \emph{UAS 2 Navigation goal} - set as \emph{UAS 1 position} from intercepted \emph{position notifications} (tab. \ref{tab:positionNotification}).
@@ -181,33 +181,6 @@ Let us take \emph{Rule-based Head on} test case (sec. \ref{s:testRuleHeadOn}), c
 
 \paragraph{Simulation:} The \emph{simulation} (fig. \ref{fig:adversarialAttackNotableMoments}) have been run with defined condition. UAS 2 (magenta) has been chosen as the \emph{adversary}. UTM sees the expected trajectory of UAS 2 (grey plane/trajectory) based on spoofed \emph{position notifications}. The \emph{navigation/avoidance grid} range (black dashed line boundary) is shown. The notable moment of the simulation are: 
 
-\begin{enumerate}
-    \item \emph{Deviation detection ($UAS2\leftrightarrow UTM$)} (fig. \ref{fig:adversaryDetectedDeviation}) - the \emph{collision case} (tab. \ref{tab:collisionCasesRuleBasedHeadon}) is active and \emph{enforced} by UTM. The \emph{adversary} UAS 2 (magenta) starts deviating from expected trajectory (grey). UAS 1 (blue) does not register any foreign object in \emph{avoidance grid range} (black dashed line). 
-    
-    \item \emph{Adversary attacking ($UAS 2 \to UAS 1$)} (fig. \ref{fig:adversaryAttacking}) - the adversary UAS 2 (magenta) starts actively pursuing UAS 1 (blue) by changing the original heading. This can be considered as the beginning of \emph{active pursuit}. UAS 1 (blue) does not detect any foreign object in \emph{avoidance grid} (black dashed line boundary). \emph{UTM} is receiving expected UAS position (grey plane/line).
-    
-    \item \emph{Emergency avoidance} ($UAS 1 \to UAS 2$) (fig. \ref{fig:adversaryEmergencyAvoidance}) following happens:
-    \begin{enumerate}[a.]
-        \item \emph{Adversary UAS 2} (magenta) is spotted by \emph{UAS 1}(blue), it entered into UAS 1 avoidance grid (black dashed line boundary).
-        
-        \item \emph{UAS 1} (blue) enters into \emph{Emergency Avoidance Mode} because there is a \emph{foreign object} in \emph{avoidance grid}.
-        
-        \item \emph{UTM} notices a warning to \emph{UAS 1} (blue) because it entered into \emph{Emergency Avoidance Mode}. UTM is not aware of any breach, because of expected UAS 2 position (grey plane/line)
-        
-        \item \emph{Adversary UAS 2} (magenta) has UAS 1 (blue) locked in \emph{navigation grid} as thegoal (which guarantees optimal pursuit).
-    \end{enumerate}
-    
-    \item \emph{Blind spot ($\circlearrowright UAS 1$)} (fig. \ref{fig:adversaryBlindSpot}) following happens:
-    \begin{enumerate}[a.]
-        \item \emph{UAS 1} (blue) returns to \emph{Navigation Mode} because there is no \emph{foreign object} in \emph{avoidance grid} (black dashed line boundary).
-        
-        \item \emph{UTM} receives the mode change, and it starts enforcing \emph{resolutions} for \emph{collision case}, Adversary \emph{UAS 2} is considered clear due to \emph{expected position} (grey plane/line) compliance with the resolution.
-        
-        \item \emph{Adversary UAS 2} (magenta) is on UAS 1 blind spot. The target UAS 1 (blue) is locked in the UAS 2 navigation grid (black dashed line boundary).
-    \end{enumerate}
-    
-    \item \emph{Collision detail ($UAS1\leftrightarrow UAS2$)}(fig. \ref{fig:adversaryCollisionDetail}) - Target \emph{UAS 1} (blue) is hit by \emph{Adversary UAS 2} (magenta) on left wing tip. Both UAS are going down. UTM will detect sudden loss of both UAS systems. 
-\end{enumerate}
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.48\textwidth}
@@ -245,6 +218,34 @@ Let us take \emph{Rule-based Head on} test case (sec. \ref{s:testRuleHeadOn}), c
     \caption{Adversarial behaviour of \emph{UAS 2} (magenta) to compliant \emph{UAS 1} (blue)}
     \label{fig:adversarialAttackNotableMoments}
 \end{figure}
+
+\begin{enumerate}
+    \item \emph{Deviation detection ($UAS2\leftrightarrow UTM$)} (fig. \ref{fig:adversaryDetectedDeviation}) - the \emph{collision case} (tab. \ref{tab:collisionCasesRuleBasedHeadon}) is active and \emph{enforced} by UTM. The \emph{adversary} UAS 2 (magenta) starts deviating from expected trajectory (grey). UAS 1 (blue) does not register any foreign object in \emph{avoidance grid range} (black dashed line). 
+    
+    \item \emph{Adversary attacking ($UAS 2 \to UAS 1$)} (fig. \ref{fig:adversaryAttacking}) - the adversary UAS 2 (magenta) starts actively pursuing UAS 1 (blue) by changing the original heading. This can be considered as the beginning of \emph{active pursuit}. UAS 1 (blue) does not detect any foreign object in \emph{avoidance grid} (black dashed line boundary). \emph{UTM} is receiving expected UAS position (grey plane/line).
+    
+    \item \emph{Emergency avoidance} ($UAS 1 \to UAS 2$) (fig. \ref{fig:adversaryEmergencyAvoidance}) following happens:
+    \begin{enumerate}[a.]
+        \item \emph{Adversary UAS 2} (magenta) is spotted by \emph{UAS 1}(blue), it entered into UAS 1 avoidance grid (black dashed line boundary).
+        
+        \item \emph{UAS 1} (blue) enters into \emph{Emergency Avoidance Mode} because there is a \emph{foreign object} in \emph{avoidance grid}.
+        
+        \item \emph{UTM} notices a warning to \emph{UAS 1} (blue) because it entered into \emph{Emergency Avoidance Mode}. UTM is not aware of any breach, because of expected UAS 2 position (grey plane/line)
+        
+        \item \emph{Adversary UAS 2} (magenta) has UAS 1 (blue) locked in \emph{navigation grid} as thegoal (which guarantees optimal pursuit).
+    \end{enumerate}
+    
+    \item \emph{Blind spot ($\circlearrowright UAS 1$)} (fig. \ref{fig:adversaryBlindSpot}) following happens:
+    \begin{enumerate}[a.]
+        \item \emph{UAS 1} (blue) returns to \emph{Navigation Mode} because there is no \emph{foreign object} in \emph{avoidance grid} (black dashed line boundary).
+        
+        \item \emph{UTM} receives the mode change, and it starts enforcing \emph{resolutions} for \emph{collision case}, Adversary \emph{UAS 2} is considered clear due to \emph{expected position} (grey plane/line) compliance with the resolution.
+        
+        \item \emph{Adversary UAS 2} (magenta) is on UAS 1 blind spot. The target UAS 1 (blue) is locked in the UAS 2 navigation grid (black dashed line boundary).
+    \end{enumerate}
+    
+    \item \emph{Collision detail ($UAS1\leftrightarrow UAS2$)}(fig. \ref{fig:adversaryCollisionDetail}) - Target \emph{UAS 1} (blue) is hit by \emph{Adversary UAS 2} (magenta) on left wing tip. Both UAS are going down. UTM will detect sudden loss of both UAS systems. 
+\end{enumerate}
 
 \paragraph{Performance Parameters Evaluation:} Performance parameters (y-axis) are tracked over \emph{UTM time} (x-axis). The evolution of \emph{performance} (fig. \ref{fig:adversaryDistanceToSafetyMargins}) is tracking following parameters:
 
@@ -292,6 +293,7 @@ Let us take \emph{Rule-based Head on} test case (sec. \ref{s:testRuleHeadOn}), c
     \end{enumerate}
 \end{note}
 
+\newpage
 \subsection{Computation Footprint}\label{s:ComputaitonFootprint}
 
 \noindent The \emph{computation footprint} is summarized in computation  load (tab. \ref{tab:computationLoadStatistics}). The \emph{computation load} (eq. \ref{eq:computationLoad}) was calculated for each \emph{time-frame} in scenarios. There is the summary of \emph{minimal, maximal, average} and \emph{median} values.
