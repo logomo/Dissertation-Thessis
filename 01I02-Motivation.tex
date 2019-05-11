@@ -28,12 +28,6 @@ The \emph{increase} of \emph{traffic density} increases the \emph{accident proba
 
 \paragraph{Detect \& Avoid:} The other approach is bottom-up, that means the development of basic, adaptable functionality to cover complex navigation/avoidance tasks in \emph{controlled airspace}. The intuitive definition of \emph{Detect \& Avoid} (DAA) functionality is given in (fig. \ref{fig:detectAdnAvoidIntroduction}).
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{\FIGDIR/I003DetectAndAvoid}
-    \caption{\emph{Detect \& Avoid} (DAA) principle \cite{jenie2014velocity}.}
-    \label{fig:detectAdnAvoidIntroduction}
-\end{figure}
 
 \noindent The DAA can be applied in the short term (avoidance) and long term (navigation) tasks. It consists of three continuously repeating major steps:
 \begin{enumerate}
@@ -43,6 +37,14 @@ The \emph{increase} of \emph{traffic density} increases the \emph{accident proba
     
     \item \emph{Avoid} - execution of selected control strategy while checking possible changing events.
 \end{enumerate}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{\FIGDIR/I003DetectAndAvoid}
+    \caption{\emph{Detect \& Avoid} (DAA) principle \cite{jenie2014velocity}.}
+    \label{fig:detectAdnAvoidIntroduction}
+\end{figure}
 
 The \emph{short term avoidance} (sec. \ref{s:aviudabceGridRun}) can be chained into \emph{long term navigation} (sec. \ref{s:missionControlRun}). This long term navigation can be used to solve \emph{UTM/ATM} imposed constraints, under assumption that there is sufficient \emph{data fusion} (sec. \ref{s:sensorFusion}).
 
