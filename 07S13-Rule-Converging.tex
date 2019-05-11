@@ -24,7 +24,7 @@
 \end{enumerate}
 
 
-\noindent\emph{Mission parameters} for both UAS systems are defined in (tab. \ref{tab:missionSetupRuleBasedConvergingScenario}).
+\newpage\noindent\emph{Mission parameters} for both UAS systems are defined in (tab. \ref{tab:missionSetupRuleBasedConvergingScenario}).
 
 \begin{table}[H]
     \centering
@@ -73,8 +73,8 @@ There is \emph{UTM} service for given \emph{airspace cluster} calculating \emph{
 
 \paragraph{Simulation Run:} Notable moments from the \emph{simulation run} (fig. \ref{fig:testCaseRuleBasedConverging}) are the following:
 
-\begin{enumerate}
-    \item \emph{Collision Case creation} (fig. \ref{fig:ruleBasedConvergingCollisionCaseCreation}) following events happens in this step:
+\begin{itemize}
+    \item[1.] \emph{Collision Case creation} (fig. \ref{fig:ruleBasedConvergingCollisionCaseCreation}) following events happens in this step:
     \begin{enumerate}[a.]
         \item Two \emph{UAS} are approaching  \emph{airway intersection}: UAS 1 (blue) from left and UAS 2 (cyan) from the bottom.
         
@@ -91,14 +91,6 @@ There is \emph{UTM} service for given \emph{airspace cluster} calculating \emph{
         \item UAS 2 (cyan) stays on claimed course and if its necessary adjust its speed.
         
     \end{enumerate}
-    
-    \item \emph{Well clear before} (fig. \ref{fig:ruleBasedConvergingWellClearBefore}) UAS 1 (blue) check the \emph{Collision Point} distance and keeps safe distance given by safety margin. UAS 2 (cyan) checks if there is no intruder in \emph{Avoidance Grid} and if not, stays in \emph{Navigation Mode}.
-    
-    \item \emph{Well clear after} (fig. \ref{fig:ruleBasedConvergingWellClearAfter}) UAS 2 (cyan) is \emph{after Collision Point}, it can start negotiations of new speed and heading with UTM. UAS 1 (blue) is still enforced to follow \emph{Converging Maneuver} directive until the outer boundary of \emph{Collision Zone} is reached.
-    
-    \item \emph{Waypoints reach} (fig. \ref{fig:ruleBasedConvergingWaypointsReach})  UAS 1 (blue) leaves the outer boundary of the \emph{Collision zone}. Leaving \emph{Converging Maneuver Directive}. UTM closes \emph{Collision Case}.
-\end{enumerate}
-
 
 \begin{figure}[H]
     \centering
@@ -130,7 +122,13 @@ There is \emph{UTM} service for given \emph{airspace cluster} calculating \emph{
     \caption{Test scenario for \emph{Rule-based converging}. }
     \label{fig:testCaseRuleBasedConverging}
 \end{figure}
-
+    
+    \item[2.] \emph{Well clear before} (fig. \ref{fig:ruleBasedConvergingWellClearBefore}) UAS 1 (blue) check the \emph{Collision Point} distance and keeps safe distance given by safety margin. UAS 2 (cyan) checks if there is no intruder in \emph{Avoidance Grid} and if not, stays in \emph{Navigation Mode}.
+    
+    \item[3.] \emph{Well clear after} (fig. \ref{fig:ruleBasedConvergingWellClearAfter}) UAS 2 (cyan) is \emph{after Collision Point}, it can start negotiations of new speed and heading with UTM. UAS 1 (blue) is still enforced to follow \emph{Converging Maneuver} directive until the outer boundary of \emph{Collision Zone} is reached.
+    
+    \item[4.] \emph{Waypoints reach} (fig. \ref{fig:ruleBasedConvergingWaypointsReach})  UAS 1 (blue) leaves the outer boundary of the \emph{Collision zone}. Leaving \emph{Converging Maneuver Directive}. UTM closes \emph{Collision Case}.
+\end{itemize}
 
 \paragraph{Collision Case Calculation:} For test scenario in (fig. \ref{fig:testCaseRuleBasedConverging}) where UAS 1 (blue) is converging to avoid UAS 2 (cyan) the \emph{Collision Case} (tab. \ref{tab:collisionCasesRuleBasedConverging}) have been calculated. 
 
