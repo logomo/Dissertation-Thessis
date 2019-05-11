@@ -475,6 +475,40 @@ The \emph{first condition} (\ref{eq:ruleTrajectoryPositionCondition}) says that 
 
 \noindent The \emph{second condition} (\ref{eq:ruleTrajectoryDecisionHeading}) needs to be applied for each \emph{decision point} when \emph{trajectory} can be re-planned. It must be ensured that in time of reaching \emph{decision point} vehicle is not heading into \emph{left subspace} with given \emph{turning time horizon}. The \emph{minimal information} contains a heading (velocity) vector. Checking if linear projection from \emph{position} point with \emph{heading} in given time-frame $[0,horizon]$ is sufficient.
 
+\noindent The rule for a right plane heading check is summarized in (tab. \ref{tab:ruleRightPlaneHeading}).   
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline\multicolumn{3}{|X|}{
+    \begin{minipage} [t] {0.95\textwidth} 
+        \emph{Invocation:} Invoked by other \emph{maneuver rules}.\\\\
+        \emph{Objective:} Disable all \emph{trajectories} in \emph{Navigation grid`s reach set} which are:
+        \begin{enumerate}
+            \item \emph{Heading into collision zone}
+            \item \emph{Leading into collision zone}
+        \end{enumerate}
+        \rule{0pt}{0pt}
+    \end{minipage}}\\
+\hline%\multicolumn{3}{X|}{Context & Condition & Application}\\
+\hline
+    \emph{Context} & \emph{Condition} & \emph{Application}\\
+\hline
+    \begin{minipage} [t] {0.3\textwidth}
+        UAS Navigation Grid,\\
+        Collision point (LOC)
+        \vspace{2mm}
+    \end{minipage}&
+    \begin{minipage} [t] {0.3\textwidth}
+        There are feasible trajectories in Navigation Grid.
+        \vspace{2mm}
+    \end{minipage}&
+    \begin{minipage} [t] {0.3\textwidth}
+        Disable trajectories in Navigation Grid.
+        \vspace{2mm}
+    \end{minipage}\\
+\hline
+        \caption{Right plane heading rule definition.}
+\label{tab:ruleRightPlaneHeading}
+\end{tabularx}  
+
 \begin{equation}\label{eq:ruleTrajectoryDecisionHeading}
     \forall t\in[0,horizon],\quad \left(position + velocity*t\right) \in rightSubspace
 \end{equation}
@@ -523,41 +557,6 @@ The \emph{first condition} (\ref{eq:ruleTrajectoryPositionCondition}) says that 
 \end{figure}
 
 \noindent Figure \ref{fig:ruleRightPlaneHeadingGeneral}. shows \emph{enabled} (green line) and \emph{disabled} (red lines) \emph{trajectories} (left sub-figure). These trajectories are divided according to the \emph{separation line} (magenta dashed line), given by \emph{vehicle position} and \emph{collision point} (magenta circle). \emph{Space segmentation} (right subfigure) show \emph{reachable} (green fill) \emph{unreachable} (red fill) space. The situation is shown for various \emph{collision point angles of approach} $\alpha$.
-
-
-\noindent The rule for a right plane heading check is summarized in (tab. \ref{tab:ruleRightPlaneHeading}).   
-\begin{tabularx}{\textwidth}{|X|X|X|}
-\hline\multicolumn{3}{|X|}{
-    \begin{minipage} [t] {0.95\textwidth} 
-        \emph{Invocation:} Invoked by other \emph{maneuver rules}.\\\\
-        \emph{Objective:} Disable all \emph{trajectories} in \emph{Navigation grid`s reach set} which are:
-        \begin{enumerate}
-            \item \emph{Heading into collision zone}
-            \item \emph{Leading into collision zone}
-        \end{enumerate}
-        \rule{0pt}{0pt}
-    \end{minipage}}\\
-\hline%\multicolumn{3}{X|}{Context & Condition & Application}\\
-\hline
-    \emph{Context} & \emph{Condition} & \emph{Application}\\
-\hline
-    \begin{minipage} [t] {0.3\textwidth}
-        UAS Navigation Grid,\\
-        Collision point (LOC)
-        \vspace{2mm}
-    \end{minipage}&
-    \begin{minipage} [t] {0.3\textwidth}
-        There are feasible trajectories in Navigation Grid.
-        \vspace{2mm}
-    \end{minipage}&
-    \begin{minipage} [t] {0.3\textwidth}
-        Disable trajectories in Navigation Grid.
-        \vspace{2mm}
-    \end{minipage}\\
-\hline
-        \caption{Right plane heading rule definition.}
-\label{tab:ruleRightPlaneHeading}
-\end{tabularx}     
 
 \section{Rule: Enforce Safety Margin}\label{sec:ruleEnforceSafetyMargin}
 \noindent Rule \ref{tab:ruleRightPlaneHeading}. checks right plane heading for a single mass point along \emph{trajectories}. The rule needs to account \emph{body mass} of \emph{intruder} and UAS, other factors like safe distance, regulations, etc. All mentioned factors are included in the \emph{safety margin}. The \emph{safety margin} is applied as \emph{radius ball} around \emph{collision point}. 
@@ -632,7 +631,6 @@ The \emph{first condition} (\ref{eq:ruleTrajectoryPositionCondition}) says that 
 
 \noindent Figure \ref{fig:ruleEnforceSafetyMarginGeneral}. shows \emph{enabled} (green line) and \emph{disabled} (red lines) \emph{trajectories} (left sub-figure). These trajectories are divided according to the \emph{separation line} (magenta dashed line), given by \emph{vehicle position} and \emph{collision point} (magenta circle). More trajectories are disabled due to \emph{safety  margin} (teal dashed line) around the  \emph{collision point}. \emph{Space segmentation} (right subfigure) show \emph{reachable} (green fill) \emph{unreachable} (red fill) space. The situation is shown for various \emph{collision point angles of approach} $\alpha$.
 
-\newpage
 The rule for safety margin check is summarized in (tab. \ref{tab:ruleEnforceSafetyMargin}).   
 
 \begin{tabularx}{\textwidth}{|X|X|X|}

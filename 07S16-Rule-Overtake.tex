@@ -61,38 +61,38 @@
     
     \paragraph{Simulation Run:} Notable moments from the \emph{simulation run} (fig. \ref{fig:testCaseRuleBasedOvertake2xSpeed}) are the following:
     
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{0.75\textwidth}
+    \begin{figure}[H]
         \centering
-        \includegraphics[width=0.9\linewidth]{\FIGDIR/NS055UtmCooperativeHeadOn00008}
-        \caption{Collision case creation.}
-        \label{fig:ruleBasedHeadOnSituationCollisionCaseCreation}
-    \end{subfigure}
-    \\
-    \begin{subfigure}{0.75\textwidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{\FIGDIR/NS056UtmCooperativeHeadOn00018} 
-        \caption{Well clear before.}
-        \label{fig:ruleBasedHeadOnWellClearBefore}
-    \end{subfigure}
-    \\
-    \begin{subfigure}{0.75\textwidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{\FIGDIR/NS057UtmCooperativeHeadOn00023} 
-        \caption{Well clear after.}
-        \label{fig:ruleBasedHeadOnWellClearAfter}
-    \end{subfigure}
-    \\
-    \begin{subfigure}{0.75\textwidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{\FIGDIR/NS058UtmCooperativeHeadOn00038} 
-        \caption{Waypoints reach.}
-        \label{fig:ruleBasedHeadOnWaypointsReach}
-    \end{subfigure}
-    \caption{Test scenario for the \emph{rule-based head-on approach} (virtual roundabout). }
-    \label{fig:testCaseRuleBasedHeadOnApproach}
-\end{figure}
+        \begin{subfigure}{0.75\textwidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{\FIGDIR/NS071UtmCooperativeOvertake2xSpeed00002}
+            \caption{Collision case creation.}
+            \label{fig:ruleBasedOvertake2xCollisionCaseCreation}
+        \end{subfigure}
+        \\
+        \begin{subfigure}{0.75\textwidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{\FIGDIR/NS072UtmCooperativeOvertake2xSpeed00022} 
+            \caption{Divergence waypoint reach.}
+            \label{fig:ruleBasedOvertake2xDivergenceWaypointReach}
+        \end{subfigure}
+        \\
+        \begin{subfigure}{0.75\textwidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{\FIGDIR/NS073UtmCooperativeOvertake2xSpeed00052} 
+            \caption{Convergence waypoint reach.}
+            \label{fig:ruleBasedOvertake2xConvergenceWaypointReach}
+        \end{subfigure}
+        \\
+        \begin{subfigure}{0.75\textwidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{\FIGDIR/NS074UtmCooperativeOvertake2xSpeed00073} 
+            \caption{Original waypoint reach.}
+            \label{fig:ruleBasedOvertake2xOriginalWaypointReach}
+        \end{subfigure}
+        \caption{Test scenario for \emph{rule-based Overtake} (double speed of overtaking aircraft). }
+        \label{fig:testCaseRuleBasedOvertake2xSpeed}
+    \end{figure}
 
     \begin{enumerate}
         \item \emph{Collision case creation} (fig.\ref{fig:ruleBasedOvertake2xCollisionCaseCreation}) - \emph{Faster UAS} (blue) receives \emph{UTM Directive} to invoke \emph{Overtake Rule} (tab. \ref{tab:ruleOvertakeDefinition}). \emph{Slower UAS} (magenta) receives \emph{UTM Directive} to keep \emph{Right of the Way} and warning that is going to be \emph{Overtaken}. \emph{Faster UAS} (blue) creates two \emph{virtual waypoints}:
