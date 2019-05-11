@@ -94,6 +94,12 @@
 \DeclareFontFamily{OT1}{pzc}{}
 \DeclareFontShape{OT1}{pzc}{m}{it}{<-> s * [0.900] pzcmi7t}{}
 \DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+%Titles need to be 14 pt => Large in \normaltext 11pt
+\usepackage{titlesec}
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\Large\bfseries}
+%Titles need to be 14 pt => Large in \normaltext 11pt
 \usepackage{amsthm}      
 \usepackage[ruled,algochapter]{algorithm2e}
 \usepackage{algorithmic}
@@ -115,7 +121,11 @@
 \usepackage[nottoc,notlof,notlot]{tocbibind}
 \usepackage{url}
 \usepackage{tabularx}
-\usepackage{subcaption}
+%use font size for captions like 8pt -> normalisize 11pt, scriptsize->8pt
+\usepackage[font={scriptsize}]{caption}
+\usepackage[font={scriptsize}]{subcaption}
+\captionsetup{font=scriptsize}
+
 \usepackage[unicode]{hyperref}
 \usepackage{xcolor}
 
@@ -482,7 +492,17 @@
 	\input{08C04-Approach-Reusability}
 	\input{08C05-Lessons-Learned}
 	\input{08C06-Future-Work}
-	
+
+
+%% This adds a line for the Bibliography in the Table of Contents.
+%\addcontentsline{toc}{chapter}{Bibliography}
+%% *** Set the bibliography style. ***
+%% (change according to your preference/requirements)
+%\bibliographystyle{plain}
+%% *** Set the bibliography file. ***
+%% ("thesis.bib" by default; change as needed)
+\bibliography{thesis}
+
 %09-Apendixes
 	%\input{09AP00-AppendixTemplate}
 	% Complements of algebra 
@@ -524,14 +544,7 @@
 	\input{09AP04-GridScaling}
 		\input{06A07c-Safety-Margin-Calculation} 
 		
-%% This adds a line for the Bibliography in the Table of Contents.
-%\addcontentsline{toc}{chapter}{Bibliography}
-%% *** Set the bibliography style. ***
-%% (change according to your preference/requirements)
-%\bibliographystyle{plain}
-%% *** Set the bibliography file. ***
-%% ("thesis.bib" by default; change as needed)
-\bibliography{thesis}
+
 
 %% *** NOTE ***
 %% If you don't use bibliography files, comment out the previous line
