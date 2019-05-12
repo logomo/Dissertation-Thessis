@@ -18,6 +18,7 @@
     \item \emph{UTM} service creates \emph{Virtual Roundabout} and implements \emph{Normative Directive} on both \emph{UAS}.
 \end{enumerate}
 
+\newpage
 \noindent\emph{Mission parameters} for four UAS systems are defined in (tab. \ref{tab:missionSetupRuleBasedHeadOnScenario}).
 
 \begin{table}[H]
@@ -66,29 +67,6 @@ There is \emph{UTM} service for given \emph{airspace cluster} calculating \emph{
 
 \paragraph{Simulation Run:} Notable moments from the \emph{simulation run} (fig. \ref{fig:testCaseRuleBasedHeadOnApproach}) are the following:
 
-\begin{enumerate}
-    \item\emph{Collision Case creation} (fig. \ref{fig:ruleBasedHeadOnSituationCollisionCaseCreation}) following events happens in this step:
-    \begin{enumerate}[a.]
-        \item Two UAS are on the same airway approaching each other from the opposite direction, UAS 1 (blue) from the left, UAS 2 (cyan) from the right.
-        
-        \item They are going to \emph{collide} at point $\mathscr{C}=[20,20,0]^T$ of \emph{Flight Level} (Elevation is 45, 000 feet Above Mean Sea Level).
-        
-        \item UTM service notices future \emph{Collision Situation} and creates \emph{Collision Case}.
-        
-        \item \emph{Virtual Roundabout} is created at \emph{collision point} with radius $10 m$. UTM issues directive for both UAS to avoid collision point from different sides.
-        
-        \item UAS 1 (blue) receives a directive to avoid \emph{Collision Point} from the \emph{right side} (downside in GCS). UAS 2 (cyan) receives a directive to avoid \emph{Collision Point} from the \emph{right side} (upside in GCS).
-
-        \item Both UAS enters into \emph{Virtual Roundabout}.
-    \end{enumerate}
-    
-    \item\emph{Well clear before} (fig. \ref{fig:ruleBasedHeadOnWellClearBefore}) UAS 1 (blue) is keeping \emph{enforced safety margin} (10 m) from \emph{collision point} and \emph{UAS 2 position}. The \emph{Virtual Roundabout} is enforced until the (\emph{Collision point}) is reached by both UAS. Both UAS stays in \emph{Navigation Mode}.
-    
-    \item\emph{Well clear after} (fig. \ref{fig:ruleBasedHeadOnWellClearAfter}) UTM notices that \emph{Collision point level} has been reached by both UAS. UTM renounce \emph{Directives} and enables a return to \emph{Original Waypoint} $\mathscr{WP}_1$. Both UAS starts to converging to \emph{Original waypoint} (because possible collision was averted).
-    
-    \item\emph{Waypoint reach} (fig. \ref{fig:ruleBasedHeadOnWaypointsReach}) Both UAS reaches respective goal points.
-\end{enumerate}
-
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.75\textwidth}
@@ -121,6 +99,30 @@ There is \emph{UTM} service for given \emph{airspace cluster} calculating \emph{
     \caption{Test scenario for the \emph{rule-based head-on approach} (virtual roundabout). }
     \label{fig:testCaseRuleBasedHeadOnApproach}
 \end{figure}
+
+\begin{enumerate}
+    \item\emph{Collision Case creation} (fig. \ref{fig:ruleBasedHeadOnSituationCollisionCaseCreation}) following events happens in this step:
+    \begin{enumerate}[a.]
+        \item Two UAS are on the same airway approaching each other from the opposite direction, UAS 1 (blue) from the left, UAS 2 (cyan) from the right.
+        
+        \item They are going to \emph{collide} at point $\mathscr{C}=[20,20,0]^T$ of \emph{Flight Level} (Elevation is 45, 000 feet Above Mean Sea Level).
+        
+        \item UTM service notices future \emph{Collision Situation} and creates \emph{Collision Case}.
+        
+        \item \emph{Virtual Roundabout} is created at \emph{collision point} with radius $10 m$. UTM issues directive for both UAS to avoid collision point from different sides.
+        
+        \item UAS 1 (blue) receives a directive to avoid \emph{Collision Point} from the \emph{right side} (downside in GCS). UAS 2 (cyan) receives a directive to avoid \emph{Collision Point} from the \emph{right side} (upside in GCS).
+
+        \item Both UAS enters into \emph{Virtual Roundabout}.
+    \end{enumerate}
+    
+    \item\emph{Well clear before} (fig. \ref{fig:ruleBasedHeadOnWellClearBefore}) UAS 1 (blue) is keeping \emph{enforced safety margin} (10 m) from \emph{collision point} and \emph{UAS 2 position}. The \emph{Virtual Roundabout} is enforced until the (\emph{Collision point}) is reached by both UAS. Both UAS stays in \emph{Navigation Mode}.
+    
+    \item\emph{Well clear after} (fig. \ref{fig:ruleBasedHeadOnWellClearAfter}) UTM notices that \emph{Collision point level} has been reached by both UAS. UTM renounce \emph{Directives} and enables a return to \emph{Original Waypoint} $\mathscr{WP}_1$. Both UAS starts to converging to \emph{Original waypoint} (because possible collision was averted).
+    
+    \item\emph{Waypoint reach} (fig. \ref{fig:ruleBasedHeadOnWaypointsReach}) Both UAS reaches respective goal points.
+\end{enumerate}
+
 
 \paragraph{Collision Case Calculation: } For test scenario in (fig. \ref{fig:testCaseRuleBasedHeadOnApproach}) where UAS 1 (blue) have head-on collision with UAS 2 (cyan), \emph{Collision Case} have been calculated (tab. \ref{tab:collisionCasesRuleBasedHeadon}).
 

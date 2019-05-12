@@ -71,23 +71,9 @@ Both UAS are using  body (app. \ref{s:bodyvolumeIntersection}) intersection mode
 
 \paragraph{Simulation Run:} Notable moments from the simulation run (fig. \ref{fig:testCaseEmergencyHeadOnApproach}) are the following:
 
-\begin{enumerate}
-    \item \emph{Situation detection} (fig. \ref{fig:emergencyConvergingSituationDetection}) - UAS 1 (blue)  is approaching UAS 2 (cyan) with $130^\circ \le angle Of Approach \le 180^\circ$, this is considered head-on approach. Head-on approach  gives the \emph{right of the way} neither to \emph{UAS 1} nor \emph{UAS 2}. An \emph{intruder intersection model} for opposite UAS is created in respective \emph{avoidance grids}. \emph{Head on emergency avoidance} starts independently in each UAS without intruders coordination. First \emph{avoidance maneuver} is invoked when the \emph{intruder intersection model} constraints any trajectory in the \emph{avoidance grid}. When this happens \emph{Navigation mode} switch to the \emph{Emergency avoidance mode}.
-                
-    \item \emph{Before near miss} (fig. \ref{fig:emergencyHeadOnBeforeNearMiss}) - both \emph{UAS} are in \emph{emergency avoidance mode}, sticking to right side avoidance maneuver.
+\begin{itemize}
+    \item[1.] \emph{Situation detection} (fig. \ref{fig:emergencyConvergingSituationDetection}) - UAS 1 (blue)  is approaching UAS 2 (cyan) with $130^\circ \le angle Of Approach \le 180^\circ$, this is considered head-on approach. Head-on approach  gives the \emph{right of the way} neither to \emph{UAS 1} nor \emph{UAS 2}. An \emph{intruder intersection model} for opposite UAS is created in respective \emph{avoidance grids}. \emph{Head on emergency avoidance} starts independently in each UAS without intruders coordination. First \emph{avoidance maneuver} is invoked when the \emph{intruder intersection model} constraints any trajectory in the \emph{avoidance grid}. When this happens \emph{Navigation mode} switch to the \emph{Emergency avoidance mode}.
     
-    \item \emph{Near miss case} (fig. \ref{fig:emergencyHeadOnNearMiss}) - UAS 1 to UAS 2 closest distance. The safety margin for \emph{near miss} has not been breached. The safety margin for \emph{well clear} in uncontrolled airspace is invalid. Both UAS are using also \emph{Horizontal separation} to avoid each other, \emph{Emergency avoidance mode} is switched to the \emph{Navigation mode} when the risk of an \emph{aerial clash} is voided.
-    
-    \item \emph{After near-miss} (fig. \ref{fig:emergencyHeadOnAfterNearMiss}) - both \emph{UAS} are tracking back to respective waypoint, correcting \emph{altitude} (Z-axis in (fig. \ref{fig:emergencyHeadOnTrajectoryTrackingPerformance})) first.
-    
-    \item Note \emph{Collision point} was expected at $\mathscr{C}=[20,20,0]^T$
-    
-    \item Note \emph{Both UAS} used \emph{horizontal} (primary), \emph{vertical} (secondary) separation (fig \ref{fig:emergencyHeadOnTrajectoryTrackingPerformance}).
-    
-    \item Note \emph{Both UAS} decision times were \emph{synchronized}, this is not an assumption, but it shows critical performance. Usually, safety margin is bloated for (eq.\ref{safetyMarginBloat}).
-\end{enumerate}
-
-
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.75\textwidth}
@@ -120,7 +106,25 @@ Both UAS are using  body (app. \ref{s:bodyvolumeIntersection}) intersection mode
     \caption{Test scenario for \emph{Emergency head-on approach} (Intruder avoidance). }
     \label{fig:testCaseEmergencyHeadOnApproach}
 \end{figure}
+                
+    \item[2.] \emph{Before near miss} (fig. \ref{fig:emergencyHeadOnBeforeNearMiss}) - both \emph{UAS} are in \emph{emergency avoidance mode}, sticking to right side avoidance maneuver.
+    
+    \item[3.] \emph{Near miss case} (fig. \ref{fig:emergencyHeadOnNearMiss}) - UAS 1 to UAS 2 closest distance. The safety margin for \emph{near miss} has not been breached. The safety margin for \emph{well clear} in uncontrolled airspace is invalid. Both UAS are using also \emph{Horizontal separation} to avoid each other, \emph{Emergency avoidance mode} is switched to the \emph{Navigation mode} when the risk of an \emph{aerial clash} is voided.
+    
+    \item[4.] \emph{After near-miss} (fig. \ref{fig:emergencyHeadOnAfterNearMiss}) - both \emph{UAS} are tracking back to respective waypoint, correcting \emph{altitude} (Z-axis in (fig. \ref{fig:emergencyHeadOnTrajectoryTrackingPerformance})) first.
+\end{itemize}
 
+\begin{note} 
+	\emph{Collision point} was expected at $\mathscr{C}=[20,20,0]^T$.
+\end{note}
+
+\begin{note}    
+	\emph{Both UAS} used \emph{horizontal} (primary), \emph{vertical} (secondary) separation (fig \ref{fig:emergencyHeadOnTrajectoryTrackingPerformance}).
+\end{note}
+
+\begin{note} 
+	\emph{Both UAS} decision times were \emph{synchronized}, this is not an assumption, but it shows critical performance. Usually, safety margin is bloated for (eq.\ref{safetyMarginBloat}).
+\end{note}
 
 \paragraph{Distance to Safety Margin Evolution:} There is a need to compare the mutual distance between both UAS (y-axis [m]) and its evolution over synchronized \emph{UTM time} (x-axis [s].) The \emph{mutual distance} between bodies of \emph{UAS 1}, \emph{UAS 2} (blue line) compared to \emph{Safety Margin} (red line) is given in (fig. \ref{fig:testCaseHeadOnAvoidancePerformance}). The \emph{Safety Margin} value was constant for all time at value $1.2$ $m$ which is double of \emph{Near Miss Margin for UAS 1 UAS 2}.
 
@@ -197,6 +201,7 @@ Following observations can be made from path tracking (fig.\ref{fig:emergencyHea
 \end{table}
 
 % 06 Emergency Head On
+\newpage
 \paragraph{Computation Load:} The \emph{computation load} for \emph{scenario} (fig.\ref{fig:emergencyConvergingComputationTime}) shows used time (y-axis) over decision frame (x-axis).
 
 The \emph{computation time} is increased only during the \emph{avoidance phase}. The \emph{load} is symmetric for both UAS systems.

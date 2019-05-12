@@ -1,4 +1,5 @@
 %\subsection{Map Obstacles}\label{s:mapObstacles}
+\newpage
 \paragraph{Map Obstacles:} Use \emph{stored LiDAR readings} from the previous mission to build a compact obstacle map \cite{cernamaria2018}. Then use \emph{this map} as an additional information source.
 
 \begin{figure}[H]
@@ -84,7 +85,7 @@ The \emph{Map Obstacle} concept is taken from my \emph{master student work} \cit
 
 \noindent The \emph{total margin} is a combination of \emph{safety margin} and \emph{body margin} (in case of a line/plane/cuboid obstacle). The \emph{selection} was implemented as standard cluster select, selecting 26  surrounding clusters around UAS + own UAS cluster.
 
-\noindent The \emph{compact obstacle representation} is transformed into \emph homogeneous point-cloud representations:
+\newpage\noindent The \emph{compact obstacle representation} is transformed into \emph homogeneous point-cloud representations:
 
 \begin{itemize}
     \item[1.]\emph{Body Point-cloud} - representing obstacle body approximation by geometrical shape (eq. \ref{eq:mapBodyPointCloud}). This point cloud is considered as hard constraints.

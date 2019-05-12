@@ -203,7 +203,6 @@ The \emph{actual threats} are set as empty sets for \emph{decision time} $t_i=0$
 
 First, start with the definition of \emph{waypoint reach condition} (def. \ref{def:waypointReachCondition}) and \emph{Unreachable waypoint} (def. \ref{def:unreachable Waypoint}).
 
-\newpage
 \begin{definition}{Waypoint Reach Condition}\label{def:waypointReachCondition} for \emph{current} decision time $t_i$ for \emph{UAS} position and current \emph{Goal Waypoint} is satisfied only if:
 
 \begin{multline}\label{eq:waypointReachCondition}
@@ -421,17 +420,11 @@ If the \emph{Operation Mode} is set as \emph{Navigation Mode}, the algorithm con
     \item[\textbf{15\textsuperscript{th}}] \textbf{Finish Avoidance Run} - if the \emph{UAS} is flying, continue with 1\textsuperscript{st} step. 
 \end{itemize}
 
+\newpage
 \paragraph{Decision Frame:} The \emph{mission control run} (fig. \ref{fig:missionControlRunActivityDiagram}) describes the overall process in \emph{sequence}. The \emph{orchestration overview} is given in (fig. \ref{fig:misisonControlRunOrchestrationDiagram}).
 
 The key idea is to explain what happens in one \emph{decision frame}. The \emph{mission control run} is implemented as multi-thread application which sends the signals between threads. Each thread is the semi-independent process with forced synchronization on \emph{decision frame switch}.
 
-\noindent The notable threads and their roles \& responsibilities are summarized like follow:
-\begin{itemize}
-    \item[1.] \emph{Sensor Fusion} - responsible for processing real-time sensor array (sec. \ref{s:SensorFusionDefinition}). The output is a partial known world assessment (sec. \ref{s:KnownWorld}). \emph{Obstacle detection} and \emph{intruder detection} events can be risen by this thread. 
-    
-    \item[2.] \emph{Data Fusion} - responsible for enhancing data from \emph{sensor fusion} by mixing data originating from \emph{information sources} (sec. \ref{s:dataFusionDefinition}). The information sources used in this work contains constraints originating from \emph{geo-fencing}, \emph{weather}, \emph{airspace restrictions}. This thread is delayed by \emph{sensor fusion}. A \emph{data fusion procedure} strongly depends on the \emph{operational space context} (controlled/non-controlled airspace). The output of \emph{data fusion} is full \emph{known world assessment} (sec. \ref{s:KnownWorld}, \ref{s:sensorFusion}). The \emph{UTM-related} and \emph{constraint related} events can arise from \emph{data fusion}.
-    
-    
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{\FIGDIR/TE064DecisonFrameExplained}
@@ -439,6 +432,12 @@ The key idea is to explain what happens in one \emph{decision frame}. The \emph{
     \label{fig:misisonControlRunOrchestrationDiagram}
 \end{figure}
 
+\noindent The notable threads and their roles \& responsibilities are summarized like follow:
+\begin{itemize}
+    \item[1.] \emph{Sensor Fusion} - responsible for processing real-time sensor array (sec. \ref{s:SensorFusionDefinition}). The output is a partial known world assessment (sec. \ref{s:KnownWorld}). \emph{Obstacle detection} and \emph{intruder detection} events can be risen by this thread. 
+    
+    \item[2.] \emph{Data Fusion} - responsible for enhancing data from \emph{sensor fusion} by mixing data originating from \emph{information sources} (sec. \ref{s:dataFusionDefinition}). The information sources used in this work contains constraints originating from \emph{geo-fencing}, \emph{weather}, \emph{airspace restrictions}. This thread is delayed by \emph{sensor fusion}. A \emph{data fusion procedure} strongly depends on the \emph{operational space context} (controlled/non-controlled airspace). The output of \emph{data fusion} is full \emph{known world assessment} (sec. \ref{s:KnownWorld}, \ref{s:sensorFusion}). The \emph{UTM-related} and \emph{constraint related} events can arise from \emph{data fusion}.
+    
     \item[3.] \emph{Event Buffer} -  special data structure to store, raise, handle, prioritize events raised by other threads. 
     
     The \emph{implemented events} are listed in the  5\textsuperscript{th}-6\textsuperscript{th} step of \emph{mission control run}. The events can be categorized like follow:
@@ -475,6 +474,7 @@ The key idea is to explain what happens in one \emph{decision frame}. The \emph{
     \item[7.] \emph{Feasible Trajectory} - consists of \emph{future planned movements} taking place directly after the \emph{correct decision frame}. If its necessary, the planned trajectory in movement buffer is no longer feasible, the planned movements will throw away and replaced by \emph{trajectory movements}. 
 \end{itemize}
 
+\newpage
 \noindent The \emph{roles \& responsibilities} of each thread have been explained to outline their orchestration and roles in \emph{mission control run} (fig. \ref{fig:missionControlRunActivityDiagram}). The numbered steps in (fig. \ref{fig:misisonControlRunOrchestrationDiagram}) shows the threads orchestration in the following manner:
 
 \begin{itemize}

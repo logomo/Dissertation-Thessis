@@ -76,7 +76,8 @@ Then there are \emph{location services}, which are necessary for coordinated col
 \noindent \emph{Mission tracking} is service tracking deviations from \emph{declared mission plan} and \emph{actual execution}. These statistics were used in all tests to track deviations from the reference trajectory.
 
 \emph{Directives} for \emph{Traffic management} and \emph{Collision prevention} are implemented  as the functional life cycle of  \emph{Position notification} (sec. \ref{sec:positionNotification}), \emph{Collision Case} (sec. \ref{sec:collisionCase}) for UTM. The directive handling is implemented as \emph{Rule engine} (sec. \ref{sec:ruleImplementation}) on UAS side.
-\newpage
+
+
 \paragraph{Navigation:} Navigation algorithm is depending on \emph{Navigation mode}. UAS is usually in \emph{Navigation mode} most of the time, despite this fact, UAS was forced into \emph{Emergency Avoidance Mode} most of the time in test cases. The navigation complexity has been divined into following categories:
 
 \begin{enumerate}
@@ -89,7 +90,6 @@ Then there are \emph{location services}, which are necessary for coordinated col
     \item \emph{Rule following} - UAS navigation capabilities are constrained by rule enforcement.
 \end{enumerate}
 
-\newpage
 \subsection{Test Cases Summary}\label{s:testCaseSummary}
 
 \noindent \emph{Test cases} are summarized in (tab. \ref{tab:testCasesSummary}).

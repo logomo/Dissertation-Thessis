@@ -289,6 +289,7 @@ Each \emph{round-abound participant} is ordered based on importance (lowest mane
 \end{equation}
 
 
+\newpage
 \section{Rule: Converging Maneuver}\label{sec:ruleConvergingManuever}
 \noindent The rule is invoked based on the \emph{angle of approach} range defined in \emph{collision case calculation} (sec. \ref{sec:collisionCase}). Behavior enforced to this rule is equal to rule \ref{tab:ruleHeadonApproach} except the \emph{intruder} stays on his original path. UAS behavior is described in (sec \ref{sec:handlingConvergingManuever}). The \emph{rule summary} is given by (tab. \ref{tab:ruleConvergingManuever}).
 
@@ -365,42 +366,6 @@ It is assumed that during \emph{overtake} maneuver \emph{overtaken} intruder wil
     \emph{Waypoint reach margin} [m] is the property of own \emph{UAS navigation algorithm}. It represents the maximal distance of vehicle position and a waypoint at a time when the waypoint is considered reached. 
 \end{note}
 
-\noindent \emph{Local coordinate frame}: UAS and Overtaken are in Local coordinate frame heading in $X^+$ axis direction ($X^+$ front of aircraft, $X^-$ back of vehicles, $Y^-$ right side, $Y^+$ left side, $flightLevel\to Z=0$), Collision Point is considered as $\vec{0}$,
-
-\emph{Divergence point} (\ref{eq:overtakeDivergenceLocal}) in local coordinates is given as right offset of \emph(UTM margin) and \emph{decision distance}:
-\begin{equation}\label{eq:overtakeDivergenceLocal}
-    divergence= 
-    \begin{bmatrix}
-        0\\
-        -decisionDistance - utmMargin\\
-        0
-    \end{bmatrix}
-    \quad [\vec{m},m,m]
-\end{equation}
-
-\emph{Convergence point} (\ref{eq:overtakeConvergenceLocal}) in local coordinates is given frontal \emph{safe offset} (\ref{eq:overtakeSafeOffset}) and right offset of \emph{UTM margin} and \emph{decision distance}:
-\begin{equation}\label{eq:overtakeConvergenceLocal}
-    convergence= 
-    \begin{bmatrix}
-        safeOffset\\
-        -decisionDistance - utmMargin\\
-        0
-    \end{bmatrix}
-    \quad [\vec{m},m,m]
-\end{equation}
-
-\emph{Convergence} (\ref{eq:overtakedDivergenceGlobal}) and \emph{Divergence} (\ref{eq:overtakeConvergenceGlobal}) waypoint in global coordinate frame is obtained via transformation function $R_{XYZ}$ as follow:
-\begin{equation}\label{eq:overtakedDivergenceGlobal}
-    \begin{split}
-        divergenceWaypoint = & collisionPoint \\ &+ R_{XYZ}(overtakenOrientation,divergence)    
-    \end{split}
-\end{equation}
-\begin{equation}\label{eq:overtakeConvergenceGlobal}
-    \begin{split}
-        convergenceWaypoint =  & collisionPoint \\ &+ R_{XYZ}(overtakenOrientation,convergence) 
-    \end{split}
-\end{equation}
-
 \noindent \emph{Overtake rule} is summarized in (tab. \ref{tab:ruleOvertakeDefinition}).    
         
 \begin{tabularx}{\textwidth}{|X|X|X|}
@@ -444,6 +409,44 @@ It is assumed that during \emph{overtake} maneuver \emph{overtaken} intruder wil
 \label{tab:ruleOvertakeDefinition}
 \end{tabularx}        
 
+
+\noindent \emph{Local coordinate frame}: UAS and Overtaken are in Local coordinate frame heading in $X^+$ axis direction ($X^+$ front of aircraft, $X^-$ back of vehicles, $Y^-$ right side, $Y^+$ left side, $flightLevel\to Z=0$), Collision Point is considered as $\vec{0}$,
+
+\emph{Divergence point} (\ref{eq:overtakeDivergenceLocal}) in local coordinates is given as right offset of \emph(UTM margin) and \emph{decision distance}:
+\begin{equation}\label{eq:overtakeDivergenceLocal}
+    divergence= 
+    \begin{bmatrix}
+        0\\
+        -decisionDistance - utmMargin\\
+        0
+    \end{bmatrix}
+    \quad [\vec{m},m,m]
+\end{equation}
+
+\emph{Convergence point} (\ref{eq:overtakeConvergenceLocal}) in local coordinates is given frontal \emph{safe offset} (\ref{eq:overtakeSafeOffset}) and right offset of \emph{UTM margin} and \emph{decision distance}:
+\begin{equation}\label{eq:overtakeConvergenceLocal}
+    convergence= 
+    \begin{bmatrix}
+        safeOffset\\
+        -decisionDistance - utmMargin\\
+        0
+    \end{bmatrix}
+    \quad [\vec{m},m,m]
+\end{equation}
+
+\emph{Convergence} (\ref{eq:overtakedDivergenceGlobal}) and \emph{Divergence} (\ref{eq:overtakeConvergenceGlobal}) waypoint in global coordinate frame is obtained via transformation function $R_{XYZ}$ as follow:
+\begin{equation}\label{eq:overtakedDivergenceGlobal}
+    \begin{split}
+        divergenceWaypoint = & collisionPoint \\ &+ R_{XYZ}(overtakenOrientation,divergence)    
+    \end{split}
+\end{equation}
+\begin{equation}\label{eq:overtakeConvergenceGlobal}
+    \begin{split}
+        convergenceWaypoint =  & collisionPoint \\ &+ R_{XYZ}(overtakenOrientation,convergence) 
+    \end{split}
+\end{equation}
+
+
 \section{Rule: Right Plane Heading}\label{sec:ruleRightPlaneHeading}
 \noindent There is a need to check if the \emph{trajectory} is heading to the \emph{right-side} from \emph{collision point}. For this purpose, one may need to define a \emph{separation plane in the 3D environment}. \emph{Separation plane} will be defined according to Samuelson \emph{hyperplane separation theorem} \cite{samelson1958partition}.
 
@@ -471,6 +474,40 @@ The \emph{first condition} (\ref{eq:ruleTrajectoryPositionCondition}) says that 
 \end{equation}
 
 \noindent The \emph{second condition} (\ref{eq:ruleTrajectoryDecisionHeading}) needs to be applied for each \emph{decision point} when \emph{trajectory} can be re-planned. It must be ensured that in time of reaching \emph{decision point} vehicle is not heading into \emph{left subspace} with given \emph{turning time horizon}. The \emph{minimal information} contains a heading (velocity) vector. Checking if linear projection from \emph{position} point with \emph{heading} in given time-frame $[0,horizon]$ is sufficient.
+
+\noindent The rule for a right plane heading check is summarized in (tab. \ref{tab:ruleRightPlaneHeading}).   
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline\multicolumn{3}{|X|}{
+    \begin{minipage} [t] {0.95\textwidth} 
+        \emph{Invocation:} Invoked by other \emph{maneuver rules}.\\\\
+        \emph{Objective:} Disable all \emph{trajectories} in \emph{Navigation grid`s reach set} which are:
+        \begin{enumerate}
+            \item \emph{Heading into collision zone}
+            \item \emph{Leading into collision zone}
+        \end{enumerate}
+        \rule{0pt}{0pt}
+    \end{minipage}}\\
+\hline%\multicolumn{3}{X|}{Context & Condition & Application}\\
+\hline
+    \emph{Context} & \emph{Condition} & \emph{Application}\\
+\hline
+    \begin{minipage} [t] {0.3\textwidth}
+        UAS Navigation Grid,\\
+        Collision point (LOC)
+        \vspace{2mm}
+    \end{minipage}&
+    \begin{minipage} [t] {0.3\textwidth}
+        There are feasible trajectories in Navigation Grid.
+        \vspace{2mm}
+    \end{minipage}&
+    \begin{minipage} [t] {0.3\textwidth}
+        Disable trajectories in Navigation Grid.
+        \vspace{2mm}
+    \end{minipage}\\
+\hline
+        \caption{Right plane heading rule definition.}
+\label{tab:ruleRightPlaneHeading}
+\end{tabularx}  
 
 \begin{equation}\label{eq:ruleTrajectoryDecisionHeading}
     \forall t\in[0,horizon],\quad \left(position + velocity*t\right) \in rightSubspace
@@ -520,41 +557,6 @@ The \emph{first condition} (\ref{eq:ruleTrajectoryPositionCondition}) says that 
 \end{figure}
 
 \noindent Figure \ref{fig:ruleRightPlaneHeadingGeneral}. shows \emph{enabled} (green line) and \emph{disabled} (red lines) \emph{trajectories} (left sub-figure). These trajectories are divided according to the \emph{separation line} (magenta dashed line), given by \emph{vehicle position} and \emph{collision point} (magenta circle). \emph{Space segmentation} (right subfigure) show \emph{reachable} (green fill) \emph{unreachable} (red fill) space. The situation is shown for various \emph{collision point angles of approach} $\alpha$.
-
-
-\noindent The rule for a right plane heading check is summarized in (tab. \ref{tab:ruleRightPlaneHeading}).   
-\begin{tabularx}{\textwidth}{|X|X|X|}
-\hline\multicolumn{3}{|X|}{
-    \begin{minipage} [t] {0.95\textwidth} 
-        \emph{Invocation:} Invoked by other \emph{maneuver rules}.\\\\
-        \emph{Objective:} Disable all \emph{trajectories} in \emph{Navigation grid`s reach set} which are:
-        \begin{enumerate}
-            \item \emph{Heading into collision zone}
-            \item \emph{Leading into collision zone}
-        \end{enumerate}
-        \rule{0pt}{0pt}
-    \end{minipage}}\\
-\hline%\multicolumn{3}{X|}{Context & Condition & Application}\\
-\hline
-    \emph{Context} & \emph{Condition} & \emph{Application}\\
-\hline
-    \begin{minipage} [t] {0.3\textwidth}
-        UAS Navigation Grid,\\
-        Collision point (LOC)
-        \vspace{2mm}
-    \end{minipage}&
-    \begin{minipage} [t] {0.3\textwidth}
-        There are feasible trajectories in Navigation Grid.
-        \vspace{2mm}
-    \end{minipage}&
-    \begin{minipage} [t] {0.3\textwidth}
-        Disable trajectories in Navigation Grid.
-        \vspace{2mm}
-    \end{minipage}\\
-\hline
-        \caption{Right plane heading rule definition.}
-\label{tab:ruleRightPlaneHeading}
-\end{tabularx}     
 
 \section{Rule: Enforce Safety Margin}\label{sec:ruleEnforceSafetyMargin}
 \noindent Rule \ref{tab:ruleRightPlaneHeading}. checks right plane heading for a single mass point along \emph{trajectories}. The rule needs to account \emph{body mass} of \emph{intruder} and UAS, other factors like safe distance, regulations, etc. All mentioned factors are included in the \emph{safety margin}. The \emph{safety margin} is applied as \emph{radius ball} around \emph{collision point}. 
