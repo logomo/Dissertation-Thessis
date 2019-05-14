@@ -219,6 +219,24 @@
 \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
 \newcommand{\TBD}[1]{\color{red}\emph{--TBD:}#1\color{black}}
 
+\usepackage{fontspec}
+\setmainfont[
+	Path={fonts/},
+	UprightFont=*-Regular,
+	ItalicFont=*-Italic,
+	BoldFont=*-Bold,
+	BoldItalicFont=*-Bold-Italic
+]{Arial}
+
+\newcommand{\hchapterspoce}{\hspace{20pt}}
+\newcommand{\hsectuibspoce}{\hspace{15pt}}
+\newcommand{\hsubsectuibspoce}{\hspace{10pt}}
+\titleformat{\chapter}
+	[hang]
+	{\Huge}{Chapter \thechapter.\hchapterspoce}{0pt}{\Huge}[{\titlerule[1pt]}]
+\titleformat{\section}[hang]{\huge}{\thesection.\hsectuibspoce}{0pt}{\huge}[{\titlerule[0.7pt]}]
+\titleformat{\subsection}[hang]{\Large}{\thesubsection.\hsubsectuibspoce}{0pt}{\Large}[{\titlerule[0.4pt]}]
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                                                    %%
 %%                   ***   I M P O R T A N T   ***                    %%
