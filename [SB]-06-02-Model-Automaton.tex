@@ -125,33 +125,82 @@
 
 % custom keywords for alggorithms
 \usepackage{algorithmic}
+
+%%%%%%%%
+% Misc %
+%%%%%%%%
+% Enable bold symbols in math mode (unused ?)
 \usepackage{bm}
 
+% Enhanced support for graphics (ugly hack on big schemes)
 \usepackage{graphicx}       
+
+% Replace strings in encapsulated PostScript figures (Arial to my PS files ...)
 \usepackage{psfrag}         
+
+% Sophisticated verbatim text (nice notes and foootnotes)
 \usepackage{fancyvrb}    
+
+%Im­proves the in­ter­face for defin­ing float­ing ob­jects such as fig­ures and ta­bles. In­tro­duces the boxed float, the ruled float and the plain­top float. You can de­fine your own floats and im­prove the be­haviour of the old ones.  The pack­age also pro­vides the H float mod­i­fier op­tion of the ob­so­lete here pack­age. You can se­lect this as au­to­matic de­fault with \float­place­ment{fig­ure}{H}. (Nice floats and fixed figures/algorithms/equations).
 \usepackage{float}
+
+%Mod­i­fies the tab­u­larx en­vi­ron­ment to com­bine the fea­tures of the tab­u­larx pack­age (auto-sized columns in a fixed width ta­ble) with those of the longtable pack­age (multi-page ta­bles). 
 \usepackage{ltablex}
+
+%Library bibtex wrapper, square brackets, sort by first author surname, use coma seprarator, use number labeling
 \usepackage[square,sort,comma,numbers]{natbib}        
-\usepackage{bbding}         
+
+%A sym­bol font (dis­tributed as METAFONT source) that con­tains many of the sym­bols of the Zapf ding­bats set, to­gether with an NFSS in­ter­face for us­ing the font.
+\usepackage{bbding}
+
+%The dcol­umn pack­age makes use of the ar­ray pack­age to de­fine a "D" col­umn for­mat for use in tab­u­lar en­vi­ron­ments. (Multicollumn enviroment , layered tables)
 \usepackage{dcolumn}        
+
+%The pack­age en­hances the qual­ity of ta­bles in LATEX, pro­vid­ing ex­tra com­mands as well as be­hind-the-scenes op­ti­mi­sa­tion. Guide­lines are given as to what con­sti­tutes a good ta­ble in this con­text. From ver­sion 1.61, the pack­age of­fers longtable com­pat­i­bil­ity. (Yet another table hacks)
 \usepackage{booktabs} 
+
+%The pack­age has a lot of flex­i­bil­ity, in­clud­ing an op­tion for spec­i­fy­ing an en­try at the “nat­u­ral” width of its text. (Multirow cells in table headres)
 \usepackage{multirow}
+
+%Pro­vides enu­mer­ate and item­ize en­vi­ron­ments that can be used within para­graphs to for­mat the items ei­ther as run­ning text or as sep­a­rate para­graphs with a pre­ced­ing num­ber or sym­bol. (Nice paragraph/itemize/enumerate) package
 \usepackage{paralist}     
+
+%Draft only enviromental enabler (Deprecated - for table debug mainly)
 \usepackage{ifdraft}  
-\usepackage{indentfirst}    
+
+% indentfirst – Indent first paragraph after section header by default disabled 
+%\usepackage{indentfirst}    
+
+% Add bibliography/index/contents to Table of Contents (\bibliography{*} command)
 \usepackage[nottoc,notlof,notlot]{tocbibind}
+
+% Pretty and clickable urls in 
 \usepackage{url}
+
+% multiline collumn tables (Nomenclature)
 \usepackage{tabularx}
-%use font size for captions like 8pt -> normalisize 11pt, scriptsize->8pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table figure caption subcaption %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% use font size for captions like 8pt -> normalisize 11pt, scriptsize->8pt
 \usepackage[font={scriptsize}]{caption}
+
+% use font size for captions like 8pt -> normalisize 11pt, scriptsize->8pt
 \usepackage[font={scriptsize}]{subcaption}
+
+% Other packages caption setup, just for ensurance
 \captionsetup{font=scriptsize}
 
+% Hypper references - clickable labels 
 \usepackage[unicode]{hyperref}
+
+% Specific color package - color by name hex, cmyk etc.
 \usepackage{xcolor}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document setup for referencing %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hypersetup{pdftitle=Obstacle Avoidance Framework based on Reach Sets, 
             pdfauthor=Alojz Gomola,
             colorlinks=false,
@@ -161,37 +210,80 @@
             pdfnewwindow,
             breaklinks
           }
+%%%%%%%%%%%%%%%%%%%%%%          
+%% Arrays in tables %%
+%%%%%%%%%%%%%%%%%%%%%%       
+% Array package import
 \usepackage{array}
+
+% Left alignement
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Center alignement
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Right alignement
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}         
+
+% Multiline column with text filling
 \newcolumntype{B}{X}
+
+% Multiline column with X percentage of text width
 \newcolumntype{S}[1]{>{\hsize=#1\textwidth}X}
 
-\newcommand{\FIGDIR}{./Pics}    %%% directory containing figures
+% twoline cell definition macro
 \newcommand{\twolinecellr}[2][r]{%
   \begin{tabular}[#1]{@{}r@{}}#2\end{tabular}}
+
+% Section state macro - deprecated used during writting of thesis
 \newcommand{\secState}[1]{
 	\ifdraft{(#1) }{}
 }
+
+%%%%%%%%%%%%%%%%%%%%
+% Figure directory %
+%%%%%%%%%%%%%%%%%%%%
+\newcommand{\FIGDIR}{./Pics}    %%% directory containing figures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorems/defs and other structured referables%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plain style of theorems - inline in text
 \theoremstyle{plain}
+
+% Theorem keyword definition
 \newtheorem{theorem}{Theorem}
+
+% Lemma for theorem keyword definition
 \newtheorem{lemma}[theorem]{Lemma}
+
+% Proposition for theorem keyword definition 
 \newtheorem{proposition}[theorem]{Proposition}
 
+% If different theorem type for proof/problem/definition is required
 \theoremstyle{plain}
+
+% Definition keyword
 \newtheorem{definition}{Definition}
+
+% Problem keyword
 \newtheorem{problem}{Problem}
+
+% Example keyword
 \newtheorem{example}{Example}
+
+% Assumnption keyword
 \newtheorem{assumption}{Assumption}
 
+% Remark style without numbering
 \theoremstyle{remark}
+
+% Corollary keyword definition
 \newtheorem*{corollary}{Corollary}
+% Note keyword definition
 \newtheorem*{note}{Note}
 
-
-
-
+%Proof of the theorem, without numbering (discontinued)
 \newenvironment{dokaz}{
   \par\medskip\noindent
   \textit{Proof}.
@@ -200,6 +292,7 @@
 \rightline{\SquareCastShadowBottomRight}
 }
 
+%Contraint of the theorem/proof numbering (discontinued)
 \newenvironment{constraints}[1]{
   \par\medskip\noindent
   \textit{Constraints #1} \\
@@ -208,36 +301,68 @@
 \rightline{\SquareCastShadowBottomRight}
 }
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Additional bibliography settings %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\bibliographystyle{plainnat}     %% Author (year) style
 \bibliographystyle{unsrt}        %% [number] style
 \setcitestyle{square}
 
-% Section  3.7 Challenge list
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section  4.7 Challenge list %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifproblemchallenge   %# Build block for problem challenges
 \problemchallengetrue       %# Show comments
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Custom Math commands %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Real numbers set
 \newcommand{\R}{\mathbb{R}}
+
+% Natural numbers set
 \newcommand{\N}{\mathbb{N}}
 
+% Natural distribution
 \DeclareMathOperator{\pr}{\textsf{P}}
+
+% Euclid distribution
 \DeclareMathOperator{\E}{\textsf{E}\,}
+
+% Standard derivation
 \DeclareMathOperator{\var}{\textrm{var}}
+
+% Variation
 \DeclareMathOperator{\sd}{\textrm{sd}}
 
-
+% Top description
 \newcommand{\T}[1]{#1^\top}        
 
+% Reference 
 \newcommand{\goto}{\rightarrow}
+
+% Reference top
 \newcommand{\gotop}{\stackrel{P}{\longrightarrow}}
+
+% Average complexity of algorithm
 \newcommand{\maon}[1]{o(n^{#1})}
+
+% absolute value of compbound equation
 \newcommand{\abs}[1]{\left|{#1}\right|}
+
+% Inverted sqare of the value
 \newcommand{\isqr}[1]{\frac{1}{\sqrt{#1}}}
+
+% Norm of the compobound equation
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 
-
+% random distribution box
 \newcommand{\pulrad}[1]{\raisebox{1.5ex}[0pt]{#1}}
+
+% another ugly multicolum in equation
 \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+
+% To be done block in red collor only in draft mode
 \newcommand{\TBD}[1]{\color{red}\emph{--TBD:}#1\color{black}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -251,6 +376,7 @@
 	BoldFont=*-Bold,
 	BoldItalicFont=*-Bold-Italic
 ]{Arial}
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 % Renew title section  %
 %%%%%%%%%%%%%%%%%%%%%%%%
