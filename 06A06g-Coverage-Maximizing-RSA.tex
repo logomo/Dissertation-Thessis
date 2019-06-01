@@ -72,7 +72,7 @@ The \emph{Cell} $cell_{i,j,k}$ has a center and walls from UAS viewpoint: a fron
     \label{alg:ExpansionConstraintFunctionForChaoticReachSet}
 \end{algorithm}
 
-
+\newpage
 \paragraph{Example:} for \emph{Avoidance Grid} with \emph{Distance 10 m}, \emph{Layer count 10}, \emph{Horizontal range $[-45^\circ,+45^\circ]$}, \emph{Horizontal Cell Count 7}, \emph{Vertical range $[-30^\circ,+30^\circ]$}, and \emph{Vertical Cell Count 5}. Is given in (fig. \ref{fig:chaoticReachSetApproximation}). The UAS is at \emph{Back-side} of \emph{Figure} (initial state is at all \emph{Trajectory Origins}). The \emph{black dashed line} marks \emph{Avoidance Grid} space boundary. Each trajectory has its own color and ends at \emph{Front-side} of \emph{Avoidance Grid Boundary}.
 
 \begin{figure}[H]
@@ -87,9 +87,9 @@ The \emph{Cell} $cell_{i,j,k}$ has a center and walls from UAS viewpoint: a fron
 
 \emph{High Coverage Ratio} ($\sim 0.9$) is provided while keeping \emph{medium node count}. The calculation complexity scales linearly with grid size. The \emph{upper limit of trajectories} is given as follow:
 
-\begin{multline}
-    countTrajectories(ReachSet) \le layerCellCount \times spreadLimit\\ \times size(Movements)
-\end{multline}
+\begin{equation}
+    countTrajectories(ReachSet) \le layerCellCount \times spreadLimit \times size(Movements)
+\end{equation}
 
 \noindent The \emph{upper limit of nodes} is given as follow:
     
