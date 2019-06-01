@@ -20,13 +20,13 @@ This work focus on \emph{Event-Based} and \emph{Reactive Detect \& Avoid} level.
 \paragraph{Notification Event Resolution:} The \emph{future UAS/UTM} network can be abstracted as a hierarchical agent network, where UTM is master for given \emph{controlled airspace portion} and UAS systems are slaves. The communication principle is outlined by the following communication diagram:
 \begin{equation*}
     \begin{aligned}
-         \texttt{UTM (master)}& & &  \texttt{UAS (slave)} \\
-         send(Notification)&\longleftarrow&&|\\
-         |&\longrightarrow  &&receive(Notification)\\
-         |& & \circlearrowleft& triggerEvents(Notification)\\
-         |& \longleftarrow && send(Events)\\
-         \circlearrowleft check(Events)&\longleftrightarrow  &\circlearrowleft & process(Events)\\
-         |&\longleftarrow&&resolve(Nontification)
+         \texttt{UTM (master)} & & &  \texttt{UAS (slave)}& \\
+         send(Notification) & | &\longleftarrow& | &\\
+         &| \longrightarrow  & & | receive(Notification)&\\
+         &|& & |\circlearrowleft triggerEvents(Notification)&\\
+         &|& \longleftarrow & |send(Events)&\\
+         \circlearrowleft check(Events)&|\longrightarrow  & \longleftarrow &| \circlearrowleft  process(Events)&\\
+         &|&\longleftarrow&|resolve(Nontification)&
     \end{aligned}
 \end{equation*}
 
