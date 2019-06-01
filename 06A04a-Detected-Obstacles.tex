@@ -3,6 +3,7 @@
 
 \paragraph{Detected Obstacle Rating:} The \emph{detected obstacle rating} defines UAS chances to encounter detected obstacle in avoidance grid $cell_{i,j,k}$. Final \emph{detected obstacle rating} is merged information (eq. \ref{eq:detectedObstacleRatingForCell}). The \emph{sensor field} can contain \emph{multiple} \emph{static obstacle sensors}.
 
+\newpage
 \paragraph{Detected Obstacle Rate for LiDAR:} Let us have only one sensor set as homogeneous two-axis rotary LiDAR. For one $cell_{i,j,k}$ there exists a set of passing LiDAR beams:
 
 \begin{equation}\label{eq:lidarRaysTroughCell}
@@ -66,12 +67,12 @@ The set $lidar Rays(cell_{i,j,k}))$ (eq. \ref{eq:lidarRaysTroughCell}) is finite
     \item \textit{Vertical span} - defines the range of vertical scanner partition.
 \end{enumerate}
 
-\noindent By rewriting (eq. \ref{eq:finalCellSquare}) and using horizontal range parameter and inverted vertical range parameter following surface integral is obtained (eq. \ref{eq:cellSurfaceIntengralDelta}).
+\newpage\noindent By rewriting (eq. \ref{eq:finalCellSquare}) and using horizontal range parameter and inverted vertical range parameter following surface integral is obtained (eq. \ref{eq:cellSurfaceIntengralDelta}).
 
-\begin{multline}\label{eq:cellSurfaceIntengralDelta}
-    Area(cell_{i,j,k}) =\\ \int_{horizontal_{start}^\circ}^{horizontal_{end}^\circ}\int_{vertical_{end}^\circ}^{vertical_{start}^\circ} radius^2 \cos(vertical^\circ) \quad \text{d} vertical^
+\begin{equation}\label{eq:cellSurfaceIntengralDelta}
+    Area(cell_{i,j,k}) = \int_{horizontal_{start}^\circ}^{horizontal_{end}^\circ}\int_{vertical_{end}^\circ}^{vertical_{start}^\circ} radius^2 \cos(vertical^\circ) \quad \text{d} vertical^
     \circ\text{d} horizontal^\circ
-\end{multline}
+\end{equation}
 
 \begin{note}
     The \emph{radius} parameter is the \emph{average} distance of hits landed in $cell_{i,j,k}$. This helps to reflect real \emph{scanned surface}.
@@ -117,9 +118,9 @@ For each $cell_{i,j,k}$ there exists a function which calculates final visibilit
 \end{equation*}
 and for one selected $cell_{i,j,k}$ the visibility rate is naturally defined as a supplement to hindrance from previous cells. The visibility is defined in (eq. \ref{eq:FinalVisibilityProbability}).
 
-\begin{multline}\label{eq:FinalVisibilityProbability}
-    visibility(cell_{i_c,j_c,k_c})=\dots\\ \dots =1 - \sum_{index\in\N^+}^{index < i_c} hindrance(cell_{a,j_c,k_c}: cell_{a,j_c,k_c}\in cell Row(j_{c},k_{c})
-\end{multline}
+\begin{equation}\label{eq:FinalVisibilityProbability}
+    visibility(cell_{i_c,j_c,k_c})= 1 - \sum_{index\in\N^+}^{index < i_c} hindrance(cell_{a,j_c,k_c}: cell_{a,j_c,k_c}\in cell Row(j_{c},k_{c})
+\end{equation}
 
 \paragraph{Example:} Let be $cell_{4,j_{fix},k_{fix}}$ is selected for visibility rate assessment, then $cell_{1,j_{fix},k_{fix}}$, $cell_{2,j_{fix},k_{fix}}$, and $cell_{3,j_{fix},k_{fix}}$, are used as a base of cumulative hindrance rate.
 
