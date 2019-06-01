@@ -75,29 +75,58 @@
 %% \setstretch command to set the line spacing to a value other than
 %% single, one-and-a-half, or double spaced (see the `setspace' package
 %% for details).
-% Overfull statements
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Overfull statements fix %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pretolerance=150
 \setlength{\emergencystretch}{3em}
-% Overfull end
-\usepackage[english]{babel}
-\usepackage{helvet} %To replace arial fonts
-\usepackage{lipsum}
 
-%%% Additional useful packages
-%%% ----------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Standard british babel %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}
+
+% Enable array for text formatting 
 \usepackage{array}
+
+% Standard Mathematics library 
 \usepackage{amsmath}  
+
+% Standard symbols for asmath library
 \usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Override the basic math font with arial %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Math font specification package
 \usepackage{mathspec}
+
+% Proporitional lining for digits latin and greek letters
 \setmathsfont(Digits)[Numbers={Lining,Proportional}]{Arial}
 \setmathsfont(Latin)[Numbers={Lining,Proportional}]{Arial}
 \setmathsfont(Greek)[Numbers={Lining,Proportional}]{Arial}
+
+% Main direction symbols for integrals derivations etc
 \usepackage{mdsymbol}
+
+% asmath symbols and additional library
 \usepackage{amsthm}      
+
+% Enable usage of Eulerscript for special math symbols
+\usepackage[mathscr]{euscript}
+
+%%%%%%%%%%%%%%
+% Algorithms %
+%%%%%%%%%%%%%%
+% Enable algorithms - nice format use chapter numbering
 \usepackage[ruled,algochapter]{algorithm2e}
+
+% custom keywords for alggorithms
 \usepackage{algorithmic}
 \usepackage{bm}
-\usepackage[mathscr]{euscript}
+
 \usepackage{graphicx}       
 \usepackage{psfrag}         
 \usepackage{fancyvrb}    
@@ -123,7 +152,7 @@
 \usepackage{xcolor}
 
 
-\hypersetup{pdftitle=Obstacle avoidance framework based on reach sets, 
+\hypersetup{pdftitle=Obstacle Avoidance Framework based on Reach Sets, 
             pdfauthor=Alojz Gomola,
             colorlinks=false,
             urlcolor=blue,
@@ -211,7 +240,9 @@
 \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
 \newcommand{\TBD}[1]{\color{red}\emph{--TBD:}#1\color{black}}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set arial as default font using MS word 2003 Arial font definition %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{fontspec}
 \setmainfont[
 	Path={fonts/},
@@ -220,14 +251,30 @@
 	BoldFont=*-Bold,
 	BoldItalicFont=*-Bold-Italic
 ]{Arial}
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Renew title section  %
+%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{titlesec}
+
+% Define special thick after header lines for chapter/section/subsection
 \newcommand{\hchapterspoce}{\hspace{20pt}}
 \newcommand{\hsectuibspoce}{\hspace{15pt}}
 \newcommand{\hsubsectuibspoce}{\hspace{10pt}}
+
+%Chapter hanger 20 pt
 \titleformat{\chapter}[hang]{\Huge}{Chapter \thechapter.\hchapterspoce}{0pt}{\Huge}[{\titlerule[1pt]}]
+
+%Section hanger 16 pt
 \titleformat{\section}[hang]{\huge}{\thesection.\hsectuibspoce}{0pt}{\huge}[{\titlerule[0.7pt]}]
+
+%Subsection hanger 14 pt
 \titleformat{\subsection}[hang]{\Large}{\thesubsection.\hsubsectuibspoce}{0pt}{\Large}[{\titlerule[0.4pt]}]
 
+%Renew commands for sin cos max min
+\renewcommand{\sin}{\text{sin}}
+\renewcommand{\cos}{\text{cos}}
+\renewcommand{\max}{\text{max}}
+\renewcommand{\min}{\text{min}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                                                    %%
 %%                   ***   I M P O R T A N T   ***                    %%
