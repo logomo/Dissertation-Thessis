@@ -24,9 +24,9 @@
     \end{bmatrix}
     =
     \begin{bmatrix}
-         v\cos(pitch)\cos(yaw)\\
-         v\cos(pitch)\sin(yaw)\\
-         -v\sin(pitch)\\
+         v.\cos(pitch)\cos(yaw)\\
+         v.\cos(pitch)\sin(yaw)\\
+         -v.\sin(pitch)\\
     \end{bmatrix}
 \end{equation}
 
@@ -34,9 +34,9 @@
 
 \begin{equation}\label{eq:UASNonlinearModelSimple}
     \begin{aligned}
-        \frac{\text{d} x}{\text{d} time} &= v\cos(pitch)\cos(yaw);\\
-        \frac{\text{d} y}{\text{d} time} &= v\cos(pitch)\sin(yaw);\\
-        \frac{\text{d} z}{\text{d} time} &= -v\sin(pitch);\\
+        \frac{\text{d} x}{\text{d} time} &= v.\cos(pitch)\cos(yaw);\\
+        \frac{\text{d} y}{\text{d} time} &= v.\cos(pitch)\sin(yaw);\\
+        \frac{\text{d} z}{\text{d} time} &= -v.\sin(pitch);\\
     \end{aligned}\\\quad\quad
     \begin{aligned}
         \frac{\text{d} roll}{\text{d} time} &= \omega_{roll};\\
