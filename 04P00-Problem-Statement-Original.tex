@@ -33,7 +33,7 @@
     
     \end{definition}
     
-    \begin{definition}{Obstacle space $\mathscr{O}$} is segmentation (def. \ref{def:spaceSegmentation}) of obstacle set $\mathscr{O}(\vec{p},t)$ (\ref{eq:obstacleSet}).
+    \begin{definition}{Obstacle space $\mathscr{O}$} is segmentation (def. \ref{def:spaceSegmentation}) of obstacle set $\mathscr{O}(\vec{p},t)$ (eq. \ref{eq:obstacleSet}).
     \end{definition}
     
     \begin{definition}{Free space $\mathscr{F}$} is space where exists direct visibility between observation point $\vec{p}\in\R^m$ and points in segmented space (def. \ref{def:spaceSegmentation}).
@@ -68,7 +68,7 @@
     
     For time period $\tau\in[t_0,t]$ vehicle fly along the trajectory $\vec{x}(\tau)$ based on taken decisions $D=\{d_0,d_1,\dots,d_i\},i\in\N$ in decision times $T_D=\{t_{d1},t_{d2},\dots,t_{di}\}, t_{di}\le t$. Field of the vision $\mathscr{F}(\tau)$ along trajectory $\vec{x}(\tau)$ is given as:
     \begin{equation}
-        \mathscr{F}(\tau) = \bigcup_{t_d\in T_D} \mathscr{F}(\vec{x}(t_d)\to\vec{p},t_d,\forall s\in\mathscr{S}) \quad (\ref{eq:fieldOfVisonFixedTime})
+        \mathscr{F}(\tau) = \bigcup_{t_d\in T_D} \mathscr{F}(\vec{x}(t_d)\to\vec{p},t_d,\forall s\in\mathscr{S}) \quad (eq. \ref{eq:fieldOfVisonFixedTime})
     \end{equation}
     \end{definition}
     Aggregated field of the vision $\mathscr{F}(\tau)$ is separated into obstacle space $\mathscr{O}(\tau)$ uncertain space $\mathscr{U}(\tau)$ and free space $\mathscr{F}(\tau)$. Then for any fixed time $t_{fix}\in[t_0,\infty)$ all system trajectories $x(t)$ starting within entry point $\vec{e}$ holds following conditions:
@@ -94,7 +94,7 @@
     \begin{equation}\label{eq:ReachibilityofAvoidanceSet}
         \mathscr{R}(\vec{x_0}:t_0,\tau)=\left\{\vec{x}(\tau):\vec{x}(\tau)=\vec{f}(\vec{x}(\tau),\vec{u}(\tau)),u(\tau)\in U(\tau)\right\}
     \end{equation}
-    Each trajectory $\vec{x}(t)$ extracted from avoidance set $\mathscr{A}(t,\vec{x}_0,\vec{u}_0,\mathscr{S})$ based on decision chain $D$ is then included in reach set $\mathscr{R}$ (\ref{eq:ReachibilityofAvoidanceSet}).
+    Each trajectory $\vec{x}(t)$ extracted from avoidance set $\mathscr{A}(t,\vec{x}_0,\vec{u}_0,\mathscr{S})$ based on decision chain $D$ is then included in reach set $\mathscr{R}$ (eq. \ref{eq:ReachibilityofAvoidanceSet}).
     \end{definition}
     
     \begin{definition}{Weak invariance of Avoidance set $\mathscr{A}(t,\vec{x}_0,\vec{u}_0,\mathscr{S})$} is invariant for Each trajectory $\vec{x}(t)$ based on decision chain $D$.
