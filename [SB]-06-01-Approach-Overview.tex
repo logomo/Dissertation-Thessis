@@ -5,13 +5,6 @@
 %% This work may be distributed and/or modified under the conditions of
 %% the LaTeX Project Public License, either version 1.3c of this license
 %% or (at your option) any later version.
-%% The latest version of th%% fcup-thesis.tex -- document template for PhD theses at FCUP
-%%
-%% Copyright (c) 2015 João Faria <joao.faria@astro.up.pt>
-%%
-%% This work may be distributed and/or modified under the conditions of
-%% the LaTeX Project Public License, either version 1.3c of this license
-%% or (at your option) any later version.
 %% The latest version of this license is in
 %%     http://www.latex-project.org/lppl.txt
 %% and version 1.3c or later is part of all distributions of LaTeX
@@ -89,24 +82,17 @@
 \usepackage[english]{babel}
 \usepackage{helvet} %To replace arial fonts
 \usepackage{lipsum}
-\usepackage[utf8]{inputenc}
-
 
 %%% Additional useful packages
 %%% ----------------------------------------------------------------
 \usepackage{array}
 \usepackage{amsmath}  
 \usepackage{amssymb}
-\usepackage{amsfonts}
-\DeclareFontFamily{OT1}{pzc}{}
-\DeclareFontShape{OT1}{pzc}{m}{it}{<-> s * [0.900] pzcmi7t}{}
-\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
-%Titles need to be 14 pt => Large in \normaltext 11pt
-\usepackage{titlesec}
-\titleformat*{\section}{\Large\bfseries}
-\titleformat*{\subsection}{\Large\bfseries}
-\titleformat*{\subsubsection}{\Large\bfseries}
-%Titles need to be 14 pt => Large in \normaltext 11pt
+\usepackage{mathspec}
+\setmathsfont(Digits)[Numbers={Lining,Proportional}]{Arial}
+\setmathsfont(Latin)[Numbers={Lining,Proportional}]{Arial}
+\setmathsfont(Greek)[Numbers={Lining,Proportional}]{Arial}
+\usepackage{mdsymbol}
 \usepackage{amsthm}      
 \usepackage[ruled,algochapter]{algorithm2e}
 \usepackage{algorithmic}
@@ -217,7 +203,6 @@
 \newcommand{\gotop}{\stackrel{P}{\longrightarrow}}
 \newcommand{\maon}[1]{o(n^{#1})}
 \newcommand{\abs}[1]{\left|{#1}\right|}
-\newcommand{\dint}{\int_0^\tau\!\!\int_0^\tau}
 \newcommand{\isqr}[1]{\frac{1}{\sqrt{#1}}}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 
@@ -225,6 +210,23 @@
 \newcommand{\pulrad}[1]{\raisebox{1.5ex}[0pt]{#1}}
 \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
 \newcommand{\TBD}[1]{\color{red}\emph{--TBD:}#1\color{black}}
+
+
+\usepackage{fontspec}
+\setmainfont[
+	Path={fonts/},
+	UprightFont=*-Regular,
+	ItalicFont=*-Italic,
+	BoldFont=*-Bold,
+	BoldItalicFont=*-Bold-Italic
+]{Arial}
+\usepackage{titlesec}
+\newcommand{\hchapterspoce}{\hspace{20pt}}
+\newcommand{\hsectuibspoce}{\hspace{15pt}}
+\newcommand{\hsubsectuibspoce}{\hspace{10pt}}
+\titleformat{\chapter}[hang]{\Huge}{Chapter \thechapter.\hchapterspoce}{0pt}{\Huge}[{\titlerule[1pt]}]
+\titleformat{\section}[hang]{\huge}{\thesection.\hsectuibspoce}{0pt}{\huge}[{\titlerule[0.7pt]}]
+\titleformat{\subsection}[hang]{\Large}{\thesubsection.\hsubsectuibspoce}{0pt}{\Large}[{\titlerule[0.4pt]}]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                                                    %%
