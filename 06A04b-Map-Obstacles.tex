@@ -126,9 +126,9 @@ The \emph{Map Obstacle} concept is taken from my \emph{master student work} \cit
 
 The \emph{intersection set} between \emph{point cloud} and $cell_{i,j,k}$ is defined in (eq. \ref{eq:pointImpactRateMap}). The \emph{cell} intersection with points is defined in (eq. \ref{eq:boundedSpaceCell}).
 
-\begin{multline}\label{eq:pointcloudIntersectionMap}
-    intersection(map,cell_{i,j,k}) =\dots\\\dots \{points \in \R^3: (point\to Avoidance Grid Frame) \in cell_{i,j,k}\}
-\end{multline}
+\begin{equation}\label{eq:pointcloudIntersectionMap}
+    intersection(map,cell_{i,j,k}) =\{points \in \R^3: (point\to Avoidance Grid Frame) \in cell_{i,j,k}\}
+\end{equation}
 
 \noindent The \emph{map obstacle rating} for $cell_{i,j,k}$ and obstacle for our \emph{information source} is defined in (eq. \ref{eq:mapcellratingourMap}).
 
