@@ -44,11 +44,11 @@ Each trajectory passes through space in \emph{Avoidance Grid}. If there exists a
     \begin{equation}\label{eq:TrajectoryEquality}
         isEqual\left(\begin{gathered}
         Trajectory_1,\\Trajectory_2,\\AvoidanceGrid  
-        \end{gathered}\right):
+        \end{gathered}\right)=
         \begin{cases}
             \left(\begin{gathered}
                 footprint(Trajectory_1,\dots)\\
-                = \\
+                equals \\
                 footprint(Trajectory_2,\dots)
             \end{gathered}\right)
             &:true\\
@@ -150,5 +150,7 @@ Then \emph{Smoothnes clasificator} for $Trajectory(initialState,buffer)$ can be 
         Smoothness(Trajectory(\dots,buffer)) = \frac{isSmooth(Trajectory)}{movementCount(Trajectory)} \in [0,1] 
     \end{equation}
     
-    \noindent For \emph{Trajectory} with $buffer=\varnothing$ \emph{Smoothness} is given as 1.
+    \begin{note} 
+    	For \emph{Trajectory} with $buffer=\varnothing$ \emph{Smoothness} is given as 1.
+    \end{note}
 \end{definition}
