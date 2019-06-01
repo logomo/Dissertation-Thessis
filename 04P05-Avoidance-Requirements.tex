@@ -118,7 +118,7 @@ After \emph{mission} execution, there is only \emph{executed movements} The traj
     By selecting proper time series $t_1\dots t_n$ one can compare future or past segments of trajectory (eq. \ref{eq:BufferEvolutionMission}) with reference (eq. \ref{eq:MissionReferencetrajectory})
 \end{note}
 
-\paragraph{Reference Trajectory Deviation} for reference trajectory given by (eq. \ref{eq:MissionReferencetrajectory}) and \emph{Trajectory segment} (Executed/Predicted) (\ref{eq:BufferEvolutionMission}) with existing \emph{State projection function} (eq. \ref{eq:stateprojection}) for \emph{time series} is given as:
+\paragraph{Reference Trajectory Deviation} for reference trajectory given by (eq. \ref{eq:MissionReferencetrajectory}) and \emph{Trajectory segment} (Executed/Predicted) (eq. \ref{eq:BufferEvolutionMission}) with existing \emph{State projection function} (eq. \ref{eq:stateprojection}) for \emph{time series} is given as:
 
 \begin{equation}\label{eq:ReferenceTrajectoryDeviation}
     Deviation\left(\begin{aligned}&timeSeries,\\ &Trajectory,\\ &Reference\end{aligned}\right) = \sum_{\scriptsize\begin{gathered}time_i \in\\ timeSeries\end{gathered}\normalsize} \left(\begin{gathered}StateProjection(Trajectory,time_i)\\-\\Reference(time_i)\end{gathered}\right)^2
@@ -138,19 +138,19 @@ After \emph{mission} execution, there is only \emph{executed movements} The traj
 
 \begin{equation}\label{eq:trajectoryTrackingOptimalizaitonProblem}
     \begin{aligned}
-         &\texttt{Minimize:} && costOfTrajectoryFlown &(\ref{eq:consFunctionMeta})\\
+         &\texttt{Minimize:} && costOfTrajectoryFlown &(eq. \ref{eq:consFunctionMeta})\\
          &\texttt{Minimize:} && reference Trajectory Deviation
-         &(\ref{eq:ReferenceTrajectoryDeviation})\\
+         &(eq. \ref{eq:ReferenceTrajectoryDeviation})\\
          &\texttt{Subject to:} &&&\\
-         &&&UAS\text{ }Dynamics&(\ref{eq:madSystemdefinition})\\
-         &&&MovementAutomatonControl&\begin{gathered}(\ref{eq:madInitialState})\\\vdots\\(\ref{eq:madStateProjection})\end{gathered}\\
-         &&&Mission&(\ref{eq:missionAbstractSet})\\
-         &&&KnownWorld(t)&(\ref{eq:knownWorldSet})\\
-         &&&SafetyMargin(t)&(\ref{eq:safetyMarginAbstract})\\
-         &&&HardFlightConstraints&(\ref{eq:HFlightConstraints})\\
-         &&&SoftFlightConstraints&(\ref{eq:SFlightConstraints})\\
-         &&&HardSpaceConstraints&(\ref{eq:hardSpaceConstraints})\\
-         &&&SoftSpaceConstraints&(\ref{eq:softSpaceConstraints})\\
+         &&&UAS\text{ }Dynamics&(eq. \ref{eq:madSystemdefinition})\\
+         &&&MovementAutomatonControl&\begin{gathered}(eq. \ref{eq:madInitialState})\\\vdots\\(eq. \ref{eq:madStateProjection})\end{gathered}\\
+         &&&Mission&(eq. \ref{eq:missionAbstractSet})\\
+         &&&KnownWorld(t)&(eq. \ref{eq:knownWorldSet})\\
+         &&&SafetyMargin(t)&(eq. \ref{eq:safetyMarginAbstract})\\
+         &&&HardFlightConstraints&(eq. \ref{eq:HFlightConstraints})\\
+         &&&SoftFlightConstraints&(eq. \ref{eq:SFlightConstraints})\\
+         &&&HardSpaceConstraints&(eq. \ref{eq:hardSpaceConstraints})\\
+         &&&SoftSpaceConstraints&(eq. \ref{eq:softSpaceConstraints})\\
     \end{aligned}
 \end{equation}
 
@@ -179,7 +179,6 @@ Feasible trajectory condition (eq. \ref{feasibleTrajectoryCondition}) is used as
     It is assumed that flight level in controlled airspace is free of terrain, static ground obstacles, the climb/descent maneuvers are not covered in this work, and they are topic for multiple dissertation theses. For more information refer to ICAO document 4444.
 \end{note}
 
-\newpage
 The \emph{relation} for breach of \emph{safety margin} and \emph{body margin} for each object is given in  (tab. \ref{tab:controlledAirspaceViolations}):
 
 \begin{tabularx}{\textwidth}{S{0.20}||S{0.35}|S{0.35}}
