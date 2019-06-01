@@ -134,23 +134,23 @@ After \emph{mission} execution, there is only \emph{executed movements} The traj
     \item \emph{Cost of Flown Trajectory} (eq. \ref{eq:consFunctionMeta}) in \emph{Non-controlled Airspace}.
 \end{enumerate}
 
-\noindent\emph{Trajectory tracking} can be defined as an optimization problem (eq. \ref{eq:trajectoryTrackingOptimalizaitonProblem}). 
+\newpage\noindent\emph{Trajectory tracking} can be defined as an optimization problem (eq. \ref{eq:trajectoryTrackingOptimalizaitonProblem}). 
 
 \begin{equation}\label{eq:trajectoryTrackingOptimalizaitonProblem}
     \begin{aligned}
-         &\texttt{Minimize:} && costOfTrajectoryFlown &(eq. \ref{eq:consFunctionMeta})\\
+         &\texttt{Minimize:} && costOfTrajectoryFlown &(\ref{eq:consFunctionMeta})\\
          &\texttt{Minimize:} && reference Trajectory Deviation
-         &(eq. \ref{eq:ReferenceTrajectoryDeviation})\\
+         &(\ref{eq:ReferenceTrajectoryDeviation})\\
          &\texttt{Subject to:} &&&\\
-         &&&UAS\text{ }Dynamics&(eq. \ref{eq:madSystemdefinition})\\
-         &&&MovementAutomatonControl&\begin{gathered}(eq. \ref{eq:madInitialState})\\\vdots\\(eq. \ref{eq:madStateProjection})\end{gathered}\\
-         &&&Mission&(eq. \ref{eq:missionAbstractSet})\\
-         &&&KnownWorld(t)&(eq. \ref{eq:knownWorldSet})\\
-         &&&SafetyMargin(t)&(eq. \ref{eq:safetyMarginAbstract})\\
-         &&&HardFlightConstraints&(eq. \ref{eq:HFlightConstraints})\\
-         &&&SoftFlightConstraints&(eq. \ref{eq:SFlightConstraints})\\
-         &&&HardSpaceConstraints&(eq. \ref{eq:hardSpaceConstraints})\\
-         &&&SoftSpaceConstraints&(eq. \ref{eq:softSpaceConstraints})\\
+         &&&UAS\text{ }Dynamics&(\ref{eq:madSystemdefinition})\\
+         &&&MovementAutomatonControl&\begin{gathered}(\ref{eq:madInitialState})\\\vdots\\(\ref{eq:madStateProjection})\end{gathered}\\
+         &&&Mission&(\ref{eq:missionAbstractSet})\\
+         &&&KnownWorld(t)&(\ref{eq:knownWorldSet})\\
+         &&&SafetyMargin(t)&(\ref{eq:safetyMarginAbstract})\\
+         &&&HardFlightConstraints&(\ref{eq:HFlightConstraints})\\
+         &&&SoftFlightConstraints&(\ref{eq:SFlightConstraints})\\
+         &&&HardSpaceConstraints&(\ref{eq:hardSpaceConstraints})\\
+         &&&SoftSpaceConstraints&(\ref{eq:softSpaceConstraints})\\
     \end{aligned}
 \end{equation}
 
