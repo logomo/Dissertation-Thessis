@@ -231,9 +231,7 @@
 \newcommand{\hchapterspoce}{\hspace{20pt}}
 \newcommand{\hsectuibspoce}{\hspace{15pt}}
 \newcommand{\hsubsectuibspoce}{\hspace{10pt}}
-\titleformat{\chapter}
-	[hang]
-	{\Huge}{Chapter \thechapter.\hchapterspoce}{0pt}{\Huge}[{\titlerule[1pt]}]
+\titleformat{\chapter}[hang]{\Huge}{Chapter \thechapter.\hchapterspoce}{0pt}{\Huge}[{\titlerule[1pt]}]
 \titleformat{\section}[hang]{\huge}{\thesection.\hsectuibspoce}{0pt}{\huge}[{\titlerule[0.7pt]}]
 \titleformat{\subsection}[hang]{\Large}{\thesubsection.\hsubsectuibspoce}{0pt}{\Large}[{\titlerule[0.4pt]}]
 
@@ -524,6 +522,8 @@
 %09-Apendixes
 	%\input{09AP00-AppendixTemplate}
 	% Complements of algebra 
+	% Appendix title added
+	\titleformat{\chapter}[hang]{\Huge}{Appendix \thechapter.\hchapterspoce}{0pt}{\Huge}[{\titlerule[1pt]}]
 	\input{09AP01-Complements-of-Algebra}
 	
 	
