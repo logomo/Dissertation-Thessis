@@ -18,9 +18,9 @@ Where $input(time)$ and $state(state_0,time)$ are a sets of continuous-time sign
 Frequently, such systems can be defined by differential equations that relate the input signal to the output signal.
 
 A prototypical description of a controlled (there is a control input signal) continuous-time system is:
-\begin{multline}\label{eq:nonlinearsystem}
-    \text{d}/\text{d}\text{t state}(time) =\\ f(time,state(time),input(time)), input(time) \in Inputs(time)
-\end{multline}
+\begin{equation}\label{eq:nonlinearsystem}
+    \text{d}/\text{d}\text{t state}(time) = f(time,state(time),input(time)), input(time) \in Inputs(time)
+\end{equation}
 Where $f:\mathbb{R}\times\mathbb{R}^n\times\mathbb{R}^p\to\mathbb{R}^n$ satisfies the conditions for existence and uniqueness of the ordinary differential equation and $u$ is our control \cite{butcher1987numerical}.
 
 \subsection{Discrete-time Systems}
@@ -44,4 +44,4 @@ Where $input(k)$, $state(k)$ is a set of discrete-time signals. They can be repr
     adversaryControl(time) &\in Adversary Inputs(time) \subset \R^v \\
     \end{aligned}
 \end{equation}
-This system representation is often used in definition of problem of pursuit/evasion problem. Krasovskii developed a solution approach to this problem in \cite{game1987}. A complex example of can be found in article \cite{game1988}.
+This system representation is often used in definition of problem of pursuit/evasion problem. Krasovskii developed a solution approach to this problem in \cite{game1987}, complex example in \cite{game1988}.
