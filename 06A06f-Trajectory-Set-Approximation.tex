@@ -1,3 +1,4 @@
+\newpage
 \subsection{Trajectory Set Approximation}\label{sec:trajectory set Reach set approximation}
 
 	\paragraph{Summary:} To achieve finite representation, it is necessary to establish a general relationship between the reach sets and trajectory trees, built from a set of prototypical movements.
@@ -20,7 +21,7 @@
         \begin{equation}\label{eq:ReachSetDefinitionDiscrete}
              ReachSet(\tau,time_0,state_0)=\left\{Trajectory(state_0,buffer):
              \begin{gathered}
-                \text{duration}(buffer)\\ \le\\ (time_0-\tau)
+                \text{duration}(buffer)\le\dots\\\dots\le (time_0-\tau)
              \end{gathered}\right\}
         \end{equation}
     \end{definition}
@@ -48,6 +49,7 @@
             \right\}
         \end{equation}
         
+		\newpage
         \paragraph{Properties:} \emph{Container Approximated Reach Set} contains only trajectories where all segments belong to \emph{Avoidance Grid}, there are following functions:
         \begin{enumerate}
             \item The \emph{membership function} for any \emph{Trajectory} in \emph{Constrained Reduced Reach set} returns \emph{Ordered Set} of \emph{Passing Cells}. 
