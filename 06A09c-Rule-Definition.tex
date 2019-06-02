@@ -40,19 +40,6 @@ The \emph{selection process} of active \emph{collision cases} is based on UAS \e
     During \emph{slow-down} UAS switches to \emph{emergency avoidance mode} and asks for \emph{divergence order} from UTM.
 \end{itemize}
 
-
-The \emph{ordering of collision cases} starts if and only if the \emph{UAS} is in \emph{cooperative avoidance mode}. The cases are ordered for processing based on severity rating which is calculated based on:
-\begin{enumerate}
-    \item \emph{Safety Margin} - the greater safety margins are prioritized.
-    \item \emph{Intruder vehicle class} - the more dangerous intruders are prioritized.
-    \item \emph{Collision point distance} - closer collision points are prioritized.
-    \item \emph{UAS avoidance role} - \emph{Head on Approach} is favored upon \emph{Converging maneuver}, due to direct collision severity.
-\end{enumerate}
-
-\noindent \emph{Rule engine invocation} for each \emph{active collision case} is then applied on \emph{descending severity sorted} list. 
-
-
-\newpage
 \noindent The rule is summarized in table \ref{tab:ruleDetectCollisionCases}.
 
 \begin{tabularx}{\textwidth}{|X|X|X|}
@@ -100,7 +87,17 @@ The \emph{ordering of collision cases} starts if and only if the \emph{UAS} is i
 \end{tabularx}
 
 
-\newpage
+The \emph{ordering of collision cases} starts if and only if the \emph{UAS} is in \emph{cooperative avoidance mode}. The cases are ordered for processing based on severity rating which is calculated based on:
+\begin{enumerate}
+    \item \emph{Safety Margin} - the greater safety margins are prioritized.
+    \item \emph{Intruder vehicle class} - the more dangerous intruders are prioritized.
+    \item \emph{Collision point distance} - closer collision points are prioritized.
+    \item \emph{UAS avoidance role} - \emph{Head on Approach} is favored upon \emph{Converging maneuver}, due to direct collision severity.
+\end{enumerate}
+
+\noindent \emph{Rule engine invocation} for each \emph{active collision case} is then applied on \emph{descending severity sorted} list. 
+
+
 
 
 \section{Rule: Resolve Collision Case}\label{sec:ruleResolveCollisionCase}
