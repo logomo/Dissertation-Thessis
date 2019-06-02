@@ -112,17 +112,6 @@
         \label{fig:testCaseEmergencyMixed}
     \end{figure}
     
-    \paragraph{Distance to Safety Margin Evolution:} There is a need to compare the mutual distance between each UAS. The graph (fig. \ref{fig:testCaseMultipleAvoidancePerformance}) shows six figures for each \emph{UAS systems} mutual distance (blue line) in this scenario. The \emph{Safety Margin} (red line) ($1.2$ $m$) was not breached for any pair (case). 
-    
-    The \emph{Proper avoidance invocation} is shown when UAS systems are getting closer to each other, and then they start separation phase (Emergency avoidance mode).
-            
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.9\linewidth]{\FIGDIR/NS043UtmEmergencyHeadOnMultiplePerformance} 
-        \caption{Distance to safety margin evolution for the  \emph{emergency mixed scenario}.}
-        \label{fig:testCaseMultipleAvoidancePerformance}
-    \end{figure}
-    
     \paragraph{Distance to Safety Margin Peaks:} Minimal and Maximal mutual distance to safety margin is summarized in (tab. \ref{tab:testCaseEmergencyMixedSafetyMarginDistances}). There is no detected breach for any combination. 
     
     The \emph{closest to collision} is UAS pair $2-4$ with mutual safety margin only $0.2019$ $m$. On the other side is UAS pair $1-3$ with mutual safety margin $4.3721$ $m$. 
@@ -144,7 +133,19 @@
         \caption{Distance to safety margin peaks for the \emph{emergency mixed scenario}.}
         \label{tab:testCaseEmergencyMixedSafetyMarginDistances}
     \end{table}
+      
+    \paragraph{Distance to Safety Margin Evolution:} There is a need to compare the mutual distance between each UAS. The graph (fig. \ref{fig:testCaseMultipleAvoidancePerformance}) shows six figures for each \emph{UAS systems} mutual distance (blue line) in this scenario. The \emph{Safety Margin} (red line) ($1.2$ $m$) was not breached for any pair (case). 
     
+    The \emph{Proper avoidance invocation} is shown when UAS systems are getting closer to each other, and then they start separation phase (Emergency avoidance mode).
+            
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\linewidth]{\FIGDIR/NS043UtmEmergencyHeadOnMultiplePerformance} 
+        \caption{Distance to safety margin evolution for the  \emph{emergency mixed scenario}.}
+        \label{fig:testCaseMultipleAvoidancePerformance}
+    \end{figure}
+   
+
     \noindent\paragraph{Path Tracking Performance:} All waypoints (Green numbered squares) for all UAS have been reached (fig. \ref{fig:testCaseEmergencyMixedTrajectoryTracking}). \emph{Reference trajectories} (green dashed line) have been tracked by \emph{UAS real path} (solid blue line) almost all time. 
     
     \begin{figure}[H]
@@ -178,8 +179,6 @@
         \label{fig:testCaseEmergencyMixedTrajectoryTracking}
     \end{figure}
     
-   
-\newpage
     Following observations can be made from \emph{path tracking} (fig. \ref{fig:testCaseEmergencyMixedTrajectoryTracking}) and \emph{preferred separations} (tab. \ref{tab:aboidanceParametersForEmergencyMixedScenario}):
     
     \begin{enumerate}
@@ -191,9 +190,6 @@
         
         \item UAS 4 (fig. \ref{fig:emergencyMixedPathTrackingUAS4}) is using horizontal separation (x-axis right/left), having preferred vertical separation. This UAS has used opposite separation type to preferred.
     \end{enumerate}
-    
-    
-    
     
     \noindent\paragraph{Path Tracking Deviations:} \emph{Deviations} (tab. \ref{tab:pathTrackingParametersForEmergencyMixed}) are in expected ranges considering the \emph{mission plans} (tab. \ref{tab:missionSetupEmergencyMixedScenario}) and \emph{separation safety margins} (tab. \ref{tab:aboidanceParametersForEmergencyMixedScenario}).
     
