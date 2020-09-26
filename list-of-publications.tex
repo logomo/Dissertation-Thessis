@@ -1,0 +1,525 @@
+%% fcup-thesis.tex -- document template for PhD theses at FCUP
+%%
+%% Copyright (c) 2015 João Faria <joao.faria@astro.up.pt>
+%%
+%% This work may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license
+%% or (at your option) any later version.
+%% The latest version of this license is in
+%%     http://www.latex-project.org/lppl.txt
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status "maintained".
+%%
+%% The Current Maintainer of this work is
+%% João Faria <joao.faria@astro.up.pt>.
+%%
+%% This work consists of the files listed in the accompanying README.
+
+%% SUMMARY OF FEATURES:
+%%
+%% All environments, commands, and options provided by the `ut-thesis'
+%% class will be described below, at the point where they should appear
+%% in the document.  See the file `ut-thesis.cls' for more details.
+%%
+%% To explicitly set the pagestyle of any blank page inserted with
+%% \cleardoublepage, use one of \clearemptydoublepage,
+%% \clearplaindoublepage, \clearthesisdoublepage, or
+%% \clearstandarddoublepage (to use the style currently in effect).
+%%
+%% For single-spaced quotes or quotations, use the `longquote' and
+%% `longquotation' environments.
+
+
+%%%%%%%%%%%%         PREAMBLE         %%%%%%%%%%%%
+
+%%  - Default settings format a final copy (single-sided, normal
+%%    margins, one-and-a-half-spaced with single-spaced notes).
+%%  - For a rough copy (double-sided, normal margins, double-spaced,
+%%    with the word "DRAFT" printed at each corner of every page), use
+%%    the `draft' option.
+%%  - The default global line spacing can be changed with one of the
+%%    options `singlespaced', `onehalfspaced', or `doublespaced'.
+%%  - Footnotes and marginal notes are all single-spaced by default, but
+%%    can be made to have the same spacing as the rest of the document
+%%    by using the option `standardspacednotes'.
+%%  - The size of the margins can be changed with one of the options:
+%%     . `narrowmargins' (1 1/4" left, 3/4" others),
+%%     . `normalmargins' (1 1/4" left, 1" others),
+%%     . `widemargins' (1 1/4" all),
+%%     . `extrawidemargins' (1 1/2" all).
+%%  - The pagestyle of "cleared" pages (empty pages inserted in
+%%    two-sided documents to put the next page on the right-hand side)
+%%    can be set with one of the options `cleardoublepagestyleempty',
+%%    `cleardoublepagestyleplain', or `cleardoublepagestylestandard'.
+%%  - Any other standard option for the `report' document arclass can be
+%%    used to override the default or draft settings (such as `10pt',
+%%    `11pt', `12pt'), and standard LaTeX packages can be used to
+%%    further customize the layout and/or formatting of the document.
+
+%% *** Add any desired options. ***
+%PDF
+%\documentclass[a4paper,narrowmargins,11pt,oneside,draft,onehalfspaced,singlespacednotes]{fcup-thesis}
+\documentclass[a4paper,narrowmargins,11pt,oneside,onehalfspaced,singlespacednotes]{fcup-thesis}
+%Print
+%\documentclass[draft,a4paper,narrowmargins,11pt,twoside,openright,onehalfspaced,singlespacednotes]{fcup-thesis}
+%\documentclass[a4paper,narrowmargins,11pt,twoside,openright,onehalfspaced,singlespacednotes]{fcup-thesis}
+
+%% *** Add \usepackage declarations here. ***
+%% The standard packages `geometry' and `setspace' are already loaded by
+%% `ut-thesis' -- see their documentation for details of the features
+%% they provide.  In particular, you may use the \geometry command here
+%% to adjust the margins if none of the ut-thesis options are suitable
+%% (see the `geometry' package for details).  You may also use the
+%% \setstretch command to set the line spacing to a value other than
+%% single, one-and-a-half, or double spaced (see the `setspace' package
+%% for details).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Overfull statements fix %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pretolerance=150
+\setlength{\emergencystretch}{3em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Standard british babel %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}
+
+% Enable array for text formatting 
+\usepackage{array}
+
+% Standard Mathematics library 
+\usepackage{amsmath}  
+
+% Standard symbols for asmath library
+\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Override the basic math font with arial %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Math font specification package
+\usepackage{mathspec}
+
+% Proporitional lining for digits latin and greek letters
+\setmathsfont(Digits)[Numbers={Lining,Proportional}]{Arial}
+\setmathsfont(Latin)[Numbers={Lining,Proportional}]{Arial}
+\setmathsfont(Greek)[Numbers={Lining,Proportional}]{Arial}
+
+% Main direction symbols for integrals derivations etc
+\usepackage{mdsymbol}
+
+% asmath symbols and additional library
+\usepackage{amsthm}      
+
+% Enable usage of Eulerscript for special math symbols
+\usepackage[mathscr]{euscript}
+
+%%%%%%%%%%%%%%
+% Algorithms %
+%%%%%%%%%%%%%%
+% Enable algorithms - nice format use chapter numbering
+\usepackage[ruled,algochapter]{algorithm2e}
+
+% custom keywords for alggorithms
+\usepackage{algorithmic}
+
+%%%%%%%%
+% Misc %
+%%%%%%%%
+% Enable bold symbols in math mode (unused ?)
+\usepackage{bm}
+
+% Enhanced support for graphics (ugly hack on big schemes)
+\usepackage{graphicx}       
+
+% Replace strings in encapsulated PostScript figures (Arial to my PS files ...)
+\usepackage{psfrag}         
+
+% Sophisticated verbatim text (nice notes and foootnotes)
+\usepackage{fancyvrb}    
+
+%Im­proves the in­ter­face for defin­ing float­ing ob­jects such as fig­ures and ta­bles. In­tro­duces the boxed float, the ruled float and the plain­top float. You can de­fine your own floats and im­prove the be­haviour of the old ones.  The pack­age also pro­vides the H float mod­i­fier op­tion of the ob­so­lete here pack­age. You can se­lect this as au­to­matic de­fault with \float­place­ment{fig­ure}{H}. (Nice floats and fixed figures/algorithms/equations).
+\usepackage{float}
+
+%Mod­i­fies the tab­u­larx en­vi­ron­ment to com­bine the fea­tures of the tab­u­larx pack­age (auto-sized columns in a fixed width ta­ble) with those of the longtable pack­age (multi-page ta­bles). 
+\usepackage{ltablex}
+
+%Library bibtex wrapper, square brackets, sort by first author surname, use coma seprarator, use number labeling
+\usepackage[square,sort,comma,numbers]{natbib}        
+
+%A sym­bol font (dis­tributed as METAFONT source) that con­tains many of the sym­bols of the Zapf ding­bats set, to­gether with an NFSS in­ter­face for us­ing the font.
+\usepackage{bbding}
+
+%The dcol­umn pack­age makes use of the ar­ray pack­age to de­fine a "D" col­umn for­mat for use in tab­u­lar en­vi­ron­ments. (Multicollumn enviroment , layered tables)
+\usepackage{dcolumn}        
+
+%The pack­age en­hances the qual­ity of ta­bles in LATEX, pro­vid­ing ex­tra com­mands as well as be­hind-the-scenes op­ti­mi­sa­tion. Guide­lines are given as to what con­sti­tutes a good ta­ble in this con­text. From ver­sion 1.61, the pack­age of­fers longtable com­pat­i­bil­ity. (Yet another table hacks)
+\usepackage{booktabs} 
+
+%The pack­age has a lot of flex­i­bil­ity, in­clud­ing an op­tion for spec­i­fy­ing an en­try at the “nat­u­ral” width of its text. (Multirow cells in table headres)
+\usepackage{multirow}
+
+%Pro­vides enu­mer­ate and item­ize en­vi­ron­ments that can be used within para­graphs to for­mat the items ei­ther as run­ning text or as sep­a­rate para­graphs with a pre­ced­ing num­ber or sym­bol. (Nice paragraph/itemize/enumerate) package
+\usepackage{paralist}     
+
+%Draft only enviromental enabler (Deprecated - for table debug mainly)
+\usepackage{ifdraft}  
+
+% indentfirst – Indent first paragraph after section header by default disabled 
+%\usepackage{indentfirst}    
+
+% Add bibliography/index/contents to Table of Contents (\bibliography{*} command)
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+
+% Pretty and clickable urls in 
+\usepackage{url}
+
+% multiline collumn tables (Nomenclature)
+\usepackage{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table figure caption subcaption %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% use font size for captions like 8pt -> normalisize 11pt, scriptsize->8pt
+\usepackage[font={scriptsize}]{caption}
+
+% use font size for captions like 8pt -> normalisize 11pt, scriptsize->8pt
+\usepackage[font={scriptsize}]{subcaption}
+
+% Other packages caption setup, just for ensurance
+\captionsetup{font=scriptsize}
+
+% Hypper references - clickable labels 
+\usepackage[unicode]{hyperref}
+
+% Specific color package - color by name hex, cmyk etc.
+\usepackage{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document setup for referencing %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{pdftitle=Obstacle Avoidance Framework based on Reach Sets, 
+            pdfauthor=Alojz Gomola,
+            colorlinks=false,
+            urlcolor=blue,
+            pdfstartview=FitH,
+            pdfpagemode=UseOutlines,
+            pdfnewwindow,
+            breaklinks
+          }
+%%%%%%%%%%%%%%%%%%%%%%          
+%% Arrays in tables %%
+%%%%%%%%%%%%%%%%%%%%%%       
+% Array package import
+\usepackage{array}
+
+% Left alignement
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Center alignement
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Right alignement
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}         
+
+% Multiline column with text filling
+\newcolumntype{B}{X}
+
+% Multiline column with X percentage of text width
+\newcolumntype{S}[1]{>{\hsize=#1\textwidth}X}
+
+% twoline cell definition macro
+\newcommand{\twolinecellr}[2][r]{%
+  \begin{tabular}[#1]{@{}r@{}}#2\end{tabular}}
+
+% Section state macro - deprecated used during writting of thesis
+\newcommand{\secState}[1]{
+	\ifdraft{(#1) }{}
+}
+
+%%%%%%%%%%%%%%%%%%%%
+% Figure directory %
+%%%%%%%%%%%%%%%%%%%%
+\newcommand{\FIGDIR}{./Pics}    %%% directory containing figures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorems/defs and other structured referables%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plain style of theorems - inline in text
+\theoremstyle{plain}
+
+% Theorem keyword definition
+\newtheorem{theorem}{Theorem}
+
+% Lemma for theorem keyword definition
+\newtheorem{lemma}[theorem]{Lemma}
+
+% Proposition for theorem keyword definition 
+\newtheorem{proposition}[theorem]{Proposition}
+
+% If different theorem type for proof/problem/definition is required
+\theoremstyle{plain}
+
+% Definition keyword
+\newtheorem{definition}{Definition}
+
+% Problem keyword
+\newtheorem{problem}{Problem}
+
+% Example keyword
+\newtheorem{example}{Example}
+
+% Assumnption keyword
+\newtheorem{assumption}{Assumption}
+
+% Remark style without numbering
+\theoremstyle{remark}
+
+% Corollary keyword definition
+\newtheorem*{corollary}{Corollary}
+% Note keyword definition
+\newtheorem*{note}{Note}
+
+%Proof of the theorem, without numbering (discontinued)
+\newenvironment{dokaz}{
+  \par\medskip\noindent
+  \textit{Proof}.
+}{
+\newline
+\rightline{\SquareCastShadowBottomRight}
+}
+
+%Contraint of the theorem/proof numbering (discontinued)
+\newenvironment{constraints}[1]{
+  \par\medskip\noindent
+  \textit{Constraints #1} \\
+}{
+\newline
+\rightline{\SquareCastShadowBottomRight}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Additional bibliography settings %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliographystyle{plainnat}     %% Author (year) style
+\bibliographystyle{unsrt}        %% [number] style
+\setcitestyle{square}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section  4.7 Challenge list %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\ifproblemchallenge   %# Build block for problem challenges
+\problemchallengetrue       %# Show comments
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Custom Math commands %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Real numbers set
+\newcommand{\R}{\mathbb{R}}
+
+% Natural numbers set
+\newcommand{\N}{\mathbb{N}}
+
+% Natural distribution
+\DeclareMathOperator{\pr}{\textsf{P}}
+
+% Euclid distribution
+\DeclareMathOperator{\E}{\textsf{E}\,}
+
+% Standard derivation
+\DeclareMathOperator{\var}{\textrm{var}}
+
+% Variation
+\DeclareMathOperator{\sd}{\textrm{sd}}
+
+% Top description
+\newcommand{\T}[1]{#1^\top}        
+
+% Reference 
+\newcommand{\goto}{\rightarrow}
+
+% Reference top
+\newcommand{\gotop}{\stackrel{P}{\longrightarrow}}
+
+% Average complexity of algorithm
+\newcommand{\maon}[1]{o(n^{#1})}
+
+% absolute value of compbound equation
+\newcommand{\abs}[1]{\left|{#1}\right|}
+
+% Inverted sqare of the value
+\newcommand{\isqr}[1]{\frac{1}{\sqrt{#1}}}
+
+% Norm of the compobound equation
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% random distribution box
+\newcommand{\pulrad}[1]{\raisebox{1.5ex}[0pt]{#1}}
+
+% another ugly multicolum in equation
+\newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+
+% To be done block in red collor only in draft mode
+\newcommand{\TBD}[1]{\color{red}\emph{--TBD:}#1\color{black}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set arial as default font using MS word 2003 Arial font definition %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fontspec}
+\setmainfont[
+	Path={fonts/},
+	UprightFont=*-Regular,
+	ItalicFont=*-Italic,
+	BoldFont=*-Bold,
+	BoldItalicFont=*-Bold-Italic
+]{Arial}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Renew title section  %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{titlesec}
+
+% Define special thick after header lines for chapter/section/subsection
+\newcommand{\hchapterspoce}{\hspace{20pt}}
+\newcommand{\hsectuibspoce}{\hspace{15pt}}
+\newcommand{\hsubsectuibspoce}{\hspace{10pt}}
+
+%Chapter hanger 20 pt
+\titleformat{\chapter}[hang]{\Huge}{\thechapter.\hchapterspoce}{0pt}{\Huge}[{\titlerule[1pt]}]
+
+%Section hanger 16 pt
+\titleformat{\section}[hang]{\huge}{\thesection.\hsectuibspoce}{0pt}{\huge}[{\titlerule[0.7pt]}]
+
+%Subsection hanger 14 pt
+\titleformat{\subsection}[hang]{\Large}{\thesubsection.\hsubsectuibspoce}{0pt}{\Large}[{\titlerule[0.4pt]}]
+
+%Renew commands for sin cos max min
+\renewcommand{\sin}{\text{sin}}
+\renewcommand{\cos}{\text{cos}}
+\renewcommand{\max}{\text{max}}
+\renewcommand{\min}{\text{min}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                    %%
+%%                   ***   I M P O R T A N T   ***                    %%
+%%                                                                    %%
+%%  Fill in the following fields with the required information:       %%
+%%   - \degree{...}       name of the degree obtained                 %%
+%%   - \department{...}   name of the graduate department             %%
+%%   - \gradyear{...}     year of graduation                          %%
+%%   - \author{...}       name of the author                          %%
+%%   - \title{...}        title of the thesis                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% *** Change this example to appropriate values. ***
+\degree{Doctor of Philosophy}
+\department{Departamento de Matem\'{a}tica}
+\gradyear{2019}
+\author{Alojz Gomola}
+\title{Obstacle Avoidance Framework based on Reach Sets}
+
+%% *** NOTE ***
+%% Put here all other formatting commands that belong in the preamble.
+%% In particular, you should put all of your \newcommand's,
+%% \newenvironment's, \newtheorem's, etc. (in other words, all the
+%% global definitions that you will need throughout your thesis) in a
+%% separate file and use "\input{filename}" to input it here.
+
+
+%% *** Adjust the following settings as desired. ***
+
+%% List only down to subsections in the table of contents;
+%% 0=chapter, 1=section, 2=subsection, 3=subsubsection, etc.
+\setcounter{tocdepth}{3}
+
+%% Make each page fill up the entire page.
+\flushbottom
+
+
+%%%%%%%%%%%%      MAIN  DOCUMENT      %%%%%%%%%%%%
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Put your Chapters here; the easiest way to do this is to keep     %%
+%%  each chapter in a separate file and `\include' all the files.     %%
+%%  Each chapter file should start with "\chapter{ChapterName}".      %%
+%%  Note that using `\include' instead of `\input' will make each     %%
+%%  chapter start on a new page, and allow you to format only parts   %%
+%%  of your thesis at a time by using `\includeonly'.                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% *** Include chapter files here. ***
+\chapter*{List of Publications}\label{sec:listOfPublications}
+
+\noindent This \emph{section} contains the list of published articles, proceedings, technical reports and module projects.
+
+%   My First Article Ever!
+\paragraph{Article:} Alojz Gomola, Joao Borges de Sousa, Fernando Lobo Pereira, and Pavel Klang. Obstacle avoidance framework based on reach sets. In Iberian Robotics conference, pages 768–779. Springer, 2017. \cite{gomola2017obstacle}\footnote{Draft available online: \url{https://goo.gl/kZujZE}}.
+
+\emph{Summary:} This report on preliminary investigations concerning the development of a LiDAR-based detect and avoid (DAA) system with a low computational footprint for small Unmanned Air Systems. The focus is on the integration with nominal flight control systems and computational feasibility. The proposed system decomposes the SAA problem into the following components detection, space assessment, escape trajectory estimation and avoidance execution. The control logic is encoded with the help of a hybrid automaton. The properties of the system are studied with the help of approximations to time slices of the UAV reach set.
+
+
+\paragraph{Article:}  Juraj {\v{S}}tevek,  Michal  Kvasnica,  Miroslav  Fikar,  and  Alojz  Gomola. A  parametric programming  approach  to  automated  integrated  circuit  design. IEEE Transactions on Control Systems Technology, 26(4):1180–1191, 2018. \cite{vstevek2018parametric}\footnote{IEEE copy online: \url{https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7981386}}.
+
+\emph{Summary:} The proposal of an optimization-based slotting approach to automated \emph{integrated circuit} design for generating a power transistor. The original slotting problem is formulated as a mixed-integer linear program. It is solved through parametric optimization with an advantage that usage of any commercial optimization solvers on user’s side is avoided with short evaluation time and simple implementation. The approach is applied in specific very large scale integration production technology and demonstrated on an example.
+
+\emph{Contributions:} Point-location algorithm for MPC region selection. 
+
+\paragraph{Proceedings:} Kristian Klausen, Jostein Borgen Moe, Jonathan Cornel van den Hoorn, Alojz Gomola, Thor I Fossen, and Tor Arne Johansen. Coordinated control concept for recovery of a fixed-wing uav on a ship using a net carried by multirotor UAVs.  In Unmanned Aircraft Systems (ICUAS), 2016 International Conference on, pages 964–973. IEEE, 2016, \cite{klausen2016coordinated}\footnote{Public copy available online: \url{http://folk.ntnu.no/torarnj/ICUAS2016_singlecolumn.pdf}}.
+
+\emph{Summary:} Ship-based Unmanned Aerial Vehicle (UAV) operations represent an important field of research which enables a large variety of mission types. Most of these operations demand a high level of endurance which normally requires the use of a fixed-wing UAV. Traditionally, a net located on the ship deck is used for recovering the fixed-wing UAV. However, there are numerous challenges when attempting autonomous landings in such environments. Waves will induce heave motion, and turbulence near the ship will make approaches challenging. In this paper, we present a concept using multi-rotor UAVs to move the recovery operation off the ship deck. To recover the fixed-wing UAV, a net is suspended below two coordinated multirotor UAVs which can synchronize the movement with the fixed-wing UAV. The approach trajectory can be optimized with respect to the wind direction, and turbulence caused by the ship can be avoided. In addition, the multirotor UAVs can transport the net at a certain speed along the trajectory of the fixed-wing UAV, thus decreasing the relative velocity between the net and fixed-wing UAV to reduce the forces of impact. This paper proves the proposed concept through a simulation study and a preliminary control system architecture.
+
+\emph{Contributions:} Ground station maneuver implementation, messaging between ground station/UAVs. RTK-GPS for precise navigation integration, Net-release mechanism design, Mechanical parts for 3D printer modeling. 
+
+\paragraph{Proceedings:}  Alojz Gomola.  An aspect-oriented solution for mutual exclusion in embedded systems. In Alena Kozakova, editor, ELITECH15: 17th Conference of doctoral students, pages 964–973, Bratislava, Slovak Republic, May 2015. Online publication, \cite{gomola2015aspectOriented}\footnote{Draft available online: \url{https://github.com/logomo/Elitech15-paper}}.
+
+\emph{Summary:} Embedded systems are developed for a wide range of applications. The best-known applications are industrial process control and banking solutions. Fault tolerance is a crucial requirement in long-term embedded systems. This paper presents solution for mutual exclusion in embedded systems. The usual mutual exclusion solution using semaphores is a crosscutting concern. Semaphores are difficult to maintain in code, and their failure rate is high. We propose new aspect-oriented solution for mutual exclusion. Our solution utilizes aspect-oriented approach, is usable in other systems and designed to be robust against program changes, and it provides a solution to aspect fragility problem.
+
+\paragraph{Technical report:} Alojz Gomola, Pavel Klang, and Jan Ludvik. Probabilistic approach in data fusion for obstacle avoidance framework based on reach sets. In Internal publication collection, pages 1–93. Honeywell, 2017, \cite{gomola2017probabilistic}\footnote{Public copy available online: \url{https://github.com/logomo/Data-Fusion-Report}}.
+
+\emph{Summary:} The \emph{sensor input} and \emph{information sources} fusion procedure design to obtain rated space assessment for visibility, obstacle occupancy, and reachability evaluation. A unique statistical approach was proposed to couple partial ratings under reading and time uncertainty. The key contribution is scalable approach to evaluate \emph{UAS action space} and \emph{Feasible Trajectories} properties. 
+
+\paragraph{Technical report:}  Alojz Gomola. Model predictive control of unmanned air vehicles with obstacle avoidance capabilities, technical report, FEUP, 2017, \cite{gomola2017mpc}\footnote{Public copy available online: \url{https://github.com/logomo/Predictive-control---Final-report}}.
+
+\emph{Summary:} Initial solution of \emph{predictive control} problem for \emph{UAS} navigation in constrained, non-controlled airspace. The key contribution is \emph{Movement Automaton} (a special type of hybrid automaton) establishment in current form (sec. \ref{sec:MovementAutomatonBackground}). The \emph{stability}, \emph{controllability} and \emph{observability} properties have been proven. The \emph{feasibility} of \emph{Movement Automaton} as \emph{control interface} and \emph{future state predictor} has been shown through formal proof and excessive testing.
+
+\paragraph{Technical report:} Alojz  Gomola.   Optimal  control  of  unmanned  air  vehicles  with  obstacle  avoidance capabilities in partially known environment.  Technical report, FEUP, 2017. \cite{gomola2017optimal}\footnote{Public copy available online: \url{https://github.com/logomo/Optimal-Control}}.
+
+\emph{Summary:} The \emph{optimization problem} for \emph{obstacle avoidance} (eq. \ref{eq:trajectoryTrackingOptimalizaitonProblem}) to satisfy \emph{avoidance requirements} (sec. \ref{s:AvoidanceRequirements}) 
+
+\paragraph{Framework:} Feature-based ACAS\footnote{Matlab prototype available online: \url{https://github.com/logomo/Feature-based-ACAS}} implementation to support claims of this work has been developed through the course of years \emph{2016-2019}. The framework provides: 
+\begin{enumerate}
+    \item \emph{Simulation environment} - full support for single/multiple UAS simulation support in controlled/non-controlled airspace.
+    
+    \item \emph{Mission Control Support} - standard mission control support for \emph{sparse ordered waypoint} mission type. 
+    
+    \item \emph{UAS Traffic Management} - support for \emph{collaborative} weather and collision avoidance with general authority in controlled airspace. The configurable \emph{event-handling} through \emph{rule-engine}.
+    
+    \item \emph{Encounter Models} - the model for \emph{static obstacles} supporting point-cloud generation of LiDAR sensor, various intruders model supporting the ADS-B like encounter model, static/dynamic polygon constraints with altitude range. 
+    
+    \item \emph{Collision Avoidance} - the support for \emph{cooperative} and \emph{non-cooperative} behavior in controlled airspace, \emph{non-collaborative, non-adversary} behavior in non-controlled airspace. 
+    
+    \item \emph{Reach Set Estimation Methods} - four methods for various property focused \emph{Reach Set Estimations}.
+\end{enumerate}
+
+
+
+	
+%% This adds a line for the Bibliography in the Table of Contents.
+\addcontentsline{toc}{chapter}{Bibliography}
+%% *** Set the bibliography style. ***
+%% (change according to your preference/requirements)
+%\bibliographystyle{plain}
+%% *** Set the bibliography file. ***
+%% ("thesis.bib" by default; change as needed)
+\bibliography{thesis}
+
+%% *** NOTE ***
+%% If you don't use bibliography files, comment out the previous line
+%% and use \begin{thebibliography}...\end{thebibliography}.  (In that
+%% case, you should probably put the bibliography in a separate file and
+%% `\include' or `\input' it here).
+
+\end{document}
