@@ -16,7 +16,7 @@
 %% João Faria <joao.faria@astro.up.pt>.
 %%
 %% This work consists of the files listed in the accompanying README.
-ne,
+
 %% SUMMARY OF FEATURES:
 %%
 %% All environments, commands, and options provided by the `ut-thesis'
@@ -61,10 +61,10 @@ ne,
 %% *** Add any desired options. ***
 %PDF
 %\documentclass[a4paper,narrowmargins,11pt,oneside,draft,onehalfspaced,singlespacednotes]{fcup-thesis}
-%\documentclass[a4paper,narrowmargins,11pt,oneside,onehalfspaced,singlespacednotes]{fcup-thesis}
+\documentclass[a4paper,narrowmargins,11pt,oneside,onehalfspaced,singlespacednotes]{fcup-thesis}
 %Print
 %\documentclass[draft,a4paper,narrowmargins,11pt,twoside,openright,onehalfspaced,singlespacednotes]{fcup-thesis}
-\documentclass[a4paper,narrowmargins,11pt,twoside,openright,onehalfspaced,singlespacednotes]{fcup-thesis}
+%\documentclass[a4paper,narrowmargins,11pt,twoside,openright,onehalfspaced,singlespacednotes]{fcup-thesis}
 
 %% *** Add \usepackage declarations here. ***
 %% The standard packages `geometry' and `setspace' are already loaded by
@@ -388,7 +388,7 @@ ne,
 \newcommand{\hsubsectuibspoce}{\hspace{10pt}}
 
 %Chapter hanger 20 pt
-\titleformat{\chapter}[hang]{\Huge}{Chapter \thechapter.\hchapterspoce}{0pt}{\Huge}[{\titlerule[1pt]}]
+\titleformat{\chapter}[hang]{\Huge}{\thechapter.\hchapterspoce}{0pt}{\Huge}[{\titlerule[1pt]}]
 
 %Section hanger 16 pt
 \titleformat{\section}[hang]{\huge}{\thesection.\hsectuibspoce}{0pt}{\huge}[{\titlerule[0.7pt]}]
@@ -441,80 +441,6 @@ ne,
 %%%%%%%%%%%%      MAIN  DOCUMENT      %%%%%%%%%%%%
 
 \begin{document}
-
-%% This sets the page style and numbering for preliminary sections.
-\begin{preliminary}
-
-%% This generates the title page from the information given above.
-\maketitle
-
-%% There should be NOTHING between the title page and abstract.
-%% However, if your document is two-sided and you want the abstract
-%% _not_ to appear on the back of the title page, then uncomment the
-%% following line.
-\cleardoublepage
-
-
-%% This generates a "dedication" section, if needed
-%% (uncomment to have it appear in the document).
-\begin{dedication}
-%% *** Put your Dedication here. ***
-\input{00T05-Dedication}
-\end{dedication}
-
-%% This generates an "acknowledgements" section, if needed
-%% (uncomment to have it appear in the document).
-\begin{acknowledgements}
-% *** Put your Acknowledgements here. ***
-\input{00T04-Acknowledgement}
-\end{acknowledgements}
-
-
-
-%% This generates the abstract page, with the line spacing adjusted
-\begin{abstract}
-%% *** Put your Abstract here. ***
-\input{00T07-Abstract}
-%% (At most 150 words for M.Sc. or 350 words for Ph.D.)
-\end{abstract}
-
-\begin{abstract-pt}
-%% *** Put your Abstract here. ***
-\input{00T07-Resumo}
-%% (At most 150 words for M.Sc. or 350 words for Ph.D.)
-\end{abstract-pt}
-
-
-
-%% Anything placed between the abstract and table of contents will
-%% appear on a separate page since the abstract ends with \newpage and
-%% the table of contents starts with \clearpage.  Use \cleardoublepage
-%% for anything that you want to appear on a right-hand page.
-
-
-%% This generates the Table of Contents (on a separate page).
-\tableofcontents
-
-%% This generates the List of Tables (on a separate page), if needed
-%% (uncomment to have it appear in the document).
-\listoftables
-
-%% This generates the List of Figures (on a separate page), if needed
-%% (uncomment to have it appear in the document).
-\listoffigures
-
-%% You can add commands here to generate any other material that belongs
-%% in the head matter (for example, List of Plates, Index of Symbols, or
-%% List of Appendices).
-\listofalgorithms
-
-\newpage
-\cleardoublepage
-\input{00T02-Nomenclature}
-%% End of the preliminary sections: reset page style and numbering.
-\end{preliminary}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  Put your Chapters here; the easiest way to do this is to keep     %%
 %%  each chapter in a separate file and `\include' all the files.     %%
@@ -526,209 +452,106 @@ ne,
 
 %% *** Include chapter files here. ***
 %01-Introduction
-    \input{01I01-Introduction}
-    \input{01I02-Motivation}
-    \input{01I03-Goals}
-    \input{01I04-Overview}
-    \input{01I05-Contributions}
-    \input{01I06-ListOfPublications}
+\section*{Topic Introduction - UAS in Controlled Airspace}\label{s:motivation}
+\noindent The commercial potential of \emph{Unmanned Autonomous Systems} (UAS) is significant  enough to initiate one of the most significant changes in \emph{aviation} history \cite{airbusUTM2018blueprint}. The current \emph{usage} of UAS is limited by \emph{strict regulations} \cite{icao4444,icaoAnnex2,icaoAnnex11}. The goal is to enable \emph{full integration} of UAS in \emph{European airspace} by the end of the year 2035 \cite{eurocontrol2018rpasatm}.
 
-%02-Collision Avoidance
-    \input{02C01-Collision-Avoidance}
-    \input{02C02-Airspace-Clasification}
-    \input{02C03-Operational-Rules}
 
-	%02-04 Remaining well clear
-    \input{02C04-WellClear-ATC}
-    	\input{02C04a-Air-Traffic-Controll}
-    	\input{02C04b-ACAS}
-    	\input{02C04c-TCAS}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{\FIGDIR/I001TrafficManagement}
+    \caption{Present and future \emph{Air Traffic Management} (ATC) \cite{airbusUTM2018blueprint}.}
+    \label{fig:airTrafficManagementEvolution}
+\end{figure}
+
+\paragraph{UAS integration into Air Traffic:} The major effort is focused on \emph{Air Traffic Control} (ATC) changes. The \emph{actual} organization and management of airspace is centralized and \emph{human operated}.  
+
+The \emph{ongoing changes} are shown in (fig. \ref{fig:airTrafficManagementEvolution}). The \emph{UAS Traffic Management} (UTM) complementing ATC is introduced to manage unmanned aviation. The additional traffic hubs, for UAS \emph{delivery \& transportation} services, are added. The greatest change is on previously \emph{low-altitude uncontrolled} airspace; this space has new authority (UTM). The future UAS must implement mechanisms for \emph{event-based} navigation and avoidance.
+
+Since 2014, there is a visible strong political support for developing rules on drones, but regulations are harmonizing slowly. The European Aviation Safety Agency (EASA) has been tasked to develop a regulatory framework for drone operations and proposals for the regulation of "low-risk" UAV/UAS operations. In achieving this, EASA is working closely with the Joint Authorities for Regulation of Unmanned Systems (JARUS) \cite{jarus2016regulations}.
+
+The \emph{operational rules} with \emph{rules of the air} \cite{icaoAnnex2} which are enforced now are simple. The \emph{future flight rules} (fig. \ref{fig:flightRulesIntro}) will be more complicated including the precise waypoint system and more complex missions. The future flight rules will be micro-managed by UTM.
+
+The \emph{increase} of \emph{traffic density} increases the \emph{accident probability/severity}.  Different threats are endangering UAS; the \emph{obstacles} impose eminent destruction threat, intruders can cooperate in mutual avoidance, the weather avoidance becomes more critical, the international/national authority can impose additional operational constraints. These threats need to be well managed and prioritized to guarantee safe UAS operations.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{\FIGDIR/I002FlightRules}
+    \caption{Flight rules overview. \cite{airbusUTM2018blueprint}.}
+    \label{fig:flightRulesIntro}
+\end{figure}
+
+\paragraph{Detect \& Avoid:} The other approach is bottom-up, that means the development of basic, adaptable functionality to cover complex navigation/avoidance tasks in \emph{controlled airspace}. The intuitive definition of \emph{Detect \& Avoid} (DAA) functionality is given in (fig. \ref{fig:detectAdnAvoidIntroduction}).
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{\FIGDIR/I003DetectAndAvoid}
+    \caption{\emph{Detect \& Avoid} (DAA) principle \cite{jenie2014velocity}.}
+    \label{fig:detectAdnAvoidIntroduction}
+\end{figure}
+
+The \emph{short term avoidance} can be chained into \emph{long term navigation}. This long term navigation can be used to solve \emph{UTM/ATM} imposed constraints, under assumption that there is sufficient \emph{data fusion}.
+
+\paragraph{Challenge Motivation:} Both \emph{Air Traffic Control} and \emph{Detect \& Avoid} requires a tool to assess possible UAS maneuvering:
+
+\begin{enumerate}
+    \item \emph{Air Traffic Control} needs to know the UAS maneuvering capabilities in order to \emph{validate} feasibility of \emph{issued orders} and to predict a future \emph{trajectory} for \emph{collision prevention}.
+    
+    \item \emph{Detect \& Avoid} needs to calculate feasible \emph{system constraints feasible maneuvering strategy} in finite time to ensure own safety. 
+\end{enumerate}
+
+\section*{Proposal for Research Topics}
+\paragraph{The Deterministic solution} (fig. \ref{fig:missionControlRunActivityDiagram}), developed as a result of my previous research \cite{gomola2017probabilistic,gomola2017obstacle}, is incorporating decision making on:
+\begin{enumerate}
+	\item\emph{Short-term decision level} - the UAS is selecting short term path (10 s frame) every one second to avoid any intermediate threats.
+	\item\emph{Long-term  decision level} - the UAS is creating long term plan every 10 s based on authority (UTM) commands and long term surroundings.
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{\FIGDIR/TE026AvoidanceAlgorithmMainLoopRun}
+    \caption{Mission control run activity diagram.}
+    \label{fig:missionControlRunActivityDiagram}
+\end{figure}
+
+\subsection*{Topic 1: Active Learning For Decision Making}
+\paragraph{Issue:} The current solution (fig. \ref{fig:missionControlRunActivityDiagram}) implements hard wired decision making about short term intruder avoidance. It also lacks capability to distinguish between intruder(obstacle) and adversary (attacker) behavior.
+
+\paragraph{Key Idea:} The UAS shall be equipped with ADS-B sensor and passive by 2035. These sensors are already deployed in manned aviation and data sets are available. The key idea is to research self organizing neural networks which will adapt to the operational environment (pizza delivery vs. disaster zone).
+
+\paragraph{Approach:} Preparation of referential data set based on publicly available/simulated data. Creation of test environment with intruders (friendly). Development of adaptive NN for intruders. Introduction of adversary (enemy) into the environment. Improvement of algorithm, experimenting with various approaches
+
+
+\paragraph{Possible Contributions:} Adaptable autonomous UAS navigation, improvement of self organizing/self learning NN algorithms.
+
+\subsection*{Topic 4: AI-Assisted Modeling}
+\paragraph{Issue:} Birds, unlike ADS-B equipped aviation, do not provide their intentions. This also applies for the hobby drones and toys. The current approach \cite{prevot2016uas} is using probabilistic models \cite{gomola2017probabilistic}.
+ 
+\paragraph{Key Idea:} Develop behavior model for various flying objects for better prediction of their trajectories/maneuvering capabilities.
+
+\paragraph{Approach:} Reuse of probabilistic models \cite{gomola2017probabilistic}, development of NN/adaptive models. Comparison of avoidance performance in environment of virtual arena \cite{allesandeti2016virtualArena} (avoidance of flock of birds).
+
+\paragraph{Possible Contributions:} Adaptive models of non cooperative flying objects, New methods to model dynamic trajectories.
+
+\subsection*{Topic 6: Computational Cognitive Models}
+\paragraph{Issue:} My solution (fig. \ref{fig:missionControlRunActivityDiagram}), follows behavior of manned aviation pilot. The treat prioritization is based on the rule-book. The issue is that decision made are predictable and usually unjust (e.g. crashing into factory or school) type of decisions. The other issue is that encounter of adversary (enemy) can be turn into disaster in case of predictable maneuverability of UAS.
+
+\paragraph{Key Idea:} Develop decision making system to replace hard wired logic in autopilot. Development of value pilot value representation system and behavioral model is new and interesting challenge.
+
+\paragraph{Approach:} Identify decision points in the existing algorithm. Prepare situation assessment, with removal of hard values/logic. Integration of cognitive models. Introduce variables from accessible sensors (f. e. image recognition). Develop cognitive model of pilot. Compare performance of AI pilot to hard-wired pilot.
+
+\paragraph{Possible Contributions:} Pilot decision model, value model, improvement of adversary avoidance.
+
+
 	
-	%02-05 UTM section    
-    \input{02C05-UTM}
-    	\input{02C05a-U-Space}
-    	\input{02C05b-NASA-UTM}
-    	
-    %02-06 Event Based Avoidance
-    \input{02C06-Event-Based-Avoidance}
-    \input{02C06a-Mid-Air-Collision-Prevention}
-    \input{02C06b-Weather-Impact}
-    %Functional decomposition removed
-    %\input{02C07-Functional-Decomposition-UTM}
-    
-%03-Background theory
-    \input{03B01-Background-Theory}
-    \input{03B02-UAS-Motion-Model}
-    \input{03B03-Reach-Sets}
-    %\input{03B04-Space-Segmentation}
-    \input{03B05-Movement-Automaton}
-    \input{03B06-LiDAR}
-
-%04-Problem Statement
-    %%\input{04P00-Problem-Statement-Original} - NEVER USE
-    \input{04P01-Problem-Statement}
-    \input{04P02-Basic-Definitions}
-    \input{04P03-Basic-Obstacle-Avoidance-Problem}
-    \input{04P04-Initial-Assumptions}
-	\input{04P07-Incremental-Problem-Definition}
-    \input{04P05-Avoidance-Requirements}
-    \input{04P06-Navigation-Requirements}
-
-%05-State of Art
-	\input{05S01-State-Of-Art}
-    	\input{05S02-STOA-Movement-Automaton}
-    	\input{05S03-STOA-Sensor-Data-Fusion}
-    	\input{05S04-STOA-Navigation-Alogrithms}
-    	\input{05S05-STOA-Reach-Set-Estimation}
-    	\input{05S06-STOA-Software-Testing}
-    	\input{05S07-STOA-UTM}
-    
-
-%06-Approach
-    \input{06A01-Approach}
-	
-	%06-03 Movement Automaton
-    \input{06A03-UAS-Model-MA-Implementation}
-    	\input{06A03a-Movement-Automaton-Background}
-		\input{06A03d-Our-UAS-Nonlinear-Model}
-		\input{06A03e-Our-UAS-Movement-Automaton}
-    	
-    %06-02 Avoidance Grid	
-	\input{06A02-Avoidance-Grid}    
-	
-	%06-06 Reach Set
-    \input{06A06a-Reach-Set-Approximation}
-    	\input{06A06f-Trajectory-Set-Approximation}
-    	\input{06A06b-Reach-Set-Performance-Criteria}
-    	\input{06A06c-Contrained-Trajectory-Expansion}
-    	\input{06A06g-Coverage-Maximizing-RSA}
-    	\input{06A06h-Turning-Minimizing-RSA}
-    	\input{06A06i-ACAS-like-RSA}
-    	\input{06A06e-Reach-Set-Approximations}
-	
-    \input{06A05f-Situation-Assessment}
-    	%Obstacles
-    	\input{06A04-Static-Obstace-Constraints}
-    	\input{06A04a-Detected-Obstacles}
-		\input{06A04b-Map-Obstacles}
-	    %Intruders
-    	\input{06A05-Moving-Obstacles-Intruders}
-    	\input{06A05a-Intruder-Behaviour-Prediction}
-		%Constraints    	
-    	\input{06A04c-Static-Contraints}
-    	\input{06A05e-Moving-Contraints}
-    	%Data Fusion
-    	\input{06A07d-Data-Fusion}
-   
-    %06-07 Avoidance Concept	
-    \input{06A07-Avodiance-Concept}
-    	\input{06A07a-Avoidance-Grid-Run}
-    	\input{06A07b-Mission-Control-Run}
-    	\input{06A07e-Calculation-Complexity}
-    
-    %06-08 UTM implementation
-		\input{06A08a-UAS-Traffic-Management}
-		\input{06A08b-Architecture}
-		\input{06A08h-Collision-Case-Resolution}
-		\input{06A08c-Position-Notification}
-		\input{06A08d-Collision-Case}
-		
-    
-    %06-09 Rule Engine Implementation
-    \input{06A09-Rule-Engine}
-    	\input{06A09a-Rule-Engine-Architecture}
-    	\input{06A09b-Rule-Implementation}
-    	
-    
-
-%07-Simulations
-    \input{07S01-Simulations}
-    \input{07S02-Test-Plan}
-    	\input{07S02a-Test-Performance-Evaluation}
-    \input{07S03-Testing-Configuration}
-    
-    \input{07S04-NonCooperativeTestCases}
-    	\input{07S05-Building-Scenario}
-    	\input{07S06-Slalom-Scenario}
-    	\input{07S07-Maze-Scenario}
-    	\input{07S08-Storm-Scenario}
-    	\input{07S09-Emergency-Converging}
-    	\input{07S10-Emergency-Head-On}
-    	\input{07S11-Emergency-Mixed}
-    
-    \input{07S12-Cooperative-Test-Cases}
-    	\input{07S13-Rule-Converging}
-    	\input{07S14-Rule-Head-On}
-    	\input{07S15-Rule-Mixed}
-    	\input{07S16-Rule-Overtake}	    	
-    
-    \input{07S16a-Test-Cases-Conclusion}
-    \input{07S17-Reduced-Reach-Sets}
-    %Observations moved to Conclusion - no longer in use
-    %\input{07S18-Simulation-Observation} 
-
-%08-Conclusion
-	\input{08C01-Conclusion}
-	\input{08C02-Summary}
-	\input{08C03-Comparison-Other-Methods}
-	\input{08C04-Approach-Reusability}
-	\input{08C05-Lessons-Learned}
-	\input{08C06-Future-Work}
-
-
 %% This adds a line for the Bibliography in the Table of Contents.
-%\addcontentsline{toc}{chapter}{Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
 %% *** Set the bibliography style. ***
 %% (change according to your preference/requirements)
 %\bibliographystyle{plain}
 %% *** Set the bibliography file. ***
 %% ("thesis.bib" by default; change as needed)
 \bibliography{thesis}
-
-%09-Apendixes
-	%\input{09AP00-AppendixTemplate}
-	% Complements of algebra 
-	% Appendix title added
-	\titleformat{\chapter}[hang]{\Huge}{Appendix \thechapter.\hchapterspoce}{0pt}{\Huge}[{\titlerule[1pt]}]
-	\input{09AP01-Complements-of-Algebra}
-	
-	
-	%Movement Automaton theory appendix
-	\input{09AP03-Movement-Automaton}   
-    	\input{06A03b-From-Hybrid-To-Movement-Automaton}
-    	\input{06A03c-Our-Movement-Automaton-Definition}
-		\input{06A03f-Segmented-Movement-Automaton}
-		\input{06A03g-Reference-Trajectory-Generator}
-	
-	
-	% Intruder intersection models
-	\input{09AP05-IntruderProbabilisticModels}   
-		\input{06A05b-Linear-Intersection-Model}
-    	\input{06A05c-Body-Volume-Intersection}
-    	\input{06A05d-Manuevurability-Uncertainty-Intersection}
-    	
-    	
-    % Confict resolution schemes
-	\input{09AP06-ConflictResolutionSchemes}   
-		\input{06A08f-Cooperative-Resolution}
-		\input{06A08g-Non-Cooperative-Resolution}
-    
-    % Additional UTM Functionality appendix	
-    \input{09AP07-AdditionalUTMFunctionality}
-		\input{06A08e-Weather-Case}
-		\input{06A09c-Rule-Definition}
-
-	% Related work and improvements
-	\input{09AP02-Conceptual-Scheme}
-	
-	% Framework - Matlab Implementaiton
-	\input{09AP08-Framework-Implementation}
-		
-	%Guidelines appendix
-	\input{09AP04-GridScaling}
-		\input{06A07c-Safety-Margin-Calculation} 
-		
-
 
 %% *** NOTE ***
 %% If you don't use bibliography files, comment out the previous line
